@@ -1,0 +1,353 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7E8E47A1-8646-47BD-B4D7-1389F5B62869}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{784CD039-A0FE-4955-AF90-5834C224765C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boku", "Boku\Boku.csproj", "{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7} = {15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E} = {5A2AC422-9191-4997-9AF6-E74E6640B44E}
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F} = {8C3ECD6E-FDBB-423E-B06E-B650F003676F}
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C} = {4613297E-E00F-422D-8B80-D5EFFD2AF71C}
+		{B685FBCC-488C-4839-8636-8B034C94B65B} = {B685FBCC-488C-4839-8636-8B034C94B65B}
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3} = {B32F36E3-F39D-4A82-9E33-57145A7141C3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimContentProc", "Boku\AnimContentProc\AnimContentProc.csproj", "{5A2AC422-9191-4997-9AF6-E74E6640B44E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimWindows", "Boku\AnimWindows\AnimWindows.csproj", "{BE2940A8-A28A-4279-B70C-F939C64FDBCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileProcessor", "Boku\TileProcessor\TileProcessor.csproj", "{8C3ECD6E-FDBB-423E-B06E-B650F003676F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokuShared", "BokuShared\BokuShared.csproj", "{B32F36E3-F39D-4A82-9E33-57145A7141C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokuPreBoot", "BokuPreBoot\BokuPreBoot.csproj", "{4613297E-E00F-422D-8B80-D5EFFD2AF71C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Surfacer", "Surfacer\Surfacer.csproj", "{801B3D22-DEE3-4ADB-AA69-17B75F1390E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokuContentProcessors", "BokuContentProcessors\BokuContentProcessors.csproj", "{120772DC-C48E-4207-86B9-B9ECD3ED5B75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CensorTest", "Tests\CensorTest\CensorTest.csproj", "{E7E098B2-D369-4169-8A85-CDEC20D9400B}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BokuSetup", "BokuSetup\BokuSetup.wixproj", "{570B894F-6693-4706-8AFC-D75044EC80F9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7} = {15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8} = {1399A4A9-476D-4CE4-8DA6-3600785ACEE8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokuSetupActions", "BokuSetupActions\BokuSetupActions.csproj", "{81C87AFE-EEC8-415F-AFD4-0829D39AF3A4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8} = {1399A4A9-476D-4CE4-8DA6-3600785ACEE8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokuCustomActionTest", "Tests\BokuCustomActionTest\BokuCustomActionTest.csproj", "{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cab", "Cab\Cab.csproj", "{C8BDF127-1EEB-4874-8E3B-1D8D16431C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabTest", "Tests\CabTest\CabTest.csproj", "{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchHook", "TouchHook\TouchHook\TouchHook.csproj", "{B685FBCC-488C-4839-8636-8B034C94B65B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokuContent", "Boku\Content\BokuContent.contentproj", "{18EC8D91-2C21-46A6-A367-DDBF98073D4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfacerContent", "Surfacer\Content\SurfacerContent.contentproj", "{4B83C323-8B45-4EAB-95B6-F05D535AE35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokuSetupTool", "BokuSetupTool\BokuSetupTool.csproj", "{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentHiDef", "ContentHiDef\ContentHiDef.contentproj", "{879814ED-E14F-43E4-B5AB-A9A881FE9D37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrobitScan", "MicrobitScan\MicrobitScan.csproj", "{2762131B-2E93-4D8E-A5B7-DBE02D149F74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrobitNeedDriverDlg", "MicrobitNeedDriverDlg\MicrobitNeedDriverDlg.csproj", "{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicrobitUtils", "MicrobitUtils", "{CDD23AE3-B79A-4053-9BFD-FD5F14816A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrobitTest", "MicrobitTest\MicrobitTest.csproj", "{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}"
+EndProject
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "KoduUWP", "KoduUWP\KoduUWP.wapproj", "{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Installer|x86 = Installer|x86
+		Release|x86 = Release|x86
+		Signed_Installer|x86 = Signed_Installer|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}.Debug|x86.ActiveCfg = Debug|x86
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}.Debug|x86.Build.0 = Debug|x86
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}.Installer|x86.ActiveCfg = Installer|x86
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}.Installer|x86.Build.0 = Installer|x86
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}.Release|x86.ActiveCfg = Release|x86
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}.Release|x86.Build.0 = Release|x86
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{1399A4A9-476D-4CE4-8DA6-3600785ACEE8}.Signed_Installer|x86.Build.0 = Release|x86
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E}.Debug|x86.ActiveCfg = Debug|x86
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E}.Debug|x86.Build.0 = Debug|x86
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E}.Installer|x86.ActiveCfg = Installer|x86
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E}.Installer|x86.Build.0 = Installer|x86
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E}.Release|x86.ActiveCfg = Release|x86
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E}.Release|x86.Build.0 = Release|x86
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{5A2AC422-9191-4997-9AF6-E74E6640B44E}.Signed_Installer|x86.Build.0 = Release|x86
+		{BE2940A8-A28A-4279-B70C-F939C64FDBCC}.Debug|x86.ActiveCfg = Debug|x86
+		{BE2940A8-A28A-4279-B70C-F939C64FDBCC}.Debug|x86.Build.0 = Debug|x86
+		{BE2940A8-A28A-4279-B70C-F939C64FDBCC}.Installer|x86.ActiveCfg = Installer|x86
+		{BE2940A8-A28A-4279-B70C-F939C64FDBCC}.Installer|x86.Build.0 = Installer|x86
+		{BE2940A8-A28A-4279-B70C-F939C64FDBCC}.Release|x86.ActiveCfg = Release|x86
+		{BE2940A8-A28A-4279-B70C-F939C64FDBCC}.Release|x86.Build.0 = Release|x86
+		{BE2940A8-A28A-4279-B70C-F939C64FDBCC}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{BE2940A8-A28A-4279-B70C-F939C64FDBCC}.Signed_Installer|x86.Build.0 = Release|x86
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F}.Debug|x86.ActiveCfg = Debug|x86
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F}.Debug|x86.Build.0 = Debug|x86
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F}.Installer|x86.ActiveCfg = Installer|x86
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F}.Installer|x86.Build.0 = Installer|x86
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F}.Release|x86.ActiveCfg = Release|x86
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F}.Release|x86.Build.0 = Release|x86
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{8C3ECD6E-FDBB-423E-B06E-B650F003676F}.Signed_Installer|x86.Build.0 = Release|x86
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3}.Debug|x86.ActiveCfg = Debug|x86
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3}.Debug|x86.Build.0 = Debug|x86
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3}.Installer|x86.ActiveCfg = Installer|x86
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3}.Installer|x86.Build.0 = Installer|x86
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3}.Release|x86.ActiveCfg = Release|x86
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3}.Release|x86.Build.0 = Release|x86
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{B32F36E3-F39D-4A82-9E33-57145A7141C3}.Signed_Installer|x86.Build.0 = Release|x86
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C}.Debug|x86.ActiveCfg = Debug|x86
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C}.Debug|x86.Build.0 = Debug|x86
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C}.Installer|x86.ActiveCfg = Installer|x86
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C}.Installer|x86.Build.0 = Installer|x86
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C}.Release|x86.ActiveCfg = Release|x86
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C}.Release|x86.Build.0 = Release|x86
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{4613297E-E00F-422D-8B80-D5EFFD2AF71C}.Signed_Installer|x86.Build.0 = Release|x86
+		{801B3D22-DEE3-4ADB-AA69-17B75F1390E7}.Debug|x86.ActiveCfg = Debug|x86
+		{801B3D22-DEE3-4ADB-AA69-17B75F1390E7}.Debug|x86.Build.0 = Debug|x86
+		{801B3D22-DEE3-4ADB-AA69-17B75F1390E7}.Installer|x86.ActiveCfg = Installer|x86
+		{801B3D22-DEE3-4ADB-AA69-17B75F1390E7}.Release|x86.ActiveCfg = Release|x86
+		{801B3D22-DEE3-4ADB-AA69-17B75F1390E7}.Release|x86.Build.0 = Release|x86
+		{801B3D22-DEE3-4ADB-AA69-17B75F1390E7}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{801B3D22-DEE3-4ADB-AA69-17B75F1390E7}.Signed_Installer|x86.Build.0 = Release|x86
+		{120772DC-C48E-4207-86B9-B9ECD3ED5B75}.Debug|x86.ActiveCfg = Debug|x86
+		{120772DC-C48E-4207-86B9-B9ECD3ED5B75}.Debug|x86.Build.0 = Debug|x86
+		{120772DC-C48E-4207-86B9-B9ECD3ED5B75}.Installer|x86.ActiveCfg = Installer|x86
+		{120772DC-C48E-4207-86B9-B9ECD3ED5B75}.Installer|x86.Build.0 = Installer|x86
+		{120772DC-C48E-4207-86B9-B9ECD3ED5B75}.Release|x86.ActiveCfg = Release|x86
+		{120772DC-C48E-4207-86B9-B9ECD3ED5B75}.Release|x86.Build.0 = Release|x86
+		{120772DC-C48E-4207-86B9-B9ECD3ED5B75}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{120772DC-C48E-4207-86B9-B9ECD3ED5B75}.Signed_Installer|x86.Build.0 = Release|x86
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B}.Debug|x86.ActiveCfg = Debug|x86
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B}.Debug|x86.Build.0 = Debug|x86
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B}.Installer|x86.ActiveCfg = Signed_Installer|x86
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B}.Installer|x86.Build.0 = Signed_Installer|x86
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B}.Release|x86.ActiveCfg = Release|x86
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B}.Release|x86.Build.0 = Release|x86
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B}.Signed_Installer|x86.Build.0 = Release|x86
+		{570B894F-6693-4706-8AFC-D75044EC80F9}.Debug|x86.ActiveCfg = Debug|x86
+		{570B894F-6693-4706-8AFC-D75044EC80F9}.Installer|x86.ActiveCfg = Installer|x86
+		{570B894F-6693-4706-8AFC-D75044EC80F9}.Installer|x86.Build.0 = Installer|x86
+		{570B894F-6693-4706-8AFC-D75044EC80F9}.Release|x86.ActiveCfg = Release|x86
+		{570B894F-6693-4706-8AFC-D75044EC80F9}.Signed_Installer|x86.ActiveCfg = Signed_Installer|x86
+		{570B894F-6693-4706-8AFC-D75044EC80F9}.Signed_Installer|x86.Build.0 = Signed_Installer|x86
+		{81C87AFE-EEC8-415F-AFD4-0829D39AF3A4}.Debug|x86.ActiveCfg = Debug|x86
+		{81C87AFE-EEC8-415F-AFD4-0829D39AF3A4}.Installer|x86.ActiveCfg = Installer|x86
+		{81C87AFE-EEC8-415F-AFD4-0829D39AF3A4}.Installer|x86.Build.0 = Installer|x86
+		{81C87AFE-EEC8-415F-AFD4-0829D39AF3A4}.Release|x86.ActiveCfg = Release|x86
+		{81C87AFE-EEC8-415F-AFD4-0829D39AF3A4}.Signed_Installer|x86.ActiveCfg = Signed_Installer|x86
+		{81C87AFE-EEC8-415F-AFD4-0829D39AF3A4}.Signed_Installer|x86.Build.0 = Signed_Installer|x86
+		{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06}.Debug|x86.ActiveCfg = Debug|x86
+		{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06}.Installer|x86.ActiveCfg = Signed_Installer|x86
+		{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06}.Installer|x86.Build.0 = Signed_Installer|x86
+		{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06}.Release|x86.ActiveCfg = Release|x86
+		{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06}.Release|x86.Build.0 = Release|x86
+		{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06}.Signed_Installer|x86.Build.0 = Release|x86
+		{C8BDF127-1EEB-4874-8E3B-1D8D16431C6D}.Debug|x86.ActiveCfg = Debug|x86
+		{C8BDF127-1EEB-4874-8E3B-1D8D16431C6D}.Installer|x86.ActiveCfg = Installer|x86
+		{C8BDF127-1EEB-4874-8E3B-1D8D16431C6D}.Installer|x86.Build.0 = Installer|x86
+		{C8BDF127-1EEB-4874-8E3B-1D8D16431C6D}.Release|x86.ActiveCfg = Release|x86
+		{C8BDF127-1EEB-4874-8E3B-1D8D16431C6D}.Release|x86.Build.0 = Release|x86
+		{C8BDF127-1EEB-4874-8E3B-1D8D16431C6D}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{C8BDF127-1EEB-4874-8E3B-1D8D16431C6D}.Signed_Installer|x86.Build.0 = Release|x86
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}.Debug|x86.ActiveCfg = Debug|x86
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}.Debug|x86.Build.0 = Debug|x86
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}.Installer|x86.ActiveCfg = Signed_Installer|x86
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}.Installer|x86.Build.0 = Signed_Installer|x86
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}.Release|x86.ActiveCfg = Release|x86
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}.Release|x86.Build.0 = Release|x86
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC}.Signed_Installer|x86.Build.0 = Release|x86
+		{B685FBCC-488C-4839-8636-8B034C94B65B}.Debug|x86.ActiveCfg = Release|x86
+		{B685FBCC-488C-4839-8636-8B034C94B65B}.Debug|x86.Build.0 = Release|x86
+		{B685FBCC-488C-4839-8636-8B034C94B65B}.Installer|x86.ActiveCfg = Release|x86
+		{B685FBCC-488C-4839-8636-8B034C94B65B}.Installer|x86.Build.0 = Release|x86
+		{B685FBCC-488C-4839-8636-8B034C94B65B}.Release|x86.ActiveCfg = Release|x86
+		{B685FBCC-488C-4839-8636-8B034C94B65B}.Release|x86.Build.0 = Release|x86
+		{B685FBCC-488C-4839-8636-8B034C94B65B}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{B685FBCC-488C-4839-8636-8B034C94B65B}.Signed_Installer|x86.Build.0 = Release|x86
+		{18EC8D91-2C21-46A6-A367-DDBF98073D4F}.Debug|x86.ActiveCfg = Debug|x86
+		{18EC8D91-2C21-46A6-A367-DDBF98073D4F}.Installer|x86.ActiveCfg = Installer|x86
+		{18EC8D91-2C21-46A6-A367-DDBF98073D4F}.Release|x86.ActiveCfg = Release|x86
+		{18EC8D91-2C21-46A6-A367-DDBF98073D4F}.Signed_Installer|x86.ActiveCfg = Signed_Installer|x86
+		{4B83C323-8B45-4EAB-95B6-F05D535AE35B}.Debug|x86.ActiveCfg = Debug|x86
+		{4B83C323-8B45-4EAB-95B6-F05D535AE35B}.Installer|x86.ActiveCfg = Installer|x86
+		{4B83C323-8B45-4EAB-95B6-F05D535AE35B}.Release|x86.ActiveCfg = Release|x86
+		{4B83C323-8B45-4EAB-95B6-F05D535AE35B}.Signed_Installer|x86.ActiveCfg = Signed_Installer|x86
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}.Debug|x86.ActiveCfg = Debug|x86
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}.Debug|x86.Build.0 = Debug|x86
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}.Installer|x86.ActiveCfg = Installer|x86
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}.Installer|x86.Build.0 = Installer|x86
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}.Release|x86.ActiveCfg = Release|x86
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}.Release|x86.Build.0 = Release|x86
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7}.Signed_Installer|x86.Build.0 = Release|x86
+		{879814ED-E14F-43E4-B5AB-A9A881FE9D37}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{879814ED-E14F-43E4-B5AB-A9A881FE9D37}.Installer|x86.ActiveCfg = Debug|Any CPU
+		{879814ED-E14F-43E4-B5AB-A9A881FE9D37}.Release|x86.ActiveCfg = Debug|Any CPU
+		{879814ED-E14F-43E4-B5AB-A9A881FE9D37}.Signed_Installer|x86.ActiveCfg = Debug|Any CPU
+		{2762131B-2E93-4D8E-A5B7-DBE02D149F74}.Debug|x86.ActiveCfg = Debug|x86
+		{2762131B-2E93-4D8E-A5B7-DBE02D149F74}.Installer|x86.ActiveCfg = Release|x86
+		{2762131B-2E93-4D8E-A5B7-DBE02D149F74}.Installer|x86.Build.0 = Release|x86
+		{2762131B-2E93-4D8E-A5B7-DBE02D149F74}.Release|x86.ActiveCfg = Release|x86
+		{2762131B-2E93-4D8E-A5B7-DBE02D149F74}.Release|x86.Build.0 = Release|x86
+		{2762131B-2E93-4D8E-A5B7-DBE02D149F74}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{2762131B-2E93-4D8E-A5B7-DBE02D149F74}.Signed_Installer|x86.Build.0 = Release|x86
+		{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}.Debug|x86.ActiveCfg = Debug|x86
+		{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}.Installer|x86.ActiveCfg = Release|x86
+		{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}.Installer|x86.Build.0 = Release|x86
+		{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}.Release|x86.ActiveCfg = Release|x86
+		{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}.Release|x86.Build.0 = Release|x86
+		{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{8104DAE6-5B90-4B2D-99CB-FDF9EB6C94A3}.Signed_Installer|x86.Build.0 = Release|x86
+		{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}.Debug|x86.ActiveCfg = Debug|x86
+		{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}.Installer|x86.ActiveCfg = Release|x86
+		{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}.Installer|x86.Build.0 = Release|x86
+		{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}.Release|x86.ActiveCfg = Release|x86
+		{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}.Release|x86.Build.0 = Release|x86
+		{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6}.Signed_Installer|x86.Build.0 = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Debug|x86.ActiveCfg = Debug|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Debug|x86.Build.0 = Debug|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Debug|x86.Deploy.0 = Debug|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Installer|x86.ActiveCfg = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Installer|x86.Build.0 = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Installer|x86.Deploy.0 = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Release|x86.ActiveCfg = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Release|x86.Build.0 = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Release|x86.Deploy.0 = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Signed_Installer|x86.ActiveCfg = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Signed_Installer|x86.Build.0 = Release|x86
+		{3C87BD64-1BE3-403B-8BB9-188CFA61CD76}.Signed_Installer|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7E098B2-D369-4169-8A85-CDEC20D9400B} = {7E8E47A1-8646-47BD-B4D7-1389F5B62869}
+		{81C87AFE-EEC8-415F-AFD4-0829D39AF3A4} = {784CD039-A0FE-4955-AF90-5834C224765C}
+		{5B7395EF-11C1-4BAB-BAFA-77BCF1D97A06} = {7E8E47A1-8646-47BD-B4D7-1389F5B62869}
+		{B0A2B8B1-7E07-42CC-AA1F-3A83279BCCAC} = {7E8E47A1-8646-47BD-B4D7-1389F5B62869}
+		{15F4800C-685C-4FCF-A23B-2F9DBF9C88D7} = {784CD039-A0FE-4955-AF90-5834C224765C}
+		{2762131B-2E93-4D8E-A5B7-DBE02D149F74} = {CDD23AE3-B79A-4053-9BFD-FD5F14816A61}
+		{8CCF2545-2D9E-4CA0-A143-57B5FB4A1EB6} = {CDD23AE3-B79A-4053-9BFD-FD5F14816A61}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58E8EA64-C64C-4DA5-AE47-072CEA28F2F0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 26
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://fuselabs.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Boku\\Content\\Content.contentproj
+		SccProjectTopLevelParentUniqueName1 = Boku\\Boku.csproj
+		SccProjectName1 = Boku/Content
+		SccLocalPath1 = Boku\\Content
+		SccProjectUniqueName2 = Boku\\AnimWindows\\AnimWindows.csproj
+		SccProjectName2 = Boku/AnimWindows
+		SccLocalPath2 = Boku\\AnimWindows
+		SccProjectUniqueName3 = BokuShared\\BokuShared.csproj
+		SccProjectName3 = BokuShared
+		SccLocalPath3 = BokuShared
+		SccProjectUniqueName4 = BokuContentProcessors\\BokuContentProcessors.csproj
+		SccProjectName4 = BokuContentProcessors
+		SccLocalPath4 = BokuContentProcessors
+		SccProjectUniqueName5 = BokuSetup\\BokuSetup.wixproj
+		SccProjectName5 = BokuSetup
+		SccLocalPath5 = BokuSetup
+		SccProjectUniqueName6 = BokuSetupActions\\BokuSetupActions.csproj
+		SccProjectTopLevelParentUniqueName6 = Boku2017.sln
+		SccProjectName6 = BokuSetupActions
+		SccLocalPath6 = BokuSetupActions
+		SccProjectUniqueName7 = Tests\\CabTest\\CabTest.csproj
+		SccProjectTopLevelParentUniqueName7 = Boku2017.sln
+		SccProjectName7 = Tests/CabTest
+		SccLocalPath7 = Tests\\CabTest
+		SccProjectUniqueName8 = Cab\\Cab.csproj
+		SccProjectName8 = Cab
+		SccLocalPath8 = Cab
+		SccProjectUniqueName9 = Boku\\Boku.csproj
+		SccProjectName9 = Boku
+		SccLocalPath9 = Boku
+		SccProjectUniqueName10 = Boku\\AnimContentProc\\AnimContentProc.csproj
+		SccProjectName10 = Boku/AnimContentProc
+		SccLocalPath10 = Boku\\AnimContentProc
+		SccProjectUniqueName11 = Boku\\TileProcessor\\TileProcessor.csproj
+		SccProjectName11 = Boku/TileProcessor
+		SccLocalPath11 = Boku\\TileProcessor
+		SccProjectUniqueName12 = BokuPreBoot\\BokuPreBoot.csproj
+		SccProjectName12 = BokuPreBoot
+		SccLocalPath12 = BokuPreBoot
+		SccProjectUniqueName13 = Surfacer\\Surfacer.csproj
+		SccProjectName13 = Surfacer
+		SccLocalPath13 = Surfacer
+		SccProjectUniqueName14 = Tests\\CensorTest\\CensorTest.csproj
+		SccProjectTopLevelParentUniqueName14 = Boku2017.sln
+		SccProjectName14 = Tests/CensorTest
+		SccLocalPath14 = Tests\\CensorTest
+		SccProjectUniqueName15 = Tests\\BokuCustomActionTest\\BokuCustomActionTest.csproj
+		SccProjectTopLevelParentUniqueName15 = Boku2017.sln
+		SccProjectName15 = Tests/BokuCustomActionTest
+		SccLocalPath15 = Tests\\BokuCustomActionTest
+		SccProjectUniqueName16 = Surfacer\\Content\\Content.contentproj
+		SccProjectTopLevelParentUniqueName16 = Surfacer\\Surfacer.csproj
+		SccProjectName16 = Surfacer/Content
+		SccLocalPath16 = Surfacer\\Content
+		SccProjectUniqueName17 = TouchHook\\TouchHook\\TouchHook.csproj
+		SccProjectName17 = TouchHook/TouchHook
+		SccLocalPath17 = TouchHook\\TouchHook
+		SccProjectUniqueName18 = Boku\\Content\\BokuContent.contentproj
+		SccProjectName18 = Boku/Content
+		SccLocalPath18 = Boku\\Content
+		SccProjectUniqueName19 = Surfacer\\Content\\SurfacerContent.contentproj
+		SccProjectName19 = Surfacer/Content
+		SccLocalPath19 = Surfacer\\Content
+		SccProjectUniqueName20 = BokuSetupTool\\BokuSetupTool.csproj
+		SccProjectTopLevelParentUniqueName20 = Boku2017.sln
+		SccProjectName20 = BokuSetupTool
+		SccLocalPath20 = BokuSetupTool
+		SccProjectUniqueName21 = ContentHiDef\\ContentHiDef.contentproj
+		SccProjectName21 = ContentHiDef
+		SccLocalPath21 = ContentHiDef
+		SccProjectUniqueName22 = MicrobitScan\\MicrobitScan.csproj
+		SccProjectTopLevelParentUniqueName22 = Boku2017.sln
+		SccProjectName22 = MicrobitScan
+		SccLocalPath22 = MicrobitScan
+		SccProjectUniqueName23 = MicrobitNeedDriverDlg\\MicrobitNeedDriverDlg.csproj
+		SccProjectName23 = MicrobitNeedDriverDlg
+		SccLocalPath23 = MicrobitNeedDriverDlg
+		SccProjectUniqueName24 = MicrobitTest\\MicrobitTest.csproj
+		SccProjectTopLevelParentUniqueName24 = Boku2017.sln
+		SccProjectName24 = MicrobitTest
+		SccLocalPath24 = MicrobitTest
+		SccProjectUniqueName25 = KoduUWP\\KoduUWP.wapproj
+		SccProjectName25 = KoduUWP
+		SccLocalPath25 = KoduUWP
+	EndGlobalSection
+EndGlobal

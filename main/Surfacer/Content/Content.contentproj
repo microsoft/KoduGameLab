@@ -1,0 +1,245 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>4b83c323-8b45-4eab-95b6-f05d535ae35b</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <XnaFrameworkVersion>v3.1</XnaFrameworkVersion>
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Installer|x86' ">
+    <OutputPath>bin\x86\Installer\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Tests|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Tests\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Signed_Installer|x86' ">
+    <OutputPath>bin\x86\Signed_Installer\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions</CodeAnalysisModuleSuppressionsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\Boku\Content\Xml\Actors\BalloonBot.xml">
+      <Link>BalloonBot.xml</Link>
+      <Name>BalloonBot</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Boku.xml">
+      <Link>Boku.xml</Link>
+      <Name>Boku</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\BokuGreeter.xml">
+      <Link>BokuGreeter.xml</Link>
+      <Name>BokuGreeter</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Cloud.xml">
+      <Link>Cloud.xml</Link>
+      <Name>Cloud</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Drum.xml">
+      <Link>Drum.xml</Link>
+      <Name>Drum</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\EyePlant.xml">
+      <Link>EyePlant.xml</Link>
+      <Name>EyePlant</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Factory.xml">
+      <Link>Factory.xml</Link>
+      <Name>Factory</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\FastBot.xml">
+      <Link>FastBot.xml</Link>
+      <Name>FastBot</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\FloatBot.xml">
+      <Link>FloatBot.xml</Link>
+      <Name>FloatBot</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Flower_A.xml">
+      <Link>Flower_A.xml</Link>
+      <Name>Flower_A</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Flower_B.xml">
+      <Link>Flower_B.xml</Link>
+      <Name>Flower_B</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Flower_C.xml">
+      <Link>Flower_C.xml</Link>
+      <Name>Flower_C</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Flower_D.xml">
+      <Link>Flower_D.xml</Link>
+      <Name>Flower_D</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\FlyFish.xml">
+      <Link>FlyFish.xml</Link>
+      <Name>FlyFish</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\hut.xml">
+      <Link>hut.xml</Link>
+      <Name>hut</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\jet.xml">
+      <Link>jet.xml</Link>
+      <Name>jet</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Lsan.xml">
+      <Link>Lsan.xml</Link>
+      <Name>Lsan</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Mine.xml">
+      <Link>Mine.xml</Link>
+      <Name>Mine</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Puck.xml">
+      <Link>Puck.xml</Link>
+      <Name>Puck</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\PushPad.xml">
+      <Link>PushPad.xml</Link>
+      <Name>PushPad</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Saucer.xml">
+      <Link>Saucer.xml</Link>
+      <Name>Saucer</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Sputnik.xml">
+      <Link>Sputnik.xml</Link>
+      <Name>Sputnik</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\StickBoy.xml">
+      <Link>StickBoy.xml</Link>
+      <Name>StickBoy</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\SubBot.xml">
+      <Link>SubBot.xml</Link>
+      <Name>SubBot</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\SurfaceDict.xml">
+      <Link>SurfaceDict.xml</Link>
+      <Name>SurfaceDict</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\TerraCannon.xml">
+      <Link>TerraCannon.xml</Link>
+      <Name>TerraCannon</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Tree_A.xml">
+      <Link>Tree_A.xml</Link>
+      <Name>Tree_A</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Tree_B.xml">
+      <Link>Tree_B.xml</Link>
+      <Name>Tree_B</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Tree_C.xml">
+      <Link>Tree_C.xml</Link>
+      <Name>Tree_C</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Tree_D.xml">
+      <Link>Tree_D.xml</Link>
+      <Name>Tree_D</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\Turtle.xml">
+      <Link>Turtle.xml</Link>
+      <Name>Turtle</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+    <None Include="..\..\Boku\Content\Xml\Actors\WindBlimp.xml">
+      <Link>WindBlimp.xml</Link>
+      <Name>WindBlimp</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
