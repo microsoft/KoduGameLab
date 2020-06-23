@@ -1,0 +1,1106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CrumbList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Crumbs>
+
+    <!--  To HomeMenu, yes you can get here from anywhere -->
+    <Crumb>
+      <curModes>
+        <mode>InGame</mode>
+
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MouseEditObjectFocus</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+        <mode>MouseWorldSettings</mode>
+
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadTerrainSmoothLevel</mode>
+        <mode>GamepadTerrainPaint</mode>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+        <mode>GamepadTerrainUpDown</mode>
+        <mode>GamepadWater</mode>
+        <mode>GamepadDeleteObjects</mode>
+        <mode>GamepadWorldSettings</mode>
+
+        <mode>MaterialPicker</mode>
+        <mode>BrushPicker</mode>
+        <mode>WaterPicker</mode>
+        <mode>AddItem</mode>
+        <mode>AddItemHelp</mode>
+        <mode>ObjectTweak</mode>
+
+      </curModes>
+      <targetMode>HomeMenu</targetMode>
+      <gamepadText>Drücke &lt;start&gt; um zum Hauptmenü zu gelangen.</gamepadText>
+      <mouseText>Drücke [esc] um zum Hauptmenü zu gelangen.</mouseText>
+    </Crumb>
+
+
+
+    <!--  From InGame  -->
+    <Crumb>
+      <curModes>
+        <mode>InGame</mode>
+      </curModes>
+      <targetMode>MouseCameraMove</targetMode>
+      <gamepadText>Drücke &lt;back&gt; für den Bearbeitungsmodus.</gamepadText>
+      <mouseText>Drücke [esc] für den Bearbeitungsmodus.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>InGame</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Drücke &lt;back&gt; für den Bearbeitungsmodus.</gamepadText>
+      <mouseText>Drücke [esc] für den Bearbeitungsmodus.</mouseText>
+    </Crumb>
+
+    <!--  From MainMenu  -->
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText>Wähle WEITER und drücke &lt;a&gt;.</gamepadText>
+      <mouseText>Klicke auf WEITER.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>LoadLevelMenu</targetMode>
+      <gamepadText>Wähle LADE WELT und drücke &lt;a&gt;.</gamepadText>
+      <mouseText>Klicke auf LADE WELT.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>CommunityMenu</targetMode>
+      <gamepadText>Wähle GEMEINSCHAFT und drücke &lt;a&gt;.</gamepadText>
+      <mouseText>Klicke auf GEMEINSCHAFT.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>OptionsMenu</targetMode>
+      <gamepadText>Wähle OPTIONEN und drücke &lt;a&gt;.</gamepadText>
+      <mouseText>Klicke auf OPTIONEN.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>HelpScreens</targetMode>
+      <gamepadText>Wähle HILFE und drücke &lt;a&gt;.</gamepadText>
+      <mouseText>Klicke auf HILFE.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>SharingHub</targetMode>
+      <gamepadText>Wähle TEILEN und drücke &lt;a&gt;.</gamepadText>
+      <mouseText>Klicke auf TEILEN.</mouseText>
+    </Crumb>
+
+    <!--  From SharingHub -->
+    <Crumb>
+      <curModes>
+        <mode>SharingHub</mode>
+      </curModes>
+      <targetMode>SharingSession</targetMode>
+      <gamepadText>Drücke &lt;start&gt; um das Teilen zu starten.</gamepadText>
+      <mouseText>Drücke [enter] oder klicke auf die offene Tür um das Teilen zu starten.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>SharingHub</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
+      <mouseText>Drücke [esc] um zum Hauptmenü zurückzukehren.</mouseText>
+    </Crumb>
+
+    <!--  From SharingSession -->
+    <Crumb>
+      <curModes>
+        <mode>SharingSession</mode>
+      </curModes>
+      <targetMode>SharingHub</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um das Teilen zu beenden.</gamepadText>
+      <mouseText>Drücke [esc] um das Teilen zu beenden.</mouseText>
+    </Crumb>
+
+    <!--  From OptionsMenu  -->
+    <Crumb>
+      <curModes>
+        <mode>OptionsMenu</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
+      <mouseText>Drücke [esc] oder klicke ausserhalb des Menüs, um zum Hauptmenü zurückzukehren.</mouseText>
+    </Crumb>
+
+    <!--  From HelpScreens  -->
+    <Crumb>
+      <curModes>
+        <mode>HelpScreens</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
+      <mouseText>Drücke [esc] um zum Hauptmenü zurückzukehren.</mouseText>
+    </Crumb>
+
+    <!--  From LoadLevelMenu  -->
+    <Crumb>
+      <curModes>
+        <mode>LoadLevelMenu</mode>
+      </curModes>
+      <targetMode>Unknown</targetMode>
+      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
+      <mouseText>
+        Klicke zum blättern auf die grünen Pfeile, klicke auf den Titel um ein Spiel auszuwählen.
+        Nutze [leftarrow][rightarrow] zum blättern, drücke [enter] um ein Spiel auszuwählen.
+      </mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>LoadLevelMenu</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
+      <mouseText>Drücke [esc] um zum Hauptmenü zurückzukehren.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>LoadLevelMenu</mode>
+      </curModes>
+      <targetMode>HomeMenu</targetMode>
+      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
+      <mouseText>Drücke [esc] um zum Hauptmenü zurückzukehren.</mouseText>
+    </Crumb>
+
+    <!--  From CommunityMenu  -->
+    <Crumb>
+      <curModes>
+        <mode>CommunityMenu</mode>
+      </curModes>
+      <targetMode>Unknown</targetMode>
+      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
+      <mouseText>
+        Klicke zum blättern auf die grünen Pfeile, klicke auf den Titel um ein Spiel auszuwählen.
+        Nutze [leftarrow][rightarrow] zum Blättern, drücke [enter] um ein Spiel auszuwählen.
+      </mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>CommunityMenu</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Drücke &lt;b&gt; um zum Hauptmenü zurückzukehren.</gamepadText>
+      <mouseText>Drücke [esc] um zum Hauptmenü zurückzukehren.</mouseText>
+    </Crumb>
+
+    <!--  ToolMenu from any tool to every other. Gamepad only.  -->
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <!-- 
+      Note: even though this will actually take us to ToolMenuRunSim we give InGame
+      as the target mode to it seems shorter than going through the HomeMenu.
+      -->
+      <targetMode>InGame</targetMode>
+      <gamepadText>Verwende die Abzugtasten, um ein Spiel auszuwählen &lt;play&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um das Objekt zu bearbeiten &lt;ObjectEdit&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!-- Lead user through EditObjectFocus to get to Programming -->
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuEditObject</mode>
+      </curModes>
+      <targetMode>GamepadEditObjectFocus</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um Objekte zu programmieren.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!-- Lead user through EditObject to get to Programming -->
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>Programming</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um das Objekt zu bearbeiten &lt;ObjectEdit&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainSmoothLevel</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um das Werkzeug zum Gelände Glätten/Einebnen auszuwählen &lt;terrainsmoothlevel&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainPaint</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um das Gelände-Malen Werkzeug auszuwählen &lt;terrainpaint&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainSpikeyHilly</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um das Gelände-zackig/hügelig-Machen Werkzeug auszuwählen &lt;terrainspikeyhilly&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainUpDown</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um das Gelände-Heben/Senken Werkzeug auszuwählen &lt;terrainUpDown&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuWater</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um das Wasser Werkzeug auszuwählen &lt;water&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuDeleteObjects</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um das Objekt-Löschen Werkzeug auszuwählen &lt;deleteobjects&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+      </curModes>
+      <targetMode>ToolMenuWorldSettings</targetMode>
+      <gamepadText>Verwende die Abzugstasten, um die Welt Einstellungen auszuwählen &lt;worldsettings&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!--  GamePad Tools, from any tool back to the ToolBar -->
+
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadTerrainSmoothLevel</mode>
+        <mode>GamepadTerrainPaint</mode>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+        <mode>GamepadTerrainUpDown</mode>
+        <mode>GamepadWater</mode>
+        <mode>GamepadDeleteObjects</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zu gehen.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>GamepadWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zurück zu gehen.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!--  Gamepad tools, from toolbar to actual tool  -->
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um dein Spiel zu spielen.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuEditObject</mode>
+      </curModes>
+      <targetMode>GamepadEditObject</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um Objekte hinzuzufügen, zu bearbeiten oder zu programmieren.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+      </curModes>
+      <targetMode>GamepadTerrainSmoothLevel</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um das Gelände zu ändern.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuTerrainPaint</mode>
+      </curModes>
+      <targetMode>GamepadTerrainPaint</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um Gelände hinzuzufügen oder zu ändern.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+      </curModes>
+      <targetMode>GamepadTerrainSpikeyHilly</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um dein Gelände zu ändern.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuEditObject</mode>
+      </curModes>
+      <targetMode>GamepadEditObject</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um Objekte hinzuzufügen, zu ändern oder zu programmieren.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuTerrainUpDown</mode>
+      </curModes>
+      <targetMode>GamepadTerrainUpDown</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um das Gelände anzuheben oder abzusenken.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuWater</mode>
+      </curModes>
+      <targetMode>GamepadWater</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um Wasser hinzuzufügen oder zu ändern.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuDeleteObjects</mode>
+      </curModes>
+      <targetMode>GamepadDeleteObjects</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um das Objekte-Löschen Werkzeug zu benutzen &lt;deleteobjects&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>GamepadWorldSettings</targetMode>
+      <gamepadText>Drücke &lt;a&gt; um die Welt Einstellungen zu ändern &lt;worldsettings&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    
+    <!-- From gamepad tools back to tool menu -->
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadEditObjectFocus</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zurück zu kehren</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadTerrainPaint</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainPaint</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zurück zu kehren</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadTerrainUpDown</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainUpDown</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zurück zu kehren</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadTerrainSmoothLevel</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainSmoothLevel</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zurück zu kehren</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainSpikeyHilly</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zurück zu kehren</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadWater</mode>
+      </curModes>
+      <targetMode>ToolMenuWater</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zurück zu kehren</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadDeleteObjects</mode>
+      </curModes>
+      <targetMode>ToolMenuDeleteObjects</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zurück zu kehren</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <!-- Shortcut mode to fool the system into thinking that this is the fast way to get into run mode. -->
+      <curModes>
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadEditObjectFocus</mode>
+        <mode>GamepadTerrainPaint</mode>
+        <mode>GamepadTerrainUpDown</mode>
+        <mode>GamepadTerrainSmoothLevel</mode>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText>Drücke &lt;back&gt; um zum Werkzeuge Menü zurück zu kehren</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!--  Mouse Tools, from every tool to every other tool -->
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MousePlay</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf spielen &lt;play&gt; um das Spiel zu starten.</mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf spielen &lt;play&gt; um das Spiel zu starten.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseHome</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf Hauptmenü &lt;homemenu&gt;</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>HomeMenu</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf Hauptmenü &lt;homemenu&gt;</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseCameraMove</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf Kamera positionieren &lt;cameramove&gt;</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseEditObject</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf das Objekt-Werkzeug &lt;ObjectEdit&gt; um Objekte hinzuzufügen oder zu programmieren.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MousePaths</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf das Pfad-Werkzeug &lt;paths&gt; um Pfade hinzuzufügen oder zu ändern.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseTerrainPaint</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf das Landschaft-Werkzeug &lt;terrainpaint&gt; um Landschaft hinzuzufügen oder zu ändern.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseTerrainUpDown</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf das Landschaft-heben/senken-Werkzeug &lt;terrainUpDown&gt; um das Gelände anzupassen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseTerrainSmoothLevel</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf das Landschaft-glätten/aufrauen-Werkzeug &lt;terrainsmoothlevel&gt; um das Gelände anzupassen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseTerrainSpikeyHilly</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf das Landschaft-einebnen-Werkzeug &lt;terrainspikeyhilly&gt; um das Gelände anzupassen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseWater</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf das Wasser-Werkzeug &lt;water&gt; um Wasser hinzuzufügen oder zu ändern.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+      </curModes>
+      <targetMode>MouseDeleteObjects</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf das Objekt-löschen-Werkzeug &lt;deleteobjects&gt; um Objekte aus der Welt zu entfernen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseWorldSettings</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Klicke auf Einstellungen der Welt &lt;worldsettings&gt; im Menü unten.</mouseText>
+    </Crumb>
+
+    <!--  Into pickers  -->
+
+    <Crumb>
+      <curModes>
+        <mode>MouseTerrainPaint</mode>
+        <mode>GamepadTerrainPaint</mode>
+      </curModes>
+      <targetMode>MaterialPicker</targetMode>
+      <gamepadText>Drücke &lt;y&gt; um ein neues Material auszuwählen.</gamepadText>
+      <mouseText>Klicke auf die Materialauswahl &lt;materialtype&gt; oberhalb des Werkzeugs um ein neues Material auszuwählen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseDeleteObjects</mode>
+
+        <mode>GamepadTerrainPaint</mode>
+        <mode>GamepadTerrainUpDown</mode>
+        <mode>GamepadTerrainSmoothLevel</mode>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+        <mode>GamepadDeleteObjects</mode>
+      </curModes>
+      <targetMode>BrushPicker</targetMode>
+      <gamepadText>Drücke &lt;x&gt; um einen neuen Pinsel auszuwählen.</gamepadText>
+      <mouseText>Klicke auf die Pinselauswahl &lt;brushtype&gt; oberhalb des Werkzeugs um einen neuen Pinsel auszuwählen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseWater</mode>
+        <mode>GamepadWater</mode>
+      </curModes>
+      <targetMode>WaterPicker</targetMode>
+      <gamepadText>Drücke &lt;y&gt; um eine neue Wasser-Farbe auszuwählen.</gamepadText>
+      <mouseText>Klicke auf die Wasserauswahl &lt;watertype&gt; oberhalb des Werkzeugs um eine neue Farbe für das Wasser auszuwählen.</mouseText>
+    </Crumb>
+
+    <!--  Out of pickers  -->
+
+    <Crumb>
+      <curModes>
+        <mode>MaterialPicker</mode>
+      </curModes>
+      <targetMode>MouseTerrainPaint</targetMode>
+      <gamepadText>Verwende die Abzugtasten, um ein Material auszuwählen, und drücke &lt;a&gt; um es zu verwenden.</gamepadText>
+      <mouseText>Benutze [leftarrow][rightarrow] zur Materialauswahl, drücke [enter] oder klicke darauf um es auszuwählen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>WaterPicker</mode>
+      </curModes>
+      <targetMode>MouseWater</targetMode>
+      <gamepadText>Verwende die Abzugtasten, um einen Wasser-Typ auszuwählen, und drücke &lt;a&gt; um ihn zu verwenden.</gamepadText>
+      <mouseText>Benutze [leftarrow][rightarrow] zur Wasserauswahl, drücke [enter] oder klicke darauf um es auszuwählen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>BrushPicker</mode>
+      </curModes>
+      <targetMode>MouseTerrainPaint</targetMode>
+      <gamepadText>Verwende die Abzugtasten, um einen Pinsel auszuwählen und drücke &lt;a&gt; um ihn zu verwenden.</gamepadText>
+      <mouseText>Benutze [leftarrow][rightarrow] zur Pinselauswahl, drücke [enter] oder klicke darauf um ihn auszuwählen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MaterialPicker</mode>
+      </curModes>
+      <targetMode>GamepadTerrainPaint</targetMode>
+      <gamepadText>Verwende die Abzugtasten, um ein Material auszuwählen und drücke &lt;a&gt; um es zu verwenden.</gamepadText>
+      <mouseText>Benutze [leftarrow][rightarrow] zur Materialauswahl, drücke [enter] oder klicke darauf um es auszuwählen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>WaterPicker</mode>
+      </curModes>
+      <targetMode>GamepadWater</targetMode>
+      <gamepadText>Verwende die Abzugtasten, um einen Wasser-Typ auszuwählen und drücke &lt;a&gt; um ihn zu verwenden.</gamepadText>
+      <mouseText>Benutze [leftarrow][rightarrow] zur Wasserauswahl, drücke [enter] oder klicke darauf um es auszuwählen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>BrushPicker</mode>
+      </curModes>
+      <targetMode>GamepadTerrainPaint</targetMode>
+      <gamepadText>Verwende die Abzugtasten, um einen Pinsel auszuwählen und drücke &lt;a&gt; um ihn zu verwenden.</gamepadText>
+      <mouseText>Benutze [leftarrow][rightarrow] zur Pinselauswahl, drücke [enter] oder klicke darauf um ihn auszuwählen.</mouseText>
+    </Crumb>
+
+
+
+    <Crumb>
+      <curModes>
+        <mode>ObjectTweak</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Drücke &lt;b&gt; zum verlassen.</gamepadText>
+      <mouseText>Drücke [esc] oder klicke ausserhalb des Menüs.</mouseText>
+    </Crumb>
+
+    <!-- From HomeMenu -->
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Wähle Hauptmenü.</gamepadText>
+      <mouseText>Klicke auf Hauptmenü.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText>Wähle Welt neu starten.</gamepadText>
+      <mouseText>Klicke auf Welt neu starten.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Wähle Welt bearbeiten.</gamepadText>
+      <mouseText>Klicke auf Welt bearbeiten.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>MouseCameraMove</targetMode>
+      <gamepadText>Bewege die Kamera.</gamepadText>
+      <mouseText>Bewege die Kamera mit der Maus.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>LoadLevelMenu</targetMode>
+      <gamepadText>Wähle Lade Welt.</gamepadText>
+      <mouseText>Klicke auf Lade Welt.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>SharingHub</targetMode>
+      <gamepadText>Wähle mit Freunden teilen.</gamepadText>
+      <mouseText>Klicke auf mit Freunden teilen.</mouseText>
+    </Crumb>
+
+    <!-- Into Add Item -->
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadEditObjectFocus</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MouseEditObjectFocus</mode>
+      </curModes>
+      <targetMode>AddItem</targetMode>
+      <gamepadText>Bewege den Zeiger wohin Du ein neues Objekt einfügen möchtest und drücke &lt;a&gt;.</gamepadText>
+      <mouseText>Klicke mit der linke Maustaste &lt;leftmouse&gt; an die Stelle an der Du ein neues Objekt einfügen möchtest.</mouseText>
+    </Crumb>
+
+    <!-- From mouse world settings -->
+    <Crumb>
+      <curModes>
+        <mode>MouseWorldSettings</mode>
+      </curModes>
+      <targetMode>MouseCameraMove</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Drücke [esc] um zum Werkzeugmenü zurückzukehren.</mouseText>
+    </Crumb>
+
+    <!-- To and From Programming -->
+    <Crumb>
+      <curModes>
+        <mode>ProgrammingHelp</mode>
+      </curModes>
+      <targetMode>Programming</targetMode>
+      <gamepadText>Drücke &lt;B&gt; um zurück zu gehen.</gamepadText>
+      <mouseText>Drücke [esc] um zurück zu gehen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObject</mode>
+      </curModes>
+      <targetMode>GamepadEditObjectFocus</targetMode>
+      <gamepadText>Bewege den Zeiger zum Objekt.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObjectFocus</mode>
+      </curModes>
+      <targetMode>GamepadEditObject</targetMode>
+      <gamepadText>Bewege den Zeiger an eine freie Stelle.</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseEditObject</mode>
+        <mode>MouseEditObjectFocus</mode>
+        <mode>GamepadEditObjectFocus</mode>
+      </curModes>
+      <targetMode>Programming</targetMode>
+      <gamepadText>Drücke &lt;Y&gt; zum programmieren.</gamepadText>
+      <mouseText>Klicke mit der rechten Maustaste auf das Objekt und wähle programmieren aus.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>Programming</mode>
+      </curModes>
+      <targetMode>MouseEditObject</targetMode>
+      <gamepadText>Drücke &lt;B&gt; um zum Bearbeitungsmenü zurückzukehren.</gamepadText>
+      <mouseText>Drücke [esc] um zum Bearbeitungsmenü zurückzukehren.</mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>Programming</mode>
+      </curModes>
+      <targetMode>GamepadEditObject</targetMode>
+      <gamepadText>Drücke &lt;B&gt; um zum Bearbeitungsmenü zurückzukehren.</gamepadText>
+      <mouseText>Drücke [esc] um zum Bearbeitungsmenü zurückzukehren.</mouseText>
+    </Crumb>
+
+
+    <!--  Transitions that don't make sense  -->
+    <Crumb>
+      <curModes>
+        <mode>MouseHome</mode>
+      </curModes>
+      <targetMode>HomeMenu</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>MousePlay</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+
+  </Crumbs>
+</CrumbList>
+

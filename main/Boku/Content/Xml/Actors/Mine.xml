@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt>WithSkinning</TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\Character\TEX_MINE_DIRT</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+				<string>DarkGreyMatte</string>
+				<string>WhiteGlowing</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithSkinning</TechniqueExt>
+  </Model>
+  
+	<GlowPosition>
+		<Bone>EFF_MINE</Bone>
+		<Offset>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.5</Z>
+  </HealthBarOffset>
+
+  <MinHeight>1</MinHeight>
+  <DefaultEditHeight>2</DefaultEditHeight>
+  <EyeOffset>0.1</EyeOffset>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0.1</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.5</CollisionRadius>
+	<HasCushion>true</HasCushion>
+
+	<Cost>5</Cost>
+  <CollisionSound>metalHard</CollisionSound>
+  
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>10.0</Mass>
+  <StayAboveWater>true</StayAboveWater>
+
+  <GrabRange>2.0</GrabRange>
+  <KickRange>2.0</KickRange>
+
+  <Domain>Land</Domain>
+
+  <Actions>
+    <OpenClose>
+      <DefaultPosition>Open</DefaultPosition>
+    </OpenClose>
+    <Jump/>
+  </Actions>
+  
+  <IdleSoundName>ch_Mine_Idle</IdleSoundName>
+  <MoveSoundName>ch_Mine_Move</MoveSoundName>
+  <CursorSoundName>ch_Mine_Cursor</CursorSoundName>
+  <OpenSoundName>ch_Mine_Open</OpenSoundName>
+  <CloseSoundName>ch_Mine_Close</CloseSoundName>
+  <Ent1SoundName>ch_Mine_Ent1</Ent1SoundName>
+  <Ent2SoundName>ch_Mine_Ent2</Ent2SoundName>
+
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Normal</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="Hover">
+    <MaxLinearAcceleration>1.0</MaxLinearAcceleration>
+    <MaxSpeed>2.0</MaxSpeed>
+    <MaxRotationalAcceleration>10.0</MaxRotationalAcceleration>
+    <MaxRotationRate>3.0</MaxRotationRate>
+    <SlopeAttenuation>0.1</SlopeAttenuation>
+    <DefaultJumpStrength>5.0</DefaultJumpStrength>
+    <JumpRate>4.0</JumpRate>
+    <PreJumpDelay>0.26666</PreJumpDelay> <!--8 / 30.0-->
+    <PreLandDelay>0.16666</PreLandDelay> <!--5 / 30.0-->
+  </Chassis>
+
+  <Feelers>
+    <Radius>0.5</Radius>
+  </Feelers>
+
+  <HoldingPosition>
+    <X>1.0</X>
+  </HoldingPosition>
+
+  <Sensors>
+    <Direction>
+      <X>1</X> <!--front-->
+    </Direction>
+    <Arc>3.4906</Arc> <!--200 degrees-->
+  </Sensors>
+  
+</XmlGameActor>

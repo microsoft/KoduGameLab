@@ -1,0 +1,2711 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlOverlayData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <overlay>
+    <id>MiniHub</id>
+    <a>Select</a>
+    <back>Resume</back>
+    <bottom>Press &lt;start&gt; at any time to return here.</bottom>
+
+    <keyMouse>
+      [Enter] Select
+    </keyMouse>
+    <keyMouseBottom>Press [home] at any time to return here.</keyMouseBottom>
+    <touch></touch>
+    <touchBottom>Tap [home] at any time to return here.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMessageDialog</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>LoadLevelMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Press <![CDATA[<back>]]> to return to previous menu.</bottom>
+
+    <keyMouseBottom>Press [Esc] to return to previous menu.</keyMouseBottom>
+    <touchBottom>Tap here to return to previous menu.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>LoadLevelPopup</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>SelectNextLevel</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Press <![CDATA[<back>]]> to return to previous menu.</bottom>
+
+    <keyMouseBottom>Press [Esc] to return to previous menu.</keyMouseBottom>
+    <touchBottom>Tap here to return to previous menu.</touchBottom>
+  </overlay>  
+
+  <overlay>
+    <id>MouseEditBase</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Mouse Edit Base</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditHome</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Home Menu</keyMouseBottom>
+    <touch></touch>
+    <touchBottom>Home Menu</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPlay</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Play Game</keyMouseBottom>
+
+    <touch></touch>
+    <touchBottom>Play Game</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditCameraMove</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Terrain
+      &lt;rightmouse&gt; Orbit Camera
+      &lt;middlemouse&gt; Scroll Wheel Zoom
+      [Tab] Find Next Character
+      [F4] Center Camera
+
+    </keyMouse>
+    <keyMouseBottom>Move Camera</keyMouseBottom>
+
+    <touch>
+      &lt;doubleDrag&gt; Drag Terrain
+      &lt;drag&gt; Pitch Camera
+      &lt;rotate&gt; Orbit Camera
+      &lt;pinch&gt; Zoom
+    </touch>
+    <touchBottom>Move Camera</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditAddItemPieMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>  
+
+  <overlay>
+    <id>MouseEditEditObject</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Add/Select Object
+      &lt;rightmouse&gt; Options
+
+      HelpLevelMid
+      [Tab] Find Next Character
+      [F3] Toggle Snap to Grid
+      [F4] Center Camera
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Object Tool: Add or Edit Characters and Objects</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Add Object      
+      &lt;tap&gt; Select Object
+      &lt;drag&gt; Drag Object
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Object Tool: Add or Edit Characters and Objects</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocus</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Object
+      &lt;rightmouse&gt; Options
+      [leftarrow][rightarrow] Change Color
+      [uparrow][downarrow] Align NSEW
+
+      HelpLevelMid
+      [Tab] Find Next Character
+      [F3] Toggle Snap to Grid
+      [F4] Center Camera
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Object Tool: Add or Edit Characters and Objects</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Add Object
+      &lt;tap&gt; Select Object
+      &lt;drag&gt; Drag Object
+      &lt;touchHold&gt; Options
+      &lt;rotate&gt; Rotate Object
+      &lt;pinch&gt; Scale Object
+    </touch>
+    <touchBottom>Object Tool: Add or Edit Characters and Objects</touchBottom>    
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocusTree</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Object
+      &lt;rightmouse&gt; Options
+      [leftarrow][rightarrow] Change Color
+      [uparrow][downarrow] Change Tree Type
+
+      HelpLevelMid
+      [F3] Toggle Snap to Grid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Object Tool: Add or Edit Characters and Objects</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Add Object
+      &lt;tap&gt; Select Object
+      &lt;drag&gt; Drag Object
+      &lt;touchHold&gt; Options
+      &lt;rotate&gt; Rotate Object
+      &lt;pinch&gt; Scale Object
+    </touch>
+    <touchBottom>Object Tool: Add or Edit Characters and Objects</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPaths</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Node or Edge
+      &lt;rightmouse&gt; Options
+      [Shift] Act on Full Path
+
+      HelpLevelMid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Path Tool: Add or Edit Paths</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Select Node or Edge
+      &lt;drag&gt; Drag Node or Edge
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Path Tool: Add or Edit Paths</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAllPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Node or Edge
+      &lt;rightmouse&gt; Options
+      [Shift] Act on Full Path
+
+      HelpLevelMid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Path Tool: Add or Edit Paths</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Select Path
+      &lt;drag&gt; Drag Path
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Path Tool: Add or Edit Paths (Act on Path)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAddPath</id>
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Node or Edge
+      &lt;rightmouse&gt; Options
+      [Shift] Act on Full Path
+
+      HelpLevelMid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Path Tool: Add or Edit Paths</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Add Node or Connect to Node
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Path Tool: Add Paths</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeletePath</id>
+    <touch>
+      &lt;tap&gt; Delete Full Path
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Path Tool: Delete Paths</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeleteNode</id>
+    <touch>
+      &lt;tap&gt; Delete Node
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Path Tool: Delete Nodes</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsFocusNode</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Node
+      &lt;rightmouse&gt; Options
+      [Shift] Act on Full Path
+      [leftarrow][rightarrow] Change Color
+      [uparrow][downarrow] Change Path Style
+
+      HelpLevelMid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Path Tool: Add or Edit Paths</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Select Node
+      &lt;drag&gt; Drag Node
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Path Tool: Add or Edit Paths</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusEdge</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Edge
+      &lt;rightmouse&gt; Options
+      [Shift] Act on Full Path
+      [leftarrow][rightarrow] Change Color
+
+      HelpLevelMid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Path Tool: Add or Edit Paths</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Select Edge
+      &lt;drag&gt; Drag Edge
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Path Tool: Add or Edit Paths</touchBottom>    
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Drag Path
+      &lt;rightmouse&gt; Options
+      [Shift] Act on Full Path
+      [leftarrow][rightarrow] Change Color
+
+      HelpLevelMid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Path Tool: Add or Edit Paths</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Select Path
+      &lt;drag&gt; Drag Path
+      &lt;touchHold&gt; Options
+    </touch>
+    <touchBottom>Path Tool: Add or Edit Paths</touchBottom>    
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainPaint</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Paint and Add Material
+      [Shift] +&lt;leftmouse&gt; Paint Material
+      [Ctrl] +&lt;leftmouse&gt; Add Material
+      &lt;rightmouse&gt; Delete
+
+      [leftarrow][rightarrow] Change Brush Size
+
+      HelpLevelMid
+      [Alt] Pick Material From Terrain
+      [F3] Toggle Snap to Grid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Ground Brush: Paint, Add, or Delete Ground</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;drag&gt; Move Brush
+    </touch>
+    <touchBottom>Ground Brush: Paint, Add, or Delete Ground</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintSmooth</id>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;drag&gt; Add and Paint Material (Smooth)
+    </touch>
+    <touchBottom>Ground Brush: Add and Paint Ground (Smooth)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintCubic</id>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;drag&gt; Add and Paint Material (Cubic)
+    </touch>
+    <touchBottom>Ground Brush: Add and Paint Ground (Cubic)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainDelete</id>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;drag&gt; Remove Ground
+    </touch>
+    <touchBottom>Ground Brush: Remove Ground</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintMagicBrush</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Paint and Add Material
+      [Shift] +&lt;leftmouse&gt; Paint Material
+      [Ctrl] +&lt;leftmouse&gt; Add Material
+      &lt;rightmouse&gt; Delete
+
+      [leftarrow][rightarrow] Change Brush Size
+      [uparrow] Style: Cubic
+      [downarrow] Style: Smooth
+
+      HelpLevelMid
+      [Alt] Pick Material From Terrain
+      [F3] Toggle Snap to Grid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Ground Brush: Paint, Add, or Delete Ground</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Move Brush
+      &lt;drag&gt; Paint and Add Material
+    </touch>
+    <touchBottom>Ground Brush: Paint, Add, or Delete Ground</touchBottom>    
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Raise Terrain
+      &lt;middlemouse&gt; Smooth Terrain
+      &lt;rightmouse&gt; Lower Terrain
+
+      [leftarrow][rightarrow] Change Brush Size
+
+      HelpLevelMid
+      [F3] Toggle Snap to Grid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Up/Down: Create Hills or Valleys</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Move Brush
+    </touch>
+    <touchBottom>Up/Down: Create Hills or Valleys</touchBottom>    
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainRaising</id>
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;drag&gt; Raise Terrain
+    </touch>
+    <touchBottom>Up/Down: Create Hills or Valleys</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainLowering</id>
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;drag&gt; Lower Terrain
+    </touch>
+    <touchBottom>Up/Down: Create Hills or Valleys</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Make Smooth
+      &lt;middlemouse&gt; Smooth Terrain
+      &lt;rightmouse&gt; Make Level
+
+      [leftarrow][rightarrow] Change Brush Size
+
+      HelpLevelMid
+      [F3] Toggle Snap to Grid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Flatten: Make Ground Smooth or Level</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Move Brush
+    </touch>
+    <touchBottom>Flatten: Make Ground Smooth or Level</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleFlatten</id>
+    
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;drag&gt; Flatten Terrain
+    </touch>
+    <touchBottom>Flatten: Make Ground Smooth or Level</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleSmooth</id>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;drag&gt; Smooth Terrain
+    </touch>
+    <touchBottom>Flatten: Make Ground Smooth or Level</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Make Spikey
+      &lt;middlemouse&gt; Smooth Terrain
+      &lt;rightmouse&gt; Make Hilly
+
+      [leftarrow][rightarrow] Change Brush Size
+
+      HelpLevelMid
+      [F3] Toggle Snap to Grid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Roughen: Create Spikey or Hilly Ground</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Move Brush
+    </touch>
+    <touchBottom>Roughen: Create Spikey or Hilly Ground</touchBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSmooth</id>
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Smooth Terrain
+    </touch>
+    <touchBottom>Roughen: Create Spikey or Hilly Ground</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleHilly</id>
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Make Hilly
+    </touch>
+    <touchBottom>Roughen: Create Spikey or Hilly Ground</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSpikey</id>
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Make Spikey
+    </touch>
+    <touchBottom>Roughen: Create Spikey or Hilly Ground</touchBottom>
+  </overlay>
+  
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Raise Water
+      &lt;middlemouse&gt; Change Water Color
+      &lt;rightmouse&gt; Lower Water
+
+      HelpLevelMid
+      [F3] Toggle Snap to Grid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Water Tool: Add, Remove, or Tint Water</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Move Brush
+    </touch>
+    <touchBottom>Water Tool: Add, Remove, or Tint Water</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleRaise</id>
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Raise Water
+    </touch>
+    <touchBottom>Water Tool: Add, Remove, or Tint Water</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleLower</id>
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Lower Water
+    </touch>
+    <touchBottom>Water Tool: Add, Remove, or Tint Water</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditDeleteObjects</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Delete
+      &lt;rightmouse&gt; Nothing here, move along.
+
+      [leftarrow][rightarrow] Change Brush Size
+
+      HelpLevelMid
+      [F3] Toggle Snap to Grid
+      [Space] Move Camera
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Delete Tool: Use a Brush to Clear Objects</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Move Brush
+    </touch>
+    <touchBottom>Delete Tool: Use a Brush to Clear Objects</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditDeleteObjects_Deleting</id>
+    <touch>
+      &lt;brushBigger&gt; Increase Brush Size
+      &lt;brushSmaller&gt; Decrease Brush Size
+      &lt;tap&gt; Delete Objects
+    </touch>
+    <touchBottom>Delete Tool: Use a Brush to Clear Objects</touchBottom>
+  </overlay>
+  
+
+  <overlay>
+    <id>MouseEditWorldTweak</id>
+
+    <keyMouse>
+      Change World Settings
+
+      HelpLevelMid
+      [Home] Home Menu
+      [Esc] Run
+    </keyMouse>
+    <keyMouseBottom>Change World Settings</keyMouseBottom>
+    <touchBottom>Change World Settings</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditSlider</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Value
+      [Esc] Accept
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenu</id>
+    <!-- Placeholder, should not be seen. -->
+    <back>Run Game</back>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenuRunSim</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Play Game</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Play Game</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      HelpLevelMid
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Play Game</keyMouseBottom>
+    <touchBottom>Play Game</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuHomeMenu</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Home Menu</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Home Menu</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      HelpLevelMid
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Play Game</keyMouseBottom>
+    <touchBottom>Play Game</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuObjectEdit</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Object Tool: Add or Edit Characters and Objects</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Object Tool: Add or Edit Characters and Objects</keyMouseBottom>
+
+    <touchBottom>Object Tool: Add or Edit Characters and Objects</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuDeleteObjects</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Delete Tool: Use a Brush to Clear Objects</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Delete Tool: Use a Brush to Clear Objects</keyMouseBottom>
+
+    <touchBottom>Delete Tool: Use a Brush to Clear Objects</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>ToolMenuTerrainSmoothLevel</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Flatten: Make Ground Smooth or Level</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Flatten: Make Ground Smooth or Level</keyMouseBottom>
+
+    <touchBottom>Flatten: Make Ground Smooth or Level</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainMaterial</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Ground Brush: add and remove ground</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Ground Brush: Paint, Add, or Delete Ground</keyMouseBottom>
+
+    <touchBottom>Ground Brush: Paint, Add, or Delete Ground</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSpikeyHilly</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Roughen: Create Spikey or Hilly Ground</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Roughen: Create Spikey or Hilly Ground</keyMouseBottom>
+
+    <touchBottom>Roughen: Create Spikey or Hilly Ground</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainUpDown</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Up/Down: Create Hills or Valleys</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Up/Down: Create Hills or Valleys</keyMouseBottom>
+
+    <touchBottom>Up/Down: Create Hills or Valleys</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainWater</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Water Tool: Add, Remove, or Tint Water</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Water Tool: Add, Remove, or Tint Water</keyMouseBottom>
+
+    <touchBottom>Water Tool: Add, Remove, or Tint Water</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuWorldSettings</id>
+    <back>Run Game</back>
+    <start>Home Menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Move Cursor</leftStick>
+    <rightStick mid = "false">Orbit Camera</rightStick>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Change World Settings</bottom>
+
+    <keyMouse>
+      [Esc] Run
+      [Home] Home Menu
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+    </keyMouse>
+    <keyMouseBottom>Change World Settings</keyMouseBottom>
+
+    <touchBottom>Change World Settings</touchBottom>
+
+  </overlay>
+
+  <overlay>
+    <id>BrushPickerSquare</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Square brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Square brush</keyMouseBottom>
+
+    <touchBottom>Square brush</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSquareLinear</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Linear square brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Linear square brush</keyMouseBottom>
+
+    <touchBottom>Linear square brush</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRound</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Hard round brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Hard round brush</keyMouseBottom>
+
+    <touchBottom>Hard round brush</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRound</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Medium round brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Medium round brush</keyMouseBottom>
+
+    <touchBottom>Medium round brush</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRound</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Soft round brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Soft round brush</keyMouseBottom>
+
+    <touchBottom>Soft round brush</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRoundLinear</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Linear hard round brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Linear hard round brush</keyMouseBottom>
+
+    <touchBottom>Linear hard round brush</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRoundLinear</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Linear medium round brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Linear medium round brush</keyMouseBottom>
+
+    <touchBottom>Linear medium round brush</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRoundLinear</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Linear soft round brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Linear soft round brush</keyMouseBottom>
+
+    <touchBottom>Linear soft round brush</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottled</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Mottled brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Mottled brush</keyMouseBottom>
+
+    <touchBottom>Mottled brush</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottledLinear</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Linear mottled brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Linear mottled brush</keyMouseBottom>
+
+    <touchBottom>Linear mottled brush</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMagic</id>
+    <y>Accept and Switch to Material Picker</y>
+    <b>Cancel</b>
+    <a>Select brush</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Magic brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+    <keyMouseBottom>Magic brush</keyMouseBottom>
+
+    <touchBottom>Magic brush</touchBottom>
+
+  </overlay>
+
+  <overlay>
+    <id>CameraSetMode</id>
+    <a>Accept</a>
+    <bottom>Move the camera to the position you want, then press &lt;A&gt;</bottom>
+
+    <keyMouse>
+      [Enter] Accept
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+    </keyMouse>
+    <keyMouseBottom>Move the camera to the position you want, then press [Enter]</keyMouseBottom>
+
+    <touch>
+      &lt;doubleDrag&gt; Drag Terrain
+      &lt;drag&gt; Pitch Camera
+      &lt;rotate&gt; Orbit Camera
+      &lt;pinch&gt; Zoom
+    </touch>
+
+    <touchBottom>Move the camera to the position you want, then tap here.</touchBottom>
+
+  </overlay>
+
+  <!--Object edit permutations-->
+  <overlay>
+    <!-- Nothing selected, nothing moused, something in the clipboard-->
+    <id>ObjectEdit</id>
+    <y></y>
+    <x></x>
+    <b>Tool Menu</b>
+    <a>Add</a>
+
+    <leftTrigger ghosted = "true">Cut</leftTrigger>
+    <rightTrigger ghosted = "false">Paste</rightTrigger>
+
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Alt]+&lt;leftmouse&gt; Paste
+      [Space]+&lt;leftmouse&gt; Add
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool Menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Nothing selected, nothing moused, nothing in the clipboard-->
+    <id>ObjectEditEmptyClipboard</id>
+    <y></y>
+    <x></x>
+    <b>Tool Menu</b>
+    <a>Add</a>
+
+    <leftTrigger ghosted = "true">Cut</leftTrigger>
+    <rightTrigger ghosted = "true">Paste</rightTrigger>
+
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Space]+&lt;leftmouse&gt; Add
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool Menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused.
+    Selected thing isn't programmable. This never happens any more, since everything except the cursor
+    and waypoints (handled elsewhere) is programmable.
+    -->
+    <id>ObjectEditSelected</id>
+    <y></y>
+    <x>Settings</x>
+    <a>Put Here</a>
+    <leftTrigger>Cut</leftTrigger>
+    <rightTrigger>Clone</rightTrigger>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <dpadVertical>Move Up/Down</dpadVertical>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused. Selected thing is a gameactor.-->
+    <id>ObjectEditSelectedProgrammable</id>
+    <y>Program</y>
+    <x>Settings</x>
+    <a>Put Here</a>
+    <leftTrigger>Cut</leftTrigger>
+    <rightTrigger>Clone</rightTrigger>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <dpadVertical>Move Up/Down</dpadVertical>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something cursored (not picked up, blue), nothing moused. Cursored thing is not a gameactor.
+    This isn't useful anymore, since everything is programmable except the cursor and
+    waypoints (handled elsewhere)
+    -->
+    <id>ObjectEditFocus</id>
+    <y></y>
+    <x>Settings</x>
+    <b>Tool Menu</b>
+    <a>Pick Up</a>
+    <leftTrigger>Cut</leftTrigger>
+    <rightTrigger>Clone</rightTrigger>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <dpadVertical>Change Size</dpadVertical>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <!-- GameActor cursored (not picked up, blue), nothing moused.-->
+    <id>ObjectEditFocusProgrammable</id>
+    <y>Program</y>
+    <x>Settings</x>
+    <b>Tool Menu</b>
+    <a>Pick Up</a>
+    <leftTrigger>Cut</leftTrigger>
+    <rightTrigger>Clone</rightTrigger>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <dpadVertical>Change Size</dpadVertical>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <!--And one for the trees-->
+  <overlay>
+    <!--A Tree is cursored (not picked up), nothing highlighted.-->
+    <id>TreeEditFocusProgrammable</id>
+    <y>Program</y>
+    <x>Settings</x>
+    <b>Tool Menu</b>
+    <a>Pick Up</a>
+    <leftTrigger>Cut</leftTrigger>
+    <rightTrigger>Clone</rightTrigger>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <dpadVertical>Change Type</dpadVertical>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Program
+      [X] Settings
+      [leftarrow][rightarrow] Change Color
+      [uparrow][downarrow] Change Size
+
+      &lt;leftmouse&gt; Drag
+      [Shift]+&lt;leftmouse&gt; Raise/Lower
+      [Shift]+&lt;rightmouse&gt; Rotate
+
+      [Space]+&lt;leftmouse&gt; Add
+      [Alt]+&lt;leftmouse&gt; Clone
+      [Ctrl]+&lt;leftmouse&gt; Cut
+
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool Menu
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>TreeEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Program
+      [X] Settings
+      [leftarrow][rightarrow] Change Color
+      [uparrow][downarrow] Change Size
+      [Tab] Change Type
+
+      &lt;leftmouse&gt; Drag
+      [Shift]+&lt;leftmouse&gt; Raise/Lower
+      [Shift]+&lt;rightmouse&gt; Rotate
+
+      [Space]+&lt;leftmouse&gt; Add
+      [Alt]+&lt;leftmouse&gt; Clone
+      [Ctrl]+&lt;leftmouse&gt; Cut
+
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool Menu
+    </keyMouse>
+  </overlay>
+  <!--End of the object edit permutations-->
+
+  <overlay>
+    <id>ObjectTweak</id>
+    <y></y>
+    <x></x>
+    <b>Tool Menu</b>
+    <a></a>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocus</id>
+    <y></y>
+    <x></x>
+    <b>Tool Menu</b>
+    <a>Tweak Settings</a>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocusProgrammable</id>
+    <y>Program</y>
+    <x></x>
+    <b>Tool Menu</b>
+    <a>Tweak Settings</a>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>TextDisplay</id>
+    <a>Continue</a>
+  </overlay>
+
+  <overlay>
+    <id>ScrollableTextDisplay</id>
+    <a>Continue</a>
+    <leftStick>Scroll Text</leftStick>
+  </overlay>
+
+  <overlay>
+    <id>PieSelectorProgrammingNoSelection</id>
+    <b>Cancel</b>
+    <leftStick>Select Tile</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorProgramming</id>
+    <a>Add Tile</a>
+    <b>Cancel</b>
+    <y>Help</y>
+    <leftStick>Select Item</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItemNoSelection</id>
+    <b>Cancel</b>
+    <leftStick>Select Item</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItem</id>
+    <a>Add Selection</a>
+    <b>Cancel</b>
+    <y>Help</y>
+    <leftStick>Select Item</leftStick>
+  </overlay>
+  <overlay>
+    <id>HelpCardProgramming</id>
+  </overlay>
+  <overlay>
+    <id>HelpCardAddItem</id>
+  </overlay>
+
+  <overlay>
+    <id>ToolBox</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>BasePicker</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>BrushPicker</id>
+    <y></y>
+    <x></x>
+
+    <b>Cancel</b>
+    <a>Accept</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Choose a Brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMaterial</id>
+    <!-- Placeholder, should not be seen. -->
+    <y>Accept and Switch to Material Picker</y>
+    <x></x>
+
+    <b>Cancel</b>
+    <a>Accept</a>
+    <leftTrigger>Previous Brush</leftTrigger>
+    <rightTrigger>Next Brush</rightTrigger>
+    <bottom>Choose a Brush</bottom>
+
+    <keyMouse>
+      [Y] Accept and Switch to Material Picker
+      [leftarrow][rightarrow] Change Brush
+      [Enter] Select brush
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialPicker</id>
+    <y>Select Material Under Cursor</y>
+    <x>Accept and Switch to Brush Picker</x>
+    <b>Cancel</b>
+    <a>Accept</a>
+    <dpadUp>Style: Cubic</dpadUp>
+    <dpadDown>Style: Smooth</dpadDown>
+    <leftTrigger>Previous Material</leftTrigger>
+    <rightTrigger>Next Material</rightTrigger>
+    <bottom>Choose a Material</bottom>
+
+    <keyMouse>
+      [X] Accept and Switch to Brush Picker
+      [leftarrow][rightarrow] Change Material
+      [uparrow] Style: Cubic
+      [downarrow] Style: Smooth
+      [Enter] Select Material
+      &lt;leftmouse&gt; Select Material Under Cursor
+      [Alt] + &lt;leftmouse&gt;  Select Material from World
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialFilterPicker</id>
+    <y>Select Material Under Bot</y>
+    <x></x>
+    <b>Cancel</b>
+    <a>Accept</a>
+    <leftTrigger>Previous Material</leftTrigger>
+    <rightTrigger>Next Material</rightTrigger>
+    <bottom>Choose a Material</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Material
+      [Enter] Select Material
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>WaterPicker</id>
+    <y>Select Water At Cursor</y>
+    <x></x>
+    <leftTrigger>Previous Water</leftTrigger>
+    <rightTrigger>Next Water</rightTrigger>
+
+    <b>Cancel</b>
+    <a>Accept</a>
+    <bottom>Choose a Water Type</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Water Type
+      [Enter] Select Water Type
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>HeightMapTool</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a>Smooth</a>
+    <leftTrigger>Lower</leftTrigger>
+    <rightTrigger>Raise</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Lower
+      [Alt]+&lt;leftmouse&gt; Smooth
+      [Space]+&lt;leftmouse&gt; Raise
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolStart</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Skip</b>
+    <a>Smooth</a>
+    <leftTrigger>Lower Ground</leftTrigger>
+    <rightTrigger>Raise Ground</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Lower
+      [Alt]+&lt;leftmouse&gt; Smooth
+      [Space]+&lt;leftmouse&gt; Raise
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Skip Line
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolGoing</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a>Smooth</a>
+    <leftTrigger>Lower Ground</leftTrigger>
+    <rightTrigger>Raise Ground</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Lower
+      [Alt]+&lt;leftmouse&gt; Smooth
+      [Space]+&lt;leftmouse&gt; Raise
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>AddTool</id>
+    <y>Material Picker</y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a>Change Ground Color</a>
+    <leftTrigger>Erase Ground</leftTrigger>
+    <rightTrigger>Add Ground</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Material Picker
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Erase Ground
+      [Alt]+&lt;leftmouse&gt; Change Ground Color
+      [Space]+&lt;leftmouse&gt; Add Ground
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolMagicBrush</id>
+    <y>Material Picker</y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a>Change Ground Color</a>
+    <leftTrigger>Erase Ground</leftTrigger>
+    <rightTrigger ghosted = "true">Add Ground</rightTrigger>
+
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <dpadUp>Style: Cubic</dpadUp>
+    <dpadDown>Style: Smooth</dpadDown>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Material Picker
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+      [uparrow] Style: Cubic
+      [downarrow] Style: Smooth
+
+      [Ctrl]+&lt;leftmouse&gt; Erase Ground
+      [Alt]+&lt;leftmouse&gt; Change Ground Color
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+
+  </overlay>
+  <overlay>
+    <id>AddToolStart</id>
+    <y>Material Picker</y>
+    <x>Brush Picker</x>
+    <b>Skip</b>
+    <a>Change Material</a>
+    <leftTrigger>Erase</leftTrigger>
+    <rightTrigger>Add</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Material Picker
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Erase Ground
+      [Alt]+&lt;leftmouse&gt; Change Ground Color
+      [Space]+&lt;leftmouse&gt; Add Ground
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Skip Line
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolGoing</id>
+    <y>Material Picker</y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a>Change Material</a>
+    <leftTrigger>Erase</leftTrigger>
+    <rightTrigger>Add</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Material Picker
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Erase Ground
+      [Alt]+&lt;leftmouse&gt; Change Ground Color
+      [Space]+&lt;leftmouse&gt; Add Ground
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>NoiseTool</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a>Smooth</a>
+    <leftTrigger>Spiky</leftTrigger>
+    <rightTrigger>Hilly</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Hilly
+      [Alt]+&lt;leftmouse&gt; Smooth
+      [Space]+&lt;leftmouse&gt; Spiky
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolStart</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Skip</b>
+    <a>Smooth</a>
+    <leftTrigger>Spiky</leftTrigger>
+    <rightTrigger>Hilly</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Hilly
+      [Alt]+&lt;leftmouse&gt; Smooth
+      [Space]+&lt;leftmouse&gt; Spiky
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Skip Line
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolGoing</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a>Smooth</a>
+    <leftTrigger>Spiky</leftTrigger>
+    <rightTrigger>Hilly</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Hilly
+      [Alt]+&lt;leftmouse&gt; Smooth
+      [Space]+&lt;leftmouse&gt; Spiky
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>LevelTool</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a></a>
+    <leftTrigger>Smooth</leftTrigger>
+    <rightTrigger>Level</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Alt]+&lt;leftmouse&gt; Smooth
+      [Space]+&lt;leftmouse&gt; Level
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>LevelToolStart</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <a>Pave Instantly</a>
+    <leftTrigger>Smooth</leftTrigger>
+    <rightTrigger>Pave Slowly</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Smooth
+      [Alt]+&lt;leftmouse&gt; Pave Instantly
+      [Space]+&lt;leftmouse&gt; Pave Slowly
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Skip Line
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>LevelToolGoing</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Done</b>
+    <a>Pave Instantly</a>
+    <leftTrigger>Smooth</leftTrigger>
+    <rightTrigger>Pave Slowly</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Smooth
+      [Alt]+&lt;leftmouse&gt; Pave Instantly
+      [Space]+&lt;leftmouse&gt; Pave Slowly
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>WaterAdd</id>
+    <y>Pick Water Type</y>
+    <x></x>
+    <b>Tool Menu</b>
+    <a>Set Water Type</a>
+    <leftTrigger>Lower Water</leftTrigger>
+    <rightTrigger>Raise Water</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal></dpadHorizontal>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Pick Water Type
+
+      [Ctrl]+&lt;leftmouse&gt; Lower Water
+      [Alt]+&lt;leftmouse&gt; Set Water Type
+      [Space]+&lt;leftmouse&gt; Raise Water
+
+      &lt;leftmouse&gt; Move Cursor
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>DelObjTool</id>
+    <y></y>
+    <x>Brush Picker</x>
+    <b>Tool Menu</b>
+    <leftTrigger>Delete Objects</leftTrigger>
+    <rightTrigger>Delete Objects</rightTrigger>
+    <rightTrigger></rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Brush Size</dpadHorizontal>
+    <leftStick>Move Brush</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker
+      [leftarrow][rightarrow] Brush Size
+
+      [Ctrl]+&lt;leftmouse&gt; Delete
+      [Space]+&lt;leftmouse&gt; Delete
+
+      &lt;leftmouse&gt; Move Camera
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointNode</id>
+    <y>Add More Nodes</y>
+    <x>Select Whole Path</x>
+    <b>Done</b>
+    <a>Pick Up</a>
+    <dpadVertical>Change Type</dpadVertical>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftTrigger>Delete Node</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdge</id>
+    <y>Change Direction</y>
+    <x>Select Whole Path</x>
+    <b>Done</b>
+    <a>Pick Up</a>
+    <dpadVertical>Change Type</dpadVertical>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftTrigger>Delete Edge</leftTrigger>
+    <rightTrigger>Split Edge</rightTrigger>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPath</id>
+    <y>Change Direction</y>
+    <x>Select Node/Edge</x>
+    <b>Done</b>
+    <a>Pick Up</a>
+    <dpadVertical>Change Type</dpadVertical>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftTrigger>Delete Path</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveNode</id>
+    <y></y>
+    <x>Pick Up Whole Path</x>
+    <b>Done</b>
+    <a>Put Down</a>
+    <dpadVertical>Change Height</dpadVertical>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftTrigger>Delete Node</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveEdge</id>
+    <y>Change Direction</y>
+    <x>Pick Up Whole Path</x>
+    <b>Done</b>
+    <a>Put Down</a>
+    <dpadVertical>Change Height</dpadVertical>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftTrigger>Delete Edge</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMovePath</id>
+    <y>Change Direction</y>
+    <x>Select Node/Edge</x>
+    <b>Done</b>
+    <a>Put Down</a>
+    <dpadVertical>Change Height</dpadVertical>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftTrigger>Delete Path</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointAddNode</id>
+    <y>Put Node and Done</y>
+    <x></x>
+    <b>Done</b>
+    <a>Put Node</a>
+    <dpadVertical>Change Type</dpadVertical>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Move Cursor</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndAddNode</id>
+    <y></y>
+    <x></x>
+    <b>Done</b>
+    <a></a>
+    <dpadVertical>Change Type</dpadVertical>
+    <dpadHorizontal>Change Color</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>New Position</leftStick>
+    <rightStick>Orbit Camera</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointNodeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Color
+      [Tab] Change Type
+
+      &lt;leftmouse&gt; Drag Node
+      [Shift]+&lt;leftmouse&gt; Raise/Lower Node
+      [X] Whole Path Mode
+
+      [Space]+&lt;leftmouse&gt; Add More Nodes
+      [Ctrl]+&lt;leftmouse&gt; Delete Node
+
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool Menu
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdgeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Color
+      [Tab] Change Type
+
+      &lt;leftmouse&gt; Drag Edge
+      [Shift]+&lt;leftmouse&gt; Raise/Lower Edge
+      [X] Whole Path Mode
+
+      [Space]+&lt;leftmouse&gt; Split Edge
+      [Ctrl]+&lt;leftmouse&gt; Delete Edge
+
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool Menu
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPathFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Color
+      [Tab] Change Type
+
+      &lt;leftmouse&gt; Drag Path
+      [Shift]+&lt;leftmouse&gt; Raise/Lower Path
+      [X] Node/Edge Mode
+
+      [Space]+&lt;leftmouse&gt; Add More Nodes
+      [Ctrl]+&lt;leftmouse&gt; Delete Path
+
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Tool Menu
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointAddFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Color
+      [Tab] Change Type
+
+      &lt;leftmouse&gt; Add Node and Continue
+      [Alt]+&lt;leftmouse&gt; Add Node and Done
+
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Done Adding
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Color
+      [Tab] Change Type
+
+      &lt;leftmouse&gt; Done Adding
+
+      &lt;rightmouse&gt; Orbit Camera
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Done Adding
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulation</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Press <![CDATA[<back>]]> to edit.</bottom>
+
+    <keyMouseBottom>Press [Esc] to edit.</keyMouseBottom>
+    <touchBottom>Tap here to edit.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulationPreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Press <![CDATA[<a>]]> to continue.</bottom>
+
+    <keyMouseBottom>Press [Enter] to continue.</keyMouseBottom>
+    <touchBottom>Tap here to continue.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>PauseGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Resume</a>
+    <bottom>Game paused, press <![CDATA[<a>]]> to resume.</bottom>
+
+    <keyMouse>
+      [Pause] Resume
+    </keyMouse>
+
+    <keyMouseBottom>Game paused, press [Pause] to resume.</keyMouseBottom>
+    <touchBottom>Game paused, tap here to resume.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>Programming</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>PageHandleFullPasteBuffer</id>
+    <y>Print Kode</y>
+    <x>Copy Page</x>
+    <b>Close</b>
+    <a></a>
+    <leftTrigger>Cut Page</leftTrigger>
+    <rightTrigger>Paste Page</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Switch Page
+      [Delete] Cut Page
+      [Insert] Paste Page
+      [Esc] Back
+      [Ctrl-P] Print Kode
+    </keyMouse>
+    
+    <touch>
+      &lt;tap&gt; Switch Page
+      &lt;touchHold&gt; Options
+    </touch>    
+  </overlay>
+  <overlay>
+    <id>PageHandleEmptyPasteBuffer</id>
+    <y>Print Kode</y>
+    <x>Copy Page</x>
+    <b>Close</b>
+    <a></a>
+    <leftTrigger>Cut Page</leftTrigger>
+    <rightTrigger ghosted = "true">Paste Page</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Switch Page
+      [Delete] Cut Page
+      [Esc] Back
+      [Ctrl-P] Print Kode
+    </keyMouse>
+    
+    <touch>
+      &lt;tap&gt; Switch Page
+      &lt;touchHold&gt; Options
+    </touch>
+    
+  </overlay>
+
+  <overlay>
+    <id>RowHandleFullPasteBuffer</id>
+    <y>Print Kode</y>
+    <x>Copy Row</x>
+    <b>Close</b>
+    <a>Move Row</a>
+    <leftTrigger>Cut Row</leftTrigger>
+    <rightTrigger>Paste Row</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Pick Up Row
+      &lt;rightmouse&gt; Cut Row
+      [Enter] Pick Up Row
+      [Tab] Next Page
+      [Shift][Tab] Prev Page
+      [Delete] Cut Row
+      [Insert] Paste Row
+      [Esc] Back
+      [Ctrl-P] Print Kode
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Select Row
+      &lt;drag&gt; Move Row
+      &lt;touchHold&gt; Options
+    </touch>
+
+  </overlay>
+  <overlay>
+    <id>RowHandleEmptyPasteBuffer</id>
+    <y>Print Kode</y>
+    <x>Copy Row</x>
+    <b>Close</b>
+    <a>Move Row</a>
+    <leftTrigger>Cut Row</leftTrigger>
+    <rightTrigger ghosted = "true">Paste Row</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Pick Up Row
+      &lt;rightmouse&gt; Cut Row
+      [Enter] Pick Up Row
+      [Tab] Next Page
+      [Shift][Tab] Prev Page
+      [Delete] Cut Row
+      [Esc] Back
+      [Ctrl-P] Print Kode
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Select Row
+      &lt;drag&gt; Move Row
+      &lt;touchHold&gt; Options      
+    </touch>
+    
+  </overlay>
+  <overlay>
+    <id>RowMove</id>
+    <y>Print Kode</y>
+    <x></x>
+    <b>Close</b>
+    <leftStick>Change Row Priority</leftStick>
+    <a>Put Row Here</a>
+    <bottom></bottom>
+
+    <keyMouse>
+      [uparrow] Move Up
+      [downarrow] Move Down
+      [rightarrow] Indent Block
+      [leftarrow] Unindent Block
+      [Enter] Put Here
+      [Ctrl-P] Print Kode
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Select Row
+      &lt;drag&gt; Move Row
+      &lt;touchHold&gt; Options
+    </touch>
+    
+  </overlay>
+  <overlay>
+    <id>Tile</id>
+    <y>Help</y>
+    <x>Delete Tile</x>
+    <b>Close</b>
+    <a>Change Tile</a>
+    <leftTrigger>Delete Tile</leftTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Add/Change Tile
+      &lt;rightmouse&gt; Delete Tile
+      [Enter] Add/Change Tile
+      [Tab] Next Page
+      [Shift][Tab] Prev Page
+      [Delete] Delete Tile
+      [Esc] Return
+      [Ctrl-P] Print Kode
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Add/Change Tile
+      &lt;touchHold&gt; Options
+    </touch>
+  </overlay>
+
+  <overlay>
+    <id>TopLevelPaletteEditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Edit World Settings</bottom>
+  </overlay>
+  <overlay>
+    <id>TopLevelPaletteEditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Edit Object Settings</bottom>
+  </overlay>
+  <overlay>
+    <id>EditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select</a>
+    <bottom>World Settings</bottom>
+  </overlay>
+  <overlay>
+    <id>EditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Character Settings</bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridCheckbox</id>
+    <y></y>
+    <x></x>
+    <b>Exit</b>
+    <a>Change</a>
+    <dpadVertical>Switch Property</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridSlider</id>
+    <y></y>
+    <x></x>
+    <b>Exit</b>
+    <a></a>
+    <dpadHorizontal>Left/Right to Change</dpadHorizontal>
+    <dpadVertical>Switch Property</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridPictureList</id>
+    <y></y>
+    <x></x>
+    <b>Exit</b>
+    <a></a>
+    <dpadHorizontal>Left/Right to Change</dpadHorizontal>
+    <dpadVertical>Switch Property</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridTextList</id>
+    <y></y>
+    <x></x>
+    <b>Exit</b>
+    <a>Select Next Option</a>
+    <dpadVertical>Switch Property</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGameDescription</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Start Game</a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom>Press &lt;a&gt; to Start Game</bottom>
+
+    <keyMouse>
+      [Enter] Start Game
+    </keyMouse>
+    <keyMouseBottom>Press [Enter] to Start Game</keyMouseBottom>
+    <touchBottom>Tap here to Start Game</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMenu</id>
+    <a>Select</a>
+    <leftStick>Change Selection</leftStick>
+  </overlay>
+  <overlay>
+    <id>ModularPictureList</id>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Setting
+      [Esc] Back
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCameraMode</id>
+    <dpadHorizontal>Change Selection</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Change Camera
+      [X] Set Camera
+      [Esc] Back
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckbox</id>
+    <a>Change</a>
+    <keyMouse>
+      [Enter] Change
+      [Esc] Back
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularNextLevel</id>
+    <a>Change</a>
+    <keyMouse>
+      [Enter] Change
+      [Esc] Back
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularSlider</id>
+    <dpadHorizontal>Change Value</dpadHorizontal>
+    <keyMouse>
+      [leftarrow][rightarrow] Change Value
+      [Esc] Back
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularRadioBox</id>
+    <a>Change</a>
+    <keyMouse>
+      [Enter] Change Selection
+      [Esc] Back
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckboxList</id>
+    <a>Change</a>
+    <b>Done</b>
+    <keyMouse>
+      [uparrow][downarrow] Select Tag
+      [Enter] Toggle Tag
+      [Esc] Back
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularButtonElement</id>
+    <a>View Change History</a>
+    <x>Delete Change History</x>
+    <keyMouse>
+      [A] View Change History
+      [X] Delete Change History
+      [Esc] Back
+    </keyMouse>
+  </overlay>
+
+</XmlOverlayData>

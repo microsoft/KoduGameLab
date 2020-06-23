@@ -1,0 +1,1123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CrumbList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Crumbs>
+
+    <!--  To HomeMenu, yes you can get here from anywhere -->
+    <Crumb>
+      <curModes>
+        <mode>InGame</mode>
+
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MouseEditObjectFocus</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+        <mode>MouseWorldSettings</mode>
+
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadTerrainSmoothLevel</mode>
+        <mode>GamepadTerrainPaint</mode>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+        <mode>GamepadTerrainUpDown</mode>
+        <mode>GamepadWater</mode>
+        <mode>GamepadDeleteObjects</mode>
+        <mode>GamepadWorldSettings</mode>
+
+        <mode>MaterialPicker</mode>
+        <mode>BrushPicker</mode>
+        <mode>WaterPicker</mode>
+        <mode>AddItem</mode>
+        <mode>AddItemHelp</mode>
+        <mode>ObjectTweak</mode>
+
+      </curModes>
+      <targetMode>HomeMenu</targetMode>
+      <gamepadText>Gwasgwch &lt;start&gt; i fynd i’r Dewislen Cartref.</gamepadText>
+      <mouseText>Gwasgwch [esc] i fynd i’r Dewislen Cartref.</mouseText>
+    </Crumb>
+
+
+
+    <!--  From InGame  -->
+    <Crumb>
+      <curModes>
+        <mode>InGame</mode>
+      </curModes>
+      <targetMode>MouseCameraMove</targetMode>
+      <gamepadText>Gwasgwch &lt;a&gt; i fynd i ddull Golygu.</gamepadText>
+      <mouseText>Gwasgwch [esc] i fynd i ddull Golygu.</mouseText>
+      <touchText>Tapiwch [here] i fynd i ddull Golygu.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>InGame</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Gwasgwch &lt;a&gt; i fynd i Ddull Golygu.</gamepadText>
+      <mouseText>Gwasgwch [esc] i fynd i Ddull Golygu.</mouseText>
+      <touchText>Tapiwch [here] i fynd i ddull Golygu.</touchText>    
+    </Crumb>
+
+    <!--  From MainMenu  -->
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText>Dewiswch AILDDECHRAU a gwasgwch &lt;a&gt;.</gamepadText>
+      <mouseText>Gwasgwch ar AILDDECHRAU.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>LoadLevelMenu</targetMode>
+      <gamepadText>Dewiswch LLWYTHO BYD a gwasgwch &lt;a&gt;.</gamepadText>
+      <mouseText>Cliciwch ar LLWYTHO BYD.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>CommunityMenu</targetMode>
+      <gamepadText>Dewiswch CYMUNED a gwasgwch &lt;a&gt;.</gamepadText>
+      <mouseText>Gwasgwch ar CYMUNED.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>OptionsMenu</targetMode>
+      <gamepadText>Dewiswch OPSIYNAU  a gwasgwch &lt;a&gt;.</gamepadText>
+      <mouseText>Gwasgwch ar OPSIYNAU.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>HelpScreens</targetMode>
+      <gamepadText>Dethol HELP a gwasgwch &lt;a&gt;.</gamepadText>
+      <mouseText>Gwasgwch ar HELP.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MainMenu</mode>
+      </curModes>
+      <targetMode>SharingHub</targetMode>
+      <gamepadText>Dethol RHANNU a gwasgwch &lt;a&gt;.</gamepadText>
+      <mouseText>Gwasgwch ar RHANNU.</mouseText>
+    </Crumb>
+
+    <!--  From SharingHub -->
+    <Crumb>
+      <curModes>
+        <mode>SharingHub</mode>
+      </curModes>
+      <targetMode>SharingSession</targetMode>
+      <gamepadText>Gwasgwch &lt;start&gt; i fynd i’r sesiwn rhannu.</gamepadText>
+      <mouseText>Gwasgwch &lt;enter&gt; neu gwasgwch y drws agored i fynd i’r sesiwn rhannu.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>SharingHub</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i ddychwelyd i’r Prif Ddewislen.</gamepadText>
+      <mouseText>Gwasgwch &lt;esc&gt; i ddychwelyd i’r prif ddewislen.</mouseText>
+    </Crumb>
+
+    <!--  From SharingSession -->
+    <Crumb>
+      <curModes>
+        <mode>SharingSession</mode>
+      </curModes>
+      <targetMode>SharingHub</targetMode>
+      <gamepadText>Gwasgwch &lt;back&gt; i adael y sesiwn rhannu.</gamepadText>
+      <mouseText>Gwasgwch &lt;esc&gt; i adael y sesiwn rhannu.</mouseText>
+    </Crumb>
+
+    <!--  From OptionsMenu  -->
+    <Crumb>
+      <curModes>
+        <mode>OptionsMenu</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i ddychwelyd i’r Prif Ddewislen.</gamepadText>
+      <mouseText>Gwasgwch [esc] neu cliciwch oddi ar yr gwrthrychau dewislen i ddychwelyd i’r Prif Ddewislen.</mouseText>
+    </Crumb>
+
+    <!--  From HelpScreens  -->
+    <Crumb>
+      <curModes>
+        <mode>HelpScreens</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i ddychwelyd i’r Brif Ddewislen.</gamepadText>
+      <mouseText>Gwasgwch [esc] i ddychwelyd i’r Brif Ddewislen.</mouseText>
+    </Crumb>
+
+    <!--  From LoadLevelMenu  -->
+    <Crumb>
+      <curModes>
+        <mode>LoadLevelMenu</mode>
+      </curModes>
+      <targetMode>Unknown</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i ddychwelyd i’r Prif Ddewislen.</gamepadText>
+      <mouseText>
+        Gwasgwch ar y saethau gwyrdd i sgrolio, gwasgwch ar teitl y gem i ddewis y gem.
+        Defnyddiwch [leftarrow][rightarrow] i sgrolio,gwasgwch [enter] i ddewis y gem.
+      </mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>LoadLevelMenu</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Prif Ddewislen.</gamepadText>
+      <mouseText>Gwasgwch [esc] i fynd yn ol i’r Prif Ddewislen.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>LoadLevelMenu</mode>
+      </curModes>
+      <targetMode>HomeMenu</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Ddewislen Cartref.</gamepadText>
+      <mouseText>Gwasgwch [esc] i fynd yn ol i’r Ddewislen Cartref.</mouseText>
+    </Crumb>
+
+    <!--  From CommunityMenu  -->
+    <Crumb>
+      <curModes>
+        <mode>CommunityMenu</mode>
+      </curModes>
+      <targetMode>Unknown</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Prif Ddewislen.</gamepadText>
+      <mouseText>
+        Cliciwch ar yr arwyddion gwyrdd i sgrolio, cliciwch ar deitl y gem.
+        Defnyddiwch [leftarrow][rightarrow] i sgrolio, gwasgwch [enter] i ddewis gem.
+      </mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>CommunityMenu</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i fynd yn ol i’r Prif Ddewislen.</gamepadText>
+      <mouseText>Gwasgwch [esc] i fynd yn ol i’r Prif Ddewislen.</mouseText>
+    </Crumb>
+
+    <!--  ToolMenu from any tool to every other. Gamepad only.  -->
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <!-- 
+      Note: even though this will actually take us to ToolMenuRunSim we give InGame
+      as the target mode to it seems shorter than going through the HomeMenu.
+      -->
+      <targetMode>InGame</targetMode>
+      <gamepadText>Defnyddiwch y sbardunau i ddewis Chwarae &lt;play&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Defnyddiwch y sbardunau i ddewis Golygu Gwrthrych &lt;ObjectEdit&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!-- Lead user through EditObjectFocus to get to Programming -->
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuEditObject</mode>
+      </curModes>
+      <targetMode>GamepadEditObjectFocus</targetMode>
+      <gamepadText>Gwasgwch &lt;a&gt; i rhaglenni gwrthrychau.</gamepadText>
+      <mouseText></mouseText>
+      <touchText>Tapiwch &lt;Kodu&gt; i rhaglenni gwrthrychau.</touchText>
+    </Crumb>
+
+    <!-- Lead user through EditObject to get to Programming -->
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>Programming</targetMode>
+      <gamepadText>Defnyddiwch y sbardunau i ddewis Golygu Gwrthrych &lt;ObjectEdit&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainSmoothLevel</targetMode>
+      <gamepadText>Defnyddiwch y sbardunay i ddewis Tir Llyfn/Lefel teclyn &lt;terrainsmoothlevel&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainPaint</targetMode>
+      <gamepadText>Defnyddiwch y sbardunau i ddewis y teclyn Paent Tir &lt;terrainpaint&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainSpikeyHilly</targetMode>
+      <gamepadText>Defnyddiwch y sbardunau i ddewis y declyn Tir Pigog/Mynyddig &lt;terrainspikeyhilly&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainUpDown</targetMode>
+      <gamepadText>Defnyddiwch y sbardunau i ddewis y declyn Tir i fyny/I lawr &lt;terrainUpDown&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuWater</targetMode>
+      <gamepadText> Defnyddio'r clicied i ddewis y teclyn dwr &lt;water&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuDeleteObjects</targetMode>
+      <gamepadText>Defnyddio'r clicied i ddewis y teclyn dileu gwrthrychau &lt;deleteobjects&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+        <mode>ToolMenuHomeMenu</mode>
+        <mode>ToolMenuEditObject</mode>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+        <mode>ToolMenuTerrainPaint</mode>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+        <mode>ToolMenuTerrainUpDown</mode>
+        <mode>ToolMenuWater</mode>
+        <mode>ToolMenuDeleteObjects</mode>
+      </curModes>
+      <targetMode>ToolMenuWorldSettings</targetMode>
+      <gamepadText>Defnyddio'r clicied i ddewis Gosodiadau Byd &lt;worldsettings&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!--  GamePad Tools, from any tool back to the ToolBar -->
+
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadTerrainSmoothLevel</mode>
+        <mode>GamepadTerrainPaint</mode>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+        <mode>GamepadTerrainUpDown</mode>
+        <mode>GamepadWater</mode>
+        <mode>GamepadDeleteObjects</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i mynd i dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>GamepadWorldSettings</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i adael</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!--  Gamepad tools, from toolbar to actual tool  -->
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuRunSim</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i rhedeg eich gem</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuEditObject</mode>
+      </curModes>
+      <targetMode>GamepadEditObject</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i ychwanegu rhaglen neu golygu gwrthrychau</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuTerrainSmoothLevel</mode>
+      </curModes>
+      <targetMode>GamepadTerrainSmoothLevel</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i newid tir</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuTerrainPaint</mode>
+      </curModes>
+      <targetMode>GamepadTerrainPaint</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i ychwanegu paent i’ch tir</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuTerrainSpikeyHilly</mode>
+      </curModes>
+      <targetMode>GamepadTerrainSpikeyHilly</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i newid eich tir</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuEditObject</mode>
+      </curModes>
+      <targetMode>GamepadEditObject</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i ychwanegu rhaglen neu golygu gwrthrychau</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuTerrainUpDown</mode>
+      </curModes>
+      <targetMode>GamepadTerrainUpDown</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i godi a gostwng eich tir</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuWater</mode>
+      </curModes>
+      <targetMode>GamepadWater</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i ychwanegu neu newid dwr</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuDeleteObjects</mode>
+      </curModes>
+      <targetMode>GamepadDeleteObjects</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i defnyddio'r teclyn dileu gwrthrychau &lt;deleteobjects&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>ToolMenuWorldSettings</mode>
+      </curModes>
+      <targetMode>GamepadWorldSettings</targetMode>
+      <gamepadText>Gwasgu &lt;a&gt; i newid gosodiadau byd &lt;back&gt;</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    
+    <!-- From gamepad tools back to tool menu -->
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadEditObjectFocus</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Gwasgu &lt;worldsettings&gt; i ddychwelyd yn ol i’r dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadTerrainPaint</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainPaint</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i ddychwelyd yn ol i’r dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadTerrainUpDown</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainUpDown</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i ddychwelyd yn ol i’r dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadTerrainSmoothLevel</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainSmoothLevel</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i ddychwelyd yn ol i’r dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+      </curModes>
+      <targetMode>ToolMenuTerrainSpikeyHilly</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i ddychwelyd yn ol i’r dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadWater</mode>
+      </curModes>
+      <targetMode>ToolMenuWater</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i ddychwelyd yn ol i’r dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadDeleteObjects</mode>
+      </curModes>
+      <targetMode>ToolMenuDeleteObjects</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i ddychwelyd yn ol i’r dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <!-- Shortcut mode to fool the system into thinking that this is the fast way to get into run mode. -->
+      <curModes>
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadEditObjectFocus</mode>
+        <mode>GamepadTerrainPaint</mode>
+        <mode>GamepadTerrainUpDown</mode>
+        <mode>GamepadTerrainSmoothLevel</mode>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText>Gwasgu &lt;back&gt; i ddychwelyd yn ol i’r dewislen teclyn</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <!--  Mouse Tools, from every tool to every other tool -->
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MousePlay</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch ar Chwarae &lt;play&gt; i rhedeg y gem.</mouseText>
+      <touchText>Gwasgwch ar Chwarae &lt;play&gt; i rhedeg y gem.</touchText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch ar Chwarae &lt;play&gt; i rhedeg y gem.</mouseText>
+      <touchText>Gwasgwch ar Chwarae &lt;play&gt; i rhedeg y gem.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseHome</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch ar Dewislen Cartref &lt;homemenu&gt;</mouseText>
+      <touchText>Gwasgwch ar Dewislen Cartref &lt;homemenu&gt;</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>HomeMenu</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch ar Dewislen Cartref &lt;homemenu&gt;</mouseText>
+      <touchText>Gwasgwch ar Dewislen Cartref &lt;homemenu&gt;</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseCameraMove</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch ar Symud Camera &lt;ObjectEdit&gt;</mouseText>
+      <touchText>Gwasgwch ar Symud Camera &lt;ObjectEdit&gt;</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseEditObject</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch ar yr Offeryn Gwrthrych &lt;ObjectEdit&gt; yn y dewislen o dan i ychwanegu neu rhaglennu gwrthrychau.</mouseText>
+      <touchText>Gwasgwch ar yr Offeryn Gwrthrych &lt;ObjectEdit&gt; yn y dewislen o dan i ychwanegu neu rhaglennu gwrthrychau.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MousePaths</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch ar yr Offeryn Llwybrau &lt;paths&gt; yn y dewislen o dan i ychwanegu neu golygu llwybrau.</mouseText>
+      <touchText>Gwasgwch ar yr Offeryn Llwybrau &lt;paths&gt; yn y dewislen o dan i ychwanegu neu golygu llwybrau.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseTerrainPaint</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch ar yr Offeryn Tir &lt;terrainpaint&gt; yn y dewislen o dan i ychwanegu neu i beintio'r tir.</mouseText>
+      <touchText>Gwasgwch ar yr Offeryn Tir &lt;terrainpaint&gt; yn y dewislen o dan i ychwanegu neu i beintio'r tir.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseTerrainUpDown</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Cliciwch ar yr Offeryn Tir ifynyilawr &lt;terrainUpDown&gt; yn y dewyslen isod i addasu eich tir.</mouseText>
+      <touchText>Tapiwch ar yr Offeryn Tir ifynyilawr &lt;terrainUpDown&gt; yn y dewyslen isod i addasu eich tir.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseTerrainSmoothLevel</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Cliciwch ar yr Offeryn Tir Llyfn/Gwastad &lt;terrainsmoothlevel&gt; yn y dewyslen isod i addasu eich tir.</mouseText>
+      <touchText>Tapiwch ar yr Offeryn Tir Llyfn/Gwastad &lt;terrainsmoothlevel&gt; yn y dewyslen isod i addasu eich tir.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseTerrainSpikeyHilly</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Cliciwch ar yr Offeryn Tir Pigog/Mynyddog &lt;terrainspikeyhilly&gt; yn y dewyslen isod i addasu eich tir.</mouseText>
+      <touchText>Tapiwch ar yr Offeryn Tir Pigog/Mynyddog &lt;terrainspikeyhilly&gt; yn y dewyslen isod i addasu eich tir.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseWater</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Cliciwch ar yr Offeryn Dwr &lt;water&gt; yn y dewyslen isod i ychwannegu neu newid dwr.</mouseText>
+      <touchText>Tapiwch ar yr Offeryn Dwr &lt;water&gt; yn y dewyslen isod i ychwannegu neu newid dwr.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+      </curModes>
+      <targetMode>MouseDeleteObjects</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Cliciwch ar yr Offeryn Dileu Gwrthrych &lt;deleteobjects&gt; yn y dewyslen isod i gwaredu a gwrthrychau o'ch byd yn gyflym.</mouseText>
+      <touchText>Tapiwch ar yr Offeryn Dileu Gwrthrych &lt;deleteobjects&gt; yn y dewyslen isod i gwaredu a gwrthrychau o'ch byd yn gyflym.</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseCameraMove</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MousePaths</mode>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseWater</mode>
+        <mode>MouseDeleteObjects</mode>
+      </curModes>
+      <targetMode>MouseWorldSettings</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Cliciwch ar Lleoliadau Byd &lt;worldsettings&gt; yn y dewyslen isod.</mouseText>
+      <touchText>Tapiwch ar Lleoliadau Byd &lt;worldsettings&gt; yn y dewyslen isod.</touchText>
+    </Crumb>
+
+    <!--  Into pickers  -->
+
+    <Crumb>
+      <curModes>
+        <mode>MouseTerrainPaint</mode>
+        <mode>GamepadTerrainPaint</mode>
+      </curModes>
+      <targetMode>MaterialPicker</targetMode>
+      <gamepadText>Gwasgwch &lt;y&gt; i ddewis deunydd newydd.</gamepadText>
+      <mouseText>Cliciwch ar y icon dewisydd deunydd &lt;materialtype&gt; uwch y icon offeryn i ddewis deunydd newydd.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseTerrainPaint</mode>
+        <mode>MouseTerrainUpDown</mode>
+        <mode>MouseTerrainSmoothLevel</mode>
+        <mode>MouseTerrainSpikeyHilly</mode>
+        <mode>MouseDeleteObjects</mode>
+
+        <mode>GamepadTerrainPaint</mode>
+        <mode>GamepadTerrainUpDown</mode>
+        <mode>GamepadTerrainSmoothLevel</mode>
+        <mode>GamepadTerrainSpikeyHilly</mode>
+        <mode>GamepadDeleteObjects</mode>
+      </curModes>
+      <targetMode>BrushPicker</targetMode>
+      <gamepadText>Gwasgwch &lt;x&gt; i ddewis brwsh newydd.</gamepadText>
+      <mouseText>Cliciwch ar y icon dewisydd brwsh &lt;brushtype&gt; uwch y icon offeryn i ddewis brwsh newydd.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseWater</mode>
+        <mode>GamepadWater</mode>
+      </curModes>
+      <targetMode>WaterPicker</targetMode>
+      <gamepadText>Gwasgwch &lt;y&gt; i ddewis lliw dwr newydd.</gamepadText>
+      <mouseText>Cliciwch ar y icon dewisydd dwr &lt;watertype&gt; uwch y icon offeryn i ddewis lliw dwr newydd.</mouseText>
+    </Crumb>
+
+    <!--  Out of pickers  -->
+
+    <Crumb>
+      <curModes>
+        <mode>MaterialPicker</mode>
+      </curModes>
+      <targetMode>MouseTerrainPaint</targetMode>
+      <gamepadText>Defnyddiwch sbardun i ddewis deunydd a gwasgwch &lt;a&gt; i ddethol.</gamepadText>
+      <mouseText>Defnyddiwch [leftarrow][rightarrow] i ddewis dwr, gwasgwch [enter] neu cliciwch i ddethol.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>WaterPicker</mode>
+      </curModes>
+      <targetMode>MouseWater</targetMode>
+      <gamepadText>Defnyddiwch sbardun i ddewis dwr a gwasgwch &lt;a&gt; i ddethol.</gamepadText>
+      <mouseText>Defnyddiwch [leftarrow][rightarrow] i ddewis dwr, gwasgwch [enter] neu cliciwch i ddethol.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>BrushPicker</mode>
+      </curModes>
+      <targetMode>MouseTerrainPaint</targetMode>
+      <gamepadText>Defnyddiwch sbardun i ddewis brwsh a gwasgwch &lt;a&gt; i ddethol.</gamepadText>
+      <mouseText>Defnyddiwch [leftarrow][rightarrow] i ddewis brwsh, gwasgwch [enter] neu cliciwch i ddethol.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MaterialPicker</mode>
+      </curModes>
+      <targetMode>GamepadTerrainPaint</targetMode>
+      <gamepadText>Defnyddiwch sbardun i ddewis deunydd a gwasgwch &lt;a&gt; i ddethol.</gamepadText>
+      <mouseText>Defnyddiwch [leftarrow][rightarrow] i ddewis deunydd, gwasgwch [enter] neu cliciwch i ddethol.</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>WaterPicker</mode>
+      </curModes>
+      <targetMode>GamepadWater</targetMode>
+      <gamepadText>Defnyddiwch clicied i ddewis dwr a gwasgwch &lt;a&gt; i ddewis</gamepadText>
+      <mouseText>Defnyddiwch [leftarrow][rightarrow] i ddewis dwr, gwasgwch [enter] neu cliciwch i ddewis</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>BrushPicker</mode>
+      </curModes>
+      <targetMode>GamepadTerrainPaint</targetMode>
+      <gamepadText>Defnyddiwch clicied i ddewis brwsh a gwasgwch &lt;a&gt; i ddewis</gamepadText>
+      <mouseText>Defnyddiwch [leftarrow][rightarrow] i ddewis brwsh, gwasgwch [enter] neu cliciwch i ddewis</mouseText>
+    </Crumb>
+
+
+
+    <Crumb>
+      <curModes>
+        <mode>ObjectTweak</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Gwasgwch &lt;b&gt; i adael</gamepadText>
+      <mouseText>Gwasgwch [esc] neu cliciwch oddi ar y dewislen</mouseText>
+    </Crumb>
+
+    <!-- From HomeMenu -->
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>MainMenu</targetMode>
+      <gamepadText>Dewis prif ddewislen</gamepadText>
+      <mouseText>Cliciwch ar y prif ddewislen</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText>Dewiswch i ail ddechrau'r byd</gamepadText>
+      <mouseText>Cliciwch ar ail ddechrau byd</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>ToolMenuEditObject</targetMode>
+      <gamepadText>Dewiswch i olygu'r byd</gamepadText>
+      <mouseText>Cliciwch ar olygu byd</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>MouseCameraMove</targetMode>
+      <gamepadText>Dewiswch i olygu'r byd</gamepadText>
+      <mouseText>Cliciwch ar olygu byd</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>LoadLevelMenu</targetMode>
+      <gamepadText>Dewis llwytho byd</gamepadText>
+      <mouseText>Cliciwch ar lwytho byd</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>HomeMenu</mode>
+      </curModes>
+      <targetMode>SharingHub</targetMode>
+      <gamepadText>Dewis rhannu gyda ffrindiau</gamepadText>
+      <mouseText>Cliciwch ar rannu gyda ffrindiau</mouseText>
+    </Crumb>
+
+    <!-- Into Add Item -->
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObject</mode>
+        <mode>GamepadEditObjectFocus</mode>
+        <mode>MouseEditObject</mode>
+        <mode>MouseEditObjectFocus</mode>
+      </curModes>
+      <targetMode>AddItem</targetMode>
+      <gamepadText>Symud y cwrswr i le ydych am ychwanegu gwrthrych newydd a gwasgwch &lt;a&gt;</gamepadText>
+      <mouseText>Clic chwith &lt;leftmouse&gt; unrhyw le ar y dir i ychwanegu gwrthrych newydd</mouseText>
+    </Crumb>
+
+    <!-- From mouse world settings -->
+    <Crumb>
+      <curModes>
+        <mode>MouseWorldSettings</mode>
+      </curModes>
+      <targetMode>MouseCameraMove</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText>Gwasgwch [esc] i fynd yn ol i’r dewislen teclyn</mouseText>
+    </Crumb>
+
+    <!-- To and From Programming -->
+    <Crumb>
+      <curModes>
+        <mode>ProgrammingHelp</mode>
+      </curModes>
+      <targetMode>Programming</targetMode>
+      <gamepadText>Gwasgwch &lt;B&gt; i fynd yn ol</gamepadText>
+      <mouseText>Gwasgwch [esc] i fynd yn ol</mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObject</mode>
+      </curModes>
+      <targetMode>GamepadEditObjectFocus</targetMode>
+      <gamepadText>Symud y cwrswr i’r cymeriad</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>GamepadEditObjectFocus</mode>
+      </curModes>
+      <targetMode>GamepadEditObject</targetMode>
+      <gamepadText>Symud y cwrswr i wagle</gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>MouseEditObject</mode>
+        <mode>MouseEditObjectFocus</mode>
+        <mode>GamepadEditObjectFocus</mode>
+      </curModes>
+      <targetMode>Programming</targetMode>
+      <gamepadText>Gwasgwch &lt;Y&gt; i ddychwelyd rhaglennu</gamepadText>
+      <mouseText>Clic dde ar y cymeriad i dewis rhaglen</mouseText>
+      <touchText>Tap dwbl ar y gwrthrych i ddewis rhaglen</touchText>
+    </Crumb>
+
+    <Crumb>
+      <curModes>
+        <mode>Programming</mode>
+      </curModes>
+      <targetMode>MouseEditObject</targetMode>
+      <gamepadText>Pwyso &lt;B&gt; i agosau a mynd yn ol i’r ddewislen golygu</gamepadText>
+      <mouseText>Pwyso [esc] i fynd yn ol Iir dewislen golygu</mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>Programming</mode>
+      </curModes>
+      <targetMode>GamepadEditObject</targetMode>
+      <gamepadText>Pwyso &lt;B&gt; i agosau a mynd yn ol i’r ddewislen golygu</gamepadText>
+      <mouseText>Pwyso [esc] i fynd yn ol Iir dewislen golygu</mouseText>
+    </Crumb>
+
+
+    <!--  Transitions that don't make sense  -->
+    <Crumb>
+      <curModes>
+        <mode>MouseHome</mode>
+      </curModes>
+      <targetMode>HomeMenu</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+    <Crumb>
+      <curModes>
+        <mode>MousePlay</mode>
+      </curModes>
+      <targetMode>InGame</targetMode>
+      <gamepadText></gamepadText>
+      <mouseText></mouseText>
+    </Crumb>
+
+
+  </Crumbs>
+</CrumbList>

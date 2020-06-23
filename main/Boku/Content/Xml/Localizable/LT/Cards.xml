@@ -1,0 +1,999 @@
+﻿<Tiles>
+  <sensor>
+    <gamepad label="pultas">Žaidėjas valdo veikėją. Nurodykite mygtuką, jungiklį ar svirtelę, o jei reikia - ir žaidėją.</gamepad>
+    <keyboard label="klaviatūra">Žaidėjas valdo veikėją. Nurodykite klavišą.</keyboard>
+    <mouse label="pelė">Gaunamas kompiuterio pelės signalas.</mouse>
+    <touch label="lietimas">Gaunamas jutiklinio ekrano signalas.</touch>
+    <eyes label="matai">Matai tam tikro tipo ar spalvos objektą. Naudojant tiesioginio matymo filtrą, kalvos ir sienos gali užstoti vaizdą.</eyes>
+    <ears label="girdi">Girdi tam tikro tipo garsą ar objektą. Sienos garsui nekliudo.</ears>
+    <bumpers label="bumpt">Atsitrenki į tam tikro tipo ar spalvos objektą.</bumpers>
+    <timer label="laikas">Praeina tam tikras laikas. Galima sudėti kelis skaičius.</timer>
+    <got label="turi">Paimi tam tikro tipo ar spalvos objektą.</got>
+    <scored label="taškai">Keičiasi rezultatas.</scored>
+    <health label="sveikata">Kinta sveikata.</health>
+    <missilehit label="pataikei">Tavo šūvis pataikė į kitą objektą. Tinka rezultato skaičiavimui, bet galima naudoti bet kam: pvz., pašautą botą nudažyti rausvai.</missilehit>
+    <held label="pagavo">Tave pagavo kitas veikėjas.</held>
+    <terrain label="žemė">Po tavimi yra tam tikro tipo žemė.</terrain>
+    <water label="vanduo">Po tavimi yra tam tikro tipo vanduo.</water>
+    <beamed label="spindulys">Spindulys pataikė į Marso uolieną.</beamed>
+    <inspected label="apžiūrėtas">Marso uoliena yra apžiūrėta.</inspected>
+    <scanned label="nuskenuota">Nežinoma uoliena yra nuskenuota ir atpažinta.</scanned>
+    <endofpath label="kelio galas">Pasiekei kelio galą.</endofpath>
+    <always label="visada">Daryk kažką nenustodamas. Nebūtina naudoti.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Kodu yra veikėjas, kurio veiksmus tu gali programuoti.</boku>
+    <bokubot label="kodu">Kodu yra veikėjas, kurio veiksmus tu gali programuoti.</bokubot>
+    <anything label="bet kas" />
+    <me label="aš">Tikrink tik šios programos veikėją.</me>
+    <said label="pasakė">Klausyk, ką kalba kitas veikėjas. Parašyk, ką norėtum išgirsti.</said>
+    <countnone label="nėra">Nėra atitinkančių objektų. Pvz., matai - mėlyna - nėra atitinka situaciją, kai nesimato nieko mėlyno.</countnone>
+    <starfish label="žvaigždė">Jūros žvaigždė.</starfish>
+    <clam label="moliuskas">Moliuskas.</clam>
+    <seagrass label="jūržolės">Jūržolės.</seagrass>
+    <seagrasssingle label="jūržolė">Jūržolė.</seagrasssingle>
+    <lilypad label="lelijos">Vandens lelijos.</lilypad>
+    <lilypadsingle label="lelija">Vandens lelija.</lilypadsingle>
+    <flyfish label="skraiduolė">Žuvis skraiduolė yra programuojamas veikėjas.</flyfish>
+    <jet label="turbo">Turbo yra programuojamas veikėjas.</jet>
+    <light label="blyksė">Blyksė yra programuojamas veikėjas. Ji apšviečia aplinką. Gali būti ne daugiau kaip keturios.</light>
+    <fan label="ventiliatorius">Ventiliatorius.</fan>
+    <octopus label="aštuonkojis">Aštuonkojis.</octopus>
+    <fastbot label="cyklius">Cyklius yra programuojamas veikėjas.</fastbot>
+    <saucer label="lėkštė">Atsiprašau, nieko nesakysiu. Informacija apie lėkštes yra slapta.</saucer>
+    <windblimp label="ceplis">Ceplis yra skraidantis programuojamas veikėjas.</windblimp>
+    <balloonbot label="balionas">Balionas yra skrajojantis programuojamas veikėjas.</balloonbot>
+    <subbot label="subas">Subas yra povandeninis programuojamas veikėjas.</subbot>
+    <terracannon label="patranka">Patranka yra programuojama veikėjas.</terracannon>
+    <puck label="ritulys">Ritulys yra programuojamas veikėjas.</puck>
+    <wisp label="žaltvykslė">Žaltvykslė yra programuojamas veikėjas.</wisp>
+    <anybot label="botas">Bet koks veikėjas.</anybot>
+    <turtle label="vėžlys">Vėžlys.</turtle>
+    <rover label="marsaeigis">Marsaeigis.</rover>
+    <pushpad label="jungiklis">Jungiklis.</pushpad>
+    <sputnik label="palydovas">Palydovas.</sputnik>
+    <stick label="grybukas">Grybukas.</stick>
+    <stickboy label="grybukas">Grybukas.</stickboy>
+    <drum label="būgnas">Būgnas.</drum>
+    <mine label="mina">Mina.</mine>
+    <cloud label="debesis">Debesis.</cloud>
+    <swimfish label="žuvis">Žuvis.</swimfish>
+    <floatbot label="laivas">Laivas.</floatbot>
+    <factory label="fabrikas">Fabrikas.</factory>
+    <hut label="namukas">Namukas.</hut>
+    <castle label="pilis">Pilis.</castle>
+    <fruit label="obuolys">Obuolys.</fruit>
+    <inkjet label="dūmai">Dūmų debesis.</inkjet>
+    <iceberg label="ledkalnis">Ledkalnis.</iceberg>
+    <rock label="uola">Uola.</rock>
+    <rockLowValue label="magma">Magminės, vulkaninės kilmės uoliena.</rockLowValue>
+    <rockHighValue label="nuosėda">Nuosėdinė uoliena.</rockHighValue>
+    <rockLowValueUnknown label="uoliena">Vulkaninės kilmės uoliena: neatpažinta kol nenuskenuota, nepaliesta spindulio ar nepatikrinta.</rockLowValueUnknown>
+    <rockHighValueUnknown label="uoliena">Nuosėdinė uoliena: neatpažinta kol nenuskenuota, nepaliesta spindulio ar nepatikrinta.</rockHighValueUnknown>
+    <rockUnknown label="uoliena">Neatpažinta uoliena.</rockUnknown>
+    <tree label="medis">Medis.</tree>
+    <pipe label="vamzdis">Vamzdis.</pipe>
+    <pipeStraight label="tiesus vamzdis">Tiesus vamzdis.</pipeStraight>
+    <pipeCross label="kryžius">Vamzdžių sankirta.</pipeCross>
+    <pipeCorner label="kampas">Kampu sulenktas vamzdis.</pipeCorner>
+    <underwater label="povandeninis">Povandeninis objektas.</underwater>
+    <building label="pastatas">Pastatas.</building>
+    <flower label="gėlė" />
+    <gate label="vartai" />
+    <cursor label="žymeklis">Kompiuterio pelės žymeklis.</cursor>
+    <star label="žvaigždė">Žvaigždė.</star>
+    <coin label="moneta">Moneta.</coin>
+    <soccerball label="kamuolys">Kamuolys.</soccerball>
+    <heart label="širdelė">Širdelė.</heart>
+    <bullet label="amunicija">Amunicija, šaudmenys.</bullet>
+    <Black label="juoda">Juoda kaip anglis.</Black>
+    <Grey label="pilka">Pilka kaip pelė.</Grey>
+    <white label="balta">Balta kaip sniegas.</white>
+    <red label="raudona">Raudona kaip rožė.</red>
+    <orange label="oranžinė">Oranžinė kaip apelsinas.</orange>
+    <yellow label="geltona">Geltona kaip saulė.</yellow>
+    <green label="žalia">Žalia kaip žolė.</green>
+    <blue label="mėlyna">Mėlyna kaip dangus.</blue>
+    <purple label="violetinė">Violetinė kaip našlaitė.</purple>
+    <pink label="rožinė">Rožinė kaip žandukai.</pink>
+    <brown label="ruda">Ruda kaip šaka.</brown>
+    <PathBlack label="juodas takas">Juodas takas.</PathBlack>
+    <PathGrey label="pilkas takas">Pilkas takas.</PathGrey>
+    <PathWhite label="baltas takas">Baltas takas.</PathWhite>
+    <PathRed label="raudonas takas">Raudonas takas.</PathRed>
+    <PathOrange label="oranžinis takas">Oranžinis takas.</PathOrange>
+    <PathYellow label="geltonas takas">Geltonas takas.</PathYellow>
+    <PathGreen label="žalias takas">Žalias takas.</PathGreen>
+    <PathBlue label="mėlynas takas">Mėlynas takas.</PathBlue>
+    <PathPurple label="violetinis takas">Violetinis takas.</PathPurple>
+    <PathPink label="rožinis takas">Rožinis takas.</PathPink>
+    <PathBrown label="rudas takas">Rudas takas.</PathBrown>
+    <pathplain label="lyguma" />
+    <pathroad label="kelias" />
+    <pathwall label="siena" />
+    <pathflora label="flora" />
+    <yucca1 label="medis" />
+    <yucca2 label="medis" />
+    <yucca3 label="medis" />
+    <bigyucca1 label="medis" />
+    <expresshappy label="linksmas">Linksmas veikėjas.</expresshappy>
+    <expresssad label="liūdnas">Liūdnas veikėjas.</expresssad>
+    <expressangry label="PIKTAS">Piktas veikėjas</expressangry>
+    <expresscrazy label="pAšĖlĘs">Pašėlęs veikėjas.</expresscrazy>
+    <expresshearts label="širdėlės">Veikėjas su širdelėmis.</expresshearts>
+    <expressflowers label="gėlės">Veikėjas su gėlėmis.</expressflowers>
+    <expressstars label="žvaigždės">Veikėjas su žvaigždėmis.</expressstars>
+    <expressswear label="keiksmai">Besikeikiantis veikėjas.</expressswear>
+    <expressnormal label="normalus">Normaliai besielgiantis veikėjas.</expressnormal>
+    <expressnone label="joks">Normaliai besielgiantis veikėjas.</expressnone>
+    <moving label="judantis">Judantis veikėjas.</moving>
+    <camouflage label="maskuotė">Užmaskuotas veikėjas.</camouflage>
+    <closeby label="netoli">Objektai, kurie yra netoli nuo vekėjo. Tolimi objektai ignoruojami.</closeby>
+    <faraway label="toli">Objektai, kurie yra toli.</faraway>
+
+    <infront label="priešais">Objektai yra priekyje.</infront>
+    <behind label="už nugaros">Objektai yra už nugaros.</behind>
+    <toleft label="kairėje">Objektai yra kairėje.</toleft>
+    <toright label="dešinėje">Objektai yra dešinėje.</toright>
+    <over label="virš">Objektai yra virš veikėjo.</over>
+    <under label="žemiau">Objektai yra žemiau veikėjo.</under>
+
+    <lineofsight label="tiesiog">Tiesioginis matomumas. Kalvos ir sienos užstoja.</lineofsight>
+    
+    <countfew label="keli">Matomi keli objektai.</countfew>
+    <countmany label="daug">Matoma daug objektų.</countmany>
+    <clustermany label="grupė">Matoma daug objektų grupėje.</clustermany>
+    <countany label="bet kiek" />
+    <leftstick label="K svirtis">Kairė valdymo pultelio svirtelė. Tinka judėjimui.</leftstick>
+    <rightstick label="D svirtis">Dešinė valdymo pultelio svirtelė. Tinka šaudymui.</rightstick>
+    <abutton label="A mygtukas">Valdymo pultelio A mygtukas.</abutton>
+    <bbutton label="B mygtukas">Valdymo pultelio B mygtukas.</bbutton>
+    <xbutton label="X mygtukas">Valdymo pultelio X mygtukas.</xbutton>
+    <ybutton label="Y mygtukas">Valdymo pultelio Y mygtukas.</ybutton>
+    <lefttrigger label="K jungiklis">Kairysis valdymo pultelio jungiklis.</lefttrigger>
+    <righttrigger label="D jungiklis">Dešinysis valdymo pultelio jungiklis.</righttrigger>
+    <lefttrigger_analog label="K jungiklis">Kairysis valdymo pultelio jungiklis.</lefttrigger_analog>
+    <righttrigger_analog label="D jungiklis">Dešinysis valdymo pultelio jungiklis.</righttrigger_analog>
+    <mouse>
+      <button>
+        <left label="kairys">Kompiuterio pelės kairysis mygtukas.</left>
+        <right label="dešinys">Kompiuterio pelės dešinysis mygtukas.</right>
+      </button>
+      <hover label="virš">Pelės žymeklis yra virš objekto ar žemės srities.</hover>
+      <move label="juda">Kompiuterio pelės žymeklis juda.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="lietimas">Ilgas lietimas pirštu (jutiklinis ekranas).</touching>
+        <tap label="bakstelėjimas">Trumpas bakstelėjimas pirštu (jutiklinis ekranas).</tap>
+        <rotate label="sukimas">Sukimo veiksmas dviem pirštais (jutiklinis ekranas).</rotate>
+        <swipe label="braukimas">Brūkštelėjimo pirštu veiksmas (jutiklinis ekranas).</swipe>
+        <slide label="slinktis">Slinkimo pirštu veiksmas (jutiklinis ekranas).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="baltas">BALTAS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</White>
+        <Black label="juodas">JUODAS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Black>
+        <Grey label="pilkas">PILKAS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Grey>
+        <Red label="raudonas">RAUDONAS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Red>
+        <Green label="žalias">ŽALIAS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Green>
+        <Blue label="mėlynas">MĖLYNAS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Blue>
+        <Orange label="oranžinis">ORANŽINIS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Orange>
+        <Yellow label="geltonas">GELTONAS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Yellow>
+        <Purple label="violetinis">VIOLETINIS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Purple>
+        <Pink label="rožinis">ROŽINIS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Pink>
+        <Brown label="rudas">RUDAS mygtukas ekrane. (Keičiama pasaulio nustatymuose)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="X mygtukas">Liečiamas mygtukas X ekrane.</controllerButton_X>
+      <controllerButton_Y label="Y mygtukas">Liečiamas mygtukas Y ekrane.</controllerButton_Y>
+      <controllerButton_A label="A mygtukas">Liečiamas mygtukas A ekrane.</controllerButton_A>
+      <controllerButton_B label="B mygtukas">Liečiamas mygtukas B ekrane.</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="Rodyklės">Klaviatūros rodyklyčių klavišai.</ArrowKeys>
+    <WASDKeys label="WASD">Klaviatūros WASD klavišai.</WASDKeys>
+    <Akey label="A">Klaviatūros A klavišas.</Akey>
+    <Bkey label="B">Klaviatūros B klavišas.</Bkey>
+    <Ckey label="C">Klaviatūros C klavišas</Ckey>
+    <Dkey label="D">Klaviatūros D klavišas</Dkey>
+    <Ekey label="E">Klaviatūros E klavišas</Ekey>
+    <Fkey label="F">Klaviatūros F klavišas</Fkey>
+    <Gkey label="G">Klaviatūros G klavišas</Gkey>
+    <Hkey label="H">Klaviatūros H klavišas</Hkey>
+    <Ikey label="I">Klaviatūros I klavišas</Ikey>
+    <Jkey label="J">Klaviatūros J klavišas</Jkey>
+    <Kkey label="K">Klaviatūros K klavišas</Kkey>
+    <Lkey label="L">Klaviatūros L klavišas</Lkey>
+    <Mkey label="M">Klaviatūros M klavišas</Mkey>
+    <Nkey label="N">Klaviatūros N klavišas</Nkey>
+    <Okey label="O">Klaviatūros O klavišas</Okey>
+    <Pkey label="P">Klaviatūros P klavišas</Pkey>
+    <Qkey label="Q">Klaviatūros Q klavišas</Qkey>
+    <Rkey label="R">Klaviatūros R klavišas</Rkey>
+    <Skey label="S">Klaviatūros S klavišas</Skey>
+    <Tkey label="T">Klaviatūros T klavišas</Tkey>
+    <Ukey label="U">Klaviatūros U klavišas</Ukey>
+    <Vkey label="V">Klaviatūros V klavišas</Vkey>
+    <Wkey label="W">Klaviatūros W klavišas</Wkey>
+    <Xkey label="X">Klaviatūros X klavišas</Xkey>
+    <Ykey label="Y">Klaviatūros Y klavišas</Ykey>
+    <Zkey label="Z">Klaviatūros Z klavišas</Zkey>
+    <D0key label="0">Klaviatūros 0 klavišas</D0key>
+    <D1key label="1">Klaviatūros 1 klavišas</D1key>
+    <D2key label="2">Klaviatūros 2 klavišas</D2key>
+    <D3key label="3">Klaviatūros 3 klavišas</D3key>
+    <D4key label="4">Klaviatūros 4 klavišas</D4key>
+    <D5key label="5">Klaviatūros 5 klavišas</D5key>
+    <D6key label="6">Klaviatūros 6 klavišas</D6key>
+    <D7key label="7">Klaviatūros 7 klavišas</D7key>
+    <D8key label="8">Klaviatūros 8 klavišas</D8key>
+    <D9key label="9">Klaviatūros 9 klavišas</D9key>
+    <Spacekey label="Tarpas">Klaviatūros tarpo klavišas</Spacekey>
+    <PageUpkey label="PageUp">Klaviatūros klavišas PageUp (puslapis aukštyn)</PageUpkey>
+    <PageDownkey label="PageDown">Klaviatūros klavišas PageDown (puslapis žemyn)</PageDownkey>
+    <Endkey label="End">Klaviatūros klavišas End (pabaiga)</Endkey>
+    <Leftkey label="Kairėn">Klaviatūros rodyklytės kairėn klavišas</Leftkey>
+    <Upkey label="Viršun">Klaviatūros rodyklytės aukštyn klavišas</Upkey>
+    <Rightkey label="Dešinėn">Klaviatūros rodyklytės dešinėn klavišas</Rightkey>
+    <Downkey label="Apačion">Klaviatūros rodyklytės žemyn klavišas</Downkey>
+    <Insertkey label="Įterpti">Klaviatūros klavišas Insert (įterpti)</Insertkey>
+    <Deletekey label="Ištrinti">Klaviatūros klavišas Delete (ištrinti)</Deletekey>
+    <LeftWindowskey label="LeftWindows">Klaviatūros klavišas LeftWindows (kairysis Windows)</LeftWindowskey>
+    <RightWindowskey label="RightWindows">Klaviatūros klavišas RightWindows (dešinysis Windows)</RightWindowskey>
+    <Multiplykey label="*">Klaviatūros daugybos klavišas</Multiplykey>
+    <Addkey label="+">Klaviatūros sudėties klavišas</Addkey>
+    <Subtractkey label="-">Klaviatūros atimties klavišas</Subtractkey>
+    <Decimalkey label=".">Klaviatūros skaitmenų taško klavišas</Decimalkey>
+    <Dividekey label="/">Klaviatūros dalybos klavišas</Dividekey>
+    <LeftShiftkey label="LeftShift">Klaviatūros klavišas LeftShift (kairysis Shift)</LeftShiftkey>
+    <RightShiftkey label="RightShift">Klaviatūros klavišas RightShift (dešinysis Shift)</RightShiftkey>
+    <LeftControlkey label="LeftControl">Klaviatūros klavišas LeftControl (kairysis Control)</LeftControlkey>
+    <RightControlkey label="RightControl">Klaviatūros klavišas RightControl (dešinysis Control)</RightControlkey>
+    <LeftAltkey label="LeftAlt">Klaviatūros klavišas LeftAlt (kairysis Alt)</LeftAltkey>
+    <RightAltkey label="RightAlt">Klaviatūros klavišas RightAlt (dešinysis Alt)</RightAltkey>
+    <OemSemicolonkey label=";">Klaviatūros dvitaškio klavišas</OemSemicolonkey>
+    <OemPluskey label="+">Klaviatūros pliuso klavišas</OemPluskey>
+    <OemCommakey label=",">Klaviatūros kablelio klavišas</OemCommakey>
+    <OemMinuskey label="-">Klaviatūros minuso klavišas</OemMinuskey>
+    <OemPeriodkey label=".">Klaviatūros taško klavišas</OemPeriodkey>
+    <OemQuestionkey label="?">Klaviatūros klaustuko klavišas</OemQuestionkey>
+    <OemTildekey label="~">Klaviatūros tildės klavišas</OemTildekey>
+    <OemOpenBracketskey label="[">Klaviatūros atidaromojo laužtinio skliausto klavišas</OemOpenBracketskey>
+    <OemPipekey label="|">Klaviatūros vertikaliojo brūkšnio klavišas</OemPipekey>
+    <OemCloseBracketskey label="]">Klaviatūros uždaromojo laužtinio skliausto klavišas</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">Klaviatūros kabučių klavišas</OemQuoteskey>
+    <OemBackslashkey label="\">Klaviatūros kairinio pasvirojo brūkšio klavišas</OemBackslashkey>
+    <F1key label="F1">Klaviatūros F1 klavišas</F1key>
+    <F2key label="F2">Klaviatūros F2 klavišas</F2key>
+    <F3key label="F3">Klaviatūros F3 klavišas</F3key>
+    <F4key label="F4">Klaviatūros F4 klavišas</F4key>
+    <F5key label="F5">Klaviatūros F5 klavišas</F5key>
+    <F6key label="F6">Klaviatūros F6 klavišas</F6key>
+    <F7key label="F7">Klaviatūros F7 klavišas</F7key>
+    <F8key label="F8">Klaviatūros F8 klavišas</F8key>
+    <F9key label="F9">Klaviatūros F9 klavišas</F9key>
+    <F10key label="F10">Klaviatūros F10 klavišas</F10key>
+    <F11key label="F11">Klaviatūros F11 klavišas</F11key>
+    <F12key label="F12">Klaviatūros F12 klavišas</F12key>
+    <Shiftkey label="Shift">Bet kuris klaviatūros Shift klavišas</Shiftkey>
+    <Controlkey label="Control">Bet kuris klaviatūros Control klavišas</Controlkey>
+    <Altkey label="Alt">Bet kuris klaviatūros Alt klavišas.</Altkey>
+    <Windowskey label="Windows">Bet kuris klaviatūros Windows klavišas.</Windowskey>
+    <player1 label="žaidėjas 1">1'ojo žaidėjo valdiklis. Nepasirinkus, reaguojama į bet kurį.</player1>
+    <player2 label="žaidėjas 2">2'ojo žaidėjo valdiklis. Nepasirinkus, reaguojama į bet kurį.</player2>
+    <player3 label="žaidėjas 3">3'ojo žaidėjo valdiklis. Nepasirinkus, reaguojama į bet kurį.</player3>
+    <player4 label="žaidėjas 4">4'ojo žaidėjo valdiklis. Nepasirinkus, reaguojama į bet kurį.</player4>
+    <terrain label="tipas">Tam tikras žemės tipas.</terrain>
+    <water label="tipas">Tam tikras vandens tipas.</water>
+    <quartersecond label="sekundės">1/4 sekundės. Galima sudėti su kitais laiko nustatymais.</quartersecond>
+    <_01second label="sekundė">1 sekundė. Galima sudėti su kitais laiko nustatymais.</_01second>
+    <_02seconds label="sekundės">2 sekundės. Galima sudėti su kitais laiko nustatymais.</_02seconds>
+    <_03seconds label="sekundės">3 sekundės. Galima sudėti su kitais laiko nustatymais.</_03seconds>
+    <_04seconds label="sekundės">4 sekundės. Galima sudėti su kitais laiko nustatymais.</_04seconds>
+    <_05seconds label="sekundės">5 sekundės. Galima sudėti su kitais laiko nustatymais.</_05seconds>
+    <_10seconds label="sekundžių">10 sekundžių. Galima sudėti su kitais laiko nustatymais.</_10seconds>
+    <_20seconds label="sekundžių">20 sekundžių. Galima sudėti su kitais laiko nustatymais.</_20seconds>
+    <_30seconds label="sekundžių">30 sekundžių. Galima sudėti su kitais laiko nustatymais.</_30seconds>
+    <_60seconds label="sekundžių">60 sekundžių. Galima sudėti su kitais laiko nustatymais.</_60seconds>
+    <_000point label="taškų">0 taškų.</_000point>
+    <_001point label="taškas">1 taškas. Galima sudėti su kitais taškais.</_001point>
+    <_002points label="taškai">2 taškai. Galima sudėti su kitais taškais.</_002points>
+    <_003points label="taškai">3 taškai. Galima sudėti su kitais taškais.</_003points>
+    <_004points label="taškai">4 taškai. Galima sudėti su kitais taškais.</_004points>
+    <_005points label="taškai">5 taškai. Galima sudėti su kitais taškais.</_005points>
+    <_010points label="taškų">10 taškų. Galima sudėti su kitais taškais.</_010points>
+    <_020points label="v">20 taškų. Galima sudėti su kitais taškais.</_020points>
+    <_050points label="taškų">50 taškų. Galima sudėti su kitais taškais.</_050points>
+    <_100points label="taškų">100 taškų. Galima sudėti su kitais taškais.</_100points>
+    <random label="atsitiktinis">Atsitiktinis skaičius. Pvz., atsitiktinis - 5 sukurs atsitiktinį skaičių tarp 0 ir 5.</random>
+    <scorebucket>
+      <color>
+        <white label="balti">Tikrina baltus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</white>
+        <black label="juodi">Tikrina juodus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</black>
+        <grey label="pilki">Tikrina pilkus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</grey>
+        <red label="raudoni">Tikrina raudonus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</red>
+        <green label="žali">Tikrina žalius taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</green>
+        <blue label="mėlyni">Tikrina mėlynus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</blue>
+        <orange label="oranžiniai">Tikrina oranžinius taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</orange>
+        <yellow label="geltoni">Tikrina geltonus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</yellow>
+        <purple label="violetiniai">Tikrina violetinius taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</purple>
+        <pink label="rožiniai">Tikrina rožinius taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</pink>
+        <brown label="rudi">Tikrina rudus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</brown>
+      </color>
+      <letter>
+        <a label="A taškai">Tikrina 'A' taškus, kurie niekada nerodomi ekrane.</a>
+        <b label="B taškai">Tikrina 'B' taškus, kurie niekada nerodomi ekrane.</b>
+        <c label="C taškai">Tikrina 'C' taškus, kurie niekada nerodomi ekrane.</c>
+        <d label="D taškai">Tikrina 'D' taškus, kurie niekada nerodomi ekrane.</d>
+        <e label="E taškai">Tikrina 'E' taškus, kurie niekada nerodomi ekrane.</e>
+        <f label="F taškai">Tikrina 'F' taškus, kurie niekada nerodomi ekrane.</f>
+        <g label="G taškai">Tikrina 'G' taškus, kurie niekada nerodomi ekrane.</g>
+        <h label="H taškai">Tikrina 'H' taškus, kurie niekada nerodomi ekrane.</h>
+        <i label="I taškai">Tikrina 'I' taškus, kurie niekada nerodomi ekrane.</i>
+        <j label="J taškai">Tikrina 'J' taškus, kurie niekada nerodomi ekrane.</j>
+        <k label="K taškai">Tikrina 'K' taškus, kurie niekada nerodomi ekrane.</k>
+        <l label="L taškai">Tikrina 'L' taškus, kurie niekada nerodomi ekrane.</l>
+        <m label="M taškai">Tikrina 'M' taškus, kurie niekada nerodomi ekrane.</m>
+        <n label="N taškai">Tikrina 'N' taškus, kurie niekada nerodomi ekrane.</n>
+        <o label="O taškai">Tikrina 'O' taškus, kurie niekada nerodomi ekrane.</o>
+        <p label="P taškai">Tikrina 'P' taškus, kurie niekada nerodomi ekrane.</p>
+        <q label="Q taškai">Tikrina 'Q' taškus, kurie niekada nerodomi ekrane.</q>
+        <r label="R taškai">Tikrina 'R' taškus, kurie niekada nerodomi ekrane.</r>
+        <s label="S taškai">Tikrina 'S' taškus, kurie niekada nerodomi ekrane.</s>
+        <t label="T taškai">Tikrina 'T' taškus, kurie niekada nerodomi ekrane.</t>
+        <u label="U taškai">Tikrina 'U' taškus, kurie niekada nerodomi ekrane.</u>
+        <v label="V taškai">Tikrina 'V' taškus, kurie niekada nerodomi ekrane.</v>
+        <w label="W taškai">Tikrina 'W' taškus, kurie niekada nerodomi ekrane.</w>
+        <x label="X taškai">Tikrina 'X' taškus, kurie niekada nerodomi ekrane.</x>
+        <y label="Y taškai">Tikrina 'Y' taškus, kurie niekada nerodomi ekrane.</y>
+        <z label="Z taškai">Tikrina 'Z' taškus, kurie niekada nerodomi ekrane.</z>
+      </letter>
+      <local>
+        <a label="a taškai">The 'a' score, which is private to this character.</a>
+        <b label="b taškai">The 'b' score, which is private to this character.</b>
+        <c label="c taškai">The 'c' score, which is private to this character.</c>
+        <d label="d taškai">The 'd' score, which is private to this character.</d>
+        <e label="e taškai">The 'e' score, which is private to this character.</e>
+        <f label="f taškai">The 'f' score, which is private to this character.</f>
+        <g label="g taškai">The 'g' score, which is private to this character.</g>
+        <h label="h taškai">The 'h' score, which is private to this character.</h>
+        <i label="i taškai">The 'i' score, which is private to this character.</i>
+        <j label="j taškai">The 'j' score, which is private to this character.</j>
+        <k label="k taškai">The 'k' score, which is private to this character.</k>
+        <l label="l taškai">The 'l' score, which is private to this character.</l>
+        <m label="m taškai">The 'm' score, which is private to this character.</m>
+        <n label="n taškai">The 'n' score, which is private to this character.</n>
+        <o label="o taškai">The 'o' score, which is private to this character.</o>
+        <p label="p taškai">The 'p' score, which is private to this character.</p>
+        <q label="q taškai">The 'q' score, which is private to this character.</q>
+        <r label="r taškai">The 'r' score, which is private to this character.</r>
+        <s label="s taškai">The 's' score, which is private to this character.</s>
+        <t label="t taškai">The 't' score, which is private to this character.</t>
+        <u label="u taškai">The 'u' score, which is private to this character.</u>
+        <v label="v taškai">The 'v' score, which is private to this character.</v>
+        <w label="w taškai">The 'w' score, which is private to this character.</w>
+        <x label="x taškai">The 'x' score, which is private to this character.</x>
+        <y label="y taškai">The 'y' score, which is private to this character.</y>
+        <z label="z taškai">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="trigeris" />
+    <timertrigger label="trigeris" />
+    <scoreis label="yra" />
+    <scoreequals label="lygu">Surinktas nurodytas taškų skaičius.</scoreequals>
+    <scorenotequals label="nelygu">Taškų skaičius nėra lygus nurodytam skaičiui.</scorenotequals>
+    <scoreabove label="daugiau">Surinkta daugiau nei nurodyta taškų.</scoreabove>
+    <scorebelow label="mažiau">Surinkta mažiau nei nurodyta taškų.</scorebelow>
+    <scoregteq label="&gt;=">Surinkta lygiai ar daugiau nei nurodyta taškų.</scoregteq>
+    <scorelteq label="&lt;=">Surinkta lygiai ar mažiau nei nurodyta taškų.</scorelteq>
+    <healthis label="yra" />
+    <healthabove label="daugiau">Sveikatos skaičius yra daugiau nei nurodyta.</healthabove>
+    <healthbelow label="mažiau">Sveikatos skaičius yra mažiau nei nurodyta.</healthbelow>
+    <direction>
+      <up label="viršun">Žaidimo pultelio svirtis palenkta viršun.</up>
+      <right label="dešinėn">Žaidimo pultelio svirtis palenkta dešinėn.</right>
+      <down label="žemyn">Žaidimo pultelio svirtis palenkta žemyn.</down>
+      <left label="kairėn">Žaidimo pultelio svirtis palenkta kairėn.</left>
+      <clockwise label="dešinėn">Žaidimo pultelio svirtis sukama pagal laikrodžio rodyklę.</clockwise>
+      <counterclockwise label="kairėn">Žaidimo pultelio svirtis sukama prieš laikrodžio rodyklę.</counterclockwise>
+    </direction>
+    <not label="ne">Sąlygos neatitinka nurodytų.</not>
+  </filter>
+  <selector>
+    <closest label="artimiausias" />
+    <objectrelative label="sąlyginai" />
+    <towardclosest label="link">Judėk link objekto, į kurį reaguojama.</towardclosest>
+    <awayfromall label="tolyn">Judėk tolyn nuo objekto, į kurį reaguojama.</awayfromall>
+    <avoidall label="venk">Venk objekto, laikydamasis tam tikro atstumo.</avoidall>
+    <wander label="klajok">Klajok po pasaulį atsitiktinėmis kryptimis. Tinka programos gale, kad veikėjas judėtų, kai nėra ką veikti.</wander>
+    <cruise label="pirmyn">Judėk ta kryptimi, kur esi atsisukęs.</cruise>
+    <circle label="ratu" />
+    <spin label="sukis">Sukis vietoje.</spin>
+    <forward label="pirmyn" />
+    <hiddenturn label="atsisuk" />
+    <escape label="nusisuk" />
+    <followwaypoints label="taku">Judėk nurodytos spalvos taku. Nenurodžius spalvos - bet kuriuo taku.</followwaypoints>
+    <moveupdown label="aukštyn/žemyn">Judėk aukštyn ir žemyn.</moveupdown>
+    <moveup label="aukštyn">Judėk aukštyn.</moveup>
+    <movedown label="žemyn">Judėk žemyn.</movedown>
+    <moveleftright label="sukis">Sukis kairėn arba dešinėn.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="žaidėjas 1" />
+      <_2 label="žaidėjas 2" />
+      <_3 label="žaidėjas 3" />
+      <_4 label="žaidėjas 4" />
+    </player>
+    <reset>
+      <world label="pasaulis">Atstatyti žaidimą, paliekant taškus.</world>
+      <score label="taškai">Atstatyti visus arba nurodytos spalvos taškus.</score>
+      <expression label="išraiška">Atstatyti veikėjo išraišką.</expression>
+      <glow label="švytėjimas">Atstatyti veikėjo švytėjimą.</glow>
+      <health label="sveikata">Atstatyti žaidėjo sveikatą.</health>
+    </reset>
+    <projectile>
+      <blip label="sviedinys">Sviediniais šaudoma sparčiau, nes jie yra lengvesni už raketas.</blip>
+      <missile label="raketa">Raketos yra didelės ir nelabai greitos, bet moka sekti taikinį!</missile>
+    </projectile>
+    <slowly label="lėtai">Judėk lėtai. Panaudojus kelis kartus, sulėtina dar labiau.</slowly>
+    <quickly label="greitai">Judėk greitai. Panaudojus kelis kartus, pagreitina dar labiau.</quickly>
+    <speednormally label="normaliai">Judėk normaliai. Nebūtina nustatyti.</speednormally>
+    <weakly label="silpnas">Daryk tai silpniau, nei paprastai.</weakly>
+    <strongly label="stiprus">Daryk tai stipriau, nei paprastai.</strongly>
+    <strengthnormally label="normalus">Daryk tai normalia jėga. Nebūtina nustatyti.</strengthnormally>
+    <angle>
+      <low label="žemai">Daryk tai silpniau, nei paprastai.</low>
+      <high label="aukštai">Daryk tai stipriau, nei paprastai.</high>
+    </angle>
+    <turnleft label="kairėn" />
+    <turnright label="dešinėn" />
+    <turntoward label="link" />
+    <turnforward label="pirmyn">Judėjimas neapsprendžia, į kurią pusę pasisukama.</turnforward>
+    <pitchup label="viršun" />
+    <pitchdown label="žemyn" />
+    <forward label="pirmyn">Kryptis, kuria žiūri veikėjas.</forward>
+    <north label="šiaurė" />
+    <east label="rytai" />
+    <south label="pietūs" />
+    <west label="vakarai" />
+    <up label="viršus" />
+    <down label="apačia" />
+    <distance>
+      <near label="arti">Suk ratus arčiau prie taikinio.</near>
+      <far label="toli">Suk ratus toliau nuo taikinio.</far>
+    </distance>
+    <objecticeberg label="ledkalnis">Sukurk ledkalnį.</objecticeberg>
+    <objectrock label="uola">Sukurk uolą.</objectrock>
+    <objectrockLowValue label="magma">Sukurk vulkaninės kilmės uolą.</objectrockLowValue>
+    <objectrockHighValue label="nuosėda">Sukurk nuosėdinės kilmės nuolą.</objectrockHighValue>
+    <objectfruit label="uobolys">Sukurk obuolį.</objectfruit>
+    <objectinkjet label="dūmai">Sukurk dūmų debesį.</objectinkjet>
+    <objectstar label="žvaigždė">Sukurk žvaigždę.</objectstar>
+    <objectcoin label="moneta">Sukurk monetą.</objectcoin>
+    <objectheart label="širdelė">Sukurk širdelę.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="kamuolys">Sukurk futbolo kamuolį.</objectsoccerball>
+    <objectbullet label="amunicija">Sukurk amuniciją.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="lapas 1">Pereiti į lapą 1.</taska>
+    <taskb label="lapas 2">Pereiti į lapą 2.</taskb>
+    <taskc label="lapas 3">Pereiti į lapą 3.</taskc>
+    <taskd label="lapas 4">Pereiti į lapą 4.</taskd>
+    <taske label="lapas 5">Pereiti į lapą 5.</taske>
+    <taskf label="lapas 6">Pereiti į lapą 6.</taskf>
+    <taskg label="lapas 7">Pereiti į lapą 7.</taskg>
+    <taskh label="lapas 8">Pereiti į lapą 8.</taskh>
+    <taski label="lapas 9">Pereiti į lapą 9.</taski>
+    <taskj label="lapas 10">Pereiti į lapą 10.</taskj>
+    <taskk label="lapas 11">Pereiti į lapą 11.</taskk>
+    <taskl label="lapas 12">Pereiti į lapą 12.</taskl>
+    <expresshappy label="linksmas">Būk linksmas.</expresshappy>
+    <expresssad label="liūdnas">Būk liūdnas.</expresssad>
+    <expressangry label="PIKTAS">Būk piktas.</expressangry>
+    <expresscrazy label="PaŠėLęs">Būk pašėlęs.</expresscrazy>
+    <expresshearts label="širdelės">Rodyk širdeles.</expresshearts>
+    <expressflowers label="gėlės">Rodyk gėles.</expressflowers>
+    <expressstars label="žvaigždės">Rodyk žvaigždeles.</expressstars>
+    <expressswear label="keiksmai">Rodyk keiksmus.</expressswear>
+    <expressnone label="nieko">Elkis normaliai ir nieko nerodyk.</expressnone>
+    <_000point label="taškų">0 taškų. Galima nurodyti ir spalvą.</_000point>
+    <_001point label="taškas">1 taškas. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_001point>
+    <_002points label="taškai">2 taškai. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_002points>
+    <_003points label="taškai">3 taškai. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_003points>
+    <_004points label="taškai">4 taškai. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_004points>
+    <_005points label="taškai">5 taškai. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_005points>
+    <_010points label="taškų">10 taškų. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_010points>
+    <_020points label="taškų">20 taškų. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_020points>
+    <_050points label="taškų">50 taškų. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_050points>
+    <_100points label="taškų">100 taškų. Prisideda prie kitų taškų. Galima nurodyti ir spalvą.</_100points>
+    <random label="atsitiktinis">Atsitiktinis skaičius. Pvz., Atsitiktinis - 5 sukuria skaičių tarp 0 ir 5.</random>
+    <teama label="komanda A" />
+    <teamb label="komanda B" />
+    <payloadzap label="apsvaigink">Apsvaigink taikinį kelioms sekundėms.</payloadzap>
+    <payloadpop label="nokautuok">Nokautuok taikinį. Tegu pamiega, kol kas nors atkurs jo sveikatą.</payloadpop>
+    <payloadboom label="susprogdink">Susprogdink taikinį.</payloadboom>
+    <payloadvanish label="pradangink">Tyliai pradangink taikinį.</payloadvanish>
+    <black label="juoda" />
+    <grey label="pilka" />
+    <white label="balta" />
+    <red label="raudona" />
+    <orange label="oranžinė" />
+    <yellow label="geltona" />
+    <green label="žalia" />
+    <blue label="mėlyna" />
+    <purple label="violetinė" />
+    <pink label="rožinė" />
+    <brown label="ruda" />
+    <glowoff label="išjunk">Išjunk bet kokį švytėjimą.</glowoff>
+    <colorrandom label="atsitiktinė">Išsirink atsitiktinę spalvą.</colorrandom>
+    <path>
+      <black label="juoda" />
+      <grey label="pilka" />
+      <white label="balta" />
+      <red label="raudona" />
+      <orange label="oranžinė" />
+      <yellow label="geltona" />
+      <green label="žalia" />
+      <blue label="mėlyna" />
+      <purple label="violetinė" />
+      <pink label="rožinė" />
+      <brown label="ruda" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="balti">Keičia baltus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</white>
+        <black label="juodi">Keičia juodus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</black>
+        <grey label="pilki">Keičia pilkus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</grey>
+        <red label="raudoni">Keičia raudonus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</red>
+        <green label="žali">Keičia žalius taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</green>
+        <blue label="mėlyni">Keičia mėlynus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</blue>
+        <orange label="oranžiniai">Keičia oranžinius taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</orange>
+        <yellow label="geltoni">Keičia geltonus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</yellow>
+        <purple label="violetiniai">Keičia violetinius taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</purple>
+        <pink label="rožiniai">Keičia rožinius taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</pink>
+        <brown label="rudi">Keičia rudus taškus, kuriuos numatyta rodyti ekrane. (Keičiama pasaulio nustatymuose.)</brown>
+      </color>
+      <letter>
+        <a label="taškai A">Keičia 'A' taškus, kurie niekada nerodomi ekrane.</a>
+        <b label="taškai B">Keičia 'B' taškus, kurie niekada nerodomi ekrane.</b>
+        <c label="taškai C">Keičia 'C' taškus, kurie niekada nerodomi ekrane.</c>
+        <d label="taškai D">Keičia 'D' taškus, kurie niekada nerodomi ekrane.</d>
+        <e label="taškai E">Keičia 'E' taškus, kurie niekada nerodomi ekrane.</e>
+        <f label="taškai F">Keičia 'F' taškus, kurie niekada nerodomi ekrane.</f>
+        <g label="taškai G">Keičia 'G' taškus, kurie niekada nerodomi ekrane.</g>
+        <h label="taškai H">Keičia 'H' taškus, kurie niekada nerodomi ekrane.</h>
+        <i label="taškai I">Keičia 'I' taškus, kurie niekada nerodomi ekrane.</i>
+        <j label="taškai J">Keičia 'J' taškus, kurie niekada nerodomi ekrane.</j>
+        <k label="taškai K">Keičia 'K' taškus, kurie niekada nerodomi ekrane.</k>
+        <l label="taškai L">Keičia 'L' taškus, kurie niekada nerodomi ekrane.</l>
+        <m label="taškai M">Keičia 'M' taškus, kurie niekada nerodomi ekrane.</m>
+        <n label="taškai N">Keičia 'N' taškus, kurie niekada nerodomi ekrane.</n>
+        <o label="taškai O">Keičia 'O' taškus, kurie niekada nerodomi ekrane.</o>
+        <p label="taškai P">Keičia 'P' taškus, kurie niekada nerodomi ekrane.</p>
+        <q label="taškai Q">Keičia 'Q' taškus, kurie niekada nerodomi ekrane.</q>
+        <r label="taškai R">Keičia 'R' taškus, kurie niekada nerodomi ekrane.</r>
+        <s label="taškai S">Keičia 'S' taškus, kurie niekada nerodomi ekrane.</s>
+        <t label="taškai T">Keičia 'T' taškus, kurie niekada nerodomi ekrane.</t>
+        <u label="taškai U">Keičia 'U' taškus, kurie niekada nerodomi ekrane.</u>
+        <v label="taškai V">Keičia 'V' taškus, kurie niekada nerodomi ekrane.</v>
+        <w label="taškai W">Keičia 'W' taškus, kurie niekada nerodomi ekrane.</w>
+        <x label="taškai X">Keičia 'X' taškus, kurie niekada nerodomi ekrane.</x>
+        <y label="taškai Y">Keičia 'Y' taškus, kurie niekada nerodomi ekrane.</y>
+        <z label="taškai Z">Keičia 'Z' taškus, kurie niekada nerodomi ekrane.</z>
+      </letter>
+      <local>
+        <a label="a taškai">The 'a' score, which is private to this character.</a>
+        <b label="b taškai">The 'b' score, which is private to this character.</b>
+        <c label="c taškai">The 'c' score, which is private to this character.</c>
+        <d label="d taškai">The 'd' score, which is private to this character.</d>
+        <e label="e taškai">The 'e' score, which is private to this character.</e>
+        <f label="f taškai">The 'f' score, which is private to this character.</f>
+        <g label="g taškai">The 'g' score, which is private to this character.</g>
+        <h label="h taškai">The 'h' score, which is private to this character.</h>
+        <i label="i taškai">The 'i' score, which is private to this character.</i>
+        <j label="j taškai">The 'j' score, which is private to this character.</j>
+        <k label="k taškai">The 'k' score, which is private to this character.</k>
+        <l label="l taškai">The 'l' score, which is private to this character.</l>
+        <m label="m taškai">The 'm' score, which is private to this character.</m>
+        <n label="n taškai">The 'n' score, which is private to this character.</n>
+        <o label="o taškai">The 'o' score, which is private to this character.</o>
+        <p label="p taškai">The 'p' score, which is private to this character.</p>
+        <q label="q taškai">The 'q' score, which is private to this character.</q>
+        <r label="r taškai">The 'r' score, which is private to this character.</r>
+        <s label="s taškai">The 's' score, which is private to this character.</s>
+        <t label="t taškai">The 't' score, which is private to this character.</t>
+        <u label="u taškai">The 'u' score, which is private to this character.</u>
+        <v label="v taškai">The 'v' score, which is private to this character.</v>
+        <w label="w taškai">The 'w' score, which is private to this character.</w>
+        <x label="x taškai">The 'x' score, which is private to this character.</x>
+        <y label="y taškai">The 'y' score, which is private to this character.</y>
+        <z label="z taškai">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="aš">Taikyti veiksmą sau pačiam.</me>
+    <it label="jis">Taikyti veiksmą kitam veikėjui.</it>
+    <any label="bet koks">Bet koks garsas.</any>
+    <event>
+      <any label="įvykis">Bet koks garsas.</any>
+      <silly>
+        <any label="chi!">Bet koks kvailas garsas.</any>
+        <bang label="pokšt!">Bet koks susitrenkimo (pokšt!) garsas.</bang>
+        <pow label="tekšt!">Bet koks šokinėjimo (tekšt!) garsas.</pow>
+      </silly>
+      <explode>
+        <any label="bum!">Sprogimo garsas.</any>
+        <A label="bum! A">Sprogimo garsas.</A>
+        <B label="bum! B">Sprogimo garsas.</B>
+        <C label="bum! C">Sprogimo garsas.</C>
+        <D label="bum! D">Sprogimo garsas.</D>
+        <E label="bum! E">Sprogimo garsas.</E>
+      </explode>
+      <musical>
+        <any label="muzikinis">Bet koks muzikinis garsas.</any>
+        <glock>
+          <any label="metalofonas">Bet koks metalofono garsas.</any>
+        </glock>
+        <glock01 label="C metalas">Metalofono garsas.</glock01>
+        <glock02 label="C# metalas">Metalofono garsas.</glock02>
+        <glock03 label="D metalas">Metalofono garsas.</glock03>
+        <glock04 label="D# metalas">Metalofono garsas.</glock04>
+        <glock05 label="E metalas">Metalofono garsas.</glock05>
+        <glock06 label="F metalas">Metalofono garsas.</glock06>
+        <glock07 label="F# metalas">Metalofono garsas.</glock07>
+        <glock08 label="G metalas">Metalofono garsas.</glock08>
+        <glock09 label="G# metalas">Metalofono garsas.</glock09>
+        <glock10 label="A metalas">Metalofono garsas.</glock10>
+        <glock11 label="A# metalas">Metalofono garsas.</glock11>
+        <glock12 label="B metalas">Metalofono garsas.</glock12>
+        <gong>
+          <any label="gongas">Bet koks gongo garsas.</any>
+        </gong>
+        <gong01 label="C gongas">Gongo garsas.</gong01>
+        <gong02 label="C# gongas">Gongo garsas.</gong02>
+        <gong03 label="D gongas">Gongo garsas.</gong03>
+        <gong04 label="D# gongas">Gongo garsas.</gong04>
+        <gong05 label="E gongas">Gongo garsas.</gong05>
+        <gong06 label="F gongas">Gongo garsas.</gong06>
+        <gong07 label="F# gongas">Gongo garsas.</gong07>
+        <gong08 label="G gongas">Gongo garsas.</gong08>
+        <gong09 label="G# gongas">Gongo garsas.</gong09>
+        <gong10 label="A gongas">Gongo garsas.</gong10>
+        <gong11 label="A# gongas">Gongo garsas.</gong11>
+        <gong12 label="B gongas">Gongo garsas.</gong12>
+        <saw>
+          <any label="dantys">Bet koks dantytos formos garsas.</any>
+        </saw>
+        <saw01 label="C dantys">Dantytos formos garsas.</saw01>
+        <saw02 label="C# dantys">Dantytos formos garsas.</saw02>
+        <saw03 label="D dantys">Dantytos formos garsas.</saw03>
+        <saw04 label="D# dantys">Dantytos formos garsas.</saw04>
+        <saw05 label="E dantys">Dantytos formos garsas.</saw05>
+        <saw06 label="F dantys">Dantytos formos garsas.</saw06>
+        <saw07 label="F# dantys">Dantytos formos garsas.</saw07>
+        <saw08 label="G dantys">Dantytos formos garsas.</saw08>
+        <saw09 label="G# dantys">Dantytos formos garsas.</saw09>
+        <saw10 label="A dantys">Dantytos formos garsas.</saw10>
+        <saw11 label="A# dantys">Dantytos formos garsas.</saw11>
+        <saw12 label="B dantys">Dantytos formos garsas.</saw12>
+        <sine>
+          <any label="bangelė">Bet koks bangelės formos garsas.</any>
+        </sine>
+        <sine01 label="C banga">Bangelės formos garsas.</sine01>
+        <sine02 label="C# banga">Bangelės formos garsas.</sine02>
+        <sine03 label="D banga">Bangelės formos garsas.</sine03>
+        <sine04 label="D# banga">Bangelės formos garsas.</sine04>
+        <sine05 label="E banga">Bangelės formos garsas.</sine05>
+        <sine06 label="F banga">Bangelės formos garsas.</sine06>
+        <sine07 label="F# banga">Bangelės formos garsas.</sine07>
+        <sine08 label="G banga">Bangelės formos garsas.</sine08>
+        <sine09 label="G# banga">Bangelės formos garsas.</sine09>
+        <sine10 label="A banga">Bangelės formos garsas.</sine10>
+        <sine11 label="A# banga">Bangelės formos garsas.</sine11>
+        <sine12 label="B banga">Bangelės formos garsas.</sine12>
+        <square>
+          <any label="laužtė">Bet koks laužytos formos garsas.</any>
+        </square>
+        <square01 label="C laužtė">Laužytos formos garsas.</square01>
+        <square02 label="C# laužtė">Laužytos formos garsas.</square02>
+        <square03 label="D laužtė">Laužytos formos garsas.</square03>
+        <square04 label="D# laužtė">Laužytos formos garsas.</square04>
+        <square05 label="E laužtė">Laužytos formos garsas.</square05>
+        <square06 label="F laužtė">Laužytos formos garsas.</square06>
+        <square07 label="F# laužtė">Laužytos formos garsas.</square07>
+        <square08 label="G laužtė">Laužytos formos garsas.</square08>
+        <square09 label="G# laužtė">Laužytos formos garsas.</square09>
+        <square10 label="A laužtė">Laužytos formos garsas.</square10>
+        <square11 label="A# laužtė">Laužytos formos garsas.</square11>
+        <square12 label="B laužtė">Laužytos formos garsas.</square12>
+        <drums>
+          <any label="būgnai">Bet koks bugnų garsas.</any>
+        </drums>
+        <bassdrum label="didysis">Didysis bosinis būgnas.</bassdrum>
+        <hhclosed label="cik uždaras">Cik-cik atviros lėkštės.</hhclosed>
+        <hhopen label="cik atviras">Cik-cik uždaros lėkštės.</hhopen>
+        <shaker label="barškutis">Barškutis.</shaker>
+        <snare label="mažasis">Mažasis pagrindinis būgnas.</snare>
+        <tomlow label="žemas">Žemo tono tomtomas.</tomlow>
+        <tommed label="vidutinis">Vidutinio tono tomtomas.</tommed>
+        <tomhi label="aukštas">Aukšto tono tomtomas.</tomhi>
+      </musical>
+      <arcade>
+        <any label="žaidimai">Bet koks žaidimų garsas.</any>
+        <roboton label="robotas+">Roboto įjungimo garsas.</roboton>
+        <robotoff label="robotas-">Roboto išjungimo garsas.</robotoff>
+        <coinsound label="moneta">Monetos garsas.</coinsound>
+        <gethealth label="sveikata+">Sveikatos pagerėjimo garsas.</gethealth>
+        <losehealth label="sveikata-">Sveikatos pabogėjimo garsas.</losehealth>
+        <shoot label="šūvis">Šūvio garsas.</shoot>
+        <timer label="laikmatis">Laikmačio garsas.</timer>
+        <win label="pergalė">Pergalės garsas.</win>
+        <lose label="pralaimėjimas">Pralaimėjimo garsas.</lose>
+        <inkjet_fire label="čiurkšlė šovė">Čiurkšlės šūvio garsas.</inkjet_fire>
+        <inkjet_impact label="čiurkšlė pataikė">Čiurkšlės pataikymo garsas.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="kita">Bet koks kitas garsas.</any>
+        <countdown_beep label="atskaita">Atbulinės atskaitos pypsėjimo garsas.</countdown_beep>
+        <countdown_alarm label="pavojus">Dažno atbulinės atskaitos pypsėjimo garsas.</countdown_alarm>
+        <epic_stinger label="raketa">Raketos paleidimo garsas.</epic_stinger>
+        <epic_stinger_a label="raketa a">Raketos paleidimo garsas.</epic_stinger_a>
+        <epic_stinger_b label="raketa b">Raketos paleidimo garsas.</epic_stinger_b>
+        <firepoof label="ugnis">Ugnies pliūpsnio garsas.</firepoof>
+        <forcefieldup label="skydas+">Jėgos lauko skydo įjungimo garsas.</forcefieldup>
+        <forcefielddown label="skydas-">Jėgos lauko skydo išjungimo garsas.</forcefielddown>
+        <hide label="slėpkis">Pasislėpimo garsas.</hide>
+        <lockontarget label="taikinys+">Taikinio užfiksavimo garsas.</lockontarget>
+        <losetarget label="taikinys-">Taikinio praradimo garsas.</losetarget>
+        <positivecondition label="gerai">Gero įvykio garsas.</positivecondition>
+        <negativecondition label="blogai">Blogo įvykio garsas.</negativecondition>
+        <points label="taškai">Taškų skyrimo garsas.</points>
+        <pop label="pokšt!">Pokštelėjimo garsas.</pop>
+        <popout label="pykšt!">Pykštelėjimo garsas.</popout>
+        <powerup label="galia">Galios padidėjimo garsas.</powerup>
+        <servo label="sraigtas">Sraigto garsas.</servo>
+        <watersplash label="tekšt!">Vandens tykštelėjimo garsas.</watersplash>
+        <waterdrop label="kapt!">Vandens lašėjimo garsas.</waterdrop>
+        <tagbase label="bazė">Bazės pasiekimo garsas.</tagbase>
+        <whistlehuman label="švilpt!">Žmogaus švilpimo garsas.</whistlehuman>
+        <whistlereferee label="trrr!">Teisėjo švilpuko garsas.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="bokštas">Garsai bokšto gynybos žaidimui.</any>
+        <air_raid_siren label="oro pavojus">Oro pavojaus sirenos garsas.</air_raid_siren>
+        <bomb_fall label="bomba">Krentančios bombos garsas.</bomb_fall>
+        <stun_fire label="trenksmas">Bokštelio kurtinančio ginklo šūvio garsas.</stun_fire>
+        <zapper_fire label="lazeris">Bokštelio lazerinio ginklo šūvio garsas.</zapper_fire>
+        <missile_fire label="raketa">Bokštelio raketos šūvio garsas.</missile_fire>
+        <shrinker_fire label="šrinkeris">Bokštelio šrinkerio šūvio garsas.</shrinker_fire>
+        <clam_coin_spit label="moneta">Didingas moliusko monetos išmetimo garsas.</clam_coin_spit>
+        <enemy_converted label="priešas nugalėtas">Garsas, kai priešas yra nugalėtas.</enemy_converted>
+        <enemy_escape label="priešas paspruko">Garsas, kai priešas pasprunka.</enemy_escape>
+        <place_tower label="bokštas padėtas">Garsas, kai bokštas padedamas į norimą vietą.</place_tower>
+        <star_collect label="gauta žvaigždė">Garsas, kai gaunama žvaigždutė.</star_collect>
+        <coin_collect label="gauta moneta">Garsas, kai gaunama moneta.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="muzika">Bet kuri muzika iš šios kolekcijos.</any>
+      <omni>
+        <any label="visokia">Bet kuri muzika iš šios kolekcijos.</any>
+      </omni>
+    </music>
+    <mu_action label="veiksmo">Veiksmo muzika.</mu_action>
+    <mu_ambientlight label="lengva">Lengva foninė muzika.</mu_ambientlight>
+    <mu_ambinetmodd label="nuotaikinga">Nuotaikinga muzika.</mu_ambinetmodd>
+    <mu_brightdowntempo label="lėta">Charakteringa lėta muzika.</mu_brightdowntempo>
+    <mu_brightfunk label="jausminga">Jausminga muzika.</mu_brightfunk>
+    <mu_brightguitar label="gitaros">Gitaros muzika.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu tema.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="paslaptinga">Bet kuri muzika iš šios kolekcijos.</any>
+      </mystery>
+    </music>
+    <mysterya label="paslaptis A">Paslaptinga muzika.</mysterya>
+    <mysteryb label="paslaptis B">Paslaptinga muzika.</mysteryb>
+    <mysteryc label="paslaptis C">Paslaptinga muzika.</mysteryc>
+    <music>
+      <driving>
+        <any label="užvedanti">Bet kuri muzika iš šios kolekcijos.</any>
+      </driving>
+    </music>
+    <drivinga label="greita A">Greita užvedanti muzika.</drivinga>
+    <drivingb label="greita B">Greita užvedanti muzika.</drivingb>
+    <drivingc label="greita C">Greita užvedanti muzika.</drivingc>
+    <music>
+      <drama>
+        <any label="dramatiška">Bet kuri muzika iš šios kolekcijos.</any>
+      </drama>
+    </music>
+    <dramaa label="drama A">Dramatiška muzika.</dramaa>
+    <dramab label="drama B">Dramatiška muzika.</dramab>
+    <environ>
+      <any label="aplinkos">Bet kurie garsai iš šios kolekcijos.</any>
+      <ambocean label="jūra">Jūros garsai.</ambocean>
+      <ambforest label="miškas">Miško garsai.</ambforest>
+      <ambcity label="miestas">Miesto garsai.</ambcity>
+      <ambmeadow label="pieva">Pievos garsai.</ambmeadow>
+      <ambmars label="marsas">Marso garsai.</ambmars>
+      <arena>
+        <any label="arena">Bet kuris arenos garsas.</any>
+        <a label="arena A">Didelės minios garsai.</a>
+        <b label="arena B">Didelės minios garsai.</b>
+        <c label="arena C">Didelės minios garsai.</c>
+        <d label="arena D">Didelės minios garsai.</d>
+        <e label="arena E">Didelės minios garsai.</e>
+        <f label="arena F">Didelės minios garsai.</f>
+        <g label="arena G">Didelės minios garsai.</g>
+      </arena>
+    </environ>
+    <trackingnone label="lygiai">Raketa skris tiesiai ir nejudės nei aukštyn, nei žemyn.</trackingnone>
+    <trackinghoming label="sekti">Raketa seks žemę ir stengsis perskrieti kalvas ar sienas.</trackinghoming>
+    <constraint>
+      <leftright label="kairėn/dešinėn">Judėti tik kairėn ir dešinėn.</leftright>
+      <fwdback label="pirmyn/atgal">Judėti tik pirmyn ir atgal.</fwdback>
+      <updown label="aukštyn/žemyn" />
+      <northsouth label="Š/P">Judėti tik į šiaurę ir į pietus.</northsouth>
+      <eastwest label="R/V">Judėti tik į rytus ir į vakarus.</eastwest>
+      <immobile label="nejudėk">Jokių judesių. Netgi tada, kai kas nors atsitrenkia.</immobile>
+    </constraint>
+    <once label="kartą">Kai įvyks atitinkamas įvykis ar aplinkybė, nurodyti veiksmai bus atliekami tik vieną kartą.</once>
+    <watertype label="vandens tipas">Vandens tipo pasirinkimas.</watertype>
+  </modifier>
+  <actuator>
+    <nothing label="nieko" />
+    <movement label="judėk">Judėk po pasaulį. Tyrinėk galimybes. Kiekvienas veikėjas juda skirtingai.</movement>
+    <turn label="pasisuk">Pakeisk žiūrėjimo kryptį.</turn>
+    <eat label="praryk">Praryk kitą objektą, kuris turi būti arti.</eat>
+    <say label="sakyk">Parodyk tekstą balionėlyje ar langelyje. Eilutės skiriamos simboliu &lt;cr&gt;.</say>
+    <open label="atidaryk">Kiekvienam veikėjui veikia skirtingai. Eksperimentuok!</open>
+    <close label="uždaryk">Kiekvienam veikėjui veikia skirtingai. Eksperimentuok!</close>
+    <kick label="trenk">Trenk kitam veikėjui, jei jis pakankamai arti. Jėga gali būti keičiama.</kick>
+    <make label="sukurk">Sukurk kitą objektą. Galima kurti tik tam skirtus objektus.</make>
+    <launch label="mesk">Mesk kitą objektą, jei jis pakankamai arti. Jėga gali būti keičiama.</launch>
+    <push label="stumk">Stumk objektą nurodyta kryptimi, jei jis pakankamai arti. Jėga gali kisti.</push>
+    <pull label="trauk">Trauk objektą nurodyta kryptimi, jei jis pakankamai arti. Jėga gali kisti.</pull>
+    <camouflage label="maskuok">Užmaskuok objektą, kad jį būtų sunku matyti.</camouflage>
+    <uncamouflage label="atidenk">Nuimk objekto maskuotę, kad jis būtų gerai matomas.</uncamouflage>
+    <express label="išreikšk">Išreikšk emociją ar parodyk specialų efektą. Kai kurios išraiškos keičia veikėjo veidą, kitos - rodomos virš veikėjo.</express>
+    <color label="spalvink">Pakeisk savo ar kito objekto spalvą.</color>
+    <glow label="švytėk">Ryškiai švytėk. Galima pasirinkti spalvą.</glow>
+    <sound label="grok">Leisk garsą! Pasirinkimų yra labai daug.</sound>
+    <stopsound label="tylėk">Neleisk jokių garsų.</stopsound>
+    <jump label="šok">Kiekvienas veikėjas gali pašokti į skirtingą aukštį.</jump>
+    <watersurface label="išnerk">Išnerk į vandens paviršių ir plauk. Povandeniniams veikėjams.</watersurface>
+    <waterdive label="nerk">Nerk gilyn iki vandens telkinio dugno. Povandeniniams veikėjams.</waterdive>
+    <airrise label="kilk">Kilk aukštyn į dangų. Skraidantiems veikėjams.</airrise>
+    <airdrop label="leiskis">Leiskis prie žemės. Skraidantiems veikėjams.</airdrop>
+    <switchtask label="pereik">Pereik į kitą programos lapą. Veikėjams taikomos tik vieno lapo komandos. Lapai gerai tinka keisti veikėjų elgsenai.</switchtask>
+    <inlinetask label="įterpk">Visos kito lapo komandos bus įterptos šioje vietoje. Labai naudinga, kai turi komandas, kurias nori panaudoti daugelyje vietų.</inlinetask>
+    <nextlevel label="kitas lygis">Pakrauk kitą lygį. Tinka kelių lygių žaidimams!</nextlevel>
+    <prevlevel label="atkstesnis lygis">Pakrauk ankstesnį lygį. Tinka kelių lygių žaidimams!</prevlevel>
+    <waterraise label="daugiau vandens">Padidink vandens gylį po veikėju.</waterraise>
+    <waterlower label="mažiau vandens">Sumažink vandens gylį po veikėju.</waterlower>
+    <setwater label="vandens lygis">Nustatyk norimą vandens lygį po veikėju.</setwater>
+    <rescale label="keisk dydį">Tolygiai keisk objekto dydį.</rescale>
+    <rescaleinstant label="dydis (iškart)">Pakeisk objekto dydį iškart.</rescaleinstant>
+    <movementspeedmodify label="judėjimo greitis">Nustato veikėjo judėjimo greičio daugiklį.</movementspeedmodify>
+    <turningspeedmodify label="posūkio greitis">Nustato veikėjo pasisukimo greičio daugiklį.</turningspeedmodify>
+    <worldlightingchange label="šviesa">Tolygiai pakeičia pasaulio apšvietimą.</worldlightingchange>
+    <worldlightingchangeinstant label="šviesa (iškart)">Pakeičia pasaulio apšvietimą iškart.</worldlightingchangeinstant>
+    <worldskychange label="dangus">Tolygiai pakeičia pasaulio dangaus būklę.</worldskychange>
+    <worldskychangeinstant label="dangus (iškart)">Pakeičia pasaulio dangaus būklę iškart.</worldskychangeinstant>
+    <shoot label="šauk" />
+    <shoot2 label="šauk">Šauk sviedinį ar raketą.</shoot2>
+    <beam label="švitink">Šauk lazerio spindulį į Marso uolieną ir atskleisk jos savybes.</beam>
+    <inspect label="tirk">Gręžk Marso uolieną ir paimk mėginių tolesniems tyrimams.</inspect>
+    <scan label="skenuok">Nustatyk, kokios uolienos yra aplink marsaeigį.</scan>
+    <picture label="fotografuok">Nufotografuok, ką matai priešais save.</picture>
+    <damage label="pažeisk">Pablogink savo ar kito objekto sveikatą.</damage>
+    <heal label="pagydyk">Pagerink savo ar kito objekto sveikatą. Gydymas atstato veikėjo ar kito objekto sveikatą. Paprastai atstatoma kito objekto sveikata. Save pagydyti galima pridėjus pasirinkimą "aš". Taip pat galima pasirinkti kaip ir kiek pagerės sveikata.</heal>
+    <zap label="apsvaigink">Apsvaigink save ar kitą veikėją kelioms sekundėms.</zap>
+    <pop label="nokautuok">Nokautuok save ar kitą veikėją, kad nieko negalėtų daryti, kol kas nors jį pagydys.</pop>
+    <boom label="susprogdink">Išnyk pats ar pradangink kitą veikėją su sprogimu.</boom>
+    <vanish label="pradangink">Išnyk pats ar pradangink kitą veikėją tyliai.</vanish>
+    <grab label="griebk">Paimk objektą, jei jis pakankamai arti. Vienu metu galima laikyti tik vieną daiktą.</grab>
+    <drop label="mesk">Mesk tai, ką nešiesi.</drop>
+    <give label="duok">Duok tai, ką nešiesi, kitam veikėjui. Jei jis negalės paimti, daiktas nukris ant žemės.</give>
+    <reset label="atkurk">Atkurk tam tikrą žaidimo ar veikėjo savybę.</reset>
+    <restart label="atšauk">Atšauk tam tikrą žaidimo ar veikėjo savybę.</restart>
+    <gameover label="baik">Pabaik žaidimą.</gameover>
+    <victory label="laimėk">Pabaik žaidimą ir rodyk pergalės žinutę. Galima nurodyti spalvą.</victory>
+    <score label="pridėk">Pridėk taškus prie rezultato.</score>
+    <unscore label="atimk">Atimk taškus iš rezultato.</unscore>
+    <scoreset label="nustatyk">Nustatyk norimą taškų skaičių.</scoreset>
+    <camera>
+      <followme label="sek">Stebėtojas ims sekti šį veikėją.</followme>
+      <ignoreme label="nesek">Šio veikėjo nebūtina matyti.</ignoreme>
+      <firstperson label="pats">Matyk viską šio veikėjo akimis.</firstperson>
+    </camera>
+  </actuator>
+  <root />
+  <group>
+    <colors label="spalvos" />
+    <pathcolors label="takų spalvos" />
+    <game label="žaidimas" />
+    <more label="daugiau" />
+    <players label="žaidėjai" />
+    <playermods label="žaidėjai" />
+    <actions label="veiksmai" />
+    <settings label="nustatymai" />
+    <combat label="kova" />
+    <rover label="marsaeigis" />
+    <holding label="neša" />
+    <sounds label="garsai" />
+    <event label="įvykis">
+      <explode label="sprok" />
+      <silly label="chi!" />
+      <musical label="muzikinis">
+        <glock label="glock" />
+        <saw label="dantys" />
+        <sine label="bangelė" />
+        <gong label="gongas" />
+        <square label="laužtė" />
+        <drums label="būgnai" />
+      </musical>
+      <arcade label="žaidimai" />
+      <misc label="kita" />
+      <tower label="bokštas" />
+    </event>
+    <environ label="aplinka">
+      <forest label="miškas" />
+      <arena label="arena" />
+    </environ>
+    <music label="muzika">
+      <omni label="nauja" />
+      <mystery label="paslaptinga" />
+      <driving label="užvedanti" />
+      <drama label="dramatiška" />
+    </music>
+    <constraints label="apribota" />
+    <directions label="kryptis" />
+    <filters>
+      <directions label="kryptis" />
+      <touchbuttons label="mygtukai" />
+      <touchGuiButtons label="mygtukai" />
+      <gestures label="veiksmai" />
+    </filters>
+    <expressions label="nuotaika" />
+    <projectiles label="šoviniai" />
+    <camera label="vaizdas" />
+    <reset label="atkurti" />
+    <options label="nustatymai" />
+    <compare label="palygini" />
+    <points label="taškai" />
+    <time label="laikas" />
+    <speed label="greitis" />
+    <strength label="jėga" />
+    <angle label="kampas" />
+    <tracking label="sekimas" />
+    <bots label="botai I" />
+    <bots2 label="botai II" />
+    <objects label="objektai" />
+    <tasks label="užduotis" />
+    <terrains label="tipai" />
+    <waters label="tipai" />
+    <setwater label="vandens tipas" />
+    <creatables label="sukuriamieji" />
+    <keyboard>
+      <letters label="raidės" />
+      <numbers label="skaičiai" />
+      <symbols label="simboliai" />
+      <misc label="kita" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

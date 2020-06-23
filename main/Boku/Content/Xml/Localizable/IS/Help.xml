@@ -1,0 +1,3033 @@
+﻿<?xml version="1.0"?>
+<Help xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <programmingExamples>
+
+    <ExamplePage>
+      <description>Þegar ég sé epli, á ég að fara til þess.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég rekst á epli, á ég að borða það.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé fjólublátt epli, á ég að forðast það.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.purple</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég heyri í Kodu, á ég að fara til þess.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.ears</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég hef epli, á ég að borða það.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.got</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég rekst á rautt epli, á ég að borða það.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>filter.red</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég skora 100 stig, vinn ég leikinn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.scored</upid>
+            <upid>filter.100points</upid>
+            <upid>actuator.victory</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég hef 0 heilsustig, endar leikurinn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.health</upid>
+            <upid>filter.000point</upid>
+            <upid>actuator.gameover</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar mér er haldið af vindbelg, á ég að fá rauðan lit.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.held</upid>
+            <upid>filter.windblimp</upid>
+            <upid>actuator.color</upid>
+            <upid>modifier.red</upid>
+            <upid>modifier.me</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    
+    <ExamplePage>
+      <description>Þegar spilari 1 ýtir á A hnapp sinn, á ég að skjóta bleiku flugskeyti beint upp.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.player1</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.shoot</upid>
+            <upid>modifier.pink</upid>
+            <upid>modifier.up</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég er á vissri gerð lands, á ég lækna mig um 10 heilsustig.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.terrain</upid>
+            <upid>filter.terrain</upid>
+            <upid>actuator.heal</upid>
+            <upid>modifier.010points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé ekki neina Kodu, endar leikurinn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countnone</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.gameover</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé eitthvað, á ég að forðast það.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.anything</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég er á vissri gerð vatns, á ég að stökkva einu sinni.  Aðeins sumir hlutir geta stokkið.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.water</upid>
+            <upid>filter.water</upid>
+            <upid>actuator.jump</upid>
+            <upid>modifier.once</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé reiðan hnapp, á ég að forðast hann.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.expressangry</upid>
+            <upid>filter.pushpad</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar epli er nálægt, á ég að fara til þess.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.closeby</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé margar sprengjur, á ég að fara í burtu!</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countmany</upid>
+            <upid>filter.mine</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.awayfromall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Einhverntíma milli 0 og 5 sekúndna á að varpa steini.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.random</upid>
+            <upid>filter.05seconds</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.objectrock</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Einhverntíma milli 5 og 10 sekúndna á að varpa peningi.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.05seconds</upid>
+            <upid>filter.random</upid>
+            <upid>filter.05seconds</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.objectcoin</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ef ég skora meira en 20 stig, vinn ég leikinn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.scored</upid>
+            <upid>filter.scoreabove</upid>
+            <upid>filter.020points</upid>
+            <upid>actuator.victory</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé Kodu nálægt, á ég að segja eitthvað.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.closeby</upid>
+            <upid>actuator.say</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé ekki neitt, á ég að sýna dapurt viðmót.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countnone</upid>
+            <upid>actuator.express</upid>
+            <upid>modifier.expresssad</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé Kodu, á ég að sýna gleði.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.express</upid>
+            <upid>modifier.expresshappy</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé ský, á ég fara hratt í kringum það.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.cloud</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.circle</upid>
+            <upid>modifier.turnright</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé ekki Kodu, á ég að glóa rautt.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.countnone</upid>
+            <upid>actuator.glow</upid>
+            <upid>modifier.red</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    
+    <ExamplePage>
+      <description>Á 10 sekúndna fresti á ég að búa til stein.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.10seconds</upid>
+            <upid>actuator.make</upid>
+            <upid>modifier.objectrock</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Spila hljóð stöðugt.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.sound</upid>
+            <upid>modifier.mu_ambinetmodd</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Alltaf vera lokað.  Virkar aðeins fyrir suma  hluti.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.close</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Alltaf vera opið.  Virkar aðeins fyrir suma hluti.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.open</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég sé reiðan Kodu, á ég að hætta að spila hljóð.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.expressangry</upid>
+            <upid>actuator.stopsound</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég gríp stjörnu, á að fara á blað 2.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.got</upid>
+            <upid>filter.star</upid>
+            <upid>actuator.switchtask</upid>
+            <upid>modifier.taskb</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar skeyti mitt hæfir bóta, á hann að vankast.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.anybot</upid>
+            <upid>actuator.zap</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar skeyti mitt hæfir hnoðra, á hann að rotast.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.wisp</upid>
+            <upid>actuator.pop</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar skeyti mitt hæfir sprengju, á hún að springa.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.mine</upid>
+            <upid>actuator.boom</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar skeyti mitt hittir sprengju, á hún að eyðast.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.sputnik</upid>
+            <upid>actuator.vanish</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég rekst á epli, á ég að taka það.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.grab</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég er á vissri gerð lands, á ég að sleppa öllu sem ég er með.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.terrain</upid>
+            <upid>filter.terrain</upid>
+            <upid>actuator.drop</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég rekst á eitthvað, á ég að gefa því það sem ég er með.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.anything</upid>
+            <upid>actuator.give</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar heilsa mín er 0, á að endurstilla leikinn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.health</upid>
+            <upid>filter.000point</upid>
+            <upid>actuator.restart</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar skeyti mitt hæfir skip, á að draga 1 stig frá.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.floatbot</upid>
+            <upid>actuator.unscore</upid>
+            <upid>modifier.001point</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ýtt er á hnapp A, á myndavélin að fylgja mér.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.camera.followme</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ýtt er á hnapp B, á myndavélin að hunsa mig.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.bbutton</upid>
+            <upid>actuator.camera.ignoreme</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ýtt er á hnapp X, á myndavélin að horfa út úr augum mínum.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.xbutton</upid>
+            <upid>actuator.camera.firstperson</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar vinstri pinninn er hreyfður, á að fljúga upp eða niður.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.moveupdown</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar vinstri pinninn er hreyfður, á að beygja til hægri.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.moveleftright</upid>
+            <upid>modifier.turnright</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar flugskeyti mitt hæfir gulan kodu, á hann að missa 5 heilsustig.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.yellow</upid>
+            <upid>filter.boku</upid>
+            <upid>actuator.damage</upid>
+            <upid>modifier.it</upid>
+            <upid>modifier.005points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar hægri pinninn er hreyfður, á að hreyfa sig á norður-suður ás.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.rightstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.constraint.northsouth</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar hægri pinninn er hreyfður, á að hreyfa sig á austur-vestur ás.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.rightstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.constraint.eastwest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ýtt er á Y hnappinn, á að fara norður.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.ybutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.north</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ýtt er á B hnappinn, á að fara austur.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.bbutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.east</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ýtt er á A hnappinn, á að fara suður.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.south</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ýtt er á X hnappinn, á að fara vestur.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.xbutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.west</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar þrýst er á vinstri gikkinn, á að fara hægt áfram.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.lefttrigger_analog</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.forward</upid>
+            <upid>modifier.slowly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar þrýst er á hægri gikkinn, á að fara hratt áfram.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.righttrigger_analog</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.forward</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég heyri leikvangshljóð, á að varpa hjarta hátt á loft.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.ears</upid>
+            <upid>filter.environ.arena.any</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.strongly</upid>
+            <upid>modifier.angle.high</upid>
+            <upid>modifier.objectheart</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar flugskeyti mitt hæfir grænan Kodu, á að bæta 5 stigum við rauða skorið.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.green</upid>
+            <upid>filter.boku</upid>
+            <upid>actuator.score</upid>
+            <upid>modifier.red</upid>
+            <upid>modifier.005points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Skjóta flugskeyti einu sinni.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>actuator.shoot</upid>
+            <upid>modifier.once</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ráfa hratt um heiminn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>actuator.movement</upid>
+            <upid>selector.wander</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar ég rekst á stein, skorar bláa teymið 1 stig.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.rock</upid>
+            <upid>actuator.score</upid>
+            <upid>modifier.001point</upid>
+            <upid>modifier.blue</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Þegar vinstri pinninn hreyfist, á ég að hreyfast líka.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ráfa um heiminn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid><
+            <upid>actuator.movement</upid>
+            <upid>selector.wander</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+  </programmingExamples>
+
+
+
+  <actorHelp>
+    <item>
+      <key>
+        <string>BokuBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Kodu er svolítið hægur og á erfitt með að komast upp brattar brekkur.
+          </description>
+          <upid>filter.boku</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til Kodu sem finnur og étur epli.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til Kodu sem hægt er að stýra. Vinstri pinninn stjórnar hreyfingu. A hnappurinn lætur Kodu hoppa.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til Kodu sem fylgir rauðum slóðum.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til Kodu sem skiptir um blöð til að sýna tvenns konar hegðun.  Ýta á A hnappinn til að glóa ýmist rautt eða blátt.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Glóa rautt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Glóa blátt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <!-- ====================  CLAM ==========================-->
+    <item>
+      <key>
+        <string>Clam</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.clam</upid>
+          <description>
+            Skelin er hlutur sem getur opnast og lokast.
+          </description>
+
+          <programs>
+            <!-- Enter the example program here -->
+            <ExampleProgram>
+              <description>Búa til skel sem opnast og lokast.</description>
+              <tileUpid>actuator.open</tileUpid>
+              <pages>
+
+                <ExamplePage>
+                  <description>Opna og loka</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+              </pages>
+            </ExampleProgram>
+          </programs>
+          
+        </ActorHelp>
+      </value>
+    </item>
+
+    <!-- ====================  StarFish ==========================-->
+    <item>
+      <key>
+        <string>Starfish</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.starfish</upid>
+          <description>Krossfiskar lifa á landi eða í vatni.</description>
+
+          <programs>
+          </programs>
+
+        </ActorHelp>
+      </value>
+    </item>
+    
+    
+    <!-- ====================  LillyPad Single ==========================-->
+    <item>
+      <key>
+        <string>LilypadSingle</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.lilypadsingle</upid>
+          <description>Það er gaman að hoppa á vatnaliljum.</description>
+
+          <programs>
+          </programs>
+
+        </ActorHelp>
+      </value>
+    </item>
+
+
+    <!-- ====================  LillyPad ==========================-->
+    <item>
+      <key>
+        <string>Lilypad</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.lilypad</upid>
+          <description>Vatnaliljur í þyrpingu.</description>
+          <programs>
+          </programs>
+
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <!-- ====================  SeaGrass Single==========================-->
+    <item>
+      <key>
+        <string>SeagrassSingle</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.seagrasssingle</upid>
+          <description>Sægras bærist í vindi eða straumi.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <!-- ====================  Sea Grass ==========================-->
+    <item>
+      <key>
+        <string>Seagrass</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.seagrass</upid>
+          <description>Sægrasblettur.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <!-- ====================  Pipes ==========================-->
+    <item>
+      <key>
+        <string>PipeStraight</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.pipeStraight</upid>
+          <description>Beinn rörbútur sem getur tengst öðrum rörum.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PipeCorner</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.pipeCorner</upid>
+          <description>L-laga rörbútur sem getur tengst öðrum rörum.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PipeCross</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.pipeCross</upid>
+          <description>Krosstengdir rörbútar sem geta tengst öðrum rörum.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <!-- ====================  InkJet ==========================-->
+    <item>
+      <key>
+        <string>InkJet</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.inkjet</upid>
+          <description>Ský af svörtu bleki sem gerir umhverfið ógreinilegra.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+
+    <item>
+      <key>
+        <string>TerraCannon</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Fallbyssa er stór og hæg en mjög öflug.
+          </description>
+          <upid>filter.terracannon</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til fallbyssu sem finnur og étur epli.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til fallbyssu sem hægt er að stýra. Vinstri pinninn stjórnar hreyfingu. A hnappurinn lætur fallbyssuna hoppa.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til fallbyssu sem fylgir rauðum slóðum.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til fallbyssu sem skiptir um blöð til að sýna tvenns konar hegðun.  Ýta á A hnappinn til að glóa ýmist rautt eða blátt.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Glóa rautt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Glóa blátt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>FlyFish</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Flugfiskur svífur og snýr sér hratt - hentar vel fyrir snörp viðbrögð.
+          </description>
+          <upid>filter.flyfish</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til flugfisk sem finnur og étur epli.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til flugfisk sem hægt er að stýra.  Vinstri pinninn stjórnar hreyfingu.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til flugfisk sem fylgir rauðum slóðum.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til flugfisk sem notar blöð til að sýna tvenns konar hegðun.  Ýta á A hnappinn til að glóa ýmist rautt eða blátt.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Glóa rautt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Glóa blátt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Jet</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Þota flýgur venjulega nálægt yfirborðinu, en með forritun getur hún hreyfst upp og niður.
+          </description>
+          <upid>filter.jet</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til þotu sem finnur og étur epli.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til þotu sem hægt er að stýra.  Vinstri pinninn stjórnar hreyfingum.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til þotu sem fylgir grænum slóðum.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.green</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til þotu sem notar blöð til að sýna tvenns konar hegðun.  Ýta á A hnappinn til að glóa ýmis rautt eða blátt.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Glóa rautt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Glóa blátt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>FloatBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Skip er farartæki sem getur flotið á vatni en getur ekki hreyft sig á landi.
+          </description>
+          <upid>filter.floatbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til skipa sem hægt er að stýra.  Vinstri pinninn stjórnar hreyfingum.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til skip sem ráfar um og býr til epli með 10 sekúndna millibili.
+              </description>
+              <tileUpid>selector.wander</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <reflex>
+                        <upids>
+                          <upid>actuator.movement</upid>
+                          <upid>selector.wander</upid>
+                        </upids>
+                      </reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.10seconds</upid>
+                        <upid>actuator.make</upid>
+                        <upid>modifier.objectfruit</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>FastBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Hjól fer hratt, getur ekið upp brattar hlíðar og getur stokkið.
+          </description>
+          <upid>filter.fastbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til hjól sem notandi stjórnar.  Vinstri pinninn stjórnar hreyfingum.  A hnappurinn lætur hjólið stökkva..
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>StickBoy</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Pinni hreyfist ekki en getur falið sig neðanjarðar með því að loka sér.  Óvinnandi ef lokaður.
+          </description>
+          <upid>filter.stick</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til pinna sem notandi stjórnar.  Y og A hnapparnir opna og loka pinnanum.  B hnappurinn skýtur flugskeyti.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.shoot</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>SubBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Kafbátur virkar best undir yfirborði vatns.
+          </description>
+          <upid>filter.subbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til kafbát sem notandi stjórnar.  Vinstri pinninn stjórnar hreyfingu.  Y og A hnapparnir koma upp og kafa.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.watersurface</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.waterdive</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Fan</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Með forritun geta viftur ýtt hlutum frá sér eða dregið þá að.
+          </description>
+          <upid>filter.fan</upid>
+          <programs>
+            <ExampleProgram>
+              <description>
+                Búa til ljós sem leitar að og eltir diska.
+              </description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.saucer</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Octopus</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Kolkrabbi er háll sem áll og elskar hafið.
+          </description>
+          <upid>filter.octopus</upid>
+          <programs>
+            
+            <!-- Enter the example program here -->
+            <ExampleProgram>
+              <description>Búa til kolkrabba sem getur sett á sig feluliti og tekið þá af aftur.</description>
+              <tileUpid>actuator.camouflage</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Blað1</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.camouflage</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.uncamouflage</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Búa til kolkrabba sem sprautar bleki.</description>
+              <tileUpid>filter.inkjet</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>CreateInk</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.xbutton</upid>
+                        <upid>actuator.launch</upid>
+                        <upid>modifier.angle.low</upid>
+                        <upid>modifier.strongly</upid>
+                        <upid>modifier.objectinkjet</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Light</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Ljósið hreyfist hratt og getur lýst upp heiminn.
+          </description>
+          <upid>filter.light</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til ljós sem leitar að og eltir diska.
+              </description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.saucer</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Wisp</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Hnoðrinn hreyfist hratt og skilur eftir glóandi slóðir.
+          </description>
+          <upid>filter.wisp</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til hnoðra sem leitar að og eltir aðra hnoðra.
+              </description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.wisp</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Saucer</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Diskur er fljótasti og fimasti hluturinn. Hann getur breytt um stefnu á augabragði.
+          </description>
+          <upid>filter.saucer</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til disk sem tekur og færir epli.  Þetta dæmi notar fleiri en eitt blað.
+              </description>
+              <tileUpid>actuator.grab</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.scan</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.grab</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.got</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.05seconds</upid>
+                        <upid>actuator.drop</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.got</upid>
+                        <upid>filter.countnone</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskc</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.05seconds</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til disk sem hægt er að stýra.  Vinstri pinninn stjórnar hreyfingu og hægri pinninn skýtur.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.rightstick</upid>
+                        <upid>actuator.shoot</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>WindBlimp</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Vindbelgur flýgur um hægt.
+          </description>
+          <upid>filter.windblimp</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til loftskip sem er stjórnað af notanda.  Vinstri pinninn stjórnar hreyfingu.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>BalloonBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Loftbelgur flýtur hægt um loftið og hefur yfirsýn yfir allt.  Hann er góður sem dómari í leikjum.
+          </description>
+          <upid>filter.balloonbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til loftbelg sem notandi getur stjórnað.  Vinstri pinninn stjórnar hreyfingu.  Y og A hnapparnir fara upp og niður.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.airrise</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.airdrop</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Puck</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Pukkurinn er ágætur fyrir hraða leiki því hann flýgur um án viðnáms og getur skoppað án þess að tapa hraða.
+          </description>
+          <upid>filter.puck</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PushPad</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Hnappurinn er stór og sterkur.
+          </description>
+          <upid>filter.pushpad</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Turtle</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Skjaldbakan getur flogið um loftið og getur falið sig í skelinni með því að nota aðgerðirnar Opna og Loka.  Þegar skjaldbakan er lokuð er hún óvinnandi.
+          </description>
+          <upid>filter.turtle</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Búa til skjaldböku sem er hægt að stýra.  Vinstri pinninn stjórnar hreyfingu.  A hnappurinn lætur skjaldbökuna fela sig í skelinni, en Y hnappurinn opnar hana.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>SwimFish</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Fiski gengur best í vatni.  Á landi er hann bara strand.
+          </description>
+          <upid>filter.swimfish</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Cloud</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Skýið er til heiðurs veðráttunni hér um slóðir.
+          </description>
+          <upid>filter.cloud</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Mine</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Sprengjan hefur gadda sem hún getur sýnt eða falið.  Opna aðgerðin sýnir gaddana en Loka aðgerðin felur þá.
+          </description>
+          <upid>filter.mine</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Drum</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Þegar aðrir hlutir stökkva á trommuna þeytast þeir upp í loftið.
+          </description>
+          <upid>filter.drum</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Sputnik</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Gervitunglið er góður félagi fyrir diskinn.
+          </description>
+          <upid>filter.sputnik</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>BigYucca1</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Það er líka hægt að forrita tré.
+          </description>
+          <upid>filter.bigyucca1</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Yucca1</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Það er líka hægt að forrita tré.
+          </description>
+          <upid>filter.yucca1</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>Yucca3</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Það er líka hægt að forrita tré.
+          </description>
+          <upid>filter.yucca3</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>Yucca2</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Það er líka hægt að forrita tré.
+          </description>
+          <upid>filter.yucca2</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Fruit</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Epli eru góð á bragðið og það er gaman að varap þeim upp í loftið.
+          </description>
+          <upid>filter.fruit</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>IceBerg</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Ísjakar fljóta á vatni.
+          </description>
+          <upid>filter.iceBerg</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Rock</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Það er hægt að forrita steina eins og allt annað.
+          </description>
+          <upid>filter.rock</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>RockLowValue</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Hraunsteina er hægt að forrita til að bregðast aðeins við aðgerðum jeppans.
+          </description>
+          <upid>filter.rockLowValue</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>RockHighValue</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Setlagssteina er hægt að forrita til að bregðast aðeins við aðgerðum jeppans.
+          </description>
+          <upid>filter.rockHighValue</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>RockLowValueUnknown</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Óþekkt steintegund sem reynist vera hraunsteinn þegar jeppi skannar hana.
+          </description>
+          <upid>filter.rockLowValueUnknown</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>RockHighValueUnknown</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Óþekkt steintegund sem reynist vera setlagssteinn þegar jeppi skannar hana.
+          </description>
+          <upid>filter.rockHighValueUnknown</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Star</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Það er hægt að forrita stjörnur eins og allt annað.
+          </description>
+          <upid>filter.star</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Coin</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Peningar eru ómissandi fyrir alla klassíska tölvuleiki.
+          </description>
+          <upid>filter.coin</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>SoccerBall</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Það er hægt að forrita boltann eða bara sparka í hann. Þetta er jú bolti.
+          </description>
+          <upid>filter.soccerball</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Castle</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Kastalinn hreyfir sig ekki mikið.
+          </description>
+          <upid>filter.castle</upid>
+          <programs>
+            <ExampleProgram>
+              <description>
+                Búa til kastala sem springur þegar eitthvað rekst í hann.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.anything</upid>
+                        <upid>actuator.boom</upid>
+                        <upid>modifier.me</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Heart</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Hjörtu er góð í heilsupakka.
+          </description>
+          <upid>filter.heart</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Bullet</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Skeyti virka vel í skotfærapökkum.
+          </description>
+          <upid>filter.bullet</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Factory</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Smiðjan er ágæt sem kennileiti í leikjum.
+          </description>
+          <upid>filter.factory</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Hut</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Kofinn er ágætur sem kennileiti í leikjum.
+          </description>
+          <upid>filter.hut</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>WayPoint</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Slóðir eru brautir sem bóti getur fylgt.  Venjuleg slóð er ósýnileg en slóð getur líka verið sýnileg sem vegur eða veggur eða gróður.  Bóti getur verið forritaður til að fylgja slóð í tilteknum lit. Lit slóðar er breytt á sama hátt og lita annarra hluta.  Ef merkt er við Kemba notkun slóða í Valkostum heims verða ósýnilegar slóðir sýnilegar þegar heimurinn er í notkun.
+          </description>
+          <upid>selector.followwaypoints</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PathGeneric</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Slóðir eru brautir sem bóti getur fylgt.  Venjuleg slóð er ósýnileg en slóð getur líka verið sýnileg sem vegur eða veggur eða gróður.  Bóti getur verið forritaður til að fylgja slóð í tilteknum lit. Lit slóðar er breytt á sama hátt og lita annarra hluta.  Ef merkt er við Kemba notkun slóða í Valkostum heims verða ósýnilegar slóðir sýnilegar þegar heimurinn er í notkun.
+          </description>
+          <upid>filter.pathplain</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PathVeggie</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Með slóðum af gerðinni Gróður má mynda blómamynstur í heiminum.
+          </description>
+          <upid>filter.pathflora</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PathRoad</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Með vegaslóðum er búið til vegakerfi í leikjaheiminum.
+          </description>
+          <upid>filter.pathroad</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PathWall</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Slóðir af gerðinni Veggur mynda veggi í leikjaheiminum.  Hæð veggjar er stillt með því að hækka eða lækka hnút.
+          </description>
+          <upid>filter.pathwall</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Rover</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Mars jeppi sem getur gert ýmislegt (leysigeislað, skannað, skoðað, ljósmyndað) við steintegundir á Mars.
+          </description>
+          <upid>filter.rover</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Stýring hreyfinga og aðgerðir hnappa fyrir fullvirkan Mars jeppa.
+              </description>
+              <tileUpid>sensor.scanned</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.picture</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.beam</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.xbutton</upid>
+                        <upid>actuator.inspect</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.scan</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Búa til jeppa sem finnur og skannar óþekkta steina.
+              </description>
+              <tileUpid>sensor.scanned</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>
+                    Þetta er lýsing blaðsins.  Ekki notuð í hjálp hluta en er notuð í forritunarhjálpinni.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.rockUnknown</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.rockUnknown</upid>
+                        <upid>actuator.scan</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+
+  </actorHelp>
+</Help>

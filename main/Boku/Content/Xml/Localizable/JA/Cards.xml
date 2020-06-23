@@ -1,0 +1,1024 @@
+<Tiles>
+  <sensor>
+    <gamepad label="コントローラー">プレーヤーがボットを、そうさする。ボタン、トリガーボタン、ステック、そしてにんいで、プレーヤ番号を指定する。</gamepad>
+    <keyboard label="キーボード">プレーヤーがボットを、そうさできるようにする。はんのうするキーボードのキーを指定する。</keyboard>
+    <mouse label="マウス">マウスの動きにはんのうする。</mouse>
+    <touch label="タッチ">画面のタッチにはんのうする。</touch>
+    <microbit label="BBC micro:bit">BBC micro:bitの入力にはんのうする。</microbit>
+    <eyes label="見る">指定したタイプや色のものを見たときにはんのうする。し線フィルタを使えば、山やカベがあるときには見えないようにもできる。</eyes>
+    <ears label="聞く">指定したものやタイプの音を聞いたときにはんのうする。カベが間にあっても聞こえる。</ears>
+    <bumpers label="ぶつかる">指定しタイプや色、その他の物にぶつかったときにはんのうする。</bumpers>
+    <timer label="待つ">指定した秒数がたつとはんのうする。数字を大きくすれば長く待つ。</timer>
+    <got label="拾う">指定しタイプや色、その他の物を拾ったときにはんのうする。</got>
+    <scored label="点を取る">スコアの点がかわった時にはんのうする。</scored>
+    <health label="体力かわる">体力がかわった時にはんのうする。</health>
+    <missilehit label="たまが当たる">うったたまが物に当たった時にはんのうする。スコアを付けるのに使うが、何に使ってもよい。たとえば当たったものの色をピンクにするとか。</missilehit>
+    <held label="拾われる">自分が何かに拾われた時にはんのうする。</held>
+    <terrain label="地面の上">乗った地面のタイプにはんのうする。</terrain>
+    <water label="水の上">乗った水のタイプにはんのうする。</water>
+    <beamed label="ビーム当たる">火星の岩にビームが当たった時にはんのうする。</beamed>
+    <inspected  label="調べる">火星の岩が調べられた時にはんのうする。</inspected>
+    <scanned label="スキャンする">だれも知らない岩がスキャンされた時にはんのうする。</scanned>
+    <endofpath  label="はしに着く">道すじのはしに着いたときにはんのうする。</endofpath>
+    <always label="いつでも">いつでも。</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Koduはゲームに足すことができるキャラクターで、プログラムをセットすることができる。</boku>
+    <bokubot label="kodu">Koduはゲームに足すことができるキャラクターで、プログラムをセットすることができる。</bokubot>
+    <anything label="なんでも" />
+    <dead label="ノックアウト">ノックアウトされたキャラクターにはんのうする。</dead>
+    <me label="自分">このプログラムが動いているキャラクター。自分自身。</me>
+    <said label="言った">ほかのキャラクターが何かを言うのを聞く。それが何ていうのを聞くのかを指定する。</said>
+    <countnone label="無い">指定した物がまったく見えない時にはんのうする。たとえば、”見る”-”青”-”何もない”だったら、見えるところに青いものがないときにはんのうする。</countnone>
+    <starfish label="スターフィッシュ">スターフィッシュにはんのうする。</starfish>
+    <clam label="クラム">クラムにはんのうする。</clam>
+    <seagrass label="seagrass">React to seagrass.</seagrass>
+    <seagrasssingle label="seagrass">React to seagrass.</seagrasssingle>
+    <lilypad label="リリーパッド">リリーパッドに、はんのうする。</lilypad>
+    <lilypadsingle label="リリーパッド">リリーパッドに、はんのうする。</lilypadsingle>
+    <flyfish label="フライフィッシュ">フライフィッシュは、ゲームに足すことができるキャラクターで、動きにはプログラムをセットすることができる。</flyfish>
+    <jet label="ジェット">ジェットは、ゲームに足すことができるキャラクターで、動きにはプログラムをセットすることができる。</jet>
+    <light label="ライト">ライトは、ゲームに足すことができるキャラクターで、動きにはプログラムをセットすることができる。ライトは、ものに光を当てることができるが、ゲームには4つしか、おくことができない。</light>
+    <fan label="ファン">ファンにはんのうする。</fan>
+    <octopus label="オクトパス">オクトパスにはんのうする。</octopus>
+    <fastbot label="サイクル">サイクルは、ゲームに足すことができるキャラクターで、動きにはプログラムをセットすることができる。</fastbot>
+    <saucer label="ソーサー">ソーサ―については、ヒミツです。</saucer>
+    <windblimp label="ブリンプ">ブリンプは、ゲームに足すことができる空を飛ぶキャラクターで、動きにはプログラムをセットすることができる。</windblimp>
+    <balloonbot label="バルーン">バルーンは、ゲームに足すことができる空を浮くキャラクターで、動きにはプログラムをセットすることができる。</balloonbot>
+    <subbot label="サブマリン">サブマリンは、ゲームに足すことができるセンスイカンで、動きにはプログラムをセットすることができる。</subbot>
+    <terracannon label="キャノン">キャノンは、ゲームに足すことができるキャラクターで、動きにはプログラムをセットすることができる。</terracannon>
+    <puck label="パック">パックは、ゲームに足すことができるキャラクターで、動きにはプログラムをセットすることができる。</puck>
+    <wisp label="ウィスプ">ウィスプは、ゲームに足すことができるキャラクターで、動きにはプログラムをセットすることができる。</wisp>
+    <anybot label="ロボット">ロボットタイプなら何でも。</anybot>
+    <turtle label="タートル">タートルにはんのうする。</turtle>
+    <rover label="ローバー">ローバーにはんのうする。</rover>
+    <pushpad label="プッシュパッド">プッシュパッドにはんのうする。</pushpad>
+    <sputnik label="スプトニック">スプトニックにはんのうする。</sputnik>
+    <stick label="スティック">スティックにはんのうする。</stick>
+    <stickboy label="スティック">スティックにはんのうする。</stickboy>
+    <drum label="ドラム">ドラムにはんのうする。</drum>
+    <mine label="マイン">マインにはんのうする。</mine>
+    <cloud label="クラウド">クラウドにはんのうする。</cloud>
+    <swimfish label="フィッシュ">フィッシュにはんのうする。</swimfish>
+    <floatbot label="シップ">シップにはんのうする。</floatbot>
+    <factory label="ファクトリ">ファクトリにはんのうする。</factory>
+    <hut label="ハット">ハットにはんのうする。</hut>
+    <castle label="キャッスル">キャッスルにはんのうする。</castle>
+    <fruit label="アップル">アップルにはんのうする。</fruit>
+    <inkjet label="インククラウド">インククラウドにはんのうする。</inkjet>
+    <iceberg label="アイスバーグ">アイスバーグにはんのうする。</iceberg>
+    <rock label="ロック">ロックにはんのうする。</rock>
+    <rockLowValue label="カセイ岩">カセイ岩にはんのうする。</rockLowValue>
+    <rockHighValue label="タイセキ岩">タイセキ岩にはんのうする。</rockHighValue>
+    <rockLowValueUnknown label="かくれカセイ岩">カセイ岩だが、スキャンして、ビームを当てて、調べなるまでは、ただの見知らぬ岩。</rockLowValueUnknown>
+    <rockHighValueUnknown label="かくれタイセキ岩">タイセキ岩だが、スキャンして、ビームを当てて、調べなるまでは、ただの見知らぬ岩。</rockHighValueUnknown>
+    <rockUnknown label="かくれ岩">見知らぬ岩にはんのうする。</rockUnknown>
+    <tree label="ツリー">ツリーにはんのうする。</tree>
+    <pipe label="パイプ">パイプにはんのうする。</pipe>
+    <pipeStraight label="直線パイプ">直線パイプにはんのうする。</pipeStraight>
+    <pipeCross label="十字パイプ">十字パイプにはんのうする。</pipeCross>
+    <pipeCorner label="角パイプ">角パイプにはんのうする。</pipeCorner>
+    <underwater label="水中キャラクター">水中キャラクターにはんのうする。</underwater>
+    <building label="たてもの">たてものにはんのうする。</building>
+    <flower label="フラワー" />
+    <gate label="ゲート" />
+    <cursor label="カーソル">カーソルにはんのうする。</cursor>
+    <star label="スター">スターにはんのうする。</star>
+    <coin label="コイン">コインにはんのうする。</coin>
+    <soccerball label="ボート">ボールにはんのうする。</soccerball>
+    <heart label="ハート">ハートにはんのうする。</heart>
+    <bullet label="アーモ">アーモにはんのうする。</bullet>
+    <Black label="黒">何か黒いものにはんのうする。</Black>
+    <Grey label="灰色">何か灰色のものにはんのうする。</Grey>
+    <white label="白">何か白いものにはんのうする。</white>
+    <red label="赤">何か赤いものにはんのうする。</red>
+    <orange label="オレンジ色">何かオレンジ色のものにはんのうする。</orange>
+    <yellow label="黄色">何か黄色いものにはんのうする。</yellow>
+    <green label="緑">何か緑ものにはんのうする。</green>
+    <blue label="青">何か青いものにはんのうする。</blue>
+    <purple label="ムラサキ色">何かムラサキ色のものにはんのうする。</purple>
+    <pink label="ピンク">何かピンクのものにはんのうする。</pink>
+    <brown label="茶色">何か茶色いものにはんのうする。</brown>
+    <PathBlack label="黒い道すじ">黒い道すじにはんのうする。</PathBlack>
+    <PathGrey label="灰色の道すじ">灰色の道すじにはんのうする。</PathGrey>
+    <PathWhite label="白い道すじ">白い道すじにはんのうする。</PathWhite>
+    <PathRed label="赤い道すじ">赤い道すじにはんのうする。</PathRed>
+    <PathOrange label="オレンジの道すじ">オレンジの道すじにはんのうする。</PathOrange>
+    <PathYellow label="黄色い道すじ">黄色い道すじにはんのうする。</PathYellow>
+    <PathGreen label="緑の道すじ">緑の道すじにはんのうする。</PathGreen>
+    <PathBlue label="青い道すじ">青い道すじにはんのうする。</PathBlue>
+    <PathPurple label="ムラサキ色の道すじ">ムラサキ色の道すじにはんのうする。</PathPurple>
+    <PathPink label="ピンクの道すじ">ピンクの道すじにはんのうする。</PathPink>
+    <PathBrown label="茶色い道すじ">茶色い道すじにはんのうする。</PathBrown>
+    <pathplain label="道すじ" />
+    <pathroad label="道路" />
+    <pathwall label="壁" />
+    <pathflora label="植物" />
+    <yucca1 label="ツリー１" />
+    <yucca2 label="ツリー２" />
+    <yucca3 label="ツリー３" />
+    <bigyucca1 label="大きいツリー" />
+    <expresshappy label="幸せな">幸せなロボットにはんのうする。</expresshappy>
+    <expresssad label="悲しい">悲しいロボットにはんのうする。</expresssad>
+    <expressangry label="怒った">怒ってるロボットにはんのうする。</expressangry>
+    <expresscrazy label="狂った">狂ってるロボットにはんのうする。</expresscrazy>
+    <expresshearts label="ハートな">ハートを見せてるロボットにはんのうする。</expresshearts>
+    <expressflowers label="お花な">花を見せてるロボットにはんのうする。</expressflowers>
+    <expressstars label="キラキラな">スターを見せてるロボットにはんのうする。</expressstars>
+    <expressswear label="悪口をいう">悪口をいうロボットにはんのうする。</expressswear>
+    <expressnormal label="ふつう">ふつうにしてるロボットにはんのうする。</expressnormal>
+    <expressnone label="むひょうじょう">むひょうじょうなロボットにはんのうする。</expressnone>
+    <moving label="動いている">動いてるロボットにはんのうする。</moving>
+    <camouflage label="カモフラージュ中">カモフラージュしてるロボットにはんのうする。</camouflage>
+    <closeby label="近く">”近い”フィルタは、ものが自分に近い場合だけはんのうする。とおい物には、はんのうしない。</closeby>
+    <faraway label="遠く">ものが自分から遠い場合だけはんのうする</faraway>
+
+    <infront label="前に">ものが自分の前にいるときだけはんのうする。</infront>
+    <behind label="後ろに">ものが自分の後ろにいるときだけはんのうする。</behind>
+    <toleft label="左に">ものが自分の左にいるときだけはんのうする。</toleft>
+    <toright label="右に">ものが自分の右にいるときだけはんのうする。</toright>
+    <over label="上に">ものが自分より高い所に、いるときだけはんのうする。</over>
+    <under label="下に">ものが自分より低い所に、いるときだけはんのうする。</under>
+
+    <lineofsight label="見える">地形とカベで センサーがはんのうしない。</lineofsight>
+    
+    <countfew label="少ない">何かが少しだけ見えるときだけはんのうする。</countfew>
+    <countmany label="多い">何かたくさん見えるときだけはんのうする。</countmany>
+    <clustermany label="集まっている">何かたくさん見てそれがぎゅうぎゅうと集まってるときだけはんのうする。</clustermany>
+    <countany label="いくつでも" />
+    <leftstick label="左スティック">ゲームパッドの左スティックにはんのうする。ロボットを動かすときに使うのが良い。</leftstick>
+    <rightstick label="右スティック">ゲームパッドの左スティックにはんのうする。何かをうつときに良い。</rightstick>
+    <abutton label="Aボタン">ゲームパッドのＡボタンにはんのうする。</abutton>
+    <bbutton label="Bボタン">ゲームパッドのＢボタンにはんのうする。</bbutton>
+    <xbutton label="Xボタン">ゲームパッドのＸボタンにはんのうする。</xbutton>
+    <ybutton label="Yボタン">ゲームパッドのＹボタンにはんのうする。</ybutton>
+    <lefttrigger label="Lボタン">ゲームパッドの左トリガーボタンにはんのうする。</lefttrigger>
+    <righttrigger label="Rボタン">ゲームパッドの右トリガーボタンにはんのうする。</righttrigger>
+    <lefttrigger_analog label="Lボタン">ゲームパッドの左トリガーボタンにはんのうする。</lefttrigger_analog>
+    <righttrigger_analog label="Rボタン">ゲームパッドの右トリガーボタンにはんのうする。</righttrigger_analog>
+    <microbit label="BBC micro:bit">
+      <tilt label="tilt">BBC micro:bitからのななめの入力にはんのうする。</tilt>
+      <leftbutton label="A button">BBC micro:bitからのボタンAの入力にはんのうする。</leftbutton>
+      <rightbutton label="B button">BBC micro:bitからのボタンBの入力にはんのうする</rightbutton>
+      <pin1 label="pin 0">BBC micro:bitのピン0のステイトを読む。</pin1>
+      <pin2 label="pin 1">BBC micro:bitのピン1のステイトを読む。</pin2>
+      <pin3 label="pin 2">BBC micro:bitのピン2のステイトを読む。</pin3>
+    </microbit>
+    <mouse>
+      <button>
+        <left label="左クリック">マウスの左クリックにはんのうする。</left>
+        <right label="右クリック">マウスの右クリックにはんのうする。.</right>
+      </button>
+      <hover label="マウスオーバー">マウスでものや地形のうえにカーソルをもっていったときに、はんのうする。</hover>
+      <move label="マウスの動き">マウスの動きにはんのうする。</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="タッチ">タッチにハンノウする。 (タッチスクリーン)</touching>
+        <tap label="タップ">タップにハンノウする。 (タッチスクリーン)</tap>
+        <rotate label="回転">回転するジェスチャーにハンノウ。（タッチスクリーン)</rotate>
+        <swipe label="スワイプ">スワイプするジェスチャーにハンノウ。（タッチスクリーン)</swipe>
+        <slide label="スライド">スライドするジェスチャーにハンノウ。 （タッチスクリーン)</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="白">ヘッドアップディスプレイの白ボタンにはんのうする。(ワールドのせってい)</White>
+        <Black label="黒">ヘッドアップディスプレイの黒ボタンにはんのうする。(ワールドのせってい)</Black>
+        <Grey label="灰色">ヘッドアップディスプレイの灰色ボタンにはんのうする。(ワールドのせってい)</Grey>
+        <Red label="赤">ヘッドアップディスプレイの赤ボタンにはんのうする。(ワールドのせってい)</Red>
+        <Green label="緑">ヘッドアップディスプレイの緑ボタンにはんのうする。(ワールドのせってい)</Green>
+        <Blue label="青">ヘッドアップディスプレイの青ボタンにはんのうする。(ワールドのせってい)</Blue>
+        <Orange label="オレンジ色">ヘッドアップディスプレイのオレンジボタンにはんのうする。(ワールドのせってい)</Orange>
+        <Yellow label="黄色">ヘッドアップディスプレイの黄色ボタンにはんのうする。(ワールドのせってい)</Yellow>
+        <Purple label="ムラサキ色">ヘッドアップディスプレイのムラサキ色ボタンにはんのうする。(ワールドのせってい)</Purple>
+        <Pink label="ピンク">ヘッドアップディスプレイのピンクボタンにはんのうする。(ワールドのせってい)</Pink>
+        <Brown label="茶色">ヘッドアップディスプレイの茶色ボタンにはんのうする。(ワールドのせってい)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="Xボタン">バーチャルゲームパッドのＸボタンにはんのうする。</controllerButton_X>
+      <controllerButton_Y label="Yボタン">バーチャルゲームパッドのＹボタンにはんのうする。</controllerButton_Y>
+      <controllerButton_A label="Aボタン">バーチャルゲームパッドのＡボタンにはんのうする。</controllerButton_A>
+      <controllerButton_B label="Bボタン">バーチャルゲームパッドのＢボタンにはんのうする。</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="矢印キー">キーボードの 矢印キー に、はんのうする。</ArrowKeys>
+    <WASDKeys label="WASDキー">キーボードの WASDキー に、はんのうする。</WASDKeys>
+    <Akey label="A">キーボードの Aキー に、はんのうする。</Akey>
+    <Bkey label="B">キーボードの Bキー に、はんのうする。</Bkey>
+    <Ckey label="C">キーボードの Cキー に、はんのうする。</Ckey>
+    <Dkey label="D">キーボードの Dキー に、はんのうする。</Dkey>
+    <Ekey label="E">キーボードの Eキー に、はんのうする。</Ekey>
+    <Fkey label="F">キーボードの Fキー に、はんのうする。</Fkey>
+    <Gkey label="G">キーボードの Gキー に、はんのうする。</Gkey>
+    <Hkey label="H">キーボードの Hキー に、はんのうする。</Hkey>
+    <Ikey label="I">キーボードの Iキー に、はんのうする。</Ikey>
+    <Jkey label="J">キーボードの Jキー に、はんのうする。</Jkey>
+    <Kkey label="K">キーボードの Kキー に、はんのうする。</Kkey>
+    <Lkey label="L">キーボードの Lキー に、はんのうする。</Lkey>
+    <Mkey label="M">キーボードの Mキー に、はんのうする。</Mkey>
+    <Nkey label="N">キーボードの Nキー に、はんのうする。</Nkey>
+    <Okey label="O">キーボードの Oキー に、はんのうする。</Okey>
+    <Pkey label="P">キーボードの Pキー に、はんのうする。</Pkey>
+    <Qkey label="Q">キーボードの Qキー に、はんのうする。</Qkey>
+    <Rkey label="R">キーボードの Rキー に、はんのうする。</Rkey>
+    <Skey label="S">キーボードの Sキー に、はんのうする。</Skey>
+    <Tkey label="T">キーボードの Tキー に、はんのうする。</Tkey>
+    <Ukey label="U">キーボードの Uキー に、はんのうする。</Ukey>
+    <Vkey label="V">キーボードの Vキー に、はんのうする。</Vkey>
+    <Wkey label="W">キーボードの Wキー に、はんのうする。</Wkey>
+    <Xkey label="X">キーボードの Xキー に、はんのうする。</Xkey>
+    <Ykey label="Y">キーボードの Yキー に、はんのうする。</Ykey>
+    <Zkey label="Z">キーボードの Zキー に、はんのうする。</Zkey>
+    <D0key label="0">キーボードの 0キー に、はんのうする。</D0key>
+    <D1key label="1">キーボードの 1キーに、はんのうする。</D1key>
+    <D2key label="2">キーボードの 2キーに、はんのうする。</D2key>
+    <D3key label="3">キーボードの 3キーに、はんのうする。</D3key>
+    <D4key label="4">キーボードの 4キーに、はんのうする。</D4key>
+    <D5key label="5">キーボードの 5キーに、はんのうする。</D5key>
+    <D6key label="6">キーボードの 6キーに、はんのうする。</D6key>
+    <D7key label="7">キーボードの 7キーに、はんのうする。</D7key>
+    <D8key label="8">キーボードの 8キーに、はんのうする。</D8key>
+    <D9key label="9">キーボードの 9キーに、はんのうする。</D9key>
+    <Spacekey label="スペースキー">キーボードの スペースキー に、はんのうする。</Spacekey>
+    <PageUpkey label="PageUpキー">キーボードの　PageUpキー に、はんのうする。</PageUpkey>
+    <PageDownkey label="PageDownキー">キーボードの PageDownキー に、はんのうする。</PageDownkey>
+    <Endkey label="Endキー">キーボードの Endキー に、はんのうする。</Endkey>
+    <Leftkey label="左矢印">キーボードの 左矢印キー に、はんのうする。</Leftkey>
+    <Upkey label="上矢印">キーボードの　上矢印キー　に、はんのうする。</Upkey>
+    <Rightkey label="右矢印">キーボードの 右矢印キー に、はんのうする。</Rightkey>
+    <Downkey label="下矢印">キーボードの　下矢印キー に、はんのうする。</Downkey>
+    <Insertkey label="Insertキー">キーボードの Insertキー に、はんのうする。</Insertkey>
+    <Deletekey label="Deleteキー">キーボードの Deleteキー に、はんのうする。</Deletekey>
+    <LeftWindowskey label="左Windowsキー">キーボードの 左Windowsキー に、はんのうする。</LeftWindowskey>
+    <RightWindowskey label="右Windowsキー">キーボードの 右Windowsキー に、はんのうする。</RightWindowskey>
+    <Multiplykey label="*">キーボードの アスタリスクｷー に、はんのうする。</Multiplykey>
+    <Addkey label="+">キーボードの プラスキー に、はんのうする。</Addkey>
+    <Subtractkey label="-">キーボードの マイナスキー に、はんのうする。</Subtractkey>
+    <Decimalkey label=".">キーボードの .キー に、はんのうする。</Decimalkey>
+    <Dividekey label="/">キーボードの /キー に、はんのうする。</Dividekey>
+    <LeftShiftkey label="左シフト">キーボードの 左シフトキー に、はんのうする。</LeftShiftkey>
+    <RightShiftkey label="右シフト">キーボードの 右シフトキー に、はんのうする。</RightShiftkey>
+    <LeftControlkey label="左コントロールキー">キーボードの 左コントロールキー に、はんのうする。</LeftControlkey>
+    <RightControlkey label="右コントロールキー">キーボードの 右コントロールキー に、はんのうする。</RightControlkey>
+    <LeftAltkey label="左Alt">キーボードの 左Altキー に、はんのうする。</LeftAltkey>
+    <RightAltkey label="右Alt">キーボードの 右Altキー に、はんのうする。</RightAltkey>
+    <OemSemicolonkey label=";">キーボードの セミコロンキー に、はんのうする。</OemSemicolonkey>
+    <OemPluskey label="+">キーボードの +キー に、はんのうする。</OemPluskey>
+    <OemCommakey label=",">キーボードの カンマキー に、はんのうする。</OemCommakey>
+    <OemMinuskey label="-">キーボードの　マイナスキー に、はんのうする。</OemMinuskey>
+    <OemPeriodkey label=".">キーボードの . キー に、はんのうする。</OemPeriodkey>
+    <OemQuestionkey label="?">キーボードの ？キー に、はんのうする。</OemQuestionkey>
+    <OemTildekey label="~">キーボードの　チルダキー　に、はんのうする。</OemTildekey>
+    <OemOpenBracketskey label="[">キーボードの [キー に、はんのうする。</OemOpenBracketskey>
+    <OemPipekey label="|">キーボードの |キー に、はんのうする。</OemPipekey>
+    <OemCloseBracketskey label="]">キーボードの ]ー に、はんのうする。</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">キーボードの 'キー に、はんのうする。</OemQuoteskey>
+    <OemBackslashkey label="\">キーボードの \キー に、はんのうする。</OemBackslashkey>
+    <F1key label="F1">キーボードのF1キーに、はんのうする。</F1key>
+    <F2key label="F2">キーボードのF2キーに、はんのうする。</F2key>
+    <F3key label="F3">キーボードのF3ーに、はんのうする。</F3key>
+    <F4key label="F4">キーボードのF4キーに、はんのうする。</F4key>
+    <F5key label="F5">キーボードのF5キーに、はんのうする。</F5key>
+    <F6key label="F6">キーボードのF6キーに、はんのうする。</F6key>
+    <F7key label="F7">キーボードのF7キーに、はんのうする。</F7key>
+    <F8key label="F8">キーボードのF8キーに、はんのうする。</F8key>
+    <F9key label="F9">キーボードのF9キーに、はんのうする。</F9key>
+    <F10key label="F10">キーボードのF10キーに、はんのうする。</F10key>
+    <F11key label="F11">キーボードのF11ーに、はんのうする。</F11key>
+    <F12key label="F12">キーボードのF12キーに、はんのうする。</F12key>
+    <Shiftkey label="Shiftキー">キーボードの左右どちらのシフトキーにも、はんのうする。</Shiftkey>
+    <Controlkey label="Controlキー">キーボードの左右どちらのコントロールキーにも、はんのうする。</Controlkey>
+    <Altkey label="Altキー">キーボードの左右どちらのAltキーにも、はんのうする。</Altkey>
+    <Windowskey label="Windowsキー">キーボードの左右どちらのWindowsキーにも、はんのうする。</Windowskey>
+    <player1 label="プレーヤー1">プレーヤー1のゲームパッドにはんのうする。</player1>
+    <player2 label="プレーヤー2">プレーヤー2のゲームパッドにはんのうする。</player2>
+    <player3 label="プレーヤー3">プレーヤー3ゲームパッドにはんのうする。</player3>
+    <player4 label="プレーヤー4">プレーヤー4のゲームパッドにはんのうする。</player4>
+    <terrain label="タイプ">選んだタイプの地面にはんのうする。</terrain>
+    <water label="タイプ">選んだタイプの水にはんのうする。</water>
+    <quartersecond label="秒">1/4 秒。他の数字の秒と足し合わせると大きな秒にできる。</quartersecond>
+    <_01second label="秒">1 秒。他の数字の秒と足し合わせると大きな秒にできる。</_01second>
+    <_02seconds label="秒">2 秒。他の数字の秒と足し合わせると大きな秒にできる。</_02seconds>
+    <_03seconds label="秒">3 秒。他の数字の秒と足し合わせると大きな秒にできる。</_03seconds>
+    <_04seconds label="秒">4 秒。他の数字の秒と足し合わせると大きな秒にできる。</_04seconds>
+    <_05seconds label="秒">5 秒。他の数字の秒と足し合わせると大きな秒にできる。</_05seconds>
+    <_10seconds label="秒">10 秒。他の数字の秒と足し合わせると大きな秒にできる。</_10seconds>
+    <_20seconds label="秒">20 秒。他の数字の秒と足し合わせると大きな秒にできる。</_20seconds>
+    <_30seconds label="秒">30 秒。他の数字の秒と足し合わせると大きな秒にできる。</_30seconds>
+    <_60seconds label="秒">60 秒。他の数字の秒と足し合わせると大きな秒にできる。</_60seconds>
+    <_000point label="ポイント">0 ポイント。</_000point>
+    <_001point label="ポイント">1 ポイント。 他の数字と足し合わせると大きな数字にできる。</_001point>
+    <_002points label="ポイント">2 ポイント。 他の数字と足し合わせると大きな数字にできる。</_002points>
+    <_003points label="ポイント">3 ポイント。 他の数字と足し合わせると大きな数字にできる。</_003points>
+    <_004points label="ポイント">4 ポイント。 他の数字と足し合わせると大きな数字にできる。</_004points>
+    <_005points label="ポイント">5 ポイント。 他の数字と足し合わせると大きな数字にできる。</_005points>
+    <_010points label="ポイント">10 ポイント。 他の数字と足し合わせると大きな数字にできる。</_010points>
+    <_020points label="ポイント">20 ポイント。 他の数字と足し合わせると大きな数字にできる。</_020points>
+    <_050points label="ポイント">50 ポイント。 他の数字と足し合わせると大きな数字にできる。</_050points>
+    <_100points label="ポイント">100 ポイント。 他の数字と足し合わせると大きな数字にできる。</_100points>
+    <random label="ランダム">数字のタイルと合わせてランダムな数字にできる。たとえばｍ、”ランダム” - ”5” だと　０から５の間のランダムな数字。</random>
+    <scorebucket>
+      <color>
+        <white label="白いスコア">白いスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</white>
+        <black label="黒いスコア">黒いスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</black>
+        <grey label="灰色のスコア">灰色のスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</grey>
+        <red label="赤いスコア">赤いスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</red>
+        <green label="緑のスコア">緑のスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</green>
+        <blue label="青いスコア">青いスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</blue>
+        <orange label="オレンジのスコア">オレンジのスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</orange>
+        <yellow label="黄色いスコア">黄色いスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</yellow>
+        <purple label="ムラサキ色のスコア">ムラサキ色のスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</purple>
+        <pink label="ピンクのスコア">ピンクのスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</pink>
+        <brown label="茶色のスコア">茶色のスコアの数字をテストする。スコアは、デフォルトでは、スコアボードに出る。（ワールドのせってい）</brown>
+      </color>
+      <letter>
+        <a label="スコアA">Aのスコアの数字をテストする。スコアは、スコアボードに出ない。</a>
+        <b label="スコアB">Bのスコアの数字をテストする。スコアは、スコアボードに出ない。</b>
+        <c label="スコアC">Cのスコアの数字をテストする。スコアは、スコアボードに出ない。</c>
+        <d label="スコアD">Dのスコアの数字をテストする。スコアは、スコアボードに出ない。</d>
+        <e label="スコアE">Eのスコアの数字をテストする。スコアは、スコアボードに出ない。</e>
+        <f label="スコアF">Fのスコアの数字をテストする。スコアは、スコアボードに出ない。</f>
+        <g label="スコアG">Gのスコアの数字をテストする。スコアは、スコアボードに出ない。</g>
+        <h label="スコアH">Hのスコアの数字をテストする。スコアは、スコアボードに出ない。</h>
+        <i label="スコアI">Iのスコアの数字をテストする。スコアは、スコアボードに出ない。</i>
+        <j label="スコアJ">Jのスコアの数字をテストする。スコアは、スコアボードに出ない。</j>
+        <k label="スコアK">Kのスコアの数字をテストする。スコアは、スコアボードに出ない。</k>
+        <l label="スコアL">Lのスコアの数字をテストする。スコアは、スコアボードに出ない。</l>
+        <m label="スコアM">Mのスコアの数字をテストする。スコアは、スコアボードに出ない。</m>
+        <n label="スコアN">Nのスコアの数字をテストする。スコアは、スコアボードに出ない。</n>
+        <o label="スコアO">Oのスコアの数字をテストする。スコアは、スコアボードに出ない。</o>
+        <p label="スコアP">Pのスコアの数字をテストする。スコアは、スコアボードに出ない。</p>
+        <q label="スコアQ">Qのスコアの数字をテストする。スコアは、スコアボードに出ない。</q>
+        <r label="スコアR">Rのスコアの数字をテストする。スコアは、スコアボードに出ない。</r>
+        <s label="スコアS">Sのスコアの数字をテストする。スコアは、スコアボードに出ない。</s>
+        <t label="スコアT">Tのスコアの数字をテストする。スコアは、スコアボードに出ない。</t>
+        <u label="スコアU">Uのスコアの数字をテストする。スコアは、スコアボードに出ない。</u>
+        <v label="スコアV">Vのスコアの数字をテストする。スコアは、スコアボードに出ない。</v>
+        <w label="スコアW">Wのスコアの数字をテストする。スコアは、スコアボードに出ない。</w>
+        <x label="スコアX">Xのスコアの数字をテストする。スコアは、スコアボードに出ない。</x>
+        <y label="スコアY">Yのスコアの数字をテストする。スコアは、スコアボードに出ない。</y>
+        <z label="スコアZ">Zのスコアの数字をテストする。スコアは、スコアボードに出ない。</z>
+      </letter>
+      <local>
+        <a label="スコアa">The 'a' score, which is private to this character.</a>
+        <b label="スコアb">The 'b' score, which is private to this character.</b>
+        <c label="スコアc">The 'c' score, which is private to this character.</c>
+        <d label="スコアd">The 'd' score, which is private to this character.</d>
+        <e label="スコアe">The 'e' score, which is private to this character.</e>
+        <f label="スコアf">The 'f' score, which is private to this character.</f>
+        <g label="スコアg">The 'g' score, which is private to this character.</g>
+        <h label="スコアh">The 'h' score, which is private to this character.</h>
+        <i label="スコアi">The 'i' score, which is private to this character.</i>
+        <j label="スコアj">The 'j' score, which is private to this character.</j>
+        <k label="スコアk">The 'k' score, which is private to this character.</k>
+        <l label="スコアl">The 'l' score, which is private to this character.</l>
+        <m label="スコアm">The 'm' score, which is private to this character.</m>
+        <n label="スコアn">The 'n' score, which is private to this character.</n>
+        <o label="スコアo">The 'o' score, which is private to this character.</o>
+        <p label="スコアp">The 'p' score, which is private to this character.</p>
+        <q label="スコアq">The 'q' score, which is private to this character.</q>
+        <r label="スコアr">The 'r' score, which is private to this character.</r>
+        <s label="スコアs">The 's' score, which is private to this character.</s>
+        <t label="スコアt">The 't' score, which is private to this character.</t>
+        <u label="スコアu">The 'u' score, which is private to this character.</u>
+        <v label="スコアv">The 'v' score, which is private to this character.</v>
+        <w label="スコアw">The 'w' score, which is private to this character.</w>
+        <x label="スコアx">The 'x' score, which is private to this character.</x>
+        <y label="スコアy">The 'y' score, which is private to this character.</y>
+        <z label="スコアz">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="トリガー" />
+    <timertrigger label="トリガー" />
+    <scoreis label="が" />
+    <scoreequals label="同じ">スコアが数字と同じなら、はんのうする。</scoreequals>
+    <scorenotequals label="違う">スコアが数字と違うなら、はんのうする。</scorenotequals>
+    <scoreabove label="のが大きい">スコアが数字より大きければ、はんのうする。</scoreabove>
+    <scorebelow label="のが小さい">スコアが数字より小さければ、はんのうする。</scorebelow>
+    <scoregteq label="&gt;=">スコアが数字と同じか大きければ、はんのうする。</scoregteq>
+    <scorelteq label="&lt;=">スコアが数字と同じか小さければ、はんのうする。</scorelteq>
+    <healthis label="が" />
+    <healthabove label="のが大きい">体力が数字より大きくなれば、はんのうする。</healthabove>
+    <healthbelow label="のが小さい">体力が数字より小さくなれば、はんのうする。</healthbelow>
+    <direction>
+      <up label="上">ゲームステックが上におされた時にはんのうする。</up>
+      <right label="右">ゲームステックが右におされた時にはんのうする。</right>
+      <down label="下">ゲームステックが下におされた時にはんのうする。</down>
+      <left label="左">ゲームステックが左におされた時にはんのうする。</left>
+      <clockwise label="右回り">時計回りに回したらはんのうする。</clockwise>
+      <counterclockwise label="左周り">反時計回りに回したらはんのうする。</counterclockwise>
+    </direction>
+    <not label="じゃない">設定したルールが起きなかったらはんのうする。</not>
+  </filter>
+  <selector>
+    <closest label="nearest" />
+    <objectrelative label="relative" />
+    <towardclosest label="向かって">はんのうしたものに向かって進む。</towardclosest>
+    <awayfromall label="はなれて">はんのうしたものの反対に向かって進む。</awayfromall>
+    <avoidall label="さけて">はんのうしたものをさけて、はなれる。</avoidall>
+    <wander label="歩き回る">ランダムな向きに向かって動き回る。なにも追いかけるものがない時にでも動くので、プログラムの最後の行に入れるのが良い</wander>
+    <cruise label="まっすぐ">顔が向いている方向に向かって進む。</cruise>
+    <circle label="ぐるぐる回る" />
+    <spin label="曲がる">同じ場所でクルクル回る。</spin>
+    <forward label="前へ" />
+    <hiddenturn label="曲がる" />
+    <escape label="反対に向く" />
+    <followwaypoints label="道すじの上">選んだ色の道すじを進む。デフォルトではどんな色の道すじも進む。</followwaypoints>
+    <moveupdown label="上/下">上に行ったり、下に入ったり。</moveupdown>
+    <moveup label="上">上に進む。</moveup>
+    <movedown label="下">下に進む。</movedown>
+    <moveleftright label="turn">右か左に曲がる。</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="プレーヤー1" />
+      <_2 label="プレーヤー2" />
+      <_3 label="プレーヤー3" />
+      <_4 label="プレーヤー4" />
+    </player>
+    <reset>
+      <world label="ゲームワールド">スコアボードの数字はそのままでゲームをリセットする。</world>
+      <score label="スコア">スコアボードをリセットする。色を選べば、そのスコアをリセットする。</score>
+      <expression label="ひょうじょう">そのキャラクターのひょうじょうをリセットする。</expression>
+      <glow label="かがやき">そのキャラクターのかがやきをリセットする。</glow>
+      <health label="体力">そのキャラクターの体力をリセットする</health>
+    </reset>
+    <projectile>
+      <blip label="ブリップ">ブリップは、はやいたまで、ミサイルよりも軽い。</blip>
+      <missile label="ミサイル">ミサイルは、大きくおそいけれど、ターゲットを追いかける!</missile>
+    </projectile>
+    <slowly label="ゆっくり">ゆっくり進む。なんこも使うともっとゆっくりになる。</slowly>
+    <quickly label="速く">はやく進む。なんこも使うともっと速くなる。</quickly>
+    <speednormally label="ふつうの速さ">ふつうに進む。</speednormally>
+    <weakly label="弱く">いつもより弱くやる。</weakly>
+    <strongly label="強く">いつもより強くやる。</strongly>
+    <strengthnormally label="ふつうの強さ">いつもと同じ強さでやる。</strengthnormally>
+    <angle>
+      <low label="低く">低くとばす。</low>
+      <high label="高く">高くとばす。</high>
+    </angle>
+    <turnleft label="左" />
+    <turnright label="右" />
+    <turntoward label="向かって" />
+    <turnforward label="前へ">正面は、動いた方向では決まらない。最初のむきが前で、動いても戻る。</turnforward>
+    <pitchup label="上げる" />
+    <pitchdown label="下げる" />
+    <forward label="前へ">そのキャラクターの向いている向き。</forward>
+    <north label="北へ" />
+    <east label="東へ" />
+    <south label="南へ" />
+    <west label="西へ" />
+    <up label="上へ" />
+    <down label="下へ" />
+    <distance>
+      <near label="小さい丸">小さい丸で回りを周る。</near>
+      <far label="大きい丸">大きい丸で回りを周る。</far>
+    </distance>
+    <objecticeberg label="アイスバーグ">アイスバーグを作る。</objecticeberg>
+    <objectrock label="岩">ロックを作る。</objectrock>
+    <objectrockLowValue label="岩">カセイ岩を作る。</objectrockLowValue>
+    <objectrockHighValue label="岩">タイセキ岩を作る。</objectrockHighValue>
+    <objectfruit label="アップル">アップルを作る。</objectfruit>
+    <objectinkjet label="インククラウド">インククラウドを作る。</objectinkjet>
+    <objectstar label="スター">スターを作る。</objectstar>
+    <objectcoin label="コイン">コインを作る。</objectcoin>
+    <objectheart label="ハート">ハートを作る。</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="ボール">サッカーボールを作る。</objectsoccerball>
+    <objectbullet label="アーモ">アーモを作る。</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="ページ1">ページ1に切りかえるか、ページ1を取り入れる。</taska>
+    <taskb label="ページ2">ページ2に切りかえるか、ページ2を取り入れる。</taskb>
+    <taskc label="ページ3">ページ3に切りかえるか、ページ3を取り入れる。</taskc>
+    <taskd label="ページ4">ページ4に切りかえるか、ページ4を取り入れる。</taskd>
+    <taske label="ページ5">ページ5に切りかえるか、ページ5を取り入れる。</taske>
+    <taskf label="ページ6">ページ6に切りかえるか、ページ6を取り入れる。</taskf>
+    <taskg label="ページ7">ページ7に切りかえるか、ページ7を取り入れる。</taskg>
+    <taskh label="ページ8">ページ8に切りかえるか、ページ8を取り入れる。</taskh>
+    <taski label="ページ9">ページ9に切りかえるか、ページ9を取り入れる。</taski>
+    <taskj label="ページ10">ページ10に切りかえるか、ページ10を取り入れる。</taskj>
+    <taskk label="ページ11">ページ11に切りかえるか、ページ11を取り入れる。</taskk>
+    <taskl label="ページ12">ページ12に切りかえるか、ページ12を取り入れる。</taskl>
+    <expresshappy label="ハッピー">ハッピーになる。</expresshappy>
+    <expresssad label="悲しい">悲しくなる。</expresssad>
+    <expressangry label="おこった">おこる、</expressangry>
+    <expresscrazy label="クレイジー">クレイジーになる。</expresscrazy>
+    <expresshearts label="ハートな気分">ハートを見せる。</expresshearts>
+    <expressflowers label="お花な気分">花を見せる。</expressflowers>
+    <expressstars label="星キラキラな気分">スターを見せる。</expressstars>
+    <expressswear label="悪口をいう">悪口のマンガを見せる。</expressswear>
+    <expressnone label="何も">何かを見せるのをやめてフツウになる。</expressnone>
+    <_000point label="ポイント">0ポイント。色もえらべる。</_000point>
+    <_001point label="ポイント">1ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_001point>
+    <_002points label="ポイント">2ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_002points>
+    <_003points label="ポイント">3ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_003points>
+    <_004points label="ポイント">4ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_004points>
+    <_005points label="ポイント">5ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_005points>
+    <_010points label="ポイント">10ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_010points>
+    <_020points label="ポイント">20ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_020points>
+    <_050points label="ポイント">50ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_050points>
+    <_100points label="ポイント">100ポイント。ポイントをいくつかえらんで足して、ほかの数字も作れる。色もえらべる。</_100points>
+    <random label="ランダム">ほかの数字タイルとえらんで、ランダムな数字をつくる。たとえば、"ランダム" - "5"とセットすると１から５の中の数字のどれかがでる。</random>
+    <health label="体力">キャラクターのもつ体力のポイント。</health>
+    <teama label="チームA" />
+    <teamb label="チームB" />
+    <payloadzap label="キゼツ">ターゲットを少しの間 キゼツさせる。</payloadzap>
+    <payloadpop label="ノックアウト">他のだれかが、体力をリセットするまで、ターゲットをねむらせる。</payloadpop>
+    <payloadboom label="バクハツ">バクハツでターゲットを消す。</payloadboom>
+    <payloadvanish label="消す">しずかにターゲットを消す。</payloadvanish>
+    <black label="黒" />
+    <grey label="灰色" />
+    <white label="白" />
+    <red label="赤" />
+    <orange label="オレンジ" />
+    <yellow label="黄色" />
+    <green label="緑" />
+    <blue label="青" />
+    <purple label="ムラサキ色の" />
+    <pink label="ピンク" />
+    <brown label="茶色" />
+    <glowoff label="オフ">かがやきをなしにする。</glowoff>
+    <colorrandom label="ランダム">ランダムに色をえらぶ。</colorrandom>
+    <path>
+      <black label="黒 道すじ" />
+      <grey label="灰色 道すじ" />
+      <white label="白 道すじ" />
+      <red label="赤 道すじ" />
+      <orange label="オレンジ 道すじ" />
+      <yellow label="黄色 道すじ" />
+      <green label="緑 道すじ" />
+      <blue label="青 道すじ" />
+      <purple label="ムラサキ色の 道すじ" />
+      <pink label="ピンク 道すじ" />
+      <brown label="茶色 道すじ" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="白">白いスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</white>
+        <black label="黒">黒いスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</black>
+        <grey label="灰色"> 灰色のスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</grey>
+        <red label="赤">赤いスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</red>
+        <green label="緑">緑のスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</green>
+        <blue label="青">青いスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</blue>
+        <orange label="オレンジ">オレンジのスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</orange>
+        <yellow label="黄色">黄色いスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</yellow>
+        <purple label="ムラサキ色">ムラサキ色のスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</purple>
+        <pink label="ピンク">ピンクのスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</pink>
+        <brown label="茶色">茶色のスコアを変える。これは、デフォルトでは、スコアボードにヒョウジされる。（ワールドせっていでヘンコウできる。）</brown>
+      </color>
+      <letter>
+        <a label="スコアA">'A'のスコアを変える。これはスコアボードにヒョウジされません。</a>
+        <b label="スコアB">'B'のスコアを変える。これはスコアボードにヒョウジされません。</b>
+        <c label="スコアC">'C'のスコアを変える。これはスコアボードにヒョウジされません。</c>
+        <d label="スコアD">'D'のスコアを変える。これはスコアボードにヒョウジされません。</d>
+        <e label="スコアE">'E'のスコアを変える。これはスコアボードにヒョウジされません。</e>
+        <f label="スコアF">'F'のスコアを変える。これはスコアボードにヒョウジされません。</f>
+        <g label="スコアG">'G'のスコアを変える。これはスコアボードにヒョウジされません。</g>
+        <h label="スコアH">'H'のスコアを変える。これはスコアボードにヒョウジされません。</h>
+        <i label="スコアI">'I'のスコアを変える。これはスコアボードにヒョウジされません。</i>
+        <j label="スコアJ">'J'のスコアを変える。これはスコアボードにヒョウジされません。</j>
+        <k label="スコアK">'K'のスコアを変える。これはスコアボードにヒョウジされません。</k>
+        <l label="スコアL">'L'のスコアを変える。これはスコアボードにヒョウジされません。</l>
+        <m label="スコアM">'M'のスコアを変える。これはスコアボードにヒョウジされません。</m>
+        <n label="スコアN">'N'のスコアを変える。これはスコアボードにヒョウジされません。</n>
+        <o label="スコアO">'O'のスコアを変える。これはスコアボードにヒョウジされません。</o>
+        <p label="スコアP">'P'のスコアを変える。これはスコアボードにヒョウジされません。</p>
+        <q label="スコアQ">'Q'のスコアを変える。これはスコアボードにヒョウジされません。</q>
+        <r label="スコアR">'R'のスコアを変える。これはスコアボードにヒョウジされません。</r>
+        <s label="スコアS">'S'のスコアを変える。これはスコアボードにヒョウジされません。</s>
+        <t label="スコアT">'T'のスコアを変える。これはスコアボードにヒョウジされません。</t>
+        <u label="スコアU">'U'のスコアを変える。これはスコアボードにヒョウジされません。</u>
+        <v label="スコアV">'V'のスコアを変える。これはスコアボードにヒョウジされません。</v>
+        <w label="スコアW">'W'のスコアを変える。これはスコアボードにヒョウジされません。</w>
+        <x label="スコアX">'X'のスコアを変える。これはスコアボードにヒョウジされません。</x>
+        <y label="スコアY">'Y'のスコアを変える。これはスコアボードにヒョウジされません。</y>
+        <z label="スコアZ">'Z'のスコアを変える。これはスコアボードにヒョウジされません。</z>
+      </letter>
+      <local>
+        <a label="スコアa">The 'a' score, which is private to this character.</a>
+        <b label="スコアb">The 'b' score, which is private to this character.</b>
+        <c label="スコアc">The 'c' score, which is private to this character.</c>
+        <d label="スコアd">The 'd' score, which is private to this character.</d>
+        <e label="スコアe">The 'e' score, which is private to this character.</e>
+        <f label="スコアf">The 'f' score, which is private to this character.</f>
+        <g label="スコアg">The 'g' score, which is private to this character.</g>
+        <h label="スコアh">The 'h' score, which is private to this character.</h>
+        <i label="スコアi">The 'i' score, which is private to this character.</i>
+        <j label="スコアj">The 'j' score, which is private to this character.</j>
+        <k label="スコアk">The 'k' score, which is private to this character.</k>
+        <l label="スコアl">The 'l' score, which is private to this character.</l>
+        <m label="スコアm">The 'm' score, which is private to this character.</m>
+        <n label="スコアn">The 'n' score, which is private to this character.</n>
+        <o label="スコアo">The 'o' score, which is private to this character.</o>
+        <p label="スコアp">The 'p' score, which is private to this character.</p>
+        <q label="スコアq">The 'q' score, which is private to this character.</q>
+        <r label="スコアr">The 'r' score, which is private to this character.</r>
+        <s label="スコアs">The 's' score, which is private to this character.</s>
+        <t label="スコアt">The 't' score, which is private to this character.</t>
+        <u label="スコアu">The 'u' score, which is private to this character.</u>
+        <v label="スコアv">The 'v' score, which is private to this character.</v>
+        <w label="スコアw">The 'w' score, which is private to this character.</w>
+        <x label="スコアx">The 'x' score, which is private to this character.</x>
+        <y label="スコアy">The 'y' score, which is private to this character.</y>
+        <z label="スコアz">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="自分">アクションをこのプログラムを走らせているロボット（自分）にさせる。</me>
+    <it label="それ">アクションをこのターゲットのオブジェクト（それ）にさせる</it>
+    <any label="なんでも">どんな音でも。</any>
+    <event>
+      <any label="イベント">イベント音のどれか。</any>
+      <silly>
+        <any label="おバカ音">おバカな音。</any>
+        <bang label="ばくはつ音">ぶつかる音。</bang>
+        <pow label="当たる音">カーン。</pow>
+      </silly>
+      <explode>
+        <any label="バクハツ">バクハツ音のどれか。</any>
+        <A label="バクハツA">バクハツする音。</A>
+        <B label="バクハツB">バクハツする音。</B>
+        <C label="バクハツC">バクハツする音。</C>
+        <D label="バクハツD">バクハツする音。</D>
+        <E label="バクハツE">バクハツする音。</E>
+      </explode>
+      <musical>
+        <any label="楽器">楽器音のどれか。</any>
+        <glock>
+          <any label="グロック音">グロック音のどれか。.</any>
+        </glock>
+        <glock01 label="C グロック音">グロック音。</glock01>
+        <glock02 label="C# グロック音">グロック音。</glock02>
+        <glock03 label="D グロック音">グロック音。</glock03>
+        <glock04 label="D# グロック音">グロック音。</glock04>
+        <glock05 label="E グロック音">グロック音。</glock05>
+        <glock06 label="F グロック音">グロック音。</glock06>
+        <glock07 label="F# グロック音">グロック音。</glock07>
+        <glock08 label="G グロック音">グロック音。</glock08>
+        <glock09 label="G# グロック音">グロック音。</glock09>
+        <glock10 label="A グロック音">グロック音。</glock10>
+        <glock11 label="A# グロック音">グロック音。</glock11>
+        <glock12 label="B グロック音">グロック音。</glock12>
+        <gong>
+          <any label="カネの音">カネの音のどれか。</any>
+        </gong>
+        <gong01 label="C カネの音">カネの音。</gong01>
+        <gong02 label="C# カネの音">カネの音。</gong02>
+        <gong03 label="D カネの音">カネの音。</gong03>
+        <gong04 label="D# カネの音">カネの音。</gong04>
+        <gong05 label="E カネの音">カネの音。</gong05>
+        <gong06 label="F カネの音">カネの音。</gong06>
+        <gong07 label="F# カネの音">カネの音。</gong07>
+        <gong08 label="G カネの音">カネの音。</gong08>
+        <gong09 label="G# カネの音">カネの音。</gong09>
+        <gong10 label="A カネの音">カネの音。</gong10>
+        <gong11 label="A# カネの音">カネの音。</gong11>
+        <gong12 label="B カネの音">カネの音。</gong12>
+        <saw>
+          <any label="ノコギリ音">ノコギリの歯がゆれる音のどれか。</any>
+        </saw>
+        <saw01 label="C ノコギリ音">ノコギリの歯がゆれる音。</saw01>
+        <saw02 label="C# ノコギリ音">ノコギリの歯がゆれる音。</saw02>
+        <saw03 label="D ノコギリ音">ノコギリの歯がゆれる音。</saw03>
+        <saw04 label="D# ノコギリ音">ノコギリの歯がゆれる音。</saw04>
+        <saw05 label="E ノコギリ音">ノコギリの歯がゆれる音。</saw05>
+        <saw06 label="F ノコギリ音">ノコギリの歯がゆれる音。</saw06>
+        <saw07 label="F# ノコギリ音">ノコギリの歯がゆれる音。</saw07>
+        <saw08 label="G ノコギリ音">ノコギリの歯がゆれる音。</saw08>
+        <saw09 label="G# ノコギリ音">ノコギリの歯がゆれる音。</saw09>
+        <saw10 label="A ノコギリ音">ノコギリの歯がゆれる音。</saw10>
+        <saw11 label="A# ノコギリ音">ノコギリの歯がゆれる音。</saw11>
+        <saw12 label="B ノコギリ音">ノコギリの歯がゆれる音。</saw12>
+        <sine>
+          <any label="サイン波音">サイン波の音のどれか。</any>
+        </sine>
+        <sine01 label="C サイン波音">サイン波の音。</sine01>
+        <sine02 label="C# サイン波音">サイン波の音。</sine02>
+        <sine03 label="D サイン波音">サイン波の音。</sine03>
+        <sine04 label="D# サイン波音">サイン波の音。</sine04>
+        <sine05 label="E サイン波音">サイン波の音。</sine05>
+        <sine06 label="F サイン波音">サイン波の音。</sine06>
+        <sine07 label="F# サイン波音">サイン波の音。</sine07>
+        <sine08 label="G サイン波音">サイン波の音。</sine08>
+        <sine09 label="G# サイン波音">サイン波の音。</sine09>
+        <sine10 label="A サイン波音">サイン波の音。</sine10>
+        <sine11 label="A# サイン波音">サイン波の音。</sine11>
+        <sine12 label="B サイン波音">サイン波の音。</sine12>
+        <square>
+          <any label="クケイ波音">クケイ波の音のどれか。</any>
+        </square>
+        <square01 label="C クケイ波音">クケイ波の音。</square01>
+        <square02 label="C# クケイ波音">クケイ波の音。</square02>
+        <square03 label="D クケイ波音">クケイ波の音。</square03>
+        <square04 label="D# クケイ波音">クケイ波の音。</square04>
+        <square05 label="E クケイ波音">クケイ波の音。</square05>
+        <square06 label="F クケイ波音">クケイ波の音。</square06>
+        <square07 label="F# クケイ波音">クケイ波の音。</square07>
+        <square08 label="G クケイ波音">クケイ波の音。</square08>
+        <square09 label="G# クケイ波音">クケイ波の音。</square09>
+        <square10 label="A クケイ波音">クケイ波の音。</square10>
+        <square11 label="A# クケイ波音">クケイ波の音。</square11>
+        <square12 label="B クケイ波音">クケイ波の音。</square12>
+        <drums>
+          <any label="ドラム">ドラムの音のどれか。</any>
+        </drums>
+        <bassdrum label="ベース">ベースドラム。</bassdrum>
+        <hhclosed label="ハイハット閉">シンバルが閉じる音。</hhclosed>
+        <hhopen label="ハイハット開">シンバルが開く音。</hhopen>
+        <shaker label="シェイカー">シェイカー。</shaker>
+        <snare label="スネア">スネア。</snare>
+        <tomlow label="トムひくい音">トムドラム。</tomlow>
+        <tommed label="トム中音">トムドラム。</tommed>
+        <tomhi label="トム高い音">トムドラム。</tomhi>
+      </musical>
+      <arcade>
+        <any label="ゲーム音">ゲームセンターの音。</any>
+        <roboton label="ロボット オン">ロボットを動かす音。</roboton>
+        <robotoff label="ロボット オフ">ロボットと止める音。</robotoff>
+        <coinsound label="コイン">コインの音。</coinsound>
+        <gethealth label="体力増">体力を取る音。</gethealth>
+        <losehealth label="体力減">体力がへる音。</losehealth>
+        <shoot label="うつ">たまをうつ音。</shoot>
+        <timer label="タイマー">タイマーの音。</timer>
+        <win label="勝ち">勝った時の音。</win>
+        <lose label="負け">負けたときの音。</lose>
+        <inkjet_fire label="インクをうつ">インクをうった時の音。</inkjet_fire>
+        <inkjet_impact label="インクがつく">インクがぶつかった時の音。</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="その他">その他の音のどれか。</any>
+        <countdown_beep label="カウントダウン">カウントダウンの音。</countdown_beep>
+        <countdown_alarm label="アラームカウントダウン">カウントダウンの音。</countdown_alarm>
+        <epic_stinger label="エピックスティンガー">エピックスティンガー。</epic_stinger>
+        <epic_stinger_a label="エピックスティンガーa">エピックスティンガー。</epic_stinger_a>
+        <epic_stinger_b label="エピックスティンガーb">エピックスティンガー。</epic_stinger_b>
+        <firepoof label="火">火が付くときの音。</firepoof>
+        <forcefieldup label="バリアつく">バリアがつくときの音。</forcefieldup>
+        <forcefielddown label="バリア消す">バリアをとるときの音。</forcefielddown>
+        <hide label="hide">かくれるときの音。</hide>
+        <lockontarget label="ロックオン">ロックオンした時の音。</lockontarget>
+        <losetarget label="ロックオフ">ロックオンが外れた時の音。</losetarget>
+        <positivecondition label="良い">何かいい事が起きた時の音。</positivecondition>
+        <negativecondition label="良くない">何か悪い事が起きた時の音。</negativecondition>
+        <points label="ポイント">ポイントが入った時の音。</points>
+        <pop label="ポコ">ポコっていう音。</pop>
+        <popout label="ポップアウト">飛び出す音。</popout>
+        <powerup label="パワーアップ">パワーアップを取った時の音。</powerup>
+        <servo label="モーター">モーターの音。</servo>
+        <watersplash label="水しぶき">水しぶきの音。</watersplash>
+        <waterdrop label="水が落ちる">水が落ちる音。</waterdrop>
+        <tagbase label="タグベース">タグベースの音。</tagbase>
+        <whistlehuman label="口笛">人の口笛の音。</whistlehuman>
+        <whistlereferee label="レフリー口笛">レフリーの口笛の音。</whistlereferee>
+      </misc>
+      <tower>
+        <any label="タワー">タワーを守る時に使う音。</any>
+        <air_raid_siren label="空からのコウゲキ">空からのコウゲキのサイレン音。</air_raid_siren>
+        <bomb_fall label="バクダンが落ちる">バクダンが落ちてくる音。</bomb_fall>
+        <stun_fire label="スタン">スタンをうつ音。</stun_fire>
+        <zapper_fire label="ザッパー">ザッパーをうつ音。</zapper_fire>
+        <missile_fire label="ミサイル">ミサイルをうつ音。</missile_fire>
+        <shrinker_fire label="シュリンカー">シュリンカーをうつ音。</shrinker_fire>
+        <clam_coin_spit label="コインをはく音">貝からコインが出てくる音。</clam_coin_spit>
+        <enemy_converted label="テキのヘンシン">テキがヘンシンする音。</enemy_converted>
+        <enemy_escape label="テキがにげる">テキがにげる音。</enemy_escape>
+        <place_tower label="タワーをおく">タワーが置かれる音。</place_tower>
+        <star_collect label="スターを拾う">スターを集める音。</star_collect>
+        <coin_collect label="コインを拾う">コインを集める音。</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="楽器音">この音のグループのどれか。</any>
+      <omni>
+        <any label="オムニ音">この音のグループのどれか。</any>
+      </omni>
+    </music>
+    <mu_action label="アクション">動きのある音楽</mu_action>
+    <mu_ambientlight label="軽い">軽いアンビエントな音楽</mu_ambientlight>
+    <mu_ambinetmodd label="ムード">ムード音楽</mu_ambinetmodd>
+    <mu_brightdowntempo label="スロー">明るいスローな音楽。</mu_brightdowntempo>
+    <mu_brightfunk label="ファンク">ファンク音楽</mu_brightfunk>
+    <mu_brightguitar label="ギター">明るいギターの音楽。</mu_brightguitar>
+    <mu_kodu label="kodu">Koduのテーマ音楽。</mu_kodu>
+    <music>
+      <mystery>
+        <any label="ミステリー">ミステリアスな音楽のどれか。</any>
+      </mystery>
+    </music>
+    <mysterya label="ミステリーA">ミステリアスな音楽。</mysterya>
+    <mysteryb label="ミステリーB">ミステリアスな音楽。</mysteryb>
+    <mysteryc label="ミステリーC">ミステリアスな音楽。</mysteryc>
+    <music>
+      <driving>
+        <any label="速い">速い、気持ちがはやる音楽のどれか。</any>
+      </driving>
+    </music>
+    <drivinga label="速いA">速い、気持ちがはやる音楽。</drivinga>
+    <drivingb label="速いB">速い、気持ちがはやる音楽。</drivingb>
+    <drivingc label="ファーストC">速い、気持ちがはやる音楽。</drivingc>
+    <music>
+      <drama>
+        <any label="ドラマ">ドラマティックな音のどれか。</any>
+      </drama>
+    </music>
+    <dramaa label="ドラマA">ドラマティックな音楽。</dramaa>
+    <dramab label="ドラマB">ドラマティックな音楽。</dramab>
+    <environ>
+      <any label="シゼン音">シゼンの音のどれか。</any>
+      <ambocean label="海">海の音。</ambocean>
+      <ambforest label="森">森の音</ambforest>
+      <ambcity label="トカイ">トカイの音。</ambcity>
+      <ambmeadow label="草むら">草むらの音。</ambmeadow>
+      <ambmars label="火星">火星の音。</ambmars>
+      <arena>
+        <any label="アリーナ">アリーナの音のどれか。</any>
+        <a label="アリーナ A">たくさんの人の音。</a>
+        <b label="アリーナ B">たくさんの人の音。</b>
+        <c label="アリーナ C">たくさんの人の音。</c>
+        <d label="アリーナ D">たくさんの人の音。</d>
+        <e label="アリーナ E">たくさんの人の音。</e>
+        <f label="アリーナ F">たくさんの人の音。</f>
+        <g label="アリーナ G">たくさんの人の音。</g>
+      </arena>
+    </environ>
+    <trackingnone label="レベル">ミサイルはまっすぐ同じ高さでとんで上下に動かない。</trackingnone>
+    <trackinghoming label="クルーズ">ミサイルは地面の形に合わせてとび、山や壁をこえる。</trackinghoming>
+    <constraint>
+      <leftright label="左/右">右と左にだけ動く。</leftright>
+      <fwdback label="前/後">前と後ろにだけ動く。</fwdback>
+      <updown label="上/下" />
+      <northsouth label="北/南">北と南にだけ動く。Move north and south only.</northsouth>
+      <eastwest label="東/西">東と西にのみ動く。.</eastwest>
+      <immobile label="氷る">何かがぶつかったときですら動かないようにする。</immobile>
+    </constraint>
+    <once label="１回">”なにする？”の後のプログラムは、”いつ？”でセットしたものと同じ時、1回だけ実行される。</once>
+    <watertype label="水のタイプ">水のタイプをセットする。</watertype>
+    <microbit.pattern label="パターン">BBC micro:bitの画面に見せるパターン。</microbit.pattern>
+    <on label="オン">今のステイトをオンにする。</on>
+    <off label="オフ">今のステイトをオフにする。</off>
+  </modifier>
+  <actuator>
+    <nothing label="無し" />
+    <movement label="イドウ">ワールドの中を旅する。いろんなオプションがあるのでためそう。 キャラクターによってえらべる動き方がちがう。</movement>
+    <turn label="向き">向いてる向きをかえる。</turn>
+    <eat label="食べる">近くにあるターゲットを食べる。</eat>
+    <say label="言う">バルーンかダイアログにテキストを出す。&lt;cr&gt;で行をかえることができる。</say>
+    <open label="開く">キャラクターによって、ちがう動きをする。ジッケンせよ！</open>
+    <close label="閉じる">キャラクターによって、ちがう動きをする。ジッケンせよ！</close>
+    <kick label="キックする">ターゲットが近ければ、キックする。強さをかえられる。</kick>
+    <make label="作る">オブジェクトを作る。ベーシックオブジェクトかクリエイタブルを作る。</make>
+    <launch label="ハッシャする">ターゲットが近ければ、キックする。強さをかえられる。</launch>
+    <push label="おす">ターゲットが近ければ、ターゲットをおす。強さはかえられる。</push>
+    <pull label="引く">ターゲットが近ければ、ターゲットをひっぱる。強さはかえられる。</pull>
+    <camouflage label="カモフラージュする">ターゲットをカモフラージュして見えなくする。</camouflage>
+    <uncamouflage label="カモフラージュやめる">カモフラージュをはずして見えるようにする。</uncamouflage>
+    <express label="気持ちを出す">気持ちをあらわしたり、まわりに絵をみせる。気持ちによってキャラクターの顔がかわったり、絵が顔の上に出たりする。</express>
+    <color label="色">自分の色やターゲットの色を変える</color>
+    <glow label="光る">ホウシャジョウにキラキラ光る。色をかえられる。</glow>
+    <sound label="音を出す">音や音楽を出す！たくさんの中からえらべる。</sound>
+    <stopsound label="音を止める">音を止める。</stopsound>
+    <jump label="ジャンプ">キャラクターによって、とべる高さが違う。</jump>
+    <watersurface label="水の表面にいく">サーフェイスをすると水中キャラクターが水の上に上がってくる。</watersurface>
+    <waterdive label="ダイブ">ダイブをすると水中キャラクターが水のそこにもぐる。</waterdive>
+    <airrise label="空で上がる">空をとべるキャラクターが空の方へ上がる。</airrise>
+    <airdrop label="空で下がる">空をとべるキャラクターが地面の方へ下がる。</airdrop>
+    <switchtask label="ページ変わる">ページを変える。今のページだけが効果がある。ページはキャラクターのふるまいをかえるのにベンリだ。</switchtask>
+    <inlinetask label="インライン">プログラムが走るとき、他のページのプログラムをいまのページに入れることができる。これは、同じプログラムをたくさんのページでも使いたい時にべんりだ。1回作れば、インラインして必要なページから使うことができる。</inlinetask>
+    <nextlevel label="次のワールドへ">他のワールドを呼び出す。たくさんのワールドを使うゲームに良い。</nextlevel>
+    <prevlevel label="前のワールドへ">前のワールドを呼び出す。たくさんのワールドを使うゲームに良い。</prevlevel>
+    <waterraise label="水を上げる">このオブジェクトの下の水の高さを上げる。</waterraise>
+    <waterlower label="水を下げる">このオブジェクトの下の水の高さを下げる。</waterlower>
+    <setwater label="水を置く">このオブジェクトの下の水タイプをかえる。</setwater>
+    <rescale label="サイズ変える">このオブジェクトの大きさを、ゆっくりかえる。</rescale>
+    <rescaleinstant label="サイズ変える（速）">このオブジェクトの大きさを、速くかえる。</rescaleinstant>
+    <holddistance label="つかんでるもののキョリ">つかんでるものの距離をゆっくりかえる。</holddistance>
+    <holddistanceinstant label="つかんでるもののキョリ（速）">つかんでるものの距離を速くかえる。</holddistanceinstant>
+    <movementspeedmodify label="進む速さ">キャラクターの前に進む速さをかえる。</movementspeedmodify>
+    <turningspeedmodify label="回転の速さ">キャラクターの回転する速さをかえる。</turningspeedmodify>
+    <worldlightingchange label="ライティング">ワールドの光をゆっくりかえる。</worldlightingchange>
+    <worldlightingchangeinstant label="ライティング（速）">ワールドの光を速くかえる。</worldlightingchangeinstant>
+    <worldskychange label="空のタイプ">空のタイプをゆっくりかえる。</worldskychange>
+    <worldskychangeinstant label="空のタイプ（速）">空のタイプを速くかえる。</worldskychangeinstant>
+    <shoot label="うつ" />
+    <shoot2 label="うつ">ブリップかミサイルをうつ。</shoot2>
+    <beam label="ビーム">火星の岩を調べるためにビームをうつ。</beam>
+    <inspect label="チョウサする">火星の岩に穴をあけて、サンプルを取る。</inspect>
+    <scan label="スキャンする">ローバーの周りの見知らぬ岩のタイプを発見する。</scan>
+    <picture label="写真とる">主観で写真を撮る。</picture>
+    <damage label="ダメージ">自分かターゲットの体力をへらす。</damage>
+    <heal label="ヒール">ヒールは、自分かターゲットの体力をふやす。 ヒールすると自分かターゲットをダメージを直す。デフォルトでは、ターゲットの体力を直す。自分を直したいときは、”自分”タイルをセットする。直す体力の数をえらべる。</heal>
+    <zap label="スタン">自分かターゲットを数秒だけキゼツさせることができる。</zap>
+    <pop label="ノックアウト">なにかが体力を直すまで、自分かターゲットを完全に使えなくする。</pop>
+    <boom label="バクハツ">自分かターゲットをバクハツで消す。</boom>
+    <vanish label="消す">自分かターゲットをしずかに消す。</vanish>
+    <grab label="つかむ">ターゲットが近ければを拾う。1つしか持つことができない。</grab>
+    <drop label="落とす">持っているものを落とす。</drop>
+    <give label="わたす">持っているものをターゲットにわたす。もしターゲットが持てない場合、落とす。</give>
+    <reset label="リセット">ゲーム、体力、スコアなどをリセットする。</reset>
+    <restart label="リスタート">ゲーム、体力、スコアなどをリセットする。</restart>
+    <gameover label="終わる">ゲームを終わらせる。</gameover>
+    <victory label="勝つ">ゲームを終わらせて、勝ちのメッセージを出す。 色を指定してもよい。</victory>
+    <score label="スコア足す">ポイントをスコアに足す。</score>
+    <unscore label="スコア引く">ポイントをスコアから引く。</unscore>
+    <scoreset label="スコアをセット">スコアにポイントをセットする。</scoreset>
+    <camera>
+      <followme label="追いかける">カメラはこのキャラクターを追いかける。</followme>
+      <ignoreme label="むしする">カメラはこのキャラクターを気にしないで動く。</ignoreme>
+      <firstperson label="自分視点">このキャラクターの目をカメラの場所にする。</firstperson>
+    </camera>
+    <microbit>
+      <say label="say">BBC micro:bit 画面でテキストをスクロールする。</say>
+      <block label="block">BBC micro:bitのライトをすべてコントロールする。</block>
+      <sequential label="meter">BBC micro:bitのライトを順番に着ける。</sequential>
+      <show label="show pattern">BBC micro:bit LED 画面に、パターンを見せる。</show>
+      <setpin1 label="set pin 0">BBC micro:bit のピン0のステイトをセットする。</setpin1>
+      <setpin2 label="set pin 1">BBC micro:bit のピン1のステイトをセットする。</setpin2>
+      <setpin3 label="set pin 2">BBC micro:bit のピン2のステイトをセットする。</setpin3>
+    </microbit>
+  </actuator>
+  <root />
+  <group>
+    <colors label="色" />
+    <pathcolors label="道すじの色" />
+    <game label="ゲーム" />
+    <more label="もっと" />
+    <players label="プレーヤー" />
+    <playermods label="プレーヤー" />
+    <actions label="アクション" />
+    <settings label="設定" />
+    <combat label="たたかう" />
+    <rover label="ローバー" />
+    <holding label="持つ" />
+    <sounds label="音" />
+    <event label="イベント">
+      <explode label="バクハツ" />
+      <silly label="バカな音" />
+      <musical label="楽器の音">
+        <glock label="グロック音" />
+        <saw label="ノコギリ音" />
+        <sine label="サイン波音" />
+        <gong label="カネの音" />
+        <square label="クケイ波音" />
+        <drums label="ドラム" />
+      </musical>
+      <arcade label="ゲーム音" />
+      <misc label="その他" />
+      <tower label="タワー" />
+    </event>
+    <environ label="カンキョウの音">
+      <forest label="森" />
+      <arena label="アリーナ" />
+    </environ>
+    <music label="音楽">
+      <omni label="オムニバス" />
+      <mystery label="ミステリー" />
+      <driving label="ドライビング" />
+      <drama label="ドラマ" />
+    </music>
+    <constraints label="セイゲン" />
+    <directions label="方向" />
+    <filters>
+      <directions label="方向" />
+      <touchbuttons label="ボタン" />
+      <touchGuiButtons label="ボタン" />
+      <gestures label="ジェスチャー" />
+    </filters>
+    <expressions label="ヒョウジョウを出す" />
+    <projectiles label="ハッシャ体" />
+    <camera label="見え方" />
+    <reset label="リセット" />
+    <options label="オプション" />
+    <compare label="くらべる" />
+    <points label="ポイント" />
+    <time label="時間" />
+    <speed label="スピード" />
+    <strength label="強さ" />
+    <angle label="斜め上" />
+    <tracking label="追いかける" />
+    <bots label="ロボットI" />
+    <bots2 label="ロボットII" />
+    <objects label="オブジェト" />
+    <tasks label="タスク" />
+    <terrains label="タイプ" />
+    <waters label="タイプ" />
+    <setwater label="水タイプ" />
+    <creatables label="クリエイタブル" />
+    <keyboard>
+      <letters label="文字" />
+      <numbers label="数字" />
+      <symbols label="記号" />
+      <misc label="その他" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Fragment>
+    <ComponentGroup Id="BokuOptionsGroup">
+      <ComponentRef Id="OptInForUpdates" />
+      <ComponentRef Id="OptInForInstrumentation" />
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="APPLICATIONFOLDER">
+      <Directory Id="OptionsDirectory" Name="Options" />
+    </DirectoryRef>
+  </Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="OptionsDirectory">
+
+      <Component Id="OptInForUpdates" Guid="*">
+        <File Id="file1F2B5B796EB045c4A8BD0EBDF4EE10C3" KeyPath="yes" Source="Options\1F2B5B79-6EB0-45c4-A8BD-0EBDF4EE10C3.opt" />
+        <Condition>OPTINFORUPDATESPROPERTY = 1</Condition>
+      </Component>
+
+      <Component Id="OptInForInstrumentation" Guid="*">
+        <File Id="fileC90D3C0ED0B44aa6B35D0A1D9931FB38" KeyPath="yes" Source="Options\C90D3C0E-D0B4-4aa6-B35D-0A1D9931FB38.opt" />
+        <Condition>OPTINFORINSTRUMENTATIONPROPERTY = 1</Condition>
+      </Component>
+
+    </DirectoryRef>
+  </Fragment>
+
+</Wix>

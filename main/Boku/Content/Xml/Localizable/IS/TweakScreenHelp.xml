@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>Stjórnar úr hvaða fjarlægð hluturinn getur ýtt öðrum hlut frá sér. Stærð hlutar hefur líka áhrif á þetta.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>Stjórnar með hvaða afli hlutur getur ýtt öðrum hlut frá sér. Styrkleikaflögur hafa líka áhrif á þetta.</desc>
+  </helpText>
+
+  <helpText id="LightRange">
+    <desc>Stilla hve langt þetta ljós varpar birtu (aðeins tiltækt fyrir ljós).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+Fínstilla hraða þessa bóta.
+Gildið 1.0 samsvarar sjálfgefna hraðanum.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+Fínstilla hröðun þessa bóta.
+Gildið 1.0 samsvarar sjálfgefnu hröðuninni.
+    </desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Fastsetja þennan bóta svo hann geti ekki hreyft sig í neina átt. Hann getur samt hringsnúist.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>Gerir þennan bóta ódrepandi.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>Þegar þetta er valið birtist lítil rönd ofan við þennan bóta, sem gefur til kynna hversu mikla heilsu hann á eftir.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>Bótinn byrjar með þennan fjölda heilsustiga.  Þessi tala lækkar síðan þegar bótinn verður fyrir skaða en hækkar ef hann er læknaður.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+Þegar bóti er merktur sem "smíðanlegur" verður hann sérstakur á tvennan hátt.
+Í fyrsta lagi, ef bótinn er klónaður þá hafa allir klónarnir sameiginlegan heila - breytingar á einum þeirra koma fram í þeim öllum.  Þegar unnið er í heiminum er sambandið milli smíðanlegs bóta og klóna hans sýn sem punktalína á milli þeirra.
+Í öðru lagi er nú hægt að forrita aðra bóta til að búa til þennan bóta ásamt allri forritun hans.  Þetta er mjög sniðugt fyrir t.d. skotleiki þar sem stöðugt er verið að búa til nýja óvini sem allir haga sér eins.
+Taktu eftir að þetta getur leitt til þess að nýting heimsins á tölvunni fari yfir hámarkið, en þá er ekki lengur hægt að búa til neitt nýtt.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+Fyrir smíðanlega bóta setur þessi tala hámark á fjöldann sem hægt er að búa til leik. Klónar sem þú dreifir á landið þegar leikurinn er búinn til telja ekki með, heldur aðeins þeir klónar sem aðrir bótar búa til í sjálfum leiknum.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+Stjórnar því hvernig myndavélin hagar sér gagnvart þessum bóta. Venjulega fylgir myndavélin hverjum þeim bóta sem er stjórnað af spilara.
+Ef stillt er á Alltaf mun myndavélin alltaf fylgja þessum bóta eftir.  Ef fleiri en einn bóti hafa þessa stillingu reynir myndavélin að hafa þá alla í mynd í einu.
+Ef stillt er á Aldrei mun myndavélin láta eins og bótinn sé ekki til jafnvel þó honum sé stýrt af spilara.
+    </desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>Stjórnar hve fjaðurmagnaðar hreyfingar bótans eru þegar hann rekst á land, veggi eða aðra bóta.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>Stjórnar hversu mikið bótinn rennur til þegar hann snertir land, veggi eða aðra bóta.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Skaðinn sem kúluskot frá þessum bóta veldur.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+Endurhleðslutími kúluskots stjórnar hve langur tími þarf að líða til að hægt sé að skjóta aftur.
+Þetta er mælt í sekúndum.
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Stjórnar hve langt kúluskot frá þessum bóta geta farið áður en þau hverfa.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Stjórnar hraðanum á kúluskotum frá þessum bóta.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+Stjórnar hve mörg kúluskot þessi bóti getur haft í loftinu samtímis.
+Þegar bótinn hefur skotið þessum fjölda í loftið, getur hann ekki skotið aftur fyrr en einhver kúluskot hafa annaðhvort hæft eitthvað eða náð hámarksvegalengd.
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Stjórnar því hvað flugskeyti frá þessum bóta lækkar heilsu markhlutar sem það hæfir um mörg heilsustig.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+Stjórnar því hvað bótinn þarf að bíða lengi til að geta skotið öðru flugskeyti.
+Þetta er mælt í sekúndum.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Stjórnar því langt flugskeyti geta flogið áður en þau hverfa.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Stjórnar því hve hratt flugskeyti frá þessum bóta fljúga.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+Stjórnar því hvað þessi bóti getur haft mörg flugskeyti í loftinu í einu.
+Þegar bótinn hefur skotið þessum fjölda í loftið, getur hann ekki skotið aftur fyrr en einhver flugskeyti hafa annaðhvort hæft eitthvað eða náð hámarksvegalengd.
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Stjórnar því hvort flugskeyti frá þessum bóta gefa frá sér reyk. Tölvan er fljótari að teikna flugskeyti sem hafa ekki reyk.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Stjórnar því hvort sjónhrif sem líkja eftir varnarskildi eru sýnd þegar þessi bóti rekst á eitthvað eða verður fyrir skaða.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Stjórnar því hvort þessi bóti er sýndur yfirleitt. Aðrir bótar geta samt séð hann og heyrt í honum.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Stjórnar því hvort aðrir bótar geti séð, heyrt og rekist á þennan bóta. Vofubótar geta samt séð og heyrt í öðrum bótum, en geta ekki rekist á þá.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>Felulitir minnka líkurnar á að aðrir hlutir sjái bótann.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Gera óvirk öll innbyggð hljóð frá þessum hlut. Forrituð hljóð spila eftir sem áður. Taktu eftir að aðrir bótar geta samt skynjað nærveru þessa bóta með því að hlusta.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Svífa fyrir ofan yfirborð vatns. Slökktu á þessu til að hlutur geti kafað í vatnið.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Stjórnar því hve langt í burtu aðrir hlutir geta heyrt í þessum. Breytir ekki hljóðinu sem spilarinn heyrir.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Stjórnar því hve langt í burtu þessi hlutur getur heyrt í öðrum. Breytir ekki hljóðinu sem spilarinn heyrir.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>Bóti er felulitaður ef hann er eins og vofa en getur samt rekist á umhverfið.</desc>
+  </helpText>
+
+  <helpText id="KickStrength">
+    <desc>Stjórnar því með hve miklu afli þessi bóti sparkar í hluti.  Sterkara spark veldur því að hluturinn þeytist lengra í burtu.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Stjórnar því hve langur tími þarf að líða hjá þessum bóta á milli tveggja sparka.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>Stækkar eða minnkar bótann hlutfallslega. Hlutfallið 1.0 er eðlileg stærð.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>Stjórnar hve lengi í sekúndum bótinn man það sem hann hefur séð eins og hann sjái það enn.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Hefur áhrif á hve björt glóð þessa bóta er. Taktu eftir að glóandi hlutir varpa sjálfgefið engri birtu á aðra hluti.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Láta þennan hlut varpa birtu á aðra þegar hann glóir og stilla hve sterk hrifin eru.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Stillir hversu mikið þessi bóti lýsir sjálfan sig upp þegar hann glóir.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>Þegar hlutur hefur verið forritaður til að ráfa, hringsóla eða færa sig frá einhverju, gerir þessi stilling sýnilegar allar hindranir sem eru fyrir honum.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>Ef þessi bóti notar sjón eða heyrn, sýnir þessi stilling hvaða aðra bóta hann getur séð eða heyrt.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Ekki útfært sem stendur.</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>Býr til ósýnilegan vegg við allar brúnir heimsins. Þetta kemur í veg fyrir að bótar detti út úr heiminum.
+    
+Lofbelgurinn, skýið, þotan, ljósið, diskurinn, vindbelgurinn, hnoðrinn og flugskeytið geta öll farið í gegnum glervegginn.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Sýnir feril yfir alla þá sem hafa breytt þessum heimi.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Leyfir þér að stjórna hvernig myndavélin hreyfist þegar leikurinn er spilaður.
+    
+Valkosturinn Fastur staður kemur í veg fyrir að myndavélin hreyfist í leiknum. T.d. gagnlegt fyrir leiki þar sem alltaf er horft niður á sjónarsviðið. Taktu eftir að sjónarhornið verður annað á breiðtjaldsskjám.
+
+Valkosturinn Föst fjarlægð heldur myndavélinn í vissri fjarlægð og stefnu frá þeim hlut sem hún er að elta hverju sinni. Þetta getur verið músarbendillinn eða bóti. T.d. gagnlegt í leikjum með mikla hliðarhreyfingu.
+
+Valkosturinn Frjáls er það sem er valið sjálfkrafa og leyfir myndavélinni að flakka frjálst nema að forritun bóta segi henni að horfa út úr augum sínum eða elta sig.  Ef fastur staður eða fjarlægð er valin, er &lt;X&gt; hnappurinn notaður til að staðsetja myndavélina.
+    </desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Stjórnar því hvar myndavélin er þegar leikurinn byrjar.  Þetta er gert með því að færa myndavélina á staðinn þar sem hún á að vera í upphafi leiks, opna síðan stillingar heimsins og merkja í reitinn.
+Ef þú vilt seinna breyta staðnum getur þú ýtt á &lt;x&gt; sem setur þig í snið þar sem þú getur stillt myndavélinni upp eins og þú vilt.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Stjórnar því hve sterklega myndavélin sveiflast til svo hún geti fylgt eftir hlut sem stjórnað af notanda. </desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Felur áttavitann sem er venjulega neðst í hægra horni skjásins.  Áttavitinn sést alltaf þegar unnið er í heiminum og er aðeins falinn þegar leikurinn er spilaður.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Felur nýtingarmælinn (hitamælinn) sem venjulega sést hægra megin á skjánum. Nýtingarmælirinn sést alltaf þegar unnið er í heiminum og er aðeins falinn þegar leikurinn er spilaður.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+Gerir mögulegt að slökkva á nýtingartakmörkunum sem nýtingarmælirinn hægra megin á skjánum sýnir.  Þegar slökkt er á þessum takmörkunum getur þú bætt eins miklu landi og eins mörgum hlutum í heiminn og þú vilt.  
+AÐVÖRUN:  Að slökkva á þessum takmörkunum getur valdið því að Kodu keyri mjög hægt.  Þú gætir líka yfirfyllt minni kerfsins þannig að Kodu frjósi.
+  </desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>Stjórnar hæðinni á öldum í vatni sem þú setur í heiminn.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc> Stjórnar skyggninu í vatni.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Velja bakgrunnsliti fyrir heiminn.
+Veldu saman himinn og lýsingu til að skapa andrúmsloft fyrir leikinn.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Velja lýsingu fyrir heiminn.  Ef þú velur dimma lýsingu er aðeins dimmt þegar leikurinn er keyrður.  Þegar unnið er í leiknum er meiri birta notuð svo þú sjáir heiminn greinilega.
+Veldu saman himinn og lýsingu til að skapa andrúmsloft fyrir leikinn.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Stjórnar hve hratt hægasti vindurinn blæs um trén í leiknum.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Stjórnar hve hratt hvassasti vindurinn blæs um trén í leiknum.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Stjórnar því með hvers konar inngangi leikurinn hefst þegar hann er ræstur:
+Enginn þýðir að leikurinn hefst formálalaust án inngangs.
+Heiti heimsins sýnir heiti heimsins í 3 sekúndur áður en leikurinn sjálfur byrjar.
+Lýsing heimsins sýnir heiti og lýsingu heimsins og segir notandanum að ýta á &lt;a&gt; til að byrja að spila.  Þetta notar lýsinguna sem var gefin þegar leikurinn var vistaður.
+Niðurtalning telur niður 3-2-1 áður en leikurinn sjálfur byrjar.  Þetta hentar vel fyrir kappleiki.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>Þegar hlutir fylgja slóðum, sýnir þessi stilling að hvaða vegpunkti hluturinn er að hreyfast. Leið hlutarins er sýnd með grönnum línum í sama lit og hluturinn.</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Sýnir formin sem bótar og aðrir hlutir nota þegar þeir rekast saman eða í jörðina.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>Ef einhver bóti notar sjón eða heyrn, sýnir þessi stilling með strikum hvaða aðra bóta hann getur séð og heyrt.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>Hraðastuðull fyrir breytingar á landi. Smærra er hægvirkara, stærra er hraðvirkara.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Stjórnar styrk hljóða frá notandaviðmóti svo sem frá valmyndum og hnöppum.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Stjórnar styrk hljóðhrifa í leiknum.   Þar á meðal eru sprengingar, árekstrar og hljóðin sem bótar gefa frá sér.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Stjórnar hljóðstyrk bakgrunnstónlistar sem kann að vera notuð í leiknum.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Stjórnar hve áberandi skorið er fyrir þennan lit.
+Af: skorið er alls ekki sýnt.
+Hógvært: skorið er sýnt í horninu, en stigagjöf er ekki sýnd með neinum sérstökum hrifum.
+Áberandi: stigagjöf er sýnd með því að skorið er látið hreyfast frá stað í leiknum og upp í stigatöfluna.
+Textað: Þú getur skrifað texta við skorið.
+    </desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>Stjórnar því hvort tiltekið skor er varðveitt við aðgerðirnar Næsta borð / Fyrra borð.
+Á: skorið verður varðveitt og mun hafa sama gildi þegar nýja borðinu er hlaðið inn
+Af: skorið verður núllstillt þegar nýja borðinu er hlaðið inn
+    </desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>Sýnir/Felur sýndarleikjastýri á skjánum.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+      Stjórnar því hvernig skjáhnappar eru sýndir.
+      Af: hnappurinn sést alls ekki.
+      Án texta: Hnappurinn sést en án texta.
+      Með texta: Hnappurinn sést með texta sem auðkennir hann.
+    </desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+      Skilgreinir hvaða borði er hlaðið inn með flögunni "Næsta borð".  Virkjar einnig flöguna "Fyrra borð" á því borði svo hún flytji spilarann aftur á þetta borð.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+      Hækkar vatnið undir þessum hlut.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+      Lækkar vatnið undir þessum hlut.
+    </desc>
+  </helpText>
+
+
+  <helpText id="SetWater">
+    <desc>
+      Stillir gerð vatns undir þessum hlut.
+    </desc>
+  </helpText>
+
+  <!-- Help for USer Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>Leyfir þér að slökkva á ábendingum tækja.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>Leyfir þér að slökkva á vísbendingum.  Vísbendingar eru sýndar þegar kerfið nemur aðstæður sem gætu leitt til vandræða.
+Þegar vísbending er sýnd, er líka gefið sem valkostur að gera vísbendinguna óvirka.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>Þegar tækjastika leikjastýrisins er virk, er bakgrunnurinn venjulega hafður í móðu og það er ekki hægt að færa myndavélina. Ef slökkt er á þessum valkosti verður myndavélin enn virk, en þú verður samt að velja tæki til að geta átt samskipti við heiminn.
+Að slökkva á þessu þýðir líka að vinstri pinninn verður þá notaður til að stjórna myndavélinni svo þú verður að nota DPad hnappinn eða gikkina til að velja tæki.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>Með þessu verða virkar allar vísbendingar sem þú hefur áður gert óvirkar svo þær munu birtast aftur.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Stjórnar hve mikill hjálpartexti er sýndur efst til vinstri á skjánum.</desc>
+  </helpText>
+  
+  <helpText id ="InvertYAxis">
+    <desc>Snýr við virkni pinnans svo bótinn færist niður í stað upp niður ef ýtt er á pinnann.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Snýr við virkni pinnans svo bótinn snýr til hægri í stað vinstri ef ýtt er á pinnann.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Snýr við virkni pinnans svo myndavélin beinist upp í stað niður á við ef ýtt er á pinnann.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>Snýr við virkni pinnans svo myndavélin beinist til hægri í stað vinstri ef ýtt er á pinnann.</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>Orðið "yfirskönnun" á við það hlutfall teiknaðrar myndar sem skjárinn klippir af myndinni.  Hlutfallið fer bæði eftir skjánum og hvernig hann er tengdur.  Með sleðanum getur þú stjórnað hve langt inn að miðju skjásins hjálpartextarnir eru færðir.  Ef skjárinn þinn sker af þeim ætti að hafa þessa tölu stærri.  Á lampasjónvörpum virkar 20% venjulega best.  Á tölvuskjám ætti 0 til 5% að duga.  Gerðu tilraunir og notaðu það sem gefur þér besta útkomu.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>Ef þetta er valið, geta aðrir notendur bætt heimum í niðurhalsbiðröðina þína.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>Ef þetta er valið, eru heimar sem þú halar niður sjálfkrafa settir í deilingu hjá þér, svo aðrir spilarar geti halað þeim niður frá þér á deilifundum síðar meir.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>Á deilifundum á sjálfkrafa að hala niður heimum sem hafa merkimiðann "eftirlæti".</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>Vegalengdin sem sían Nálægt miðar við, þ.e. hvað telst vera nálægt, en sían er notuð með sjón og heyrn. Mælieiningin er metrar. Til samanburðar þá er einn reitur lands hálfur meter á breidd.</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>Vegalengdin sem sían Fjarlægt miðar við, þ.e. hvað telst vera fjarlægt, en sían er notuð með sjón og heyrn. Mælieiningin er metrar. Til samanburðar þá er einn reitur lands hálfur meter á breidd.</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>Ef þetta er valið mun Kodu við ræsingu athuga hvort ný útgáfa hefur verið gefin út.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>Ef þetta er valið, mun Kodu senda nafnlausar upplýsingar til Microsoft um það hvernig þú notar Kodu. Þessar upplýsingar hjálpa til við að betrumbæta Kodu.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>Ef þetta er valið, mun Kodu spila kynningarmyndband næst þegar það er ræst.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>Venjulega gleymir Kodu innskráningarupplýsingum þínum fyrir samfélagsvefinn þegar þú hætti í Kodu. Ef kveikt er á þessari stillingu munum við reyna að láta innskráningu virka fyrir fleiri en eina Kodu keyrslu.</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>Þessi stilling er til stuðnings þeim sem vilja búa til eigin kennsluforrit. Þegar kveikt er á stillingunni munu kennsluforrit við keyrslu birta á skjánum upplýsingar sem nota má til að greina villur.</desc>
+  </helpText>
+
+</XmlHelpTextData>

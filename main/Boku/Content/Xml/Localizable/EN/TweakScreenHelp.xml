@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>Controls the base range in which objects will be pushed away. Also affected by object scale.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>Controls how much force to push objects. It is modified by strength modifiers.</desc>
+  </helpText>
+
+  <helpText id="Rename">
+    <desc>Rename this character.</desc>
+  </helpText>
+
+  <helpText id="LightRange">
+    <desc>Set how far this light shines (only available for lights).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+Fine tune the speed of this bot.
+A value of 1.0 will match the default speed.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+Fine tune the acceleration of this bot.
+A value of 1.0 will match the default acceleration.
+    </desc>
+  </helpText>
+  <helpText id="Helmet">
+    <desc>Add a helmet to this character.</desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Lock this bot's position so it can't move in any direction.  It can still rotate.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>Makes this bot indestructible.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>When set, a small bar will appear over the top of the head of this bot indicating how much health the bot has remaining.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>This lets you control the starting number of hit points this bot has.  The number of hit points will then go down as the bot is damaged and up when it is healed.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+When a bot is marked as "Creatable" it then becomes special in two ways.
+First, if you clone this bot then all the clones will share the same brain - changes to one will change them all.  You can see the link between creatables and their clones as dotted lines (when editing.)
+Second, you can now program other bots to Create this bot complete with its programming.  This is great for arcade games where you want to continuously create enemies.
+Note that this can make it easy to overrun the world's budget at which point Create will stop working.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+For creatables, this count limits the number that can be created during gameplay. Clones that you spread about while editing don't count, this just limits the number that can be spawned by other bots with Create while playing.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+Controls how the camera acts with regard to this bot.  Normally the camera will follow any bot that is controlled by a player.
+If you set this to Always then the camera will always follow this bot.  If you have more than one bot with this set then the camera will try and keep them all on screen.
+If you set this to Never then the camera will ignore this bot even if it is user controlled.
+    </desc>
+  </helpText>
+  <helpText id="HoldDistance">
+    <desc>This controls how far away a "held" object is carried.</desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>This controls how bouncy a bot is when colliding the the terrain, walls, or other bots.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>This controls how much a bot slides when colliding the the terrain, walls, or other bots.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Controls how much damage a blip fired from this bot causes.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+The blip reload time controls long after a bot fires a blip before it can fire again.
+This is measured in seconds.
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Controls how far blips can travel before disappearing.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Controls how fast blips fired from this bot travel.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+Controls how many blips this bot can have in the air at once.
+Once the bot has fired this number, it can't fire again until some blips have either hit something or reached their maximum range.
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Controls how many Hit Points a missile fired from this bot damages a target when hit.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+Controls how long a bot has to wait between firing missiles.
+This is measured in seconds.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Controls how far missiles can travel before disappearing.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Controls how fast missiles fired from this bot travel.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+Controls how many missiles this bot can have in the air at once.
+Once the bot has fired this number, it can't fire again until some missiles either hit something or reach their maximum range.
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Controls whether missiles fired by this bot emit smoke. Missiles with no smoke are faster to render.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Controls whether the shield visual effect is displayed when this bot hits something or takes damage.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Controls whether this bot is displayed at all. Can still be seen and heard by other bots.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Controls whether this bot can be seen, heard and bumped by other bots. Ghost bots can still see and hear others, but can't bump them.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Disable all built-in sounds from this character. Programmed sounds will still play. Note that other characters will still be able to detect this character's presence by listening.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Glide over the surface of any water. Turn this off to allow characters to fly down into the water.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Controls how far away other characters can hear this character. Doesn't change the actual sound the player hears.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Controls how far away this character can hear other characters. Doesn't change the actual sound the player hears.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>True if bot is ghosted but still collidable with the environment.</desc>
+  </helpText>
+  
+  <helpText id="KickStrength">
+    <desc>Controls how strongly this bot kicks objects.  A stronger kick will cause the object to fly farther.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Controls how quickly this bot can kick a second object after kicking the first one.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>Scale the bot up (larger) or down (smaller). A scale of 1.0 is normal size.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>When you see something, you remember it for a few seconds as though you can still see it.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Affects how bright the glow effect is for this character. Note that glowing characters do not normally cast light on other characters.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Make this object actually cast light on others when it's glowing, and set how strong the effect is.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Set how strongly the glow from this bot lights itself up.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>When characters are programmed to wander, circle, or move away from something, this shows any barriers that are obstructing its path.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>If this bot is using vision or hearing, shows which bots this bot can see and hear.</desc>
+  </helpText>
+  <helpText id="Debug:DrawCurrentPage">
+    <desc>Shows the current programming page over the bot.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Currently not implemented.</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>Creates an invisible barrier around the edges of your world.  This will prevent bots from falling off the edge of the world.
+    
+The Balloon, Cloud, Jet, Light, Saucer, Blimp, Wisp and Missile can go through the glass wall.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Displays a history of the people who have changed this world.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Allows you to control how the camera moves when your game is running.
+    
+The Fixed Position option keeps the camera from moving at all while your game is running.  Useful for arcade style games that require an overhead view. Note that the view will be different on widescreen displays.
+
+The Fixed Offset option keeps the camera a fixed distance and direction from whatever object the camera is following.  This can be the cursor or a bot.  Useful for sidescrollers.
+
+The Free option is the default and lets the camera roam free unless a bot's programming tells the camera to be in first person or to follow it.  If you're using fixed or offset camera, pressing the &lt;X&gt; button will let you set the position of the camera.
+    </desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Controls where the camera is positioned when your game starts.  To use, move the camera to where you want it to be when the game starts, open World Settings and check the box.
+If you later want to change the position you can press &lt;x&gt; which will be put into a mode which will let you freely align the camera to whatever position you need.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Controls how strongly the camera swings to be behind a user-controlled character. </desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Lets you hide the Compass which normally appears in the lower right hand corner of the screen.  The compass is always shown during editing and is only hidden when you run your game.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Lets you hide the Resource Meter (thermometer) which normally appears on the right side of the screen.  The Resource Meter is always shown during editing and is only hidden when you run your game.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+Lets you turn off the resource limiting as shown by the Resource Meter (thermometer) which normally appears on the right side of the screen.  With this option off you can add as much terrain and as many object to your world as you want.  
+WARNING:  Without this limit you may cause Kodu to run extremely slowly.  You may also exceed your system's memory and cause Kodu to crash.
+  </desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>Controls the height of the waves when you have water in your world.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>Controls how strongly the water distorts the view.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Choose a set of background colors for your world.
+Combine the Sky and Lighting settings to help create a mood for you game.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Choose a set of lights for your world.  If you choose a dark lighting setup then it will only be dark when you run your game.  During editing a brighter lighting setup will be used so you can still clearly see your world.
+Combine the Sky and Lighting settings to help create a mood for you game.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Controls the softest the breeze blows through the trees in game.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Controls the hardest the breeze blows through the trees in game.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Control how your game starts when you play it:
+"Nothing" just starts the game as normal, with no effect.
+"World Title" displays the name of the world for 3 seconds and then starts playing.
+"World Description" displays the name of the world and prompts the user to press &lt;a&gt; to start playing.  This uses the description you provide when you save the game.
+"Countdown" displays a 3-2-1 countdown before the game begins.  This is great for racing games.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>When characters are following paths, this shows which waypoint each character is moving towards. Target goals show as wireframes and are colored the same as the character who is moving towards them</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Shows the shapes that are used by bots and other objects to bump into each other and the ground.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>If any bot is using vision or hearing, shows which bots they can see and hear.</desc>
+  </helpText>
+  <helpText id="Debug:ShowCurrentPage">
+    <desc>Shows the current programming page for programmed bots.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>Speed factor for terrain edits. Smaller is slower, bigger is faster.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Controls the volume of the UI sound effects such as menus and buttons.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Controls the volume of the effects in your game.  This includes explosions, collisions and the sounds that the bots make.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Controls the volume of the background music you choose for your game.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Controls how prominent the display will be for scoring events of this color.
+Off: the score won’t be displayed at all.
+Quiet: the score will be displayed in the corner, but there will be no scoring effects.
+Loud: score events will animate from their location in the game to the scoreboard.
+    </desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>Controls whether a given score will be persisted during a NextLevel/PreviousLevel action.
+On: the score will be persisted and will maintain the same value when the new level loads
+Off: the score will be reset to zero when the new level loads
+    </desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>Shows/Hides on screen virtual controller.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+      Controls how the GUI buttons will display.
+      Off: the button won’t be displayed at all.
+      No Label: The button will be displayed and will have no text on it.
+      Labeled: The button will be displayed along with some text to better identify the button.
+    </desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+      Sets the level that will be loaded by the "Next Level" tile.  Also enables the "Previous Level" tile from that level to return the player to the current level.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+      Raises the water under this object.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+      Lowers the water under this object.
+    </desc>
+  </helpText>
+  
+  
+  <helpText id="SetWater">
+    <desc>
+      Sets the water type under this object.
+    </desc>
+  </helpText>
+
+  <!-- Help for User Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>Allows you to turn off tool tips.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>Allows you to turn off hints.  Hints are displayed whenever the system detects a situation that might be causing a problem.
+When a hint is displayed, you are given the option of choosing to disable the hint.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>Normally when the Gamepad Tool Menu is active, the background is blurred out and you can't move the camera around.  By turning this option off, the camera will still be "live".  However, you still must select a tool before interacting with the world.
+Turning this off also means that the left stick is now used to control the camera so you must use the DPad or the Triggers to select the tool you want.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>This clears the 'disabled' flag on any hints you've previously chosen to disable so that they will appear again.</desc>
+  </helpText>
+
+  <helpText id ="ShowFramerate">
+    <desc>When enabled the current framerate (FPS) is shown in the lower left-hand corner of the screen.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Controls the amount of help text displayed in the upper left-hand corner of the screen.</desc>
+  </helpText>
+
+  <helpText id ="Language">
+    <desc>Controls which language is used.  Kodu's translations are done by our community.  If you'd like to help translate Kodu into your language please email KoduSupport@microsoft.com for more information.</desc>
+  </helpText>
+
+  <helpText id ="InvertYAxis">
+    <desc>Make pushing the stick move the bot down.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Make pushing the stick left turn the bot toward the right.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Make pushing the stick forward pitch the camera up.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>Make pushing the stick left rotate the camera to the right.</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>The term "overscan" refers to the amount of the rendered image that is cut off at the edges of the display.  This amount depends on both the display device and the connection to the device.  The slider allows you to control how far into the center of the screen the help displays are positioned.  If they're being cut off on your display, make this value larger.  On tube TVs usually 20% works best.  On computer monitors you may be able to work with 0 or 5%.  Experiment and use what looks best for you.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>If set, other users will be able to add worlds to your download queue.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>If set, worlds you download from other players will automatically be marked as shared, making them available for download in future sharing sessions.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>In sharing sessions, automatically download worlds marked with the "Favorite" tag.</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>The range used by the Close By filter, used by the sight and hearing sensors. Units are in meters. For reference: A terrain tile is a half meter across.</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>The range used by the Far Away filter, used by the sight and hearing sensors. Units are in meters. For reference: A terrain tile is a half meter across.</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>If set, during startup Kodu will check to see if a newer version has been released.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>If set, Kodu will send anonymous information to Microsoft about how you use Kodu. This information helps us improve Kodu.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>If set, the next time Kodu is started, the introduction video will be played.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>Normally, your Kodu Community web site login information will be forgotten when you exit Kodu.  If this setting is turned on then we will try to allow your login to persist over multiple Kodu sessions.</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>This is an aid for people creating their own tutorials.  When turned on and running a tutorial level this will display debug information overlayed on the screen.</desc>
+  </helpText>
+
+</XmlHelpTextData>
+

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<GlowPosition>
+		<Offset>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0.2</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.5</Z>
+  </HealthBarOffset>
+
+  <DefaultEditHeight>5</DefaultEditHeight>
+  <MinHeight>0.1</MinHeight>
+  <EyeOffset>0.1</EyeOffset>
+  <WaistOffset>100000000</WaistOffset>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.01</CollisionRadius>
+
+	<Cost>0</Cost>
+  <CollisionSound>unknown</CollisionSound>
+
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>2.0</Mass>
+  <StayAboveWater>false</StayAboveWater>
+  
+  <GrabRange>5.0</GrabRange>
+  <KickRange>2.0</KickRange>
+
+  <GlowEmitter>
+    <StartRadius>0.15</StartRadius>
+    <EndRadius>1.2</EndRadius>
+  </GlowEmitter>
+
+  <Domain>Air</Domain>
+  
+  <!--<IdleSoundName>ch_Wisp_Idle</IdleSoundName>--><!--Don't clutter the soundscape with lights that aren't moving.-->
+  <MoveSoundName>ch_Wisp_Move</MoveSoundName>
+
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Soft</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="Saucer">
+    <MaxLinearAcceleration>30.0</MaxLinearAcceleration>
+    <MaxSpeed>12.0</MaxSpeed>
+    <RotationRate>0.0</RotationRate>
+    <HasFacingDirection>false</HasFacingDirection>
+    <IgnoreGlassWalls>true</IgnoreGlassWalls>
+  </Chassis>
+
+  <HoldingPosition>
+    <Z>-2.0</Z>
+  </HoldingPosition>
+  
+</XmlGameActor>

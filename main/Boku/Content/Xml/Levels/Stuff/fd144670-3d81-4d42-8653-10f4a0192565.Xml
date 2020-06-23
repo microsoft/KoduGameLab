@@ -1,0 +1,1679 @@
+<?xml version="1.0"?>
+<XmlLevelData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <waypoints />
+  <actor>
+    <position>
+      <X>-36.15184</X>
+      <Y>29.340313</Y>
+      <Z>5.774014</Z>
+    </position>
+    <orientation>4.01894855</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Blue</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Castle 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>2922</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2923</uniqueNum>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.bokubot</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskb</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2928</uniqueNum>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.orange</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>2931</uniqueNum>
+              <actuatorUpid>actuator.glow</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.colorrandom</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>2934</uniqueNum>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.victory</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.03seconds</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>2938</uniqueNum>
+              <actuatorUpid>actuator.sound</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.mu_kodu</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53560</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Castle</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-9.85349</X>
+      <Y>5.10844231</Y>
+      <Z>2.05</Z>
+    </position>
+    <orientation>2.36285567</orientation>
+    <heightOffset>0</heightOffset>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Kodu 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>2941</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2942</uniqueNum>
+              <sensorUpid>sensor.eyes</sensorUpid>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.expresshearts</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53570</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>BokuBot</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-27.7240562</X>
+      <Y>31.1775818</Y>
+      <Z>10.7038231</Z>
+    </position>
+    <orientation>3.048759</orientation>
+    <heightOffset>0</heightOffset>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>d19174c4-d25c-43df-9af1-2514d4837100</creatableId>
+    <creatableName>Wisp 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>2947</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2948</uniqueNum>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.colorrandom</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>2951</uniqueNum>
+              <sensorUpid>sensor.eyes</sensorUpid>
+              <selectorUpid>selector.towardclosest</selectorUpid>
+              <actuatorUpid>actuator.movement</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>2956</uniqueNum>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.vanish</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.me</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53586</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>true</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Wisp</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-43.3313751</X>
+      <Y>15.9622211</Y>
+      <Z>15.3852673</Z>
+    </position>
+    <orientation>3.4235208</orientation>
+    <heightOffset>2.214849</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>398e8518-7182-43b1-a4b1-96adad637f9c</creatableId>
+    <creatableName>Cloud 2</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>2961</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2962</uniqueNum>
+              <sensorUpid>sensor.eyes</sensorUpid>
+              <actuatorUpid>actuator.make</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+                <upid>filter.orange</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.creatable.d19174c4-d25c-43df-9af1-2514d4837100</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53596</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>true</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Cloud</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-39.6866264</X>
+      <Y>20.8012333</Y>
+      <Z>14.5210075</Z>
+    </position>
+    <orientation>1.46334982</orientation>
+    <heightOffset>5.062615</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>398e8518-7182-43b1-a4b1-96adad637f9c</creatableId>
+    <creatableName>Cloud 5</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>2969</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2970</uniqueNum>
+              <sensorUpid>sensor.eyes</sensorUpid>
+              <actuatorUpid>actuator.make</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+                <upid>filter.orange</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.creatable.d19174c4-d25c-43df-9af1-2514d4837100</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>2977</uniqueNum>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53607</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Cloud</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-18.6316471</X>
+      <Y>3.92161846</Y>
+      <Z>6.185247</Z>
+    </position>
+    <orientation>4.46908665</orientation>
+    <heightOffset>1.36085081</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>398e8518-7182-43b1-a4b1-96adad637f9c</creatableId>
+    <creatableName>Cloud 6</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>2978</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2979</uniqueNum>
+              <sensorUpid>sensor.eyes</sensorUpid>
+              <actuatorUpid>actuator.make</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+                <upid>filter.orange</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.creatable.d19174c4-d25c-43df-9af1-2514d4837100</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>2986</uniqueNum>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53618</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Cloud</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-18.7624073</X>
+      <Y>22.8695221</Y>
+      <Z>7.6800375</Z>
+    </position>
+    <orientation>4.468957</orientation>
+    <heightOffset>2.214849</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>398e8518-7182-43b1-a4b1-96adad637f9c</creatableId>
+    <creatableName>Cloud 7</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>2987</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2988</uniqueNum>
+              <sensorUpid>sensor.eyes</sensorUpid>
+              <actuatorUpid>actuator.make</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+                <upid>filter.orange</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.creatable.d19174c4-d25c-43df-9af1-2514d4837100</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>2995</uniqueNum>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53629</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Cloud</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-29.0743523</X>
+      <Y>33.3589821</Y>
+      <Z>13.7148666</Z>
+    </position>
+    <orientation>4.468957</orientation>
+    <heightOffset>4.95751238</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>398e8518-7182-43b1-a4b1-96adad637f9c</creatableId>
+    <creatableName>Cloud 8</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>2996</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>2997</uniqueNum>
+              <sensorUpid>sensor.eyes</sensorUpid>
+              <actuatorUpid>actuator.make</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+                <upid>filter.orange</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.creatable.d19174c4-d25c-43df-9af1-2514d4837100</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>3004</uniqueNum>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53640</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Cloud</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-29.725317</X>
+      <Y>39.89625</Y>
+      <Z>10.4978437</Z>
+    </position>
+    <orientation>4.468957</orientation>
+    <heightOffset>2.214849</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>398e8518-7182-43b1-a4b1-96adad637f9c</creatableId>
+    <creatableName>Cloud 9</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>3005</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>3006</uniqueNum>
+              <sensorUpid>sensor.eyes</sensorUpid>
+              <actuatorUpid>actuator.make</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids>
+                <upid>filter.castle</upid>
+                <upid>filter.orange</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.creatable.d19174c4-d25c-43df-9af1-2514d4837100</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>3013</uniqueNum>
+              <MaterialType>-1</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53651</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Cloud</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-19.7999115</X>
+      <Y>-1.3845824</Y>
+      <Z>13.894352</Z>
+    </position>
+    <orientation>2.7083087</orientation>
+    <heightOffset>7.145668</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Light 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>3014</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53654</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>23.4375</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Light</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-42.0192757</X>
+      <Y>19.1618576</Y>
+      <Z>20.3702812</Z>
+    </position>
+    <orientation>2.93099713</orientation>
+    <heightOffset>7.145668</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Light 2</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>3015</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53657</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>23.4375</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Light</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-25.8317356</X>
+      <Y>32.2715759</Y>
+      <Z>17.8220253</Z>
+    </position>
+    <orientation>2.93097758</orientation>
+    <heightOffset>7.145668</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Light 3</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>3016</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53660</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>23.4375</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Light</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>-8.27576</X>
+      <Y>13.0838614</Y>
+      <Z>14.0286312</Z>
+    </position>
+    <orientation>2.93097758</orientation>
+    <heightOffset>7.145668</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Light 4</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>3017</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>53663</uniqueNum>
+      <immobile>false</immobile>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>23.4375</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>1</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Light</typename>
+  </actor>
+</XmlLevelData>

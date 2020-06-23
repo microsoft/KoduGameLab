@@ -1,0 +1,44 @@
+<animation>
+  <!-- Cloud - Pofo -->
+
+  <tickspersecond>30.0</tickspersecond>
+
+  <animationsubset>
+    <name>idle</name>
+    <startframe>1</startframe>
+    <endframe>100</endframe>
+  </animationsubset>
+
+  <animationsubset>
+    <!-- For the FloatInAirChassis, backwards is used to blend in wind animation. -->
+    <name>backwards</name>
+    <startframe>200</startframe>
+    <endframe>300</endframe>
+  </animationsubset>
+
+ <animationsubset>
+    <name>entertainment</name>
+    <startframe>400</startframe>
+    <endframe>598</endframe>
+  </animationsubset>
+
+ <animationsubset>
+   <!-- This animation has a bad pop at the end.  Disable until fixed.-->
+    <name>error_entertainment2</name>
+    <startframe>1000</startframe>
+    <endframe>1100</endframe>
+  </animationsubset>
+
+ <animationsubset>
+    <name>cursorreact</name>
+    <startframe>700</startframe>
+    <endframe>799</endframe>
+  </animationsubset>
+
+ <animationsubset>
+    <name>rocket</name>
+    <startframe>900</startframe>
+    <endframe>921</endframe>
+  </animationsubset>
+
+</animation>

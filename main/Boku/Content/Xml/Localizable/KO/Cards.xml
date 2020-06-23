@@ -1,0 +1,1025 @@
+﻿<Tiles>
+  <sensor>
+    <gamepad label="게임패드">Allow a player to control a character.  Specify button, trigger, or stick, and optionally player.</gamepad>
+    <keyboard label="키보드">Allow a player to control a character.  Specify which key.</keyboard>
+    <mouse label="마우스">Respond to mouse input.</mouse>
+    <touch label="터치">Respond to touch input.</touch>
+    <microbit label="BBC micro:bit">Respond to BBC micro:bit input.</microbit>
+    <eyes label="보다">React when you see an object depending on type or color. Hills and walls can block sight if you use the line-of-sight(LOS) filter.</eyes>
+    <ears label="듣다">React when you hear an object depending on type or sound. Hearing works through walls.</ears>
+    <bumpers label="부딪치다">React when you bump into another object depending on type, color, etc.</bumpers>
+    <timer label="타이머">React to a number of seconds passing. Add numbers to make longer times.</timer>
+    <got label="얻다">React to picking something up depending on type, color, etc.</got>
+    <scored label="점수얻다">React to changes in a score.</scored>
+    <health label="체력">React to changes in health.</health>
+    <missilehit label="shot hit">React to your shot hitting another object. Good for keeping score, but you can do whatever you want - like turn bots pink by shooting them.</missilehit>
+    <held label="집어들다">React to being picked up by another object.</held>
+    <terrain label="지형위에">React to different types of ground.</terrain>
+    <water label="물위에">React to different types of water.</water>
+    <beamed label="비추다">React to when a Mars rock type has been beamed.</beamed>
+    <inspected  label="조사하다">React to when a Mars rock type has been inspected.</inspected>
+    <scanned label="스캔하다">React to when an unknown rock has been scanned in order to reveal it.</scanned>
+    <endofpath  label="길의 마지막">React to when you have reached the end of a path</endofpath>
+    <always label="항상">Do something all the time. Optional.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="코두">Kodu is a character you can add to your game and whose behavior can be programmed.</boku>
+    <bokubot label="코두">Kodu is a character you can add to your game and whose behavior can be programmed.</bokubot>
+    <anything label="모든" />
+    <dead label="지쳐버린">React to knocked out characters.</dead>
+    <me label="나">Only check the bot running this program.</me>
+    <said label="말하다">Listen for another character to say something.  Type in what you want to listen for.</said>
+    <countnone label="없는">React when you can't see anything that matches the description. For example, see - blue - none will react when nothing blue is in sight.</countnone>
+    <starfish label="불가사리">React to a starfish.</starfish>
+    <clam label="조개">React to a clam.</clam>
+    <seagrass label="해초">React to seagrass.</seagrass>
+    <seagrasssingle label="해초">React to seagrass.</seagrasssingle>
+    <lilypad label="수련잎들">React to lily pads.</lilypad>
+    <lilypadsingle label="수련잎">React to a lily pad.</lilypadsingle>
+    <flyfish label="플라이피쉬">Flyfish is a character you can add to your game and whose behavior can be programmed.</flyfish>
+    <jet label="제트">Jet is a character you can add to your game and whose behavior can be programmed.</jet>
+    <light label="라이트">The Light is a character you can add to your game and whose behavior can be programmed. It also lights things up. But you can only have four.</light>
+    <fan label="선풍기">React to a fan.</fan>
+    <octopus label="문어">React to an octopus.</octopus>
+    <fastbot label="사이클">Cycle is a character you can add to your game and whose behavior can be programmed.</fastbot>
+    <saucer label="비행접시">Sorry, I can't tell you any more.  Information about the saucer is classified.</saucer>
+    <windblimp label="블림프">Blimp is a flying character you can add to your game and whose behavior can be programmed.</windblimp>
+    <balloonbot label="풍선">Balloon is a floating character you can add to your game and whose behavior can be programmed.</balloonbot>
+    <subbot label="잠수함">Sub is a submarine character you can add to your game and whose behavior can be programmed.</subbot>
+    <terracannon label="캐논">Cannon is a character you can add to your game and whose behavior can be programmed.</terracannon>
+    <puck label="퍽">Puck is a character you can add to your game and whose behavior can be programmed.</puck>
+    <wisp label="도깨비불">Wisp is a character you can add to your game and whose behavior can be programmed.</wisp>
+    <anybot label="애니봇">Look for any kind of bot.</anybot>
+    <turtle label="거북이">React to a turtle.</turtle>
+    <rover label="로버">React to a rover.</rover>
+    <pushpad label="푸쉬패드">React to a pushpad.</pushpad>
+    <sputnik label="스푸티니크">React to a sputnik.</sputnik>
+    <stick label="스틱">React to a stick.</stick>
+    <stickboy label="스틱보이">React to a stick.</stickboy>
+    <drum label="드럼">React to a drum.</drum>
+    <mine label="지뢰">React to a mine.</mine>
+    <cloud label="구름">React to a cloud.</cloud>
+    <swimfish label="물고기">React to a fish.</swimfish>
+    <floatbot label="배">React to a ship.</floatbot>
+    <factory label="공장">React to a factory.</factory>
+    <hut label="오두막">React to a hut.</hut>
+    <castle label="성">React to a castle.</castle>
+    <fruit label="사과">React to an apple.</fruit>
+    <inkjet label="잉크 구름">React to an ink cloud.</inkjet>
+    <iceberg label="빙하">React to an ice berg.</iceberg>
+    <rock label="암석">React to a rock.</rock>
+    <rockLowValue label="화성암">React to an igneous rock.</rockLowValue>
+    <rockHighValue label="퇴적암">React to a sedimentary rock.</rockHighValue>
+    <rockLowValueUnknown label="밝혀지지않은 화성암">An igneous rock that appears unknown until scanned, beamed, or inspected.</rockLowValueUnknown>
+    <rockHighValueUnknown label="밝혀지지않은 퇴적암">A sedimentary rock that appears unknown until scanned, beamed, or inspected.</rockHighValueUnknown>
+    <rockUnknown label="밝혀지지않은 암석">React to an unknown rock.</rockUnknown>
+    <tree label="나무">React to a tree.</tree>
+    <pipe label="파이프">React to a pipe.</pipe>
+    <pipeStraight label="곧은 파이프">React to a straight pipe.</pipeStraight>
+    <pipeCross label="십자 파이프">React to a cross pipe.</pipeCross>
+    <pipeCorner label="굽은 파이프">React to a corner pipe.</pipeCorner>
+    <underwater label="물 속">React to underwater objects.</underwater>
+    <building label="빌딩">React to a building.</building>
+    <flower label="꽃" />
+    <gate label="문" />
+    <cursor label="커서">React to the cursor.</cursor>
+    <star label="별">React to a star.</star>
+    <coin label="코인">React to a coin.</coin>
+    <soccerball label="공">React to a ball.</soccerball>
+    <heart label="하트">React to a heart.</heart>
+    <bullet label="탄약">React to ammo.</bullet>
+    <Black label="검정">React to something black.</Black>
+    <Grey label="회색">React to something grey.</Grey>
+    <white label="흰색">React to something white.</white>
+    <red label="빨간색">React to something red.</red>
+    <orange label="오렌지색">React to something orange.</orange>
+    <yellow label="노란색">React to something yellow.</yellow>
+    <green label="초록색">React to something green.</green>
+    <blue label="파란색">React to something blue.</blue>
+    <purple label="보라색">React to something purple.</purple>
+    <pink label="분홍색">React to something pink.</pink>
+    <brown label="갈색)">React to something brown.</brown>
+    <PathBlack label="검정색 길">React to a black path.</PathBlack>
+    <PathGrey label="회색 길">React to a grey path.</PathGrey>
+    <PathWhite label="흰색 길">React to a white path.</PathWhite>
+    <PathRed label="빨간색 길">React to a red path.</PathRed>
+    <PathOrange label="오렌지색 길">React to an orange path.</PathOrange>
+    <PathYellow label="노란색 길">React to a yellow path.</PathYellow>
+    <PathGreen label="초록색 길">React to a green path.</PathGreen>
+    <PathBlue label="파란색 길">React to a blue path.</PathBlue>
+    <PathPurple label="보라색 길">React to a purple path.</PathPurple>
+    <PathPink label="분홍색 길">React to a pink path.</PathPink>
+    <PathBrown label="갈색 길">React to a brown path.</PathBrown>
+    <pathplain label="평지" />
+    <pathroad label="도로" />
+    <pathwall label="벽" />
+    <pathflora label="식물" />
+    <yucca1 label="나무" />
+    <yucca2 label="나무" />
+    <yucca3 label="나무" />
+    <bigyucca1 label="나무" />
+    <expresshappy label="행복한">React to a happy bot.</expresshappy>
+    <expresssad label="슬픈">React to a sad bot.</expresssad>
+    <expressangry label="화난">React to a mad bot</expressangry>
+    <expresscrazy label="정신나간">React to a crazy bot.</expresscrazy>
+    <expresshearts label="하트를 좋아하는">React to a bot showing hearts.</expresshearts>
+    <expressflowers label="꽃을 좋아하는">React to a bot showing flowers.</expressflowers>
+    <expressstars label="별을 좋아하는">React to a bot showing stars.</expressstars>
+    <expressswear label="욕을 하는">React to a swearing bot.</expressswear>
+    <expressnormal label="보통">React to bot that's just acting normal.</expressnormal>
+    <expressnone label="멍한">React to a bot that's just acting normal.</expressnone>
+    <moving label="움직이는">React to a bot only if it's moving.</moving>
+    <camouflage label="위장술">React to a bot only if it's camouflaged.</camouflage>
+    <closeby label="가까이">Close By causes the character to only pay attention to objects that are close to itself.  Far objects are ignored.</closeby>
+    <faraway label="멀리">React only to things that are far away.</faraway>
+
+    <infront label="앞에">React only to things in front of bot.</infront>
+    <behind label="뒤에">React only to things behind the bot.</behind>
+    <toleft label="왼쪽에">React only to things to the left of the bot.</toleft>
+    <toright label="오른쪽에">React only to things to the right of the bot.</toright>
+    <over label="위에">React only to things higher than the bot.</over>
+    <under label="아래에">React only to things lower than the bot.</under>
+
+    <lineofsight label="line of sight">Terrain and walls block sensor.</lineofsight>
+    
+    <countfew label="적은">React when you only see a few of something.</countfew>
+    <countmany label="많은">React only when you see many of something.</countmany>
+    <clustermany label="모여있는">React only when you see many of something that are clustered close together.</clustermany>
+    <countany label="모든" />
+    <leftstick label="L 버튼">React to the left stick on a controller. Good for moving.</leftstick>
+    <rightstick label="R 버튼">React to the right stick on a controller. Good for shooting.</rightstick>
+    <abutton label="A 버튼">React to the A button on a controller.</abutton>
+    <bbutton label="B 버튼">React to the B button on a controller.</bbutton>
+    <xbutton label="X 버튼">React to the X button on a controller.</xbutton>
+    <ybutton label="Y 버튼">React to the Y button on a controller.</ybutton>
+    <lefttrigger label="왼쪽 트리거">React to the left trigger on a controller.</lefttrigger>
+    <righttrigger label="오른쪽 트리거">React to the right trigger on a controller.</righttrigger>
+    <lefttrigger_analog label="왼쪽 트리거">React to the left trigger on a controller.</lefttrigger_analog>
+    <righttrigger_analog label="오른쪽 트리거">React to the right trigger on a controller.</righttrigger_analog>
+    <microbit label="BBC 마이크로빗">
+      <tilt label="기울기">React to tilt input from the BBC micro:bit.</tilt>
+      <leftbutton label="A 버튼">React to pressing the BBC micro:bit A button.</leftbutton>
+      <rightbutton label="B 버튼">React to pressing the BBC micro:bit B button.</rightbutton>
+      <pin1 label="핀 0">Read state of BBC micro:bit pin 0.</pin1>
+      <pin2 label="핀 1">Read state of BBC micro:bit pin 1.</pin2>
+      <pin3 label="핀 2">Read state of BBC micro:bit pin 2.</pin3>
+    </microbit>
+    <mouse>
+      <button>
+        <left label="왼쪽 클릭">React to the mouse left button.</left>
+        <right label="오른쪽 클릭">React to the mouse right button.</right>
+      </button>
+      <hover label="마우스 오버">React to the mouse hovering over an object or terrain.</hover>
+      <move label="마우스 이동">React to the mouse moving.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="터치">React to an active touch (touch screen).</touching>
+        <tap label="탭">React to a tap (touch screen).</tap>
+        <rotate label="회전">React to the rotate gesture (touch screen).</rotate>
+        <swipe label="스와이프">React to the swipe gesture (touch screen).</swipe>
+        <slide label="슬라이드">React to the slide gesture (touch screen).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="흰색">React to the WHITE button on the HUD. (Visit world settings to change)</White>
+        <Black label="검정색">React to the BLACK button on the HUD. (Visit world settings to change)</Black>
+        <Grey label="회색">React to the GREY button on the HUD. (Visit world settings to change)</Grey>
+        <Red label="빨간색">React to the RED button on the HUD. (Visit world settings to change)</Red>
+        <Green label="초록색">React to the GREEN button on the HUD. (Visit world settings to change)</Green>
+        <Blue label="파란색">React to the BLUE button on the HUD. (Visit world settings to change)</Blue>
+        <Orange label="오렌지색">React to the ORANGE button on the HUD. (Visit world settings to change)</Orange>
+        <Yellow label="노란색">React to the YELLOW button on the HUD. (Visit world settings to change)</Yellow>
+        <Purple label="보라색">React to the PURPLE button on the HUD. (Visit world settings to change)</Purple>
+        <Pink label="분홍색">React to the PINK button on the HUD. (Visit world settings to change)</Pink>
+        <Brown label="갈색">React to the BROWN button on the HUD. (Visit world settings to change)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="X 버튼">React to touching on-screen button X.</controllerButton_X>
+      <controllerButton_Y label="Y 버튼">React to touching on-screen button Y.</controllerButton_Y>
+      <controllerButton_A label="A 버튼">React to touching on-screen button A.</controllerButton_A>
+      <controllerButton_B label="B 버튼">React to touching on-screen button B.</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="화살표키">React to the arrow keys on the keyboard.</ArrowKeys>
+    <WASDKeys label="WASD">React to the WASD keys on the keyboard.</WASDKeys>
+    <Akey label="A">React to the A key on the keyboard.</Akey>
+    <Bkey label="B">React to the B key on the keyboard.</Bkey>
+    <Ckey label="C">React to the C key on the keyboard.</Ckey>
+    <Dkey label="D">React to the D key on the keyboard.</Dkey>
+    <Ekey label="E">React to the E key on the keyboard.</Ekey>
+    <Fkey label="F">React to the F key on the keyboard.</Fkey>
+    <Gkey label="G">React to the G key on the keyboard.</Gkey>
+    <Hkey label="H">React to the H key on the keyboard.</Hkey>
+    <Ikey label="I">React to the I key on the keyboard.</Ikey>
+    <Jkey label="J">React to the J key on the keyboard.</Jkey>
+    <Kkey label="K">React to the K key on the keyboard.</Kkey>
+    <Lkey label="L">React to the L key on the keyboard.</Lkey>
+    <Mkey label="M">React to the M key on the keyboard.</Mkey>
+    <Nkey label="N">React to the N key on the keyboard.</Nkey>
+    <Okey label="O">React to the O key on the keyboard.</Okey>
+    <Pkey label="P">React to the P key on the keyboard.</Pkey>
+    <Qkey label="Q">React to the Q key on the keyboard.</Qkey>
+    <Rkey label="R">React to the R key on the keyboard.</Rkey>
+    <Skey label="S">React to the S key on the keyboard.</Skey>
+    <Tkey label="T">React to the T key on the keyboard.</Tkey>
+    <Ukey label="U">React to the U key on the keyboard.</Ukey>
+    <Vkey label="V">React to the V key on the keyboard.</Vkey>
+    <Wkey label="W">React to the W key on the keyboard.</Wkey>
+    <Xkey label="X">React to the X key on the keyboard.</Xkey>
+    <Ykey label="Y">React to the Y key on the keyboard.</Ykey>
+    <Zkey label="Z">React to the Z key on the keyboard.</Zkey>
+    <D0key label="0">React to the 0 key on the keyboard.</D0key>
+    <D1key label="1">React to the 1 key on the keyboard.</D1key>
+    <D2key label="2">React to the 2 key on the keyboard.</D2key>
+    <D3key label="3">React to the 3 key on the keyboard.</D3key>
+    <D4key label="4">React to the 4 key on the keyboard.</D4key>
+    <D5key label="5">React to the 5 key on the keyboard.</D5key>
+    <D6key label="6">React to the 6 key on the keyboard.</D6key>
+    <D7key label="7">React to the 7 key on the keyboard.</D7key>
+    <D8key label="8">React to the 8 key on the keyboard.</D8key>
+    <D9key label="9">React to the 9 key on the keyboard.</D9key>
+    <Spacekey label="스페이스바">React to the Space key on the keyboard.</Spacekey>
+    <PageUpkey label="PageUp">React to the PageUp key on the keyboard.</PageUpkey>
+    <PageDownkey label="PageDown">React to the PageDown key on the keyboard.</PageDownkey>
+    <Endkey label="End">React to the End key on the keyboard.</Endkey>
+    <Leftkey label="왼쪽 방향키">React to the Left key on the keyboard.</Leftkey>
+    <Upkey label="위쪽 방향키">React to the Up key on the keyboard.</Upkey>
+    <Rightkey label="오른쪽 방향키">React to the Right key on the keyboard.</Rightkey>
+    <Downkey label="아래 방향키">React to the Down key on the keyboard.</Downkey>
+    <Insertkey label="Insert">React to the Insert key on the keyboard.</Insertkey>
+    <Deletekey label="Delete">React to the Delete key on the keyboard.</Deletekey>
+    <LeftWindowskey label="왼쪽 방향키 + 윈도우키">React to the LeftWindows key on the keyboard.</LeftWindowskey>
+    <RightWindowskey label="오른 쪽방향키 + 윈도우키">React to the RightWindows key on the keyboard.</RightWindowskey>
+    <Multiplykey label="*">React to the Multiply key on the keyboard.</Multiplykey>
+    <Addkey label="+">React to the Add key on the keyboard.</Addkey>
+    <Subtractkey label="-">React to the Subtract key on the keyboard.</Subtractkey>
+    <Decimalkey label=".">React to the Decimal key on the keyboard.</Decimalkey>
+    <Dividekey label="/">React to the Divide key on the keyboard.</Dividekey>
+    <LeftShiftkey label="왼쪽 방향키 + Shift">React to the LeftShift key on the keyboard.</LeftShiftkey>
+    <RightShiftkey label="오른쪽 방향키 + Shift">React to the RightShift key on the keyboard.</RightShiftkey>
+    <LeftControlkey label="왼쪽 방향키 + Control">React to the LeftControl key on the keyboard.</LeftControlkey>
+    <RightControlkey label="오른쪽 방향키 + Control">React to the RightControl key on the keyboard.</RightControlkey>
+    <LeftAltkey label="왼쪽 방향키 + Alt">React to the LeftAlt key on the keyboard.</LeftAltkey>
+    <RightAltkey label="오른쪽 방향키 + Alt">React to the RightAlt key on the keyboard.</RightAltkey>
+    <OemSemicolonkey label=";">React to the Semicolon key on the keyboard.</OemSemicolonkey>
+    <OemPluskey label="+">React to the Plus key on the keyboard.</OemPluskey>
+    <OemCommakey label=",">React to the Comma key on the keyboard.</OemCommakey>
+    <OemMinuskey label="-">React to the Minus key on the keyboard.</OemMinuskey>
+    <OemPeriodkey label=".">React to the Period key on the keyboard.</OemPeriodkey>
+    <OemQuestionkey label="?">React to the Question key on the keyboard.</OemQuestionkey>
+    <OemTildekey label="~">React to the Tilde key on the keyboard.</OemTildekey>
+    <OemOpenBracketskey label="[">React to the OpenBrackets key on the keyboard.</OemOpenBracketskey>
+    <OemPipekey label="|">React to the Pipe key on the keyboard.</OemPipekey>
+    <OemCloseBracketskey label="]">React to the CloseBrackets key on the keyboard.</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">React to the Quotes key on the keyboard.</OemQuoteskey>
+    <OemBackslashkey label="\">React to the Backslash key on the keyboard.</OemBackslashkey>
+    <F1key label="F1">React to the F1 key on the keyboard.</F1key>
+    <F2key label="F2">React to the F2 key on the keyboard.</F2key>
+    <F3key label="F3">React to the F3 key on the keyboard.</F3key>
+    <F4key label="F4">React to the F4 key on the keyboard.</F4key>
+    <F5key label="F5">React to the F5 key on the keyboard.</F5key>
+    <F6key label="F6">React to the F6 key on the keyboard.</F6key>
+    <F7key label="F7">React to the F7 key on the keyboard.</F7key>
+    <F8key label="F8">React to the F8 key on the keyboard.</F8key>
+    <F9key label="F9">React to the F9 key on the keyboard.</F9key>
+    <F10key label="F10">React to the F10 key on the keyboard.</F10key>
+    <F11key label="F11">React to the F11 key on the keyboard.</F11key>
+    <F12key label="F12">React to the F12 key on the keyboard.</F12key>
+    <Shiftkey label="Shift">React to any Shift key on the keyboard.</Shiftkey>
+    <Controlkey label="Control">React to any Control key on the keyboard.</Controlkey>
+    <Altkey label="Alt">React to any Alt key on the keyboard.</Altkey>
+    <Windowskey label="윈도우키">React to any Windows key on the keyboard.</Windowskey>
+    <player1 label="플레이어 1">React only to Player 1's controller. Default is to react to any.</player1>
+    <player2 label="플레이어 2">React only to Player 2's controller. Default is to react to any.</player2>
+    <player3 label="플레이어 3">React only to Player 3's controller. Default is to react to any.</player3>
+    <player4 label="플레이어 4">React only to Player 4's controller. Default is to react to any.</player4>
+    <terrain label="타입">React to a specific type of terrain.</terrain>
+    <water label="타입">React to a specific type of water.</water>
+    <quartersecond label="초">1/4 of a second.  Combine with others to add up to larger times.</quartersecond>
+    <_01second label="초">1 second.  Combine with others to add up to larger times.</_01second>
+    <_02seconds label="초">2 seconds.  Combine with others to add up to larger times.</_02seconds>
+    <_03seconds label="초">3 seconds.  Combine with others to add up to larger times.</_03seconds>
+    <_04seconds label="초">4 seconds.  Combine with others to add up to larger times.</_04seconds>
+    <_05seconds label="초">5 seconds.  Combine with others to add up to larger times.</_05seconds>
+    <_10seconds label="초">10 seconds.  Combine with others to add up to larger times.</_10seconds>
+    <_20seconds label="초">20 seconds.  Combine with others to add up to larger times.</_20seconds>
+    <_30seconds label="초">30 seconds.  Combine with others to add up to larger times.</_30seconds>
+    <_60seconds label="초">60 seconds.  Combine with others to add up to larger times.</_60seconds>
+    <_000point label="포인트">0 points.</_000point>
+    <_001point label="포인트">1 point.  Combine with others to add up to larger amounts.</_001point>
+    <_002points label="포인트">2 points.  Combine with others to add up to larger amounts.</_002points>
+    <_003points label="포인트">3 points.  Combine with others to add up to larger amounts.</_003points>
+    <_004points label="포인트">4 points.  Combine with others to add up to larger amounts.</_004points>
+    <_005points label="포인트">5 points.  Combine with others to add up to larger amounts.</_005points>
+    <_010points label="포인트">10 points.  Combine with others to add up to larger amounts.</_010points>
+    <_020points label="포인트">20 points.  Combine with others to add up to larger amounts.</_020points>
+    <_050points label="포인트">50 points.  Combine with others to add up to larger amounts.</_050points>
+    <_100points label="포인트">100 points.  Combine with others to add up to larger amounts.</_100points>
+    <random label="랜덤">Make a random number using number tiles. For example, Random - 5 creates a random number between 0 and 5.</random>
+    <scorebucket>
+      <color>
+        <white label="흰색">Tests white scores, which are shown on the scoreboard by default. (Visit world settings to change.)</white>
+        <black label="검정색">Tests black scores, which are shown on the scoreboard by default. (Visit world settings to change.)</black>
+        <grey label="회색">Tests grey scores, which are shown on the scoreboard by default. (Visit world settings to change.)</grey>
+        <red label="빨간색">Tests red scores, which are shown on the scoreboard by default. (Visit world settings to change.)</red>
+        <green label="초록색">Tests green scores, which are shown on the scoreboard by default. (Visit world settings to change.)</green>
+        <blue label="파란색">Tests blue scores, which are shown on the scoreboard by default. (Visit world settings to change.)</blue>
+        <orange label="오렌지색">Tests orange scores, which are shown on the scoreboard by default. (Visit world settings to change.)</orange>
+        <yellow label="노란색">Tests yellow scores, which are shown on the scoreboard by default. (Visit world settings to change.)</yellow>
+        <purple label="자주색">Tests purple scores, which are shown on the scoreboard by default. (Visit world settings to change.)</purple>
+        <pink label="핑크색">Tests pink scores, which are shown on the scoreboard by default. (Visit world settings to change.)</pink>
+        <brown label="갈색">Tests brown scores, which are shown on the scoreboard by default. (Visit world settings to change.)</brown>
+      </color>
+      <letter>
+        <a label="스코어 A">The 'A' score, which is never shown on the scoreboard.</a>
+        <b label="스코어 B">The 'B' score, which is never shown on the scoreboard.</b>
+        <c label="스코어 C">The 'C' score, which is never shown on the scoreboard.</c>
+        <d label="스코어 D">The 'D' score, which is never shown on the scoreboard.</d>
+        <e label="스코어 E">The 'E' score, which is never shown on the scoreboard.</e>
+        <f label="스코어 F">The 'F' score, which is never shown on the scoreboard.</f>
+        <g label="스코어 G">The 'G' score, which is never shown on the scoreboard.</g>
+        <h label="스코어 H">The 'H' score, which is never shown on the scoreboard.</h>
+        <i label="스코어 I">The 'I' score, which is never shown on the scoreboard.</i>
+        <j label="스코어 J">The 'J' score, which is never shown on the scoreboard.</j>
+        <k label="스코어 K">The 'K' score, which is never shown on the scoreboard.</k>
+        <l label="스코어 L">The 'L' score, which is never shown on the scoreboard.</l>
+        <m label="스코어 M">The 'M' score, which is never shown on the scoreboard.</m>
+        <n label="스코어 N">The 'N' score, which is never shown on the scoreboard.</n>
+        <o label="스코어 O">The 'O' score, which is never shown on the scoreboard.</o>
+        <p label="스코어 P">The 'P' score, which is never shown on the scoreboard.</p>
+        <q label="스코어 Q">The 'Q' score, which is never shown on the scoreboard.</q>
+        <r label="스코어 R">The 'R' score, which is never shown on the scoreboard.</r>
+        <s label="스코어 S">The 'S' score, which is never shown on the scoreboard.</s>
+        <t label="스코어 T">The 'T' score, which is never shown on the scoreboard.</t>
+        <u label="스코어 U">The 'U' score, which is never shown on the scoreboard.</u>
+        <v label="스코어 V">The 'V' score, which is never shown on the scoreboard.</v>
+        <w label="스코어 W">The 'W' score, which is never shown on the scoreboard.</w>
+        <x label="스코어 X">The 'X' score, which is never shown on the scoreboard.</x>
+        <y label="스코어 Y">The 'Y' score, which is never shown on the scoreboard.</y>
+        <z label="스코어 Z">The 'Z' score, which is never shown on the scoreboard.</z>
+      </letter>
+      <local>
+        <a label="스코어 a">The 'a' 스코어, which is private to this character.</a>
+        <b label="스코어 b">The 'b' 스코어, which is private to this character.</b>
+        <c label="스코어 c">The 'c' 스코어, which is private to this character.</c>
+        <d label="스코어 d">The 'd' 스코어, which is private to this character.</d>
+        <e label="스코어 e">The 'e' 스코어, which is private to this character.</e>
+        <f label="스코어 f">The 'f' 스코어, which is private to this character.</f>
+        <g label="스코어 g">The 'g' 스코어, which is private to this character.</g>
+        <h label="스코어 h">The 'h' 스코어, which is private to this character.</h>
+        <i label="스코어 i">The 'i' 스코어, which is private to this character.</i>
+        <j label="스코어 j">The 'j' 스코어, which is private to this character.</j>
+        <k label="스코어 k">The 'k' 스코어, which is private to this character.</k>
+        <l label="스코어 l">The 'l' 스코어, which is private to this character.</l>
+        <m label="스코어 m">The 'm' 스코어, which is private to this character.</m>
+        <n label="스코어 n">The 'n' 스코어, which is private to this character.</n>
+        <o label="스코어 o">The 'o' 스코어, which is private to this character.</o>
+        <p label="스코어 p">The 'p' 스코어, which is private to this character.</p>
+        <q label="스코어 q">The 'q' 스코어, which is private to this character.</q>
+        <r label="스코어 r">The 'r' 스코어, which is private to this character.</r>
+        <s label="스코어 s">The 's' 스코어, which is private to this character.</s>
+        <t label="스코어 t">The 't' 스코어, which is private to this character.</t>
+        <u label="스코어 u">The 'u' 스코어, which is private to this character.</u>
+        <v label="스코어 v">The 'v' 스코어, which is private to this character.</v>
+        <w label="스코어 w">The 'w' 스코어, which is private to this character.</w>
+        <x label="스코어 x">The 'x' 스코어, which is private to this character.</x>
+        <y label="스코어 y">The 'y' 스코어, which is private to this character.</y>
+        <z label="스코어 z">The 'z' 스코어, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="트리거" />
+    <timertrigger label="트리거" />
+    <scoreis label="는" />
+    <scoreequals label="같다">React when a score is equal to a certain number.</scoreequals>
+    <scorenotequals label="같지 않다">React when a score is not equal to a certain number.</scorenotequals>
+    <scoreabove label="위">React when a score goes above a certain number.</scoreabove>
+    <scorebelow label="아래">React when a score goes below a certain number.</scorebelow>
+    <scoregteq label="&gt;=">React when a score is equal to or goes above a certain number.</scoregteq>
+    <scorelteq label="&lt;=">React when a score is equal to or goes below a certain number.</scorelteq>
+    <healthis label="는" />
+    <healthabove label="위">React when a health goes above a certain number.</healthabove>
+    <healthbelow label="아래">React when a health goes below a certain number.</healthbelow>
+    <direction>
+      <up label="위쪽">React to a game stick pushed upward.</up>
+      <right label="오른쪽">React to a game stick pushed rightward.</right>
+      <down label="아래쪽">React to a game stick pushed downward.</down>
+      <left label="왼쪽">React to a game stick pushed leftward.</left>
+      <clockwise label="오른쪽">React to a clockwise rotation gesture.</clockwise>
+      <counterclockwise label="왼쪽">React to a counterclockwise rotation gesture.</counterclockwise>
+    </direction>
+    <not label="옳지 않은">React when the when condition doesn't match.</not>
+  </filter>
+  <selector>
+    <closest label="가장 가까운" />
+    <objectrelative label="상대적인" />
+    <towardclosest label="향하여">Move toward whatever you're reacting to.</towardclosest>
+    <awayfromall label="멀리">Move away from whatever you're reacting to.</awayfromall>
+    <avoidall label="피하다">Avoid whatever you're reacting to by keeping a certain distance.</avoidall>
+    <wander label="방황하다">Wander around by picking a random direction. Useful as a last line in the program so you character moves when he's not actively pursuing anything.</wander>
+    <cruise label="직진하다">Move in whatever direction you're currently facing.</cruise>
+    <circle label="순환하다" />
+    <spin label="돌다">Spin in place.</spin>
+    <forward label="앞쪽" />
+    <hiddenturn label="돌다" />
+    <escape label="피하다" />
+    <followwaypoints label="패스 따라)">Move on a path of a certain color. Default is to move on any path.</followwaypoints>
+    <moveupdown label="위/아래">Move up and down.</moveupdown>
+    <moveup label="위">Move upward.</moveup>
+    <movedown label="아래">Move downward.</movedown>
+    <moveleftright label="돌다">Move left or right.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="플레이어 1" />
+      <_2 label="플레이어 2" />
+      <_3 label="플레이어 3" />
+      <_4 label="플레이어 4" />
+    </player>
+    <reset>
+      <world label="월드">Resets the game, except for the scoreboard.</world>
+      <score label="스코어">Resets the scoreboard, or an individual score of you provide a color.</score>
+      <expression label="감정">Resets the character's expression.</expression>
+      <glow label="밝기">Resets the character's glow.</glow>
+      <health label="체력">Resets the character's health.</health>
+    </reset>
+    <projectile>
+      <blip label="깜박신호">Blips are rapid-fire projectiles - lighter weight than missiles.</blip>
+      <missile label="미사일">Missiles are big and not very fast, but are smart enough to track their targets!</missile>
+    </projectile>
+    <slowly label="천천히">Move more slowly. Use several times to move even slower.</slowly>
+    <quickly label="빨리">Move more quickly. Use several times to move even faster.</quickly>
+    <speednormally label="보통">Just move normally. Optional.</speednormally>
+    <weakly label="약하게">Do this more weakly than usual.</weakly>
+    <strongly label="강하게">Do this more strongly than usual.</strongly>
+    <strengthnormally label="보통">Do this at normal strength. Optional.</strengthnormally>
+    <angle>
+      <low label="작게">Do this more weakly than usual.</low>
+      <high label="크게">Do this more strongly than usual.</high>
+    </angle>
+    <turnleft label="왼쪽" />
+    <turnright label="오른쪽" />
+    <turntoward label="향하여" />
+    <turnforward label="앞쪽">Indicates that movement should not determine facing direction.</turnforward>
+    <pitchup label="위" />
+    <pitchdown label="아래" />
+    <forward label="앞쪽">The direction the character is facing.</forward>
+    <north label="북쪽" />
+    <east label="동쪽" />
+    <south label="남쪽" />
+    <west label="서쪽" />
+    <up label="위" />
+    <down label="아래" />
+    <distance>
+      <near label="가깝게">Make the character circle the target more closely.</near>
+      <far label="멀게">Make the character circle the target in a bigger circle.</far>
+    </distance>
+    <objecticeberg label="빙하">Create an ice berg.</objecticeberg>
+    <objectrock label="암석">Create a rock.</objectrock>
+    <objectrockLowValue label="암석">Create an igneous rock.</objectrockLowValue>
+    <objectrockHighValue label="암석">Create a sedimentary rock.</objectrockHighValue>
+    <objectfruit label="사과">Create an apple.</objectfruit>
+    <objectinkjet label="잉크 구름">Create an ink cloud.</objectinkjet>
+    <objectstar label="별">Create a star.</objectstar>
+    <objectcoin label="동전">Create a coin.</objectcoin>
+    <objectheart label="하트">Create a heart.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="공">Create a soccer ball.</objectsoccerball>
+    <objectbullet label="탄약">Create ammo.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="페이지 1">Switch to or inline page 1.</taska>
+    <taskb label="페이지 2">Switch to or inline page 2.</taskb>
+    <taskc label="페이지 3">Switch to or inline page 3.</taskc>
+    <taskd label="페이지 4">Switch to or inline page 4.</taskd>
+    <taske label="페이지 5">Switch to or inline page 5.</taske>
+    <taskf label="페이지 6">Switch to or inline page 6.</taskf>
+    <taskg label="페이지 7">Switch to or inline page 7.</taskg>
+    <taskh label="페이지 8">Switch to or inline page 8.</taskh>
+    <taski label="페이지 9">Switch to or inline page 9.</taski>
+    <taskj label="페이지 10">Switch to or inline page 10.</taskj>
+    <taskk label="페이지 11">Switch to or inline page 11.</taskk>
+    <taskl label="페이지 12">Switch to or inline page 12.</taskl>
+    <expresshappy label="행복한">Act happy.</expresshappy>
+    <expresssad label="슬픈">Act sad.</expresssad>
+    <expressangry label="화난">Act angry.</expressangry>
+    <expresscrazy label="정신나간">Act crazy.</expresscrazy>
+    <expresshearts label="하트">Show hearts.</expresshearts>
+    <expressflowers label="꽃">Show flowers.</expressflowers>
+    <expressstars label="별">Show stars.</expressstars>
+    <expressswear label="욕">Show cartoon swears.</expressswear>
+    <expressnone label="보통">Act normal and stop showing anything.</expressnone>
+    <_000point label="포인트">0 points.  You can specify a color too.</_000point>
+    <_001point label="point(점수)">1 point.  Use several to add up different numbers. You can specify a color too.</_001point>
+    <_002points label="포인트">2 points.  Use several to add up different numbers. You can specify a color too.</_002points>
+    <_003points label="포인트">3 points.  Use several to add up different numbers. You can specify a color too.</_003points>
+    <_004points label="포인트">4 points.  Use several to add up different numbers. You can specify a color too.</_004points>
+    <_005points label="포인트">5 points.  Use several to add up different numbers. You can specify a color too.</_005points>
+    <_010points label="포인트">10 points.  Use several to add up different numbers. You can specify a color too.</_010points>
+    <_020points label="포인트">20 points.  Use several to add up different numbers. You can specify a color too.</_020points>
+    <_050points label="포인트">50 points.  Use several to add up different numbers. You can specify a color too.</_050points>
+    <_100points label="포인트">100 points.  Use several to add up different numbers. You can specify a color too.</_100points>
+    <random label="랜덤">Make a random number using number tiles. For example, Random - 5 creates a random number between 0 and 5.</random>
+    <health label="체력">The number of hitpoints the character has.</health>
+    <teama label="팀 A" />
+    <teamb label="팀 B" />
+    <payloadzap label="마비">Stuns the target for a few seconds.</payloadzap>
+    <payloadpop label="넉아웃">Put the target to sleep until someone else resets its health.</payloadpop>
+    <payloadboom label="폭발">Make the target disappear with an explosion.</payloadboom>
+    <payloadvanish label="사라짐">Make the target disappear quietly.</payloadvanish>
+    <black label="검정색" />
+    <grey label="회색" />
+    <white label="흰색" />
+    <red label="빨간색" />
+    <orange label="오렌지색" />
+    <yellow label="노란색" />
+    <green label="초록색" />
+    <blue label="파란색" />
+    <purple label="보라색" />
+    <pink label="분홍색" />
+    <brown label="갈색" />
+    <glowoff label="끄다">Turn off any glow.</glowoff>
+    <colorrandom label="랜덤">Pick a random color.</colorrandom>
+    <path>
+      <black label="검정색 길" />
+      <grey label="회색 길" />
+      <white label="흰색 길" />
+      <red label="빨간색 길" />
+      <orange label="오렌지색 길" />
+      <yellow label="노란색 길" />
+      <green label="초록색 길" />
+      <blue label="파란색 길" />
+      <purple label="보라색 길" />
+      <pink label="분홍색 길" />
+      <brown label="갈색 길" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="흰색">Changes the white score, which is shown on the scoreboard by default. (Visit world settings to change.)</white>
+        <black label="검정색">Changes the black score, which is shown on the scoreboard by default. (Visit world settings to change.)</black>
+        <grey label="회색">Changes the grey score, which is shown on the scoreboard by default. (Visit world settings to change.)</grey>
+        <red label="빨간색">Changes the red score, which is shown on the scoreboard by default. (Visit world settings to change.)</red>
+        <green label="초록색">Changes the green score, which is shown on the scoreboard by default. (Visit world settings to change.)</green>
+        <blue label="파란색">Changes the blue score, which is shown on the scoreboard by default. (Visit world settings to change.)</blue>
+        <orange label="오렌지색">Changes the orange score, which is shown on the scoreboard by default. (Visit world settings to change.)</orange>
+        <yellow label="노란색">Changes the yellow score, which is shown on the scoreboard by default. (Visit world settings to change.)</yellow>
+        <purple label="자주색">Changes the purple score, which is shown on the scoreboard by default. (Visit world settings to change.)</purple>
+        <pink label="핑크색">Changes the pink score, which is shown on the scoreboard by default. (Visit world settings to change.)</pink>
+        <brown label="갈색">Changes the brown score, which is shown on the scoreboard by default. (Visit world settings to change.)</brown>
+      </color>
+      <letter>
+        <a label="스코어 A">Modifies the 'A' score, which is never shown on the scoreboard.</a>
+        <b label="스코어 B">Modifies the 'B' score, which is never shown on the scoreboard.</b>
+        <c label="스코어 C">Modifies the 'C' score, which is never shown on the scoreboard.</c>
+        <d label="스코어 D">Modifies the 'D' score, which is never shown on the scoreboard.</d>
+        <e label="스코어 E">Modifies the 'E' score, which is never shown on the scoreboard.</e>
+        <f label="스코어 F">Modifies the 'F' score, which is never shown on the scoreboard.</f>
+        <g label="스코어 G">Modifies the 'G' score, which is never shown on the scoreboard.</g>
+        <h label="스코어 H">Modifies the 'H' score, which is never shown on the scoreboard.</h>
+        <i label="스코어 I">Modifies the 'I' score, which is never shown on the scoreboard.</i>
+        <j label="스코어 J">Modifies the 'J' score, which is never shown on the scoreboard.</j>
+        <k label="스코어 K">Modifies the 'K' score, which is never shown on the scoreboard.</k>
+        <l label="스코어 L">Modifies the 'L' score, which is never shown on the scoreboard.</l>
+        <m label="스코어 M">Modifies the 'M' score, which is never shown on the scoreboard.</m>
+        <n label="스코어 N">Modifies the 'N' score, which is never shown on the scoreboard.</n>
+        <o label="스코어 O">Modifies the 'O' score, which is never shown on the scoreboard.</o>
+        <p label="스코어 P">Modifies the 'P' score, which is never shown on the scoreboard.</p>
+        <q label="스코어 Q">Modifies the 'Q' score, which is never shown on the scoreboard.</q>
+        <r label="스코어 R">Modifies the 'R' score, which is never shown on the scoreboard.</r>
+        <s label="스코어 S">Modifies the 'S' score, which is never shown on the scoreboard.</s>
+        <t label="스코어 T">Modifies the 'T' score, which is never shown on the scoreboard.</t>
+        <u label="스코어 U">Modifies the 'U' score, which is never shown on the scoreboard.</u>
+        <v label="스코어 V">Modifies the 'V' score, which is never shown on the scoreboard.</v>
+        <w label="스코어 W">Modifies the 'W' score, which is never shown on the scoreboard.</w>
+        <x label="스코어 X">Modifies the 'X' score, which is never shown on the scoreboard.</x>
+        <y label="스코어 Y">Modifies the 'Y' score, which is never shown on the scoreboard.</y>
+        <z label="스코어 Z">Modifies the 'Z' score, which is never shown on the scoreboard.</z>
+      </letter>
+      <local>
+        <a label="스코어 a">The 'a' 스코어, which is private to this character.</a>
+        <b label="스코어 b">The 'b' 스코어, which is private to this character.</b>
+        <c label="스코어 c">The 'c' 스코어, which is private to this character.</c>
+        <d label="스코어 d">The 'd' 스코어, which is private to this character.</d>
+        <e label="스코어 e">The 'e' 스코어, which is private to this character.</e>
+        <f label="스코어 f">The 'f' 스코어, which is private to this character.</f>
+        <g label="스코어 g">The 'g' 스코어, which is private to this character.</g>
+        <h label="스코어 h">The 'h' 스코어, which is private to this character.</h>
+        <i label="스코어 i">The 'i' 스코어, which is private to this character.</i>
+        <j label="스코어 j">The 'j' 스코어, which is private to this character.</j>
+        <k label="스코어 k">The 'k' 스코어, which is private to this character.</k>
+        <l label="스코어 l">The 'l' 스코어, which is private to this character.</l>
+        <m label="스코어 m">The 'm' 스코어, which is private to this character.</m>
+        <n label="스코어 n">The 'n' 스코어, which is private to this character.</n>
+        <o label="스코어 o">The 'o' 스코어, which is private to this character.</o>
+        <p label="스코어 p">The 'p' 스코어, which is private to this character.</p>
+        <q label="스코어 q">The 'q' 스코어, which is private to this character.</q>
+        <r label="스코어 r">The 'r' 스코어, which is private to this character.</r>
+        <s label="스코어 s">The 's' 스코어, which is private to this character.</s>
+        <t label="스코어 t">The 't' 스코어, which is private to this character.</t>
+        <u label="스코어 u">The 'u' 스코어, which is private to this character.</u>
+        <v label="스코어 v">The 'v' 스코어, which is private to this character.</v>
+        <w label="스코어 w">The 'w' 스코어, which is private to this character.</w>
+        <x label="스코어 x">The 'x' 스코어, which is private to this character.</x>
+        <y label="스코어 y">The 'y' 스코어, which is private to this character.</y>
+        <z label="스코어 z">The 'z' 스코어, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="나를">Apply the action to the bot running the program.</me>
+    <it label="그것">Apply the action to the target object.</it>
+    <any label="모든">Any sound.</any>
+    <event>
+      <any label="이벤트">Any sound.</any>
+      <silly>
+        <any label="바보같은">Any silly sound.</any>
+        <bang label="빵">A cartoon 'bang' sound.</bang>
+        <pow label="펑">A cartoon 'pow' sound.</pow>
+      </silly>
+      <explode>
+        <any label="폭팔">Any explosion sound.</any>
+        <A label="펑 A">An explosion sound.</A>
+        <B label="펑 B">An explosion sound.</B>
+        <C label="펑 C">An explosion sound.</C>
+        <D label="펑 D">An explosion sound.</D>
+        <E label="펑 E">An explosion sound.</E>
+      </explode>
+      <musical>
+        <any label="뮤지컬">Any musical sound.</any>
+        <glock>
+          <any label="글록총">Any Glockenspiel sound.</any>
+        </glock>
+        <glock01 label="C 글록총">A Glockenspiel tone.</glock01>
+        <glock02 label="C# 글록총">A Glockenspiel tone.</glock02>
+        <glock03 label="D 글록총">A Glockenspiel tone.</glock03>
+        <glock04 label="D# 글록총">A Glockenspiel tone.</glock04>
+        <glock05 label="E 글록총">A Glockenspiel tone.</glock05>
+        <glock06 label="F 글록총">A Glockenspiel tone.</glock06>
+        <glock07 label="F# 글록총">A Glockenspiel tone.</glock07>
+        <glock08 label="G 글록총">A Glockenspiel tone.</glock08>
+        <glock09 label="G# 글록총">A Glockenspiel tone.</glock09>
+        <glock10 label="A 글록총">A Glockenspiel tone.</glock10>
+        <glock11 label="A# 글록총">A Glockenspiel tone.</glock11>
+        <glock12 label="B 글록총">A Glockenspiel tone.</glock12>
+        <gong>
+          <any label="세타파">Any gong sound.</any>
+        </gong>
+        <gong01 label="C 세타파">A gong tone.</gong01>
+        <gong02 label="C# 세타파">A gong tone.</gong02>
+        <gong03 label="D 세타파">A gong tone.</gong03>
+        <gong04 label="D# 세타파">A gong tone.</gong04>
+        <gong05 label="E 세타파">A gong tone.</gong05>
+        <gong06 label="F 세타파">A gong tone.</gong06>
+        <gong07 label="F# 세타파">A gong tone.</gong07>
+        <gong08 label="G 세타파">A gong tone.</gong08>
+        <gong09 label="G# 세타파">A gong tone.</gong09>
+        <gong10 label="A 세타파">A gong tone.</gong10>
+        <gong11 label="A# 세타파">A gong tone.</gong11>
+        <gong12 label="B 세타파">A gong tone.</gong12>
+        <saw>
+          <any label="탄성파">Any saw tooth wave sound.</any>
+        </saw>
+        <saw01 label="C 탄성파">A saw tooth wave tone.</saw01>
+        <saw02 label="C# 탄성파">A saw tooth wave tone.</saw02>
+        <saw03 label="D 탄성파">A saw tooth wave tone.</saw03>
+        <saw04 label="D# 탄성파">A saw tooth wave tone.</saw04>
+        <saw05 label="E 탄성파">A saw tooth wave tone.</saw05>
+        <saw06 label="F 탄성파">A saw tooth wave tone.</saw06>
+        <saw07 label="F# 탄성파">A saw tooth wave tone.</saw07>
+        <saw08 label="G 탄성파">A saw tooth wave tone.</saw08>
+        <saw09 label="G# 탄성파">A saw tooth wave tone.</saw09>
+        <saw10 label="A 탄성파">A saw tooth wave tone.</saw10>
+        <saw11 label="A# 탄성파">A saw tooth wave tone.</saw11>
+        <saw12 label="B 탄성파">A saw tooth wave tone.</saw12>
+        <sine>
+          <any label="사인파">Any sine wave sound.</any>
+        </sine>
+        <sine01 label="C 사인파">A sine wave tone.</sine01>
+        <sine02 label="C# 사인파">A sine wave tone.</sine02>
+        <sine03 label="D 사인파">A sine wave tone.</sine03>
+        <sine04 label="D# 사인파">A sine wave tone.</sine04>
+        <sine05 label="E 사인파">A sine wave tone.</sine05>
+        <sine06 label="F 사인파">A sine wave tone.</sine06>
+        <sine07 label="F# 사인파">A sine wave tone.</sine07>
+        <sine08 label="G 사인파">A sine wave tone.</sine08>
+        <sine09 label="G# 사인파">A sine wave tone.</sine09>
+        <sine10 label="A 사인파">A sine wave tone.</sine10>
+        <sine11 label="A# 사인파">A sine wave tone.</sine11>
+        <sine12 label="B 사인파">A sine wave tone.</sine12>
+        <square>
+          <any label="네모파">Any square wave sound.</any>
+        </square>
+        <square01 label="C 네모파">A square wave tone.</square01>
+        <square02 label="C# 네모파">A square wave tone.</square02>
+        <square03 label="D 네모파">A square wave tone.</square03>
+        <square04 label="D# 네모파">A square wave tone.</square04>
+        <square05 label="E 네모파">A square wave tone.</square05>
+        <square06 label="F 네모파">A square wave tone.</square06>
+        <square07 label="F# 네모파">A square wave tone.</square07>
+        <square08 label="G 네모파">A square wave tone.</square08>
+        <square09 label="G# 네모파">A square wave tone.</square09>
+        <square10 label="A 네모파">A square wave tone.</square10>
+        <square11 label="A# 네모파">A square wave tone.</square11>
+        <square12 label="B 네모파">A square wave tone.</square12>
+        <drums>
+          <any label="드럼">Any drum sound.</any>
+        </drums>
+        <bassdrum label="베이스드럼">Bass drum.</bassdrum>
+        <hhclosed label="하이햇심벌즈 닫기">Hi-hat cymbal closed.</hhclosed>
+        <hhopen label="하이햇심벌즈 열기">Hi-hat cymbal open.</hhopen>
+        <shaker label="셰이커">Shaker.</shaker>
+        <snare label="작은북">Snare drum.</snare>
+        <tomlow label="탐 낮게">Low pitched tom.</tomlow>
+        <tommed label="탐 중간">Medium pitched tom.</tommed>
+        <tomhi label="탐 높게">High pitched tom.</tomhi>
+      </musical>
+      <arcade>
+        <any label="아케이드">Any arcade sound.</any>
+        <roboton label="로봇 켜기">Activate robot.</roboton>
+        <robotoff label="로봇 끄기">Deactivate robot.</robotoff>
+        <coinsound label="동전">Coin sound.</coinsound>
+        <gethealth label="체력 증가">Get health sound.</gethealth>
+        <losehealth label="체력 감소)">Lose health sound.</losehealth>
+        <shoot label="발사)">Shoot sound.</shoot>
+        <timer label="타이머">Timer sound.</timer>
+        <win label="승리">Win sound.</win>
+        <lose label="패배">Lose sound.</lose>
+        <inkjet_fire label="잉크젯 발사">Ink Jet fire sound.</inkjet_fire>
+        <inkjet_impact label="잉크젯 충돌">Ink Jet impact sound.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="다양한 소리">Any miscellaneous sound.</any>
+        <countdown_beep label="카운트다운">A beep countdown sound.</countdown_beep>
+        <countdown_alarm label="카운트다운 알람">An urgent beep countdown.</countdown_alarm>
+        <epic_stinger label="에픽 스팅거">An epic stinger sound.</epic_stinger>
+        <epic_stinger_a label="에픽 스팅거 a">An epic stinger sound.</epic_stinger_a>
+        <epic_stinger_b label="에픽 스팅거 b">An epic stinger sound.</epic_stinger_b>
+        <firepoof label="불꽃">Fire ignition sound.</firepoof>
+        <forcefieldup label="방어막 증가">Force field up sound.</forcefieldup>
+        <forcefielddown label="방어막 감소">Force field down sound.</forcefielddown>
+        <hide label="숨다">Hide sound.</hide>
+        <lockontarget label="조준 성공">Lock on target sound.</lockontarget>
+        <losetarget label="조준 실패">Lose target sound.</losetarget>
+        <positivecondition label="좋음">Something good happened sound.</positivecondition>
+        <negativecondition label="나쁨">Something bad happened sound.</negativecondition>
+        <points label="포인트">Points awarded sound.</points>
+        <pop label="뻥">Pop sound.</pop>
+        <popout label="뽁">Pop out sound.</popout>
+        <powerup label="작동시작">Pick up powerup sound.</powerup>
+        <servo label="자동제어장치">Servo sound.</servo>
+        <watersplash label="철퍽">Water splash sound.</watersplash>
+        <waterdrop label="휙">Water drop sound.</waterdrop>
+        <tagbase label="태그 기반">Tag base sound.</tagbase>
+        <whistlehuman label="호루라기">Human whistle sound.</whistlehuman>
+        <whistlereferee label="호루라기">Referee whistle sound.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="타워">Sounds added for tower defense gameplay.</any>
+        <air_raid_siren label="공습경보">An air raid siren sound.</air_raid_siren>
+        <bomb_fall label="폭탄 투하">An falling bomb sound.</bomb_fall>
+        <stun_fire label="섬광 발사">Turret stun fire sound.</stun_fire>
+        <zapper_fire label="전기충격 발사">Turret zapper fire sound.</zapper_fire>
+        <missile_fire label="미사일 발사">Turret missile fire sound.</missile_fire>
+        <shrinker_fire label="축소탄 발사">Turrent shrinker fire sound.</shrinker_fire>
+        <clam_coin_spit label="동전 던지기">The majestic sound of a clam spitting a coin out.</clam_coin_spit>
+        <enemy_converted label="적 개조">A sound for when an enemy is converted.</enemy_converted>
+        <enemy_escape label="적 후퇴">A sound for when an enemy escapes.</enemy_escape>
+        <place_tower label="타워 건설">A sound for when a tower has been placed.</place_tower>
+        <star_collect label="별 획득">A sound for when a star has been collected.</star_collect>
+        <coin_collect label="동전 획득">A sound for when a coin hs been collected.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="음악">Any music from this group.</any>
+      <omni>
+        <any label="모든 것">Any music from this group.</any>
+      </omni>
+    </music>
+    <mu_action label="액션">Action</mu_action>
+    <mu_ambientlight label="은은한">Light ambient music.</mu_ambientlight>
+    <mu_ambinetmodd label="분위기 있는">Mood music</mu_ambinetmodd>
+    <mu_brightdowntempo label="슬로우모션">Bright downtempo music.</mu_brightdowntempo>
+    <mu_brightfunk label="펑키한">Funkaliscious!</mu_brightfunk>
+    <mu_brightguitar label="기타 움억">Bright guitar music.</mu_brightguitar>
+    <mu_kodu label="코두 테마">Kodu theme.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="미스테리한">Any music from this group.</any>
+      </mystery>
+    </music>
+    <mysterya label="미스테리 A">Mysterious music.</mysterya>
+    <mysteryb label="미스테리 B">Mysterious music.</mysteryb>
+    <mysteryc label="미스테리 C">Mysterious music.</mysteryc>
+    <music>
+      <driving>
+        <any label="운전">Any music from this group.</any>
+      </driving>
+    </music>
+    <drivinga label="빠르게 A">Fast, driving music.</drivinga>
+    <drivingb label="빠르게 B">Fast, driving music.</drivingb>
+    <drivingc label="빠르게 C">Fast, driving music.</drivingc>
+    <music>
+      <drama>
+        <any label="드라마">Any music from this group.</any>
+      </drama>
+    </music>
+    <dramaa label="드라마 A">Dramatic music.</dramaa>
+    <dramab label="드라마 B">Dramatic music.</dramab>
+    <environ>
+      <any label="환경">Any sound from this group.</any>
+      <ambocean label="바다">Ocean sounds.</ambocean>
+      <ambforest label="숲">Forest sounds.</ambforest>
+      <ambcity label="도시">City sounds.</ambcity>
+      <ambmeadow label="초원">Meadow sounds.</ambmeadow>
+      <ambmars label="화성">Mars sounds.</ambmars>
+      <arena>
+        <any label="아레나">Any of the arena sounds.</any>
+        <a label="아레나 A">A big crowd.</a>
+        <b label="아레나 B">A big crowd.</b>
+        <c label="아레나 C">A big crowd.</c>
+        <d label="아레나 D">A big crowd.</d>
+        <e label="아레나 E">A big crowd.</e>
+        <f label="아레나 F">A big crowd.</f>
+        <g label="아레나 G">A big crowd.</g>
+      </arena>
+    </environ>
+    <trackingnone label="곧게 가다">The missile will fly straight and will not move up or down.</trackingnone>
+    <trackinghoming label="넘어 가다">The missile will follow the ground and try to fly over hills and walls.</trackinghoming>
+    <constraint>
+      <leftright label="왼쪽/오른쪽">Move left and right only.</leftright>
+      <fwdback label="앞쪽/뒤쪽">Move forward and back only.</fwdback>
+      <updown label="위/아래" />
+      <northsouth label="북쪽/남쪽">Move north and south only.</northsouth>
+      <eastwest label="동쪽/서쪽">Move east and west only.</eastwest>
+      <immobile label="정지하다">Do not allow movement, even when bumped.</immobile>
+    </constraint>
+    <once label="한번">The code after DO will only be run once each time the WHEN condition is activated.</once>
+    <watertype label="물 타입">Set the water type.</watertype>
+    <microbit.pattern label="패턴">Pattern to display on BBC micro:bit display.</microbit.pattern>
+    <on label="켜다">Set the current state to 'on'.</on>
+    <off label="끄다">Set the current state to 'off'.</off>
+  </modifier>
+  <actuator>
+    <nothing label="없는" />
+    <movement label="이동하다">Travel around the world. Explore the options. Different characters have different movement abilities.</movement>
+    <turn label="돌다">Change your facing direction.</turn>
+    <eat label="먹다">Consume the targeted object, which must be close.</eat>
+    <say label="말하다">Display a text message, either in a balloon or in a dialog. Use &lt;cr&gt;  to split into lines.</say>
+    <open label="열다">Works differently for different characters. Experiment!</open>
+    <close label="닫다">Works differently for different characters. Experiment!</close>
+    <kick label="차다">Kick the target, if it's close enough. Can vary strength.</kick>
+    <make label="창조하다">Make another object. Can create basic objects or anything marked Creatable.</make>
+    <launch label="발사하다">Kick the target, if it's close enough. Can vary strength.</launch>
+    <push label="밀다">Push a target in a certain direction if it's close enough. Can vary in strength.</push>
+    <pull label="당기다">Pull a target in a certain direction if it's close enough. Can vary in strength.</pull>
+    <camouflage label="위장하다">Camouflage the target, making it hard to see.</camouflage>
+    <uncamouflage label="위장하지 않다)">Uncamouflage the target, making it visible.</uncamouflage>
+    <express label="표현하다">Express an emotion or show a special effect.  Some expressions change the face of the character while others are displayed above the character.</express>
+    <color label="색">Change the color of yourself or the target object.</color>
+    <glow label="빛나다">Emit a radioactive glow. Can change color.</glow>
+    <sound label="재생하다">Make a sound! Lots to choose from.</sound>
+    <stopsound label="정지하다">Stop playing a sound.</stopsound>
+    <jump label="점프하다">Different characters can jump different heights.</jump>
+    <watersurface label="올라오다">The Surface action causes underwater characters to rise to the surface of the water.</watersurface>
+    <waterdive label="뛰어들다">The Dive action cause underwater characters to dive to the bottom of the water.</waterdive>
+    <airrise label="위로">The Go Up action causes flying characters to rise up into the sky.</airrise>
+    <airdrop label="아래로">The Go Down action causes flying characters to fly down toward the ground.</airdrop>
+    <switchtask label="전환하다">Change to a different page. Only rules on the current page are applied. Pages are really handy for changing behavior.</switchtask>
+    <inlinetask label="즉시 처리하는">At runtime this will include all the programming from another page here.  This is handy for kode that you want on several pages since you can type it in once, and then inline it wherever you need it.</inlinetask>
+    <nextlevel label="다음 레벨">Load the next level. Useful for multi-level games!</nextlevel>
+    <prevlevel label="이전 레벨">Loadh the previous level. Useful for multi-level games!</prevlevel>
+    <waterraise label="물 채우기">Raise the water level under this object.</waterraise>
+    <waterlower label="물 없애기">Lower the water level under this object.</waterlower>
+    <setwater label="물 설정">Sets the water type under this object.</setwater>
+    <rescale label="크기 조절">Changes the object's size scale smoothly.</rescale>
+    <rescaleinstant label="크기 조절(즉시)">Sets the object's size scale instantly.</rescaleinstant>
+    <holddistance label="거리 조절">Changes the distance for "held" objects smoothly.</holddistance>
+    <holddistanceinstant label="거리 조절(즉시)">Changes the distance for "held" objects instantly.</holddistanceinstant>
+    <movementspeedmodify label="이동속도">Sets the movement forward speed multiplier for this actor.</movementspeedmodify>
+    <turningspeedmodify label="회전속도">Sets the turning speed multiplier for this actor.</turningspeedmodify>
+    <worldlightingchange label="조명">Smoothly sets the world lighting.</worldlightingchange>
+    <worldlightingchangeinstant label="조명(즉시)">Instantly sets the world lighting.</worldlightingchangeinstant>
+    <worldskychange label="하늘">Smoothly sets the world sky.</worldskychange>
+    <worldskychangeinstant label="하늘(즉시)">Instantly sets the world sky.</worldskychangeinstant>
+    <shoot label="발사하다" />
+    <shoot2 label="발사하다">Shoot blips or missiles.</shoot2>
+    <beam label="비추다">Fires a laser beam at a Mars rock type to identify the rock's basic characteristics.</beam>
+    <inspect label="조사하다">Drills into a Mars rock type, harvesting samples for further study.</inspect>
+    <scan label="살피다">Reveals the rock type of unknown rocks in an area around the Rover.</scan>
+    <picture label="사진찍다">Takes a picture in first person view.</picture>
+    <damage label="피해">Subtract health from either myself or the target character.</damage>
+    <heal label="치료">Add health to myself or to the target character.
+        The Heal action causes either the character or the target object to recover from damage. The default is for the target object to heal; the character can be healed by including the "me" modifier. Modifiers can also be used to determine the type and amount of healing points.</heal>
+    <zap label="마비">Stun either myself or the target character for a few seconds.</zap>
+    <pop label="넉아웃">Causes a bot or myself to be completely disabled until health is reset by someone else.</pop>
+    <boom label="폭발">Make myself or the target disappear with an explosion.</boom>
+    <vanish label="사라짐">Make myself or the target disappear quietly.</vanish>
+    <grab label="집어들다">Pick up the target if it's close enough. You can only hold one thing at a time.</grab>
+    <drop label="내려놓다">Drop whatever you're carrying.</drop>
+    <give label="주다">Give whatever you're carrying to the target character. If the target can't hold it, it'll drop.</give>
+    <reset label="초기화">Reset an aspect of the game or a character.</reset>
+    <restart label="재시작">Reset an aspect of the game or a character.</restart>
+    <gameover label="끝내기">End the game.</gameover>
+    <victory label="승리">End the game and show a winning message. If you specify a color we'll show it.</victory>
+    <score label="점수">Add points to a score.</score>
+    <unscore label="빼기">Take points away from a score.</unscore>
+    <scoreset label="점수 보기">Set score to a specific value.</scoreset>
+    <camera>
+      <followme label="따라가기">The point of view should follow this character.</followme>
+      <ignoreme label="무시하기">Don't worry about keeping this character in view.</ignoreme>
+      <firstperson label="일인칭시점">See through this character's eyes.</firstperson>
+    </camera>
+    <microbit>
+      <say label="말하기">Scroll text on the BBC micro:bit display.</say>
+      <block label="블럭">Control all the BBC micro:bit lights.</block>
+      <sequential label="장치">Turn on the BBC micro:bit lights sequentially.</sequential>
+      <show label="패턴 보기">Show a patten of lights on the BBC micro:bit LED display.</show>
+      <setpin1 label="핀 설정 0">Set the state of BBC micro:bit pin 0.</setpin1>
+      <setpin2 label="핀 설정 1">Set the state of BBC micro:bit pin 1.</setpin2>
+      <setpin3 label="핀 설정 2">Set the state of BBC micro:bit pin 2.</setpin3>
+    </microbit>
+  </actuator>
+  <root />
+  <group>
+    <colors label="색" />
+    <pathcolors label="패스 색" />
+    <game label="게임" />
+    <more label="더" />
+    <players label="플레이어" />
+    <playermods label="플레이어" />
+    <actions label="액션" />
+    <settings label="옵션 설정" />
+    <combat label="전투" />
+    <rover label="로버" />
+    <holding label="획득" />
+    <sounds label="소리" />
+    <event label="이벤트">
+      <explode label="폭팔" />
+      <silly label="바보같은" />
+      <musical label="뮤지컬">
+        <glock label="글록" />
+        <saw label="탄성파" />
+        <sine label="사인파" />
+        <gong label="세타파" />
+        <square label="네모파" />
+        <drums label="드럼" />
+      </musical>
+      <arcade label="아케이드" />
+      <misc label="다양한" />
+      <tower label="타워" />
+    </event>
+    <environ label="환경">
+      <forest label="숲" />
+      <arena label="경기장" />
+    </environ>
+    <music label="음악">
+      <omni label="새로운" />
+      <mystery label="미스테리" />
+      <driving label="운전" />
+      <drama label="드라마" />
+    </music>
+    <constraints label="한계" />
+    <directions label="방향" />
+    <filters>
+      <directions label="방향" />
+      <touchbuttons label="버튼" />
+      <touchGuiButtons label="버튼" />
+      <gestures label="제스처" />
+    </filters>
+    <expressions label="표현" />
+    <projectiles label="발사체" />
+    <camera label="사진" />
+    <reset label="초기화" />
+    <options label="옵션" />
+    <compare label="비교하다" />
+    <points label="포인트" />
+    <time label="시간" />
+    <speed label="속도" />
+    <strength label="힘" />
+    <angle label="각도" />
+    <tracking label="추적" />
+    <bots label="봇 I" />
+    <bots2 label="봇 II" />
+    <objects label="오브젝트" />
+    <tasks label="임무" />
+    <terrains label="타입" />
+    <waters label="타입" />
+    <setwater label="물 타입" />
+    <creatables label="창조물" />
+    <keyboard>
+      <letters label="문자" />
+      <numbers label="숫자" />
+      <symbols label="심볼" />
+      <misc label="소리" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

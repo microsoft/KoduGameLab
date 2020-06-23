@@ -1,0 +1,2177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlOverlayData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <overlay>
+    <id>MiniHub</id>
+    <a>Выбрать</a>
+    <back>Возобновить</back>
+    <bottom>Нажмите &lt;start&gt; чтобы вернуться</bottom>
+
+    <keyMouse>
+      [Enter] Выбрать
+    </keyMouse>
+    <keyMouseBottom>Нажмите [home] чтобы вернуться.</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditBase</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Mouse Edit Base</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditHome</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Главное меню</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPlay</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Играть</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditCameraMove</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Переместить поверхность
+      &lt;rightmouse&gt; Перемещать камеру
+      &lt;middlemouse&gt; Крутить, чтобы приблизить
+      [Tab] Ищет следующий персонаж
+
+    </keyMouse>
+    <keyMouseBottom>Перемещает камеру</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObject</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Добавить/выбрать объект
+      &lt;rightmouse&gt; Параметры
+
+      HelpLevelMid
+      [F3] Показывать сетку
+      [Tab] Ищет следующий персонаж
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Объект: Добавляет или редактирует персонажи или объекты</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocus</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Перетащить объект
+      &lt;rightmouse&gt; Параметры
+      [leftarrow][rightarrow] Изменить цвет
+
+      HelpLevelMid
+      [F3] Показывать сетку
+      [Tab] Ищет следующий персонаж
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Объект: Добавляет или редактирует персонажи или объекты</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocusTree</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Перетащить объект
+      &lt;rightmouse&gt; Параметры
+      [leftarrow][rightarrow] Изменить цвет
+      [uparrow][downarrow] Изменить тип дерева
+
+      HelpLevelMid
+      [F3] Показывать сетку
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Объект: Добавляет или редактирует персонажи или объекты</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPaths</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Перетащить узел или ребро
+      &lt;rightmouse&gt; Параметры
+      [Shift] Действие - на весь путь
+
+      HelpLevelMid
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Путь: Добавляет или редактирует пути</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusNode</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Перетащить узел
+      &lt;rightmouse&gt; Параметры
+      [Shift] Действие - на весь путь
+      [leftarrow][rightarrow] Изменить цвет
+      [uparrow][downarrow] Изменить стиль пути
+
+      HelpLevelMid
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Путь: Добавляет или редактирует пути</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusEdge</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Перетащить ребро
+      &lt;rightmouse&gt; Параметры
+      [Shift] Действие - на весь путь
+      [leftarrow][rightarrow] Изменить цвет
+
+      HelpLevelMid
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Путь: Добавляет или редактирует пути</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Перетащить путь
+      &lt;rightmouse&gt; Параметры
+      [Shift] Действие - на весь путь
+      [leftarrow][rightarrow] Изменить цвет
+
+      HelpLevelMid
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Путь: Добавляет или редактирует пути</keyMouseBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainPaint</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Красит и добавляет материал
+      [Shift] +&lt;leftmouse&gt; Красит по земле
+      [Ctrl] +&lt;leftmouse&gt; Добавляет землю
+      &lt;rightmouse&gt; Удалить
+
+      [leftarrow][rightarrow] Изменить размер кисти
+
+      HelpLevelMid
+      [Alt] Выбрать материал из территории
+      [F3] Показывать сетку
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Кисть для земли: Рисует, добавляет или удаляет землю</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainPaintMagicBrush</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Рисует или добавляет материал
+      [Shift] +&lt;leftmouse&gt; Рисует поверх
+      [Ctrl] +&lt;leftmouse&gt; Добавляет новое
+      &lt;rightmouse&gt; Удалить
+
+      [leftarrow][rightarrow] Изменить размер кисти
+      [uparrow] Стиль: кубический
+      [downarrow] Стиль: гладкий
+
+      HelpLevelMid
+      [Alt] Выбрать материал этой территории
+      [F3] Показывать сетку
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Кисть для земли: Рисует, добавляет или удаляет землю</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Поднять территорию
+      &lt;middlemouse&gt; Сгладить территорию
+      &lt;rightmouse&gt; Понизить территорию
+
+      [leftarrow][rightarrow] Изменить размер кисти
+
+      HelpLevelMid
+      [F3] Показывать сетку
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Вверх/Вниз: Создает холмы и долины</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Сгладить
+      &lt;middlemouse&gt; Сгладить территорию
+      &lt;rightmouse&gt; Сделать ровной
+
+      [leftarrow][rightarrow] Изменить размер кисти
+
+      HelpLevelMid
+      [F3] Показывать сетку
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Сглаживание: Делает землю более гладкой или даже ровной </keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Сделать пики
+      &lt;middlemouse&gt; Сгладить территорию
+      &lt;rightmouse&gt; Сделать холмы
+
+      [leftarrow][rightarrow] Изменить размер кисти
+
+      HelpLevelMid
+      [F3] Показывать сетку
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Неровности: Создает пики или холмистую местность</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditWaterRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Поднять уровень воды
+      &lt;middlemouse&gt; Изменить цвет воды
+      &lt;rightmouse&gt; Снизить уровень воды
+
+      HelpLevelMid
+      [F3] Показывать сетку
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Вода: Создает, удаляет воду, а также волнение на воде</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditDeleteObjects</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Удалить
+      &lt;rightmouse&gt; Ничего, двигаться дальше
+
+      [leftarrow][rightarrow] Изменить размер кисти
+
+      HelpLevelMid
+      [F3] Показывать сетку
+      [Space] Переместить камеру
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Удалить: используйте эту кисть для удаления объектов</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditWorldTweak</id>
+
+    <keyMouse>
+      Изменить Параметры мира
+
+      HelpLevelMid
+      [Home] Главное меню
+      [Esc] Запустить
+    </keyMouse>
+    <keyMouseBottom>Изменяет параметры мира</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditSlider</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить значение
+      [Esc] Принять
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenu</id>
+    <!-- Placeholder, should not be seen. -->
+    <back>Играть</back>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder>Отодвинуть</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenuRunSim</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Играть</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Играть</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      HelpLevelMid
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Играть</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuHomeMenu</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Главное меню</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Главное меню</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      HelpLevelMid
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Играть</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuObjectEdit</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Объект: Добавляет или редактирует персонажи или объекты</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Объект: Добавляет или редактирует персонажи или объекты</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuDeleteObjects</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Удалить: используйте эту кисть для удаления объектов</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Удалить: используйте эту кисть для удаления объектов</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSmoothLevel</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Сглаживание: Делает землю более гладкой или даже ровной</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Сглаживание: Делает землю более гладкой или даже ровной</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainMaterial</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Кисть для земли: Рисует, добавляет или удаляет землю</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Кисть для земли: Рисует, добавляет или удаляет землю</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSpikeyHilly</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Неровности: Создает пики или холмистую местность</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Неровности: Создает пики или холмистую местность</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainUpDown</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Вверх/Вниз: Создает холмы и долины</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Вверх/Вниз: Создает холмы и долины</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainWater</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Вода: Создает, удаляет воду, а также волнение на воде</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Вода: Создает, удаляет воду, а также волнение на воде</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuWorldSettings</id>
+    <back>Играть</back>
+    <start>Главное меню</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <leftStick mid = "false">Переместить курсор</leftStick>
+    <rightStick mid = "false">Двигать камеру</rightStick>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+    <leftShoulder mid = "false">Отдалить</leftShoulder>
+    <rightShoulder mid = "false">Приблизить</rightShoulder>
+    <bottom>Изменить параметры мира</bottom>
+
+    <keyMouse>
+      [Esc] Запустить
+      [Home] Главное меню
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+    </keyMouse>
+    <keyMouseBottom>Изменить параметры мира</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>BrushPickerSquare</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Квадратная кисть</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Квадратная кисть</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSquareLinear</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Длинная прямая кисть</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Длинная прямая кисть</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRound</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Кисть с жестким закруглением</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Кисть с жестким закруглением</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRound</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Кисть с закруглением средней мягкости</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Кисть с закруглением средней мягкости</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRound</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Мягкая кисть</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Мягкая кисть</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRoundLinear</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Длинная кисть со слабым закруглением</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Длинная кисть со слабым закруглением</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRoundLinear</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Длинная кисть со средним закруглением</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Длинная кисть со средним закруглением</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRoundLinear</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Длинная кисть с сильным закруглением</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Длинная кисть с сильным закруглением</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottled</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Мраморная кисть</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Мраморная кисть</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottledLinear</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Длинная мраморная кисть</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Linear mottled brush</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMagic</id>
+    <y>Выбрать и перейти к выбору материалов</y>
+    <b>Отмена</b>
+    <a>Выберите кисть</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Волшебная кисть</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+    <keyMouseBottom>Волшебная кисть</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>CameraSetMode</id>
+    <a>Принять</a>
+    <bottom>Переместите камеру куда хотите, затем нажмите &lt;Ф&gt;</bottom>
+
+    <keyMouse>
+      [Enter] Выбрать
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+    </keyMouse>
+    <keyMouseBottom>Переместите камеру куда хотите, затем нажмите [Enter]</keyMouseBottom>
+  </overlay>
+
+  <!--Object edit permutations-->
+  <overlay>
+    <!-- Nothing selected, nothing moused, something in the clipboard-->
+    <id>ObjectEdit</id>
+    <y></y>
+    <x></x>
+    <b>Меню Инструменты</b>
+    <a>Добавить</a>
+
+    <leftTrigger ghosted = "true">Вырезать</leftTrigger>
+    <rightTrigger ghosted = "false">Вставить</rightTrigger>
+
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Alt]+&lt;leftmouse&gt; Вставить
+      [Space]+&lt;leftmouse&gt; Добавить
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Nothing selected, nothing moused, nothing in the clipboard-->
+    <id>ObjectEditEmptyClipboard</id>
+    <y></y>
+    <x></x>
+    <b>Меню Инструменты</b>
+    <a>Добавить</a>
+
+    <leftTrigger ghosted = "true">Вырезать</leftTrigger>
+    <rightTrigger ghosted = "true">Вставить</rightTrigger>
+
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Space]+&lt;leftmouse&gt; Добавить
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused.
+    Selected thing isn't Программаmable. This never happens any more, since everything except the cursor
+    and waypoints (handled elsewhere) is Программаmable.
+    -->
+    <id>ObjectEditSelected</id>
+    <y></y>
+    <x>Установки</x>
+    <a>Поставить здесь</a>
+    <leftTrigger>Вырезать</leftTrigger>
+    <rightTrigger>Клонировать</rightTrigger>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <dpadVertical>Переместить вверх/вниз</dpadVertical>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused. Selected thing is a gameactor.-->
+    <id>ObjectEditSelectedProgrammable</id>
+    <y>Программа</y>
+    <x>Установки </x>
+    <a>Поставить здесь </a>
+    <leftTrigger>Вырезать</leftTrigger>
+    <rightTrigger>Клонировать</rightTrigger>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <dpadVertical>Переместить вверх/вниз</dpadVertical>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something cursored (not picked up, blue), nothing moused. Cursored thing is not a gameactor.
+    This isn't useful anymore, since everything is Программаmable except the cursor and
+    waypoints (handled elsewhere)
+    -->
+    <id>ObjectEditFocus</id>
+    <y></y>
+    <x>Установки</x>
+    <b>Меню Инструменты</b>
+    <a>Выбрать</a>
+    <leftTrigger>Вырезать</leftTrigger>
+    <rightTrigger>Клонировать</rightTrigger>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <dpadVertical>Изменить размер</dpadVertical>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <!-- GameActor cursored (not picked up, blue), nothing moused.-->
+    <id>ObjectEditFocusProgrammable</id>
+    <y>Программа</y>
+    <x>Установки </x>
+    <b>Инструменты</b>
+    <a>Выбрать</a>
+    <leftTrigger>Вырезать</leftTrigger>
+    <rightTrigger>Клонировать</rightTrigger>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <dpadVertical>Изменить размер</dpadVertical>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <!--And one for the trees-->
+  <overlay>
+    <!--A Tree is cursored (not picked up), nothing highlighted.-->
+    <id>TreeEditFocusProgrammable</id>
+    <y>Программа</y>
+    <x>Установки </x>
+    <b>Инструменты</b>
+    <a>Выбрать</a>
+    <leftTrigger>Вырезать</leftTrigger>
+    <rightTrigger>Клонировать</rightTrigger>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <dpadVertical>Изменить тип</dpadVertical>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Программа
+      [X] Установки
+      [leftarrow][rightarrow] Изменить цвет
+      [uparrow][downarrow] Изменить размер
+
+      &lt;leftmouse&gt; Перетащить
+      [Shift]+&lt;leftmouse&gt; Поднять/опустить
+      [Shift]+&lt;rightmouse&gt; Повернуть
+
+      [Space]+&lt;leftmouse&gt; Добавить
+      [Alt]+&lt;leftmouse&gt; Клонировать
+      [Ctrl]+&lt;leftmouse&gt; Вырезать
+
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>TreeEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Программа
+      [X] Установки
+      [leftarrow][rightarrow] Изменить цвет
+      [uparrow][downarrow] Изменить размер
+      [Tab] Изменить тип
+
+      &lt;leftmouse&gt; Перетащить
+      [Shift]+&lt;leftmouse&gt; Поднять/опустить
+      [Shift]+&lt;rightmouse&gt; Повернуть
+
+      [Space]+&lt;leftmouse&gt; Добавить
+      [Alt]+&lt;leftmouse&gt; Клонировать
+      [Ctrl]+&lt;leftmouse&gt; Вырезать
+
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+  <!--End of the object edit permutations-->
+
+  <overlay>
+    <id>ObjectTweak</id>
+    <y></y>
+    <x></x>
+    <b>Инструменты</b>
+    <a></a>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocus</id>
+    <y></y>
+    <x></x>
+    <b>Инструментыты</b>
+    <a>Установки tweak</a>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocusProgrammable</id>
+    <y>Программа</y>
+    <x></x>
+    <b>Инструменты </b>
+    <a>Установки tweak</a>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>TextDisplay</id>
+    <a>Продолжить</a>
+  </overlay>
+
+  <overlay>
+    <id>ScrollableTextDisplay</id>
+    <a>Продолжить</a>
+    <leftStick>Прокрутить текст</leftStick>
+  </overlay>
+
+  <overlay>
+    <id>PieSelectorProgrammingNoSelection</id>
+    <b>Отмена</b>
+    <leftStick>Выбрать карточку</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorProgramming</id>
+    <a>Добавить карточку</a>
+    <b>Отмена</b>
+    <y>Помощь</y>
+    <leftStick>Выбрать элемент</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItemNoSelection</id>
+    <b>Отмена</b>
+    <leftStick>Выбрать элемент</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItem</id>
+    <a>Добавить выбранное</a>
+    <b>Отмена</b>
+    <y>Помощь</y>
+    <leftStick>Выбрать элемент</leftStick>
+  </overlay>
+  <overlay>
+    <id>HelpCardProgramming</id>
+  </overlay>
+  <overlay>
+    <id>HelpCardAddItem</id>
+  </overlay>
+
+  <overlay>
+    <id>ToolBox</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>BasePicker</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>BrushPicker</id>
+    <y></y>
+    <x></x>
+
+    <b>Отмена</b>
+    <a>Принять</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Выбрать кисть</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMaterial</id>
+    <!-- Placeholder, should not be seen. -->
+    <y>Выбрать и перейти к выбору материала</y>
+    <x></x>
+
+    <b>Отмена</b>
+    <a>Принять</a>
+    <leftTrigger>Предыдущая кисть</leftTrigger>
+    <rightTrigger>Следующая кисть</rightTrigger>
+    <bottom>Выбрать кисть</bottom>
+
+    <keyMouse>
+      [Y] Выбрать и перейти к выбору материала
+      [leftarrow][rightarrow] Изменить кисть
+      [Enter] Выбрать кисть
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialPicker</id>
+    <y>Выбрать материал под кистью</y>
+    <x>Выбрать и перейти к выбору кисти</x>
+    <b>Отмена</b>
+    <a>Принять</a>
+    <dpadUp>Стиль: кубический</dpadUp>
+    <dpadDown>Стиль: Гладкий</dpadDown>
+    <leftTrigger>Предыдущий материал</leftTrigger>
+    <rightTrigger>Следующий материал</rightTrigger>
+    <bottom>Выбрать материал</bottom>
+
+    <keyMouse>
+      [X] Выбрать и перейти к выбору кисти
+      [leftarrow][rightarrow] Изменить материал
+      [uparrow] Стиль: кубический
+      [downarrow] Стиль: гладкий
+      [Enter] Выбрать материал
+      &lt;leftmouse&gt; Выбрать материал под курсором
+      [Alt] + &lt;leftmouse&gt;  Выбрать материал из мира
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialFilterPicker</id>
+    <y>Выбрать материал под ботом</y>
+    <x></x>
+    <b>Отмена</b>
+    <a>Принять</a>
+    <leftTrigger>Предыдущий материал</leftTrigger>
+    <rightTrigger>Следующий материал</rightTrigger>
+    <bottom>Выбрать материал</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить материал
+      [Enter] Выбрать материал
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>WaterPicker</id>
+    <y>Выбрать воду под курсором</y>
+    <x></x>
+    <leftTrigger>Предыдущая вода</leftTrigger>
+    <rightTrigger>Следующая вода</rightTrigger>
+
+    <b>Отмена</b>
+    <a>Принять</a>
+    <bottom>Выбрать тип воды</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить тип воды
+      [Enter] Выбрать тип воды
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>HeightMapTool</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a>Сгладить</a>
+    <leftTrigger>Опустить</leftTrigger>
+    <rightTrigger>Поднять</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Ниже
+      [Alt]+&lt;leftmouse&gt; Гладко
+      [Space]+&lt;leftmouse&gt; Выше
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolStart</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Пропустить</b>
+    <a>Сгладить</a>
+    <leftTrigger>Опустить землю</leftTrigger>
+    <rightTrigger>Поднять землю</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Ниже
+      [Alt]+&lt;leftmouse&gt; Гладко
+      [Space]+&lt;leftmouse&gt; Выше
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Пропустить линию
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolGoing</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a>Сгладить</a>
+    <leftTrigger>Опустить землю</leftTrigger>
+    <rightTrigger>Поднять землю</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Ниже
+      [Alt]+&lt;leftmouse&gt; Гладко
+      [Space]+&lt;leftmouse&gt; Выше
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>AddTool</id>
+    <y>Выбор материала</y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a>Изменить цвет земли</a>
+    <leftTrigger>Стереть землю</leftTrigger>
+    <rightTrigger>Добавить землю</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Выбор материала
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Удалить землю
+      [Alt]+&lt;leftmouse&gt; Изменить цвет земли
+      [Space]+&lt;leftmouse&gt; Добавить землю
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolMagicBrush</id>
+    <y>Выбор материала</y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a>Изменить цвет земли</a>
+    <leftTrigger>Стереть землю</leftTrigger>
+    <rightTrigger ghosted = "true">Добавить землю</rightTrigger>
+
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <dpadUp>Стиль: кубический</dpadUp>
+    <dpadDown>Стиль: гладкий</dpadDown>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Выбор материала
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+      [uparrow] Стиль: кубический
+      [downarrow] Стиль: гладкий
+
+      [Ctrl]+&lt;leftmouse&gt; Удалить землю
+      [Alt]+&lt;leftmouse&gt; Изменить цвет земли
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+
+  </overlay>
+  <overlay>
+    <id>AddToolStart</id>
+    <y>Выбор материала</y>
+    <x>Выбор кисти</x>
+    <b>Пропустить</b>
+    <a>Изменить материал</a>
+    <leftTrigger>Стереть</leftTrigger>
+    <rightTrigger>Добавить</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Выбор материала
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Удалить землю
+      [Alt]+&lt;leftmouse&gt; Изменить цвет земли
+      [Space]+&lt;leftmouse&gt; Добавить землю
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Пропустить линию
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolGoing</id>
+    <y>Выбор материала</y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a>Изменить материал</a>
+    <leftTrigger>Стереть</leftTrigger>
+    <rightTrigger>Добавить</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти </dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Выбор материала
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Удалить землю
+      [Alt]+&lt;leftmouse&gt; Изменить цвет земли
+      [Space]+&lt;leftmouse&gt; Добавить землю
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>NoiseTool</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a>Сгладить</a>
+    <leftTrigger>Неровности</leftTrigger>
+    <rightTrigger>Холмы</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Холмисто
+      [Alt]+&lt;leftmouse&gt; Гладко
+      [Space]+&lt;leftmouse&gt; Пики
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolStart</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Пропустить</b>
+    <a>Сгладить</a>
+    <leftTrigger>Неровности</leftTrigger>
+    <rightTrigger>Холмы</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Холмисто
+      [Alt]+&lt;leftmouse&gt; Гладко
+      [Space]+&lt;leftmouse&gt; Пики
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Skip Line
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolGoing</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a>Сгладить</a>
+    <leftTrigger>Неровности</leftTrigger>
+    <rightTrigger>Холмы</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Холмисто
+      [Alt]+&lt;leftmouse&gt; Гладко
+      [Space]+&lt;leftmouse&gt; Пики
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>LevelTool</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a></a>
+    <leftTrigger>Сгладить</leftTrigger>
+    <rightTrigger>Ровно</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Alt]+&lt;leftmouse&gt; Гладко
+      [Space]+&lt;leftmouse&gt; Ровно
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>LevelToolStart</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <a>Замостить быстро</a>
+    <leftTrigger>Сгладить</leftTrigger>
+    <rightTrigger>Замостить медленно</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Гладко
+      [Alt]+&lt;leftmouse&gt; Замостить быстро
+      [Space]+&lt;leftmouse&gt; Мостить медленно
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Пропустить линию
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>LevelToolGoing</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Done</b>
+    <a>Замостить быстро</a>
+    <leftTrigger>Сгладить</leftTrigger>
+    <rightTrigger>Замостить медленно</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Гладко
+      [Alt]+&lt;leftmouse&gt; Замостить быстро
+      [Space]+&lt;leftmouse&gt; Мостить медленно
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>WaterAdd</id>
+    <y>Выбрать тип воды</y>
+    <x></x>
+    <b>Инструменты</b>
+    <a>Установить тип воды</a>
+    <leftTrigger>Понизить воду</leftTrigger>
+    <rightTrigger>Поднять воду</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal></dpadHorizontal>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Выбрать тип воды
+
+      [Ctrl]+&lt;leftmouse&gt; Понизить воду
+      [Alt]+&lt;leftmouse&gt; Установить тип воды
+      [Space]+&lt;leftmouse&gt; Поднять воду
+
+      &lt;leftmouse&gt; Переместить курсор
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>DelObjTool</id>
+    <y></y>
+    <x>Выбор кисти</x>
+    <b>Инструменты</b>
+    <leftTrigger>Удалить объекты</leftTrigger>
+    <rightTrigger>Удалить объекты</rightTrigger>
+    <rightTrigger></rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Размер кисти</dpadHorizontal>
+    <leftStick>Переместить кисть</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Выбор кисти
+      [leftarrow][rightarrow] Размер кисти
+
+      [Ctrl]+&lt;leftmouse&gt; Удалить
+      [Space]+&lt;leftmouse&gt; Удалить
+
+      &lt;leftmouse&gt; Переместить камеру
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointNode</id>
+    <y>Добавить узлы</y>
+    <x>Выделить весь путь</x>
+    <b>Сделано</b>
+    <a>Выбрать</a>
+    <dpadVertical>Изменить тип</dpadVertical>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftTrigger>Удалить узел</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdge</id>
+    <y>Изменить направление</y>
+    <x>Выделить весь путь</x>
+    <b>Сделано</b>
+    <a>Выбрать</a>
+    <dpadVertical>Изменить тип</dpadVertical>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftTrigger>Удалить ребро</leftTrigger>
+    <rightTrigger>Разделить ребро</rightTrigger>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPath</id>
+    <y>Изменить направление</y>
+    <x>Выбрать узел/ребро</x>
+    <b>Сделано</b>
+    <a>Выбрать</a>
+    <dpadVertical>Изменить тип</dpadVertical>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftTrigger>Удалить путь</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveNode</id>
+    <y></y>
+    <x>Выбрать весь путь</x>
+    <b>Сделано</b>
+    <a>Положить вниз</a>
+    <dpadVertical>Изменить высоту</dpadVertical>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftTrigger>Удалить узел</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveEdge</id>
+    <y>Изменить направление</y>
+    <x>Выбрать весь путь</x>
+    <b>Сделано</b>
+    <a>Положить вниз</a>
+    <dpadVertical>Изменить высоту</dpadVertical>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftTrigger>Удалить ребро</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMovePath</id>
+    <y>Изменить направление</y>
+    <x></x>
+    <b>Сделано</b>
+    <a>Положить вниз</a>
+    <dpadVertical>Изменить высоту</dpadVertical>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftTrigger>Удалить путь</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointAddNode</id>
+    <y>Добавить узел и зкончить</y>
+    <x></x>
+    <b>Сделано</b>
+    <a>Добавить узел</a>
+    <dpadVertical>Изменить тип</dpadVertical>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Переместить курсор</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndAddNode</id>
+    <y></y>
+    <x></x>
+    <b>Сделано</b>
+    <a></a>
+    <dpadVertical>Изменить тип</dpadVertical>
+    <dpadHorizontal>Изменить цвет</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Новая позиция</leftStick>
+    <rightStick>Двигать камеру</rightStick>
+    <leftShoulder>Отдалить</leftShoulder>
+    <rightShoulder>Приблизить</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointNodeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить цвет
+      [Tab] Изменить тип
+
+      &lt;leftmouse&gt; Перетащить узел
+      [Shift]+&lt;leftmouse&gt; Поднять/опустить узел
+      [X] Whole Path Mode
+
+      [Space]+&lt;leftmouse&gt; Добавить узлы
+      [Ctrl]+&lt;leftmouse&gt; Удалить узел
+
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdgeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить цвет
+      [Tab] Изменить тип
+
+      &lt;leftmouse&gt; Перетащить ребро
+      [Shift]+&lt;leftmouse&gt; Поднять/опустить ребро
+      [X] Режим Весь путь
+
+      [Space]+&lt;leftmouse&gt; Разъединить ребро
+      [Ctrl]+&lt;leftmouse&gt; Удалить ребро
+
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPathFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить цвет
+      [Tab] Изменить тип
+
+      &lt;leftmouse&gt; Перетащить путь
+      [Shift]+&lt;leftmouse&gt; Поднять/опустить путь
+      [X] Режим Узел/ребро
+
+      [Space]+&lt;leftmouse&gt; Добавить узел
+      [Ctrl]+&lt;leftmouse&gt; Удалить путь
+
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Инструменты
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointAddFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить цвет
+      [Tab] Изменить тип
+
+      &lt;leftmouse&gt; Добавить узел и продолжить
+      [Alt]+&lt;leftmouse&gt; Добавить узел и закончить
+
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Закончить с добавлением
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить цвет
+      [Tab] Изменить тип
+
+      &lt;leftmouse&gt; Закончить с добавлением
+
+      &lt;rightmouse&gt; Перемещать камеру
+      [PgUp][PgDn] Близко/далеко
+
+      [Esc] Закончить с добавлением
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulation</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Нажать<![CDATA[<back>]]>to edit.</bottom>
+
+    <keyMouseBottom>Нажать [Esc] для редактирования.</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulationPreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Нажать<![CDATA[<a>]]>to continue.</bottom>
+
+    <keyMouseBottom>Нажать [Enter] чтобы продолжить.</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>PauseGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Возобновить</a>
+    <bottom>Игра приостановлена, нажмите<![CDATA[<a>]]>to resume.</bottom>
+
+    <keyMouse>
+      [pause] Возобновить
+    </keyMouse>
+
+    <keyMouseBottom>Игра приостановлена, нажмите [pause] чтобы возобновить.</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>Programming</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>PageHandleFullPasteBuffer</id>
+    <y>Печать кода</y>
+    <x></x>
+    <b>Закрыть</b>
+    <a></a>
+    <leftTrigger>Вырезать страницу</leftTrigger>
+    <rightTrigger>Вставить страницу</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Переключить страницу
+      [Delete]Вырезать страницу
+      [Insert] Вставить страницу
+      [Esc] Назад
+      [Ctrl-P] Печать кода
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>PageHandleEmptyPasteBuffer</id>
+    <y>Печать кода</y>
+    <x>Копировать страницу</x>
+    <b>Закрыть</b>
+    <a></a>
+    <leftTrigger>Вырезать страницу</leftTrigger>
+    <rightTrigger ghosted = "true">Вставить страницу</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Переключить страницу
+      [Delete]Вырезать страницу
+      [Esc] Назад
+      [Ctrl-P] Печать кода
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RowHandleFullPasteBuffer</id>
+    <y>Печать кода</y>
+    <x>Копировать строчку</x>
+    <b>Закрыть</b>
+    <a>Переместить строчку</a>
+    <leftTrigger>Вырезать строчку</leftTrigger>
+    <rightTrigger>Вставить строчку</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Выбрать строку
+      &lt;rightmouse&gt; Вырезать строку
+      [Enter] Выбрать строку
+      [Tab] След. страница
+      [Shift][Tab] Пред. страница
+      [Delete]Вырезать строку
+      [Insert] Вставить строку
+      [Esc] Назад
+      [Ctrl-P] Печать кода
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>RowHandleEmptyPasteBuffer</id>
+    <y>Печать кода</y>
+    <x>Копировать строчку</x>
+    <b>Закрыть</b>
+    <a>Переместить строчку</a>
+    <leftTrigger>Вырезать строчку</leftTrigger>
+    <rightTrigger ghosted = "true">Вставить строчку</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Выбрать строку
+      &lt;rightmouse&gt; Вырезать строку
+      [Enter] Выбрать строку
+      [Tab] След. страница
+      [Shift][Tab] Пред. страница
+      [Delete]Вырезать строку
+      [Esc] Назад
+      [Ctrl-P] Печать кода
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>RowMove</id>
+    <y>Помощь</y>
+    <x></x>
+    <b>Закрыть</b>
+    <leftStick>Изменить приоритет строк</leftStick>
+    <a>Поместить строку здесь</a>
+    <bottom></bottom>
+
+    <keyMouse>
+      [uparrow] Вверх
+      [downarrow] Вниз
+      [rightarrow] Сдвинуть блок
+      [leftarrow] Отменить сдвиг
+      [Enter] Поместить сюда
+      [Ctrl-P] Печать кода
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>Tile</id>
+    <y>Помощь</y>
+    <x>Удалить карточку</x>
+    <b>Закрыть</b>
+    <a>Изменить карточку</a>
+    <leftTrigger>Удалить карточку</leftTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Добавить/изменить карточку
+      &lt;rightmouse&gt; Удалить карточку
+      [Enter] Добавить/изменить карточку
+      [Tab] След. страница
+      [Shift][Tab] Пред. страница
+      [Delete]Удалить карточку
+      [Esc] Возврат
+      [Ctrl-P] Печать кода
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>TopLevelPaletteEditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Редактировать параметры мира</bottom>
+  </overlay>
+  <overlay>
+    <id>TopLevelPaletteEditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Редактировать параметры объекта</bottom>
+  </overlay>
+  <overlay>
+    <id>EditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Выбрать</a>
+    <bottom>Параметры мира</bottom>
+  </overlay>
+  <overlay>
+    <id>EditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Параметры персонажа</bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridCheckbox</id>
+    <y></y>
+    <x></x>
+    <b>Выход</b>
+    <a>Изменить</a>
+    <dpadVertical>Переключить свойство</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridSlider</id>
+    <y></y>
+    <x></x>
+    <b>Выход</b>
+    <a></a>
+    <dpadHorizontal>Поменять местами Право/Лево</dpadHorizontal>
+    <dpadVertical>Switch Property</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridPictureList</id>
+    <y></y>
+    <x></x>
+    <b>Выход</b>
+    <a></a>
+    <dpadHorizontal>Поменять местами Право/Лево</dpadHorizontal>
+    <dpadVertical>Переключить свойство</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridTextList</id>
+    <y></y>
+    <x></x>
+    <b>Выход</b>
+    <a>Выбрать следующий параметр</a>
+    <dpadVertical>Переключить свойство</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGameDescription</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Начать игру</a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom>Нажмите  &lt;a&gt; чтобы начать игру</bottom>
+
+    <keyMouse>
+      [Enter] Начать игру
+    </keyMouse>
+    <keyMouseBottom>Нажмите [Enter] чтобы начать игру</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMenu</id>
+    <a>Выбрать</a>
+    <leftStick>Изменить выбор</leftStick>
+  </overlay>
+  <overlay>
+    <id>ModularPictureList</id>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить установки
+      [Esc] Назад
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCameraMode</id>
+    <dpadHorizontal>Изменить выбор</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить камеру
+      [X] Установить камеру
+      [Esc] Назад
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckbox</id>
+    <a>Изменить</a>
+    <keyMouse>
+      [Enter] Изменить
+      [Esc] Назад
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularSlider</id>
+    <dpadHorizontal>Изменить значение</dpadHorizontal>
+    <keyMouse>
+      [leftarrow][rightarrow] Изменить значение
+      [Esc] Назад
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularRadioBox</id>
+    <a>Изменить</a>
+    <keyMouse>
+      [Enter] Изменить выбор
+      [Esc] Назад
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckboxList</id>
+    <a>Изменить</a>
+    <b>Сделано</b>
+    <keyMouse>
+      [uparrow][downarrow] Выбрать тег
+      [Enter] Поменять тег
+      [Esc] Назад
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularButtonElement</id>
+    <a>Смотреть историю изменений</a>
+    <x>Удалить историю изменений</x>
+    <keyMouse>
+      [A] Просмотр истории изменений
+      [X] Удалить историю изменений
+      [Esc] Назад
+    </keyMouse>
+  </overlay>
+
+</XmlOverlayData>

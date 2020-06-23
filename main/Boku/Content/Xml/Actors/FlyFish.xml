@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SurfaceSets>
+    <SurfaceSet>
+      <Name>Base</Name>
+      <TechniqueExt>WithSkinning</TechniqueExt>
+      <BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+      <DirtMapName>Textures\Character\TEX_SUSHARI_DIRT</DirtMapName>
+      <SurfaceNames>
+        <string>TintablePlastic</string>
+        <string>BlackHole</string>
+        <string>NearBlackShiny</string>
+        <string>TintableOffset 2</string>
+        <string>LightGreyShiny</string>
+      </SurfaceNames>
+    </SurfaceSet>
+    <SurfaceSet>
+      <Name>Face</Name>
+      <TechniqueExt>TwoFaceWithSkinning</TechniqueExt>
+      <BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+      <DirtMapName>Textures\White</DirtMapName>
+      <SurfaceNames>
+        <string>TintableOffset 2</string>
+        <string>TintableOffset 2</string>
+      </SurfaceNames>
+    </SurfaceSet>
+  </SurfaceSets>
+  <FaceParams>
+    <TypeFace>Two</TypeFace>
+    <PupilCenter>
+      <X>-0.4</X>
+      <Y>0.05</Y>
+    </PupilCenter>
+    <PupilSize>0.4</PupilSize>
+    <LidDistance>0.0</LidDistance>
+    <BackgroundColor>
+      <X>1</X>
+      <Y>1</Y>
+      <Z>1</Z>
+    </BackgroundColor>
+    <PupilsName>Textures\FacePupilRound</PupilsName>
+    <PupilsCrossName>Textures\BokuFaceEyePupilCross</PupilsCrossName>
+  </FaceParams>
+  <GlowPosition>
+    <Bone>bone6</Bone>
+    <Offset>
+      <X>0.2</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </Offset>
+  </GlowPosition>
+  <HealthBarOffset>
+    <X>-0.5</X>
+    <Y>0</Y>
+    <Z>0.5</Z>
+  </HealthBarOffset>
+
+  <MinHeight>0.7</MinHeight>
+  <DefaultEditHeight>1</DefaultEditHeight>
+  <WaistOffset>0.1</WaistOffset>
+  <EyeOffset>0.3</EyeOffset>
+
+  <CollisionCenter>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0</Z>
+  </CollisionCenter>
+  <CollisionRadius>1.0</CollisionRadius>
+  <HasCushion>true</HasCushion>
+  <Cost>5</Cost>
+  <CollisionSound>plasticSoft</CollisionSound>
+
+  <TechniqueExt>WithSkinning</TechniqueExt>
+  
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>20.0</Mass>
+  <StayAboveWater>true</StayAboveWater>
+
+  <GrabRange>2.0</GrabRange>
+  <KickRange>1.1</KickRange>
+
+  <Domain>Air</Domain>
+
+  <Actions>
+    <UpDown/>
+  </Actions>
+  
+  <IdleSoundName>ch_Sushari_Idle</IdleSoundName>
+  <MoveSoundName>ch_Sushari_Move</MoveSoundName>
+  <CursorSoundName>ch_Sushari_Cursor</CursorSoundName>
+  <ShootSoundName>ch_Sushari_Shoot</ShootSoundName>
+  <Ent1SoundName>ch_Sushari_Ent1</Ent1SoundName>
+  <Ent2SoundName>ch_Sushari_Ent2</Ent2SoundName>
+
+  <Classification>
+    <Color>Blue</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Loud</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="Hover">
+    <MaxLinearAcceleration>10.0</MaxLinearAcceleration>
+    <MaxSpeed>4.0</MaxSpeed>
+    <MaxRotationalAcceleration>10.0</MaxRotationalAcceleration>
+    <MaxRoationRate>3.0</MaxRoationRate>
+    <SlopeAttenuation>0.05</SlopeAttenuation>
+  </Chassis>
+
+  <Feelers>
+    <Nose>0.8</Nose>
+    <Width>0.5</Width>
+  </Feelers>
+
+  <HoldingPosition>
+    <X>1</X>
+    <Z>1.1</Z>
+  </HoldingPosition>
+
+  <Sensors>
+    <Direction>
+      <X>1</X> <!--front-->
+    </Direction>
+    <Arc>3.4906</Arc> <!--200 degrees-->
+  </Sensors>
+  
+</XmlGameActor>

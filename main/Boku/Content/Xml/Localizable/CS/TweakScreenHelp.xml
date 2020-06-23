@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+  
+    <helpText id="PushRange">
+    <desc>Nastavte vzdálenost od objektu, pro možnost tlačení objektu. Může být ovlivněna také velikostí objektu.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>Nastavte, jakou silu budou objekty tlačeny pomocí modifikátorů síly.</desc>
+  </helpText>
+
+  <helpText id="LightRange">
+    <desc>Nastavte vzdálenost světla (dostupné pouze pro světla).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+Nastavte rychlost tohoto objektu.
+Hodnota 1.0 odpovídá výchozí rychlosti.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+Nastavte zrychlení tohoto objektu.
+Hodnota 1.0 odpovídá výchozímu zrychlení.
+    </desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Zamknutím pozice tohoto objektu se nebude moci hýbat, pouze otáčet.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>Učiní tento objekt nezničitelný.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>Po aktivování této možnosti se nad každým objektem zobrazí indikátor se zbývajícím stavem zdraví.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>Toto vám umožní spravovat počáteční hodnotu života objektu. Při poškození se snižuje a při uzdravení zvyšuje.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+Pokud objekt nastavíte jako "Klonovatelný získá dvě vlastnosti.
+Zaprvé, pokud naklonujete tento objekt, všechny klony budou sdílet "stejný mozek" - změny na jednom objektu se aplikují automaticky na všechny. Mezi originálním objektem objekty a jejich kopiemi uvidíte tečkovanou čáru (při editaci.)
+Zadruhé, můžete programovat ostatní objekty naklonováním již naprogramovaného objektu. To oceníte při tvorbě arkádových her, kdy požadujete neustále generovat nepřátele.
+Mějte na paměti, že snadno můžete vyčerpat dostupné zdroje světa a klonování v té chvíli přestane fungovat.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+Počet naklonovaných objektů, které lze během hraní vytvořit je omezený. Klony, které vytvoříte při editaci, se nepočítají, limit je pouze na objekty, které vytvoří jiné objekty při spuštěné hře.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+Nastavte chování kamery v závislosti na tomto objektu. Běžně kamera sleduje objekt ovládaný hráčem.
+Pokud vyberete možnost "Vždy", kamera vždy bude následovat tento objekt. Pokud máte více objektů s tímto nastavením, kamera se bude snažit zobrazit je všechny.
+Pokud vyberete možnost "Nikdy", kamera bude ignorovat objekt ve chvíli, kdy bude ovládán hráčem.
+    </desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>Tímto nastavíte úroveň odražení objektu při kolizi s terénem, zdí nebo jiným objektem.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>Tímto nastavíte úroveň skluzu objektu při kolizi s terénem, zdí nebo jiným objektem.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Nastavte úroveň poškození, kterou objekt výstřelem způsobí.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+Doba nabití určuje čas, po jehož uplynutí bude moci objekt znovu vystřelit.
+Měřeno v sekundách.
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Nastavíte vzdálenost, kam kulka doletí, než zmizí.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Nastavíte rychlost kulky.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+Nastavíte, kolik kulek může objekt zároveň vystřelit.
+Každý objekt má omezený počet výstřelů a nemůže vystřelit znovu, dokud některá kulka něco nezasáhne nebo nezmizí.
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Nastavíte úroveň poškození, které způsobí raketa při zásahu cíle.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+Doba nabití určuje čas, po jehož uplynutí bude moci objekt znovu vystřelit.
+Měřeno v sekundách.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Nastavíte vzdálenost, kam raketa doletí, než zmizí.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Nastavíte rychlost rakety.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+Nastavíte, kolik raket může objekt zároveň vystřelit.
+Každý objekt má omezený počet výstřelů a nemůže vystřelit znovu, dokud některá raketa něco nezasáhne nebo nezmizí.
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Nastavíte, kolik kouře raketa při vystřelení vypustí. Rakety bez kouře se vykreslují rychleji.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Nastavíte, zda se zobrazí vizuální efekty štítu, pokud objekt něco zasáhne nebo poškodí.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Nastavíte, zda se objekt zobrazí všem ostatním. Může být vidět nebo slyšen ostatními objekty.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Nastavíte, zda může být tento objekt viděn, slyšen a může se srazit s ostatními objekty. Neviditelné objekty mohou objet vidět a slyšet, ale nemohou do něj narazit.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Vypne všechny výchozí zvuky této postavy, ale naprogramované zvuky se přehrají. Mějte na paměti, že ostatní postavy ji uslyší a budou moci zjistit její přítomnost.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Chodit po vodě. Vypnutí této možnosti způsobí, že se postavy potopí.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Nastavíte vzdálenost, na kterou mohou postavy slyšet jiné. Nezmění schopnost slyšet aktuální postavy.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Nastavíte vzdálenost, na kterou mohou postavy slyšet jiné. Nezmění schopnost slyšet aktuální postavy.</desc>
+  </helpText>
+  
+  <helpText id="Camouflaged">
+    <desc>Objekt se stane neviditelným, ale nebude moci pricházet objekty.</desc>
+  </helpText>
+
+  <helpText id="KickStrength">
+    <desc>Nastavíte sílu, kterou objekt udeří do ostatních. Silnější úder odhodí objekt dál.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Nastavíte dobu, po které bude moci znovu udeřit do stejného objektu.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>Zvětšíte nebo zmenšíte velikost. Hodnota 1.0 na měřítku odpovídá normální velikosti.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>Pokud něco zahlédnete, pamatujete si to několik dalších sekund, jako kdybyste to stále viděli.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Ovlivníte intenzitu vyzářeného světla touto postavou. Mějte na paměti, že nelze osvítit jiné postavy.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Nastavíte objekt tak, aby vrhal světlo na ostatní a sílu efektu.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Nastavíte vzdálenost, kam světlo dosvítí.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>Pokud je postava naprogramována k procházení se, chození dokola nebo vzdálení se od něčeho, tímto zobrazíte překážky v jeho cestě.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>Pokud objekt používá zrak nebo sluch, zobrazí se objekty, které může vidět a slyšet.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Aktuálně neimplementováno.</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>Vytvoří neviditelné překážky kolem hranic vašeho světa a tím zabráníte pádu.
+    
+Míč, Mrak, Letadlo, Světlo, Podšálek, Balón, Bludička a Raketa mohou projít touto překážkou.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Zobrazí historii lidí, kteří upravili tento svět.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Umožní vám nastavit chování kamery při spuštěné hře.
+    
+Možnost "Pevná pozice" zabrání pohybu kamery při spuštěné hře. Užitečné pro arkádové hry, které vyžadují pohled shora. Mějte na paměti, že zobrazení bude na širokoúhlých monitorech jiné.
+
+Možnost "Pevný offset" zajisté pevnou vzdálenost a směr od objektu, který kamera sleduje. Užitečné pro side-scrolling hry.
+
+Možnost "Volná" je výchozí ponechá kameře volnost, pokud není naprogramovaná v objektu.  Pokud používáte pevnou kameru nebo pevný offset, při stisku tlačítka &lt;X&gt; nastavíte pozici kamery.
+    </desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Nastavíte pozici kamery při spuštění hry. Pro použití, přesuňte kameru na místo, kde ji při spuštění hry chcete mít, otevřete Nastavení světa a zaškrtněte políčko.
+Pokud chcete pozici změnit později, stisknutím &lt;x&gt; se přepnete do režimu, ve kterém upravíte pozici kamery.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Nastavíte intenzitu houpání kamery při sledování uživatelem ovládané postavy.</desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Umožní vám skrýt kompas, který se běžně zobrazuje v pravém dolním rohu obrazovky. Při editaci se zobrazí vždy a skryje se pouze při spuštění hry.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Umožní vám skrýt Měřič zdrojů (teploměr), který se běžně zobrazuje na pravé straně obrazovky. Při editaci se zobrazí vždy a skryje se pouze při spuštění hry.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+Umožní vám vypnout limit zdrojů, který je zobrazen jako Měřič zdrojů na pravé straně obrazovky. Vypnutím této možnosti bude moci přidat další terén a objekty.  
+VAROVÁNÍ: Bez tohoto limu může Kodu běžet extrémně pomalu a při překročení systémové paměti může spadnout.
+  </desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>Nastavíte výšku vln, pokud máte ve světě vodu.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>Nastavíte intenzitu zkreslení způsobené vodou.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Vyberte barvu pozadí vašeho světa.
+Kombinace nastavení Světla a Oblohy vám pomůže docílit lepší atmosféry.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Vyberte světla pro váš svět. Pokud vyberete tmavé nastavení, po spuštění hry bude tma. Během editace bude použito světlejší nasvícení a uvidíte tak svůj svět jasněji.
+Kombinace nastavení Světla a Oblohy vám pomůže docílit lepší atmosféry.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Nastavíte slabší vánek.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Nastavíte silnější vánek.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Nastavíte, jak hra po spuštění začne:
+Možnost "Nic" běžně spustí hru.
+Vybráním "Název světa" se zobrazí název po dobu tří sekund a poté se spustí hra.
+Vybráním "Popis světa" se zobrazí popis a si hru spustí sám po uživatel po stisku &lt;a&gt;. Použit je popis, který jste zadali při uložení hry.
+Možnost "Odpočítávání" zobrazí odpočítávání 3-2-1 před spuštěním hry. Ideální pro závodní hry.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>Pokud postavy následující cesty, tímto zobrazíte waypointy. Cíl se zobrazuje jako drátový model a stejnou barvou jako postava, která k němu směřuje.</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Zobrazí tvary, které jsou použity pro postavy a další objekty při nárazu.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>Pokud některá postava používá zrak nebo sluch, zobrazí se postavy, které mohou vidět a slyšet.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>Faktor rychlosti pro úpravu terénu. Při nižším je úprava pomalejší, a při vyšším je rychlejší.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Nastavíte hlasitost zvukových efektů UI, jako jsou menu a tlačítka.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Nastavíte hlasitost efektů ve vaší hře. Včetně explozí, nárazů a zvuků, které objekty vydávají.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Nastavíte hlasitost hudby na pozadí ve vaší hře.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Nastavíte důležitost zobrazení skóre.
+Vybráním "Vypnuto" se nezobrazí nic.
+Možnost "Nízké" zobrazí skóre v rohu, ale nepřehraje žádný zvuk.
+Nastavením "Vysoké" animuje událost v tabulce výsledků.
+    </desc>
+  </helpText>
+  
+  <helpText id="ScorePersistence">
+    <desc>Nastavíte, zda bude skóre ochováváno při přechodu do dalšího/předchozího levelu.
+Zapnuto: skore zůstané stejné při načtení nového levelu
+Vypnuto: skóre se vynuluje při načtení nového levelu
+    </desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>Zobrazí/Skryje virtuální ovladač.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+      Nastavíte, zda budou na ozbrazovce zobrazy ovládací prvky.
+      Vypnuto: nezobrí se žádná tlačítka.
+      Bez popisků: tlačítka se zobrazí, ale bez popisku.
+      S popisky: tlačítka se zobrazí a společně s nimi text pro lepší identifikování funkce.
+    </desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+      Nastaví úroveň, která se načte při kliknutí na tlačítko "Další level". Umožní vrátit se do předchozí úroveně pomocí tlačítka "Předchozí level".
+    </desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+      Zvýší úroveň vody po tento objekt.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+      Sníží úroveň vody po tento objekt.
+    </desc>
+  </helpText>
+  
+  
+  <helpText id="SetWater">
+    <desc>
+      Nastaví typ vody pro tento objekt.
+    </desc>
+  </helpText>
+
+  <!-- Help for USer Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>Umožní vypnutí bublinových nápověd.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>Umožní vypnutí tipů. Tipy jsou zobrazovány ve chvíli, kdy systém detekuje situaci, která by mohla způsobit problém.
+Při zobrazení tipu dostanete možnost jeho vypnutí.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>Když je aktivní menu nástroje gamepadu, rozmaže se pozadí a nemůže hýbat kamerou. Vypnutím této možnosti budete moci s kamerou hýbat. Ačkoli pro interakci se světem je nutné vybrat nástroj.
+Vypnutí dále způsobí, že levá analogová páčka bude sloužit pro ovládání kamery a pro výběr nástroje musíte použít směrový kříž nebo spouštěč.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>Tímto zajistíte obnovení dříve vypnutých tipů a znovu se budou zobrazovat.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Nastavíte množství zobrazené nápovědy v levém horním rohu obrazovky.</desc>
+  </helpText>
+  
+  <helpText id ="InvertYAxis">
+    <desc>Stisk analogové páčky nahoru pro pohyb dolů.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Stisk analogové páčky vlevo pro pohyb vpravo.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Stisk analogové páčky nahoru pro pohyb kamery nahoru.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>Stisk analogové páčky vlevo pro pohyb kamery vpravo.</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>Pojem "overscan" určuje množství oříznutého obrazu od krajů obrazovky. Množství závisí na zobrazovacím zařízení a jeho připojení. Posuvník vám umožní nastavit vzdálenost od středu obrazovky. Pokud je obraz oříznut, zkuste vyšší hodnotu. Pro skleněné TV je obecně vhodné 20 %, zatímco na PC monitorech hodnota 0 nebo 5%.  Experimentujte pro dosažení nejlepšího výsledku.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>Pokud vyberete tuto možnost, další uživatelé budou moci přidat světy do vaší fronty stahování.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>Pokud vyberete tuto možnost, světy, které stáhnete od ostatních hráčů, budou automaticky označeny jako sdílené a připraveny pro stažení v budoucích sdílených relacích.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>Ve sdílené relaci automaticky stahovat světy označené tagem "Oblíbené".</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>Rozsah použitý pro "Filtr na blízko" používaný pro senzory zraku a sluchu. Jednotky jsou v metrech. Příklad: Dlaždice terénu má úhlopříčně půl metru.</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>Rozsah použitý pro "Filtr na dálku" používaný pro senzory zraku a sluchu. Jednotky jsou v metrech. Příklad: Dlaždice terénu má úhlopříčně půl metru.</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>Pokud vyberete tuto možnost, při spuštění Kodu dojde ke kontrole aktualizací.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>Pokud vyberete tuto možnost, Kodu bude odesílat anonymní informace o používání Kodu do Microsoftu. Tyto informace pomáhají vylepšit Kodu.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>Pokud vyberete tuto možnost, při příštím spuštění Kodu bude přehráno seznamovací video.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>Standardně budou vaše přihlašovací údaje k webu komunity Kodu při ukončení Kodu zapomenuty. Pokud je toto nastavení zapnuto, budeme se snažit, aby vaše přihlášení bylo platné napříč všemi relacemi Kodu.</desc>
+  </helpText>
+  
+  <helpText id="ShowTutorialDebug">
+    <desc>Toto je pomůcka pro ty, kteří vytvářejí vlastní výukové lekce. Zapnutím této možnosti se po spuštění výukové lekce zobrazí informace o ladění.</desc>
+  </helpText>
+
+</XmlHelpTextData>
+

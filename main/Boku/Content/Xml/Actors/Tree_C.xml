@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt>WithWind</TechniqueExt>
+			<BumpDetailName>Textures\EggDetail</BumpDetailName>
+			<DirtMapName>Textures\White</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+				<string>TreeBrown</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithWind</TechniqueExt>
+  </Model>
+  
+	<GlowPosition>
+		<Offset>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>7</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.5</Z>
+  </HealthBarOffset>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>3</Z>
+	</CollisionCenter>
+	<CollisionRadius>3</CollisionRadius>
+
+	<Cost>1</Cost>
+  <CollisionSound>grass</CollisionSound>
+  
+  <IsBot>false</IsBot>
+  <IsProp>true</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>500.0</Mass>
+  
+  <GrabRange>4.0</GrabRange>
+  <KickRange>4.0</KickRange>
+  
+  <Classification>
+    <Color>Green</Color>
+    <Physicality>Static</Physicality>
+  </Classification>
+
+  <SharedIdle>
+    <ActiveAnimationName>wind</ActiveAnimationName>
+  </SharedIdle>
+
+  <Chassis Type="StaticProp"/>
+  
+</XmlGameActor>

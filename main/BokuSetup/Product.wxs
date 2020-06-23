@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Import current version number, etc. -->
+<?include Build.wxi ?>
+
+<!-- 
+The UpgradeCode changes depending on the origin of the build, whether
+it is from Microsoft or from an external build. The idea is to make sure
+we know the provenance of the instrumented data.
+
+The GUID must be copied to Boku/Properties/AssemblyInfo.cs to replace the
+GUID that has the following comment preceding it:
+//The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("055B31F9-07F8-479b-875F-F03279DF595E")]
+
+055B31F9-07F8-479b-875F-F03279DF595E is the Microsoft Update Code
+A52C9E38-7B17-44f7-ABDE-FC05E0524EF1 is the update code used for external use
+-->
+<?define UpgradeCode = "{055B31F9-07F8-479b-875F-F03279DF595E}"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Product
+    Id="$(var.ProductCode)"
+    Language="!(loc.LanguageId)"
+    Manufacturer="!(loc.CompanyName)"
+    Name="!(loc.ProductName)"
+    UpgradeCode="$(var.UpgradeCode)"
+    Version="$(var.ProductVersion3)">
+    
+    <Package Compressed="yes" InstallerVersion="300" />
+    <Media Id="1" Cabinet="Boku.cab" EmbedCab="yes" />
+    <Icon Id="BokuIcon.exe" SourceFile="ApplicationSource\Boku.exe" />
+    <Icon Id="BokuPreBootIcon.exe" SourceFile="ApplicationSource\BokuPreBoot.exe" />
+
+    <Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion Minimum="$(var.ProductVersion3)" OnlyDetect="yes" Property="NEWERVERSIONDETECTED" />
+      <UpgradeVersion Minimum="1.0.0" IncludeMinimum="yes" Maximum="$(var.ProductVersion3)" IncludeMaximum="no" IgnoreRemoveFailure="yes" Property="OLDERVERSIONBEINGUPGRADED" />
+    </Upgrade>
+
+    <CustomAction Id="CA_BlockOlderVersionInstall" Error="!(loc.LaunchCondition_LaterVersion)" />
+
+    <CustomAction Id="CA_SetupPerUserInstallScopeMachine1" Property="WixAppFolder" Value="WixPerMachineFolder" />
+    <CustomAction Id="CA_SetupPerUserInstallScopeMachine4" Property="ALLUSERS" Value="2" />
+
+    <CustomAction Id="CA_SetupPerUserInstallScopeUser1" Property="WixAppFolder" Value="WixPerUserFolder" />
+    <CustomAction Id="CA_SetupPerUserInstallScopeUser4" Property="ALLUSERS" Value="{}" />
+
+    <CustomAction Id="CA_UninstallClickOnceKodu" BinaryKey="BokuSetupActions" DllEntry="UninstallClickOnceKodu" Execute="immediate" />
+
+    <Property Id="ARPPRODUCTICON" Value="BokuIcon.exe" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Component Id="IEVersionUpdate32" Guid="461a4a26-c161-44ec-a9a3-8289c0a6def0">
+        <RegistryKey Root="HKLM" Key="Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION" Action="createAndRemoveOnUninstall">
+          <RegistryValue Type="integer" Name="Boku.exe" Value="9999" KeyPath="yes"/>
+        </RegistryKey>
+      </Component>
+
+      <Component Id="IEVersionUpdate64" Guid="FAB2836F-5827-4103-AD94-DABC6E92B450">
+        <RegistryKey Root="HKLM" Key="Software\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION" Action="createAndRemoveOnUninstall">
+          <RegistryValue Type="integer" Name="Boku.exe" Value="9999" KeyPath="yes"/>
+        </RegistryKey>
+      </Component>
+
+      <Directory Id="DesktopFolder" Name="Desktop">
+        <Component Id="DesktopShortcuts" Guid="{F0F72780-5AD9-4397-B4E0-AC8E8D388F07}">
+
+          <RegistryKey Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Action="createAndRemoveOnUninstall">
+            <RegistryValue Name="Desktop" Value="1" Type="integer" KeyPath="yes" />
+          </RegistryKey>
+
+          <Shortcut
+            Target="[#Boku.exe]"
+            Id="BokuExeDesktopShortcut"
+            Arguments="[CONTENT_LANGUAGE_SHORTCUT_ARGS]"
+            Directory="DesktopFolder"
+            Name="!(loc.ProductName)"
+            Description="Launch !(loc.ProductName)"
+            Icon="BokuIcon.exe"
+            IconIndex="0"/>
+
+          <Shortcut
+            Target="[#BokuPreBoot.exe]"
+            Id="BokuSettingsExeDesktopShortcut"
+            Directory="DesktopFolder"
+            Name="Configure !(loc.ProductName)"
+            Description="Launch !(loc.ProductName) Configuration"
+            Icon="BokuPreBootIcon.exe"
+            IconIndex="0" />
+
+        </Component>
+
+      </Directory>
+
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuCompanyFolder" Name="!(loc.CompanyName)">
+          <Component Id="ProgramMenuCompanyFolderComponent" Guid="{3D838827-008B-4a03-AEC7-FBCECC96435E}">
+            <CreateFolder Directory="ProgramMenuCompanyFolder" />
+            <RemoveFolder Id="ProgramMenuCompanyFolderComponentRemove" Directory="ProgramMenuCompanyFolder" On="uninstall" />
+
+            <RegistryKey Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Action="createAndRemoveOnUninstall">
+              <RegistryValue Name="ProgramMenu" Value="1" Type="integer" KeyPath="yes"/>
+            </RegistryKey>
+
+            <Shortcut
+              Target="[#Boku.exe]"
+              Id="BokuExeProgramMenuShortcut"
+              Directory="ProgramMenuProductFolder"
+              Name="!(loc.ProductName)"
+              Description="Launch !(loc.ProductName)"
+              Icon="BokuIcon.exe"
+              IconIndex="0" />
+
+            <Shortcut
+              Target="[#BokuPreBoot.exe]"
+              Id="BokuSettingsExeProgramMenuShortcut"
+              Directory="ProgramMenuProductFolder"
+              Name="Configure !(loc.ProductName)"
+              Description="Launch !(loc.ProductName) Configuration Utility"
+              Icon="BokuIcon.exe"
+              IconIndex="0" />
+
+          </Component>
+
+          <Directory Id="ProgramMenuProductFolder" Name="!(loc.ProductName)">
+
+            <Component Id="ProgramMenuProductFolderComponent" Guid="{A0F6D4FB-134D-48d0-B9D3-59B239B36F05}">
+              <CreateFolder Directory="ProgramMenuProductFolder" />
+              <RemoveFolder Id="ProgramMenuProductFolderComponentRemove" Directory="ProgramMenuProductFolder" On="uninstall" />
+              <RegistryValue Id="ProgramMenuProductFolderComponentReg" Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\{A0F6D4FB-134D-48d0-B9D3-59B239B36F05}" Name="ProgramMenuProductFolder" Value="[ProgramMenuProductFolder]" Type="string" KeyPath="yes" />
+            </Component>
+
+          </Directory>
+        </Directory>
+      </Directory>
+
+      <Directory Id="ProgramFilesFolder" Name="PFiles">
+        <Directory Id="CompanyFolder" Name="!(loc.CompanyName)">
+          <Directory Id="APPLICATIONFOLDER" Name="!(loc.ProductName)">
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Feature Id="ApplicationFeature" Level="1" Title="!(loc.ProductName)" ConfigurableDirectory="TARGETDIR" Absent="disallow">
+      <ComponentGroupRef Id="BokuApplicationGroup" />
+      <ComponentGroupRef Id="BokuContentGroup" />
+      <ComponentGroupRef Id="BokuOptionsGroup" />
+      <ComponentRef Id="ProgramMenuCompanyFolderComponent" />
+      <ComponentRef Id="ProgramMenuProductFolderComponent" />
+      <ComponentRef Id="DesktopShortcuts" />
+      <ComponentRef Id="IEVersionUpdate32" />
+      <ComponentRef Id="IEVersionUpdate64" />
+    </Feature>
+
+    <InstallExecuteSequence>
+      <FindRelatedProducts Before="LaunchConditions" />
+      <LaunchConditions After="AppSearch" />
+      <Custom Action="CA_SetupPerUserInstallScopeMachine1" Before="LaunchConditions">Privileged</Custom>
+      <Custom Action="CA_SetupPerUserInstallScopeMachine4" Before="LaunchConditions">Privileged</Custom>
+      <Custom Action="CA_SetupPerUserInstallScopeUser1" Before="LaunchConditions">NOT Privileged</Custom>
+      <Custom Action="CA_SetupPerUserInstallScopeUser4" Before="LaunchConditions">NOT Privileged</Custom>
+      <Custom Action="CA_BlockOlderVersionInstall" After="FindRelatedProducts">NEWERVERSIONDETECTED</Custom>
+      <Custom Action="CA_UninstallClickOnceKodu" After="RemoveExistingProducts">NOT Installed</Custom>
+      <RemoveExistingProducts After="InstallInitialize" />
+    </InstallExecuteSequence>
+    
+    <InstallUISequence>
+      <FindRelatedProducts Before="LaunchConditions" />
+      <LaunchConditions After="AppSearch" />
+      <Custom Action="CA_SetupPerUserInstallScopeMachine1" Before="LaunchConditions">Privileged</Custom>
+      <Custom Action="CA_SetupPerUserInstallScopeMachine4" Before="LaunchConditions">Privileged</Custom>
+      <Custom Action="CA_SetupPerUserInstallScopeUser1" Before="LaunchConditions">NOT Privileged</Custom>
+      <Custom Action="CA_SetupPerUserInstallScopeUser4" Before="LaunchConditions">NOT Privileged</Custom>
+      <Custom Action="CA_BlockOlderVersionInstall" After="FindRelatedProducts">NEWERVERSIONDETECTED</Custom>
+    </InstallUISequence>
+
+    <Property Id="ApplicationFolderName" Value="!(loc.CompanyName)\!(loc.ProductName)" />
+    <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+
+    <Property Id="OPTINFORUPDATESPROPERTY" Value="1" Secure="yes" />
+    <Property Id="OPTINFORINSTRUMENTATIONPROPERTY" Value="1" Secure="yes" />
+
+    <Property Id="CONTENT_LANGUAGE_NAME" Value="!(loc.Language_EN)" />
+    <Property Id="CONTENT_LANGUAGE_SHORTCUT_ARGS"></Property>
+    
+    <WixVariable Id="WixUISupportPerMachine" Value="1" />
+    <WixVariable Id="WixUISupportPerUser" Value="1" />
+    <WixVariable Id="WixUILicenseRtf" Value="Kodu_Game_Lab_EULA_and_Code_of_Conduct.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="Images\TopBanner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="Images\SideBanner.bmp" />
+
+    <UI>
+      <TextStyle Id="UI_Font_Bold" FaceName="!(loc.Advanced_Font_FaceName)" Size="!(loc.Advanced_Font_Normal_Size)" Bold="yes" />
+      <TextStyle Id="UI_Font_BoldRed" FaceName="!(loc.Advanced_Font_FaceName)" Size="!(loc.Advanced_Font_Normal_Size)" Bold="yes" Red="255" Green="0" Blue="0" />
+      <TextStyle Id="UI_Font_BoldGreen" FaceName="!(loc.Advanced_Font_FaceName)" Size="!(loc.Advanced_Font_Normal_Size)" Bold="yes" Red="0" Green="200" Blue="0" />
+      <DialogRef Id="PrerequisitesDlg" />
+      <DialogRef Id="ConsentDlg" />
+      <DialogRef Id="LanguageDlg" />
+      <UIRef Id="WixUI_Advanced" />
+    </UI>
+
+    <Condition Message="This application is only supported on Windows XP SP3 or higher.">
+      <![CDATA[Installed OR ((VersionNT > 501) OR ((VersionNT = 501) AND (ServicePackLevel = 3)))]]>
+    </Condition>
+
+
+  </Product>
+  
+</Wix>

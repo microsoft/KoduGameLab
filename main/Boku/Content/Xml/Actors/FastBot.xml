@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SmokeSources>
+		<!--Regular sources-->
+		<XmlSmokeSource>
+			<Bone>EFF_EXHAUST_L</Bone>
+			<Offset>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Offset>
+			<Active>true</Active>
+			<Emitting>true</Emitting>;
+			<Color>
+				<X>0.85</X>
+				<Y>0.85</Y>
+				<Z>0.95</Z>
+				<W>1.0</W>
+			</Color>
+			<PositionJitter>0.03</PositionJitter>
+			<StartRadius>0.05</StartRadius>
+			<EndRadius>0.3</EndRadius>
+			<StartAlpha>1.0</StartAlpha>
+			<MinLifetime>0.5</MinLifetime>
+			<MaxLifetime>1.5</MaxLifetime>
+			<MaxRotationRate>3.0</MaxRotationRate>
+			<EmissionRate>60.0</EmissionRate>
+			<Velocity>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Velocity>
+			<Acceleration>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Acceleration>
+			<Usage>Regular</Usage>
+		</XmlSmokeSource>
+		<XmlSmokeSource>
+			<Bone>EFF_EXHAUST_R</Bone>
+			<Offset>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Offset>
+			<Active>true</Active>
+			<Emitting>true</Emitting>;
+			<Color>
+				<X>0.85</X>
+				<Y>0.85</Y>
+				<Z>0.95</Z>
+				<W>1.0</W>
+			</Color>
+			<PositionJitter>0.03</PositionJitter>
+			<StartRadius>0.05</StartRadius>
+			<EndRadius>0.3</EndRadius>
+			<StartAlpha>1.0</StartAlpha>
+			<MinLifetime>0.5</MinLifetime>
+			<MaxLifetime>1.5</MaxLifetime>
+			<MaxRotationRate>3.0</MaxRotationRate>
+			<EmissionRate>60.0</EmissionRate>
+			<Velocity>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Velocity>
+			<Acceleration>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Acceleration>
+			<Usage>Regular</Usage>
+		</XmlSmokeSource>
+		<!--Distort sources-->
+		<XmlSmokeSource>
+			<Bone>EFF_EXHAUST_L</Bone>
+			<Offset>
+				<X>-0.2</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Offset>
+			<Active>true</Active>
+			<Emitting>true</Emitting>;
+			<Color>
+				<X>0.85</X>
+				<Y>0.85</Y>
+				<Z>0.95</Z>
+				<W>1.0</W>
+			</Color>
+			<PositionJitter>0.03</PositionJitter>
+			<StartRadius>0.2</StartRadius>
+			<EndRadius>0.3</EndRadius>
+			<StartAlpha>1.0</StartAlpha>
+			<MinLifetime>0.3</MinLifetime>
+			<MaxLifetime>0.4</MaxLifetime>
+			<MaxRotationRate>3.0</MaxRotationRate>
+			<EmissionRate>15.0</EmissionRate>
+			<Velocity>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Velocity>
+			<Acceleration>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Acceleration>
+			<Usage>Distort</Usage>
+		</XmlSmokeSource>
+		<XmlSmokeSource>
+			<Bone>EFF_EXHAUST_R</Bone>
+			<Offset>
+				<X>-0.2</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Offset>
+			<Active>true</Active>
+			<Emitting>true</Emitting>;
+			<Color>
+				<X>0.85</X>
+				<Y>0.85</Y>
+				<Z>0.95</Z>
+				<W>1.0</W>
+			</Color>
+			<PositionJitter>0.03</PositionJitter>
+			<StartRadius>0.2</StartRadius>
+			<EndRadius>0.3</EndRadius>
+			<StartAlpha>1.0</StartAlpha>
+			<MinLifetime>0.3</MinLifetime>
+			<MaxLifetime>0.4</MaxLifetime>
+			<MaxRotationRate>3.0</MaxRotationRate>
+			<EmissionRate>15.0</EmissionRate>
+			<Velocity>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Velocity>
+			<Acceleration>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Acceleration>
+			<Usage>Distort</Usage>
+		</XmlSmokeSource>
+	</SmokeSources>
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>Base</Name>
+			<TechniqueExt>WithSkinning</TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\Character\TEX_MOBIKO_DIRT</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+				<string>BlackMatte</string>
+				<string>ShinyMetal</string>
+				<string>ShinyMetal</string>
+				<string>BlackPlastic</string>
+				<string>RedBloom</string>
+				<string>Default</string>
+				<string>DarkGreyMatte</string>
+			</SurfaceNames>
+		</SurfaceSet>
+		<SurfaceSet>
+			<Name>Face</Name>
+			<TechniqueExt>TwoFaceWithSkinning</TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\White</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+				<string>TintablePlastic</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithSkinning</TechniqueExt>
+  </Model>
+  
+	<FaceParams>
+		<TypeFace>Two</TypeFace>
+		<PupilCenter>
+			<X>0.08</X>
+			<Y>0.05</Y>
+		</PupilCenter>
+		<PupilSize>0.6</PupilSize>
+		<LidDistance>0.3</LidDistance>
+		<MaxAsymmetry>0</MaxAsymmetry>
+		<PupilsName>Textures\FacePupilRound</PupilsName>
+		<PupilsCrossName>Textures\BokuFaceEyePupilCross</PupilsCrossName>
+	</FaceParams>
+
+	<GlowPosition>
+		<Bone>ROT_HEAD</Bone>
+		<Offset>
+			<X>0.75</X>
+			<Y>0</Y>
+			<Z>0.3</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>-0.5</X>
+    <Y>0</Y>
+    <Z>1</Z>
+  </HealthBarOffset>
+
+  <MinHeight>0</MinHeight>
+  <WaistOffset>0.8</WaistOffset>
+  <EyeOffset>1.2</EyeOffset>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>1.0</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.8</CollisionRadius>
+
+	<Cost>5</Cost>
+  <CollisionSound>plasticHard</CollisionSound>
+  
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>20.0</Mass>
+
+  <GrabRange>2.1</GrabRange>
+  <KickRange>2.1</KickRange>
+
+  <Domain>Land</Domain>
+
+  <Actions>
+    <Jump/>
+  </Actions>
+  
+  <IdleSoundName>ch_Mobiko_Idle</IdleSoundName>
+  <MoveSoundName>ch_Mobiko_Move</MoveSoundName>
+  <JumpSoundName>ch_Mobiko_Jump</JumpSoundName>
+  <ShootSoundName>ch_Mobiko_Shoot</ShootSoundName>
+  <Ent4SoundName>ch_Mobiko_Ent4</Ent4SoundName>
+  <Ent5SoundName>ch_Mobiko_Ent5</Ent5SoundName>
+  <Ent8SoundName>ch_Mobiko_Ent8</Ent8SoundName>
+  <Ent9SoundName>ch_Mobiko_Ent9</Ent9SoundName>
+
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Loud</AudioVolume>
+  </Classification>
+
+  <Chassis Type="Cycle">
+    <MaxLinearAcceleration>5.0</MaxLinearAcceleration>
+    <MaxSpeed>4.0</MaxSpeed>
+    <MaxRotationalAcceleration>6.0</MaxRotationalAcceleration>
+    <MaxRotationRate>3.0</MaxRotationRate>
+    <DefaultJumpStrength>8.0</DefaultJumpStrength>
+    <JumpRate>4.0</JumpRate>
+    <PreJumpDelay>0.06666</PreJumpDelay> <!--2 / 30.0-->
+    <PreLandDelay>0.1</PreLandDelay> <!--3 / 30.0-->
+  </Chassis>
+
+  <Feelers>
+    <Nose>0.7</Nose>
+    <Width>0.4</Width>
+    <Height>0.8</Height>
+  </Feelers>
+
+  <HoldingPosition>
+    <X>0.2</X>
+    <XOffsetByBoundingSphereRadius>true</XOffsetByBoundingSphereRadius>
+    <ZOffsetByBoundingSphereRadius>true</ZOffsetByBoundingSphereRadius>
+  </HoldingPosition>
+
+  <Sensors>
+    <Direction>
+      <X>1</X> <!--front-->
+    </Direction>
+    <Arc>3.4906</Arc> <!--200 degrees-->
+  </Sensors>
+  
+</XmlGameActor>

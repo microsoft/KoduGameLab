@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
+  <Fragment>
+    <ComponentGroup Id="BokuApplicationGroup">
+      <ComponentRef Id="Boku.exe" />
+      <ComponentRef Id="Boku.exe.config" />
+      <ComponentRef Id="BokuPreBoot.exe" />
+      <ComponentRef Id="BokuShared.dll" />
+      <ComponentRef Id="Cab.dll" />
+      <ComponentRef Id="Ionic.Zip.Reduced.dll" />
+      <ComponentRef Id="TouchHook.dll" />
+      <ComponentRef Id="MicrobitNeedDriverDlg.dll" />
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="APPLICATIONFOLDER">
+
+      <Component Id="Boku.exe" Guid="{486F24A4-7FD6-4ec4-81BE-1EC956F98B86}">
+        <File Id="Boku.exe" KeyPath="yes" Source="ApplicationSource\Boku.exe" />
+        <ProgId Id="BokuLevelPackageFile" Description="Kodu Level Package" Icon="BokuIcon.exe" IconIndex="0" Advertise="yes">
+          <Extension Id="kodu" Advertise="yes">
+            <Verb Id="import" Command="&amp;Play" Argument="/Import &quot;%1&quot;" />
+          </Extension>
+          <Extension Id="kodu2" Advertise="yes">
+            <Verb Id="import" Command="&amp;Play" Argument="/Import &quot;%1&quot;" />
+          </Extension>
+        </ProgId>
+      </Component>
+
+      <Component Id="Boku.exe.config" Guid="*">
+        <File Id="Boku.exe.config" KeyPath="yes" Source="ApplicationSource\Boku.exe.config" />
+      </Component>
+      <Component Id="BokuPreBoot.exe" Guid="*">
+        <File Id="BokuPreBoot.exe" KeyPath="yes" Source="ApplicationSource\BokuPreBoot.exe" />
+      </Component>
+      <Component Id="BokuShared.dll" Guid="*">
+        <File Id="BokuShared.dll" KeyPath="yes" Source="ApplicationSource\BokuShared.dll" />
+      </Component>
+      <Component Id="Cab.dll" Guid="*">
+        <File Id="Cab.dll" KeyPath="yes" Source="ApplicationSource\Cab.dll" />
+      </Component>
+      <Component Id="Ionic.Zip.Reduced.dll" Guid="*">
+        <File Id="Ionic.Zip.Reduced.dll" KeyPath="yes" Source="ApplicationSource\Ionic.Zip.Reduced.dll" />
+      </Component>
+      <Component Id="TouchHook.dll" Guid="*">
+         <File Id="TouchHook.dll" KeyPath="yes" Source="ApplicationSource\TouchHook.dll" />
+      </Component>
+      <Component Id="MicrobitNeedDriverDlg.dll" Guid="*">
+         <File Id="MicrobitNeedDriverDlg.dll" KeyPath="yes" Source="ApplicationSource\MicrobitNeedDriverDlg.dll" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  
+</Wix>

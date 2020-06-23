@@ -1,0 +1,1002 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CrumbList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Crumbs>
+		<!--  To HomeMenu, yes you can get here from anywhere -->
+		<Crumb>
+			<curModes>
+				<mode>InGame</mode>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MouseEditObjectFocus</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+				<mode>MouseWorldSettings</mode>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+				<mode>GamepadEditObject</mode>
+				<mode>GamepadTerrainSmoothLevel</mode>
+				<mode>GamepadTerrainPaint</mode>
+				<mode>GamepadTerrainSpikeyHilly</mode>
+				<mode>GamepadTerrainUpDown</mode>
+				<mode>GamepadWater</mode>
+				<mode>GamepadDeleteObjects</mode>
+				<mode>GamepadWorldSettings</mode>
+				<mode>MaterialPicker</mode>
+				<mode>BrushPicker</mode>
+				<mode>WaterPicker</mode>
+				<mode>AddItem</mode>
+				<mode>AddItemHelp</mode>
+				<mode>ObjectTweak</mode>
+			</curModes>
+			<targetMode>HomeMenu</targetMode>
+			<gamepadText>Πάτησε &lt;start&gt; για να πας στο Αρχικό Μενού.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να πας στο Αρχικό Μενού.</mouseText>
+		</Crumb>
+		<!--  From InGame  -->
+		<Crumb>
+			<curModes>
+				<mode>InGame</mode>
+			</curModes>
+			<targetMode>MouseCameraMove</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να μεταβείς σε λειτουργία Επεξεργασίας.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να μεταβείς στη λειτουργία Επεξεργασίας.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>InGame</mode>
+			</curModes>
+			<targetMode>ToolMenuEditObject</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να μεταβείς σε λειτουργία Επεξεργασίας.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να μεταβείς στη λειτουργία Επεξεργασίας.</mouseText>
+		</Crumb>
+		<!--  From MainMenu  -->
+		<Crumb>
+			<curModes>
+				<mode>MainMenu</mode>
+			</curModes>
+			<targetMode>InGame</targetMode>
+			<gamepadText>Επίλεξε ΣΥΝΕΧΕΙΑ και Πάτησε το πλήκτρο &lt;a&gt;</gamepadText>
+			<mouseText>Κάνε κλικ στο ΣΥΝΕΧΕΙΑ.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MainMenu</mode>
+			</curModes>
+			<targetMode>LoadLevelMenu</targetMode>
+			<gamepadText>Επίλεξε ΦΟΡΤΩΣΕ ΚΟΣΜΟ και πάτησε το πλήκτρο &lt;a&gt;.</gamepadText>
+			<mouseText>Κάνε κλικ στο ΦΟΡΤΩΣΕ ΚΟΣΜΟ.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MainMenu</mode>
+			</curModes>
+			<targetMode>CommunityMenu</targetMode>
+			<gamepadText>Επίλεξε ΚΟΙΝΟΤΗΤΑ και πάτησε το πλήκτρο &lt;a&gt;.</gamepadText>
+			<mouseText>Κάνε κλικ στο ΚΟΙΝΟΤΗΤΑ.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MainMenu</mode>
+			</curModes>
+			<targetMode>OptionsMenu</targetMode>
+			<gamepadText>Επίλεξε ΕΠΙΛΟΓΕΣ και πάτησε το πλήκτρο &lt;a&gt;.</gamepadText>
+			<mouseText>Κάνε κλικ στο ΕΠΙΛΟΓΕΣ.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MainMenu</mode>
+			</curModes>
+			<targetMode>HelpScreens</targetMode>
+			<gamepadText>Επίλεξε ΒΟΗΘΕΙΑ και πάτησε το πλήκτρο &lt;a&gt;.</gamepadText>
+			<mouseText>Κάνε κλικ στο ΒΟΗΘΕΙΑ.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MainMenu</mode>
+			</curModes>
+			<targetMode>SharingHub</targetMode>
+			<gamepadText>Επίλεξε ΜΟΙΡΑΣΟΥ και πάτησε το πλήκτρο &lt;a&gt;.</gamepadText>
+			<mouseText>Κάνε κλικ στο ΜΟΙΡΑΣΟΥ.</mouseText>
+		</Crumb>
+		<!--  From SharingHub -->
+		<Crumb>
+			<curModes>
+				<mode>SharingHub</mode>
+			</curModes>
+			<targetMode>SharingSession</targetMode>
+			<gamepadText>Πάτησε &lt;start&gt; για να εισέλθεις στη σύνοδο διαμοιρασμού.</gamepadText>
+			<mouseText>Πάτησε &lt;enter&gt; ή Κάνε κλικ στην ανοιχτή πόρτα για να εισέλθεις στη σύνοδο διαμοιρασμού.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>SharingHub</mode>
+			</curModes>
+			<targetMode>MainMenu</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
+			<mouseText>Πάτησε &lt;esc&gt; για να επιστρέψεις στο Κεντρικό Μενού.</mouseText>
+		</Crumb>
+		<!--  From SharingSession -->
+		<Crumb>
+			<curModes>
+				<mode>SharingSession</mode>
+			</curModes>
+			<targetMode>SharingHub</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να βγεις από τη σύνοδο διαμοιρασμού.</gamepadText>
+			<mouseText>Πάτησε &lt;esc&gt; για να βγεις από τη σύνοδο διαμοιρασμού.</mouseText>
+		</Crumb>
+		<!--  From OptionsMenu  -->
+		<Crumb>
+			<curModes>
+				<mode>OptionsMenu</mode>
+			</curModes>
+			<targetMode>MainMenu</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
+			<mouseText>Πάτησε  [ESC] ή να κάνε κλικ μακριά από τα στοιχεία του μενού, για να επιστρέψεις στο Κεντρικό Μενού.</mouseText>
+		</Crumb>
+		<!--  From HelpScreens  -->
+		<Crumb>
+			<curModes>
+				<mode>HelpScreens</mode>
+			</curModes>
+			<targetMode>MainMenu</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο Κεντρικό Μενού.</mouseText>
+		</Crumb>
+		<!--  From LoadLevelMenu  -->
+		<Crumb>
+			<curModes>
+				<mode>LoadLevelMenu</mode>
+			</curModes>
+			<targetMode>Unknown</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
+			<mouseText>Κάνε κλικ στο πράσινο βέλος για να μετακινηθείς, κάνε κλικ στο παιχνίδι για να το επιλέξεις.
+ Χρησιμοποίησε  [leftarrow][rightarrow] για να μετακινηθείς, πάτησε  [Enter] για να επιλέξεις το παιχνίδι.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>LoadLevelMenu</mode>
+			</curModes>
+			<targetMode>MainMenu</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο Κεντρικό Μενού.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>LoadLevelMenu</mode>
+			</curModes>
+			<targetMode>HomeMenu</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt;για να επιστρέψεις στο Αρχικό Mενού.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο Αρχικό Mενού.</mouseText>
+		</Crumb>
+		<!--  From CommunityMenu  -->
+		<Crumb>
+			<curModes>
+				<mode>CommunityMenu</mode>
+			</curModes>
+			<targetMode>Unknown</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
+			<mouseText>Κάνε κλικ στο πράσινο βέλος για να μετακινηθείς, κάνε κλικ στο παιχνίδι για να το επιλέξεις.
+ Χρησιμοποίησε  [leftarrow][rightarrow] για να μετακινηθείς, πάτησε  [Enter] για να επιλέξεις το παιχνίδι.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>CommunityMenu</mode>
+			</curModes>
+			<targetMode>MainMenu</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt; για να επιστρέψεις στο Κεντρικό Μενού.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο Κεντρικό Μενού.</mouseText>
+		</Crumb>
+		<!--  ToolMenu from any tool to every other. Gamepad only.  -->
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<!-- 
+      Note: even though this will actually take us to ToolMenuRunSim we give InGame
+      as the target mode to it seems shorter than going through the HomeMenu.
+      -->
+			<targetMode>InGame</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις Εκκίνηση &lt;play&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>ToolMenuEditObject</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις Επεξεργασία Αντικειμένου &lt;ObjectEdit&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<!-- Lead user through EditObjectFocus to get to Programming -->
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuEditObject</mode>
+			</curModes>
+			<targetMode>GamepadEditObjectFocus</targetMode>
+			<gamepadText>Πάτησε &lt;a&gt; για να προγραμματίσεις αντικείμενα.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<!-- Lead user through EditObject to get to Programming -->
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>Programming</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις Επεξεργασία Αντικειμένου &lt;ObjectEdit&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>ToolMenuTerrainSmoothLevel</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις το εργαλείο Ομαλοποίησης/Διαβάθμιση Ανάγλυφου &lt;terrainsmoothlevel&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>ToolMenuTerrainPaint</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις το εργαλείο Χρωματισμού Ανάγλυφου &lt;terrainpaint&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>ToolMenuTerrainSpikeyHilly</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις το εργαλείο Αγκαθωτού/Λοφώδους Ανάγλυφου &lt;terrainspikeyhilly&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>ToolMenuTerrainUpDown</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις το εργαλείο Ανύψωσης/Χαμηλώματος Ανάγλυφου &lt;terrainUpDown&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>ToolMenuWater</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις το εργαλείο Νερό &lt;water&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>ToolMenuDeleteObjects</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις το εργαλείο Διαγραφής Αντικειμένων &lt;deleteobjects&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+				<mode>ToolMenuHomeMenu</mode>
+				<mode>ToolMenuEditObject</mode>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+				<mode>ToolMenuTerrainPaint</mode>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+				<mode>ToolMenuTerrainUpDown</mode>
+				<mode>ToolMenuWater</mode>
+				<mode>ToolMenuDeleteObjects</mode>
+			</curModes>
+			<targetMode>ToolMenuWorldSettings</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να επιλέξεις τις Ρυθμίσεις Κόσμου &lt;worldsettings&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<!--  GamePad Tools, from any tool back to the ToolBar -->
+		<Crumb>
+			<curModes>
+				<mode>GamepadEditObject</mode>
+				<mode>GamepadTerrainSmoothLevel</mode>
+				<mode>GamepadTerrainPaint</mode>
+				<mode>GamepadTerrainSpikeyHilly</mode>
+				<mode>GamepadTerrainUpDown</mode>
+				<mode>GamepadWater</mode>
+				<mode>GamepadDeleteObjects</mode>
+			</curModes>
+			<targetMode>ToolMenuEditObject</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να μεταβείς στο Μενού Εργαλείων.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+	
+		<curModes>
+				<mode>GamepadWorldSettings</mode>
+			</curModes>
+			<targetMode>ToolMenuEditObject</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για έξοδο.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<!--  Gamepad tools, from toolbar to actual tool  -->
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuRunSim</mode>
+			</curModes>
+			<targetMode>InGame</targetMode>
+			<gamepadText>Πάτησε &lt;a&gt; για να τρέξει το παιχνίδι σου.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuEditObject</mode>
+			</curModes>
+			<targetMode>GamepadEditObject</targetMode>
+			<gamepadText>Πίεσε &lt;a&gt; για να προσθέσεις, προγραμματίσεις ή να επεξεργαστείς αντικείμενα.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuTerrainSmoothLevel</mode>
+			</curModes>
+			<targetMode>GamepadTerrainSmoothLevel</targetMode>
+			<gamepadText>Πάτησε &lt;a&gt; για να αλλάξεις το ανάγλυφό σου.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuTerrainPaint</mode>
+			</curModes>
+			<targetMode>GamepadTerrainPaint</targetMode>
+			<gamepadText>Πίεσε &lt;a&gt; για να προσθέσεις ή να χρωματίσεις το ανάγλυφό σου.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuTerrainSpikeyHilly</mode>
+			</curModes>
+			<targetMode>GamepadTerrainSpikeyHilly</targetMode>
+			<gamepadText>Πάτησε &lt;a&gt; για να αλλάξεις  το ανάγλυφό σου.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuEditObject</mode>
+			</curModes>
+			<targetMode>GamepadEditObject</targetMode>
+			<gamepadText>Πίεσε &lt;a&gt; για να προσθέσεις, προγραμματίσεις ή να επεξεργαστείς αντικείμενα.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuTerrainUpDown</mode>
+			</curModes>
+			<targetMode>GamepadTerrainUpDown</targetMode>
+			<gamepadText>Πάτησε &lt;a&gt; για να ανυψώσεις ή να χαμηλώσεις  το ανάγλυφό σου.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuWater</mode>
+			</curModes>
+			<targetMode>GamepadWater</targetMode>
+			<gamepadText>Πίεσε &lt;a&gt; για να προσθέσεις ή να αλλάξεις το νερό.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuDeleteObjects</mode>
+			</curModes>
+			<targetMode>GamepadDeleteObjects</targetMode>
+			<gamepadText>Πάτησε &lt;a&gt; για να χρησιμοποιήσεις το εργαλείο Διαγραφής Αντικειμένων &lt;deleteobjects&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ToolMenuWorldSettings</mode>
+			</curModes>
+			<targetMode>GamepadWorldSettings</targetMode>
+			<gamepadText>Πάτησε &lt;a&gt; για να αλλάξεις Ρυθμίσεις Κόσμου &lt;worldsettings&gt;</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<!-- From gamepad tools back to tool menu -->
+		<Crumb>
+			<curModes>
+				<mode>GamepadEditObject</mode>
+				<mode>GamepadEditObjectFocus</mode>
+			</curModes>
+			<targetMode>ToolMenuEditObject</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να επιστρέψεις στο Μενού Εργαλείων</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>GamepadTerrainPaint</mode>
+			</curModes>
+			<targetMode>ToolMenuTerrainPaint</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να επιστρέψεις στο Μενού Εργαλείων</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>GamepadTerrainUpDown</mode>
+			</curModes>
+			<targetMode>ToolMenuTerrainUpDown</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να επιστρέψεις στο Μενού Εργαλείων</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>GamepadTerrainSmoothLevel</mode>
+			</curModes>
+			<targetMode>ToolMenuTerrainSmoothLevel</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να επιστρέψεις στο Μενού Εργαλείων</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>GamepadTerrainSpikeyHilly</mode>
+			</curModes>
+			<targetMode>ToolMenuTerrainSpikeyHilly</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να επιστρέψεις στο Μενού Εργαλείων</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>GamepadWater</mode>
+			</curModes>
+			<targetMode>ToolMenuWater</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να επιστρέψεις στο Μενού Εργαλείων</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>GamepadDeleteObjects</mode>
+			</curModes>
+			<targetMode>ToolMenuDeleteObjects</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να επιστρέψεις στο Μενού Εργαλείων</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<!-- Shortcut mode to fool the system into thinking that this is the fast way to get into run mode. -->
+			<curModes>
+				<mode>GamepadEditObject</mode>
+				<mode>GamepadEditObjectFocus</mode>
+				<mode>GamepadTerrainPaint</mode>
+				<mode>GamepadTerrainUpDown</mode>
+				<mode>GamepadTerrainSmoothLevel</mode>
+				<mode>GamepadTerrainSpikeyHilly</mode>
+			</curModes>
+			<targetMode>InGame</targetMode>
+			<gamepadText>Πάτησε &lt;back&gt; για να επιστρέψεις στο Μενού Εργαλείων</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<!--  Mouse Tools, from every tool to every other tool -->
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MousePlay</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο Εκκίνηση &lt;play&gt; για να τρέξει το παιχνίδι σου.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>InGame</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο Εκκίνηση &lt;play&gt; για να τρέξει το παιχνίδι σου.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseHome</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο Αρχικό Μενού &lt;homemenu&gt;</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>HomeMenu</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο Αρχικό Μενού &lt;homemenu&gt;</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseCameraMove</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο Μετακίνηση Κάμερας &lt;cameramove&gt;</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseEditObject</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο εργαλείο Αντικείμενο &lt;ObjectEdit&gt; στο μενού παρακάτω για να προσθέσεις ή να προγραμματίσεις αντικείμενα.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MousePaths</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο εργαλείο Μονοπάτια &lt;paths&gt; στο μενού παρακάτω για να προσθέσεις ή να επεξεργαστείς τα μονοπάτια.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseTerrainPaint</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο εργαλείο Ανάγλυφο &lt;terrainpaint&gt; στο μενού παρακάτω για να προσθέσεις ή να χρωματίσεις το ανάγλυφο.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseTerrainUpDown</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο εργαλείο Ανάγλυφο Πάνω/Κάτω &lt;terrainUpDown&gt; στο μενού παρακάτω για να τροποποιήσεις  το ανάγλυφο.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseTerrainSmoothLevel</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο εργαλείο Ομαλοποίηση/Διαβάθμιση Ανάγλυφου &lt;terrainsmoothlevel&gt; στο μενού παρακάτω για να τροποποιήσεις το ανάγλυφό σου.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseTerrainSpikeyHilly</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο εργαλείο Αγκαθωτού/Λοφόδους Ανάγλυφου &lt;terrainspikeyhilly&gt; στο μενού παρακάτω για να τροποποιήσεις το ανάγλυφό σου.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseWater</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο εργαλείο Νερό &lt;water&gt; στο μενού παρακάτω για να προσθέσεις ή να αλλάξεις το νερό.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+			</curModes>
+			<targetMode>MouseDeleteObjects</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο εργαλείο Διαγραφή Αντικειμένων &lt;deleteobjects&gt; στο μενού παρακάτω για να αφαιρέσεις γρήγορα αντικείμενα από τον κόσμο σου.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseCameraMove</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MousePaths</mode>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseWater</mode>
+				<mode>MouseDeleteObjects</mode>
+			</curModes>
+			<targetMode>MouseWorldSettings</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Κάνε κλικ στο Ρυθμίσεις Κόσμου &lt;worldsettings&gt; στο μενού παρακάτω.</mouseText>
+		</Crumb>
+		<!--  Into pickers  -->
+		<Crumb>
+			<curModes>
+				<mode>MouseTerrainPaint</mode>
+				<mode>GamepadTerrainPaint</mode>
+			</curModes>
+			<targetMode>MaterialPicker</targetMode>
+			<gamepadText>Πάτησε &lt;y&gt; για να επιλέξεις ένα νέο υλικό.</gamepadText>
+			<mouseText>Κάνε κλικ στο εικονίδιο επιλογής υλικών &lt;materialtype&gt; πάνω από το εικονίδιο των εργαλείων για να επιλέξεις ένα νέο υλικό.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseTerrainPaint</mode>
+				<mode>MouseTerrainUpDown</mode>
+				<mode>MouseTerrainSmoothLevel</mode>
+				<mode>MouseTerrainSpikeyHilly</mode>
+				<mode>MouseDeleteObjects</mode>
+				<mode>GamepadTerrainPaint</mode>
+				<mode>GamepadTerrainUpDown</mode>
+				<mode>GamepadTerrainSmoothLevel</mode>
+				<mode>GamepadTerrainSpikeyHilly</mode>
+				<mode>GamepadDeleteObjects</mode>
+			</curModes>
+			<targetMode>BrushPicker</targetMode>
+			<gamepadText>Πάτησε &lt;x&gt; για να επιλέξεις μια νέα βούρτσα.</gamepadText>
+			<mouseText>Κάνε κλικ στο εικονίδιο επιλογής  βούρτσας &lt;brushtype&gt; πάνω από το εικονίδιο του εργαλείου για να επιλέξεις μια νέα βούρτσα.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseWater</mode>
+				<mode>GamepadWater</mode>
+			</curModes>
+			<targetMode>WaterPicker</targetMode>
+			<gamepadText>Πάτησε &lt;y&gt; για να επιλέξεις ένα νέο χρώμα για το νερό.</gamepadText>
+			<mouseText>Κάνε κλικ στο εικονίδιο επιλογής νερού &lt;watertype&gt; πάνω από το εικονίδιο του εργαλείου για να επιλέξεις ένα νέο χρώμα για το νερό.</mouseText>
+		</Crumb>
+		<!--  Out of pickers  -->
+		<Crumb>
+			<curModes>
+				<mode>MaterialPicker</mode>
+			</curModes>
+			<targetMode>MouseTerrainPaint</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για την επιλογή υλικού και πάτησε το πλήκτρο &lt;a&gt; για να επιλέξεις.</gamepadText>
+			<mouseText>Χρησιμοποίησε  [leftarrow][rightarrow] για να επιλέξεις υλικό, πάτησε  [Enter] ή κάνε κλικ για να επιλέξεις.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>WaterPicker</mode>
+			</curModes>
+			<targetMode>MouseWater</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να διαλέξεις το νερό και πίεσε &lt;a&gt; για να επιλέξεις.</gamepadText>
+			<mouseText>Χρησιμοποίησε  [leftarrow][rightarrow] για να επιλέξεις το νερό, πάτησε το πλήκτρο  [Enter] ή κάνε κλικ για να επιλέξεις.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>BrushPicker</mode>
+			</curModes>
+			<targetMode>MouseTerrainPaint</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να διαλέξεις  βούρτσα και πάτησε το πλήκτρο &lt;a&gt; για να επιλέξεις.</gamepadText>
+			<mouseText>Χρησιμοποίησε  [leftarrow][rightarrow] για να διαλέξεις βούρτσα, πάτησε  [Enter] ή κάνε κλικ για να επιλέξεις.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MaterialPicker</mode>
+			</curModes>
+			<targetMode>GamepadTerrainPaint</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για την επιλογή υλικού και πάτησε το πλήκτρο &lt;a&gt; για να επιλέξεις.</gamepadText>
+			<mouseText>Χρησιμοποίησε  [leftarrow][rightarrow] για να επιλέξεις υλικό, πάτησε  [Enter] ή κάνε κλικ για να επιλέξεις.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>WaterPicker</mode>
+			</curModes>
+			<targetMode>GamepadWater</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να διαλέξεις το νερό και πίεσε &lt;a&gt; για να επιλέξεις.</gamepadText>
+			<mouseText>Χρησιμοποίησε  [leftarrow][rightarrow] για να επιλέξεις το νερό, πάτησε το πλήκτρο  [Enter] ή κάνε κλικ για να επιλέξεις.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>BrushPicker</mode>
+			</curModes>
+			<targetMode>GamepadTerrainPaint</targetMode>
+			<gamepadText>Χρησιμοποίησε τις σκανδάλες για να διαλέξεις  βούρτσα και πάτησε το πλήκτρο &lt;a&gt; για να επιλέξεις.</gamepadText>
+			<mouseText>Χρησιμοποίησε  [leftarrow][rightarrow] για να διαλέξεις βούρτσα, πάτησε  [Enter] ή κάνε κλικ για να επιλέξεις.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>ObjectTweak</mode>
+			</curModes>
+			<targetMode>ToolMenuEditObject</targetMode>
+			<gamepadText>Πάτησε &lt;b&gt; για έξοδο.</gamepadText>
+			<mouseText>Πάτησε  [ESC] ή να κάνε κλικ μακριά από το μενού.</mouseText>
+		</Crumb>
+		<!-- From HomeMenu -->
+		<Crumb>
+			<curModes>
+				<mode>HomeMenu</mode>
+			</curModes>
+			<targetMode>MainMenu</targetMode>
+			<gamepadText>Επίλεξε το Κεντρικό Μενού.</gamepadText>
+			<mouseText>Κάνε κλικ στο Κεντρικό Μενού.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>HomeMenu</mode>
+			</curModes>
+			<targetMode>InGame</targetMode>
+			<gamepadText>Επίλεξε Επανεκκίνηση Κόσμου.</gamepadText>
+			<mouseText>Κάνε κλικ στο Επανεκκίνηση Κόσμου.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>HomeMenu</mode>
+			</curModes>
+			<targetMode>ToolMenuEditObject</targetMode>
+			<gamepadText>Επίλεξε Επεξεργασία Κόσμου.</gamepadText>
+			<mouseText>Κάνε κλικ στο Επεξεργασία Κόσμου.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>HomeMenu</mode>
+			</curModes>
+			<targetMode>MouseCameraMove</targetMode>
+			<gamepadText>Επίλεξε Επεξεργασία Κόσμου.</gamepadText>
+			<mouseText>Κάνε κλικ στο Επεξεργασία Κόσμου.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>HomeMenu</mode>
+			</curModes>
+			<targetMode>LoadLevelMenu</targetMode>
+			<gamepadText>Επίλεξε Φόρτωσε Κόσμο.</gamepadText>
+			<mouseText>Κάνε κλικ στο Φόρτωσε Κόσμο.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>HomeMenu</mode>
+			</curModes>
+			<targetMode>SharingHub</targetMode>
+			<gamepadText>Επίλεξε το Μοιραστείτε με Φίλους.</gamepadText>
+			<mouseText>Κάνε κλικ στο Μοιραστείτε με Φίλους.</mouseText>
+		</Crumb>
+		<!-- Into Add Item -->
+		<Crumb>
+			<curModes>
+				<mode>GamepadEditObject</mode>
+				<mode>GamepadEditObjectFocus</mode>
+				<mode>MouseEditObject</mode>
+				<mode>MouseEditObjectFocus</mode>
+			</curModes>
+			<targetMode>AddItem</targetMode>
+			<gamepadText>Μετακίνησε το δρομέα στο σημείο όπου θέλεις να προσθέσεις ένα νέο αντικείμενο και πάτησε το πλήκτρο &lt;a&gt;.</gamepadText>
+			<mouseText>Αριστερό κλικ &lt;leftmouse&gt; οπουδήποτε στο έδαφος για να προσθέσεις ένα νέο αντικείμενο.</mouseText>
+		</Crumb>
+		<!-- From mouse world settings -->
+		<Crumb>
+			<curModes>
+				<mode>MouseWorldSettings</mode>
+			</curModes>
+			<targetMode>MouseCameraMove</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο μενού του εργαλείου.</mouseText>
+		</Crumb>
+		<!-- To and From Programming -->
+		<Crumb>
+			<curModes>
+				<mode>ProgrammingHelp</mode>
+			</curModes>
+			<targetMode>Programming</targetMode>
+			<gamepadText>Πίεσε &lt;B&gt; για να επιστρέψεις.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να πας πίσω.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>GamepadEditObject</mode>
+			</curModes>
+			<targetMode>GamepadEditObjectFocus</targetMode>
+			<gamepadText>Μετακίνησε τον κέρσορα στο χαρακτήρα.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>GamepadEditObjectFocus</mode>
+			</curModes>
+			<targetMode>GamepadEditObject</targetMode>
+			<gamepadText>Μετακίνησε τον κέρσορα σε έναν κενό χώρο.</gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MouseEditObject</mode>
+				<mode>MouseEditObjectFocus</mode>
+				<mode>GamepadEditObjectFocus</mode>
+			</curModes>
+			<targetMode>Programming</targetMode>
+			<gamepadText>Πάτησε  &lt;Y&gt;  για να μπεις στον προγραμματισμό.</gamepadText>
+			<mouseText>Κάνε δεξί κλικ στο χαρακτήρα και επίλεξε Προγραμματισμός.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>Programming</mode>
+			</curModes>
+			<targetMode>MouseEditObject</targetMode>
+			<gamepadText>Πίεσε &lt;B&gt; για να κλείσεις και να επιστρέψεις στο Μενού Επεξεργασίας.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο Μενού Επεξεργασίας.</mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>Programming</mode>
+			</curModes>
+			<targetMode>GamepadEditObject</targetMode>
+			<gamepadText>Πίεσε &lt;B&gt; για να κλείσεις και να επιστρέψεις στο Μενού Επεξεργασίας.</gamepadText>
+			<mouseText>Πάτησε  [ESC] για να επιστρέψεις στο Μενού Επεξεργασίας.</mouseText>
+		</Crumb>
+		<!--  Transitions that don't make sense  -->
+		<Crumb>
+			<curModes>
+				<mode>MouseHome</mode>
+			</curModes>
+			<targetMode>HomeMenu</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+		<Crumb>
+			<curModes>
+				<mode>MousePlay</mode>
+			</curModes>
+			<targetMode>InGame</targetMode>
+			<gamepadText></gamepadText>
+			<mouseText></mouseText>
+		</Crumb>
+	</Crumbs>
+</CrumbList>
+

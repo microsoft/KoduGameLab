@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt>WithFlex</TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\Character\TEX_FISH_DIRT</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+				<string>TintableDark</string>
+				<string>TintableDark</string>
+				<string>TintableSecondaryMatte</string>
+				<string>BlackMatte</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithFlex</TechniqueExt>
+  </Model>
+  
+	<GlowPosition>
+		<Offset>
+			<X>0.1</X>
+			<Y>0</Y>
+			<Z>0.4</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.5</Z>
+  </HealthBarOffset>
+
+  <DefaultEditHeight>1.4</DefaultEditHeight>
+  <MinHeight>0.7</MinHeight>
+  <EyeOffset>0.1</EyeOffset>
+
+  <CollisionCenter>
+		<X>-0.2</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.7</CollisionRadius>
+
+	<Cost>1.666</Cost>
+  <CollisionSound>plasticSoft</CollisionSound>
+  
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>50.0</Mass>
+  <Friction>0.3</Friction>
+
+  <GrabRange>1.8</GrabRange>
+  <KickRange>1.8</KickRange>
+
+  <Domain>Water</Domain>
+
+  <Actions>
+    <UpDown/>
+    <Jump/>
+  </Actions>
+  
+  <MoveSoundName>ch_Boat_Move</MoveSoundName>
+
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Loud</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="Swim">
+    <HullDraft>1.2</HullDraft>
+    <MinDepth>-0.3</MinDepth>
+    <MaxRotationRate>1.0</MaxRotationRate>
+    <MaxRotationalAcceleration>1.0</MaxRotationalAcceleration>
+    <MaxLinearAcceleration>2.0</MaxLinearAcceleration>
+    <MaxLinearDeceleration>2.0</MaxLinearDeceleration>
+    <MaxVerticalAcceleration>3.0</MaxVerticalAcceleration>
+    <MaxVerticalSpeed>2.0</MaxVerticalSpeed>
+    <MaxSpeed>3.0</MaxSpeed>
+    <MaxPitch>0.5</MaxPitch>
+    <MaxPitchRate>1.0</MaxPitchRate>
+    <FlexAmplitude>1.0</FlexAmplitude>
+    <Overshoot>0.5</Overshoot>
+    <Density>0.7</Density>
+
+    <DefaultJumpStrength>6.8</DefaultJumpStrength>
+    <PreJumpDelay>0.0</PreJumpDelay>
+    <PreLandDelay>0.0</PreLandDelay>
+    
+  </Chassis>
+
+  <!--<Feelers>
+    <Nose>1.2</Nose>
+    <Width>0.6</Width>
+  </Feelers>-->
+  
+  <HoldingPosition>
+    <X>-1.7</X>
+    <Y>-0.1</Y>
+  </HoldingPosition>
+
+  <Sensors>
+    <Direction>
+      <X>1</X> <!--front-->
+    </Direction>
+    
+    <!--
+    With eyes on the side of the head, the fish can see almost
+    a full 360 degrees, with only a tiny blind spot in its
+    wake. This also helps with programming flocking behavior.
+    -->
+    <Arc>5.1836</Arc>
+  </Sensors>
+  
+</XmlGameActor>

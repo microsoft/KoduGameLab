@@ -1,0 +1,2780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Help xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <programmingExamples>
+
+    <ExamplePage>
+      <description>Ha meglátok egy almát, menjek oda.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha nekiütközök egy almának, egyem meg.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha meglátok egy lila almát, kerüljem el.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.purple</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha meghallok egy Kodut, menjek oda.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.ears</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha van egy almám, egyem meg.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.got</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha nekiütközök egy piros almának, egyem meg.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>filter.red</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha elérek 100 pontot, nyerjem meg a játékot.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.scored</upid>
+            <upid>filter.100points</upid>
+            <upid>actuator.victory</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha 0 életerőm van, a játéknak vége.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.health</upid>
+            <upid>filter.000point</upid>
+            <upid>actuator.gameover</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha egy léghajóban vagyok, legyek piros.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.held</upid>
+            <upid>filter.windblimp</upid>
+            <upid>actuator.color</upid>
+            <upid>modifier.red</upid>
+            <upid>modifier.me</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    
+    <ExamplePage>
+      <description>Ha az 1. játékos megnyomja az A gombot, egyenesen felfelé kilő egy rózsaszín rakétát.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.player1</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.shoot</upid>
+            <upid>modifier.pink</upid>
+            <upid>modifier.up</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha biztos terepen vagyok, 10 életerő pontot kapok.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.terrain</upid>
+            <upid>filter.terrain</upid>
+            <upid>actuator.heal</upid>
+            <upid>modifier.010points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha nem látok egy Kodut sem, a játéknak vége.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countnone</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.gameover</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha meglátok bármit is, kerüljem el.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.anything</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Bizonyos típusú vízen ugorjak egyet.  Csak bizonyos karakterek ugorhatnak.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.water</upid>
+            <upid>filter.water</upid>
+            <upid>actuator.jump</upid>
+            <upid>modifier.once</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha meglátok egy mérges nyomólapot, kerüljem el.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.expressangry</upid>
+            <upid>filter.pushpad</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha egy alma van a közelemben, menjek felé.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.closeby</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha sok bányát látok, menjek távol tőlük!</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countmany</upid>
+            <upid>filter.mine</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.awayfromall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>0-5 másodperc között valamikor dobjon ki egy kőzetet.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.random</upid>
+            <upid>filter.05seconds</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.objectrock</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>5-10 másodperc között valamikor dobjon ki egy érmét.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.05seconds</upid>
+            <upid>filter.random</upid>
+            <upid>filter.05seconds</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.objectcoin</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha több mint 20 pontom van, nyerjem meg a játékot.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.scored</upid>
+            <upid>filter.scoreabove</upid>
+            <upid>filter.020points</upid>
+            <upid>actuator.victory</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha meglátok a közelemben egy Kodut, mondjak valamit.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.closeby</upid>
+            <upid>actuator.say</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha nem látok semmit, legyek szomorú.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countnone</upid>
+            <upid>actuator.express</upid>
+            <upid>modifier.expresssad</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha meglátok egy Kodut, legyek boldog.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.express</upid>
+            <upid>modifier.expresshappy</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha meglátok egy felhőt, gyorsan helyezzem pályára.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.cloud</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.circle</upid>
+            <upid>modifier.turnright</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha nem látok egy Kodut sem, ragyogjak pirosan.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.countnone</upid>
+            <upid>actuator.glow</upid>
+            <upid>modifier.red</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    
+    <ExamplePage>
+      <description>10 másodpercenként hozzon létre egy kőzetet.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.10seconds</upid>
+            <upid>actuator.make</upid>
+            <upid>modifier.objectrock</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Mindig játsszon le hangot.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.sound</upid>
+            <upid>modifier.mu_ambinetmodd</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Mindig maradjon zárva.  Csak néhány karakter esetén működik.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.close</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Mindig maradjon nyitva.  Csak néhány karakter esetén működik.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.open</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha látok egy mérges Kodut, a hanglejátszás álljon le.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.expressangry</upid>
+            <upid>actuator.stopsound</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha megragadok egy csillagot, váltson át a 2. oldalra.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.got</upid>
+            <upid>filter.star</upid>
+            <upid>actuator.switchtask</upid>
+            <upid>modifier.taskb</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha a lövésem eltalál egy robotot, kábítsa el.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.anybot</upid>
+            <upid>actuator.zap</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha a lövésem eltalál egy lidércet, üsse ki.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.wisp</upid>
+            <upid>actuator.pop</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha a lövésem eltalál egy bányát, robbantsa fel.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.mine</upid>
+            <upid>actuator.boom</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha a lövésem eltalál egy bányát, tüntesse el.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.sputnik</upid>
+            <upid>actuator.vanish</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha nekiütközök egy almának, ragadjam meg.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.grab</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha egy bizonyos típusú terepen vagyok, ejtsem el, amit viszek.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.terrain</upid>
+            <upid>filter.terrain</upid>
+            <upid>actuator.drop</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha nekiütközök valaminek, adjam oda, amit viszek.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.anything</upid>
+            <upid>actuator.give</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha az életerőm 0, állítsa vissza a játékot.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.health</upid>
+            <upid>filter.000point</upid>
+            <upid>actuator.restart</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha a lövésem eltalál egy hajót, vonjon le egy pontot.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.floatbot</upid>
+            <upid>actuator.unscore</upid>
+            <upid>modifier.001point</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Az A gomb megnyomásakor a kamera kövessen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.camera.followme</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A B gomb megnyomásakor a kamera ne vegyen figyelembe.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.bbutton</upid>
+            <upid>actuator.camera.ignoreme</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Az X gomb megnyomásakor a karakter szemszögét mutassa.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.xbutton</upid>
+            <upid>actuator.camera.firstperson</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A bal kar mozgatására repüljön fel vagy le.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.moveupdown</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A bal kar mozgatására forduljon jobbra.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.moveleftright</upid>
+            <upid>modifier.turnright</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha a rakétám eltalál egy sárga Kodut, 5 életerő pontot vonjon le a Kodutól.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.yellow</upid>
+            <upid>filter.boku</upid>
+            <upid>actuator.damage</upid>
+            <upid>modifier.it</upid>
+            <upid>modifier.005points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A jobb kar mozgatásakor az észak-déli tengelyen mozogjon.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.rightstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.constraint.northsouth</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A jobb kar mozgatásakor a kelet-nyugati tengelyen mozogjon.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.rightstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.constraint.eastwest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Az Y gomb megnyomásakor menjen északra.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.ybutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.north</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A B gomb megnyomásakor menjen keletre.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.bbutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.east</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Az A gomb megnyomásakor menjen délre.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.south</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Az X gomb megnyomásakor menjen nyugatra.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.xbutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.west</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A bal ravasz megnyomásakor lassan menjen előre.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.lefttrigger_analog</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.forward</upid>
+            <upid>modifier.slowly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A jobb ravasz megnyomásakor gyorsan menjen előre.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.righttrigger_analog</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.forward</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha az aréna hangját hallom, határozottan elindít egy szívet a levegőben.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.ears</upid>
+            <upid>filter.environ.arena.any</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.strongly</upid>
+            <upid>modifier.angle.high</upid>
+            <upid>modifier.objectheart</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha egy rakéta eltalál egy zöld Kodut, adjon hozzá 5 pontot a piros eredményhez.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.green</upid>
+            <upid>filter.boku</upid>
+            <upid>actuator.score</upid>
+            <upid>modifier.red</upid>
+            <upid>modifier.005points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Lőj ki egyszer egy rakétát.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>actuator.shoot</upid>
+            <upid>modifier.once</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Gyorsan barangold be a világot.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>actuator.movement</upid>
+            <upid>selector.wander</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Ha beleütközök egy kőzetbe, adjon 1 pontot a kék csapatnak.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.rock</upid>
+            <upid>actuator.score</upid>
+            <upid>modifier.001point</upid>
+            <upid>modifier.blue</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>A bal kar mozgatásakor mozogjon a karakterem.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Barangolj a világban.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.wander</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+  </programmingExamples>
+
+
+
+  <actorHelp>
+    <item>
+      <key>
+        <string>BokuBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Kodu kicsi és lassú és nehéz neki felmenni a meredek emelkedőkre.</description>
+          <upid>filter.boku</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy Kodut, ami almákat keres és eszik.</description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy Kodut, amit irányíthatsz.  A bal kar irányítja a mozgást.  Az A gomb lenyomására Kodu ugrik.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy Kodut, ami a piros utakat követi.</description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy Kodut, ami az oldalakat két különböző viselkedés közötti váltásra használja.  Az A gomb megnyomásával válthatsz a ragyogó piros és a ragyogó kék között.</description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Piros ragyogás.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Kék ragyogás.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item><!-- ====================  CLAM ==========================--><item>
+      <key>
+        <string>Kagyló</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.clam</upid>
+          <description>A kagyló olyan karakter, amely ki tud nyílni és be tud csukódni.</description>
+
+          <programs><!-- Enter the example program here --><ExampleProgram>
+              <description>Hozz létre egy kagylót, amely kinyílik és becsukódik.</description>
+              <tileUpid>actuator.open</tileUpid>
+              <pages>
+
+                <ExamplePage>
+                  <description>Nyitás és zárás</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+              </pages>
+            </ExampleProgram>
+          </programs>
+          
+        </ActorHelp>
+      </value>
+    </item><!-- ====================  StarFish ==========================--><item>
+      <key>
+        <string>Tengeri csillag</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.starfish</upid>
+          <description>A tengeri csillag a földön vagy a vízben él.</description>
+
+          <programs>
+          </programs>
+
+        </ActorHelp>
+      </value>
+    </item><!-- ====================  LillyPad Single ==========================--><item>
+      <key>
+        <string>TündérrózsaEgy</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.lilypadsingle</upid>
+          <description>Jó móka a tündérrózsákon ugrálni.</description>
+
+          <programs>
+          </programs>
+
+        </ActorHelp>
+      </value>
+    </item><!-- ====================  LillyPad ==========================--><item>
+      <key>
+        <string>Tündérrózsa</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.lilypad</upid>
+          <description>Egy csoport tündérrózsa.</description>
+          <programs>
+          </programs>
+
+        </ActorHelp>
+      </value>
+    </item><!-- ====================  SeaGrass Single==========================--><item>
+      <key>
+        <string>TengerifűEgy</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.seagrasssingle</upid>
+          <description>A tengeri fű lebeg a szélben és a vízfolyásokban.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item><!-- ====================  Sea Grass ==========================--><item>
+      <key>
+        <string>Tengerifű</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.seagrass</upid>
+          <description>Egy csomó tengerifű.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item><!-- ====================  Pipes ==========================--><item>
+      <key>
+        <string>CsőEgyenes</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.pipeStraight</upid>
+          <description>Egyenes csőrész, amely más csövekhez kapcsolódik.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>CsőSarok</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.pipeCorner</upid>
+          <description>A cső L alakú része, amelyet más csövekhez kapcsolhatsz.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>CsőKereszt</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.pipeCross</upid>
+          <description>Kereszt csőrész, amelyet más csövekhez kapcsolhatsz.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item><!-- ====================  InkJet ==========================--><item>
+      <key>
+        <string>Tintasugár</string>
+      </key>
+      <value>
+        <ActorHelp>
+
+          <upid>filter.inkjet</upid>
+          <description>Tintafekete felhő, amelyet dolgok sötétítésére használhatsz.</description>
+
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    
+    <item>
+      <key>
+        <string>Földiágyú</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Az ágyú nagy és lassú, de nagyon erős.</description>
+          <upid>filter.terracannon</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy ágyút, ami almákat keres és eszik.</description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy ágyút, amit irányíthatsz.  A bal bot irányítja a mozgást.  A gomb lenyomására az ágyú ugrik.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy ágyút, ami a piros utakat követi.</description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy ágyút, ami az oldalváltást két különböző viselkedés közötti váltásra használja.  Az A gomb megnyomásával válthatsz a ragyogó piros és a ragyogó kék között.</description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Piros ragyogás.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Kék ragyogás.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Repülőhal</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A repülőhal lebeg és gyorsan fordul - igen lendületes mozgása van.</description>
+          <upid>filter.flyfish</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy repülőhalat, ami almákat keres és eszik.</description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy repülőhalat, amit irányíthatsz.  A bal kar irányítja a mozgást.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy repülőhalat, ami a piros utakat követi.</description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy repülőhalat, ami az oldalakat két különböző viselkedés közötti váltásra használja.  Az A gomb megnyomásával válthatsz a ragyogó piros és a ragyogó kék között.</description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Piros ragyogás.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Kék ragyogás.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Sugárhajtású repülő</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A sugárhajtású repülő a földhöz közel köröz, de programozhatod fel és lefelé történő mozgásra is.</description>
+          <upid>filter.jet</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy sugárhajtású repülőgépet, ami almákat keres és eszik.</description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy sugárhajtású repülőgépet, amit irányíthatsz.  A bal kar irányítja a mozgást.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy sugárhajtású repülőgépet, ami a zöld utakat követi.</description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.green</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy sugárhajtású repülőgépet, ami az oldalakat két különböző viselkedés közötti váltásra használja.  Az A gomb megnyomásával válthatsz a ragyogó piros és a ragyogó kék között.</description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Piros ragyogás.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Kék ragyogás.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Lebegőrobot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A hajó a víz tetején lebeg, és nem tud a talajon mozogni.</description>
+          <upid>filter.floatbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy hajót, amit irányíthatsz.  A bal kar irányítja a mozgást.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy hajót, amely körbe barangolva 10 másodpercenként létrehoz egy almát.</description>
+              <tileUpid>selector.wander</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <reflex>
+                        <upids>
+                          <upid>actuator.movement</upid>
+                          <upid>selector.wander</upid>
+                        </upids>
+                      </reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.10seconds</upid>
+                        <upid>actuator.make</upid>
+                        <upid>modifier.objectfruit</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Gyorsrobot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A biciklis gyors, fel tud menni a dobokra és tud ugrani.</description>
+          <upid>filter.fastbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy biciklist, amelyet a felhasználó irányíthat.  A bal kar irányítja a mozgást.  Az A gomb lenyomására Mobiko ugrik.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Botfiú</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A bot nem tud mozogni, de el tud bújni a föld alatt, ha összezáródik.  Összezárt állapotban sebezhetetlen.</description>
+          <upid>filter.stick</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy botot, amelyet a felhasználó irányíthat.  Az Y és az A gombok kinyitják és összezárják a botot.  A B gomb lövi ki a rakétát.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.shoot</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Tengeralattjárórobot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A tengeralattjáró a legjobban víz alatt működik.</description>
+          <upid>filter.subbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy tengeralattjárót, amelyet a felhasználó irányíthat.  A bal kar irányítja a mozgást.  Az Y és A gombok lenyomásával jön fel a felszínre és merül le.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.watersurface</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.waterdive</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Ventilátor</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A ventilátorokat programozhatod tárgyak eltolására vagy behúzására.</description>
+          <upid>filter.fan</upid>
+          <programs>
+            <ExampleProgram>
+              <description>Hozz létre fényt, amely keresi és követi a csészealjakat.</description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.saucer</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Polip</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A polip egy csúszós karakter, amelyik szereti a tengert.</description>
+          <upid>filter.octopus</upid>
+          <programs><!-- Enter the example program here --><ExampleProgram>
+              <description>Hozz létre egy polipot, amely tudja magát álcázni és újra visszaváltozni.</description>
+              <tileUpid>actuator.camouflage</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>1. oldal</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.camouflage</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.uncamouflage</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy polipot, amely tintát lövell ki.</description>
+              <tileUpid>filter.inkjet</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>TintaLétrehozása</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.xbutton</upid>
+                        <upid>actuator.launch</upid>
+                        <upid>modifier.angle.low</upid>
+                        <upid>modifier.strongly</upid>
+                        <upid>modifier.objectinkjet</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Fény</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A fény gyorsan mozog és megvilágítja a világot.</description>
+          <upid>filter.light</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre fényt, amely keresi és követi a csészealjakat.</description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.saucer</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Lidérc</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A lidérc gyorsan mozog, miközben ragyogó vonalat hagy maga után.</description>
+          <upid>filter.wisp</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre lidércet, amely keresi és követi a többi lidércet.</description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.wisp</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Csészealj</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A csészealj a leggyorsabb és legfürgébb karakter. Azonnali irányváltásokra képes.</description>
+          <upid>filter.saucer</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy csészealjat, amely almákat ragad meg és eszik meg.  Ez a példa több oldalt használ.</description>
+              <tileUpid>actuator.grab</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.scan</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.grab</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.got</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.05seconds</upid>
+                        <upid>actuator.drop</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.got</upid>
+                        <upid>filter.countnone</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskc</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.05seconds</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>Hozz létre egy csészealjat, amit irányíthatsz.  A bal karral irányíthatod a mozgást, a jobb karral pedig lőhetsz.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.rightstick</upid>
+                        <upid>actuator.shoot</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Szél léghajó</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A léghajó lassan repked.</description>
+          <upid>filter.windblimp</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy léghajót, amelyet a felhasználó irányíthat.  A bal kar irányítja a mozgást.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Lufirobot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A lufi lassan lebeg a levegőben, miközben mindent megfigyel.  Ez jó játékvezetővé teszi a játékokhoz.</description>
+          <upid>filter.balloonbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy lufit, amelyet a felhasználó irányíthat.  A bal kar irányítja a mozgást.  Az Y és A gombok lenyomásával megy fel és le.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.airrise</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.airdrop</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Korong</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A korong kiváló gyors játékokhoz, mivel súrlódás nélkül repül és sebesség-csökkenés nélkül képes visszapattanni.</description>
+          <upid>filter.puck</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Nyomólap</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A nyomólap nagy és erős.</description>
+          <upid>filter.pushpad</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Teknőc</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A teknőc tud repülni a levegőben és el tud bújni a páncéljában a nyitás és zárás műveletek segítségével.  Ha a teknőc zárt állapotban van, sebezhetetlen a támadásokkal szemben.</description>
+          <upid>filter.turtle</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Hozz létre egy teknőcöt, amit irányíthatsz.  A bal kar irányítja a mozgást.  Az A gomb megnyomására a teknőc bebújik a páncéljába, az Y gomb megnyomására pedig előbújik.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Úszóhal</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A hal a vízben működik a legjobban.  A földön tehetetlen.</description>
+          <upid>filter.swimfish</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Felhő</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Felhő a Redmondi időjárás tiszteletére.</description>
+          <upid>filter.cloud</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Bánya</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A bányának vannak tüskéi, amelyek ki tud engedni vagy visszahúzni.  Használd a nyitás műveletet a tüskék mutatásához és a zárást azok elrejtéséhez.</description>
+          <upid>filter.mine</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Dob</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Ha más karakterek felugranak a dobra, fel lesznek lőve a levegőbe.</description>
+          <upid>filter.drum</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Műhold</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A műhold remek párost alkot a csészealjjal.</description>
+          <upid>filter.sputnik</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>1.NagyYucca</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A fák is programozhatók.</description>
+          <upid>filter.bigyucca1</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>1. yucca</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A fák is programozhatók.</description>
+          <upid>filter.yucca1</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>3. yucca</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A fák is programozhatók.</description>
+          <upid>filter.yucca3</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>2. yucca</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A fák is programozhatók.</description>
+          <upid>filter.yucca2</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Gyümölcs</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Az almák finomak és vicces dobálni őket.</description>
+          <upid>filter.fruit</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Jéghegy</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A jéghegy bármilyen vízben lebeg.</description>
+          <upid>filter.iceBerg</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Kőzet</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A kőzetet úgy lehet programozni, mint bármely más karaktert.</description>
+          <upid>filter.rock</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>KőzetAlacsonyÉrték</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A vulkáni kőzetet úgy lehet programozni, hogy csak a felderítő által elvégezhető műveletekre reagáljon.</description>
+          <upid>filter.rockLowValue</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>KőzetMagasÉrték</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Az üledékes kőzetet úgy lehet programozni, hogy csak a felderítő által elvégezhető műveletekre reagáljon.</description>
+          <upid>filter.rockHighValue</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>KőzetAlacsonyÉrtékIsmeretlen</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Ismeretlen kőzet, amely a felderítő általi vizsgálat után vulkáni kőzetnek bizonyult.</description>
+          <upid>filter.rockLowValueUnknown</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>KőzetMagasÉrtékIsmeretlen</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Ismeretlen kőzet, amely a felderítő általi vizsgálat után üledékes kőzetnek bizonyult.</description>
+          <upid>filter.rockHighValueUnknown</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Csillag</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A csillagot úgy lehet programozni, mint bármely más karaktert.</description>
+          <upid>filter.star</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Érme</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Az érmék „kötelező” elemek minden klasszikus ügyességi játékhoz.</description>
+          <upid>filter.coin</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>FociLabda</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Programozd vagy csak rúgj bele. Akárhogy is, ez egy labda.</description>
+          <upid>filter.soccerball</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Kastély</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A kastély nem sokat mozog.</description>
+          <upid>filter.castle</upid>
+          <programs>
+            <ExampleProgram>
+              <description>Hozz létre egy kastélyt, amely felrobban, ha valami beleütközik.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.anything</upid>
+                        <upid>actuator.boom</upid>
+                        <upid>modifier.me</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Szív</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Ezek jól működnek életerő csomagokhoz.</description>
+          <upid>filter.heart</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Lőszer</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Ezek jól működnek lövedék-csomagként.</description>
+          <upid>filter.bullet</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Gyár</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Az ACME gyár remek iránypontot jelent bármilyen játékhoz.</description>
+          <upid>filter.factory</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Kunyhó</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A kunyhó remek iránypontot jelent bármilyen játékhoz.</description>
+          <upid>filter.hut</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>ÚtPont</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Az utak rugalmasak.  Használhatod őket, hogy meghatározz egy robotnak egy követendő útvonalat.  Normál esetben láthatatlanok, de országúttá vagy fallá módosíthatók az út típusának megváltoztatásával.  Egy robot út követésére való programozásakor meghatározhatod, hogy milyen színű utat kövessen.  Az út színét ugyanúgy változtathatod, mint ahogy a robotok színét lehet módosítani.  A Világ beállításokban ellenőrizheted az útkövetés hibakeresése opciót, hogy lásd a normál esetben láthatatlan utakat a világodban.</description>
+          <upid>selector.followwaypoints</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>ÚtÁltalános</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Az utak rugalmasak.  Használhatod őket, hogy meghatározz egy robotnak egy követendő útvonalat.  Normál esetben az utak a játék közben láthatatlanok.  Egy robot út követésére való programozásakor meghatározhatod, hogy milyen színű utat kövessen.  Az út színét ugyanúgy változtathatod, mint ahogy a robotok színét lehet módosítani.  A Világ beállításokban ellenőrizheted az útkövetés hibakeresése opciót, hogy lásd a normál esetben láthatatlan utakat a világodban.</description>
+          <upid>filter.pathplain</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>ÚtNövény</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A virágos utak lehetővé teszik virágminták létrehozását a világodban.</description>
+          <upid>filter.pathflora</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>ÚtOrszágút</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Ezekkel az utakkal létrehozhatsz országutakat a játék világában.</description>
+          <upid>filter.pathroad</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>ÚtFal</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>Ezekkel az utakkal létrehozhatsz falakat a játék világában.  A csomópontok növelésével vagy csökkentésével állíthatod be a falak magasságát.</description>
+          <upid>filter.pathwall</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Felderítő</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>A Mars felderítő speciális műveleteket (megvilágítás, átkutatás, vizsgálat, fényképezés) tud végezni a Mars kőzettípuson.</description>
+          <upid>filter.rover</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>Alapvető mozgásvezérlés és gombkiosztás a teljesen funkcionális felderítőhöz.</description>
+              <tileUpid>sensor.scanned</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.picture</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.beam</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.xbutton</upid>
+                        <upid>actuator.inspect</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.scan</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+			
+			<ExampleProgram>
+              <description>Hozz létre egy felderítőt, amely ismeretlen kőzetek keres és vizsgál át.</description>
+              <tileUpid>sensor.scanned</tileUpid>
+              <pages>
+                <ExamplePage>
+                  <description>Ez az oldal leírása.  Az ActorHelp-ben nem, csak a programozási súgóban használt.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.rockUnknown</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+						<upid>filter.rockUnknown</upid>
+                        <upid>actuator.scan</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+
+  </actorHelp>
+</Help>

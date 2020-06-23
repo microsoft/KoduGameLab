@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SurfaceSets>
+    <SurfaceSet>
+      <Name>BASE</Name>
+      <TechniqueExt>WithSkinning</TechniqueExt>
+      <BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+      <DirtMapName>Textures\Character\TEX_TERRACANNON_DIRT</DirtMapName>
+      <SurfaceNames>
+        <string>Default</string>
+        <string>BlackMatte</string>
+        <string>BrushedMetalDark</string>
+        <string>TintableBumpyMetal</string>
+        <string>WhitePlastic</string>
+      </SurfaceNames>
+    </SurfaceSet>
+    <SurfaceSet>
+      <Name>Face</Name>
+      <TechniqueExt>WideFaceWithSkinning</TechniqueExt>
+      <BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+      <DirtMapName>Textures\White</DirtMapName>
+      <SurfaceNames>
+        <string>TintablePlastic</string>
+      </SurfaceNames>
+    </SurfaceSet>
+  </SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithSkinning</TechniqueExt>
+  </Model>
+  
+  <FaceParams>
+    <TypeFace>Wide</TypeFace>
+    <PupilCenter>
+      <X>0.08</X>
+      <Y>-0.05</Y>
+    </PupilCenter>
+    <PupilSize>0.3</PupilSize>
+    <LidDistance>0.0</LidDistance>
+    <EyeSpeed>0.7</EyeSpeed>
+    <MaxAsymmetry>0.2</MaxAsymmetry>
+    <PupilsName>Textures\FacePupilRound</PupilsName>
+    <PupilsCrossName>Textures\BokuFaceEyePupilCross</PupilsCrossName>
+  </FaceParams>
+  <GlowPosition>
+    <Bone>TEKK_BONE_3</Bone>
+    <Offset>
+      <X>0.3</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </Offset>
+  </GlowPosition>
+  <HealthBarOffset>
+    <X>0.5</X>
+    <Y>0</Y>
+    <Z>0.25</Z>
+  </HealthBarOffset>
+
+  <MinHeight>0.05</MinHeight>
+  <DefaultEditHeight>0.05</DefaultEditHeight>
+  <WaistOffset>0.4</WaistOffset>
+  <EyeOffset>0.8</EyeOffset>
+
+  <CollisionCenter>
+    <X>0.1</X>
+    <Y>0</Y>
+    <Z>0.7</Z>
+  </CollisionCenter>
+  <CollisionRadius>0.75</CollisionRadius>
+  <Cost>5</Cost>
+  <CollisionSound>metalHard</CollisionSound>
+  
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>200.0</Mass>
+  
+  <GrabRange>2.25</GrabRange> <!--CollisionRadius * 3-->
+  <KickRange>2.25</KickRange> <!--CollisionRadius * 3-->
+
+  <Domain>Land</Domain>
+
+  <Actions>
+    <Jump/>
+  </Actions>
+  
+  <IdleSoundName>ch_Tekkanu_Idle</IdleSoundName>
+  <MoveSoundName>ch_Tekkanu_Move</MoveSoundName>
+  <CursorSoundName>ch_Tekkanu_Cursor</CursorSoundName>
+  <JumpSoundName>ch_Tekkanu_Jump</JumpSoundName>
+  <ShootSoundName>ch_Tekkanu_Shoot</ShootSoundName>
+  <Ent1SoundName>ch_Tekkanu_Ent1</Ent1SoundName>
+  <Ent2SoundName>ch_Tekkanu_Ent2</Ent2SoundName>
+
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Loud</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="Hover">
+    <MaxLinearAcceleration>0.5</MaxLinearAcceleration>
+    <MaxSpeed>1.0</MaxSpeed>
+    <MaxRotationalAcceleration>1.0</MaxRotationalAcceleration>
+    <MaxRotationRate>1.0</MaxRotationRate>
+    <SlopeAttenuation>0.05</SlopeAttenuation>
+    <DefaultJumpStrength>5.0</DefaultJumpStrength>
+    <JumpRate>2.0</JumpRate>
+    <PreJumpDelay>0.2</PreJumpDelay> <!--6 / 30.0-->
+    <PreLandDelay>0.06666</PreLandDelay> <!--2 / 30.0-->
+  </Chassis>
+
+  <Feelers>
+    <Radius>0.6</Radius>
+  </Feelers>
+
+  <HoldingPosition>
+    <X>0.9</X>
+    <Z>1.2</Z>
+  </HoldingPosition>
+
+  <CreatedItemOffset>
+    <X>0.97</X>
+    <Y>0.0</Y>
+    <Z>0.24</Z>
+  </CreatedItemOffset>
+
+  <Sensors>
+    <Direction>
+      <X>1</X> <!--front-->
+    </Direction>
+    <Arc>3.4906</Arc> <!--200 degrees-->
+  </Sensors>
+  
+</XmlGameActor>

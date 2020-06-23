@@ -1,0 +1,1049 @@
+﻿<Tiles>
+  <sensor>
+    <gamepad label="搖桿">允許玩家控制角色。指定按鈕、發射鍵或搖桿，以及選擇玩家。</gamepad>
+    <keyboard label="鍵盤">允許玩家控制角色。指定各鍵。</keyboard>
+    <mouse label="滑鼠">回應滑鼠輸入。</mouse>
+    <touch label="觸控">回應觸控輸入。</touch>
+    <microbit label="BBC micro:bit">回應 BBC micro:bit 輸入。</microbit>
+    <eyes label="看">當你看到物件時，根據類型或顏色作出反應。如果你使用線性視野篩選器 (LOS)，山丘和牆壁會擋住你的視線。</eyes>
+    <ears label="聽">當你聽到聲響時，根據類型或聲音作出反應。可聽到牆後的聲響。</ears>
+    <bumpers label="碰到">當你碰到另一個物件時，根據類型、顏色等狀態作出反應。</bumpers>
+    <timer label="計時器">對經過的秒數作出反應。增加數字以延長時間。</timer>
+    <got label="撿取">根據類型、顏色等狀態作出拾取物件的反應。</got>
+    <scored label="計分">分數改變時作出反應。</scored>
+    <health label="生命值">體力改變時作出反應。</health>
+    <missilehit label="擊中">擊中另一個物件時，對你的射擊作出反應。可以保留分數，但你可隨心所欲地行動 - 像是射擊其他物件，將它們都變成粉紅色。</missilehit>
+    <held label="被撿起">被另一個物件撿起來時作出反應。</held>
+    <terrain label="在陸地上">對不同類型的地面作出反應。</terrain>
+    <water label="在水中">對不同類型的水作出反應。</water>
+    <beamed label="光束照射">光束照射火星岩石類型時作出反應。</beamed>
+    <inspected  label="檢驗">檢驗火星岩石類型時作出反應。</inspected>
+    <scanned label="掃描">在掃描未知的岩石以瞭解其類型時作出反應。</scanned>
+    <endofpath  label="路徑終點">當你抵達路徑終點時作出反應。</endofpath>
+    <always label="總是">隨時隨地都有動作。選擇性使用。</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">你可新增 Kodu 至遊戲中，並且設定其行為程式。</boku>
+    <bokubot label="kodu">你可新增 Kodu 至遊戲中，並且設定其行為程式。</bokubot>
+    <anything label="任何事物" />
+    <dead label="擊倒">擊倒角色時作出反應。</dead>
+    <me label="我">只檢查執行此程式的機器人。</me>
+    <said label="說">聆聽其它角色說話。輸入你想聽的話。</said>
+    <countnone label="無">當你看不到任何與描述相符的東西時作出反應。例如，「看 - 藍色 - 無」會在視野中沒有藍色東西時作出反應。</countnone>
+    <starfish label="海星">對海星作出反應。</starfish>
+    <clam label="蛤蜊">對蛤蜊作出反應。</clam>
+    <seagrass label="海草">對海草作出反應。</seagrass>
+    <seagrasssingle label="海草">對海草作出反應。</seagrasssingle>
+    <lilypad label="睡蓮葉">對睡蓮葉作出反應。</lilypad>
+    <lilypadsingle label="睡蓮葉">對睡蓮葉作出反應。</lilypadsingle>
+    <flyfish label="飛魚">你可新增飛魚角色至遊戲中，並且設定其行為程式。</flyfish>
+    <jet label="噴射機">你可新增噴射機角色至遊戲中，並且設定其行為程式。</jet>
+    <light label="光源">你可新增光源角色至遊戲中，並且設定其行為程式。這也會照亮其他物件。但你只能放置四個。</light>
+    <fan label="風扇">對風扇作出反應。</fan>
+    <octopus label="章魚">對章魚作出反應。</octopus>
+    <fastbot label="單輪車">你可新增單輪車角色至遊戲中，並且設定其行為程式。</fastbot>
+    <saucer label="飛碟">很抱歉，我不能再說下去了。關於飛碟的資訊都是機密。</saucer>
+    <windblimp label="飛船">飛船是會飛行的角色，你可將其新增至遊戲中，並且設定行為程式。</windblimp>
+    <balloonbot label="熱氣球">熱氣球是會飛行的角色，你可將其新增至遊戲中，並且設定行為程式。</balloonbot>
+    <subbot label="潛水艇">你可新增潛水艇角色至遊戲中，並且設定其行為程式。</subbot>
+    <terracannon label="加農砲">你可新增加農砲角色至遊戲中，並且設定其行為程式。</terracannon>
+    <puck label="冰球">你可新增冰球角色至遊戲中，並且設定其行為程式。</puck>
+    <wisp label="鬼火">你可新增鬼火角色至遊戲中，並且設定其行為程式。</wisp>
+    <anybot label="任何一種機器人">尋找任何一種機器人。</anybot>
+    <turtle label="烏龜">對烏龜作出反應。</turtle>
+    <rover label="火星漫遊車">對火星漫遊車作出反應。</rover>
+    <pushpad label="四爪大機器人">對四爪大機器人作出反應。</pushpad>
+    <sputnik label="人造衛星">對人造衛星作出反應。</sputnik>
+    <stick label="砲台">對砲台作出反應。</stick>
+    <stickboy label="砲台">對砲台作出反應。</stickboy>
+    <drum label="彈跳墊">對彈跳墊作出反應。</drum>
+    <mine label="水雷">對水雷作出反應。</mine>
+    <cloud label="雲">對雲作出反應。</cloud>
+    <swimfish label="魚">對魚作出反應。</swimfish>
+    <floatbot label="船">對船作出反應。</floatbot>
+    <factory label="工廠">對工廠作出反應。</factory>
+    <hut label="小屋">對小屋作出反應。</hut>
+    <castle label="城堡">對城堡作出反應。</castle>
+    <fruit label="蘋果">對蘋果作出反應。</fruit>
+    <inkjet label="烏雲">對烏雲作出反應。</inkjet>
+    <iceberg label="冰山">對冰山作出反應。</iceberg>
+    <rock label="岩石">對岩石作出反應。</rock>
+    <rockLowValue label="火成岩">對火成岩作出反應。</rockLowValue>
+    <rockHighValue label="沉積岩">對沉積岩作出反應。</rockHighValue>
+    <rockLowValueUnknown label="未知的岩石">火成岩在被掃描、被光束照射，或是被檢驗前，皆顯示為未知類型。</rockLowValueUnknown>
+    <rockHighValueUnknown label="未知的岩石">沉積岩在被掃描、被光束照射，或是被檢驗前，皆顯示為未知類型。</rockHighValueUnknown>
+    <rockUnknown label="未知的岩石">對未知的岩石作出反應。</rockUnknown>
+    <tree label="樹">對樹作出反應。</tree>
+    <pipe label="水管">對水管作出反應。</pipe>
+    <pipeStraight label="直水管">對直水管作出反應。</pipeStraight>
+    <pipeCross label="十字水管">對十字水管作出反應。</pipeCross>
+    <pipeCorner label="直角水管">對直角水管作出反應。</pipeCorner>
+    <underwater label="水面下">對水面下的物件作出反應。</underwater>
+    <building label="建築物">對建築物作出反應。</building>
+    <flower label="花" />
+    <gate label="門" />
+    <cursor label="游標">對游標作出反應。</cursor>
+    <star label="星星">對星星作出反應。</star>
+    <coin label="金幣">對金幣作出反應。</coin>
+    <soccerball label="球">對球作出反應。</soccerball>
+    <heart label="愛心">對愛心作出反應。</heart>
+    <bullet label="飛彈">對飛彈作出反應。</bullet>
+    <Black label="黑色">對黑色的東西作出反應。</Black>
+    <Grey label="灰色">對灰色的東西作出反應。</Grey>
+    <white label="白色">對白色的東西作出反應。</white>
+    <red label="紅色">對紅色的東西作出反應。</red>
+    <orange label="橘色">對橘色的東西作出反應。</orange>
+    <yellow label="黃色">對黃色的東西作出反應。</yellow>
+    <green label="綠色">對綠色的東西作出反應。</green>
+    <blue label="藍色">對藍色的東西作出反應。</blue>
+    <purple label="紫色">對紫色的東西作出反應。</purple>
+    <pink label="粉紅色">對粉紅色的東西作出反應。</pink>
+    <brown label="咖啡色">對咖啡色的東西作出反應。</brown>
+    <PathBlack label="黑色路徑">對黑色路徑作出反應。</PathBlack>
+    <PathGrey label="灰色路徑">對灰色路徑作出反應。</PathGrey>
+    <PathWhite label="白色路徑">對白色路徑作出反應。</PathWhite>
+    <PathRed label="紅色路徑">對紅色路徑作出反應。</PathRed>
+    <PathOrange label="橘色路徑">對橘色路徑作出反應。</PathOrange>
+    <PathYellow label="黃色路徑">對黃色路徑作出反應。</PathYellow>
+    <PathGreen label="綠色路徑">對綠色路徑作出反應。</PathGreen>
+    <PathBlue label="藍色路徑">對藍色路徑作出反應。</PathBlue>
+    <PathPurple label="紫色路徑">對紫色路徑作出反應。</PathPurple>
+    <PathPink label="粉紅色路徑">對粉紅色路徑作出反應。</PathPink>
+    <PathBrown label="咖啡色路徑">對咖啡色路徑作出反應。</PathBrown>
+    <pathplain label="平坦" />
+    <pathroad label="道路" />
+    <pathwall label="牆" />
+    <pathflora label="花" />
+    <yucca1 label="樹" />
+    <yucca2 label="樹" />
+    <yucca3 label="樹" />
+    <bigyucca1 label="樹" />
+    <expresshappy label="快樂">對快樂的機器人作出反應。</expresshappy>
+    <expresssad label="悲傷">對悲傷的機器人作出反應。</expresssad>
+    <expressangry label="生氣">對生氣的機器人作出反應。</expressangry>
+    <expresscrazy label="瘋狂">對瘋狂的機器人作出反應。</expresscrazy>
+    <expresshearts label="愛心">對機器人秀出愛心。</expresshearts>
+    <expressflowers label="花">對機器人秀出花朵。</expressflowers>
+    <expressstars label="星星">對機器人秀出星星。</expressstars>
+    <expressswear label="謾罵">對正在罵人的機器人作出反應。</expressswear>
+    <expressnormal label="正常">只對行為正常的機器人作出反應。</expressnormal>
+    <expressnone label="空白">只對行為正常的機器人作出反應。</expressnone>
+    <moving label="移動中">只對正在移動的機器人作出反應。</moving>
+    <camouflage label="偽裝">只對偽裝自己的機器人作出反應。</camouflage>
+    <closeby label="相近">角色只注意到與其相近的物件時就會作出 [接近] 反應。這會忽略遠處的物件。</closeby>
+    <faraway label="遙遠">只對遠處的東西作出反應。</faraway>
+
+    <infront label="面前">只對機器人面前的東西作出反應。</infront>
+    <behind label="背後">只對機器人背後的東西作出反應。</behind>
+    <toleft label="左側">只對機器人左側的東西作出反應。</toleft>
+    <toright label="右側">只對機器人右側的東西作出反應。</toright>
+    <over label="高">只對比機器人高的東西作出反應。</over>
+    <under label="矮">只對比機器人矮的東西作出反應。</under>
+
+    <lineofsight label="線性視野">地域和牆會阻礙感應器。</lineofsight>
+
+    <countfew label="少">僅在你看到某項事物的一部分時作出反應。</countfew>
+    <countmany label="多">僅在你看到大量的某項事物時作出反應。</countmany>
+    <clustermany label="群聚">僅在你看到大量的某項事物群聚在一起時作出反應。</clustermany>
+    <countany label="任何" />
+    <leftstick label="左搖桿">對控制器左邊搖桿作出反應。適合用於移動。</leftstick>
+    <rightstick label="右搖桿">對控制器右邊搖桿作出反應。適合用於射擊。</rightstick>
+    <abutton label="A 按鈕">對控制器的 A 按鈕作出反應。</abutton>
+    <bbutton label="B 按鈕">對控制器的 B 按鈕作出反應。</bbutton>
+    <xbutton label="X 按鈕">對控制器的 X 按鈕作出反應。</xbutton>
+    <ybutton label="Y 按鈕">對控制器的 Y 按鈕作出反應。</ybutton>
+    <lefttrigger label="左發射鍵">對控制器的左發射鍵作出反應。</lefttrigger>
+    <righttrigger label="右發射鍵">對控制器的右發射鍵作出反應。</righttrigger>
+    <lefttrigger_analog label="左發射鍵">對控制器的左發射鍵作出反應。</lefttrigger_analog>
+    <righttrigger_analog label="右發射鍵">對控制器的右發射鍵作出反應。</righttrigger_analog>
+    <strongly label="強大">偵測強大的訊號或數值。</strongly>
+    <weakly label="微弱">偵測微弱的訊號或數值。</weakly>
+    <microbit label="BBC micro:bit">
+      <tilt label="斜向輸入">對 BBC micro:bit 的斜向輸入作出反應。</tilt>
+      <leftbutton label="A 按鈕">按下 BBC micro:bit A 按鈕時作出反應。</leftbutton>
+      <rightbutton label="B 按鈕">按下 BBC micro:bit B 按鈕時作出反應。</rightbutton>
+      <pin1 label="pin 0">讀取 BBC micro:bit pin 0 的狀態。</pin1>
+      <pin2 label="pin 1">讀取 BBC micro:bit pin 1 的狀態。</pin2>
+      <pin3 label="pin 2">讀取 BBC micro:bit pin 2 的狀態。</pin3>
+      <shake label="晃動">偵測 micro:bit 何時晃動。</shake>
+    </microbit>
+    <mouse>
+      <button>
+        <left label="左">對滑鼠左鍵作出反應。</left>
+        <right label="右">對滑鼠右鍵作出反應。</right>
+      </button>
+      <hover label="停留">滑鼠指標停留在物件或地域上時作出反應。</hover>
+      <move label="移動">滑鼠指標移動時作出反應。</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="觸控">對主動觸控作出反應 (觸控螢幕)。</touching>
+        <tap label="點按">對點按作出反應 (觸控螢幕)。</tap>
+        <rotate label="旋轉">對旋轉手勢作出反應 (觸控螢幕)。</rotate>
+        <swipe label="撥動">對撥動手勢作出反應 (觸控螢幕)。</swipe>
+        <slide label="滑動">對滑動手勢作出反應 (觸控螢幕)。</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="白色">對 HUD 的白色按鈕作出反應。(檢視世界設定以變更)</White>
+        <Black label="黑色">對 HUD 的黑色按鈕作出反應。(檢視世界設定以變更)</Black>
+        <Grey label="灰色">對 HUD 的灰色按鈕作出反應。(檢視世界設定以變更)</Grey>
+        <Red label="紅色">對 HUD 的紅色按鈕作出反應。(檢視世界設定以變更)</Red>
+        <Green label="綠色">對 HUD 的綠色按鈕作出反應。(檢視世界設定以變更)</Green>
+        <Blue label="藍色">對 HUD 的藍色按鈕作出反應。(檢視世界設定以變更)</Blue>
+        <Orange label="橘色">對 HUD 的橘色按鈕作出反應。(檢視世界設定以變更)</Orange>
+        <Yellow label="黃色">對 HUD 的黃色按鈕作出反應。(檢視世界設定以變更)</Yellow>
+        <Purple label="紫色">對 HUD 的紫色按鈕作出反應。(檢視世界設定以變更)</Purple>
+        <Pink label="粉紅色">對 HUD 的粉紅色按鈕作出反應。(檢視世界設定以變更)</Pink>
+        <Brown label="咖啡色">對 HUD 的咖啡色按鈕作出反應。(檢視世界設定以變更)</Brown>
+      </guiButton>
+
+	  <!-- Virtual Controller -->
+	  <controllerButton_X label="X 按鈕">觸碰到螢幕上的 X 按鈕時作出反應。</controllerButton_X>
+      <controllerButton_Y label="Y 按鈕">觸碰到螢幕上的 Y 按鈕時作出反應。</controllerButton_Y>
+      <controllerButton_A label="A 按鈕">觸碰到螢幕上的 A 按鈕時作出反應。</controllerButton_A>
+      <controllerButton_B label="B 按鈕">觸碰到螢幕上的 B 按鈕時作出反應。</controllerButton_B>
+
+    </touch>
+
+    <ArrowKeys label="箭號鍵">對鍵盤上的箭號鍵作出反應。</ArrowKeys>
+    <WASDKeys label="WASD">對鍵盤上的 WASD 鍵作出反應。</WASDKeys>
+    <Akey label="A">對鍵盤上的 A 鍵作出反應。</Akey>
+    <Bkey label="B">對鍵盤上的 B 鍵作出反應。</Bkey>
+    <Ckey label="C">對鍵盤上的 C 鍵作出反應。</Ckey>
+    <Dkey label="D">對鍵盤上的 D 鍵作出反應。</Dkey>
+    <Ekey label="E">對鍵盤上的 E 鍵作出反應。</Ekey>
+    <Fkey label="F">對鍵盤上的 F 鍵作出反應。</Fkey>
+    <Gkey label="G">對鍵盤上的 G 鍵作出反應。</Gkey>
+    <Hkey label="H">對鍵盤上的 H 鍵作出反應。</Hkey>
+    <Ikey label="I">對鍵盤上的 I 鍵作出反應。</Ikey>
+    <Jkey label="J">對鍵盤上的 J 鍵作出反應。</Jkey>
+    <Kkey label="K">對鍵盤上的 K 鍵作出反應。</Kkey>
+    <Lkey label="L">對鍵盤上的 L 鍵作出反應。</Lkey>
+    <Mkey label="M">對鍵盤上的 M 鍵作出反應。</Mkey>
+    <Nkey label="N">對鍵盤上的 N 鍵作出反應。</Nkey>
+    <Okey label="O">對鍵盤上的 O 鍵作出反應。</Okey>
+    <Pkey label="P">對鍵盤上的 P 鍵作出反應。</Pkey>
+    <Qkey label="Q">對鍵盤上的 Q 鍵作出反應。</Qkey>
+    <Rkey label="R">對鍵盤上的 R 鍵作出反應。</Rkey>
+    <Skey label="S">對鍵盤上的 S 鍵作出反應。</Skey>
+    <Tkey label="T">對鍵盤上的 T 鍵作出反應。</Tkey>
+    <Ukey label="U">對鍵盤上的 U 鍵作出反應。</Ukey>
+    <Vkey label="V">對鍵盤上的 V 鍵作出反應。</Vkey>
+    <Wkey label="W">對鍵盤上的 W 鍵作出反應。</Wkey>
+    <Xkey label="X">對鍵盤上的 X 鍵作出反應。</Xkey>
+    <Ykey label="Y">對鍵盤上的 Y 鍵作出反應。</Ykey>
+    <Zkey label="Z">對鍵盤上的 Z 鍵作出反應。</Zkey>
+    <D0key label="0">對鍵盤上的數字鍵 0 作出反應。</D0key>
+    <D1key label="1">對鍵盤上的數字鍵 1 作出反應。</D1key>
+    <D2key label="2">對鍵盤上的數字鍵 2 作出反應。</D2key>
+    <D3key label="3">對鍵盤上的數字鍵 3 作出反應。</D3key>
+    <D4key label="4">對鍵盤上的數字鍵 4 作出反應。</D4key>
+    <D5key label="5">對鍵盤上的數字鍵 5 作出反應。</D5key>
+    <D6key label="6">對鍵盤上的數字鍵 6 作出反應。</D6key>
+    <D7key label="7">對鍵盤上的數字鍵 7 作出反應。</D7key>
+    <D8key label="8">對鍵盤上的數字鍵 8 作出反應。</D8key>
+    <D9key label="9">對鍵盤上的數字鍵 9 作出反應。</D9key>
+    <Spacekey label="空格鍵">對鍵盤上的空格鍵作出反應。</Spacekey>
+    <PageUpkey label="PageUp">對鍵盤上的 PageUp 鍵作出反應。</PageUpkey>
+    <PageDownkey label="PageDown">對鍵盤上的 PageDown 鍵作出反應。</PageDownkey>
+    <Endkey label="End">對鍵盤上的 End 鍵作出反應。</Endkey>
+    <Leftkey label="左">對鍵盤上的向左箭頭鍵作出反應。</Leftkey>
+    <Upkey label="上">對鍵盤上的向上箭頭鍵作出反應。</Upkey>
+    <Rightkey label="右">對鍵盤上的向右箭頭鍵作出反應。</Rightkey>
+    <Downkey label="下">對鍵盤上的向下箭頭鍵作出反應。</Downkey>
+    <Insertkey label="Insert">對鍵盤上的 Insert 鍵作出反應。</Insertkey>
+    <Deletekey label="Delete">對鍵盤上的 Delete 鍵作出反應。</Deletekey>
+    <LeftWindowskey label="左方Windows">對鍵盤上左邊的 Windows 鍵作出反應。</LeftWindowskey>
+    <RightWindowskey label="右方Windows">對鍵盤上右邊的 Windows 鍵作出反應。</RightWindowskey>
+    <Multiplykey label="*">對鍵盤上的乘號鍵作出反應。</Multiplykey>
+    <Addkey label="+">對鍵盤上的加號鍵作出反應。</Addkey>
+    <Subtractkey label="-">對鍵盤上的減號鍵作出反應。</Subtractkey>
+    <Decimalkey label=".">對鍵盤上的小數點鍵作出反應。</Decimalkey>
+    <Dividekey label="/">對鍵盤上的除號鍵作出反應。</Dividekey>
+    <LeftShiftkey label="左方Shift">對鍵盤上左邊的 Shift 鍵作出反應。</LeftShiftkey>
+    <RightShiftkey label="右方Shift">對鍵盤上右邊的 Shift 鍵作出反應。</RightShiftkey>
+    <LeftControlkey label="左方Control">對鍵盤上左邊的 Ctrl 鍵作出反應。</LeftControlkey>
+    <RightControlkey label="右方Control">對鍵盤上右邊的 Ctrl 鍵作出反應。</RightControlkey>
+    <LeftAltkey label="左方Alt">對鍵盤上左邊的 Alt 鍵作出反應。</LeftAltkey>
+    <RightAltkey label="右方Alt">對鍵盤上右邊的 Alt 鍵作出反應。</RightAltkey>
+    <OemSemicolonkey label=";">對鍵盤上的分號鍵作出反應。</OemSemicolonkey>
+    <OemPluskey label="+">對鍵盤上的加號鍵作出反應。</OemPluskey>
+    <OemCommakey label=",">對鍵盤上的逗號鍵作出反應。</OemCommakey>
+    <OemMinuskey label="-">對鍵盤上的減號鍵作出反應。</OemMinuskey>
+    <OemPeriodkey label=".">對鍵盤上的句號鍵作出反應。</OemPeriodkey>
+    <OemQuestionkey label="?">對鍵盤上的問號鍵作出反應。</OemQuestionkey>
+    <OemTildekey label="~">對鍵盤上的波浪號鍵作出反應。</OemTildekey>
+    <OemOpenBracketskey label="[">對鍵盤上的左方括號鍵作出反應。</OemOpenBracketskey>
+    <OemPipekey label="|">對鍵盤上的直線鍵作出反應。</OemPipekey>
+    <OemCloseBracketskey label="]">對鍵盤上的右方括號鍵作出反應。</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">對鍵盤上的引號鍵作出反應。</OemQuoteskey>
+    <OemBackslashkey label="\">對鍵盤上的反斜線鍵作出反應。</OemBackslashkey>
+    <F1key label="F1">對鍵盤上的 F1 鍵作出反應。</F1key>
+    <F2key label="F2">對鍵盤上的 F2 鍵作出反應。</F2key>
+    <F3key label="F3">對鍵盤上的 F3 鍵作出反應。</F3key>
+    <F4key label="F4">對鍵盤上的 F4 鍵作出反應。</F4key>
+    <F5key label="F5">對鍵盤上的 F5 鍵作出反應。</F5key>
+    <F6key label="F6">對鍵盤上的 F6 鍵作出反應。</F6key>
+    <F7key label="F7">對鍵盤上的 F7 鍵作出反應。</F7key>
+    <F8key label="F8">對鍵盤上的 F8 鍵作出反應。</F8key>
+    <F9key label="F9">對鍵盤上的 F9 鍵作出反應。</F9key>
+    <F10key label="F10">對鍵盤上的 F10 鍵作出反應。</F10key>
+    <F11key label="F11">對鍵盤上的 F11 鍵作出反應。</F11key>
+    <F12key label="F12">對鍵盤上的 F12 鍵作出反應。</F12key>
+    <Shiftkey label="Shift">對鍵盤上任何一個 Shift 鍵作出反應。</Shiftkey>
+    <Controlkey label="Control">對鍵盤上任何一個 Ctrl 鍵作出反應。</Controlkey>
+    <Altkey label="Alt">對鍵盤上任何一個 Alt 鍵作出反應。</Altkey>
+    <Windowskey label="Windows">對鍵盤上任何一個 Windows 鍵作出反應。</Windowskey>
+    <player1 label="1 號玩家">僅對 1 號玩家的控制器作出反應。預設為對任一控制器作出反應。</player1>
+    <player2 label="2 號玩家">僅對 2 號玩家的控制器作出反應。預設為對任一控制器作出反應。</player2>
+    <player3 label="3 號玩家">僅對 3 號玩家的控制器作出反應。預設為對任一控制器作出反應。</player3>
+    <player4 label="4 號玩家">僅對 4 號玩家的控制器作出反應。預設為對任一控制器作出反應。</player4>
+    <terrain label="類型">對特定類型的地域作出反應。</terrain>
+    <water label="類型">對特定類型的水作出反應。</water>
+    <quartersecond label="second">1/4 秒。與其他項目結合，加總為更大的倍數。</quartersecond>
+    <_01second label="秒">1 秒。與其他項目結合，加總為更大的倍數。</_01second>
+    <_02seconds label="秒">2 秒。與其他項目結合，加總為更大的倍數。</_02seconds>
+    <_03seconds label="秒">3 秒。與其他項目結合，加總為更大的倍數。</_03seconds>
+    <_04seconds label="秒">4 秒。與其他項目結合，加總為更大的倍數。</_04seconds>
+    <_05seconds label="秒">5 秒。與其他項目結合，加總為更大的倍數。</_05seconds>
+    <_10seconds label="秒">10 秒。與其他項目結合，加總為更大的倍數。</_10seconds>
+    <_20seconds label="秒">20 秒。與其他項目結合，加總為更大的倍數。</_20seconds>
+    <_30seconds label="秒">30 秒。與其他項目結合，加總為更大的倍數。</_30seconds>
+    <_60seconds label="秒">60 秒。與其他項目結合，加總為更大的倍數。</_60seconds>
+    <_000point label="點">0 點。</_000point>
+    <_001point label="點">1 點。與其他項目結合，加總為更大的數量。</_001point>
+    <_002points label="點">2 點。與其他項目結合，加總為更大的數量。</_002points>
+    <_003points label="點">3 點。與其他項目結合，加總為更大的數量。</_003points>
+    <_004points label="點">4 點。與其他項目結合，加總為更大的數量。</_004points>
+    <_005points label="點">5 點。與其他項目結合，加總為更大的數量。</_005points>
+    <_010points label="點">10 點。與其他項目結合，加總為更大的數量。</_010points>
+    <_020points label="點">20 點。與其他項目結合，加總為更大的數量。</_020points>
+    <_050points label="點">50 點。與其他項目結合，加總為更大的數量。</_050points>
+    <_100points label="點">100 點。與其他項目結合，加總為更大的數量。</_100points>
+    <random label="隨機">使用數字方塊建立隨機數字。例如：隨機 - 5 會建立 0 - 5 之間的隨機數字。</random>
+    <scorebucket>
+      <color>
+        <white label="白色">測試預設顯示於記分板上的白色分數。(檢視世界設定以變更。)</white>
+        <black label="黑色">測試預設顯示於記分板上的黑色分數。(檢視世界設定以變更。)</black>
+        <grey label="灰色">測試預設顯示於記分板上的灰色分數。(檢視世界設定以變更。)</grey>
+        <red label="紅色">測試預設顯示於記分板上的紅色分數。(檢視世界設定以變更。)</red>
+        <green label="綠色">測試預設顯示於記分板上的綠色分數。(檢視世界設定以變更。)</green>
+        <blue label="藍色">測試預設顯示於記分板上的藍色分數。(檢視世界設定以變更。)</blue>
+        <orange label="橘色">測試預設顯示於記分板上的橘色分數。(檢視世界設定以變更。)</orange>
+        <yellow label="黃色">測試預設顯示於記分板上的黃色分數。(檢視世界設定以變更。)</yellow>
+        <purple label="紫色">測試預設顯示於記分板上的紫色分數。(檢視世界設定以變更。)</purple>
+        <pink label="粉紅色">測試預設顯示於記分板上的粉紅色分數。(檢視世界設定以變更。)</pink>
+        <brown label="咖啡色">測試預設顯示於記分板上的咖啡色分數。(檢視世界設定以變更。)</brown>
+      </color>
+      <letter>
+        <a label="分數 A">測試不會出現在記分板上的分數 ‘A’。</a>
+        <b label="分數 B">測試不會出現在記分板上的分數 ‘B’。</b>
+        <c label="分數 C">測試不會出現在記分板上的分數 ‘C’。</c>
+        <d label="分數 D">測試不會出現在記分板上的分數 ‘D’。</d>
+        <e label="分數 E">測試不會出現在記分板上的分數 ‘E’。</e>
+        <f label="分數 F">測試不會出現在記分板上的分數 ‘F’。</f>
+        <g label="分數 G">測試不會出現在記分板上的分數 ‘G’。</g>
+        <h label="分數 H">測試不會出現在記分板上的分數 ‘H’。</h>
+        <i label="分數 I">測試不會出現在記分板上的分數 ‘I’。</i>
+        <j label="分數 J">測試不會出現在記分板上的分數 ‘J’。</j>
+        <k label="分數 K">測試不會出現在記分板上的分數 ‘K’。</k>
+        <l label="分數 L">測試不會出現在記分板上的分數 ‘L’。</l>
+        <m label="分數 M">測試不會出現在記分板上的分數 ‘M’。</m>
+        <n label="分數 N">測試不會出現在記分板上的分數 ‘N’。</n>
+        <o label="分數 O">測試不會出現在記分板上的分數 ‘O’。</o>
+        <p label="分數 P">測試不會出現在記分板上的分數 ‘P’。</p>
+        <q label="分數 Q">測試不會出現在記分板上的分數 ‘Q’。</q>
+        <r label="分數 R">測試不會出現在記分板上的分數 ‘R’。</r>
+        <s label="分數 S">測試不會出現在記分板上的分數 ‘S’。</s>
+        <t label="分數 T">測試不會出現在記分板上的分數 ‘T’。</t>
+        <u label="分數 U">測試不會出現在記分板上的分數 ‘U’。</u>
+        <v label="分數 V">測試不會出現在記分板上的分數 ‘V’。</v>
+        <w label="分數 W">測試不會出現在記分板上的分數 ‘W’。</w>
+        <x label="分數 X">測試不會出現在記分板上的分數 ‘X’。</x>
+        <y label="分數 Y">測試不會出現在記分板上的分數 ‘Y’。</y>
+        <z label="分數 Z">測試不會出現在記分板上的分數 ‘Z’。</z>
+      </letter>
+      <local>
+        <a label="分數 a">The 'a' score, which is private to this character.</a>
+        <b label="分數 b">The 'b' score, which is private to this character.</b>
+        <c label="分數 c">The 'c' score, which is private to this character.</c>
+        <d label="分數 d">The 'd' score, which is private to this character.</d>
+        <e label="分數 e">The 'e' score, which is private to this character.</e>
+        <f label="分數 f">The 'f' score, which is private to this character.</f>
+        <g label="分數 g">The 'g' score, which is private to this character.</g>
+        <h label="分數 h">The 'h' score, which is private to this character.</h>
+        <i label="分數 i">The 'i' score, which is private to this character.</i>
+        <j label="分數 j">The 'j' score, which is private to this character.</j>
+        <k label="分數 k">The 'k' score, which is private to this character.</k>
+        <l label="分數 l">The 'l' score, which is private to this character.</l>
+        <m label="分數 m">The 'm' score, which is private to this character.</m>
+        <n label="分數 n">The 'n' score, which is private to this character.</n>
+        <o label="分數 o">The 'o' score, which is private to this character.</o>
+        <p label="分數 p">The 'p' score, which is private to this character.</p>
+        <q label="分數 q">The 'q' score, which is private to this character.</q>
+        <r label="分數 r">The 'r' score, which is private to this character.</r>
+        <s label="分數 s">The 's' score, which is private to this character.</s>
+        <t label="分數 t">The 't' score, which is private to this character.</t>
+        <u label="分數 u">The 'u' score, which is private to this character.</u>
+        <v label="分數 v">The 'v' score, which is private to this character.</v>
+        <w label="分數 w">The 'w' score, which is private to this character.</w>
+        <x label="分數 x">The 'x' score, which is private to this character.</x>
+        <y label="分數 y">The 'y' score, which is private to this character.</y>
+        <z label="分數 z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="發射鍵" />
+    <timertrigger label="發射鍵" />
+    <scoreis label="是" />
+    <scoreequals label="相等">當分數與某個數字相等時作出反應。</scoreequals>
+    <scorenotequals label="不相等">當分數與某個數字不相等時作出反應。</scorenotequals>
+    <scoreabove label="高">當分數高於某個數字時作出反應。</scoreabove>
+    <scorebelow label="低">當分數低於某個數字時作出反應。</scorebelow>
+    <scoregteq label="&gt;=">當分數與某個數字相等或高於某個數字時作出反應。</scoregteq>
+    <scorelteq label="&lt;=">當分數與某個數字相等或低於某個數字時作出反應。</scorelteq>
+    <health label="體力">角色擁有的體力點數。</health>
+    <healthis label="is" />
+    <healthabove label="高">當體力高於某個數字時作出反應。</healthabove>
+    <healthbelow label="低">當體力低於某個數字時作出反應。</healthbelow>
+    <direction>
+      <up label="上">向上推搖桿時作出反應。</up>
+      <right label="右">向右推搖桿時作出反應。</right>
+      <down label="下">向下推搖桿時作出反應。</down>
+      <left label="左">向左推搖桿時作出反應。</left>
+      <clockwise label="右">對順時針旋轉手勢作出反應。</clockwise>
+      <counterclockwise label="左">對逆時針旋轉手勢作出反應。</counterclockwise>
+    </direction>
+    <not label="不">不符合「當...」條件時作出反應。</not>
+  </filter>
+  <selector>
+    <closest label="最近" />
+    <objectrelative label="相對" />
+    <towardclosest label="向前">無論對什麼東西做出反應，向前進。</towardclosest>
+    <awayfromall label="離開">無論對什麼東西做出反應，向後退。</awayfromall>
+    <avoidall label="迴避">對正在作出反應的東西保持一定的距離以迴避。</avoidall>
+    <wander label="漫遊">採用隨機方向四處遊晃。適用於程式的最後一行，如此一來，當你的角色沒有需執行的主動動作時，仍舊會四處活動。</wander>
+    <cruise label="直線">朝著任何面對的方向前進。</cruise>
+    <circle label="圓圈" />
+    <spin label="旋轉">就地旋轉。</spin>
+    <forward label="向前" />
+    <hiddenturn label="旋轉" />
+    <escape label="旋轉離開" />
+    <followwaypoints label="路徑上">移動至特定顏色的路徑。預設為移動至任一路徑。</followwaypoints>
+    <moveupdown label="上/下">向上及向下移動。</moveupdown>
+    <moveup label="上">向上移動。</moveup>
+    <movedown label="下">向下移動。</movedown>
+    <moveleftright label="轉向">向左或向右移動。</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="1 號玩家" />
+      <_2 label="2 號玩家" />
+      <_3 label="3 號玩家" />
+      <_4 label="4 號玩家" />
+    </player>
+    <reset>
+      <world label="世界">重設遊戲，但不重設記分板。</world>
+      <score label="分數">重設記分板，或提供的顏色，重設個別分數。</score>
+      <expression label="情緒表達">重設角色的情緒表達。</expression>
+      <glow label="光芒">重設角色的光芒。</glow>
+      <health label="體力">重設角色的體力。</health>
+    </reset>
+    <projectile>
+      <blip label="星光彈">星光彈是快速射擊的飛彈 - 重量比火箭輕。</blip>
+      <missile label="火箭">火箭很大，速度不快，但卻很聰明，能夠追蹤目標！</missile>
+    </projectile>
+    <slowly label="緩慢">更緩慢地移動。使用數次可讓移動速度更加緩慢。</slowly>
+    <quickly label="快速">更快速地移動。使用數次可讓移動速度更加快速。</quickly>
+    <speednormally label="一般">以一般速度移動。選擇性使用。</speednormally>
+    <weakly label="弱">以較弱的力量執行。</weakly>
+    <strongly label="強">以較強的力量執行。</strongly>
+    <strengthnormally label="一般">以一般力量執行。選擇性使用。</strengthnormally>
+    <angle>
+      <low label="低">以較弱的力量執行。</low>
+      <high label="高">以較強的力量執行。</high>
+    </angle>
+    <turnleft label="左" />
+    <turnright label="右" />
+    <turntoward label="向前" />
+    <turnforward label="向前">表示移動不應決定面對的方向。</turnforward>
+    <pitchup label="上" />
+    <pitchdown label="下" />
+    <forward label="面對">角色面對的方向。</forward>
+    <north label="北" />
+    <east label="東" />
+    <south label="南" />
+    <west label="西" />
+    <up label="上" />
+    <down label="下" />
+    <distance>
+      <near label="近">讓角色以較短的距離，繞著目標轉圈圈。</near>
+      <far label="遠">讓角色以較長的距離，繞著目標轉圈圈。</far>
+    </distance>
+    <objecticeberg label="冰山">創造冰山。</objecticeberg>
+    <objectrock label="岩石">創造岩石。</objectrock>
+    <objectrockLowValue label="岩石">創造火成岩。</objectrockLowValue>
+    <objectrockHighValue label="岩石">創造沉積岩。</objectrockHighValue>
+    <objectfruit label="蘋果">創造蘋果。</objectfruit>
+    <objectinkjet label="烏雲">創造烏雲。</objectinkjet>
+    <objectstar label="星星">創造星星。</objectstar>
+    <objectcoin label="金幣">創造金幣。</objectcoin>
+    <objectheart label="愛心">創造愛心。</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="足球">創造足球。</objectsoccerball>
+    <objectbullet label="飛彈">創造飛彈。</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="第 1 頁">內嵌或切換至第 1 頁。</taska>
+    <taskb label="第 2 頁">內嵌或切換至第 2 頁。</taskb>
+    <taskc label="第 3 頁">內嵌或切換至第 3 頁。</taskc>
+    <taskd label="第 4 頁">內嵌或切換至第 4 頁。</taskd>
+    <taske label="第 5 頁">內嵌或切換至第 5 頁。</taske>
+    <taskf label="第 6 頁">內嵌或切換至第 6 頁。</taskf>
+    <taskg label="第 7 頁">內嵌或切換至第 7 頁。</taskg>
+    <taskh label="第 8 頁">內嵌或切換至第 8 頁。</taskh>
+    <taski label="第 9 頁">內嵌或切換至第 9 頁。</taski>
+    <taskj label="第 10 頁">內嵌或切換至第 10 頁。</taskj>
+    <taskk label="第 11 頁">內嵌或切換至第 11 頁。</taskk>
+    <taskl label="第 12 頁">內嵌或切換至第 12 頁。</taskl>
+    <expresshappy label="快樂">表現快樂。</expresshappy>
+    <expresssad label="悲傷">表現悲傷。</expresssad>
+    <expressangry label="生氣">表現生氣，</expressangry>
+    <expresscrazy label="瘋狂">表現瘋狂。</expresscrazy>
+    <expresshearts label="愛心">秀出愛心。</expresshearts>
+    <expressflowers label="花朵">秀出花朵。</expressflowers>
+    <expressstars label="星星">秀出星星。</expressstars>
+    <expressswear label="罵人">以卡通化的方式罵人。</expressswear>
+    <expressnone label="無">表現如常，停止表現任何行為。</expressnone>
+    <_000point label="點">0 點。你也可以指定顏色。</_000point>
+    <_001point label="點">1 點。使用數個以加總為不同的數字。你也可以指定顏色。</_001point>
+    <_002points label="點">2 點。使用數個以加總為不同的數字。你也可以指定顏色。</_002points>
+    <_003points label="點">3 點。使用數個以加總為不同的數字。你也可以指定顏色。</_003points>
+    <_004points label="點">4 點。使用數個以加總為不同的數字。你也可以指定顏色。</_004points>
+    <_005points label="點">5 點。使用數個以加總為不同的數字。你也可以指定顏色。</_005points>
+    <_010points label="點">10 點。使用數個以加總為不同的數字。你也可以指定顏色。</_010points>
+    <_020points label="點">20 點。使用數個以加總為不同的數字。你也可以指定顏色。</_020points>
+    <_050points label="點">50 點。使用數個以加總為不同的數字。你也可以指定顏色。</_050points>
+    <_100points label="點">100 點。使用數個以加總為不同的數字。你也可以指定顏色。</_100points>
+    <random label="隨機">使用數字方塊建立隨機數字。例如：隨機 - 5 會建立 0 - 5 之間的隨機數字。</random>
+    <health label="體力">角色擁有的生命值數字。</health>
+    <teama label="A 隊" />
+    <teamb label="B 隊" />
+    <payloadzap label="昏迷">使目標昏迷數秒。</payloadzap>
+    <payloadpop label="擊倒">讓目標昏睡，直到他人重設其體力。</payloadpop>
+    <payloadboom label="爆炸">讓目標在爆炸時消失。</payloadboom>
+    <payloadvanish label="消失">讓目標安靜地消失。</payloadvanish>
+    <black label="黑色" />
+    <grey label="灰色" />
+    <white label="白色" />
+    <red label="紅色" />
+    <orange label="橘色" />
+    <yellow label="黃色" />
+    <green label="綠色" />
+    <blue label="藍色" />
+    <purple label="紫色" />
+    <pink label="粉紅色" />
+    <brown label="咖啡色" />
+    <glowoff label="關閉">關閉所有光芒。</glowoff>
+    <colorrandom label="隨機">隨機挑選顏色。</colorrandom>
+    <path>
+      <black label="黑色路徑" />
+      <grey label="灰色路徑" />
+      <white label="白色路徑" />
+      <red label="紅色路徑" />
+      <orange label="橘色路徑" />
+      <yellow label="黃色路徑" />
+      <green label="綠色路徑" />
+      <blue label="藍色路徑" />
+      <purple label="紫色路徑" />
+      <pink label="粉紅色路徑" />
+      <brown label="咖啡色路徑" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="白色">變更預設顯示於記分板上的白色分數。(檢視世界設定以變更。)</white>
+        <black label="黑色">變更預設顯示於記分板上的黑色分數。(檢視世界設定以變更。)</black>
+        <grey label="灰色">變更預設顯示於記分板上的灰色分數。(檢視世界設定以變更。)</grey>
+        <red label="紅色d">變更預設顯示於記分板上的紅色分數。(檢視世界設定以變更。)</red>
+        <green label="綠色">變更預設顯示於記分板上的綠色分數。(檢視世界設定以變更。)</green>
+        <blue label="藍色">變更預設顯示於記分板上的藍色分數。(檢視世界設定以變更。)</blue>
+        <orange label="橘色">變更預設顯示於記分板上的橘色分數。(檢視世界設定以變更。)</orange>
+        <yellow label="黃色">變更預設顯示於記分板上的黃色分數。(檢視世界設定以變更。)</yellow>
+        <purple label="紫色">變更預設顯示於記分板上的紫色分數。(檢視世界設定以變更。)</purple>
+        <pink label="粉紅色">變更預設顯示於記分板上的粉紅色分數。(檢視世界設定以變更。)</pink>
+        <brown label="咖啡色">變更預設顯示於記分板上的咖啡色分數。(檢視世界設定以變更。)</brown>
+      </color>
+      <letter>
+        <a label="分數 A">修改不會出現在記分板上的分數 ‘A’。</a>
+        <b label="分數 B">修改不會出現在記分板上的分數 ‘B’。</b>
+        <c label="分數 C">修改不會出現在記分板上的分數 ‘C’。</c>
+        <d label="分數 D">修改不會出現在記分板上的分數 ‘D’。</d>
+        <e label="分數 E">修改不會出現在記分板上的分數 ‘E’。</e>
+        <f label="分數 F">修改不會出現在記分板上的分數 ‘F’。</f>
+        <g label="分數 G">修改不會出現在記分板上的分數 ‘G’。</g>
+        <h label="分數 H">修改不會出現在記分板上的分數 ‘H’。</h>
+        <i label="分數 I">修改不會出現在記分板上的分數 ‘I’。</i>
+        <j label="分數 J">修改不會出現在記分板上的分數 ‘J’。</j>
+        <k label="分數 K">修改不會出現在記分板上的分數 ‘K’。</k>
+        <l label="分數 L">修改不會出現在記分板上的分數 ‘L’。</l>
+        <m label="分數 M">修改不會出現在記分板上的分數 ‘M’。</m>
+        <n label="分數 N">修改不會出現在記分板上的分數 ‘N’。</n>
+        <o label="分數 O">修改不會出現在記分板上的分數 ‘O’。</o>
+        <p label="分數 P">修改不會出現在記分板上的分數 ‘P’。</p>
+        <q label="分數 Q">修改不會出現在記分板上的分數 ‘Q’。</q>
+        <r label="分數 R">修改不會出現在記分板上的分數 ‘R’。</r>
+        <s label="分數 S">修改不會出現在記分板上的分數 ‘S’。</s>
+        <t label="分數 T">修改不會出現在記分板上的分數 ‘T’。</t>
+        <u label="分數 U">修改不會出現在記分板上的分數 ‘U’。</u>
+        <v label="分數 V">修改不會出現在記分板上的分數 ‘V’。</v>
+        <w label="分數 W">修改不會出現在記分板上的分數 ‘W’。</w>
+        <x label="分數 X">修改不會出現在記分板上的分數 ‘X’。</x>
+        <y label="分數 Y">修改不會出現在記分板上的分數 ‘Y’。</y>
+        <z label="分數 Z">修改不會出現在記分板上的分數 ‘Z’。</z>
+      </letter>
+      <local>
+        <a label="分數 a">The 'a' score, which is private to this character.</a>
+        <b label="分數 b">The 'b' score, which is private to this character.</b>
+        <c label="分數 c">The 'c' score, which is private to this character.</c>
+        <d label="分數 d">The 'd' score, which is private to this character.</d>
+        <e label="分數 e">The 'e' score, which is private to this character.</e>
+        <f label="分數 f">The 'f' score, which is private to this character.</f>
+        <g label="分數 g">The 'g' score, which is private to this character.</g>
+        <h label="分數 h">The 'h' score, which is private to this character.</h>
+        <i label="分數 i">The 'i' score, which is private to this character.</i>
+        <j label="分數 j">The 'j' score, which is private to this character.</j>
+        <k label="分數 k">The 'k' score, which is private to this character.</k>
+        <l label="分數 l">The 'l' score, which is private to this character.</l>
+        <m label="分數 m">The 'm' score, which is private to this character.</m>
+        <n label="分數 n">The 'n' score, which is private to this character.</n>
+        <o label="分數 o">The 'o' score, which is private to this character.</o>
+        <p label="分數 p">The 'p' score, which is private to this character.</p>
+        <q label="分數 q">The 'q' score, which is private to this character.</q>
+        <r label="分數 r">The 'r' score, which is private to this character.</r>
+        <s label="分數 s">The 's' score, which is private to this character.</s>
+        <t label="分數 t">The 't' score, which is private to this character.</t>
+        <u label="分數 u">The 'u' score, which is private to this character.</u>
+        <v label="分數 v">The 'v' score, which is private to this character.</v>
+        <w label="分數 w">The 'w' score, which is private to this character.</w>
+        <x label="分數 x">The 'x' score, which is private to this character.</x>
+        <y label="分數 y">The 'y' score, which is private to this character.</y>
+        <z label="分數 z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="我">套用動作至執行程式的機器人。</me>
+    <it label="它">套用動作至目標物件。</it>
+    <any label="任何">任何聲音。</any>
+    <event>
+      <any label="事件">任何聲音。</any>
+      <silly>
+        <any label="傻氣">任何傻氣的聲音。</any>
+        <bang label="砰">卡通化的「砰」。</bang>
+        <pow label="碰">卡通化的「碰」。</pow>
+      </silly>
+      <explode>
+        <any label="爆炸">任何爆炸音。</any>
+        <A label="爆炸音 A">爆炸音。</A>
+        <B label="爆炸音 B">爆炸音。</B>
+        <C label="爆炸音 C">爆炸音。</C>
+        <D label="爆炸音 D">爆炸音。</D>
+        <E label="爆炸音 E">爆炸音。</E>
+      </explode>
+      <musical>
+        <any label="樂音">任何樂音。</any>
+        <glock>
+          <any label="鐘琴音">任何鐘琴音。</any>
+        </glock>
+        <glock01 label="C 鐘琴音">鐘琴音。</glock01>
+        <glock02 label="C# 鐘琴音">鐘琴音。</glock02>
+        <glock03 label="D 鐘琴音">鐘琴音。</glock03>
+        <glock04 label="D# 鐘琴音">鐘琴音。</glock04>
+        <glock05 label="E 鐘琴音">鐘琴音。</glock05>
+        <glock06 label="F 鐘琴音">鐘琴音。</glock06>
+        <glock07 label="F# 鐘琴音">鐘琴音。</glock07>
+        <glock08 label="G 鐘琴音">鐘琴音。</glock08>
+        <glock09 label="G# 鐘琴音">鐘琴音。</glock09>
+        <glock10 label="A 鐘琴音">鐘琴音。</glock10>
+        <glock11 label="A# 鐘琴音">鐘琴音。</glock11>
+        <glock12 label="B 鐘琴音">鐘琴音。</glock12>
+        <gong>
+          <any label="鑼聲">任何鑼聲。</any>
+        </gong>
+        <gong01 label="C 鑼聲">鑼聲。</gong01>
+        <gong02 label="C# 鑼聲">鑼聲。</gong02>
+        <gong03 label="D 鑼聲">鑼聲。</gong03>
+        <gong04 label="D# 鑼聲">鑼聲。</gong04>
+        <gong05 label="E 鑼聲">鑼聲。</gong05>
+        <gong06 label="F 鑼聲">鑼聲。</gong06>
+        <gong07 label="F# 鑼聲">鑼聲。</gong07>
+        <gong08 label="G 鑼聲">鑼聲。</gong08>
+        <gong09 label="G# 鑼聲">鑼聲。</gong09>
+        <gong10 label="A 鑼聲">鑼聲。</gong10>
+        <gong11 label="A# 鑼聲">鑼聲。</gong11>
+        <gong12 label="B 鑼聲">鑼聲。</gong12>
+        <saw>
+          <any label="鋸齒波形聲音">任何鋸齒波形聲音。</any>
+        </saw>
+        <saw01 label="C 鋸齒波形聲音">鋸齒波形聲音。</saw01>
+        <saw02 label="C# 鋸齒波形聲音">鋸齒波形聲音。</saw02>
+        <saw03 label="D 鋸齒波形聲音">鋸齒波形聲音。</saw03>
+        <saw04 label="D# 鋸齒波形聲音">鋸齒波形聲音。</saw04>
+        <saw05 label="E 鋸齒波形聲音">鋸齒波形聲音。</saw05>
+        <saw06 label="F 鋸齒波形聲音">鋸齒波形聲音。</saw06>
+        <saw07 label="F# 鋸齒波形聲音">鋸齒波形聲音。</saw07>
+        <saw08 label="G 鋸齒波形聲音">鋸齒波形聲音。</saw08>
+        <saw09 label="G# 鋸齒波形聲音">鋸齒波形聲音。</saw09>
+        <saw10 label="A 鋸齒波形聲音">鋸齒波形聲音。</saw10>
+        <saw11 label="A# 鋸齒波形聲音">鋸齒波形聲音。</saw11>
+        <saw12 label="B 鋸齒波形聲音">鋸齒波形聲音。</saw12>
+        <sine>
+          <any label="正弦波形聲音">任何正弦波形聲音。</any>
+        </sine>
+        <sine01 label="C 正弦波形聲音">正弦波形聲音。</sine01>
+        <sine02 label="C# 正弦波形聲音">正弦波形聲音。</sine02>
+        <sine03 label="D 正弦波形聲音">正弦波形聲音。</sine03>
+        <sine04 label="D# 正弦波形聲音">正弦波形聲音。</sine04>
+        <sine05 label="E 正弦波形聲音">正弦波形聲音。</sine05>
+        <sine06 label="F 正弦波形聲音">正弦波形聲音。</sine06>
+        <sine07 label="F# 正弦波形聲音">正弦波形聲音。</sine07>
+        <sine08 label="G 正弦波形聲音">正弦波形聲音。</sine08>
+        <sine09 label="G# 正弦波形聲音">正弦波形聲音。</sine09>
+        <sine10 label="A 正弦波形聲音">正弦波形聲音。</sine10>
+        <sine11 label="A# 正弦波形聲音">正弦波形聲音。</sine11>
+        <sine12 label="B 正弦波形聲音">正弦波形聲音。</sine12>
+        <square>
+          <any label="方塊波形聲音">任何方塊波形聲音。</any>
+        </square>
+        <square01 label="C 方塊波形聲音">方塊波形聲音。</square01>
+        <square02 label="C# 方塊波形聲音">方塊波形聲音。</square02>
+        <square03 label="D 方塊波形聲音">方塊波形聲音。</square03>
+        <square04 label="D# 方塊波形聲音">方塊波形聲音。</square04>
+        <square05 label="E 方塊波形聲音">方塊波形聲音。</square05>
+        <square06 label="F 方塊波形聲音">方塊波形聲音。</square06>
+        <square07 label="F# 方塊波形聲音">方塊波形聲音。</square07>
+        <square08 label="G 方塊波形聲音">方塊波形聲音。</square08>
+        <square09 label="G# 方塊波形聲音">方塊波形聲音。</square09>
+        <square10 label="A 方塊波形聲音">方塊波形聲音。</square10>
+        <square11 label="A# 方塊波形聲音">方塊波形聲音。</square11>
+        <square12 label="B 方塊波形聲音">方塊波形聲音。</square12>
+        <drums>
+          <any label="鼓聲">任何鼓聲。</any>
+        </drums>
+        <bassdrum label="低音鼓">低音鼓。</bassdrum>
+        <hhclosed label="腳踏鈸關閉">腳踏鈸關閉。</hhclosed>
+        <hhopen label="腳踏鈸開">腳踏鈸開啟。</hhopen>
+        <shaker label="沙鈴">沙鈴。</shaker>
+        <snare label="小鼓">小鼓。</snare>
+        <tomlow label="低音鼓">低音鼓。</tomlow>
+        <tommed label="中音鼓">中音鼓。</tommed>
+        <tomhi label="高音鼓">高音鼓。</tomhi>
+      </musical>
+      <arcade>
+        <any label="遊戲音">任何遊戲音。</any>
+        <roboton label="啟動機器人">啟動機器人。</roboton>
+        <robotoff label="停用機器人">停用機器人。</robotoff>
+        <coinsound label="金幣">金幣聲音。</coinsound>
+        <gethealth label="獲得體力">獲得體力音。</gethealth>
+        <losehealth label="損失體力">損失體力音。</losehealth>
+        <shoot label="射擊">射擊音。</shoot>
+        <timer label="計時器">計時器音。</timer>
+        <win label="獲勝">獲勝音。</win>
+        <lose label="失敗">失敗音。</lose>
+        <inkjet_fire label="噴射墨水">噴射墨水的聲音。</inkjet_fire>
+        <inkjet_impact label="墨水擊中">墨水擊中的聲音。</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="雜音">任何雜音。</any>
+        <countdown_beep label="倒數">倒數嗶聲。</countdown_beep>
+        <countdown_alarm label="鬧鐘倒數">急速的倒數嗶聲。</countdown_alarm>
+        <epic_stinger label="史詩般的刺針飛彈">史詩般的刺針飛彈音。</epic_stinger>
+        <epic_stinger_a label="史詩般的刺針飛彈 a">史詩般的刺針飛彈音。</epic_stinger_a>
+        <epic_stinger_b label="史詩般的刺針飛彈 b">史詩般的刺針飛彈音。</epic_stinger_b>
+        <firepoof label="點火">點火音。</firepoof>
+        <forcefieldup label="力場上升">力場上升的聲音。</forcefieldup>
+        <forcefielddown label="力場下降">力場下降的聲音。</forcefielddown>
+        <hide label="隱藏">隱藏音。</hide>
+        <lockontarget label="鎖定目標">鎖定目標音。</lockontarget>
+        <losetarget label="失去目標">失去目標音。</losetarget>
+        <positivecondition label="好事">發生好事的聲音。</positivecondition>
+        <negativecondition label="壞事">發生壞事的聲音。</negativecondition>
+        <points label="點">收到獎勵點數的聲音。</points>
+        <pop label="彈射">彈射音。</pop>
+        <popout label="彈出">彈出音。</popout>
+        <powerup label="能量上升">撿起能量上升物件的聲音。</powerup>
+        <servo label="馬達">馬達音。</servo>
+        <watersplash label="水花濺起">水花濺起的聲音。</watersplash>
+        <waterdrop label="水滴">水滴聲。</waterdrop>
+        <tagbase label="標籤基地">標籤基地的聲音。</tagbase>
+        <whistlehuman label="吹口哨">人類吹口哨的聲音。</whistlehuman>
+        <whistlereferee label="鳴笛">裁判鳴笛聲。</whistlereferee>
+      </misc>
+      <tower>
+        <any label="塔防">增加塔防遊戲的聲音。</any>
+        <air_raid_siren label="空襲警報">空襲警報的聲音。</air_raid_siren>
+        <bomb_fall label="炸彈掉落">炸彈掉落的聲音。</bomb_fall>
+        <stun_fire label="砲塔發射">砲塔發射的聲音。</stun_fire>
+        <zapper_fire label="猛烈砲擊">砲塔猛烈砲擊的聲音。</zapper_fire>
+        <missile_fire label="發射火箭">砲塔發射火箭的聲音。</missile_fire>
+        <shrinker_fire label="收回砲管">砲塔收回砲管的聲音。</shrinker_fire>
+        <clam_coin_spit label="吐出金幣">蛤蜊吐出金幣的聲音。</clam_coin_spit>
+        <enemy_converted label="敵人被轉換">敵人被轉換的聲音。</enemy_converted>
+        <enemy_escape label="敵人逃跑">敵人逃跑的聲音。</enemy_escape>
+        <place_tower label="放置塔">放置塔樓的聲音。</place_tower>
+        <star_collect label="收集星星">收集到星星的聲音。</star_collect>
+        <coin_collect label="收集錢幣">收集到錢幣的聲音。</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="音樂">此群組中的任何音樂。</any>
+      <omni>
+        <any label="音樂">此群組中的任何音樂。</any>
+      </omni>
+    </music>
+    <mu_action label="動作">動作</mu_action>
+    <mu_ambientlight label="輕柔">輕柔的情境音樂。</mu_ambientlight>
+    <mu_ambinetmodd label="情調">情調音樂</mu_ambinetmodd>
+    <mu_brightdowntempo label="慢節奏">明亮的慢節奏音樂。</mu_brightdowntempo>
+    <mu_brightfunk label="放克">放克！</mu_brightfunk>
+    <mu_brightguitar label="吉他">明亮的吉他音樂。</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu 主題曲。</mu_kodu>
+    <music>
+      <mystery>
+        <any label="神秘">此群組中的任何音樂。</any>
+      </mystery>
+    </music>
+    <mysterya label="神秘 A">神秘音樂。</mysterya>
+    <mysteryb label="神秘 B">神秘音樂。</mysteryb>
+    <mysteryc label="神秘 C">神秘音樂。</mysteryc>
+    <music>
+      <driving>
+        <any label="驅動力">此群組中的任何音樂。</any>
+      </driving>
+    </music>
+    <drivinga label="快速 A">快速，具有驅動力的音樂。</drivinga>
+    <drivingb label="快速 B">快速，具有驅動力的音樂。</drivingb>
+    <drivingc label="快速 C">快速，具有驅動力的音樂。</drivingc>
+    <music>
+      <drama>
+        <any label="戲劇性">此群組中的任何音樂。</any>
+      </drama>
+    </music>
+    <dramaa label="戲劇性 A">戲劇性音樂。</dramaa>
+    <dramab label="戲劇性 B">戲劇性音樂。</dramab>
+    <environ>
+      <any label="環境">此群組中的任何聲音。</any>
+      <ambocean label="海洋">海洋聲。</ambocean>
+      <ambforest label="森林">森林聲。</ambforest>
+      <ambcity label="城市">城市聲。</ambcity>
+      <ambmeadow label="草地">草地聲。</ambmeadow>
+      <ambmars label="火星">火星聲。</ambmars>
+      <arena>
+        <any label="競技場">任何環境音。</any>
+        <a label="競技場 A">一大群人。</a>
+        <b label="競技場 B">一大群人。</b>
+        <c label="競技場 C">一大群人。</c>
+        <d label="競技場 D">一大群人。</d>
+        <e label="競技場 E">一大群人。</e>
+        <f label="競技場 F">一大群人。</f>
+        <g label="競技場 G">一大群人。</g>
+      </arena>
+    </environ>
+    <trackingnone label="水平">火箭會直線飛行，不會上下移動。</trackingnone>
+    <trackinghoming label="巡弋">火箭會沿著地面飛行，並且會嘗試飛過山丘和牆。</trackinghoming>
+    <constraint>
+      <leftright label="左/右">僅向左和向右移動。</leftright>
+      <fwdback label="前/後">僅向前和向後移動。</fwdback>
+      <updown label="上/下" />
+      <northsouth label="北/南">僅向北和向南移動。</northsouth>
+      <eastwest label="東/西">僅向東和向西移動。</eastwest>
+      <immobile label="凍結">即使碰到其它物件也不允許移動。</immobile>
+    </constraint>
+    <once label="一次">即使已啟動「當」的條件，每次也只會執行一次「做」之後的程式碼。</once>
+    <watertype label="水的類型">設定水的類型。</watertype>
+    <on label="開啟">設定目前狀態為「開啟」。</on>
+    <off label="關閉">設定目前狀態為「關閉」。</off>
+    <microbit>
+      <pattern label="模式">在 BBC micro:bit 螢幕上顯示 LED 模式。</pattern>
+    </microbit>
+    <frequencyunits>
+      <khz label="kHz">數值為 kHz 頻率。</khz>
+    </frequencyunits>
+  </modifier>
+  <actuator>
+    <nothing label="無" />
+    <movement label="移動">在世界中四處旅行。探索選項。不同角色有不同的移動能力。</movement>
+    <turn label="轉向">變更你的面向。</turn>
+    <eat label="吃">吞噬目標物件，其前提為彼此距離相近。</eat>
+    <say label="說">在球形文字說明或對話方塊中顯示文字訊息。使用 &lt;cr&gt; 分割行。</say>
+    <open label="開啟">對不同的角色編排不同的項目。實驗！</open>
+    <close label="關閉">對不同的角色編排不同的項目。實驗！</close>
+    <kick label="踢">如果目標夠近的話，踢它一腳。可改變力量大小。</kick>
+    <make label="創造">創造另一個物件。可以創造基本物件，或是創造任何被標為「可創造」的物件。</make>
+    <launch label="發射">如果目標夠近的話，踢它一腳。可改變力量大小。</launch>
+    <push label="推">如果目標夠近的話，把它推到特定的方向。可改變力量大小。</push>
+    <pull label="拉">如果目標夠近的話，把它拉到特定的方向。可改變力量大小。</pull>
+    <camouflage label="偽裝">偽裝目標，使其難以被看見。</camouflage>
+    <uncamouflage label="去除偽裝">去除目標偽裝，使其輕易可見。</uncamouflage>
+    <express label="表達情緒">表達情緒，或是秀出特殊效果。某些情緒表現會改變角色的臉，某些情緒僅顯示於角色上方。</express>
+    <color label="顏色">變更你自己的顏色，或是目標物件的顏色。</color>
+    <glow label="光芒">散發出放射性的光芒。可以變更顏色。</glow>
+    <sound label="播放">製造聲音！有很多聲音可選擇。</sound>
+    <stopsound label="安靜">停止發出聲音。</stopsound>
+    <jump label="跳">不同角色可跳躍的高度也不同。</jump>
+    <watersurface label="水面">「水面」動作會讓水下的角色上升至水面。</watersurface>
+    <waterdive label="潛水">「潛水」動作會讓水下的角色潛入水底。</waterdive>
+    <airrise label="向上">「向上」動作會讓可以飛行的角色飛入空中。</airrise>
+    <airdrop label="向下">「向下」動作會讓可以飛行的角色向下飛至地面。</airdrop>
+    <switchtask label="切換">變更至不同頁。只會套用目前頁面的規則。頁面是變更行為的好幫手。</switchtask>
+    <inlinetask label="內嵌">執行時，這會在此包含所有其他頁面的程式編排。這在你需要好幾頁的 Kode 時很有用，你只需要編排一次，就能隨意內嵌至你需要的位置。</inlinetask>
+    <nextlevel label="下一層">載入下一層。對多層次遊戲很有助益！</nextlevel>
+    <prevlevel label="上一層">載入上一層。對多層次遊戲很有助益！</prevlevel>
+    <waterraise label="升高水面">升高水面層至此物件下方。</waterraise>
+    <waterlower label="降低水面">降低水面層至此物件下方。</waterlower>
+    <setwater label="設定水">在此物件下方設定水的類型。</setwater>
+    <rescale label="規模">平順地變更物件的大小規模。</rescale>
+    <rescaleinstant label="規模 (立即)">立即設定物件的大小規模。</rescaleinstant>
+    <holddistance label="抓住距離">平順地變更「抓住」物件的距離。</holddistance>
+    <holddistanceinstant label="抓住距離 (立即)">立即變更「抓住」物件的距離。</holddistanceinstant>
+    <movementspeedmodify label="移動速度">為此角色設定向前移動的速度增加器。</movementspeedmodify>
+    <turningspeedmodify label="旋轉速度">為此角色設定旋轉的速度增加器。</turningspeedmodify>
+    <worldlightingchange label="亮度">平順地設定世界亮度。</worldlightingchange>
+    <worldlightingchangeinstant label="亮度 (立即)">立即設定世界亮度。</worldlightingchangeinstant>
+    <worldskychange label="天空">平順地設定世界的天空。</worldskychange>
+    <worldskychangeinstant label="天空 (立即)">立即設定世界的天空。</worldskychangeinstant>
+    <shoot label="發射" />
+    <shoot2 label="發射">發射星光彈或火箭。</shoot2>
+    <beam label="光束">對火星岩石類型發射雷射光束，識別岩石的基本性質。</beam>
+    <inspect label="檢驗">探鑽火星岩石類型，取得樣本以供未來研究。</inspect>
+    <scan label="掃描">瞭解火星漫遊車周圍地區的岩石類型。</scan>
+    <picture label="照相">以第一人稱視角照相。</picture>
+    <damage label="傷害">從我自己或目標角色身上減去體力。</damage>
+    <heal label="治療">增加體力到我自己或目標角色身上。
+	「治療」動作可以讓角色或目標物件從傷害中恢復。預設值為治療目標物件；可在修改器中包含「我」以治療角色。修改器也可用於決定治療點數的類型和數量。</heal>
+    <zap label="暈倒">讓我自己或目標物件暈倒幾秒。</zap>
+    <pop label="擊倒">在他人重設體力之前，讓機器人或我自己完全無法行動。</pop>
+    <boom label="爆炸">讓我自己或目標在爆炸時消失。</boom>
+    <vanish label="消失">讓我自己或目標安靜地消失。</vanish>
+    <grab label="抓">如果目標夠近的話，把它撿起來。你一次只能抓住一個東西。</grab>
+    <drop label="丟">丟掉你帶的所有東西。</drop>
+    <give label="給">把你帶的所有東西都交給目標角色。如果目標無法抓住東西，則其將掉落。</give>
+    <reset label="重設">重設遊戲或角色的面向。</reset>
+    <restart label="重新開始">重設遊戲或角色的面向。</restart>
+    <gameover label="結束">結束遊戲。</gameover>
+    <victory label="贏">結束遊戲，顯示勝利訊息。如果你指定顏色，我們會秀出該顏色。</victory>
+    <score label="分數">增加點數到分數中。</score>
+    <unscore label="減少">從分數中取走點數。</unscore>
+    <scoreset label="設定分數">將分數設為特定數值。</scoreset>
+    <camera>
+      <followme label="跟隨">應跟隨此角色的視角。</followme>
+      <ignoreme label="忽略">別擔心是否讓此角色保留於視野中。</ignoreme>
+      <firstperson label="第 1 人稱">從這個角色的眼睛向外看。</firstperson>
+    </camera>
+    <microbit>
+      <say label="說">在 micro:bit 顯示器上捲動文字。</say>
+      <block label="封鎖">控制所有 micro:bit 光源。</block>
+      <sequential label="儀表">依序開啟 micro:bit 光源。</sequential>
+      <show label="顯示模式">在 micro:bit 顯示器上顯示模式。</show>
+      <setpin1 label="設定 Pin 0">設定 Pin 的數位輸出狀態。</setpin1>
+      <setpin2 label="設定 Pin 1">設定 Pin 的數位輸出狀態。</setpin2>
+      <setpin3 label="設定 Pin 2">設定 Pin 的數位輸出狀態。</setpin3>
+      <setpwmfrequency>
+        <pin1 label="PWM 0 頻率">啟動脈衝寬度調變訊號，並且以選用的 kHz 修改器，設定訊號頻率 (以秒計算)。</pin1>
+        <pin2 label="PWM 1 頻率">啟動脈衝寬度調變訊號，並且以選用的 kHz 修改器，設定訊號頻率 (以秒計算)。</pin2>
+        <pin3 label="PWM 2 頻率">啟動脈衝寬度調變訊號，並且以選用的 kHz 修改器，設定訊號頻率 (以秒計算)。</pin3>
+      </setpwmfrequency>
+      <setpwmdutycycle>
+        <pin1 label="PWM 0 工作週期">啟動脈衝寬度調變訊號，並且設定訊號為「開啟」狀態的長度 (以百分比計算)。</pin1>
+        <pin2 label="PWM 1 工作週期">啟動脈衝寬度調變訊號，並且設定訊號為「開啟」狀態的長度 (以百分比計算)。</pin2>
+        <pin3 label="PWM 2 工作週期">啟動脈衝寬度調變訊號，並且設定訊號為「開啟」狀態的長度 (以百分比計算)。</pin3>
+      </setpwmdutycycle>
+    </microbit>
+  </actuator>
+  <root />
+  <group>
+    <colors label="顏色" />
+    <pathcolors label="路徑顏色" />
+    <game label="遊戲" />
+    <more label="其他" />
+    <players label="玩家" />
+    <playermods label="玩家" />
+    <actions label="動作" />
+    <settings label="設定" />
+    <combat label="戰鬥" />
+    <rover label="火星漫遊車" />
+    <holding label="抓住" />
+    <sounds label="音效" />
+    <event label="事件">
+      <explode label="爆炸" />
+      <silly label="傻氣" />
+      <musical label="音樂">
+        <glock label="鐘琴" />
+        <saw label="鋸齒波形聲音" />
+        <sine label="正弦波形聲音" />
+        <gong label="鑼聲" />
+        <square label="方塊波形聲音" />
+        <drums label="鼓聲" />
+      </musical>
+      <arcade label="遊戲音" />
+      <misc label="雜音" />
+      <tower label="塔防" />
+    </event>
+    <environ label="環境音">
+      <forest label="森林" />
+      <arena label="環境" />
+    </environ>
+    <music label="音樂">
+      <omni label="新" />
+      <mystery label="神秘" />
+      <driving label="驅動力" />
+      <drama label="戲劇性" />
+    </music>
+    <constraints label="限制" />
+    <directions label="方向" />
+    <filters>
+      <directions label="方向" />
+      <touchbuttons label="按鈕" />
+      <touchGuiButtons label="按鈕" />
+      <gestures label="手勢" />
+    </filters>
+    <expressions label="情緒表達" />
+    <projectiles label="發射物" />
+    <camera label="視角" />
+    <reset label="重設" />
+    <options label="選項" />
+    <compare label="比較" />
+    <points label="點" />
+    <time label="時間" />
+    <speed label="速度" />
+    <strength label="力量" />
+    <angle label="上方" />
+    <tracking label="追蹤" />
+    <bots label="機器人 I" />
+    <bots2 label="機器人 II" />
+    <objects label="物件" />
+    <tasks label="任務" />
+    <terrains label="類型" />
+    <waters label="類型" />
+    <setwater label="水的類型" />
+    <creatables label="可創造" />
+    <keyboard>
+      <letters label="字母" />
+      <numbers label="數字" />
+      <symbols label="符號" />
+      <misc label="其他" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+    
+    <microbit>
+      <actions>
+        <gpio label="micro:bit I/O"/>
+      </actions>
+    </microbit>
+  </group>
+</Tiles>

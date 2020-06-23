@@ -1,0 +1,2097 @@
+<?xml version="1.0"?>
+<XmlLevelData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <waypoints />
+  <actor>
+    <position>
+      <X>28.2257538</X>
+      <Y>17.5067749</Y>
+      <Z>9.605552</Z>
+    </position>
+    <orientation>2.538242</orientation>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>6a56be5d-7fde-47e9-bf86-286d240a3b60</creatableId>
+    <creatableName>Puck 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23557</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.glow</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.quartersecond</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.once</upid>
+                <upid>modifier.grey</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskb</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskc</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.pink</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>true</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.95</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>-0.829635441</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.Puck, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>43.4054947</X>
+      <Y>25.4851742</Y>
+      <Z>11.56481</Z>
+    </position>
+    <orientation>2.53824234</orientation>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>6a56be5d-7fde-47e9-bf86-286d240a3b60</creatableId>
+    <creatableName>Puck 2</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23594</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.glow</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.quartersecond</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.once</upid>
+                <upid>modifier.grey</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskb</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskc</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.pink</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.95</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>-0.829635441</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.Puck, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>30.8920975</X>
+      <Y>24.5071373</Y>
+      <Z>11.2901478</Z>
+    </position>
+    <orientation>2.538278</orientation>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>6a56be5d-7fde-47e9-bf86-286d240a3b60</creatableId>
+    <creatableName>Puck 3</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23631</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.glow</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.quartersecond</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.once</upid>
+                <upid>modifier.grey</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskb</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskc</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.pink</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.95</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>-0.829635441</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.Puck, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>49.61137</X>
+      <Y>32.4248619</Y>
+      <Z>11.7906437</Z>
+    </position>
+    <orientation>2.538242</orientation>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>6a56be5d-7fde-47e9-bf86-286d240a3b60</creatableId>
+    <creatableName>Puck 4</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23668</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.glow</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.quartersecond</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.once</upid>
+                <upid>modifier.grey</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskb</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskc</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.pink</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.95</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>-0.829635441</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.Puck, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>47.6233864</X>
+      <Y>23.1030025</Y>
+      <Z>10.3623991</Z>
+    </position>
+    <orientation>2.538242</orientation>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>6a56be5d-7fde-47e9-bf86-286d240a3b60</creatableId>
+    <creatableName>Puck 5</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23705</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.glow</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.quartersecond</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.once</upid>
+                <upid>modifier.grey</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskb</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskc</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.pink</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.95</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>-0.829635441</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.Puck, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>37.01644</X>
+      <Y>18.6959629</Y>
+      <Z>9.852748</Z>
+    </position>
+    <orientation>2.538242</orientation>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>6a56be5d-7fde-47e9-bf86-286d240a3b60</creatableId>
+    <creatableName>Puck 6</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23742</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.glow</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.quartersecond</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.yellow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.once</upid>
+                <upid>modifier.grey</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskb</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.terrain</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids>
+                <upid>filter.terrain</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskc</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.unscore</actuatorUpid>
+              <MaterialType>20</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.001point</upid>
+                <upid>modifier.grey</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>16</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.pink</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.boom</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>1</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.95</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>-0.829635441</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.Puck, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>45.83822</X>
+      <Y>-27.8556919</Y>
+      <Z>3.41120768</Z>
+    </position>
+    <orientation>4.710238</orientation>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>5de69ce6-69c5-4fc3-8a3e-0339417d101a</creatableId>
+    <creatableName>Push Pad 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23779</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.kick</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.green</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.gamepad</sensorUpid>
+              <actuatorUpid>actuator.movement</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.rightstick</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>true</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>0</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.PushPad, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>37.39696</X>
+      <Y>31.9451466</Y>
+      <Z>15.5561152</Z>
+    </position>
+    <orientation>4.772369</orientation>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Boku 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23791</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <sensorUpid>sensor.gamepad</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.abutton</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskb</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.gamepad</sensorUpid>
+              <selectorUpid>selector.moveleftright</selectorUpid>
+              <actuatorUpid>actuator.movement</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.leftstick</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.scoreabove</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.Grey</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskc</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.gameover</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.100points</upid>
+                <upid>filter.100points</upid>
+                <upid>filter.yellow</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.color</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.green</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.glow</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.blue</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes>
+            <Reflex>
+              <actuatorUpid>actuator.launch</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.creatable.6a56be5d-7fde-47e9-bf86-286d240a3b60</upid>
+                <upid>modifier.angle.low</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.yellow</upid>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.gameover</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.100points</upid>
+                <upid>filter.100points</upid>
+                <upid>filter.yellow</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.quartersecond</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taskc</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes>
+            <Reflex>
+              <sensorUpid>sensor.gamepad</sensorUpid>
+              <actuatorUpid>actuator.sound</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.abutton</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.event.silly.pow</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.gameover</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.100points</upid>
+                <upid>filter.100points</upid>
+                <upid>filter.yellow</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.switchtask</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.scorebelow</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.Grey</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.taska</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0.8</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>0</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.BokuBot, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>54.1039543</X>
+      <Y>5.670687</Y>
+      <Z>7.555558</Z>
+    </position>
+    <orientation>4.710238</orientation>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>5de69ce6-69c5-4fc3-8a3e-0339417d101a</creatableId>
+    <creatableName>Push Pad 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23847</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.kick</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.green</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.gamepad</sensorUpid>
+              <actuatorUpid>actuator.movement</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.rightstick</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>0</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.PushPad, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>42.0237236</X>
+      <Y>-1.51767266</Y>
+      <Z>6.06932926</Z>
+    </position>
+    <orientation>4.710238</orientation>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>5de69ce6-69c5-4fc3-8a3e-0339417d101a</creatableId>
+    <creatableName>Push Pad 2</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23859</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.kick</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.green</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.gamepad</sensorUpid>
+              <actuatorUpid>actuator.movement</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.rightstick</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>0</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.PushPad, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>29.2888412</X>
+      <Y>8.494866</Y>
+      <Z>7.363294</Z>
+    </position>
+    <orientation>4.710238</orientation>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>5de69ce6-69c5-4fc3-8a3e-0339417d101a</creatableId>
+    <creatableName>Push Pad 3</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23871</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.kick</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.green</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.gamepad</sensorUpid>
+              <actuatorUpid>actuator.movement</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.rightstick</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>0</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.PushPad, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>34.7814331</X>
+      <Y>-23.4392776</Y>
+      <Z>3.67976642</Z>
+    </position>
+    <orientation>4.710238</orientation>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>5de69ce6-69c5-4fc3-8a3e-0339417d101a</creatableId>
+    <creatableName>Push Pad 4</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>23883</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.kick</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.bumpers</sensorUpid>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.puck</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.010points</upid>
+                <upid>modifier.green</upid>
+              </modifierUpids>
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <sensorUpid>sensor.gamepad</sensorUpid>
+              <actuatorUpid>actuator.movement</actuatorUpid>
+              <MaterialType>-1</MaterialType>
+              <filterUpids>
+                <upid>filter.rightstick</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+            <Reflex>
+              <MaterialType>-1</MaterialType>
+              <filterUpids />
+              <modifierUpids />
+              <SayString>hola!</SayString>
+              <SayMode>1</SayMode>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <blipReloadTime>0.3</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>40</blipRange>
+      <blipsInAir>100</blipsInAir>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileLifetime>0</missileLifetime>
+      <missileRange>60</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>0.5</hearing>
+      <loudness>0.25</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <heightOffset>0</heightOffset>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+    </parameters>
+    <typename>Boku.PushPad, Boku, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</typename>
+  </actor>
+</XmlLevelData>

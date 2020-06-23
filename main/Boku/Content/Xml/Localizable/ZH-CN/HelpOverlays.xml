@@ -1,0 +1,2706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlOverlayData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <overlay>
+    <id>MiniHub</id>
+    <a>选取</a>
+    <back>继续</back>
+    <bottom>任何时间按下 &lt;start&gt; 即可回到此处。</bottom>
+
+    <keyMouse>
+      [Enter] 选取
+    </keyMouse>
+    <keyMouseBottom>任何时间按下 [home] 即可回到此处。</keyMouseBottom>
+    <touch></touch>
+    <touchBottom>任何时间点选 [home] 即可回到此处。</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMessageDialog</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>LoadLevelMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">按下<![CDATA[<back>]]> 即可回到先前的菜单。</bottom>
+
+    <keyMouseBottom>按下 [Esc] 即可回到先前的菜单。</keyMouseBottom>
+    <touchBottom>点选此处即可回到先前的菜单。</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>LoadLevelPopup</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>SelectNextLevel</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">按下<![CDATA[<back>]]> 即可回到先前的菜单。</bottom>
+
+    <keyMouseBottom>按下 [Esc] 即可回到先前的菜单。</keyMouseBottom>
+    <touchBottom>点选此处即可回到先前的菜单。</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditBase</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>鼠标编辑基础</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditHome</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>首页菜单</keyMouseBottom>
+    <touch></touch>
+    <touchBottom>首页菜单</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPlay</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>玩游戏</keyMouseBottom>
+
+    <touch></touch>
+    <touchBottom>玩游戏</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditCameraMove</id>
+
+    <keyMouse>
+      &lt;Leftmouse&gt; 拖曳地域
+      &lt;rightmouse&gt; 追踪摄影机
+      &lt;middlemouse&gt; 卷动滚轮放大缩小
+      [Tab] 寻找下一个角色
+
+	</keyMouse>
+    <keyMouseBottom>移动摄影机</keyMouseBottom>
+
+    <touch>
+	  &lt;doubleDrag&gt; 拖曳地域
+	  &lt;drag&gt; 上下视角摄影机
+	  &lt;rotate&gt; 轨道摄影机
+	  &lt;pinch&gt; 放大缩小
+	</touch>
+    <touchBottom>移动摄影机</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditAddItemPieMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditEditObject</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 新增/选取对象
+	  &lt;rightmouse&gt; 选项
+
+	  HelpLevelMid
+	  [F3] 切换对齐网格
+	  [Tab] 寻找下一个角色
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>对象工具：新增或编辑角色和对象</keyMouseBottom>
+
+    <touch>
+	  &lt;doubleTap&gt; 新增物件
+	  &lt;tap&gt; 选取对象
+	  &lt;drag&gt; 拖曳物件
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>对象工具：新增或编辑角色和对象</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocus</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 拖曳物件
+	  &lt;rightmouse&gt; 选项
+	  [leftarrow][rightarrow] 变更颜色
+
+	  HelpLevelMid
+	  [F3] 切换对齐网格
+	  [Tab] 寻找下一个角色
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>对象工具：新增或编辑角色和对象</keyMouseBottom>
+
+    <touch>
+	  &lt;doubleTap&gt; 新增物件
+	  &lt;tap&gt; 选取对象
+	  &lt;drag&gt; 拖曳物件
+	  &lt;touchHold&gt; 选项
+	  &lt;rotate&gt; 旋转对象
+	  &lt;pinch&gt; 缩放物件
+	</touch>
+    <touchBottom>对象工具：新增或编辑角色和对象</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocusTree</id>
+
+    <keyMouse>
+	  &lt;leftmouse&gt; 拖曳物件
+	  &lt;rightmouse&gt; 选项
+	  [leftarrow][rightarrow] 变更颜色
+	  [uparrow][downarrow] 变更树的类型
+
+	  HelpLevelMid
+	  [F3] 切换对齐网格
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>对象工具：新增或编辑角色和对象</keyMouseBottom>
+
+    <touch>
+	  &lt;doubleTap&gt; 新增物件
+	  &lt;tap&gt; 选取对象
+	  &lt;drag&gt; 拖曳物件
+	  &lt;touchHold&gt; 选项
+	  &lt;rotate&gt; 旋转对象
+	  &lt;pinch&gt; 缩放物件
+	</touch>
+    <touchBottom>对象工具：新增或编辑角色和对象</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPaths</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 拖曳节点或边缘
+	  &lt;rightmouse&gt; 选项
+	  [Shift] 作用于整条路径上
+
+	  HelpLevelMid
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>路径工具：新增或编辑路径</keyMouseBottom>
+
+    <touch>
+	  &lt;Tap&gt; 选取节点或边缘
+	  &lt;drag&gt; 拖曳节点或边缘
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>路径工具：新增或编辑路径</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAllPath</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 拖曳节点或边缘
+	  &lt;rightmouse&gt; 选项
+	  [Shift] 作用于整条路径上
+
+	  HelpLevelMid
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>路径工具：新增或编辑路径</keyMouseBottom>
+
+    <touch>
+	  &lt;Tap&gt; 选取路径
+	  &lt;drag&gt; 拖曳路径
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>路径工具：新增或编辑路径 (作用于路径)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAddPath</id>
+    <keyMouse>
+	  &lt;Leftmouse&gt; 拖曳节点或边缘
+	  &lt;rightmouse&gt; 选项
+	  [Shift] 作用于整条路径上
+
+	  HelpLevelMid
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>路径工具：新增或编辑路径</keyMouseBottom>
+
+    <touch>
+	  &lt;Tap&gt; 新增节点或连结节点
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>路径工具：新增路径</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeletePath</id>
+    <touch>
+	  &lt;Tap&gt; 删除完整路径
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>路径工具：删除路径</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeleteNode</id>
+    <touch>
+	  &lt;Tap&gt; 删除节点
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>路径工具：删除节点</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsFocusNode</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 拖曳节点
+	  &lt;rightmouse&gt; 选项
+	  [Shift] 作用于整条路径
+	  [leftarrow][rightarrow] 变更色彩
+	  [uparrow][downarrow] 变更路径样式
+
+	  HelpLevelMid
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>路径工具：新增或编辑路径</keyMouseBottom>
+
+    <touch>
+	  &lt;Tap&gt; 选取节点
+	  &lt;drag&gt; 拖曳节点
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>路径工具：新增或编辑路径</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusEdge</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 拖曳边缘
+	  &lt;rightmouse&gt; 选项
+	  [Shift] 作用于整条路径
+	  [leftarrow][rightarrow] 变更色彩
+
+	  HelpLevelMid
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>路径工具：新增或编辑路径</keyMouseBottom>
+
+    <touch>
+	  &lt;Tap&gt; 选取边缘
+	  &lt;drag&gt; 拖曳边缘
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>路径工具：新增或编辑路径</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusPath</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 拖曳路径
+	  &lt;rightmouse&gt; 选项
+	  [Shift] 作用于整条路径
+	  [leftarrow][rightarrow] 变更色彩
+
+	  HelpLevelMid
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>路径工具：新增或编辑路径</keyMouseBottom>
+
+    <touch>
+	  &lt;Tap&gt; 选取路径
+	  &lt;drag&gt; 拖曳路径
+	  &lt;touchHold&gt; 选项
+	</touch>
+    <touchBottom>路径工具：新增或编辑路径</touchBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainPaint</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 刷色及增加材质纹理
+	  [Shift] +&lt;leftmouse&gt; 刷上材质纹理
+	  [Ctrl] +&lt;leftmouse&gt; 增加材质纹理
+	  &lt;rightmouse&gt; 删除
+
+	  [leftarrow][rightarrow] 变更刷头大小
+
+	  HelpLevelMid
+	  [Alt] 从地域中挑选材质纹理
+	  [F3] 切换对齐网格
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>地面刷具：刷色、增加，或删除地面</keyMouseBottom>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;drag&gt; 移动刷具
+	</touch>
+    <touchBottom>地面刷具：刷色、增加，或删除地面</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintSmooth</id>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;drag&gt; 增加和刷上材质纹理 (平滑)
+	</touch>
+    <touchBottom>地面刷具：增加地面，为地面刷色 (平滑)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintCubic</id>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;drag&gt; 增加和刷上材质纹理 (方块状)
+	</touch>
+    <touchBottom>地面刷具：增加地面，为地面刷色 (方块状)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainDelete</id>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;drag&gt; 移除地面
+	</touch>
+    <touchBottom>地面刷具：移除地面</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintMagicBrush</id>
+
+    <keyMouse>
+	  &lt;leftmouse&gt; 刷色及增加材质纹理
+	  [Shift] +&lt;leftmouse&gt; 刷上材质纹理
+	  [Ctrl] +&lt;leftmouse&gt; 增加材质纹理
+	  &lt;rightmouse&gt; 删除
+
+	  [leftarrow][rightarrow] 变更刷头大小
+	  [uparrow] 样式：方块状
+	  [downarrow] 样式：平滑
+
+	  HelpLevelMid
+	  [Alt] 从地域中挑选材质纹理
+	  [F3] 切换对齐网格
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>地面刷具：刷色、增加，或删除地面</keyMouseBottom>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 移动刷具
+	  &lt;drag&gt; 刷上和增加材质纹理
+	</touch>
+    <touchBottom>地面刷具：刷色、增加，或删除地面</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainRaiseLower</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 升高地域
+	  &lt;middlemouse&gt; 平滑地域
+	  &lt;rightmouse&gt; 降低地域
+
+	  [leftarrow][rightarrow] 变更刷头大小
+
+	  HelpLevelMid
+	  [F3] 切换对齐网格
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>上/下：创造山丘或山谷</keyMouseBottom>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 移动刷具
+	</touch>
+    <touchBottom>上/下：创造山丘或山谷</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainRaising</id>
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;drag&gt; 升高地域
+	</touch>
+    <touchBottom>上/下：创造山丘或山谷</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainLowering</id>
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;drag&gt; 降低地域
+	</touch>
+    <touchBottom>上/下：创造山丘或山谷</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 使其平滑
+	  &lt;middlemouse&gt; 平滑地域
+	  &lt;rightmouse&gt; 使其高低起伏
+
+	  [leftarrow][rightarrow] 变更刷头大小
+
+	  HelpLevelMid
+	  [F3] 切换对齐网格
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>变形：让地面平滑或出现高低起伏</keyMouseBottom>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 移动刷具
+	</touch>
+    <touchBottom>变形：让地面平滑或出现高低起伏</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleFlatten</id>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;drag&gt; 让地域变形
+	</touch>
+    <touchBottom>变形：让地面平滑或出现高低起伏</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleSmooth</id>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;drag&gt; 让地域平滑
+	</touch>
+    <touchBottom>变形：让地面平滑或出现高低起伏</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 制造山尖
+	  &lt;middlemouse&gt; 平滑地域
+	  &lt;rightmouse&gt; 制造山峦
+
+	  [leftarrow][rightarrow] 变更刷头大小
+
+	  HelpLevelMid
+	  [F3] 切换对齐网格
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>粗糙化：创造有山尖或是山峦的地面</keyMouseBottom>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 移动刷具
+	</touch>
+    <touchBottom>粗糙化：创造有山尖或是山峦的地面</touchBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSmooth</id>
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 让地域平滑
+	</touch>
+    <touchBottom>粗糙化：创造有山尖或是山峦的地面</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleHilly</id>
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 制造山峦
+	</touch>
+    <touchBottom>粗糙化：创造有山尖或是山峦的地面</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSpikey</id>
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 制造山尖
+	</touch>
+    <touchBottom>粗糙化：创造有山尖或是山峦的地面</touchBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 升高水面
+	  &lt;middlemouse&gt; 变更水的颜色
+	  &lt;rightmouse&gt; 降低水面
+
+	  HelpLevelMid
+	  [F3] 切换对齐网格
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>水工具：增加和移除水，或是为水染色</keyMouseBottom>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 移动刷具
+	</touch>
+    <touchBottom>水工具：增加和移除水，或是为水染色</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleRaise</id>
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 升高水面
+	</touch>
+    <touchBottom>水工具：增加和移除水，或是为水染色</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleLower</id>
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 降低水面
+	</touch>
+    <touchBottom>水工具：增加和移除水，或是为水染色</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditDeleteObjects</id>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 删除
+	  &lt;rightmouse&gt; 这里什么都没有，到处晃晃
+
+	  [leftarrow][rightarrow] 变更刷头大小
+
+	  HelpLevelMid
+	  [F3] 切换对齐网格
+	  [Space] 移动摄影机
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>删除工具：使用刷具清除对象</keyMouseBottom>
+
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 移动刷具
+	</touch>
+    <touchBottom>删除工具：使用刷具清除对象</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditDeleteObjects_Deleting</id>
+    <touch>
+	  &lt;brushBigger&gt; 增加刷头大小
+	  &lt;brushSmaller&gt; 减少刷头大小
+	  &lt;tap&gt; 删除对象
+	</touch>
+    <touchBottom>删除工具：使用刷具清除对象</touchBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditWorldTweak</id>
+
+    <keyMouse>
+	  变更世界设定
+
+	  HelpLevelMid
+	  [Home] 首页菜单
+	  [Esc] 执行
+	</keyMouse>
+    <keyMouseBottom>变更世界设定</keyMouseBottom>
+    <touchBottom>变更世界设定</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditSlider</id>
+
+    <keyMouse>
+	  [leftarrow][rightarrow] 变更数值
+	  [Esc] 接受
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenu</id>
+	<!-- Placeholder, should not be seen. -->
+	<back>执行游戏</back>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenuRunSim</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>玩游戏</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>玩游戏</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  HelpLevelMid
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>玩游戏</keyMouseBottom>
+    <touchBottom>玩游戏</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuHomeMenu</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>首页菜单</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>首页菜单</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  HelpLevelMid
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>玩游戏</keyMouseBottom>
+    <touchBottom>玩游戏</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuObjectEdit</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>对象工具：新增或编辑角色和对象</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>对象工具：新增或编辑角色和对象</keyMouseBottom>
+
+    <touchBottom>对象工具：新增或编辑角色和对象</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuDeleteObjects</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>删除工具：使用刷具清除对象</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>删除工具：使用刷具清除对象</keyMouseBottom>
+
+    <touchBottom>删除工具：使用刷具清除对象</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSmoothLevel</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>变形：让地面平滑或出现高低起伏</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>变形：让地面平滑或出现高低起伏</keyMouseBottom>
+
+    <touchBottom>变形：让地面平滑或出现高低起伏</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainMaterial</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>地面刷具：增加或移除地面</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>地面刷具：刷色、增加，或删除地面</keyMouseBottom>
+
+    <touchBottom>地面刷具：刷色、增加，或删除地面</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSpikeyHilly</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>粗糙化：创造有山尖或是山峦的地面</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>粗糙化：创造有山尖或是山峦的地面</keyMouseBottom>
+
+    <touchBottom>粗糙化：创造有山尖或是山峦的地面</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainUpDown</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>上/下：创造山丘或山谷</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>上/下：创造山丘或山谷</keyMouseBottom>
+
+    <touchBottom>上/下：创造山丘或山谷</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainWater</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>水工具：增加和移除水，或是为水染色</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>水工具：增加和移除水，或是为水染色</keyMouseBottom>
+
+    <touchBottom>水工具：增加和移除水，或是为水染色</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuWorldSettings</id>
+    <back>执行游戏</back>
+    <start>首页菜单</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取工具</a>
+    <leftStick mid = "false">移动光标</leftStick>
+    <rightStick mid = "false">轨道摄影机</rightStick>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+    <leftShoulder mid = "false">缩小</leftShoulder>
+    <rightShoulder mid = "false">放大</rightShoulder>
+    <bottom>变更世界设定</bottom>
+
+    <keyMouse>
+	  [Esc] 执行
+	  [Home] 首页菜单
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	</keyMouse>
+    <keyMouseBottom>变更世界设定</keyMouseBottom>
+
+    <touchBottom>变更世界设定</touchBottom>
+
+  </overlay>
+
+  <overlay>
+    <id>BrushPickerSquare</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>方形刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>方形刷具</keyMouseBottom>
+
+    <touchBottom>方形刷具</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSquareLinear</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>方形直线刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>方形直线刷具</keyMouseBottom>
+
+    <touchBottom>方形直线刷具</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRound</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>实心圆形刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>实心圆形刷具</keyMouseBottom>
+
+    <touchBottom>实心圆形刷具</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRound</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>中型圆形刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>中型圆形刷具</keyMouseBottom>
+
+    <touchBottom>中型圆形刷具</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRound</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>软性圆形刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>软性圆形刷具</keyMouseBottom>
+
+    <touchBottom>软性圆形刷具</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRoundLinear</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>实心圆形直线刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>实心圆形直线刷具</keyMouseBottom>
+
+    <touchBottom>实心圆形直线刷具</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRoundLinear</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>中型圆形直线刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>中型圆形直线刷具</keyMouseBottom>
+
+    <touchBottom>中型圆形直线刷具</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRoundLinear</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>软性圆形直线刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>软性圆形直线刷具</keyMouseBottom>
+
+    <touchBottom>软性圆形直线刷具</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottled</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>斑点刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>斑点刷具</keyMouseBottom>
+
+    <touchBottom>斑点刷具</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottledLinear</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>斑点直线刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>斑点直线刷具</keyMouseBottom>
+
+    <touchBottom>斑点直线刷具</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMagic</id>
+    <y>接受和切换至材质纹理挑选器</y>
+    <b>取消</b>
+    <a>选取刷具</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>魔法刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+    <keyMouseBottom>魔法刷具</keyMouseBottom>
+
+    <touchBottom>魔法刷具</touchBottom>
+
+  </overlay>
+
+  <overlay>
+    <id>CameraSetMode</id>
+    <a>接受</a>
+    <bottom>将摄影机移至你要的位置，然后按下 &lt;A&gt;</bottom>
+
+    <keyMouse>
+	  [Enter] 接受
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+	</keyMouse>
+    <keyMouseBottom>将摄影机移至你要的位置，然后按下 [Enter]</keyMouseBottom>
+
+    <touch>
+	  &lt;doubleDrag&gt; 拖曳地域
+	  &lt;drag&gt; 上下视角摄影机
+	  &lt;rotate&gt; 轨道摄影机
+	  &lt;pinch&gt; 放大缩小
+	</touch>
+
+    <touchBottom>将摄影机移至你要的位置，然后点选此处</touchBottom>
+
+  </overlay>
+
+  <!--Object edit permutations-->
+  <overlay>
+	<!-- Nothing selected, nothing moused, something in the clipboard-->
+	<id>ObjectEdit</id>
+    <y></y>
+    <x></x>
+    <b>工具选单</b>
+    <a>增加</a>
+
+    <leftTrigger ghosted = "true">剪下</leftTrigger>
+    <rightTrigger ghosted = "false">贴上</rightTrigger>
+
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Alt]+&lt;leftmouse&gt; 贴上
+	  [Space]+&lt;leftmouse&gt; 增加
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+	<!-- Nothing selected, nothing moused, nothing in the clipboard-->
+	<id>ObjectEditEmptyClipboard</id>
+    <y></y>
+    <x></x>
+    <b>工具选单</b>
+    <a>增加</a>
+
+    <leftTrigger ghosted = "true">剪下</leftTrigger>
+    <rightTrigger ghosted = "true">贴上</rightTrigger>
+
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Space]+&lt;leftmouse&gt; 增加
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+	<!-- Something selected (picked up, red), nothing moused.
+    Selected thing isn't programmable. This never happens any more, since everything except the cursor
+    and waypoints (handled elsewhere) is programmable.
+    -->
+	<id>ObjectEditSelected</id>
+    <y></y>
+    <x>设定</x>
+    <a>放在此处</a>
+    <leftTrigger>剪下</leftTrigger>
+    <rightTrigger>复制</rightTrigger>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <dpadVertical>向上移动/向下移动</dpadVertical>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+	<!-- Something selected (picked up, red), nothing moused. Selected thing is a gameactor.-->
+	<id>ObjectEditSelectedProgrammable</id>
+    <y>编排程序</y>
+    <x>设定</x>
+    <a>放在此处</a>
+    <leftTrigger>剪下</leftTrigger>
+    <rightTrigger>复制</rightTrigger>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <dpadVertical>向上移动/向下移动</dpadVertical>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+	<!-- Something cursored (not picked up, blue), nothing moused. Cursored thing is not a gameactor.
+    This isn't useful anymore, since everything is programmable except the cursor and
+    waypoints (handled elsewhere)
+    -->
+	<id>ObjectEditFocus</id>
+    <y></y>
+    <x>设定</x>
+    <b>工具选单</b>
+    <a>挑选</a>
+    <leftTrigger>剪下</leftTrigger>
+    <rightTrigger>复制</rightTrigger>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <dpadVertical>变更大小</dpadVertical>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+	<!-- GameActor cursored (not picked up, blue), nothing moused.-->
+	<id>ObjectEditFocusProgrammable</id>
+    <y>编排程序</y>
+    <x>设定</x>
+    <b>工具选单</b>
+    <a>挑选</a>
+    <leftTrigger>剪下</leftTrigger>
+    <rightTrigger>复制</rightTrigger>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <dpadVertical>变更大小</dpadVertical>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <!--And one for the trees-->
+  <overlay>
+	<!--A Tree is cursored (not picked up), nothing highlighted.-->
+	<id>TreeEditFocusProgrammable</id>
+    <y>编排程序</y>
+    <x>设定</x>
+    <b>工具选单</b>
+    <a>挑选</a>
+    <leftTrigger>剪下</leftTrigger>
+    <rightTrigger>复制</rightTrigger>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <dpadVertical>变更类型</dpadVertical>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectEditMouseOver</id>
+
+    <keyMouse>
+	  [Y] 编排程序
+	  [X] 设定
+	  [leftarrow][rightarrow] 变更颜色
+	  [uparrow][downarrow] 变更大小
+
+	  &lt;leftmouse&gt; 拖曳
+	  [Shift]+&lt;leftmouse&gt; 升高/降低
+	  [Shift]+&lt;rightmouse&gt; 旋转
+
+	  [Space]+&lt;leftmouse&gt; 增加
+	  [Alt]+&lt;leftmouse&gt; 复制
+	  [Ctrl]+&lt;leftmouse&gt; 剪下
+
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>TreeEditMouseOver</id>
+
+    <keyMouse>
+	  [Y] 编排程序
+	  [X] 设定
+	  [leftarrow][rightarrow] 变更颜色
+	  [uparrow][downarrow] 变更大小
+	  [Tab] 变更类型
+
+	  &lt;leftmouse&gt; 拖曳
+	  [Shift]+&lt;leftmouse&gt; 升高/降低
+	  [Shift]+&lt;rightmouse&gt; 旋转
+
+	  [Space]+&lt;leftmouse&gt; 增加
+	  [Alt]+&lt;leftmouse&gt; 复制
+	  [Ctrl]+&lt;leftmouse&gt; 剪下
+
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+  <!--End of the object edit permutations-->
+
+  <overlay>
+    <id>ObjectTweak</id>
+    <y></y>
+    <x></x>
+    <b>工具选单</b>
+    <a></a>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocus</id>
+    <y></y>
+    <x></x>
+    <b>工具选单</b>
+    <a>调整设定</a>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocusProgrammable</id>
+    <y>编排程序</y>
+    <x></x>
+    <b>工具选单</b>
+    <a>调整设定</a>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>TextDisplay</id>
+    <a>继续</a>
+  </overlay>
+
+  <overlay>
+    <id>ScrollableTextDisplay</id>
+    <a>继续</a>
+    <leftStick>卷动文字</leftStick>
+  </overlay>
+
+  <overlay>
+    <id>PieSelectorProgrammingNoSelection</id>
+    <b>取消</b>
+    <leftStick>选取方块</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorProgramming</id>
+    <a>增加方块</a>
+    <b>取消</b>
+    <y>说明</y>
+    <leftStick>选取项目</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItemNoSelection</id>
+    <b>取消</b>
+    <leftStick>选取项目</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItem</id>
+    <a>增加选取范围</a>
+    <b>取消</b>
+    <y>说明</y>
+    <leftStick>选取项目</leftStick>
+  </overlay>
+  <overlay>
+    <id>HelpCardProgramming</id>
+  </overlay>
+  <overlay>
+    <id>HelpCardAddItem</id>
+  </overlay>
+
+  <overlay>
+    <id>ToolBox</id>
+	<!-- Placeholder, should not be seen. -->
+	<y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>BasePicker</id>
+	<!-- Placeholder, should not be seen. -->
+	<y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>BrushPicker</id>
+    <y></y>
+    <x></x>
+
+    <b>取消</b>
+    <a>接受</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>选择刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMaterial</id>
+	<!-- Placeholder, should not be seen. -->
+	<y>接受和切换至材质纹理挑选器</y>
+    <x></x>
+
+    <b>取消</b>
+    <a>接受</a>
+    <leftTrigger>上一个刷具</leftTrigger>
+    <rightTrigger>下一个刷具</rightTrigger>
+    <bottom>选择刷具</bottom>
+
+    <keyMouse>
+	  [Y] 接受和切换至材质纹理挑选器
+	  [leftarrow][rightarrow] 变更刷具
+	  [Enter] 选取刷具
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialPicker</id>
+    <y>以游标选取材质纹理</y>
+    <x>接受和切换至刷具挑选器</x>
+    <b>取消</b>
+    <a>接受</a>
+    <dpadUp>样式：方块</dpadUp>
+    <dpadDown>样式：平滑</dpadDown>
+    <leftTrigger>上一种材质纹理</leftTrigger>
+    <rightTrigger>下一种材质纹理</rightTrigger>
+    <bottom>选择材质纹理</bottom>
+
+    <keyMouse>
+	  [X] 接受和切换至刷具挑选器
+	  [leftarrow][rightarrow] 变更材质纹理
+	  [uparrow] 样式：方块状
+	  [downarrow] 样式：平滑
+	  [Enter] 选取材质纹理
+	  &lt;leftmouse&gt; 以游标选取材质纹理
+	  [Alt] + &lt;leftmouse&gt;  在世界中选取材质纹理
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialFilterPicker</id>
+    <y>使用机器人选取材质纹理</y>
+    <x></x>
+    <b>取消</b>
+    <a>接受</a>
+    <leftTrigger>上一种材质纹理</leftTrigger>
+    <rightTrigger>下一种材质纹理</rightTrigger>
+    <bottom>选择材质纹理</bottom>
+
+    <keyMouse>
+	  [leftarrow][rightarrow] 变更材质纹理
+	  [Enter] 选取材质纹理
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>WaterPicker</id>
+    <y>以游标选取水</y>
+    <x></x>
+    <leftTrigger>上一种水</leftTrigger>
+    <rightTrigger>下一种水</rightTrigger>
+
+    <b>取消</b>
+    <a>接受</a>
+    <bottom>选择水的类型</bottom>
+
+    <keyMouse>
+	  [leftarrow][rightarrow] 变更水的类型
+	  [Enter] 选取水的类型
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>HeightMapTool</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a>平滑</a>
+    <leftTrigger>降低</leftTrigger>
+    <rightTrigger>升高</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 降低
+	  [Alt]+&lt;leftmouse&gt; 平滑
+	  [Space]+&lt;leftmouse&gt; 升高
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolStart</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>略过</b>
+    <a>平滑</a>
+    <leftTrigger>降低地面</leftTrigger>
+    <rightTrigger>升高地面</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 降低
+	  [Alt]+&lt;leftmouse&gt; 平滑
+	  [Space]+&lt;leftmouse&gt; 升高
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 略过直线
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolGoing</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a>平滑</a>
+    <leftTrigger>降低地面</leftTrigger>
+    <rightTrigger>升高地面</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 降低
+	  [Alt]+&lt;leftmouse&gt; 平滑
+	  [Space]+&lt;leftmouse&gt; 升高
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>AddTool</id>
+    <y>材质纹理挑选器</y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a>变更地面颜色</a>
+    <leftTrigger>清除地面</leftTrigger>
+    <rightTrigger>增加地面</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Y] 材质纹理挑选器　
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 清除地面
+	  [Alt]+&lt;leftmouse&gt; 变更地面颜色
+	  [Space]+&lt;leftmouse&gt; 增加地面
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolMagicBrush</id>
+    <y>材质纹理挑选器</y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a>变更地面颜色</a>
+    <leftTrigger>清除地面</leftTrigger>
+    <rightTrigger ghosted = "true">增加地面</rightTrigger>
+
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <dpadUp>样式：方块</dpadUp>
+    <dpadDown>样式：平滑</dpadDown>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Y] 材质纹理挑选器
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+	  [uparrow] 样式：方块状
+	  [downarrow] 样式：平滑
+
+	  [Ctrl]+&lt;leftmouse&gt; 清除地面
+	  [Alt]+&lt;leftmouse&gt; 变更地面颜色
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+
+  </overlay>
+  <overlay>
+    <id>AddToolStart</id>
+    <y>材质纹理挑选器</y>
+    <x>刷具挑选器</x>
+    <b>略过</b>
+    <a>变更材质纹理</a>
+    <leftTrigger>清除</leftTrigger>
+    <rightTrigger>增加</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Y] 材质纹理挑选器　
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 清除地面
+	  [Alt]+&lt;leftmouse&gt; 变更地面颜色
+	  [Space]+&lt;leftmouse&gt; 增加地面
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 略过直线
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolGoing</id>
+    <y>材质纹理挑选器</y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a>变更材质纹理</a>
+    <leftTrigger>清除</leftTrigger>
+    <rightTrigger>增加</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Y] 材质纹理挑选器　
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 清除地面
+	  [Alt]+&lt;leftmouse&gt; 变更地面颜色
+	  [Space]+&lt;leftmouse&gt; 增加地面
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>NoiseTool</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a>平滑</a>
+    <leftTrigger>山尖</leftTrigger>
+    <rightTrigger>山峦</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 山峦
+	  [Alt]+&lt;leftmouse&gt; 平滑
+	  [Space]+&lt;leftmouse&gt; 山尖
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolStart</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>略过</b>
+    <a>平滑</a>
+    <leftTrigger>山尖</leftTrigger>
+    <rightTrigger>山峦</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 山峦
+	  [Alt]+&lt;leftmouse&gt; 平滑
+	  [Space]+&lt;leftmouse&gt; 山尖
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 略过直线
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolGoing</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a>平滑</a>
+    <leftTrigger>山尖</leftTrigger>
+    <rightTrigger>山峦</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 山峦
+	  [Alt]+&lt;leftmouse&gt; 平滑
+	  [Space]+&lt;leftmouse&gt; 山尖
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>LevelTool</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a></a>
+    <leftTrigger>平滑</leftTrigger>
+    <rightTrigger>高低起伏</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Alt]+&lt;leftmouse&gt; 平滑
+	  [Space]+&lt;leftmouse&gt; 高低起伏
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>LevelToolStart</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <a>立刻铺路</a>
+    <leftTrigger>平滑</leftTrigger>
+    <rightTrigger>慢慢地铺路</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 平滑
+	  [Alt]+&lt;leftmouse&gt; 立刻铺路
+	  [Space]+&lt;leftmouse&gt; 慢慢地铺路
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 略过直线
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>LevelToolGoing</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>完成</b>
+    <a>立刻铺路</a>
+    <leftTrigger>平滑</leftTrigger>
+    <rightTrigger>慢慢地铺路</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 平滑
+	  [Alt]+&lt;leftmouse&gt; 立刻铺路
+	  [Space]+&lt;leftmouse&gt; 慢慢地铺路
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>WaterAdd</id>
+    <y>挑选水的类型</y>
+    <x></x>
+    <b>工具选单</b>
+    <a>设定水的类型</a>
+    <leftTrigger>降低水面</leftTrigger>
+    <rightTrigger>升高水面</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal></dpadHorizontal>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Y] 挑选水的类型
+
+	  [Ctrl]+&lt;leftmouse&gt; 降低水面
+	  [Alt]+&lt;leftmouse&gt; 设定水的类型
+	  [Space]+&lt;leftmouse&gt; 升高水面
+
+	  &lt;leftmouse&gt; 移动光标
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>DelObjTool</id>
+    <y></y>
+    <x>刷具挑选器</x>
+    <b>工具选单</b>
+    <leftTrigger>删除对象</leftTrigger>
+    <rightTrigger>删除对象</rightTrigger>
+    <rightTrigger></rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>刷具大小</dpadHorizontal>
+    <leftStick>移动刷具</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [X] 刷具挑选器
+	  [leftarrow][rightarrow] 刷具大小
+
+	  [Ctrl]+&lt;leftmouse&gt; 删除
+	  [Space]+&lt;leftmouse&gt; 删除
+
+	  &lt;leftmouse&gt; 移动摄影机
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大／缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointNode</id>
+    <y>增加更多节点</y>
+    <x>选取整条路径</x>
+    <b>完成</b>
+    <a>挑选</a>
+    <dpadVertical>变更类型</dpadVertical>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftTrigger>删除节点</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdge</id>
+    <y>变更方向</y>
+    <x>选取整条路径</x>
+    <b>完成</b>
+    <a>挑选</a>
+    <dpadVertical>变更类型</dpadVertical>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftTrigger>删除边缘</leftTrigger>
+    <rightTrigger>分割边缘</rightTrigger>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPath</id>
+    <y>变更方向</y>
+    <x>选取节点/边缘</x>
+    <b>完成</b>
+    <a>挑选</a>
+    <dpadVertical>变更类型</dpadVertical>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftTrigger>删除路径</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveNode</id>
+    <y></y>
+    <x>挑选整条路径</x>
+    <b>完成</b>
+    <a>放下</a>
+    <dpadVertical>变更高度</dpadVertical>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftTrigger>删除节点</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveEdge</id>
+    <y>变更方向</y>
+    <x>挑选整条路径</x>
+    <b>完成</b>
+    <a>放下</a>
+    <dpadVertical>变更高度</dpadVertical>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftTrigger>删除边缘</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMovePath</id>
+    <y>变更方向</y>
+    <x>选取节点/边缘</x>
+    <b>完成</b>
+    <a>放下</a>
+    <dpadVertical>变更高度</dpadVertical>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftTrigger>删除路径</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointAddNode</id>
+    <y>放置节点及完成</y>
+    <x></x>
+    <b>完成</b>
+    <a>放置节点</a>
+    <dpadVertical>变更类型</dpadVertical>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>移动光标</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndAddNode</id>
+    <y></y>
+    <x></x>
+    <b>完成</b>
+    <a></a>
+    <dpadVertical>变更类型</dpadVertical>
+    <dpadHorizontal>变更颜色</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>新位置</leftStick>
+    <rightStick>轨道摄影机</rightStick>
+    <leftShoulder>缩小</leftShoulder>
+    <rightShoulder>放大</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointNodeFree</id>
+
+    <keyMouse>
+	  [leftarrow][rightarrow] 变更颜色
+	  [Tab] 变更类型
+
+	  &lt;leftmouse&gt; 拖曳节点
+	  [Shift]+&lt;leftmouse&gt; 升高/降低节点
+	  [X] 整条路径模式
+
+	  [Space]+&lt;leftmouse&gt; 增加更多节点
+	  [Ctrl]+&lt;leftmouse&gt; 删除节点
+
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdgeFree</id>
+
+    <keyMouse>
+	  [leftarrow][rightarrow] 变更颜色
+	  [Tab] 变更类型
+
+	  &lt;leftmouse&gt; 拖曳边缘
+	  [Shift]+&lt;leftmouse&gt; 升高/降低边缘
+	  [X] 整条路径模式
+
+	  [Space]+&lt;leftmouse&gt; 分割边缘
+	  [Ctrl]+&lt;leftmouse&gt; 删除边缘
+
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPathFree</id>
+
+    <keyMouse>
+	  [leftarrow][rightarrow] 变更颜色
+	  [Tab] 变更类型
+
+	  &lt;leftmouse&gt; 拖曳路径
+	  [Shift]+&lt;leftmouse&gt; 升高/降低路径
+	  [X] 节点/边缘模式
+
+	  [Space]+&lt;leftmouse&gt; 增加更多节点
+	  [Ctrl]+&lt;leftmouse&gt; 删除路径
+
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 工具选单
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointAddFree</id>
+
+    <keyMouse>
+	  [Leftarrow][rightarrow] 变更颜色
+	  [Tab] 变更类型
+
+	  &lt;leftmouse&gt; 增加节点后继续
+	  [Alt]+&lt;leftmouse&gt; 增加节点后完成
+
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 增加完成
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndFree</id>
+
+    <keyMouse>
+	  [Leftarrow][rightarrow] 变更颜色
+	  [Tab] 变更类型
+
+	  &lt;leftmouse&gt; 增加完成
+
+	  &lt;rightmouse&gt; 轨道摄影机
+	  [PgUp][PgDn] 放大/缩小
+
+	  [Esc] 增加完成
+	</keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulation</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">按下<![CDATA[<back>]]> 以编辑。</bottom>
+
+    <keyMouseBottom>按下 [Esc] 以编辑。</keyMouseBottom>
+    <touchBottom>点选此处以编辑。</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulationPreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">按下<![CDATA[<a>]]> 以继续。</bottom>
+
+    <keyMouseBottom>按下 [Enter] 以继续。</keyMouseBottom>
+    <touchBottom>点选此处以继续。</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>PauseGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>继续</a>
+    <bottom>游戏暂停，按下<![CDATA[<a>]]> 以继续。</bottom>
+
+    <keyMouse>
+	  [Pause] 继续
+	</keyMouse>
+
+    <keyMouseBottom>游戏暂停，按下 [Pause] 以继续。</keyMouseBottom>
+    <touchBottom>游戏暂停，点选此处以继续。</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>Programming</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>PageHandleFullPasteBuffer</id>
+    <y>打印 Kode</y>
+    <x>复制整页</x>
+    <b>关闭</b>
+    <a></a>
+    <leftTrigger>剪下整页</leftTrigger>
+    <rightTrigger>贴上整页</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Leftarrow][rightarrow] 切换页面
+	  [Delete] 剪下整页
+	  [Insert] 贴上整页
+	  [Esc] 上一步
+	  [Ctrl-P] 打印 Kode
+	</keyMouse>
+
+    <touch>
+	  &lt;Tap&gt; 切换页面
+	  &lt;touchHold&gt; 选项
+	</touch>
+  </overlay>
+  <overlay>
+    <id>PageHandleEmptyPasteBuffer</id>
+    <y>打印 Kode</y>
+    <x>复制整页</x>
+    <b>关闭</b>
+    <a></a>
+    <leftTrigger>剪下整页</leftTrigger>
+    <rightTrigger ghosted = "true">贴上整页</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Leftarrow][rightarrow] 切换页面
+	  [Delete] 剪下整页
+	  [Esc] 上一步
+	  [Ctrl-P] 打印 Kode
+	</keyMouse>
+
+    <touch>
+	  &lt;Tap&gt; 切换页面
+	  &lt;touchHold&gt; 选项
+	</touch>
+
+  </overlay>
+
+  <overlay>
+    <id>RowHandleFullPasteBuffer</id>
+    <y>打印 Kode</y>
+    <x>复制整列</x>
+    <b>关闭</b>
+    <a>移动整列</a>
+    <leftTrigger>剪下整列</leftTrigger>
+    <rightTrigger>贴上整列</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 挑选列
+	  &lt;rightmouse&gt; 剪下整列
+	  [Enter] 挑选列
+	  [Tab] 下一页
+	  [Shift][Tab] 上一页
+	  [Delete] 剪下整列
+	  [Insert] 贴上整列
+	  [Esc] 上一步
+	  [Ctrl-P] 打印 Kode
+	</keyMouse>
+
+    <touch>
+	  &lt;Tap&gt; 选取列
+	  &lt;drag&gt; 移动整列
+	  &lt;touchHold&gt; 选项
+	</touch>
+
+  </overlay>
+  <overlay>
+    <id>RowHandleEmptyPasteBuffer</id>
+    <y>打印 Kode</y>
+    <x>复制整列</x>
+    <b>关闭</b>
+    <a>移动整列</a>
+    <leftTrigger>剪下整列</leftTrigger>
+    <rightTrigger ghosted = "true">贴上整列</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+	  &lt;Leftmouse&gt; 挑选列
+	  &lt;rightmouse&gt; 剪下整列
+	  [Enter] 挑选列
+	  [Tab] 下一页
+	  [Shift][Tab] 上一页
+	  [Delete] 剪下整列
+	  [Esc] 上一步
+	  [Ctrl-P] 打印 Kode
+	</keyMouse>
+
+    <touch>
+	  &lt;Tap&gt; 选取列
+	  &lt;drag&gt; 移动整列
+	  &lt;touchHold&gt; 选项
+	</touch>
+
+  </overlay>
+  <overlay>
+    <id>RowMove</id>
+    <y>打印 Kode</y>
+    <x></x>
+    <b>关闭</b>
+    <leftStick>变更列的优先级</leftStick>
+    <a>将列置于此处</a>
+    <bottom></bottom>
+
+    <keyMouse>
+	  [Uparrow] 向上移动
+	  [downarrow] 向下移动
+	  [rightarrow] 方块后缩
+	  [leftarrow] 取消方块后缩
+	  [Enter] 置于此处
+	  [Ctrl-P] 打印 Kode
+	</keyMouse>
+
+    <touch>
+	  &lt;Tap&gt; 选取列
+	  &lt;drag&gt; 移动整列
+	  &lt;touchHold&gt; 选项
+
+	</touch>
+  </overlay>
+  <overlay>
+    <id>Tile</id>
+    <y>说明</y>
+    <x>删除方块</x>
+    <b>关闭</b>
+    <a>变更方块</a>
+    <leftTrigger>删除方块</leftTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+	  &lt;leftmouse&gt; 增加/变更方块
+	  &lt;rightmouse&gt; 删除方块
+	  [Enter] 增加/变更方块
+	  [Tab] 下一页
+	  [Shift][Tab] 上一页
+	  [Delete] 删除方块
+	  [Esc] 返回
+	  [Ctrl-P] 打印 Kode
+	</keyMouse>
+
+    <touch>
+	  &lt;tap&gt; 增加/变更方块
+	  &lt;touchHold&gt; 选项
+	</touch>
+  </overlay>
+
+  <overlay>
+    <id>TopLevelPaletteEditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>编辑世界设定</bottom>
+  </overlay>
+  <overlay>
+    <id>TopLevelPaletteEditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>编辑对象设定</bottom>
+  </overlay>
+  <overlay>
+    <id>EditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>选取</a>
+    <bottom>世界设定</bottom>
+  </overlay>
+  <overlay>
+    <id>EditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>角色设定</bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridCheckbox</id>
+    <y></y>
+    <x></x>
+    <b>退出</b>
+    <a>变更</a>
+    <dpadVertical>切换属性</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridSlider</id>
+    <y></y>
+    <x></x>
+    <b>退出</b>
+    <a></a>
+    <dpadHorizontal>左/右以变更</dpadHorizontal>
+    <dpadVertical>切换属性</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridPictureList</id>
+    <y></y>
+    <x></x>
+    <b>退出</b>
+    <a></a>
+    <dpadHorizontal>左/右以变更</dpadHorizontal>
+    <dpadVertical>切换属性</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridTextList</id>
+    <y></y>
+    <x></x>
+    <b>退出</b>
+    <a>选取下一个选项</a>
+    <dpadVertical>切换属性</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGameDescription</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>开始游戏</a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom>按下 &lt;a&gt; 开始游戏</bottom>
+
+    <keyMouse>
+	  [Enter] 开始游戏
+	</keyMouse>
+    <keyMouseBottom>按下 [Enter] 开始游戏</keyMouseBottom>
+    <touchBottom>点选此处开始游戏</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMenu</id>
+    <a>选取</a>
+    <leftStick>变更选取范围</leftStick>
+  </overlay>
+  <overlay>
+    <id>ModularPictureList</id>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+
+    <keyMouse>
+	  [Leftarrow][rightarrow] 变更设定
+	  [Esc] 上一步
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCameraMode</id>
+    <dpadHorizontal>变更选取范围</dpadHorizontal>
+
+    <keyMouse>
+	  [leftarrow][rightarrow] 变更摄影机
+	  [X] 设定摄影机
+	  [Esc] 上一步
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckbox</id>
+    <a>变更</a>
+    <keyMouse>
+	  [Enter] 变更
+	  [Esc] 上一步
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularNextLevel</id>
+    <a>变更</a>
+    <keyMouse>
+	  [Enter] 变更
+	  [Esc] 上一步
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularSlider</id>
+    <dpadHorizontal>变更数值</dpadHorizontal>
+    <keyMouse>
+	  [Leftarrow][rightarrow] 变更数值
+	  [Esc] 上一步
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularRadioBox</id>
+    <a>变更</a>
+    <keyMouse>
+	  [Enter] 变更选取范围
+	  [Esc] 上一步
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckboxList</id>
+    <a>变更</a>
+    <b>完成</b>
+    <keyMouse>
+	  [Uparrow][downarrow] 选取标签
+	  [Enter] 切换标签
+	  [Esc] 上一步
+	</keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularButtonElement</id>
+    <a>检视变更历程记录</a>
+    <x>删除变更历程记录</x>
+    <keyMouse>
+	  [A] 检视变更历程记录
+	  [X] 删除变更历程记录
+	  [Esc] 上一步
+	</keyMouse>
+  </overlay>
+
+</XmlOverlayData>

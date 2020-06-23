@@ -1,0 +1,999 @@
+﻿<Tiles>
+  <sensor>
+    <gamepad label="gamepad">Gadewch i chwaraewr rheoli cymeriad. Nodwch pa bwtwm, spardun, neu ffon, a chwaraewr ddewisol.</gamepad>
+    <keyboard label="keyboard">Gadael i chwaraewr rheoli cymeriad. Nodwch pa allwedd.</keyboard>
+    <mouse label="mouse">Ymateb i mewnbwn llygoden</mouse>
+    <touch label="touch">Ymateb i mewnbwn cyffwrdd</touch>
+    <eyes label="see">Ymatebwch pan rydych yn gweld gwrthrych sydd yn dibynnu ar y fath neu lliw. Mynyddoedd a waliau yn rhwystro golwg os rydych chi'n ddefnyddio llinell-o-olwg(LOO) hidlydd.</eyes>
+    <ears label="hear">Ymateb pan rydych yn clywed gwrthrych sydd yn dibynnu ar y fath a lliw. Clywed yn gweithio trwy waliau.</ears>
+    <bumpers label="bump">Ymateb pan rydych yn taro mewn i wrthrych arall sydd yn dibynnu ar y fath, lliw, a.y.y.b.</bumpers>
+    <timer label="timer">Ymateb i rif o eiliadau sy'n pasio. Adiwch rhifau i greu amserau hirach.</timer>
+    <got label="got">Ymateb i bigo rhywbeth lan sydd yn ddibynnu ar y fath, lliw, a.y.y.b.</got>
+    <scored label="scored">ymateb i newidiadau yn y sgôr</scored>
+    <health label="health">Ymateb i newidiadau yn iechyd</health>
+    <missilehit label="shot hit">Ymateb i dy saeth yn bwrw gwrthrych gwahanol. Da am cadw'r sgôr, ond rydych chi'n gallu wneud beth bynnag rydych eisiau - fel troi bots yn pinc gan saethu nhw.</missilehit>
+    <held label="held by">Ymateb i gael dy godi gan wrthrych arall</held>
+    <terrain label="on land">Ymateb i fathau o dir gwahanol</terrain>
+    <water label="on water">Ymateb i fathau o ddwr gwahanol</water>
+    <beamed label="beamed">Ymateb i bryd mae carreg o'r planed Mawrth yn cael ei thrawstu</beamed>
+    <inspected label="inspected">Ymateb pryd mae carreg o'r planed Mawrth yn cael ei harolygu</inspected>
+    <scanned label="scanned">Ymateb pryd mae carreg anhysbys yn cael ei sganio er mwyn ei ddatgelu.</scanned>
+    <endofpath label="end of path">Ymateb i bryd rydych yn cyrraedd diwedd y llwybr.</endofpath>
+    <always label="always">Gwneud rhywbeth trwy'r amser. Dewisol.</always>
+  </sensor>
+  <filter>
+    <nothing/>
+    <boku label="kodu">Mae Kodu yn cymeriad gallech ychwanegu i'r gem ac mae ei ymddygiad yn gallu cael eu rhaglennu.</boku>
+    <bokubot label="kodu">Mae Kodu yn cymeriad rydych yn gallu ychwanegu I'r gem ac mae ei ymddygiad yn gallu cael eu rhaglennu.</bokubot>
+    <anything label="unrhywbeth"/>
+    <me label="me">Dim ond gwirio'r bot sy'n rhedeg y rhaglen.</me>
+    <said label="said">Gwrando am gymeriad arall i ddweud rhywbeth. Teipiwch mewn beth rydych chi eisiau gwrando am.</said>
+    <countnone label="none">Ymateb pan nad ydych yn gallu gweld unrhyw beth sydd yn cysylltiedig â'r ddisgrifiad. Er enghraifft, gweld - glas - dim yn ymateb pan does dim byd yn glas yn y golwg</countnone>
+    <starfish label="starfish">Ymateb i bysgodyn seren</starfish>
+    <clam label="clam">Ymateb i glam</clam>
+    <seagrass label="seagrass">Ymateb i laswellt môr</seagrass>
+    <seagrasssingle label="seagrass">Ymateb i laswellt môr</seagrasssingle>
+    <lilypad label="lily pads">Ymateb i badiau lil</lilypad>
+    <lilypadsingle label="lily pad">Ymateb i bad lili</lilypadsingle>
+    <flyfish label="fly fish">Mae pysgodyn hedfan yn cymeriad gallech chi ychwanegu i'ch gêm a gallech chi rhaglennu ei ymddygiad</flyfish>
+    <jet label="jet">Mae jet yn cymeriad gallech ychwanegu i'ch gêm a gallech rhaglennu ei ymddygiad.</jet>
+    <light label="light">Mae'r Golau yn cymeriad gallech ychwanegu at eich gêm a gall ei ymddygiad cael ei rhaglenni. Hefyd, mae'n goleuo pethau i fyny. Ond gallech ond cael pedwar.</light>
+    <fan label="fan">Ymateb i ffan</fan>
+    <octopus label="octopus">Ymateb i octopws</octopus>
+    <fastbot label="cycle">Beicio yw cymeriad gallech ychwanegu at eich gem a gall ei ymddygiad cael ei ragleni</fastbot>
+    <saucer label="saucer">Rwy' flin, nid wyf yn gallu dweud wrthyt mwy. Y gwybodaeth am y soser yw</saucer>
+    <windblimp label="blimp">Blimp yw cymeriad sy'n hedfan gallech ychwanegu at eic gem a gall ei ymddygiad cael ei raglenni. </windblimp>
+    <balloonbot label="balloon">Balwn yw cymeriad sy'n arnofio gallech ychwanegu at y gem a gall ei ymddygiad cael ei raglenni.</balloonbot>
+    <subbot label="sub">Sub yw cymeriad llong danfor gallech ychwanegu at eich gem a gall ei ymddygiad cael ei raglenni.</subbot>
+    <terracannon label="cannon">Canon  yw cymeriad sy'n arnofio gallech ychwanegu at y gem a gall ei ymddygiad cael ei raglenni.</terracannon>
+    <puck label="puck">Puc  yw cymeriad sy'n arnofio gallech ychwanegu at y gem a gall ei ymddygiad cael ei raglenni.</puck>
+    <wisp label="wisp">Wisb  yw cymeriad sy'n arnofio gallech ychwanegu at y gem a gall ei ymddygiad cael ei raglenni.</wisp>
+    <anybot label="anybot">Edrychwch am unrhyw fath o bot</anybot>
+    <turtle label="crwban">Ymateb i grwban</turtle>
+    <rover label="crwydryn">Ymateb i grwydryn</rover>
+    <pushpad label="padgwasgu">Ymateb i badgwasgu</pushpad>
+    <sputnik label="lloeren">Ymateb i loeren</sputnik>
+    <stick label="ffon">ymateb i ffon</stick>
+    <stickboy label="ffon">ymateb i ffon</stickboy>
+    <drum label="drwm">ymateb i ddrwm</drum>
+    <mine label="ffrwydryn">ymateb i ffrwydryn</mine>
+    <cloud label="cwmwl">ymateb i gwmwl</cloud>
+    <swimfish label="pysgodyn">ymateb i bysgodyn</swimfish>
+    <floatbot label="llong">ymateb i long</floatbot>
+    <factory label="ffatri">Ymateb i ffatri.</factory>
+    <hut label="cwt">Ymateb i gwt.</hut>
+    <castle label="castell">Ymateb i gastell.</castle>
+    <fruit label="afal">Ymateb i afal.</fruit>
+    <inkjet label="cwmwl inc">Ymateb i gwmwl inc.</inkjet>
+    <iceberg label="rhewfryn">Ymateb i rewfryn.</iceberg>
+    <rock label="carreg">Ymateb i garreg.</rock>
+    <rockLowValue label="Igneaidd">Ymateb i garreg igneaidd</rockLowValue>
+    <rockHighValue label="Gwaddodol">Ymateb i garreg gwaddodol.</rockHighValue>
+    <rockLowValueUnknown label="Carreg Anhysybys">Carreg igniaidd sy'n ymddangos yn anhysbys tan iddo gael ei sganio, pelydru neu archwilio.</rockLowValueUnknown>
+    <rockHighValueUnknown label="Carreg Anhysbys">Carreg gwaddodol sy'n ymddangos yn anhysbys tan iddo gael ei sganio, pelydru neu archwilio.</rockHighValueUnknown>
+    <rockUnknown label="Carreg Anhysbys">Ymateb i garreg anhysbys.</rockUnknown>
+    <tree label="coeden">Ymateb i goeden.</tree>
+    <pipe label="pibell">Ymateb i bibell.</pipe>
+    <pipeStraight label="pibell syth">Ymateb i bibell syth.</pipeStraight>
+    <pipeCross label="pibell groes">Ymateb i bibell groes.</pipeCross>
+    <pipeCorner label="pibell cornel">Ymateb i bibell gornel.</pipeCorner>
+    <underwater label="o dan dwr">Ymateb i wrthrychau o dan dwr.</underwater>
+    <building label="adeilad">Ymateb i adeilad.</building>
+    <flower label="blodyn"/>
+    <gate label="giat"/>
+    <cursor label="cyrchwr">Ymateb i cyrchwr.</cursor>
+    <star label="seren">Ymateb i seren.</star>
+    <coin label="darn arian">ymateb i ddarn arian.</coin>
+    <soccerball label="pêl">Ymateb i bel.</soccerball>
+    <heart label="calonnau">Ymateb i galon.</heart>
+    <bullet label="bwledi">Ymateb i fwledi.</bullet>
+    <Black label="du">Ymateb i rywbeth du.</Black>
+    <Grey label="llwyd">Ymateb i rywbeth llwyd.</Grey>
+    <white label="gwyn">ymateb i rywbeth gwyn.</white>
+    <red label="coch">Ymateb i rywbeth coch.</red>
+    <orange label="oren">Ymateb i rywbeth oren.</orange>
+    <yellow label="melyn">Ymateb i rywbeth melyn.</yellow>
+    <green label="gwyrdd">Ymateb i rywbeth gwyrdd.</green>
+    <blue label="glas">Ymateb i rywbeth glas.</blue>
+    <purple label="porffor">Ymateb i rywbeth oren.</purple>
+    <pink label="pinc">Ymateb i rywbeth pinc.</pink>
+    <brown label="brown">Ymateb i rywbeth brown.</brown>
+    <PathBlack label="llwybr du">Ymateb i lwybr du.</PathBlack>
+    <PathGrey label="llwybr llwyd">Ymateb i lwybr llwyd.</PathGrey>
+    <PathWhite label="llwybr gwyn">Ymateb i lwybr gwyn.</PathWhite>
+    <PathRed label="llwybr coch">Ymateb i lwybr coch.</PathRed>
+    <PathOrange label="llwybr oren">Ymateb i lwybr oren.</PathOrange>
+    <PathYellow label="llwybr melyn">Ymateb i lwybr melyn.</PathYellow>
+    <PathGreen label="llwybr gwyrdd">Ymateb i lwybr gwyrdd.</PathGreen>
+    <PathBlue label="llwybr glas">Ymateb i lwybr glas.</PathBlue>
+    <PathPurple label="llwybr porffor">ymateb i lwybr porffor.</PathPurple>
+    <PathPink label="llwybr pinc">Ymateb i lwybr pinc.</PathPink>
+    <PathBrown label="llwybr brown">Ymateb i lwybr brown.</PathBrown>
+    <pathplain label="plaen"/>
+    <pathroad label="hewl"/>
+    <pathwall label="wal"/>
+    <pathflora label="fflora"/>
+    <yucca1 label="coeden"/>
+    <yucca2 label="coeden"/>
+    <yucca3 label="coeden"/>
+    <bigyucca1 label="coeden"/>
+    <expresshappy label="hapus">Ymateb i fot hapus.</expresshappy>
+    <expresssad label="trist">Ymateb i fot anhapus.</expresssad>
+    <expressangry label="BLIN">Ymateb i fot grac.</expressangry>
+    <expresscrazy label="pEnWaN">Ymateb i fot benwan.</expresscrazy>
+    <expresshearts label="calonnau">Ymateb i fot sy'n dangos calonnau</expresshearts>
+    <expressflowers label="blodau">Ymateb i fot sy'n dangos blodau.</expressflowers>
+    <expressstars label="sêr">Ymateb i fot sy'n dangos sêr.</expressstars>
+    <expressswear label="rhegu">Ymateb i fot sy'n rhegu.</expressswear>
+    <expressnormal label="normal">Ymateb i fot sy'n ymddwyn yn arferol.</expressnormal>
+    <expressnone label="blanc">Ymateb i fot sy'n ymddwyn yn arferol</expressnone>
+    <moving label="symud">Ymateb i fot pe bai'n symud</moving>
+    <camouflage label="cuddliwio">Ymateb i fot pe bai wedi cuddliwio</camouflage>
+    <closeby label="Yn agos i">Yn agos, gan achosi'r gymeriad i ymateb i ond y pethau sydd yn agos iddo. Mae pethau sy'n bell wrtho yn cael ei anwybyddu.</closeby>
+    <faraway label="yn bell i ffwrdd">Ymateb dim ond i bethau sy'n bell i ffwrdd.</faraway>
+
+    <infront label="o flaen">Ymateb yn unig at bethau o flaen y bot.</infront>
+    <behind label="tu ol">Ymateb yn unig at bethau tu ol i'r bot.</behind>
+    <toleft label="i'r chwith">Ymateb yn unig at bethau  chwith i'r bot.</toleft>
+    <toright label="i'r dde">Ymateb yn unig at bethau  dde i'r bot.</toright>
+    <over label="uwchben">Ymateb yn unig at bethau uwch na'r bot.</over>
+    <under label="o dan">Ymateb yn unig at bethau is na'r bot.</under>
+
+    <lineofsight label="LOO">Tirwedd a synhwyrydd bloc waliau.</lineofsight>
+    
+    <countfew label="ychydig">Ymateb pan fyddwch ond yn gweld ychydig o rywbeth.</countfew>
+    <countmany label="sawl">Ymateb pan fyddwch ond yn gweld llawer o rywbeth.</countmany>
+    <clustermany label="clwstwr">Ymateb pan fyddwch ond yn gweld clwstwr o rywbeth.</clustermany>
+    <countany label="unrhyw"/>
+    <leftstick label="ffon L">Ymateb i'r ffon chwith ar y reolwr. Yn dda ar gyfer symud.</leftstick>
+    <rightstick label="ffon R">Ymateb i'r ffon dde ar y reolwr. Yn dda ar gyfer saethu.</rightstick>
+    <abutton label="botwm A">Ymateb i'r botwm A ar y rheolwr.</abutton>
+    <bbutton label="botwm B">Ymateb i'r botwm B ar y rheolwr.</bbutton>
+    <xbutton label="botwm X">Ymateb i'r botwm X ar y rheolwr.</xbutton>
+    <ybutton label="botwm Y">Ymateb i'r botwm Y ar y rheolwr.</ybutton>
+    <lefttrigger label="sbardun chwith">Ymateb i'r sbardun chwith ar y reolwr.</lefttrigger>
+    <righttrigger label="sbardun dde">Ymateb i'r sbardun dde ar y reolwr.</righttrigger>
+    <lefttrigger_analog label="sbardun chwith">Ymateb i'r sbardun chwith ar y reolwr.</lefttrigger_analog>
+    <righttrigger_analog label="sbardun dde">Ymateb i'r sbardun dde ar y reolwr.</righttrigger_analog>
+    <mouse>
+      <button>
+        <left label="chwith">Ymateb i'r botwm chwith y llygoden.</left>
+        <right label="dde">Ymateb i'r botwm dde y llygoden.</right>
+      </button>
+      <hover label="dros">Ymateb i'r llygoden yn hofran dros gwrthrych neu tir.</hover>
+      <move label="symud">ymateb i lygoden yn symud</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="cyffwrdd">Ymateb i gyffyrddiad gweithredol (cyffwrdd sgrin).</touching>
+        <tap label="tap">Ymateb i dap (cyffwrdd sgrin).</tap>
+        <rotate label="troi">Ymateb i'r ystum cylchdroi (cyffwrdd sgrin).</rotate>
+        <swipe label="trawiad">Ymateb i'r ystum trawiad (cyffwrdd sgrin).</swipe>
+        <slide label="sleidio">Ymateb i'r ystum sleidio (cyffwrdd sgrin).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="gwyn">Ymateb i'r botwm GWYN ar y HUD. (Ewch i gosodiadau byd i newid)</White>
+        <Black label="du">Ymateb i'r botwm DU ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Black>
+        <Grey label="llwyd">Ymateb i'r botwm LLWYD ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Grey>
+        <Red label="coch">Ymateb i'r botwm COCH ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Red>
+        <Green label="gwyrdd">Ymateb i'r botwm GWYRDD ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Green>
+        <Blue label="glas">Ymateb i'r botwm GLAS ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Blue>
+        <Orange label="oren">Ymateb i'r botwm OREN ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Orange>
+        <Yellow label="melyn">Ymateb i'r botwm MELYN ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Yellow>
+        <Purple label="porffor">Ymateb i'r botwm PORFFOR ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Purple>
+        <Pink label="pinc">Ymateb i'r botwm PINC ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Pink>
+        <Brown label="brown">Ymateb i'r botwm BROWN ar y HUD. (Ewch i gosodiadau byd er mwyn newid)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="bwtwm X">Ymateb i gyffyrddiad botwm X ar y sgrin .</controllerButton_X>
+      <controllerButton_Y label="Bwtwm Y">Ymateb i gyffyrddiad botwm Y ar y sgrin .</controllerButton_Y>
+      <controllerButton_A label="botwm A">Ymateb i gyffyrddiad botwm A ar y sgrin .</controllerButton_A>
+      <controllerButton_B label="botwm B">Ymateb i gyffyrddiad botwm B ar y sgrin .</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="arwyddion">Ymateb i'r botymau saeth ar y bysellfwrdd.</ArrowKeys>
+    <WASDKeys label="WASD">ymateb i'r botymau WASD ar y bysellfwrdd.</WASDKeys>
+    <Akey label="A">ymateb i A ar y bysellfwrdd .</Akey>
+    <Bkey label="B">ymateb i B ar y bysellfwrdd .</Bkey>
+    <Ckey label="C">ymateb i C ar y bysellfwrdd .</Ckey>
+    <Dkey label="D">ymateb i D ar y bysellfwrdd .</Dkey>
+    <Ekey label="E">ymateb i E ar y bysellfwrdd .</Ekey>
+    <Fkey label="F">ymateb i F ar y bysellfwrdd .</Fkey>
+    <Gkey label="G">ymateb i G ar y bysellfwrdd .</Gkey>
+    <Hkey label="H">ymateb i H ar y bysellfwrdd .</Hkey>
+    <Ikey label="I">ymateb i I ar y bysellfwrdd .</Ikey>
+    <Jkey label="J">ymateb i J ar y bysellfwrdd .</Jkey>
+    <Kkey label="K">ymateb i K ar y bysellfwrdd .</Kkey>
+    <Lkey label="L">ymateb i L ar y bysellfwrdd .</Lkey>
+    <Mkey label="M">ymateb i M ar y bysellfwrdd .</Mkey>
+    <Nkey label="N">ymateb i N ar y bysellfwrdd .</Nkey>
+    <Okey label="O">ymateb i O ar y bysellfwrdd .</Okey>
+    <Pkey label="P">ymateb i P ar y bysellfwrdd .</Pkey>
+    <Qkey label="Q">ymateb i Q ar y bysellfwrdd .</Qkey>
+    <Rkey label="R">ymateb i R ar y bysellfwrdd .</Rkey>
+    <Skey label="S">ymateb i S ar y bysellfwrdd .</Skey>
+    <Tkey label="T">ymateb i T ar y bysellfwrdd .</Tkey>
+    <Ukey label="U">ymateb i U ar y bysellfwrdd .</Ukey>
+    <Vkey label="V">ymateb i V ar y bysellfwrdd </Vkey>
+    <Wkey label="W">ymateb i W ar y bysellfwrdd .</Wkey>
+    <Xkey label="X">ymateb i X ar y bysellfwrdd .</Xkey>
+    <Ykey label="Y">ymateb i Y ar y bysellfwrdd .</Ykey>
+    <Zkey label="Z">ymateb i Z ar y bysellfwrdd .</Zkey>
+    <D0key label="0">ymateb i 0 ar y bysellfwrdd </D0key>
+    <D1key label="1">ymateb i 1 ar y bysellfwrdd .</D1key>
+    <D2key label="2">ymateb i 2 ar y bysellfwrdd.</D2key>
+    <D3key label="3">ymateb i 3 ar y bysellfwrdd .</D3key>
+    <D4key label="4">ymateb i 4 ar y bysellfwrdd .</D4key>
+    <D5key label="5">ymateb i 5 ar y bysellfwrdd .</D5key>
+    <D6key label="6">ymateb i 6 ar y bysellfwrdd .</D6key>
+    <D7key label="7">ymateb i 7 ar y bysellfwrdd .</D7key>
+    <D8key label="8">ymateb i 8 ar y bysellfwrdd .</D8key>
+    <D9key label="9">Ymateb i 9 ar y bysellfwrdd .</D9key>
+    <Spacekey label="gwagle">Ymateb i'r allwedd gwagle ar y bysellfwrdd .</Spacekey>
+    <PageUpkey label="TudalenLan">Ymateb i'r allwedd TudalenLan ar y bysellfwrdd.</PageUpkey>
+    <PageDownkey label="TudalenLawr">Ymateb i'r allwedd TudalenLawr ar y bysellfwrdd.</PageDownkey>
+    <Endkey label="Gorffen">Ymateb i'r allwedd Gorffen ar y bysellfwrdd.</Endkey>
+    <Leftkey label="chwith">Ymateb i'r allwedd Chwith ar y bysellfwrdd.</Leftkey>
+    <Upkey label="i fyny">Ymateb i'r allwedd i fynny ar y bysellfwrdd.</Upkey>
+    <Rightkey label="dde">Ymateb i'r allwedd dde ar y bysellfwrdd.</Rightkey>
+    <Downkey label="i lawr">Ymateb i'r allwedd i lawr ar y bysellfwrdd.</Downkey>
+    <Insertkey label="Cynnwys">Ymateb i'r allwedd Ychwanegu ar y bysellfwrdd.</Insertkey>
+    <Deletekey label="Dileu">Ymateb i'r allwedd Delete ar y bysellfwrdd.</Deletekey>
+    <LeftWindowskey label="FfenestrChwith">Ymateb i'r allwedd FfenestrChwith ar y bysellfwrdd.</LeftWindowskey>
+    <RightWindowskey label="FfenestrDde">Ymateb i'r allwedd FfenestrDde ar y bysellfwrdd.</RightWindowskey>
+    <Multiplykey label="*">Ymateb i'r allwedd Lluosi ar y bysellfwrdd.</Multiplykey>
+    <Addkey label="+">Ymateb i'r allwedd Adio ar y bysellfwrdd.</Addkey>
+    <Subtractkey label="-">Ymateb i'r allwedd tynnu ar y bysellfwrdd.</Subtractkey>
+    <Decimalkey label=".">Ymateb i'r allwedd Degol ar y bysellfwrdd.</Decimalkey>
+    <Dividekey label="?">Ymateb i'r allwedd rhannu ar y bysellfwrdd.</Dividekey>
+    <LeftShiftkey label="ShiftChwith">Ymateb i ShiftChwith ar y bysellfwrdd.</LeftShiftkey>
+    <RightShiftkey label="ShiftDde">Ymateb i ShiftDde ar y bysellfwrdd.</RightShiftkey>
+    <LeftControlkey label="RheolyddChwith">Ymateb i'r RheolyddChwith ar y bysellfwrdd.</LeftControlkey>
+    <RightControlkey label="RheolyddDde">Ymateb i'r RheolyddDde ar y bysellfwrdd.</RightControlkey>
+    <LeftAltkey label="AltChwith">Ymateb i'r AltChwith ar y bysellfwrdd.</LeftAltkey>
+    <RightAltkey label="AltDde">Ymateb i'r AltDde ar y bysellfwrdd.</RightAltkey>
+    <OemSemicolonkey label=";">Ymateb i'r allwedd Semicolon ar y bysellfwrdd.</OemSemicolonkey>
+    <OemPluskey label="+">Ymateb i'r allwedd Plws ar y bysellfwrdd.</OemPluskey>
+    <OemCommakey label=",">Ymateb i'r allwedd Atalnod ar y bysellfwrdd.</OemCommakey>
+    <OemMinuskey label="-">Ymateb i'r Minws ar y bysellfwrdd.</OemMinuskey>
+    <OemPeriodkey label=".">Ymateb i'r Atalnod llawn ar y bysellfwrdd.</OemPeriodkey>
+    <OemQuestionkey label="?">Ymateb i'r allwedd Marc Cwestiwn ar yr allweddell.</OemQuestionkey>
+    <OemTildekey label="~">Ymateb i'r allwedd Tilde ar yr allweddell.</OemTildekey>
+    <OemOpenBracketskey label="[">Ymateb i'r allwedd AgorCronfachau ar yr allweddell.</OemOpenBracketskey>
+    <OemPipekey label="|">Ymateb i'r allwedd bibell ar yr allweddell.</OemPipekey>
+    <OemCloseBracketskey label="]">Ymateb i'r allwedd CauCronfachau ar y bysellfwrdd.</OemCloseBracketskey>
+    <OemQuoteskey label="">Ymateb i'r allwedd Dyfyniad ar y bysellfwrdd.</OemQuoteskey>
+    <OemBackslashkey label="\\">Ymateb i'r allwedd adwaith ar y bysellfwrdd.</OemBackslashkey>
+    <F1key label="F1">Ymateb i'r allwedd F1 ar y bysellfwrdd.</F1key>
+    <F2key label="F2">Ymateb i'r allwedd F2 ar y bysellfwrdd.</F2key>
+    <F3key label="F3">Ymateb i'r allwedd F3 ar y bysellfwrdd.</F3key>
+    <F4key label="F4">Ymateb i'r allwedd F4 ar y bysellfwrdd.</F4key>
+    <F5key label="F5">Ymateb i'r allwedd F5 ar y bysellfwrdd.</F5key>
+    <F6key label="F6">Ymateb i'r allwedd F6 ar y bysellfwrdd.</F6key>
+    <F7key label="F7">Ymateb i'r allwedd F7 ar y bysellfwrdd.</F7key>
+    <F8key label="F8">Ymateb i'r allwedd F8 ar y bysellfwrdd.</F8key>
+    <F9key label="F9">Ymateb i'r allwedd F9 ar y bysellfwrdd.</F9key>
+    <F10key label="F10">Ymateb i'r allwedd F10 ar y bysellfwrdd.</F10key>
+    <F11key label="F11">Ymateb i'r allwedd F11 ar y bysellfwrdd.</F11key>
+    <F12key label="F12">Ymateb i'r allwedd F12 ar y bysellfwrdd.</F12key>
+    <Shiftkey label="Shift">Symud</Shiftkey>
+    <Controlkey label="Rheoli">Ymateb i unrhyw allwedd rheoli ar y bysellfwrdd.</Controlkey>
+    <Altkey label="Alt">Ymateb i unrhyw allwedd Alt ar y bysellfwrdd.</Altkey>
+    <Windowskey label="Windows">Ymateb i unrhyw allwedd Windows ar y bysellfwrdd.</Windowskey>
+    <player1 label="chwaraewr 1">Ymateb yn unig i Rheolwr Chwaraewr 1. Diofyn yw i ymateb i unrhyw un.</player1>
+    <player2 label="chwaraewr 2">Ymateb i Rheolwr 2 yn unig. Diofyn yw i ymateb i unrhyw un. </player2>
+    <player3 label="chwaraewr 3">Ymateb i Rheolwr 3 yn unig.Diofyn yw i ymateb i unrhyw un. </player3>
+    <player4 label="chwaraewr 4">Ymateb i Rheolwr 4 yn unig. Diofyn yw i ymateb i unrhyw un. </player4>
+    <terrain label="math">Ymateb i math penodol o dir.</terrain>
+    <water label="math">ymateb i math penodol o ddwr.</water>
+    <quartersecond label="eiliad">1/4 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </quartersecond>
+    <_01second label="eiliad">1 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_01second>
+    <_02seconds label="eiliadau">2 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_02seconds>
+    <_03seconds label="eiliadau">3 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_03seconds>
+    <_04seconds label="eiliadau">4 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_04seconds>
+    <_05seconds label="eiliadau">5 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_05seconds>
+    <_10seconds label="eiliadau">10 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_10seconds>
+    <_20seconds label="eiliadau">20 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_20seconds>
+    <_30seconds label="eiliadau">30 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_30seconds>
+    <_60seconds label="eiliadau">60 eiliad. Cyfuno gydag eraill i adio i fyny i amseroedd mwy. </_60seconds>
+    <_000point label="pwyntiau">0 o bwyntiau</_000point>
+    <_001point label="pwynt">1 pwynt. Cyfuno gydag eraill i adio i fyny i gyfeintiau mwy.</_001point>
+    <_002points label="pwyntiau">2 bwynt. Cyfuno gydag eraill i adio i fynu i gyfeintiau mwy.</_002points>
+    <_003points label="pwyntiau">3 bwynt. Cyfuno gydag eraill i adio i fyny i gyfeintiau mwy.</_003points>
+    <_004points label="pwyntiau">4 pwynt. Cyfuno gydag eraill i adio i fyny i gyfeintiau mwy.</_004points>
+    <_005points label="pwyntiau">5 pwynt. Cyfuno gyda eraill i adio i fynnu i cyfeintiau mwy</_005points>
+    <_010points label="pwyntiau">10 pwynt. Cyfuno gydag eraill i adio i fyny i gyfeintiau mwy.</_010points>
+    <_020points label="pwyntiau">20 pwynt. Cyfuno gydag eraill i adio i fyny i gyfeintiau mwy.</_020points>
+    <_050points label="pwyntiau">50 pwynt. Cyfuno gydag eraill i adio i fyny i gyfeintiau mwy.</_050points>
+    <_100points label="pwyntiau">100 pwynt. Cyfuno gydag eraill i adio i fyny i gyfeintiau mwy.</_100points>
+    <random label="hap">Creuwch rhif ar hap gan ddefnyddio teilsen rhif. Er enghraifft,mae Ar Hap - 5 yn creu rhif ar hap rhwng y rhifau 0 a 4.</random>
+    <scorebucket>
+      <color>
+        <white label="gwyn">Mae'r profion sgôr gwyn, sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i'w newid.)</white>
+        <black label="du">Mae'r profion sgôr du, sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</black>
+        <grey label="llwyd">Mae'r profion sgôr llwyd,sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</grey>
+        <red label="coch">Mae'r profion sgôr coch, sy'n cael eu dangos ar y bwrdd sgôr yn ddiofyn. (Ewch i gosodiadau byd i newid.)</red>
+        <green label="gwyrdd">Profion sgôriau gwyrdd, a ddangosir ar y bwrdd sgôr yn ddiofyn. (Ewch i gosodiadau byd i newid.)</green>
+        <blue label="glas">Profion sgôriau glas, a ddangosir ar y bwrdd sgôr yn ddiofyn. (Ewch i gosodiadau byd i newid.)</blue>
+        <orange label="oren">Mae'r profion sgôr oren, sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</orange>
+        <yellow label="Melyn">Mae'r profion sgôr melyn, sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</yellow>
+        <purple label="porffor">Mae'r profion sgôr porffor, sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</purple>
+        <pink label="pinc">Mae'r profion sgôr pinc, sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</pink>
+        <brown label="brown">Mae'r profion sgôr brown, sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</brown>
+      </color>
+      <letter>
+        <a label="sgôr A">Mae'r profion sgôr 'A', yn cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</a>
+        <b label="sgôr B">Mae'r profion sgôr 'B', yn cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</b>
+        <c label="sgôr C">Mae'r profion sgôr 'C', sy'n cxael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</c>
+        <d label="sgôr D">Mae'r profion sgôr 'D', sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</d>
+        <e label="sgôr E">Mae'r profion sgôr 'E', sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</e>
+        <f label="sgôr F">Mae'r profion sgôr 'F', sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</f>
+        <g label="sgôr G">Mae'r profion sgôr 'G', sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</g>
+        <h label="sgôr H">Mae'r profion sgôr 'H', sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</h>
+        <i label="sgôr I">Mae'r profion sgôr 'I', sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</i>
+        <j label="sgôr J">Mae'r profion sgôr 'J', sy'n cael eu dangos ar y bwrdd sgôr gan ddiofyn. (Ewch i gosodiadau byd i newid.)</j>
+        <k label="sgôr K">Yn profi'r sgôr 'K', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</k>
+        <l label="sgôr L">Yn profi'r sgôr 'L', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</l>
+        <m label="sgôr M">Yn profi'r sgôr 'M', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</m>
+        <n label="sgôr N">Yn profi'r sgôr 'N', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</n>
+        <o label="sgôr O">Yn profi'r sgôr 'O', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</o>
+        <p label="sgôr P">Yn profi'r sgôr 'P', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</p>
+        <q label="sgôr Q">Yn profi'r sgôr 'Q', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</q>
+        <r label="sgôr R">Yn profi'r sgôr 'R', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</r>
+        <s label="sgôr S">Yn profi'r sgôr 'S', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</s>
+        <t label="sgôr T">Yn profi'r sgôr 'T', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</t>
+        <u label="sgôr U">Yn profi'r sgôr 'U', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</u>
+        <v label="sgôr V">Yn profi'r sgôr 'V', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</v>
+        <w label="sgôr W">Yn profi'r sgôr 'W', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</w>
+        <x label="sgôr X">Yn profi'r sgôr 'X', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</x>
+        <y label="sgôr Y">Yn profi'r sgôr 'Y', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</y>
+        <z label="sgôr Z">Yn profi'r sgôr 'Z', sydd byth yn cael ei arddangos ar y bwrdd sgôrio.</z>
+      </letter>
+      <local>
+        <a label="sgôr a">The 'a' score, which is private to this character.</a>
+        <b label="sgôr b">The 'b' score, which is private to this character.</b>
+        <c label="sgôr c">The 'c' score, which is private to this character.</c>
+        <d label="sgôr d">The 'd' score, which is private to this character.</d>
+        <e label="sgôr e">The 'e' score, which is private to this character.</e>
+        <f label="sgôr f">The 'f' score, which is private to this character.</f>
+        <g label="sgôr g">The 'g' score, which is private to this character.</g>
+        <h label="sgôr h">The 'h' score, which is private to this character.</h>
+        <i label="sgôr i">The 'i' score, which is private to this character.</i>
+        <j label="sgôr j">The 'j' score, which is private to this character.</j>
+        <k label="sgôr k">The 'k' score, which is private to this character.</k>
+        <l label="sgôr l">The 'l' score, which is private to this character.</l>
+        <m label="sgôr m">The 'm' score, which is private to this character.</m>
+        <n label="sgôr n">The 'n' score, which is private to this character.</n>
+        <o label="sgôr o">The 'o' score, which is private to this character.</o>
+        <p label="sgôr p">The 'p' score, which is private to this character.</p>
+        <q label="sgôr q">The 'q' score, which is private to this character.</q>
+        <r label="sgôr r">The 'r' score, which is private to this character.</r>
+        <s label="sgôr s">The 's' score, which is private to this character.</s>
+        <t label="sgôr t">The 't' score, which is private to this character.</t>
+        <u label="sgôr u">The 'u' score, which is private to this character.</u>
+        <v label="sgôr v">The 'v' score, which is private to this character.</v>
+        <w label="sgôr w">The 'w' score, which is private to this character.</w>
+        <x label="sgôr x">The 'x' score, which is private to this character.</x>
+        <y label="sgôr y">The 'y' score, which is private to this character.</y>
+        <z label="sgôr z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="clicied"/>
+    <timertrigger label="clicied"/>
+    <scoreis label="yn"/>
+    <scoreequals label="yn hafal i">Ymateb pryd mae sgôr yn hafal i rif penodol.</scoreequals>
+    <scorenotequals label="dimynhafal">Ymateb pan nad yw sgôr yn hafal i rif penodol.</scorenotequals>
+    <scoreabove label="uwch">Ymateb pryd mae sgôr yn mynd uwch na rhif penodol.</scoreabove>
+    <scorebelow label="is">Ymateb pryd mae sgôr yn mynd yn is na rhif penodol.</scorebelow>
+    <scoregteq label="&gt;=">Ymateb pryd mae sgôr yn hafal i neu yn uwch na rhif penodol.</scoregteq>
+    <scorelteq label="&lt;=">Ymateb pryd mae sgôr yn hafal i neu yn llai na rhif penodol.</scorelteq>
+    <healthis label="yn"/>
+    <healthabove label="uwch">Ymateb pryd mae iechyd yn mynd dros rhif penodol.</healthabove>
+    <healthbelow label="is">Ymateb pryd mae rhif yn mynd yn is na rhif penodol.</healthbelow>
+    <direction>
+      <up label="lan">Ymateb pryd mae ffon gêm yn cael ei wthio i fyny.</up>
+      <right label="dde">Ymateb pryd mae ffon gêm yn cael ei wthio i'r dde. </right>
+      <down label="i lawr ">Ymateb pryd mae ffon gêm yn cael ei wthio i lawr.</down>
+      <left label="chwith">Ymateb pryd mae ffon gêm yn cael ei wthio i'r chwith.</left>
+      <clockwise label="dde">Ymateb i ystum cylchdro clocwedd.</clockwise>
+      <counterclockwise label="chwith">Ymateb i ystum cylchdrogwrth- clocwedd.</counterclockwise>
+    </direction>
+    <not label="dim">Ymateb pan nad yw cyflwr yn cyd-fynd.</not>
+  </filter>
+  <selector>
+    <closest label="agosaf"/>
+    <objectrelative label="perthyn"/>
+    <towardclosest label="tuag at">Symudwch tuag at beth bynnag rydych yn ymateb i.</towardclosest>
+    <awayfromall label="i ffwrdd">Symud i ffwrdd o beth bynnag rydych yn ymateb i.</awayfromall>
+    <avoidall label="osgoi">Osgoi beth bynnag rydych yn ymateb i gan cadw pellter penodol ohoni.</avoidall>
+    <wander label="crwydro">Crwydro o gwmpas gan ddewis y cyfeiriad ar hap. Mae'n ddefnyddiol fel llinell olaf yn y rhaglen felly mae eich cymeriad yn symud pan nad yw'n mynd ar drywydd unrhyw beth.</wander>
+    <cruise label="syth">Symud I'r cyfeiriad rydych chi'n gwynebu ar hyn o bryd.</cruise>
+    <circle label="cylch"/>
+    <spin label="troi">Troi ar yr unfan.</spin>
+    <forward label="ymlaen"/>
+    <hiddenturn label="troi"/>
+    <escape label="troi i ffwrdd"/>
+    <followwaypoints label="ar llwybr">Symud ar llwybr sydd gyda lliw penodol.Diofyn yw i symud ar unrhyw llwybr.</followwaypoints>
+    <moveupdown label="i fyny/i lawr">Symud i fyny ac i lawr.</moveupdown>
+    <moveup label="i fyny">Symud i fyny.</moveup>
+    <movedown label="i lawr ">Symud i lawr.</movedown>
+    <moveleftright label="troi">Symud i'r dde neu i'r chwith.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="chwaraewr 1"/>
+      <_2 label="chwaraewr 2"/>
+      <_3 label="chwaraewr 3"/>
+      <_4 label="chwaraewr 4"/>
+    </player>
+    <reset>
+      <world label="daear">Ailosod y gem, ond nid y sgôr.</world>
+      <score label="sgôr">Ailosod y sgôr, neu sgôr unigol o chi'n darparu lliw.</score>
+      <expression label="mynegi">Ailosod mynegiad y cymeriad.</expression>
+      <glow label="tywynnu">Ailosod tywyn y cymeriad.</glow>
+      <health label="iach">Ailosod iechyd y cymeriad.</health>
+    </reset>
+    <projectile>
+      <blip label="blip">Mae blips yn teflyn tan-gyflym - mwy ysgafn na thafelgryn.</blip>
+      <missile label="tafelgryn">Mae tafelgryn yn fawr ond ddim yn gyflym iawn, ond maen nhw'n ddigon clyfar i ddilyn eu targedu.</missile>
+    </projectile>
+    <slowly label="araf">Symud yn arafach. Defnyddiwch fwy nag unwaith i symud yn arafach eto.</slowly>
+    <quickly label="cyflym">Symud yn gyflymach. Defnyddiwch fwy nag unwaith i symud yn gyflymach eto.</quickly>
+    <speednormally label="yn aferol">symud yn fwy arferol. Opsiynol.</speednormally>
+    <weakly label="gwan">Gwna hwn yn wanach nag arfer.</weakly>
+    <strongly label="cryf ">Gwna hwn yn gryfach nag arfer.</strongly>
+    <strengthnormally label="normal">Gwna hwn at gryfder normal. Opsiynol.</strengthnormally>
+    <angle>
+      <low label="isel">Gwna hwn yn wanach nag arfer.</low>
+      <high label="uchel">Gwna hwn yn gryfach nag arfer.</high>
+    </angle>
+    <turnleft label="chwith"/>
+    <turnright label="dde"/>
+    <turntoward label="tuag at"/>
+    <turnforward label="ymlaen">Yn dangos ni ddylai'r symudiad ddewis y cyfeiriad gwynebu.</turnforward>
+    <pitchup label="I lan"/>
+    <pitchdown label="I lawr "/>
+    <forward label="ymlaen">Y cyfeiriad mae'r cymeriad yn gwynebu</forward>
+    <north label="gogledd"/>
+    <east label="dwyrain"/>
+    <south label="de"/>
+    <west label="gorllewin"/>
+    <up label="i lan"/>
+    <down label="i lawr "/>
+    <distance>
+      <near label="agos">Gwnewch i'r cymeriad cylchu'r targed yn agosach.</near>
+      <far label="pell">Gwnewch i'r cymeriad cylchu'r targed mewn cylch mwy.</far>
+    </distance>
+    <objecticeberg label="mynydd ia">Creu mynydd ia.</objecticeberg>
+    <objectrock label="carreg">Creu carreg.</objectrock>
+    <objectrockLowValue label="carreg">Creu carreg tanllyd.</objectrockLowValue>
+    <objectrockHighValue label="carreg">Creuwch craig gwaddodol.</objectrockHighValue>
+    <objectfruit label="afal">Creuwch afal.</objectfruit>
+    <objectinkjet label="cwmwl inc">Creuwch gwmwl inc.</objectinkjet>
+    <objectstar label="seren">Creu seren.</objectstar>
+    <objectcoin label="darn arian">Creuwch ddarn arian.</objectcoin>
+    <objectheart label="calonnau">creu calon</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="pêl">creu pêl droed</objectsoccerball>
+    <objectbullet label="amno">Creu amno.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="tudalen 1">Newid i neu fewnlin tudalen 1.</taska>
+    <taskb label="tudalen 2">Newid i neu fewnlin tudalen 2.</taskb>
+    <taskc label="tudalen 3">Newid i neu fewnlin tudalen 3.</taskc>
+    <taskd label="tudalen 4">Newid i neu fewnlin tudalen 4.</taskd>
+    <taske label="tudalen 5">Newid i neu fewnlin tudalen 5.</taske>
+    <taskf label="tudalen 6">Newid i neu fewnlin tudalen 6.</taskf>
+    <taskg label="tudalen 7">Newid i neu fewnlin tudalen 7.</taskg>
+    <taskh label="tudalen 8">Newid i neu fewnlin tudalen 8.</taskh>
+    <taski label="tudalen 9">Newid i neu fewnlin tudalen 9.</taski>
+    <taskj label="tudalen 10">Newid i neu fewnlin tudalen 10.</taskj>
+    <taskk label="tudalen 11">Newid i neu fewnlin tudalen 11.</taskk>
+    <taskl label="tudalen 12">Newid i neu fewnlin tudalen 12.</taskl>
+    <expresshappy label="hapus">Ymddwyn yn hapus.</expresshappy>
+    <expresssad label="drist">Ymddwyn yn drist.</expresssad>
+    <expressangry label="GRAC">Ymddwyn yn grac.</expressangry>
+    <expresscrazy label="GWYLLT">Ymddwyn yn wyllt.</expresscrazy>
+    <expresshearts label="calonnau">Dangos calonnau.</expresshearts>
+    <expressflowers label="blodau">Dangos blodau.</expressflowers>
+    <expressstars label="sêr">Dangos sêr.</expressstars>
+    <expressswear label="rhegi">Dangos cartwn yn rhegi.</expressswear>
+    <expressnone label="dim">Ymddwyn yn arferol a pheidio dangos unrhywbeth.</expressnone>
+    <_000point label="pwyntiau">0 pwyntiau. Rydych chi'n gallu enwi lliw hefyd.</_000point>
+    <_001point label="pwynt">1 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_001point>
+    <_002points label="pwyntiau">2 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_002points>
+    <_003points label="pwyntiau">3 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_003points>
+    <_004points label="pwyntiau">4 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_004points>
+    <_005points label="pwyntiau">5 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_005points>
+    <_010points label="pwyntiau">10 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_010points>
+    <_020points label="pwyntiau">20 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_020points>
+    <_050points label="pwyntiau">50 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_050points>
+    <_100points label="pwyntiau">100 pwynt. Defnyddiwch sawl i'w adio at rhifau gwahanol. Gallwch nodi lliw hefyd.</_100points>
+    <random label="ar hap">Creuwch  rhif ar hap an defnyio teilsen rhif. Er enghraifft, Ar hap -5 yn creu rhif rhwng 0 a 4.</random>
+    <teama label="tim A"/>
+    <teamb label="timB"/>
+    <payloadzap label="stwn">Mae'n syfrdanu y targed am eiliadau.</payloadzap>
+    <payloadpop label="ergyd derfynol">Rhowch y targed i cwsg tan rhywun arall yn ailosod ei iechyd.</payloadpop>
+    <payloadboom label="bwm">Gwnewch darged diflannu gyda frwydriad</payloadboom>
+    <payloadvanish label="diflannu">Gwneud i'r targed diflannu yn dawel</payloadvanish>
+    <black label="du"/>
+    <grey label="llwyd"/>
+    <white label="gwyn"/>
+    <red label="coch"/>
+    <orange label="oren"/>
+    <yellow label="melyn"/>
+    <green label="gwyrdd"/>
+    <blue label="glas"/>
+    <purple label="porffor"/>
+    <pink label="pinc"/>
+    <brown label="brown"/>
+    <glowoff label="i ffwrdd">trowch unrhyw lewyrch</glowoff>
+    <colorrandom label="ar hap">Dewiswc liw ar hap </colorrandom>
+    <path>
+      <black label="du"/>
+      <grey label="llwyd"/>
+      <white label="gwyn"/>
+      <red label="coch"/>
+      <orange label="oren"/>
+      <yellow label="melyn"/>
+      <green label="gwyrdd"/>
+      <blue label="glas"/>
+      <purple label="porffor"/>
+      <pink label="pinc"/>
+      <brown label="brown"/>
+    </path>
+    <scorebucket>
+      <color>
+        <white label="gwyn">Newid y sgôr gwyn sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad. (Ymwelwch a'r gosodiadau byd i newid)</white>
+        <black label="du">Newid y sgôr du sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad.  (Ymwelwch a'r gosodiadau byd i newid)</black>
+        <grey label="llwyd">Newid y sgôr llwyd sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad.  (Ymwelwch a'r gosodiadau byd i newid)</grey>
+        <red label="coch">Newid y sgôr coch sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad.  (Ymwelwch a'r gosodiadau byd i newid)</red>
+        <green label="gwyrdd">Newid y sgôr gwyrdd sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad.  (Ymwelwch a'r gosodiadau byd i newid)</green>
+        <blue label="glas">Newid y sgôr glas sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad.  (Ymwelwch a'r gosodiadau byd i newid)</blue>
+        <orange label="oren">Newid y sgôr oren sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad.  (Ymwelwch a'r gosodiadau byd i newid)</orange>
+        <yellow label="melyn">Newid y sgôr melyn sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad. (Ymwelwch â 'r gosodiadau byd i newid.)</yellow>
+        <purple label="porffor">Newid y sgôr porffor sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad. (Ymwelwch â 'r gosodiadau byd i newid.)</purple>
+        <pink label="pinc">Newid y sgôr pinc sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad. (Ymwelwch â'r gosodiadau byd i newid.)</pink>
+        <brown label="brown">Newid y sgôr brown sydd yn cael ei arddangos ar y bwrdd sgôrio fel rhagosodiad. (Ymwelwch â'r gosodiadau byd i newid.)</brown>
+      </color>
+      <letter>
+        <a label="Sgôr A">Addasu y sgôr 'A', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</a>
+        <b label="Sgôr B">Addasu y sgôr 'B', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</b>
+        <c label="Sgôr C">Addasu y sgôr 'C', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</c>
+        <d label="Sgôr D">Addasu y sgôr 'D', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</d>
+        <e label="Sgôr E">Addasu y sgôr 'E', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</e>
+        <f label="Sgôr F">Addasu y sgôr 'F', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</f>
+        <g label="Sgôr G">Addasu y sgôr 'G', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</g>
+        <h label="Sgôr H">Addasu y sgôr 'H', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</h>
+        <i label="Sgôr I">Addasu y sgôr 'I', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</i>
+        <j label="Sgôr J">Addasu y sgôr 'J', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</j>
+        <k label="Sgôr K">Addasu y sgôr 'K', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</k>
+        <l label="Sgôr L">Addasu y sgôr 'L', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</l>
+        <m label="Sgôr M">Addasu y sgôr 'M', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</m>
+        <n label="Sgôr N">Addasu y sgôr 'N', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</n>
+        <o label="Sgôr O">Addasu y sgôr 'O', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</o>
+        <p label="Sgôr P">Addasu y sgôr 'P', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</p>
+        <q label="Sgôr Q">Addasu y sgôr 'Q', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</q>
+        <r label="Sgôr R">Addasu y sgôr 'R', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</r>
+        <s label="Sgôr S">Addasu y sgôr 'S', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</s>
+        <t label="Sgôr T">Addasu y sgôr 'T', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</t>
+        <u label="Sgôr U">Addasu y sgôr 'U', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</u>
+        <v label="Sgôr V">Addasu y sgôr 'V', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</v>
+        <w label="Sgôr W">Addasu y sgôr 'W', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</w>
+        <x label="Sgôr X">Addasu y sgôr 'X', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</x>
+        <y label="Sgôr Y">Addasu y sgôr 'Y', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</y>
+        <z label="Sgôr Z">Addasu y sgôr 'Z', sydd byth yn cael ei ddangos ar y bwrdd sgôrio.</z>
+      </letter>
+      <local>
+        <a label="sgôr a">The 'a' score, which is private to this character.</a>
+        <b label="sgôr b">The 'b' score, which is private to this character.</b>
+        <c label="sgôr c">The 'c' score, which is private to this character.</c>
+        <d label="sgôr d">The 'd' score, which is private to this character.</d>
+        <e label="sgôr e">The 'e' score, which is private to this character.</e>
+        <f label="sgôr f">The 'f' score, which is private to this character.</f>
+        <g label="sgôr g">The 'g' score, which is private to this character.</g>
+        <h label="sgôr h">The 'h' score, which is private to this character.</h>
+        <i label="sgôr i">The 'i' score, which is private to this character.</i>
+        <j label="sgôr j">The 'j' score, which is private to this character.</j>
+        <k label="sgôr k">The 'k' score, which is private to this character.</k>
+        <l label="sgôr l">The 'l' score, which is private to this character.</l>
+        <m label="sgôr m">The 'm' score, which is private to this character.</m>
+        <n label="sgôr n">The 'n' score, which is private to this character.</n>
+        <o label="sgôr o">The 'o' score, which is private to this character.</o>
+        <p label="sgôr p">The 'p' score, which is private to this character.</p>
+        <q label="sgôr q">The 'q' score, which is private to this character.</q>
+        <r label="sgôr r">The 'r' score, which is private to this character.</r>
+        <s label="sgôr s">The 's' score, which is private to this character.</s>
+        <t label="sgôr t">The 't' score, which is private to this character.</t>
+        <u label="sgôr u">The 'u' score, which is private to this character.</u>
+        <v label="sgôr v">The 'v' score, which is private to this character.</v>
+        <w label="sgôr w">The 'w' score, which is private to this character.</w>
+        <x label="sgôr x">The 'x' score, which is private to this character.</x>
+        <y label="sgôr y">The 'y' score, which is private to this character.</y>
+        <z label="sgôr z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="fi">Rhoi y weithred i'r bot sy'n rhedeg y rhaglen.</me>
+    <it label="ef">Rhoi y weithred i'r gwrthrych targed.</it>
+    <any label="unrhyw">Unrhyw sain.</any>
+    <event>
+      <any label="digwyddiad">Unrhyw sain.</any>
+      <silly>
+        <any label="gwirion">Unrhyw sain gwirion.</any>
+        <bang label="bang">Sain 'bang' cart?n.</bang>
+        <pow label="pow">Sain 'pow' cart?n.</pow>
+      </silly>
+      <explode>
+        <any label="frwydro">Unrhyw sain ffrwydro.</any>
+        <A label="boom A">Sain ffrwydro.</A>
+        <B label="boom B">Sain ffrwydro.</B>
+        <C label="boom C">Sain ffrwydro.</C>
+        <D label="boom D">Sain ffrwydro.</D>
+        <E label="boom E">Sain ffrwydro.</E>
+      </explode>
+      <musical>
+        <any label="cerddorol">Unrhyw sain cerddorol.</any>
+        <glock>
+          <any label="gloc">Unrhyw sain glocenspiel</any>
+        </glock>
+        <glock01 label="C gloc">Tôn glocenspiel</glock01>
+        <glock02 label="C# gloc">Tôn glocenspiel</glock02>
+        <glock03 label="D gloc">Tôn glocenspiel</glock03>
+        <glock04 label="D# gloc">Tôn glocenspiel</glock04>
+        <glock05 label="E gloc">Tôn glocenspiel</glock05>
+        <glock06 label="F gloc">Tôn glocenspiel</glock06>
+        <glock07 label="F# gloc">Tôn glocenspiel</glock07>
+        <glock08 label="G gloc">Tôn glocenspiel</glock08>
+        <glock09 label="G# gloc">Tôn glocenspiel</glock09>
+        <glock10 label="A gloc">Tôn glocenspiel</glock10>
+        <glock11 label="A# gloc">Tôn glocenspiel</glock11>
+        <glock12 label="B gloc">Tôn glocenspiel</glock12>
+        <gong>
+          <any label="gong">Unrhyw sain gong.</any>
+        </gong>
+        <gong01 label="C gong">Tôn gong.</gong01>
+        <gong02 label="C# gong">Tôn gong.</gong02>
+        <gong03 label="D gong">Tôn gong.</gong03>
+        <gong04 label="D# gong">Tôn gong.</gong04>
+        <gong05 label="E gong">Tôn gong.</gong05>
+        <gong06 label="F gong">Tôn gong.</gong06>
+        <gong07 label="F# gong">Tôn gong.</gong07>
+        <gong08 label="G gong">Tôn gong.</gong08>
+        <gong09 label="G# gong">Tôn gong.</gong09>
+        <gong10 label="A gong">Tôn gong.</gong10>
+        <gong11 label="A# gong">Tôn gong.</gong11>
+        <gong12 label="B gong">Tôn gong.</gong12>
+        <saw>
+          <any label="dantlif">Unrhyw sain ton dantlif.</any>
+        </saw>
+        <saw01 label="C dantlif">Tôn ton dantlif.</saw01>
+        <saw02 label="C# dantlif">Tôn ton dantlif.</saw02>
+        <saw03 label="D dantlif">Tôn ton dantlif.</saw03>
+        <saw04 label="D# dantlif">Tôn ton dantlif.</saw04>
+        <saw05 label="E dantlif">Tôn ton dantlif.</saw05>
+        <saw06 label="F dantlif">Tôn ton dantlif.</saw06>
+        <saw07 label="F# dantlif">Tôn ton dantlif.</saw07>
+        <saw08 label="G dantlif">Tôn ton dantlif.</saw08>
+        <saw09 label="G# dantlif">Tôn ton dantlif.</saw09>
+        <saw10 label="A dantlif">Tôn ton dantlif.</saw10>
+        <saw11 label="A# dantlif">Tôn ton dantlif.</saw11>
+        <saw12 label="B dantlif">Tôn ton dantlif.</saw12>
+        <sine>
+          <any label="ton sin">Unrhyw sain ton sin</any>
+        </sine>
+        <sine01 label="C ton sin">Tôn ton sin</sine01>
+        <sine02 label="C# ton sin">Tôn ton sin.</sine02>
+        <sine03 label="D ton sin">Tôn ton sin.</sine03>
+        <sine04 label="D# ton sin">Tôn ton sin.</sine04>
+        <sine05 label="E ton sin">Tôn ton sin.</sine05>
+        <sine06 label="F ton sin">Tôn ton sin.</sine06>
+        <sine07 label="F# ton sin">Tôn ton sin.</sine07>
+        <sine08 label="G ton sin">Tôn ton sin.</sine08>
+        <sine09 label="G# ton sin">Tôn ton sin.</sine09>
+        <sine10 label="A ton sin">Tôn ton sin.</sine10>
+        <sine11 label="A# ton sin">Tôn ton sin.</sine11>
+        <sine12 label="B ton sin">Tôn ton sin.</sine12>
+        <square>
+          <any label="ton sgwâr">Unrhyw sain ton sgwâr</any>
+        </square>
+        <square01 label="C ton sgwâr">Tôn ton sgwâr</square01>
+        <square02 label="C# ton sgwâr">Tôn ton sgwâr</square02>
+        <square03 label="D ton sgwâr">Tôn ton sgwâr</square03>
+        <square04 label="D# ton sgwâr">Tôn ton sgwâr</square04>
+        <square05 label="E ton sgwâr">Tôn ton sgwâr</square05>
+        <square06 label="F ton sgwâr">Tôn ton sgwâr</square06>
+        <square07 label="F# ton sgwâr">Tôn ton sgwâr</square07>
+        <square08 label="G ton sgwâr">Tôn ton sgwâr</square08>
+        <square09 label="G# ton sgwâr">Tôn ton sgwâr</square09>
+        <square10 label="A ton sgwâr">Tôn ton sgwâr</square10>
+        <square11 label="A# ton sgwâr">Tôn ton sgwâr</square11>
+        <square12 label="B ton sgwâr">Tôn ton sgwâr</square12>
+        <drums>
+          <any label="drymiau">Unthyw sain drymiau</any>
+        </drums>
+        <bassdrum label="bas">Drwm bas</bassdrum>
+        <hhclosed label="hh ar gau">symbal high-hat ar gau.</hhclosed>
+        <hhopen label="hh ar agor">symbal high-hat ar agor.</hhopen>
+        <shaker label="siglwr">Siglwr.</shaker>
+        <snare label="croglath">drwm gwifrau</snare>
+        <tomlow label="tom isel">tom traw isel</tomlow>
+        <tommed label="tom canolig">tom traw canolig</tommed>
+        <tomhi label="tom uchel">tom traw canolig</tomhi>
+      </musical>
+      <arcade>
+        <any label="arcêd">Unrhyw sain arcêd</any>
+        <roboton label="robot ar">Actifadu robot</roboton>
+        <robotoff label="robot bant">Diffodd robot</robotoff>
+        <coinsound label="darn arian">sain darn arian</coinsound>
+        <gethealth label="Iechyd+">Sain derbyn iechyd.</gethealth>
+        <losehealth label="iechyd-">Sain colli iechyd.</losehealth>
+        <shoot label="saethu">Sain saethu.</shoot>
+        <timer label="amserydd">Sain amserydd.</timer>
+        <win label="ennill">Sain ennill.</win>
+        <lose label="colli">Sain colli.</lose>
+        <inkjet_fire label="tanio jetinc">Sain tanio jetinc.</inkjet_fire>
+        <inkjet_impact label="trawiad jetinc">Sain trawiad jetinc.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="amrywiol">Unrhyw sain amrywiol.</any>
+        <countdown_beep label="cyfri i lawr">Sain bîp cyfri i lawr.</countdown_beep>
+        <countdown_alarm label="alarwm cyfri i lawr">Bîp cyfri i lawr pwysig.</countdown_alarm>
+        <epic_stinger label="pigiad epig">Sain pigiad epig.</epic_stinger>
+        <epic_stinger_a label="pigiad epig a">Sain stinger epig.</epic_stinger_a>
+        <epic_stinger_b label="pigiad epig b">Sain pigiad epig.</epic_stinger_b>
+        <firepoof label="poof tân">Sain taniad tân.</firepoof>
+        <forcefieldup label="tarian +">Sain maes grym lan.</forcefieldup>
+        <forcefielddown label="tarian -">Sain maes grym lawr.</forcefielddown>
+        <hide label="cuddio">Sain cuddio.</hide>
+        <lockontarget label="cloi ar">Sain cloi ar targed.</lockontarget>
+        <losetarget label="cloi bant">Sain colli targed.</losetarget>
+        <positivecondition label="da">Sain mae rhywbeth da wedi digwydd.</positivecondition>
+        <negativecondition label="drwg">Sain mae rhywbeth drwg wedi digwydd.</negativecondition>
+        <points label="pwyntiau">Sain dafarnwyd pwyntiau.</points>
+        <pop label="pop">Sain pop.</pop>
+        <popout label="pop allan">sain pop allan.</popout>
+        <powerup label="p?er i fynu">Codi lan p?er i fynu</powerup>
+        <servo label="servo">Sain servo</servo>
+        <watersplash label="sblash">Sain sblash d?r</watersplash>
+        <waterdrop label="cwymp">Sain cwymp d?r</waterdrop>
+        <tagbase label="tag bas">Sain tag bas</tagbase>
+        <whistlehuman label="chwiban">Sain chwiban dynol</whistlehuman>
+        <whistlereferee label="chwiban">sain chwiban dyfarnwr</whistlereferee>
+      </misc>
+      <tower>
+        <any label="t?r">Sain wedi ychwannegu ar gyfer chwarae amddyffyn t?r</any>
+        <air_raid_siren label="seiren ymosodiad aer">Sain seiren ymosodiad aer</air_raid_siren>
+        <bomb_fall label="cwymp bom">Sain bom yn cwympo</bomb_fall>
+        <stun_fire label="saethiad tan">Swn tyred saethiad tan</stun_fire>
+        <zapper_fire label="tan zapper">Swn tyred tan zapper</zapper_fire>
+        <missile_fire label="saethiad saethyn">Swn tyred saethiad saethyn</missile_fire>
+        <shrinker_fire label="tan lleihau">S?n tyred saethiad cebachwr.</shrinker_fire>
+        <clam_coin_spit label="poer darnau arian">Y swn mawreddog o glam yn poeri darn arian allan.</clam_coin_spit>
+        <enemy_converted label="gelyn wedi'I trawsnewid">swn o bryd caiff gelyn ei draws newid.</enemy_converted>
+        <enemy_escape label="dihangfa gelyn">Swn o pryd mae gelyn yn dianc.</enemy_escape>
+        <place_tower label="gosodwch twr">Y swn pryd mae twr yn cael ei osod.</place_tower>
+        <star_collect label="casgliad sêr">y swn pryd caiff seren ei gasglu</star_collect>
+        <coin_collect label="casgliad arian">y swn pryd caiff arian ei gasglu</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="cerddoriaeth">unrhyw gerddoriaeth o'r gr?p</any>
+      <omni>
+        <any label="Omni">Unrhyw gerddoriaeth o'r gr?p</any>
+      </omni>
+    </music>
+    <mu_action label="gweithred">Gweithred</mu_action>
+    <mu_ambientlight label="golau">Cerddoriaeth ysgafn cyfarwyddeb </mu_ambientlight>
+    <mu_ambinetmodd label="naws">Cerddoriaeth naws</mu_ambinetmodd>
+    <mu_brightdowntempo label="symudiad araf">cerddoriaeth isdempo llachar</mu_brightdowntempo>
+    <mu_brightfunk label="ffync">Ffynclyd!</mu_brightfunk>
+    <mu_brightguitar label="gitar">Cerddoriaeth llachar gitar</mu_brightguitar>
+    <mu_kodu label="kodu">thema kodu</mu_kodu>
+    <music>
+      <mystery>
+        <any label="dirgelwch">unrhyw gerddoriaeth o'r gr?p</any>
+      </mystery>
+    </music>
+    <mysterya label="digelwch A">cerddoriaeth dirgelwch</mysterya>
+    <mysteryb label="dirgelwch b">cerddoriaeth dirgelwch</mysteryb>
+    <mysteryc label="dirgelwch c">cerddoriaeth dirgelwch</mysteryc>
+    <music>
+      <driving>
+        <any label="gyrru">unrhyw gerddoriaeth o'r gr?p</any>
+      </driving>
+    </music>
+    <drivinga label="cyflym a">cerddoriaeth gyrru, cyflym</drivinga>
+    <drivingb label="cyflym B">cerddoriaeth gyrru, cyflym</drivingb>
+    <drivingc label="Cyflym C">cerddoriaeth gyrru, cyflym</drivingc>
+    <music>
+      <drama>
+        <any label="drama">unrhyw gerddoriaeth o'r gr?p</any>
+      </drama>
+    </music>
+    <dramaa label="drama A">Cerddoriaeth dramatig</dramaa>
+    <dramab label="drama b">Cerddoriaeth dramatig</dramab>
+    <environ>
+      <any label="amgylchedd">unrhywsain o'r gr?p</any>
+      <ambocean label="môr">sain  môr</ambocean>
+      <ambforest label="coedwig">sain coedwig</ambforest>
+      <ambcity label="dinas">sain y ddinas</ambcity>
+      <ambmeadow label="gweirglodd">sain gweirglodd</ambmeadow>
+      <ambmars label="mawrth">sain mawrth</ambmars>
+      <arena>
+        <any label="ymrysonfa">unrhyw un o'r synnau ymrysonfa</any>
+        <a label="ymrysonfa A">Cynulleidfa mawr</a>
+        <b label="ymrysonfa B">Cynulleidfa mawr</b>
+        <c label="ymrysonfa C">Cynulleidfa mawr</c>
+        <d label="ymrysonfa D">Cynulleidfa mawr</d>
+        <e label="Ymrysonfa E">Cynulleidfa mawr</e>
+        <f label="Ymrysonfa F">Cynulleidfa mawr</f>
+        <g label="Ymrysonfa ">Cynulleidfa mawr</g>
+      </arena>
+    </environ>
+    <trackingnone label="lefel">Fe fydd y saethyn yn hedfan yn syth a ni fydd yn symud i fyny neu i lawr</trackingnone>
+    <trackinghoming label="mordaith">fe fydd y saethyn yn dilyn  ti ac yn trio hedfan dros y bryniau a'r waliau</trackinghoming>
+    <constraint>
+      <leftright label="chwith/dde">Symudwch I'r chwith a'r dde yn unig</leftright>
+      <fwdback label="ymlaen/ynol">symudwch ymlaen ac yn ol yn unig</fwdback>
+      <updown label="Ifyny/ilawr"/>
+      <northsouth label="G/D">Symudwch I'r gogledd a'r De yn unig</northsouth>
+      <eastwest label="D/G">Symudwch I'r Dwyrain a'r Gorllewin yn unig.</eastwest>
+      <immobile label="Rhewi">Peidiwch gadael symudiad, hyd yn oed pryd mae'n cael ei fwmpio</immobile>
+    </constraint>
+    <once label="unwaith">Dim on unwaith bydd y cod yn rhedeg ar ol GWNEWCH pob tro mae PRYD yn cael ei ysgogi.</once>
+    <watertype label="Math o ddwr">osod y fath o ddwr</watertype>
+  </modifier>
+  <actuator>
+    <nothing label="dim byd"/>
+    <movement label="symud">Teithwch o gwmpas  byd. Ymchwiliwch yr opsiynau. Mae gan wahanol cymeriadau'r gallu i symud gwahanol.</movement>
+    <turn label="troi">newidwch eich cyfeiriad gwynebu</turn>
+    <eat label="bwyta">treuliwch y gwrthrych anelu, sydd angen fod ar gau</eat>
+    <say label="dweud">arddangoswch nodn bodyn, naill ai mewn balwn neu deialog. Defnyddiwch &lt;cr&gt; i hollti i fewn i linellau.</say>
+    <open label="agor">mae'n gweithio'n wahanol ar gyfer cymeriadau gwahanol! Arbofwch!</open>
+    <close label="cau">mae'n gweithio'n wahanol ar gyfer cymeriadau gwahanol! Arbofwch!</close>
+    <kick label="cic">ciciwch y darged os yw'n digon agos. Gall amrywio cryfder.</kick>
+    <make label="creu">creuwch gwrthrych arall. Gall greu gwrthrychau syml neu unrhywbeth wedi'I labelu'n GalluCreu</make>
+    <launch label="Lawnsio">Ciciwch y darged os yw'n digon agos. Gall amrywio cryfder.</launch>
+    <push label="gwthio">Gwthiwch darged mewn cyfeiriad penodol os yw'n digon agos. Gall amrwio mewn cryfder.</push>
+    <pull label="tynnu">Tynnwch darged i gyfeiriad penodol os yw'n digon agos. Gall amrywio mewn cryfder.</pull>
+    <camouflage label="cuddliw">Cudliwiwch y darged gan ei wneud hi'n anodd gweld.</camouflage>
+    <uncamouflage label="di-guddliw">Di-guddliwiwch y darged, hwn yn ei wneud yn weladwy.</uncamouflage>
+    <express label="mynegi">Mynegwch emosiwn neu dangos effaith arbennig. Mae rhai mynegiadau yn newid gwyneb y cymeriad tra bod eraill yn cael ei harddangos uwchben y cymeriad.</express>
+    <color label="lliw">Newidwch lliw eich hun neu'r gwrthrych anelu.</color>
+    <glow label="tywyn">Allyrru tywyn ymbelydrol. Gallu newid lliw. </glow>
+    <sound label="chwarae">Gwnewch swn! Mae llawer i ddewis o.</sound>
+    <stopsound label="tawel">Stopiwch chwarae swn.</stopsound>
+    <jump label="neidio">Gall gwahanol cymeriadau neidio uchderoedd gwahanol.</jump>
+    <watersurface label="arwyneb">Mae'r gweithred Arwyneb yn achosi cymeriadau anforol i godi i arwyneb y d?r.</watersurface>
+    <waterdive label="plymiad">Mae'r weithred deifio yn achosi i gymeriadau tanforol i blymio i waelod y dwr.</waterdive>
+    <airrise label="ewch i fyny">Mae'r weithred i fyny yn achosi i gymeriadau hedfan i fyny I'r awyr.</airrise>
+    <airdrop label="ewch i lawr">Mae'r weithred i lawr yn achosi i gymeriadau hedfan hedfan i lawr tuag at y llawr.</airdrop>
+    <switchtask label="newid">Newidwch i dudalen arall. Dim ond rheolau sydd ar y dudalen presennol. Mae tudalennau yn ddefnyddiol iawn am newid ymddygiad.</switchtask>
+    <inlinetask label="mewnlinell">Yn amser rhedeg fe fydd hyn yn cynnwys yr holl rhaglenni o dudalen arall fan hyn. Mae hyn yn ddefnyddiol am kode rydych eisiau ar sawl dudalen oherwydd gallech deipio hi i fewn unwaith, ac yna mewnlinellwch hi pryd bynnag rydych ei hangen.</inlinetask>
+    <nextlevel label="lefel nesaf">Llwythych y lefel nesaf. Mae'n ddefnyddiol i gemau aml-lefelau!</nextlevel>
+    <prevlevel label="lefel blaenorol">Llwythwch y lefel blaenorol. Mae'n ddefnyddio ar gyfer gemau aml-lefelau!</prevlevel>
+    <waterraise label="codwch y dwr">Codwch lefel y dwr o dan y gwrthrych hon.</waterraise>
+    <waterlower label="gostyngwch y dwr">Gostyngwch lefel y dwr o dan y gwrthrych hon.</waterlower>
+    <setwater label="gosodwch y dwr">Mae'n gosod y fath o ddwr o dan y gwrthrych hon.</setwater>
+    <rescale label="graddfa">Mae'n newid graddfa maint y gwrthrych yn lyfn.</rescale>
+    <rescaleinstant label="graddfa (yn syth)">Mae'n gosod graddfa maint y gwrthrych yn syth.</rescaleinstant>
+    <movementspeedmodify label="cyflymder symud">Mae'n gosod llusoydd cyflymder symudiad ymlaen ar gyfer yr actor hyn.</movementspeedmodify>
+    <turningspeedmodify label="cyflymder troi">Mae'n gosod lluosydd cyflymder troi ar gyfer yr actor.</turningspeedmodify>
+    <worldlightingchange label="goleuadu">Mae'n gosod goleuadu'r byd yn llyfn.</worldlightingchange>
+    <worldlightingchangeinstant label="goleuadu (yn syth)">Mae'n gosod goleuadu'r byd yn llyfn ac yn syth.</worldlightingchangeinstant>
+    <worldskychange label="awyr">Mae'n gosod awyr y byd yn lyfn.</worldskychange>
+    <worldskychangeinstant label="awyr (yn syth)">Mae'n gosod goleuadu awr y byd yn syth.</worldskychangeinstant>
+    <shoot label="saethu"/>
+    <shoot2 label="saethu">Saethwch blipiau neu saethynau.</shoot2>
+    <beam label="pelydryn">Mae'n saethu pelydriad laser at math o garreg Mawrth i unieuthu a nodweddion y garreg.</beam>
+    <inspect label="arolgu">Yn drillio i fewn i fath o garreg Mawrth, yn cynaeafu samplau ar gyfer adolygiad pellach.</inspect>
+    <scan label="sgan">Mae'n dadlennu y fath o garreg o greigiau anwybod mewn ardal o gwmpas y Rover.</scan>
+    <picture label="llun">Cymryd llun o olwg y person cyntaf.</picture>
+    <damage label="difrod">Tynnwch iechyd o naill ai fy hun neu'r cymeriad anelu.</damage>
+    <heal label="gwella">Ychwanegu bywyd i fy hun neu i'r cymeriad targedol.\n     Mae'r gweithred gwella yn achosi i'r cymeriad neu'r gwrthrych taregdol i wella o niwed. Mae'r diofyn yw i'r gwrthrych targedol cael ei gwella; mae'r cymeriad yn gallu cael ei gwella gan gynnwys yr addasydd "fi". Mae addasyddion yn gallu cael eu defnyddio i ddewis y fath neu cyfaint y pwyntiau gwella.</heal>
+    <zap label="syfrdanu">Syfrdanu fy hun neu'r cymeriad targedol am ychydig o eiliadau.</zap>
+    <pop label="ergyd derfynol">Yn achosu i'r bot neu fy hun i fod yn hollol anabl nes mae'r iechyd yn cael ei ailosod gan rhywun arall.</pop>
+    <boom label="boom">Gwneud i fy hunain neu'r targed i ddiflannu gyda ffrwydrad.</boom>
+    <vanish label="ddiflannu">Gwneud i fy hunain neu'r targed i ddiflannu yn dawel.</vanish>
+    <grab label="cipio">Codi'r targed os ydy e'n ddigon agos. Rydych yn gallu dal un peth ar y pryd yn unig.</grab>
+    <drop label="gollwng ">Gollwng beth bynnag rydych yn cario.</drop>
+    <give label="rhoi">Rhoi beth bynnag rydych yn dal I'r cymeriad targedol. Os ydy'r targed methu ei dal, bydd e'n gollwng.</give>
+    <reset label="ailosod">Ailosod agwedd o'r gem neu'r cymeriad.</reset>
+    <restart label="ailddechrau">Ailddechrau agwedd o'r gem neu'r cymeriad.</restart>
+    <gameover label="diwedd">Gorffen y gem.</gameover>
+    <victory label="ennill">Gorffen y gem a dangos neges ennill. Os ydych yn penu lliw, byddwn ni'n ei ddangos.</victory>
+    <score label="sgôr">Ychwanegu pwyntiau at y sgôr.</score>
+    <unscore label="tynnu">Tynnu pwyntiau i ffwrdd o'r sgôr </unscore>
+    <scoreset label="setio sgôr">Setio sgôr am werth penodol.</scoreset>
+    <camera>
+      <followme label="dilyn">Dylai'r safbwynt dilyn y cymeriad yma.</followme>
+      <ignoreme label="anwybyddu">Peidiwch a phoeni amdano cadw y cymeriad yma mewn golwg.</ignoreme>
+      <firstperson label="person 1af ">Gweld trwy lygaid y cymeriad.</firstperson>
+    </camera>
+  </actuator>
+  <root/>
+  <group>
+    <colors label="lliwiau"/>
+    <pathcolors label="lliwiau llwybrau"/>
+    <game label="gem"/>
+    <more label="mwy"/>
+    <players label="chwaraewyr"/>
+    <playermods label="chwaraewyr"/>
+    <actions label="gweithredau"/>
+    <settings label="gosodiadau"/>
+    <combat label="brwydr"/>
+    <rover label="crwydryn"/>
+    <holding label="yn dal"/>
+    <sounds label="synnau"/>
+    <event label="digwyddiad">
+      <explode label="ffrwydro"/>
+      <silly label="sili"/>
+      <musical label="cerddorol">
+        <glock label="gloc"/>
+        <saw label="llif"/>
+        <sine label="sein"/>
+        <gong label="gong"/>
+        <square label="sgwar"/>
+        <drums label="drymiau"/>
+      </musical>
+      <arcade label="arced"/>
+      <misc label="misc"/>
+      <tower label="twr"/>
+    </event>
+    <environ label="amgylchedd">
+      <forest label="coedwig"/>
+      <arena label="ymrynsofa"/>
+    </environ>
+    <music label="cerddoriaeth">
+      <omni label="newydd"/>
+      <mystery label="dirgelwch"/>
+      <driving label="gyrru"/>
+      <drama label="drama"/>
+    </music>
+    <constraints label="terfan"/>
+    <directions label="cyfeirad"/>
+    <filters>
+      <directions label="cyfeirad"/>
+      <touchbuttons label="botymau"/>
+      <touchGuiButtons label="Botymau"/>
+      <gestures label="ystymiau"/>
+    </filters>
+    <expressions label="mynegi"/>
+    <projectiles label="teflyn"/>
+    <camera label="golwg"/>
+    <reset label="ailosod"/>
+    <options label="opsiynnau"/>
+    <compare label="cymharu"/>
+    <points label="pwyntiau"/>
+    <time label="amser"/>
+    <speed label="buanedd"/>
+    <strength label="cryfder"/>
+    <angle label="oriel"/>
+    <tracking label="llwybro"/>
+    <bots label="botiau I"/>
+    <bots2 label="botiau II"/>
+    <objects label="gwrthrychau"/>
+    <tasks label="tasg"/>
+    <terrains label="mathau"/>
+    <waters label="mathau"/>
+    <setwater label="mathau o ddwr"/>
+    <creatables label="gwrthrychau creu"/>
+    <keyboard>
+      <letters label="llythrennau"/>
+      <numbers label="rhifau"/>
+      <symbols label="symbolau"/>
+      <misc label="amrywiol"/>
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

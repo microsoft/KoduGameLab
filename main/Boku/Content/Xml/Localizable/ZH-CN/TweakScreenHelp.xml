@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>控制对象被推开的基本范围。也会受到对象大小规模的影响。</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>控制推对象时要使用多少力量。使用力量修改器修改。</desc>
+  </helpText>
+  
+  <helpText id="LightRange">
+    <desc>设定此光源可照亮多远的距离 (仅适用于光源)。</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+微调此机器人的速度。
+数值若为 1.0，即为默认速度。
+	</desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+微调此机器人的加速速度。
+数值若为 1.0，即为默认加速速度。
+	</desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>锁定此机器人的位置，让它无法朝向任何方向移动。但仍旧可以旋转。</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>让此机器人坚不可摧。</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>设定时，机器人头上会出现一条小小的横条，显示机器人还有多少体力。</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>这能让你控制机器人体力值的起始数字。当机器人受到伤害时，体力值数字会下降，接受治疗后，提力值数字会上升。</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+当机器人被标示为「可创造」时，会有两种特殊状况。
+第一，如果你复制此机器人，则复制后的机器人会与原本的机器人共享相同的大脑 - 变更其一就会变更全部。在编辑时，你可以看到原本标记为「可创造」的机器人与它的复制人之间有虚线相连。
+第二，你现在可以编排其他机器人的程序，完整地创造一个机器人。如果你想在游戏中持续创造敌人的话，这是个很好用的方法。
+请记住，这可能会让你在不经意间用完这个世界的预算，届时，创造就会自动停止。
+	</desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+对于「可创造」的事物，这个数量会限制在游戏中可以创造的数量。你在编辑时散布的复制人不会计入此数量中，这个数量只会限制在玩游戏时，其他机器人使用「创造」所产生的复制人。
+	</desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+控制摄影机如何拍摄此机器人的行动。一般来说，摄影机会跟着由玩家控制的机器人。
+如果你将此设为「总是」，摄影机将会一直跟这此机器人。如果有一个以上的机器人开启此设定，则摄影机会尝试让所有机器人都显示于屏幕上。
+如果你将此设为「永不」，就算玩家控制机器人，摄影机也会忽略此机器人。
+	</desc>
+  </helpText>
+  <helpText id="HoldDistance">
+    <desc>这会控制「被抓住」的对象会被带到多远的位置。</desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>这会控制当机器人撞到地形、墙壁，或是其他机器人时的弹跳状态。</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>这会控制当机器人撞到地形、墙壁，或是其他机器人时的滑动状态。</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>控制此机器人所发射的星光弹会造成多大的伤害。.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+星光弹装填时间会控制机器人发射星光弹后，下次可发射的时间。
+单位为秒。
+	</desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>控制星光弹在消失前可飞行的距离。</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>控制此机器人在行进间发射星光弹的速度。</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+控制此机器人同时可有多少星光弹在空中飞行。
+当发射至此数量后，在已发射的星光弹击中对象或达到最大飞行距离前，机器人无法再次发射。
+	</desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>控制此机器人发射的火箭在击中目标后，会对目标造成多少伤害点数。</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+控制机器人在发射两枚火箭间需要等候多久。
+单位为秒。
+	</desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>控制火箭在消失前可飞行的距离。</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>控制此机器人在行进间发射火箭的速度。</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+控制此机器人同时可有多少火箭在空中飞行。
+当发射至此数量后，在已发射的火箭击中对象或达到最大飞行距离前，机器人无法再次发射。
+	</desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>控制此机器人所发射的火箭是否会喷出烟雾。没有烟雾的火箭速度较快。</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>控制此机器人击中某物或受到伤害时，是否显示遮蔽视觉效果。</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>控制是否完整显示此机器人。其他机器人仍旧可以看见及听到此机器人。</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>控制其他机器人是否可以看见、听到，或是碰到此机器人。鬼机器人仍旧可以看见和听到彼此，但无法触碰。</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>停用此角色的所有内建音效。仍会播放已编排程序的音效。请注意，其它角色仍旧可以藉由听觉侦测到此角色现身。</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>滑过任何水面。关闭此选项可让角色飞入水中。</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>控制其它角色可在多远的地方听见此角色。这不会变更玩家听到的实际音效。</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>控制此角色可听见多远距离的其它角色。这不会变更玩家听到的实际音效。</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>设为「真」会让变成鬼的机器人仍旧可以碰撞环境地形。</desc>
+  </helpText>
+  
+  <helpText id="KickStrength">
+    <desc>控制机器人踢对象的力道。用力踢会让物件飞很远。</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>控制机器人在踢了第一个对象后，隔多久才能再踢第二个对象。</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>让机器人变大或缩小。1.0 是一般大小。</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>当你看到某物时，你可以记得它，彷佛某物仍在眼前的秒数。</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>影响此角色的光芒效果亮度。请注意，会发光的角色通常不会将光线投射到其它角色身上。</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>让此对象可在发光时将光亮投射到其他对象上，并且设定光量的影响力有多大。</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>设定此机器人发光时照亮自己的强度。</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>当角色的程序编排为漫游、绕圈圈，或是远离某物时，这会显示出阻挡其路径的障碍。</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>如果此机器人使用视觉或听觉，显示此机器人可看到及听到哪些机器人。</desc>
+  </helpText>
+  <helpText id="Debug:DrawCurrentPage">
+    <desc>在机器人上方显示目前编排程序的页面。</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>目前未实行。</desc>
+  </helpText>
+  
+  <!-- Help for World Edit Tweak Screen-->
+  
+  <helpText id="GlassWalls">
+    <desc>沿着你的世界边缘创造隐形障碍。这可以预防机器人掉出世界边缘。
+	
+热气球、云、喷射机、光源、飞碟、飞船、鬼火，以及火箭可以穿过玻璃墙。</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>显示变更此世界人员的历程记录。</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>在你的游戏执行时，允许你控制摄影机移动。
+	
+「固定位置」选项可以在执行你的游戏时，保持摄影机不动。这对于需要鸟瞰视角的游戏很有帮助。请注意，在宽屏幕上显示时，景象会有所不同。
+	
+「固定偏移」选项能让摄影机与其追踪的对象保持固定的距离和方向。这可能会是光标或机器人。非常适合横向滚动条游戏。
+	
+「自由」选项是默认值，可以让摄影机自由拍摄，除非有机器人的程序要求摄影机以第一人称视角拍摄，或追踪该机器人。如果你使用固定位置或固定偏移的摄影机选项，按下 &lt;X&gt; 按钮，可设定摄影机的位置。
+	</desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>控制你的游戏开始时，摄影机的摆放位置。如要使用此选项，并且移动摄影机至游戏开始时想要的摆放位置，请开启世界设定，选取复选框。
+如果你稍后想要变更位置，可以按下 &lt;x&gt; 按钮，这会进入让你能自由摆放摄影机至想要位置的模式。</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>控制摄影机在使用者控制的角色后方摆动的程度。 </desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>让你隐藏通常显示于屏幕右下角的指南针。编辑时会出现指南针，只在执行你的游戏时会隐藏起来。</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>让你隐藏资源状态 (测量仪)，这通常显示在屏幕右侧。编辑时会出现资源状态，只在执行你的游戏时会隐藏起来。</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+让你关闭资源状态 (测量仪) 所显示的资源限制，这通常显示在屏幕右侧。关闭此选项可让你随心所欲地增加想要的地域和对象数量。
+警告：如果没有此限制，你可能会让 Kodu 的执行速度变得异常缓慢。你也可能会用尽你的系统内存，造成 Kodu 当机。
+	</desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>当你在世界中有水时，控制波浪的高度。</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>控制水所造成的景象扭曲强烈程度。</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>为你的世界选择一组背景颜色。
+结合天空和光线设定，可以为你的游戏增添不同气氛。</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>为你的世界选择一组光。如果你选择黑暗光设定，那在你执行游戏时，就只能看见一片黑。编辑时会使用较明亮的光线设定，让你可以清楚看见你的世界。
+结合天空和光线设定，可以为你的游戏增添不同气氛。</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>在游戏中，让微风以最轻柔的方式吹过树梢。</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>在游戏中，让微风以最猛烈的方式吹过树梢。</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>控制在你玩游戏时，要如何启动：
+「无」：仅启动游戏，没有任何效果。
+「世界标题」：显示此世界的标题 3 秒，然后开始玩。
+「世界说明」：显示世界的名称，提示使用者按下 &lt;a&gt; 开始玩。这会使用你在储存游戏时提供的说明。
+「倒数」：在游戏开始钱显示 3-2-1 的倒数。这非常适合赛车游戏。</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>当角色遵循着路径行动时，这会显示每个角色正朝着哪个导航点前进。目标终点会显示有颜色的线框，这个线框的颜色会与正朝其前进的角色颜色相同。</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>显示机器人和其他对象用于相互碰撞及碰撞地面的形状。</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>如果机器人使用视觉或听觉，显示它们可看到及听到哪些机器人。</desc>
+  </helpText>
+  <helpText id="Debug:ShowCurrentPage">
+    <desc>在编排程序的机器人上方显示目前编排程序的页面。</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>地域编辑的速度系数。数字越小就越慢，越大则越快。</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>控制用户接口音效的音量，如选单和按钮。</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>控制你的游戏效果音音量。这包括爆炸、碰撞，以及机器人制造出的声音。</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>控制你为游戏所选择的背景音乐音量。</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>控制如何凸显此颜色的分数事件显示状态。
+关闭：不显示分数。
+安静：分数显示于角落，但不会有任何分数效果。
+大声：分数会以动画方式从游戏中的得分位置一路显示至记分板上为止。
+	</desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>控制在下一阶层/上一阶层动作中，已获得的分数是否会继续保留。
+开启：保留分数，在新阶层加载时，数字会维持不变。
+关闭：加载新阶层时，分数会重设为零。
+	</desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>显示/隐藏屏幕虚拟控制器。</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+	  控制如何显示 GUI 按钮。
+	  关闭：不显示按钮。
+	  没有标记：显示按钮，但不会伴随文字。
+	  标记：显示按钮，同时显示可识别按钮的文字。
+	</desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+	  设定「下一阶层」方块要加载的阶层。同时启用「上一阶层」方块，可从该阶层将玩家带回目前的阶层。
+	</desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+	  升高水面至此物件下方。
+	</desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+	  降低水面至此物件下方。
+	</desc>
+  </helpText>
+  
+  
+  <helpText id="SetWater">
+    <desc>
+	  在此对象下方设定水的类型。
+	</desc>
+  </helpText>
+  
+  <!-- Help for User Options Tweak Screen-->
+  
+  <helpText id ="ShowToolTips">
+    <desc>允许你关闭工具秘诀。</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>允许你关闭提示。当系统侦测到可能会造成问题的状况时，就会显示提示。
+显示提示时，会有选项让你可停用提示。</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>通常在游戏手把工具选单开启时，背景会变得模糊，你无法在此时移动摄影机。
+关闭此选项，就能让摄影机保持「活动」状态。不过，你仍然需要在与世界互动前先选取一项工具。关闭此选项也代表左游戏杆现在用于控制摄影机，所以你必须使用箭头键或发射键选取你要使用的工具。</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>这会清除任何你先前选择停用的提示上之「停用」标示，这些提示会再度出现。</desc>
+  </helpText>
+
+  <helpText id ="ShowFramerate">
+    <desc>启用目前的帧速率 (FPS) 时，会显示于屏幕左下角。</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>控制屏幕左上角显示的说明文字量。</desc>
+  </helpText>
+
+  <helpText id ="Language">
+    <desc>控制使用语言。Kodu 的翻译由我们的社群所完成。如果你想将 Kodu 翻译成你的语言，请传送电子邮件至 KoduSupport@microsoft.com，以便我们提供你更多信息。</desc>
+  </helpText>
+
+  <helpText id ="InvertYAxis">
+    <desc>推动游戏杆让机器人向下移动。</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>向左推动游戏杆让机器人转向右方。</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>向前推动游戏杆让摄影机抬头。</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>向左推动游戏杆让摄影机转向右方。</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>「溢出扫描」是指可依据显示边缘剪下的渲染图像量。此数量根据显示设备及联机装置而有所不同。滑杆能让你控制说明显示的位置与屏幕中心的距离。如果你的显示屏幕会剪掉说明，请加大此数值。若你的电视为方型电视，通常 20% 会有最佳显示状态。计算机屏幕上适用 0 或 5%。实验看看，找出最适合你的显示方式。</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>若设定此选项，其他用户将可增加世界至你的下载队列。</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>若设定此选项，你从其他玩家处下载的世界会自动标示为已分享，可在未来的分享会话中下载。</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>在分享会话中，自动下载有「最爱」标签的世界。</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>此范围用于视野和听觉传感器中的「附近」筛选器。单位是公尺。参考用：地域方块的长度为半公尺。</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>此范围用于视野和听觉传感器中的「远处」筛选器。单位是公尺。参考用：地域方块的长度为半公尺。</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>若设定此选项，在启动 Kodu 时会检查是否已有更新的版本。</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>若设定此选项，Kodu 会传送你使用 Kodu 方式的匿名信息至 Microsoft。此信息可协助我们改善 Kodu。</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>若设定此选项，下次启动 Kodu 时，会播放介绍影片。</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>一般来说，在你退出 Kodu 时，我们会删除你的 Kodu 社群网站登入信息。如果你开启此设定，我们会试着让你持续地登入多个 Kodu 会话。</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>这能协助人们建立属于自己的教学课程。开启后，执行教学课程阶层时，这会在屏幕上显示侦错信息。</desc>
+  </helpText>
+
+</XmlHelpTextData>

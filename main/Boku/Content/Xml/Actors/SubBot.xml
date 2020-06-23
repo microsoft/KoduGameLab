@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt>WithSkinning</TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\Character\TEX_SUBBOT_DIRT</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>										<string>BlueLightMatte</string>
+				<string>BlackPlastic</string>
+				<string>ShinyMetal</string>
+				<string>WhitePlastic</string>
+			</SurfaceNames>
+		</SurfaceSet>
+		<SurfaceSet>
+			<Name>Face</Name>
+			<TechniqueExt>WideFaceWithSkinning</TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\White</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithSkinning</TechniqueExt>
+  </Model>
+  
+	<FaceParams>
+		<TypeFace>Wide</TypeFace>
+		<PupilCenter>
+			<X>0.2</X>
+			<Y>0.0</Y>
+		</PupilCenter>
+		<PupilSize>0.6</PupilSize>
+		<LidDistance>0.2</LidDistance>
+		<MaxAsymmetry>0.1</MaxAsymmetry>
+		<PupilsName>Textures\FacePupilRound</PupilsName>
+		<PupilsCrossName>Textures\BokuFaceEyePupilCross</PupilsCrossName>
+	</FaceParams>
+
+	<GlowPosition>
+		<Bone>BN_WATAKO6</Bone>
+		<Offset>
+			<X>0.3</X>
+			<Y>0</Y>
+			<Z>0</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.75</Z>
+  </HealthBarOffset>
+
+  <DefaultEditHeight>1.4</DefaultEditHeight>
+  <MinHeight>1</MinHeight>
+  <EyeOffset>0.7</EyeOffset>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>-0.5</Z>
+	</CollisionCenter>
+	<CollisionRadius>1.1</CollisionRadius>
+
+	<Cost>5</Cost>
+  <CollisionSound>plasticSoft</CollisionSound>
+  
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>250.0</Mass>
+
+  <GrabRange>1.8</GrabRange>
+  <KickRange>1.8</KickRange>
+
+  <Domain>Water</Domain>
+
+  <AltitudeOptions>
+    <IgnoreTerrainFeatures>true</IgnoreTerrainFeatures>
+  </AltitudeOptions>
+
+  <Actions>
+    <UpDown/>
+  </Actions>
+  
+  <MoveSoundName>ch_Sub_Move</MoveSoundName>
+  <CursorSoundName>ch_Sub_Cursor</CursorSoundName>
+  <ShootSoundName>ch_Sub_Shoot</ShootSoundName>
+  <Ent1SoundName>ch_Sub_Ent1</Ent1SoundName>
+  <Ent2SoundName>ch_Sub_Ent2</Ent2SoundName>
+
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Loud</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="Swim">
+    <HullDraft>1.4</HullDraft>
+    <MinDepth>-0.1</MinDepth>
+    <MaxRotationRate>1.0</MaxRotationRate>
+    <MaxRotationalAcceleration>1.0</MaxRotationalAcceleration>
+    <MaxLinearAcceleration>2.0</MaxLinearAcceleration>
+    <MaxLinearDeceleration>2.0</MaxLinearDeceleration>
+    <MaxSpeed>3.0</MaxSpeed>
+    <MaxPitch>0.5</MaxPitch>
+    <MaxPitchRate>1.0</MaxPitchRate>
+    <Density>5</Density>
+  </Chassis>
+
+  <HoldingPosition>
+    <X>-1.7</X>
+    <Z>-0.1</Z>
+  </HoldingPosition>
+
+  <Sensors>
+    <Direction>
+      <X>1</X> <!--front-->
+    </Direction>
+    <Arc>3.4906</Arc> <!--200 degrees-->
+  </Sensors>
+  
+</XmlGameActor>

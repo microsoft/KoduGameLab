@@ -1,0 +1,1000 @@
+﻿<Tiles>
+  <sensor>
+    <gamepad label="oyunkolu">Oyuncuya karakteri kontrol ettir. Düğme, tetik, ya da çubuk, ve isteğe bağlı olarak da oyuncu belirt.</gamepad>
+    <keyboard label="klavye">Bir oyuncunun bir karakteri kontrol etmesini sağla.  Hangi tuşa basması gerektiğini belirt.</keyboard>
+    <mouse label="fare">Fare hareketlerine tepki ver.</mouse>
+    <touch label="dokun">Dokunmaya tepki ver.</touch>
+    <eyes label="gör">Bir nesneyi gördüğünde tür ya da rengine göre tepki ver. Tepe ve duvarlar görüşü engelleyebilir.</eyes>
+    <ears label="duy">Bir nesneyi duyduğunda tür ya da sesine göre tepki ver. Duvarların arkasından da duyulabilir.</ears>
+    <bumpers label="çarp">Bir nesneye çarptığında türü, rengi gibi özelliklere bağlı olarak tepki ver</bumpers>
+    <timer label="kronometre">Geçen belli bir saniye süresine göre tepki ver. Daha uzun süre eklemek için rakam ekle.</timer>
+    <got label="topladı">Bir nesneyi aldığında türü, rengi gibi özelliklere bağlı olarak tepki ver</got>
+    <scored label="skor yaptı">Skordaki değişikliklere tepki ver.</scored>
+    <health label="sağlık">Sağlıktaki değişikliklere tepki ver.</health>
+    <missilehit label="vuruş gerçekleşti">Atışının bir nesneyi vurmasına tepki ver. Skor tutmak için iyidir, fakat başka bir sürü şey de yapabilirsin-örneğin vurduğun pembe yapmak gibi.</missilehit>
+    <held label="toplayan">Başka bir nesne tarafından toplanmaya tepki ver.</held>
+    <terrain label="karada">Değişik zemin türlerine tepki ver.</terrain>
+    <water label="su üstünde">Değişik su türlerine tepki ver.</water>
+    <beamed label="ışınlandı">Bir Mars kayasına ışın sıkıldığında tepki ver.</beamed>
+    <inspected  label="incelendi">Bir Mars kayası incelendiğinde tepki ver.</inspected>
+    <scanned label="tarandı">Bilinmeyen bir kayanın türünü anlamak için tarama yapıldığında tepki ver.</scanned>
+    <endofpath  label="patikanın sonu">Bir patikanın sonuna ulaştığında tepki ver</endofpath>
+    <always label="hep">Bir şeyi hep yap. İsteğe bağlı.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Kodu oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</boku>
+    <bokubot label="kodu">Kodu oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</bokubot>
+    <anything label="herhangi birşey" />
+    <me label="ben">Sadece bu programla çalışan robotu kontrol et.</me>
+    <said label="dedi">Başka bir karakterin söylediğini dinle. Neyi dinlemek istediğini yaz.</said>
+    <countnone label="hiçbiri">Tarife uyan bir şey göremediğinde tepki ver. Örneğin, gör-mavi-hiçbiri görünürde mavi bir şey olmadığında tepki verir.</countnone>
+    <starfish label="deniz yıldızı">Bir deniz yıldızına tepki ver.</starfish>
+    <clam label="istiridye">Bir istiridyeye tepki ver.</clam>
+    <seagrass label="yosun">Yosuna tepki ver.</seagrass>
+    <seagrasssingle label="yosun">Yosuna tepki ver.</seagrasssingle>
+    <lilypad label="zambak yaprakları">Zambak yapraklarına tepki ver.</lilypad>
+    <lilypadsingle label="Zambak yaprağı">Bir zambak yaprağına tepki ver.</lilypadsingle>
+    <flyfish label="uçan balık">Uçan balık oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</flyfish>
+    <jet label="jet">Jet oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</jet>
+    <light label="ışık">Işık oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir. Aynı zamanda nesneleri aydınlatır. Ama en fazla dört tane kullanabilirsin.</light>
+    <fan label="pervane">Pervaneye tepki ver.</fan>
+    <octopus label="ahtapot">Ahtapota tepki ver.</octopus>
+    <fastbot label="robosiklet">Robosiklet oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</fastbot>
+    <saucer label="ufo">Maalesef daha fazla konuşamayacağım. Ufo hakkında bilgi gizlidir.</saucer>
+    <windblimp label="zeplin">Zeplin oyununa ekleyebileceğin ve davranışları programlanabilen uçan bir karakterdir.</windblimp>
+    <balloonbot label="balon">Balon oyununa ekleyebileceğin ve davranışları programlanabilen suda yüzen bir  karakterdir.</balloonbot>
+    <subbot label="denizaltı">Denizaltı oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</subbot>
+    <terracannon label="savaştopu">Savaştopu oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</terracannon>
+    <puck label="disk">Disk oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</puck>
+    <wisp label="ufaklık">Ufaklık oyununa ekleyebileceğin ve davranışları programlanabilen bir karakterdir.</wisp>
+    <anybot label="robot">Herhangi bir çeşit robot ara.</anybot>
+    <turtle label="tosbağa">Tosbağaya tepki ver.</turtle>
+    <rover label="Gezgin">Gezgine tepki ver.</rover>
+    <pushpad label="böcek">Böceğe tepki ver.</pushpad>
+    <sputnik label="sputnik">Sputnik'e tepki ver</sputnik>
+    <stick label="durgun">Durguna tepki ver.</stick>
+    <stickboy label="durgun">Durguna tepki ver.</stickboy>
+    <drum label="davul">Davula tepki ver.</drum>
+    <mine label="mayın">Mayına tepki ver.</mine>
+    <cloud label="bulut">Buluta tepki ver.</cloud>
+    <swimfish label="balık">Balığa tepki ver.</swimfish>
+    <floatbot label="gemi">Bir gemiye tepki ver.</floatbot>
+    <factory label="fabrika">Bir fabrikaya tepki ver.</factory>
+    <hut label="kulübe">Bir kulübeye tepki ver.</hut>
+    <castle label="kale">Bir kaleye tepki ver.</castle>
+    <fruit label="elma">Bir elmaya tepki ver.</fruit>
+    <inkjet label="kara bulut">Bir kara buluta tepki ver.</inkjet>
+    <iceberg label="aysberg">Bir aysberge tepki ver.</iceberg>
+    <rock label="kaya">Bir kayaya tepki ver.</rock>
+    <rockLowValue label="Volkanik">Bir volkanik kayaya tepki ver.</rockLowValue>
+    <rockHighValue label="Tortul">Bir tortul kayaya tepki ver.</rockHighValue>
+    <rockLowValueUnknown label="Bilinmeyen Kaya">Taranıp, ışınlanıp ya da incelenene kadar bilinmeyen olarak görünen bir volkanik kaya.</rockLowValueUnknown>
+    <rockHighValueUnknown label="Bilinmeyen Kaya">Taranıp, ışınlanıp ya da incelenene kadar bilinmeyen olarak görünen bir tortul kaya.</rockHighValueUnknown>
+    <rockUnknown label="Bilinmeyen Kaya">Bilinmeyen bir kayaya tepki ver.</rockUnknown>
+    <tree label="ağaç">Bir ağaca tepki ver.</tree>
+    <pipe label="boru">Bir boruya tepki ver.</pipe>
+    <pipeStraight label="düz boru">Bir düz boruya tepki  ver.</pipeStraight>
+    <pipeCross label="kesişen boru">Bir kesişen boruya tepki ver.</pipeCross>
+    <pipeCorner label="dirsek boru">Bir dirsek boruya tepki ver.</pipeCorner>
+    <underwater label="sualtı">Sualtı nesnelerine tepki ver.</underwater>
+    <building label="bina">Bir binaya tepki ver.</building>
+    <flower label="çiçek" />
+    <gate label="geçit" />
+    <cursor label="imleç">İmlece tepki ver.</cursor>
+    <star label="yıldız">Bir yıldıza tepki ver.</star>
+    <coin label="bozuk para">Bir bozuk paraya tepki ver.</coin>
+    <soccerball label="top">Bir topa tepki ver.</soccerball>
+    <heart label="kalp">Kalbe tepki ver.</heart>
+    <bullet label="cephane">Cephaneye tepki ver.</bullet>
+    <Black label="siyah">Siyah renkli herhangi bir şeye tepki ver.</Black>
+    <Grey label="gri">Gri renkli herhangi bir şeye tepki ver.</Grey>
+    <white label="beyaz">Beyaz renkli herhangi bir şeye tepki ver.</white>
+    <red label="kırmızı">Kırmızı renkli herhangi bir şeye tepki ver.</red>
+    <orange label="turuncu">Turuncu renkli herhangi bir şeye tepki ver.</orange>
+    <yellow label="sarı">Sarı renkli bir herhangi bir şeye tepki ver.</yellow>
+    <green label="yeşil">Yeşil renkli herhangi bir şeye tepki ver.</green>
+    <blue label="mavi">Mavi renkli herhangi bir şeye tepki ver.</blue>
+    <purple label="mor">Mor renkli herhangi bir şeye tepki ver.</purple>
+    <pink label="pembe">Pembe renkli herhangi bir şeye tepki ver.</pink>
+    <brown label="kahverengi">Kahverengi herhangi bir şeye tepki ver.</brown>
+    <PathBlack label="siyah patika">Siyah renkli bir patikaya tepki ver.</PathBlack>
+    <PathGrey label="gri patika">Gri renkli bir patikaya tepki ver.</PathGrey>
+    <PathWhite label="beyaz patika">Beyaz renkli bir patikaya tepki ver.</PathWhite>
+    <PathRed label="kırmızı patika">Kırmızı renkli bir patikaya tepki ver.</PathRed>
+    <PathOrange label="turuncu patika">Turuncu renkli bir patikaya tepki ver.</PathOrange>
+    <PathYellow label="sarı patika">Sarı renkli bir patikaya tepki ver.</PathYellow>
+    <PathGreen label="yeşil patika">Yeşil renkli bir patikaya tepki ver.</PathGreen>
+    <PathBlue label="mavi patika">Mavi renkli bir patikaya tepki ver.</PathBlue>
+    <PathPurple label="mor patika">Mor renkli bir patikaya tepki ver.</PathPurple>
+    <PathPink label="pembe patika">Pembe renkli bir patikaya tepki ver.</PathPink>
+    <PathBrown label="kahverengi patika">Kahverengi renkli bir patikaya tepki ver.</PathBrown>
+    <pathplain label="düzlük" />
+    <pathroad label="yol" />
+    <pathwall label="duvar" />
+    <pathflora label="bitki örtüsü" />
+    <yucca1 label="ağaç" />
+    <yucca2 label="ağaç" />
+    <yucca3 label="ağaç" />
+    <bigyucca1 label="ağaç" />
+    <expresshappy label="mutlu">Mutlu bir robota tepki ver.</expresshappy>
+    <expresssad label="üzgün">Üzgün bir robota tepki ver.</expresssad>
+    <expressangry label="ÖFKELİ">Öfkeli bir robota tepki ver</expressangry>
+    <expresscrazy label="çıLgıN">Çılgın bir robota tepki ver.</expresscrazy>
+    <expresshearts label="kalpler">Kalpler gösteren bir robota tepki ver.</expresshearts>
+    <expressflowers label="çiçekler">Çiçekler gösteren bir robota tepki göster.</expressflowers>
+    <expressstars label="yıldızlar">Yıldızlar gösteren bir robota tepki ver.</expressstars>
+    <expressswear label="küfürbaz">Küfür eden bir robota tepki ver.</expressswear>
+    <expressnormal label="normal">Sadece normal davranan bir robota tepki ver.</expressnormal>
+    <expressnone label="boş">Sadece normal davranan bir robota tepki ver.</expressnone>
+    <moving label="hareketli">Bir robota sadece hareket ediyorsa tepki ver.</moving>
+    <camouflage label="kamuflaj">Bir robota sadece kamuflaj yapmışsa tepki ver.</camouflage>
+    <closeby label="yakın">"Yakın" sadece yakındaki nesnelere tepki verir. Uzaktaki nesneler görmezden gelinir.</closeby>
+    <faraway label="uzak">Sadece uzaktaki nesnelere tepki ver.</faraway>
+
+    <infront label="önünde">Sadece robotun önündeki nesnelere tepki ver.</infront>
+    <behind label="arkasında">Sadece robotun arkasındaki nesnelere tepki ver.</behind>
+    <toleft label="solunda">Sadece robotun solundaki nesnelere tepki ver.</toleft>
+    <toright label="sağında">Sadece robotun sağındaki nesnelere tepki ver.</toright>
+    <over label="üstünde">Sadece robottan daha yüksek nesnelere tepki ver.</over>
+    <under label="altında">Sadece robottan daha alçak nesnelere tepki ver.</under>
+
+    <lineofsight label="GH">Arazi ve duvarlar sensörü engelliyor.</lineofsight>
+    
+    <countfew label="az">Bir şeyden sadece az görünce tepki ver.</countfew>
+    <countmany label="çok">Bir şeyden sadece çok fazla görünce tepki ver.</countmany>
+    <clustermany label="küme">Bir şeyden çok fazlası bir yerde kümelenmişse tepki ver.</clustermany>
+    <countany label="herhangi" />
+    <leftstick label="L düğmesi">Oyun kolundaki sol düğmesine tepki ver. Harekete geçirmek için iyidir.</leftstick>
+    <rightstick label="R düğmesi">Oyun kolundaki sağ düğmesine tepki ver. Ateş etmek için tavsiye edilir.</rightstick>
+    <abutton label="A düğmesi">Oyun kolundaki A düğmesine tepki ver.</abutton>
+    <bbutton label="B düğmesi">Oyun kolundaki B düğmesine tepki ver.</bbutton>
+    <xbutton label="X düğmesi">Oyun kolundaki X düğmesine tepki ver.</xbutton>
+    <ybutton label="Y düğmesi">Oyun kolundaki Y düğmesine tepki ver.</ybutton>
+    <lefttrigger label="sol tetik">Oyun kolundaki sol tetiğe tepki ver.</lefttrigger>
+    <righttrigger label="sağ tetik">Oyun kolundaki sağ tetiğe tepki ver.</righttrigger>
+    <lefttrigger_analog label="sol tetik">Oyun kolundaki sol tetiğe tepki ver.</lefttrigger_analog>
+    <righttrigger_analog label="sağ tetik">Oyun kolundaki sağ tetiğe tepki ver.</righttrigger_analog>
+    <mouse>
+      <button>
+        <left label="sol">Farenin sol düğmesine tepki ver.</left>
+        <right label="sağ">Farenin sağ düğmesine tepki ver.</right>
+      </button>
+      <hover label="üstte">Farenin bir nesne ya da arazi üstünde gezinmesine tepki ver.</hover>
+      <move label="hareket">Fare hareketine tepki ver.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="dokun">Aktif dokunmaya tepki ver (dokunmatik ekran).</touching>
+        <tap label="tıklat">Tıklatmaya tepki ver (dokunmatik ekran).</tap>
+        <rotate label="döndür">Döndürme hareketine tepki ver (dokunmatik ekran).</rotate>
+        <swipe label="hızlı kaydır">Hızlı kaydırma hareketine tepki ver (dokunmatik ekran).</swipe>
+        <slide label="kaydır">Kaydırma hareketine tepki ver (dokunmatik ekran).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="beyaz">Ekran göstergesindeki BEYAZ düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</White>
+        <Black label="siyah">Ekran göstergesindeki SİYAH düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Black>
+        <Grey label="gri">Ekran göstergesindeki GRİ düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Grey>
+        <Red label="kırmızı">Ekran göstergesindeki KIRMIZI düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Red>
+        <Green label="yeşil">Ekran göstergesindeki YEŞİL düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Green>
+        <Blue label="mavi">Ekran göstergesindeki MAVİ düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Blue>
+        <Orange label="turuncu">Ekran göstergesindeki TURUNCU düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Orange>
+        <Yellow label="sarı">Ekran göstergesindeki SARI düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Yellow>
+        <Purple label="mor">Ekran göstergesindeki MOR düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Purple>
+        <Pink label="pembe">Ekran göstergesindeki PEMBE düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Pink>
+        <Brown label="kahverengi">Ekran göstergesindeki KAHVERENGİ düğmeye tepki ver. (Değiştirmek için dünya ayarlarına git)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="X Düğmesi">Ekranda X düğmesine dokunmaya tepki ver.</controllerButton_X>
+      <controllerButton_Y label="Y Düğmesi">Ekranda Y düğmesine dokunmaya tepki ver.</controllerButton_Y>
+      <controllerButton_A label="A Düğmesi">Ekranda A düğmesine dokunmaya tepki ver.</controllerButton_A>
+      <controllerButton_B label="B Düğmesi">Ekranda B düğmesine dokunmaya tepki ver.</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="Oklar">Klavyedeki ok tuşlarına tepki ver.</ArrowKeys>
+    <WASDKeys label="WASD">Klavyedeki WASD tuşlarına tepki ver.</WASDKeys>
+    <Akey label="A">Klavyede A tuşuna tepki ver.</Akey>
+    <Bkey label="B">Klavyede B tuşuna tepki ver.</Bkey>
+    <Ckey label="C">Klavyede C tuşuna tepki ver.</Ckey>
+    <Dkey label="D">Klavyede D tuşuna tepki ver.</Dkey>
+    <Ekey label="E">Klavyede E tuşuna tepki ver.</Ekey>
+    <Fkey label="F">Klavyede F tuşuna tepki ver.</Fkey>
+    <Gkey label="G">Klavyede G tuşuna tepki ver.</Gkey>
+    <Hkey label="H">Klavyede H tuşuna tepki ver.</Hkey>
+    <Ikey label="I">Klavyede I tuşuna tepki ver.</Ikey>
+    <Jkey label="J">Klavyede J tuşuna tepki ver.</Jkey>
+    <Kkey label="K">Klavyede K tuşuna tepki ver.</Kkey>
+    <Lkey label="L">Klavyede L tuşuna tepki ver.</Lkey>
+    <Mkey label="M">Klavyede M tuşuna tepki ver.</Mkey>
+    <Nkey label="N">Klavyede N tuşuna tepki ver.</Nkey>
+    <Okey label="O">Klavyede O tuşuna tepki ver.</Okey>
+    <Pkey label="P">Klavyede P tuşuna tepki ver.</Pkey>
+    <Qkey label="Q">Klavyede Q tuşuna tepki ver.</Qkey>
+    <Rkey label="R">Klavyede R tuşuna tepki ver.</Rkey>
+    <Skey label="S">Klavyede S tuşuna tepki ver.</Skey>
+    <Tkey label="T">Klavyede T tuşuna tepki ver.</Tkey>
+    <Ukey label="U">Klavyede U tuşuna tepki ver.</Ukey>
+    <Vkey label="V">Klavyede V tuşuna tepki ver.</Vkey>
+    <Wkey label="W">Klavyede W tuşuna tepki ver.</Wkey>
+    <Xkey label="X">Klavyede X tuşuna tepki ver.</Xkey>
+    <Ykey label="Y">Klavyede Y tuşuna tepki ver.</Ykey>
+    <Zkey label="Z">Klavyede Z tuşuna tepki ver.</Zkey>
+    <D0key label="0">Klavyede 0 tuşuna tepki ver.</D0key>
+    <D1key label="1">Klavyede 1 tuşuna tepki ver.</D1key>
+    <D2key label="2">Klavyede 2 tuşuna tepki ver.</D2key>
+    <D3key label="3">Klavyede 3 tuşuna tepki ver.</D3key>
+    <D4key label="4">Klavyede 4 tuşuna tepki ver.</D4key>
+    <D5key label="5">Klavyede 5 tuşuna tepki ver.</D5key>
+    <D6key label="6">Klavyede 6 tuşuna tepki ver.</D6key>
+    <D7key label="7">Klavyede 7 tuşuna tepki ver.</D7key>
+    <D8key label="8">Klavyede 8 tuşuna tepki ver.</D8key>
+    <D9key label="9">Klavyede 9 tuşuna tepki ver.</D9key>
+    <Spacekey label="Boşluk">Klavyede Boşluk tuşuna tepki ver.</Spacekey>
+    <PageUpkey label="PageUp">Klavyede PageUp tuşuna tepki ver.</PageUpkey>
+    <PageDownkey label="PageDown">Klavyede PageDown tuşuna tepki ver.</PageDownkey>
+    <Endkey label="End">Klavyede End tuşuna tepki ver.</Endkey>
+    <Leftkey label="Sol">Klavyede Sol tuşuna tepki ver.</Leftkey>
+    <Upkey label="Yukarı">Klavyede Yukarı tuşuna tepki ver.</Upkey>
+    <Rightkey label="Sağ">Klavyede Sağ tuşuna tepki ver.</Rightkey>
+    <Downkey label="Aşağı">Klavyede Aşağı tuşuna tepki ver.</Downkey>
+    <Insertkey label="Insert">Klavyede Insert tuşuna tepki ver.</Insertkey>
+    <Deletekey label="Delete">Klavyede Delete tuşuna tepki ver.</Deletekey>
+    <LeftWindowskey label="SolWindows">Klavyede SolWindows tuşuna tepki ver.</LeftWindowskey>
+    <RightWindowskey label="SağWindows">Klavyede SağWindows tuşuna tepki ver.</RightWindowskey>
+    <Multiplykey label="*">Klavyede * tuşuna tepki ver.</Multiplykey>
+    <Addkey label="+">Klavyede + tuşuna tepki ver.</Addkey>
+    <Subtractkey label="-">Klavyede - tuşuna tepki ver.</Subtractkey>
+    <Decimalkey label=".">Klavyede Nokta tuşuna tepki ver.</Decimalkey>
+    <Dividekey label="/">Klavyede / tuşuna tepki ver.</Dividekey>
+    <LeftShiftkey label="SolShift">Klavyede Sol Shift tuşuna tepki ver.</LeftShiftkey>
+    <RightShiftkey label="SağShift">Klavyede Sağ Shift tuşuna tepki ver.</RightShiftkey>
+    <LeftControlkey label="SolCtrl">Klavyede Sol Ctrl tuşuna tepki ver.</LeftControlkey>
+    <RightControlkey label="SağCtrl">Klavyede Sağ Ctrl tuşuna tepki ver.</RightControlkey>
+    <LeftAltkey label="SolAlt">Klavyede Sol Alt tuşuna tepki ver.</LeftAltkey>
+    <RightAltkey label="SağAlt">Klavyede Sağ Alt tuşuna tepki ver.</RightAltkey>
+    <OemSemicolonkey label=";">Klavyede NoktalıVirgül tuşuna tepki ver.</OemSemicolonkey>
+    <OemPluskey label="+">Klavyede + tuşuna tepki ver.</OemPluskey>
+    <OemCommakey label=",">Klavyede Virgül tuşuna tepki ver.</OemCommakey>
+    <OemMinuskey label="-">Klavyede - tuşuna tepki ver.</OemMinuskey>
+    <OemPeriodkey label=".">Klavyede Nokta tuşuna tepki ver.</OemPeriodkey>
+    <OemQuestionkey label="?">Klavyede Soru İşareti tuşuna tepki ver.</OemQuestionkey>
+    <OemTildekey label="~">Klavyede Tilde tuşuna tepki ver.</OemTildekey>
+    <OemOpenBracketskey label="[">Klavyede [  tuşuna tepki ver.</OemOpenBracketskey>
+    <OemPipekey label="|">Klavyede | tuşuna tepki ver.</OemPipekey>
+    <OemCloseBracketskey label="]">Klavyede ] tuşuna tepki ver.</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">Klavyede Tırnak İşareti tuşuna tepki ver.</OemQuoteskey>
+    <OemBackslashkey label="\">Klavyede bölme işareti tuşuna tepki ver.</OemBackslashkey>
+    <F1key label="F1">Klavyede F1 tuşuna tepki ver.</F1key>
+    <F2key label="F2">Klavyede F2 tuşuna tepki ver.</F2key>
+    <F3key label="F3">Klavyede F3 tuşuna tepki ver.</F3key>
+    <F4key label="F4">Klavyede F4 tuşuna tepki ver.</F4key>
+    <F5key label="F5">Klavyede F5 tuşuna tepki ver.</F5key>
+    <F6key label="F6">Klavyede F6 tuşuna tepki ver.</F6key>
+    <F7key label="F7">Klavyede F7 tuşuna tepki ver.</F7key>
+    <F8key label="F8">Klavyede F8 tuşuna tepki ver.</F8key>
+    <F9key label="F9">Klavyede F9 tuşuna tepki ver.</F9key>
+    <F10key label="F10">Klavyede F10 tuşuna tepki ver.</F10key>
+    <F11key label="F11">Klavyede F11 tuşuna tepki ver.</F11key>
+    <F12key label="F12">Klavyede F12 tuşuna tepki ver.</F12key>
+    <Shiftkey label="Shift">Klavyede herhangi bir SHIFT tuşuna tepki ver.</Shiftkey>
+    <Controlkey label="Ctrl">Klavyede herhangi bir CTRL tuşuna tepki ver.</Controlkey>
+    <Altkey label="Alt">Klavyede herhangi bir Alt tuşuna tepki ver.</Altkey>
+    <Windowskey label="Windows">Klavyedeki herhangi bir Windows tuşuna tepki  ver.</Windowskey>
+    <player1 label="oyuncu 1">Oyuncu 1'in oyun koluna tepki ver. Varsayılan durum herhangi bir oyun koluna tepki vermektir.</player1>
+    <player2 label="oyuncu 2">Oyuncu 2'nin oyun koluna tepki ver. Varsayılan durum herhangi bir oyun koluna tepki vermektir.</player2>
+    <player3 label="oyuncu 3">Oyuncu 3'ün oyun koluna tepki ver. Varsayılan durum herhangi bir oyun koluna tepki vermektir.</player3>
+    <player4 label="oyuncu 4">Oyuncu 4'ün oyun koluna tepki ver. Varsayılan durum herhangi bir oyun koluna tepki vermektir.</player4>
+    <terrain label="tür">Belli bir tür araziye tepki ver.</terrain>
+    <water label="tür">Belli bir tür suya tepki ver.</water>
+    <quartersecond label="saniye">Saniyenin 1/4 ü. Daha uzun süreler için diğerleri ile birleştir.</quartersecond>
+    <_01second label="saniye">1 saniye. Daha uzun süre için diğerleri ile birleştir.</_01second>
+    <_02seconds label="saniye">2 saniye. Daha uzun süre için diğerleri ile birleştir.</_02seconds>
+    <_03seconds label="saniye">3 saniye. Daha uzun süre için diğerleri ile birleştir.</_03seconds>
+    <_04seconds label="saniye">4 saniye. Daha uzun süre için diğerleri ile birleştir.</_04seconds>
+    <_05seconds label="saniye">5 saniye. Daha uzun süre için diğerleri ile birleştir.</_05seconds>
+    <_10seconds label="saniye">10 saniye. Daha uzun süre için diğerleri ile birleştir.</_10seconds>
+    <_20seconds label="saniye">20 saniye. Daha uzun süre için diğerleri ile birleştir.</_20seconds>
+    <_30seconds label="saniye">30 saniye. Daha uzun süre için diğerleri ile birleştir.</_30seconds>
+    <_60seconds label="saniye">60 saniye  Daha uzun süre için diğerleri ile birleştir.</_60seconds>
+    <_000point label="puan">0 puan.</_000point>
+    <_001point label="puan">1 puan. Daha yüksek puan için diğerleri ile birleştir. </_001point>
+    <_002points label="puan">2 puan. Daha yüksek puan için diğerleri ile birleştir.</_002points>
+    <_003points label="puan">3 puan. Daha yüksek puan için diğerleri ile birleştir.</_003points>
+    <_004points label="puan">4 puan. Daha yüksek puan için diğerleri ile birleştir.</_004points>
+    <_005points label="puan">5 puan. Daha yüksek puan için diğerleri ile birleştir.</_005points>
+    <_010points label="puan">10 puan. Daha yüksek puan için diğerleri ile birleştir.</_010points>
+    <_020points label="puan">20 puan.  Daha yüksek puan için diğerleri ile birleştir.</_020points>
+    <_050points label="puan">50 puan. Daha yüksek puan için diğerleri ile birleştir.</_050points>
+    <_100points label="puan">100 puan. Daha yüksek puan için diğerleri ile birleştir.</_100points>
+    <random label="rasgele">Rakam karolarını kullanarak rasgele bir sayı oluştur. Örneğin, Rasgele - 5 karoları 0 ile 5 arası rasgele bir sayı oluşturur.</random>
+    <scorebucket>
+      <color>
+        <white label="beyaz">Beyaz skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</white>
+        <black label="siyah">Siyah skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</black>
+        <grey label="gri">Gri skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</grey>
+        <red label="kırmızı">Kırmızı skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</red>
+        <green label="yeşil">Yeşil skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</green>
+        <blue label="mavi">Mavi skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</blue>
+        <orange label="turuncu">Turuncu skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</orange>
+        <yellow label="sarı">Sarı skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</yellow>
+        <purple label="mor">Mor skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</purple>
+        <pink label="pembe">Pembe skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</pink>
+        <brown label="kahverengi">Kahverengi skoru test eder. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</brown>
+      </color>
+      <letter>
+        <a label="skor A">'A' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</a>
+        <b label="skor B">'B' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</b>
+        <c label="skor C">'C' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</c>
+        <d label="skor D">'D' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</d>
+        <e label="skor E">'E' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</e>
+        <f label="skor F">'F' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</f>
+        <g label="skor G">'G' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</g>
+        <h label="skor H">'H' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</h>
+        <i label="skor I">'I' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</i>
+        <j label="skor J">'J' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</j>
+        <k label="skor K">'K' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</k>
+        <l label="skor L">'L' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</l>
+        <m label="skor M">'M' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</m>
+        <n label="skor N">'N' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</n>
+        <o label="skor O">'O' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</o>
+        <p label="skor P">'P' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</p>
+        <q label="skor Q">'Q' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</q>
+        <r label="skor R">'R' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</r>
+        <s label="skor S">'S' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</s>
+        <t label="skor T">'T' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</t>
+        <u label="skor U">'U' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</u>
+        <v label="skor V">'V' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</v>
+        <w label="skor W">'W' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</w>
+        <x label="skor X">'X' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</x>
+        <y label="skor Y">'Y' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</y>
+        <z label="skor Z">'Z' skorunu test eder. Bu, skorbordda hiçbir durumda gösterilmez.</z>
+      </letter>
+      <local>
+        <a label="skor a">The 'a' score, which is private to this character.</a>
+        <b label="skor b">The 'b' score, which is private to this character.</b>
+        <c label="skor c">The 'c' score, which is private to this character.</c>
+        <d label="skor d">The 'd' score, which is private to this character.</d>
+        <e label="skor e">The 'e' score, which is private to this character.</e>
+        <f label="skor f">The 'f' score, which is private to this character.</f>
+        <g label="skor g">The 'g' score, which is private to this character.</g>
+        <h label="skor h">The 'h' score, which is private to this character.</h>
+        <i label="skor i">The 'i' score, which is private to this character.</i>
+        <j label="skor j">The 'j' score, which is private to this character.</j>
+        <k label="skor k">The 'k' score, which is private to this character.</k>
+        <l label="skor l">The 'l' score, which is private to this character.</l>
+        <m label="skor m">The 'm' score, which is private to this character.</m>
+        <n label="skor n">The 'n' score, which is private to this character.</n>
+        <o label="skor o">The 'o' score, which is private to this character.</o>
+        <p label="skor p">The 'p' score, which is private to this character.</p>
+        <q label="skor q">The 'q' score, which is private to this character.</q>
+        <r label="skor r">The 'r' score, which is private to this character.</r>
+        <s label="skor s">The 's' score, which is private to this character.</s>
+        <t label="skor t">The 't' score, which is private to this character.</t>
+        <u label="skor u">The 'u' score, which is private to this character.</u>
+        <v label="skor v">The 'v' score, which is private to this character.</v>
+        <w label="skor w">The 'w' score, which is private to this character.</w>
+        <x label="skor x">The 'x' score, which is private to this character.</x>
+        <y label="skor y">The 'y' score, which is private to this character.</y>
+        <z label="skor z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="tetik" />
+    <timertrigger label="tetik" />
+    <scoreis label="_" />
+    <scoreequals label="eşit">Skor belirli bir sayıya eşit olduğunda tepki ver.</scoreequals>
+    <scorenotequals label="eşit değil">Skor belirli bir sayıya eşit olmayınca tepki ver.</scorenotequals>
+    <scoreabove label="üstünde">Skor belirli bir sayının üstüne çıkınca tepki ver.</scoreabove>
+    <scorebelow label="altında">Skor belirli bir sayının altına inince tepki ver.</scorebelow>
+    <scoregteq label="&gt;=">Skor belirli bir sayıya eşit olduğunda ya da o sayının üstüne çıkınca tepki ver.</scoregteq>
+    <scorelteq label="&lt;=">Skor belirli bir sayıya eşit ya da o sayının altına inince tepki ver.</scorelteq>
+    <healthis label="_" />
+    <healthabove label="üstünde">Sağlık belirli bir sayının üstüne çıkınca tepki ver.</healthabove>
+    <healthbelow label="altında">Sağlık değeri belirli bir sayının altına inince tepki ver.</healthbelow>
+    <direction>
+      <up label="yukarı">Oyun çubuğunun yukarı doğru itilmesine tepki ver.</up>
+      <right label="sağ">Oyun çubuğunun sağa doğru itilmesine tepki ver.</right>
+      <down label="aşağı">Oyun çubuğunun aşağı doğru itilmesine tepki ver.</down>
+      <left label="sol">Oyun çubuğunun sola doğru itilmesine tepki ver.</left>
+      <clockwise label="sağ">Saat yönünde döndürme hareketine tepki ver.</clockwise>
+      <counterclockwise label="sol">Saatin tersi yönünde döndürme hareketine tepki ver.</counterclockwise>
+    </direction>
+    <not label="değil">Koşullar eşleşmediğinde tepki ver.</not>
+  </filter>
+  <selector>
+    <closest label="en yakın" />
+    <objectrelative label="göreceli" />
+    <towardclosest label="-e doğru">Tepki verdiğin nesneye doğru hareket et.</towardclosest>
+    <awayfromall label="uzaklaş">Tepki verdiğin nesneden uzaklaş.</awayfromall>
+    <avoidall label="uzak dur">Tepki verdiğin nesneden belirli bir mesafede kalarak uzak dur.</avoidall>
+    <wander label="gezin">Belirli bir yön seçerek ortalıkta gezin. Programında son satır olarak çok işe yarar, böylece karakterin başka bir şeyi takip etmiyorken hareketliliğini devam ettirir.</wander>
+    <cruise label="düz">Yüzün ne tarafa dönükse oraya doğru hareketlen.</cruise>
+    <circle label="daire" />
+    <spin label="dön">Olduğun yerde dön.</spin>
+    <forward label="ileri" />
+    <hiddenturn label="dön" />
+    <escape label="arkanı dön" />
+    <followwaypoints label="patikada">Belirli bir renk patika üzerinde hareket et. Herhangi bir patika üzerinde hareket etmek varsayılandır.</followwaypoints>
+    <moveupdown label="yukarı/aşağı">Yukarı ve aşağı hareket et.</moveupdown>
+    <moveup label="yukarı">Yukarı hareket et.</moveup>
+    <movedown label="aşağı">Aşağı hareket et.</movedown>
+    <moveleftright label="dön">Sola veya sağa hareket et.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="oyuncu 1" />
+      <_2 label="oyuncu 2" />
+      <_3 label="oyuncu 3" />
+      <_4 label="oyuncu 4" />
+    </player>
+    <reset>
+      <world label="dünya">Skorbord haricinde oyunu sıfırlar.</world>
+      <score label="skor">Skorbordu sıfırlar, ya da senin söylediğin bir rengin skorunu sıfırlar.</score>
+      <expression label="ifade">Bir karakterin ifadesini sıfırlar.</expression>
+      <glow label="parıltı">Bir karakterin parıltısını sıfırlar.</glow>
+      <health label="sağlık">Bir karakterin sağlığını sıfırlar.</health>
+    </reset>
+    <projectile>
+      <blip label="fişek">Fişekler seri ateşlenen füzelerden daha hafif mermilerdir.</blip>
+      <missile label="füze">Füzeler büyüktür ve pek hızlı değildirler, ancak hedeflerini takip edecek kadar akıllıdırlar!</missile>
+    </projectile>
+    <slowly label="yavaşça">Yavaşça hareket et. Daha da yavaş hareket etmek için bir kaç tane kullan. </slowly>
+    <quickly label="çabuk">Çabuk hareket et. Daha da çabuk hareket etmek için bir kaç tane kullan.</quickly>
+    <speednormally label="olağan">Olağan bir şekilde hareket et. İsteğe bağlı.</speednormally>
+    <weakly label="normal">Bunu her zamankinden daha zayıf bir şekilde yap.</weakly>
+    <strongly label="güçlü">Bunu her zamankinden daha güçlüce yap.</strongly>
+    <strengthnormally label="normal">Bunu normal güçte yap. İsteğe bağlı.</strengthnormally>
+    <angle>
+      <low label="düşük">Bunu normalden daha zayıf bir şekilde yap.</low>
+      <high label="yüksek">Bunu normalden daha güçlü bir şekilde yap.</high>
+    </angle>
+    <turnleft label="sol" />
+    <turnright label="sağ" />
+    <turntoward label="-e doğru" />
+    <turnforward label="ileri">Hareketin bakılan yön tarafından tespit edilmemesini belirtir.</turnforward>
+    <pitchup label="yukarı" />
+    <pitchdown label="aşağı" />
+    <forward label="ileri">Karakterin yüzünün dönük olduğu yön.</forward>
+    <north label="kuzey" />
+    <east label="doğu" />
+    <south label="güney" />
+    <west label="batı" />
+    <up label="yukarı" />
+    <down label="aşağı" />
+    <distance>
+      <near label="yakın">Karakterin hedef çevresinde daha yakından dönmesini sağla.</near>
+      <far label="uzak">Karakterin hedef çevresinde daha uzaktan dönmesini sağla.</far>
+    </distance>
+    <objecticeberg label="aysberg">Aysberg yarat.</objecticeberg>
+    <objectrock label="kaya">Bir kaya yarat.</objectrock>
+    <objectrockLowValue label="kaya">Volkanik bir taş yarat.</objectrockLowValue>
+    <objectrockHighValue label="kaya">Tortul bir taş yarat.</objectrockHighValue>
+    <objectfruit label="elma">Bir elma yarat.</objectfruit>
+    <objectinkjet label="kara bulut">Bir kara bulut yarat.</objectinkjet>
+    <objectstar label="yıldız">Bir yıldız yarat.</objectstar>
+    <objectcoin label="bozuk para">Bir bozuk para yarat.</objectcoin>
+    <objectheart label="kalp">Bir kalp yarat.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="top">Bir futbol topu yarat.</objectsoccerball>
+    <objectbullet label="cephane">Ammo yarat.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="sayfa 1">Sayfa 1'e geç ya da satır içi yap.</taska>
+    <taskb label="sayfa 2">Sayfa 2'ye geç ya da satır içi yap.</taskb>
+    <taskc label="sayfa 3">Sayfa 3'e geç ya da satır içi yap.</taskc>
+    <taskd label="sayfa 4">Sayfa 4'e geç ya da satır içi yap.</taskd>
+    <taske label="sayfa 5">Sayfa 5'e geç ya da satır içi yap.</taske>
+    <taskf label="sayfa 6">Sayfa 6'ya geç ya da satır içi yap.</taskf>
+    <taskg label="sayfa 7">Sayfa 7'ye geç ya da satır içi yap.</taskg>
+    <taskh label="sayfa 8">Sayfa 8'e geç ya da satır içi yap.</taskh>
+    <taski label="sayfa 9">Sayfa 9'a geç ya da satır içi yap.</taski>
+    <taskj label="sayfa 10">Sayfa 10'a geç ya da satır içi yap.</taskj>
+    <taskk label="sayfa 11">Sayfa 11'e geç ya da satır içi yap.</taskk>
+    <taskl label="sayfa 12">Sayfa 12'ye geç ya da satır içi yap.</taskl>
+    <expresshappy label="mutlu">Mutlu davran.</expresshappy>
+    <expresssad label="üzgün">Üzgün davran.</expresssad>
+    <expressangry label="ÖFKELİ">Öfkeli davran.</expressangry>
+    <expresscrazy label="çıLGıN">Çılgın davran.</expresscrazy>
+    <expresshearts label="kalpler">Kalpler göster.</expresshearts>
+    <expressflowers label="çiçekler">Çiçekler göster.</expressflowers>
+    <expressstars label="yıldızlar">Yıldızlar göster.</expressstars>
+    <expressswear label="küfürler">Çizgi film küfürleri göster.</expressswear>
+    <expressnone label="hiçbiri">Normal davran ve hiç bir şey gösterme.</expressnone>
+    <_000point label="puan">0 puan. Bir renk de belirtebilirsin.</_000point>
+    <_001point label="puan">1 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_001point>
+    <_002points label="puan">2 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_002points>
+    <_003points label="puan">3 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_003points>
+    <_004points label="puan">4 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_004points>
+    <_005points label="puan">5 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_005points>
+    <_010points label="puan">10 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_010points>
+    <_020points label="puan">20 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_020points>
+    <_050points label="puan">50 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_050points>
+    <_100points label="puan">100 puan. İstediğin değeri elde etmek için rakamları toplayabilirsin. Bir renk de belirleyebilirsin.</_100points>
+    <random label="rasgele">Sayı karolarını kullanarak rasgele bir rakam oluştur. Örneğin, Rasgele - 5 karoları, 0 ile 5 arasında bir sayı oluşturur.</random>
+    <teama label="takım A" />
+    <teamb label="takım B" />
+    <payloadzap label="sersemlet">Hedefi birkaç saniye için sersemletir.</payloadzap>
+    <payloadpop label="nakavt">Başka birisi sağlığını ilk haline döndürene kadar hedefi baygın tut.</payloadpop>
+    <payloadboom label="bom">Hedefi bir patlamayla birlikte yok et.</payloadboom>
+    <payloadvanish label="yokol">Hedefin sessizce yok olmasını sağla.</payloadvanish>
+    <black label="siyah" />
+    <grey label="gri" />
+    <white label="beyaz" />
+    <red label="kırmızı" />
+    <orange label="turuncu" />
+    <yellow label="sarı" />
+    <green label="yeşil" />
+    <blue label="mavi" />
+    <purple label="mor" />
+    <pink label="pembe" />
+    <brown label="kahverengi" />
+    <glowoff label="kapat">Herhangi bir parıldamayı kaldır.</glowoff>
+    <colorrandom label="rasgele">Rasgele bir renk seç.</colorrandom>
+    <path>
+      <black label="siyah" />
+      <grey label="gri" />
+      <white label="beyaz" />
+      <red label="kırmızı" />
+      <orange label="turuncu" />
+      <yellow label="sarı" />
+      <green label="yeşil" />
+      <blue label="mavi" />
+      <purple label="mor" />
+      <pink label="pembe" />
+      <brown label="kahverengi" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="beyaz">Beyaz skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</white>
+        <black label="siyah">Siyah skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</black>
+        <grey label="gri">Gri skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</grey>
+        <red label="kırmızı">Kırmızı skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</red>
+        <green label="yeşil">Yeşil skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</green>
+        <blue label="mavi">Mavi skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</blue>
+        <orange label="turuncu">Turuncu skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</orange>
+        <yellow label="sarı">Sarı skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</yellow>
+        <purple label="mor">Mor skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</purple>
+        <pink label="pembe">Pembe skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</pink>
+        <brown label="kahverengi">Kahverengi skoru değiştirir. Bu, skorbordda varsayılan olarak gösterilir. (Değiştirmek için dünya ayarlarına git.)</brown>
+      </color>
+      <letter>
+        <a label="skor A">'A' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</a>
+        <b label="skor B">'B' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</b>
+        <c label="skor C">'C' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</c>
+        <d label="skor D">'D' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</d>
+        <e label="skor E">'E' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</e>
+        <f label="skor F">'F' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</f>
+        <g label="skor G">'G' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</g>
+        <h label="skor H">'H' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</h>
+        <i label="skor I">'I' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</i>
+        <j label="skor J">'J' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</j>
+        <k label="skor K">'K' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</k>
+        <l label="skor L">'L' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</l>
+        <m label="skor M">'M' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</m>
+        <n label="skor N">'N' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</n>
+        <o label="skor O">'O' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</o>
+        <p label="skor P">'P' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</p>
+        <q label="skor Q">'Q' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</q>
+        <r label="skor R">'R' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</r>
+        <s label="skor S">'S' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</s>
+        <t label="skor T">'T' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</t>
+        <u label="skor U">'U' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</u>
+        <v label="skor V">'V' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</v>
+        <w label="skor W">'W' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</w>
+        <x label="skor X">'X' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</x>
+        <y label="skor Y">'Y' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</y>
+        <z label="skor Z">'Z' skorunda değişiklik yapar. Bu, skorbordda hiçbir durumda gösterilmez.</z>
+      </letter>
+      <local>
+        <a label="skor a">The 'a' score, which is private to this character.</a>
+        <b label="skor b">The 'b' score, which is private to this character.</b>
+        <c label="skor c">The 'c' score, which is private to this character.</c>
+        <d label="skor d">The 'd' score, which is private to this character.</d>
+        <e label="skor e">The 'e' score, which is private to this character.</e>
+        <f label="skor f">The 'f' score, which is private to this character.</f>
+        <g label="skor g">The 'g' score, which is private to this character.</g>
+        <h label="skor h">The 'h' score, which is private to this character.</h>
+        <i label="skor i">The 'i' score, which is private to this character.</i>
+        <j label="skor j">The 'j' score, which is private to this character.</j>
+        <k label="skor k">The 'k' score, which is private to this character.</k>
+        <l label="skor l">The 'l' score, which is private to this character.</l>
+        <m label="skor m">The 'm' score, which is private to this character.</m>
+        <n label="skor n">The 'n' score, which is private to this character.</n>
+        <o label="skor o">The 'o' score, which is private to this character.</o>
+        <p label="skor p">The 'p' score, which is private to this character.</p>
+        <q label="skor q">The 'q' score, which is private to this character.</q>
+        <r label="skor r">The 'r' score, which is private to this character.</r>
+        <s label="skor s">The 's' score, which is private to this character.</s>
+        <t label="skor t">The 't' score, which is private to this character.</t>
+        <u label="skor u">The 'u' score, which is private to this character.</u>
+        <v label="skor v">The 'v' score, which is private to this character.</v>
+        <w label="skor w">The 'w' score, which is private to this character.</w>
+        <x label="skor x">The 'x' score, which is private to this character.</x>
+        <y label="skor y">The 'y' score, which is private to this character.</y>
+        <z label="skor z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="ben">Eylemi program çalıştıran robota uygula.</me>
+    <it label="o">Eylemi hedef nesneye uygula.</it>
+    <any label="herhangi">Herhangi bir ses.</any>
+    <event>
+      <any label="olay">Herhangi bir ses.</any>
+      <silly>
+        <any label="saçma">Herhangi bir saçma ses.</any>
+        <bang label="bang">Çizgi film 'bang' sesi.</bang>
+        <pow label="pow">Çizgi film 'pow' sesi.</pow>
+      </silly>
+      <explode>
+        <any label="patlama">Herhangi bir patlama sesi.</any>
+        <A label="bum A">Bir patlama sesi.</A>
+        <B label="bum B">Bir patlama sesi.</B>
+        <C label="bum C">Bir patlama sesi.</C>
+        <D label="bum D">Bir patlama sesi.</D>
+        <E label="bum E">Bir patlama sesi.</E>
+      </explode>
+      <musical>
+        <any label="müzikal">Herhangi bir müzikal ses.</any>
+        <glock>
+          <any label="glock">Herhangi bir Glockenspiel enstrüman sesi.</any>
+        </glock>
+        <glock01 label="Do glock">Bir Glockenspiel enstrüman notası.</glock01>
+        <glock02 label="Do diyez glock">Bir Glockenspiel enstrüman notası.</glock02>
+        <glock03 label="Re glock">Bir Glockenspiel enstrüman notası.</glock03>
+        <glock04 label="Re diyez glock">Bir Glockenspiel enstrüman notası.</glock04>
+        <glock05 label="Mi glock">Bir Glockenspiel enstrüman notası.</glock05>
+        <glock06 label="Fa glock">Bir Glockenspiel enstrüman notası.</glock06>
+        <glock07 label="Fa diyez glock">Bir Glockenspiel enstrüman notası.</glock07>
+        <glock08 label="Sol glock">Bir Glockenspiel enstrüman notası.</glock08>
+        <glock09 label="Sol diyez glock">Bir Glockenspiel enstrüman notası.</glock09>
+        <glock10 label="La glock">Bir Glockenspiel enstrüman notası.</glock10>
+        <glock11 label="La diyez glock">Bir Glockenspiel enstrüman notası.</glock11>
+        <glock12 label="Si glock">Bir Glockenspiel enstrüman notası.</glock12>
+        <gong>
+          <any label="gong">Herhangi bir gong sesi.</any>
+        </gong>
+        <gong01 label="Do gong">Bir gong notası.</gong01>
+        <gong02 label="Do diyez gong">Bir gong notası.</gong02>
+        <gong03 label="Re gong">Bir gong notası.</gong03>
+        <gong04 label="Re diyez gong">Bir gong notası.</gong04>
+        <gong05 label="Mi gong">Bir gong notası.</gong05>
+        <gong06 label="Fa gong">Bir gong sesi.</gong06>
+        <gong07 label="Fa diyez gong">Bir gong sesi.</gong07>
+        <gong08 label="Sol gong">Bir gong notası.</gong08>
+        <gong09 label="Sol diyez gong">Bir gong notası.</gong09>
+        <gong10 label="La gong">Bir gong notası.</gong10>
+        <gong11 label="La diyez gong">Bir gong notası.</gong11>
+        <gong12 label="Si gong">Bir gong notası.</gong12>
+        <saw>
+          <any label="testere">Herhangi bir testere dalgalanma sesi.</any>
+        </saw>
+        <saw01 label="Do testere">Bir testere dalgalanma notası.</saw01>
+        <saw02 label="Do diyez testere">Bir testere dalgalanma notası.</saw02>
+        <saw03 label="Re testere">Bir testere dalgalanma notası.</saw03>
+        <saw04 label="Re diyez testere">Bir testere dalgalanma notası.</saw04>
+        <saw05 label="Mi testere">Bir testere dalgalanma notası.</saw05>
+        <saw06 label="Fa testere">Bir testere dalgalanma notası.</saw06>
+        <saw07 label="Fa diyez testere">Bir testere dalgalanma notası.</saw07>
+        <saw08 label="Sol testere">Bir testere dalgalanma notası.</saw08>
+        <saw09 label="Sol diyez testere">Bir testere dalgalanma notası.</saw09>
+        <saw10 label="La testere">Bir testere dalgalanma notası.</saw10>
+        <saw11 label="La diyez testere">Bir testere dalgalanma notası.</saw11>
+        <saw12 label="Si testere">Bir testere dalgalanma notası.</saw12>
+        <sine>
+          <any label="sinüs">Herhangi bir sinüs dalgası sesi.</any>
+        </sine>
+        <sine01 label="Do sinüs">Bir sinüs dalgası notası.</sine01>
+        <sine02 label="Do diyez sinüs">Bir sinüs dalgası notası.</sine02>
+        <sine03 label="Re sinüs">Bir sinüs dalgası notası.</sine03>
+        <sine04 label="Re diyez sinüs">Bir sinüs dalgası notası.</sine04>
+        <sine05 label="Mi sinüs">Bir sinüs dalgası notası.</sine05>
+        <sine06 label="Fa sinüs">Bir sinüs dalgası notası.</sine06>
+        <sine07 label="Fa diyez sinüs">Bir sinüs dalgası notası.</sine07>
+        <sine08 label="Sol sinüs">Bir sinüs dalgası notası.</sine08>
+        <sine09 label="Sol diyez sinüs">Bir sinüs dalgası notası.</sine09>
+        <sine10 label="La sinüs">Bir sinüs dalgası notası.</sine10>
+        <sine11 label="La diyez sinüs">Bir sinüs dalgası notası.</sine11>
+        <sine12 label="Si sinüs">Bir sinüs dalgası notası.</sine12>
+        <square>
+          <any label="kare">Herhangi bir kare dalgası sesi.</any>
+        </square>
+        <square01 label="Do kare">Bir kare dalgası notası.</square01>
+        <square02 label="Do diyez kare">Bir kare dalgası notası.</square02>
+        <square03 label="Re kare">Bir kare dalgası notası.</square03>
+        <square04 label="Re diyez kare">Bir kare dalgası notası.</square04>
+        <square05 label="Mi kare">Bir kare dalgası notası.</square05>
+        <square06 label="Fa kare">Bir kare dalgası notası.</square06>
+        <square07 label="Fa diyez kare">Bir kare dalgası notası.</square07>
+        <square08 label="Sol kare">Bir kare dalgası notası.</square08>
+        <square09 label="Sol diyez kare">Bir kare dalgası notası.</square09>
+        <square10 label="La kare">Bir kare dalgası notası.</square10>
+        <square11 label="La diyez kare">Bir kare dalgası notası.</square11>
+        <square12 label="Si kare">Bir kare dalgası notası.</square12>
+        <drums>
+          <any label="davullar">Herhangi bir davul sesi.</any>
+        </drums>
+        <bassdrum label="bas">Bas davul.</bassdrum>
+        <hhclosed label="hh kapalı">Hi-hat simbal kapalı.</hhclosed>
+        <hhopen label="hh açık">Hi-hat simbal açık.</hhopen>
+        <shaker label="Shaker">Shaker.</shaker>
+        <snare label="snare">Snare davul.</snare>
+        <tomlow label="alçak alto">Alçak alto.</tomlow>
+        <tommed label="orta alto">Orta alto.</tommed>
+        <tomhi label="yüksek alto">Yüksek alto.</tomhi>
+      </musical>
+      <arcade>
+        <any label="oyun">Herhangi bir oyun sesi.</any>
+        <roboton label="robot açık">Robotu etkinleştir.</roboton>
+        <robotoff label="robot kapalı">Robotu devre dışı bırak.</robotoff>
+        <coinsound label="bozuk para">Bozuk para sesi.</coinsound>
+        <gethealth label="sağlık+">Sağlık kazanma sesi.</gethealth>
+        <losehealth label="sağlık-">Sağlık kaybetme sesi.</losehealth>
+        <shoot label="ateşEt">Ateş etme sesi.</shoot>
+        <timer label="kronometre">Kronometre sesi.</timer>
+        <win label="kazan">Kazanma sesi.</win>
+        <lose label="kaybet">Kaybetme sesi.</lose>
+        <inkjet_fire label="püskürtme">Mürekkep Püskürtme sesi.</inkjet_fire>
+        <inkjet_impact label="püskürtme çarpması">Mürekkep püskürtme çarpma sesi.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="çeşitli">Çeşitli seslerden bir tanesi.</any>
+        <countdown_beep label="geri sayım">Bir bipli geri sayım sesi.</countdown_beep>
+        <countdown_alarm label="alarm geri sayım">Acil bir bip sesli geri sayım sesi.</countdown_alarm>
+        <epic_stinger label="epik stinger">Bir epik stinger sesi.</epic_stinger>
+        <epic_stinger_a label="epik stinger">Bir epik stinger sesi.</epic_stinger_a>
+        <epic_stinger_b label="epik stinger">Bir epik stinger sesi.</epic_stinger_b>
+        <firepoof label="ateş puf">Ateş yakma sesi.</firepoof>
+        <forcefieldup label="kalkan +">Güç kalkanı açma sesi.</forcefieldup>
+        <forcefielddown label="kalkan -">Güç kalkanını kapatma sesi.</forcefielddown>
+        <hide label="gizlen">Gizlenme sesi.</hide>
+        <lockontarget label="kilitlen">Hedefe kilitlenme sesi.</lockontarget>
+        <losetarget label="kaybet">Hedefi kaybetme sesi.</losetarget>
+        <positivecondition label="iyi">İyi bir şey olma sesi.</positivecondition>
+        <negativecondition label="kötü">Kötü bir şey olma sesi.</negativecondition>
+        <points label="puan">Puan kazanma sesi.</points>
+        <pop label="pop">Pop sesi.</pop>
+        <popout label="fırla">Yuvadan fırlama sesi.</popout>
+        <powerup label="başla">Çalışmaya başlama sesi.</powerup>
+        <servo label="servo">Servo motor sesi.</servo>
+        <watersplash label="şapırtı">Su şapırtısı sesi.</watersplash>
+        <waterdrop label="damla">Su damlası sesi.</waterdrop>
+        <tagbase label="kovalamaca">Kovalamaca sesi.</tagbase>
+        <whistlehuman label="ıslık">Islık sesi.</whistlehuman>
+        <whistlereferee label="düdük">Hakem düdüğü sesi.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="kule">Kule savunma oyunu için eklenmiş sesler.</any>
+        <air_raid_siren label="hava saldırısı sireni">Hava saldırısı siren sesi.</air_raid_siren>
+        <bomb_fall label="bomba düşüşü">Bir bomba düşüş sesi.</bomb_fall>
+        <stun_fire label="sersemletme atışı">Taret sersemletme atış sesi.</stun_fire>
+        <zapper_fire label="elektronik ateş">Elektronik taret atış sesi.</zapper_fire>
+        <missile_fire label="füze atışı">Füze taret ateş sesi.</missile_fire>
+        <shrinker_fire label="küçültme atışı">Küçültme atış sesi.</shrinker_fire>
+        <clam_coin_spit label="bozuk para yumurtlama">Bir istridyenin bozuk para yumurtalamasının soylu sesi.</clam_coin_spit>
+        <enemy_converted label="düşman dönüştürme">Bir düşman taraf değiştirdiğinde oluşan ses.</enemy_converted>
+        <enemy_escape label="düşman firarda">Bir düşman firar ettiğinde çıkan ses.</enemy_escape>
+        <place_tower label="kule yerleştir">Bir kule yerine yerleştirildiğinde çıkan ses.</place_tower>
+        <star_collect label="yıldız topla">Bir yıldız toplandığında çıkan ses.</star_collect>
+        <coin_collect label="bozuk para topla">Bozuk para yerden toplandığında çıkan ses.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="müzik">Bu gruptan herhangi bir müzik.</any>
+      <omni>
+        <any label="Omni">Bu gruptan herhangi bir müzik.</any>
+      </omni>
+    </music>
+    <mu_action label="Eylem">Eylem</mu_action>
+    <mu_ambientlight label="hafif">Hafif ambiyans müzik.</mu_ambientlight>
+    <mu_ambinetmodd label="ruh hali">ruh hali müziği</mu_ambinetmodd>
+    <mu_brightdowntempo label="ağır çekim">Berrak düşük tempolu müzik.</mu_brightdowntempo>
+    <mu_brightfunk label="funk!">Funk müziği!</mu_brightfunk>
+    <mu_brightguitar label="gitar">Berrak gitar müziği.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu teması.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="gizem">Bu gruptan herhangi bir müzik.</any>
+      </mystery>
+    </music>
+    <mysterya label="gizem A">Gizemli bir müzik.</mysterya>
+    <mysteryb label="gizem B">Gizemli bir müzik.</mysteryb>
+    <mysteryc label="gizem C">Gizemli bir müzik.</mysteryc>
+    <music>
+      <driving>
+        <any label="Hareketli müziği.">Bu gruptan herhangi bir müzik.</any>
+      </driving>
+    </music>
+    <drivinga label="hızlı A">Hareketli müzik.</drivinga>
+    <drivingb label="hızlı B">Hareketli müzik.</drivingb>
+    <drivingc label="hızlı C">Hareketli müzik.</drivingc>
+    <music>
+      <drama>
+        <any label="dramatik">Bu gruptan herhangi bir müzik.</any>
+      </drama>
+    </music>
+    <dramaa label="dram A">Dramatik müzik.</dramaa>
+    <dramab label="dram B">Dramatik müzik.</dramab>
+    <environ>
+      <any label="ortam">Bu gruptan herhangi bir ses.</any>
+      <ambocean label="okyanus">Okyanus sesleri.</ambocean>
+      <ambforest label="orman">Orman sesleri.</ambforest>
+      <ambcity label="şehir">Şehir sesleri.</ambcity>
+      <ambmeadow label="çayır">çayır sesleri.</ambmeadow>
+      <ambmars label="mars">Mars sesleri.</ambmars>
+      <arena>
+        <any label="arena">Arena seslerinden herhangi biri.</any>
+        <a label="arena A">Büyük bir kalabalık.</a>
+        <b label="arena B">Büyük bir kalabalık.</b>
+        <c label="arena C">Büyük bir kalabalık.</c>
+        <d label="arena D">Büyük bir kalabalık.</d>
+        <e label="arena E">Büyük bir kalabalık.</e>
+        <f label="arena F">Büyük bir kalabalık.</f>
+        <g label="arena G">Büyük bir kalabalık.</g>
+      </arena>
+    </environ>
+    <trackingnone label="düz">Füze aşağı yukarı hareket etmeden dümdüz uçar.</trackingnone>
+    <trackinghoming label="seyir">Füze yeri izleyip duvarlar ve tepelerin üstünden uçmaya çalışır.</trackinghoming>
+    <constraint>
+      <leftright label="sol/sağ">Sadece sola ve sağa hareket et.</leftright>
+      <fwdback label="ileri/geri">Sadece ileri ver geri hareket et.</fwdback>
+      <updown label="yukarı/aşağı" />
+      <northsouth label="K/G">Sadece kuzey ve güneye hareket et.</northsouth>
+      <eastwest label="D/B">Sadece doğu ve batıya hareket et.</eastwest>
+      <immobile label="don">Çarpsalar bile harekete izin verme.</immobile>
+    </constraint>
+    <once label="birkez">YAP kısmından sonraki kod EĞER kısmında yazılı olan durum gerçekleştikten sonra bir kez çalışacaktır.</once>
+    <watertype label="su çeşidi">Su çeşidini belirle.</watertype>
+  </modifier>
+  <actuator>
+    <nothing label="hiçbir şey" />
+    <movement label="hareket et">Dünyada gezin. Farklı seçenekleri keşfet. Farklı karakterler farklı hareket özelliklerine sahiptir.</movement>
+    <turn label="dön">Yüzünün dönük olduğu yönü değiştir.</turn>
+    <eat label="ye">Büyük ihtimalle yakınında bulunan hedeflenen nesneyi ye.</eat>
+    <say label="söyle">Balon ya da dialog içinde yazılı bir mesaj göster. Satırlara ayırmak için &lt;cr&gt; kullan.</say>
+    <open label="aç">Farklı karakterler için farklı çalışır. Dene!</open>
+    <close label="kapat">Farklı karakterler için farklı çalışır. Dene!</close>
+    <kick label="tekme at">Yeterince yakınsa hedefe tekme at. Farklı güç seviyeleri kullanılabilir.</kick>
+    <make label="yarat">Başka bir nesne yarat. Temel nesneleri yada "Yaratılabilir" olarak işaretlenmiş her şey yaratılabilir.</make>
+    <launch label="fırlat">Yeterince yakınsa hedefe tekme at. Farklı güç seviyeleri kullanılabilir.</launch>
+    <push label="it">Yeterince yakındaysa hedefi belli bir istikamete doğru it. Farklı güç seviyeleri kullanılabilir.</push>
+    <pull label="çek">Yeterince yakındaysa hedefi belli bir istikamete doğru çek. Farklı güç seviyeleri kullanılabilir.</pull>
+    <camouflage label="kamuflaj">Hedefi kamufle ederek görülmesini zorlaştır.</camouflage>
+    <uncamouflage label="kamuflajı kaldır">Kamuflajı kaldırarak hedefi görünür kıl.</uncamouflage>
+    <express label="ifade et">Bir duygu ya da özel bir etki ifade et. Bazı ifadeler karakterin yüzüne değiştirirken bazıları da karakterin tepesinde görünür.</express>
+    <color label="renk">Kendi rengini ya da hedef nesnenin rengini değiştir.</color>
+    <glow label="parla">Radyoaktif bir parlama yay. Renk değişikliğine sebep olabilir.</glow>
+    <sound label="çal">Bir sürü seçenek arasından seçerek bir ses yap.</sound>
+    <stopsound label="sus">Ses çalmayı bırak.</stopsound>
+    <jump label="zıpla">Farklı karakterler farklı yüksekliklere zıplayabilirler.</jump>
+    <watersurface label="yüzey">Yüzey eylemi su altı karakterlerinin suyun yüzeyine yükselmesini sağlar.</watersurface>
+    <waterdive label="dal">Dal eylemi su altı karakterlerinin duyun dibine dalmasını sağlar.</waterdive>
+    <airrise label="yukarı çık">Yukarı Çık eylemi uçan karakterlerin gökyüzüne yükselmesini sağlar.</airrise>
+    <airdrop label="aşağı in">Aşağı in eylemi uçan karakterlerin yere doğru uçmasını sağlar.</airdrop>
+    <switchtask label="değiştir">Başka bir sayfaya geç. Sadece şimdiki sayfanın kuralları geçerlidir. Sayfalar eylem değiştirmek için çok faydalıdır.</switchtask>
+    <inlinetask label="hizada">Program çalıştığında burası bir başka sayfadaki bütün programlamayı buraya dahil edecektir. Bu bir kaç sayfada bulundurmak istediğiniz bir kod olduğunda işinize yarar. Bir kere yazarsınız sonrada nereye koymak isterseniz orada hizalarsınız.</inlinetask>
+    <nextlevel label="sonraki seviye">Sonraki seviyeyi yükle. Çok seviyeli oyunlar içindir!</nextlevel>
+    <prevlevel label="önceki seviye">Önceki seviyeyi yükle. Çok seviyeli oyunlar içindir!</prevlevel>
+    <waterraise label="su yükselt">Bu nesnenin altındaki suyu yükselt.</waterraise>
+    <waterlower label="suyu alçalt">Bu nesnenin altındaki su seviyesini alçalt.</waterlower>
+    <setwater label="su ayarı">Bu nesnenin altındaki su türünü ayarlar.</setwater>
+    <rescale label="ölçek">Nesnenin boyut ölçeğini yavaşça değiştirir.</rescale>
+    <rescaleinstant label="ölçek(hemen)">Nesnenin boyut ölçeğini hemen değiştirir.</rescaleinstant>
+    <movementspeedmodify label="hareket hızı">Bu karakter için ileri hareket hız çarpanını ayarlar.</movementspeedmodify>
+    <turningspeedmodify label="dönme hızı">Bu karakter için dönme hızı çarpanını ayarlar.</turningspeedmodify>
+    <worldlightingchange label="ışıklandırma">Dünya ışıklandırmasını yavaşça ayarlar.</worldlightingchange>
+    <worldlightingchangeinstant label="ışıklandırma(hemen)">Dünya ışıklandırmasını anında ayarlar.</worldlightingchangeinstant>
+    <worldskychange label="gökyüzü">Gökyüzünü yavaşça ayarlar.</worldskychange>
+    <worldskychangeinstant label="gökyüzü (hemen)">Gökyüzünü anında ayarlar.</worldskychangeinstant>
+    <shoot label="ateş et" />
+    <shoot2 label="ateş et">Fişek veya füze ateşle.</shoot2>
+    <beam label="ışın">Bir Mars taş tipinin temel özelliklerini belirlemek için ışın sıkar.</beam>
+    <inspect label="incele">Bir Mars taş tipine delik açıp, daha fazla inceleme için numuneler alır.</inspect>
+    <scan label="tara">Rover çevresindeki bilinmeyen taşların türünü açığa çıkarır.</scan>
+    <picture label="resim">Birincil kişi görüntüsünden bir fotoğraf çeker.</picture>
+    <damage label="hasar">Benden ya da hedef karakterden sağlık puanı düş.</damage>
+    <heal label="iyileş">Bana ya da hedef karaktere sağlık puanı ekle.
+        İyileşme eylemi karakter ya da hedef nesnenin hasardan sonra iyileşmesini sağlar. Varsayılan hedef nesnenin iyileşmesidir; karakter "ben" niteleyicisi eklenerek iyileştirilebilir. Niteliyiciler aynı zamanda iyileşme puanlarının tür ve miktarını belirlemek için de kullanılabilir.</heal>
+    <zap label="sersemlet">Kendimi ya da hedef karakteri birkaç saniyeliğine sersemlet.</zap>
+    <pop label="nakavt">Başka birisi sağlığını ilk haline döndürene kadar bir robotu ya da beni  devre dışı bırak.</pop>
+    <boom label="bom">Beni ya da hedefi bir patlamayla yok et.</boom>
+    <vanish label="yokol">Ben ya da hedefin sessizce yok olmasını sağla.</vanish>
+    <grab label="kap">Yeterince yakındaysa hedefi topla. Tek seferde en fazla tek nesne tutabilirsin.</grab>
+    <drop label="bırak">Taşıdığın şeyi bırak.</drop>
+    <give label="ver">Taşıdığın şeyi hedef karaktere ver. Eğer hedef o şeyi tutamazsa düşecektir.</give>
+    <reset label="sıfırla">Oyunun ya da bir karakterin bir özelliğini sıfırla.</reset>
+    <restart label="yeniden başlat">Oyunun ya da bir karakterin bir özelliğini sıfırla.</restart>
+    <gameover label="bitir">Oyunu bitir.</gameover>
+    <victory label="kazan">Oyunu  bitir ve bir kazanma mesajı göster. Eğer bir renk belirtirsen göstereceğiz.</victory>
+    <score label="skor">Bir skora puan ekle.</score>
+    <unscore label="çıkar">Bir skordan puanlar çıkar.</unscore>
+    <scoreset label="skoru ayarla">Skoru belli bir değere ayarla.</scoreset>
+    <camera>
+      <followme label="takip et">Görüş açısı bu karakteri takip etsin.</followme>
+      <ignoreme label="görmezden gel">Bu karakteri görüntüde tutma konusunda endişelenme.</ignoreme>
+      <firstperson label="birinci kişi">Bu karakterin gözlerinden gör.</firstperson>
+    </camera>
+  </actuator>
+  
+  <group>
+    <colors label="renkler" />
+    <pathcolors label="patika renkleri" />
+    <game label="oyun" />
+    <more label="daha fazla" />
+    <players label="oyuncular" />
+    <playermods label="oyuncular" />
+    <actions label="eylemler" />
+    <settings label="ayarlar" />
+    <combat label="savaş" />
+    <rover label="avare" />
+    <holding label="tuttuğum" />
+    <sounds label="sesler" />
+    <event label="olay">
+      <explode label="patlama" />
+      <silly label="saçma" />
+      <musical label="müzikal">
+        <glock label="glock" />
+        <saw label="testere" />
+        <sine label="sinüs" />
+        <gong label="gong" />
+        <square label="kare" />
+        <drums label="davullar" />
+      </musical>
+      <arcade label="oyun" />
+      <misc label="çeşitli" />
+      <tower label="kule" />
+    </event>
+    <environ label="ortam">
+      <forest label="orman" />
+      <arena label="arena" />
+    </environ>
+    <music label="müzik">
+      <omni label="yeni" />
+      <mystery label="gizem" />
+      <driving label="hareketli" />
+      <drama label="dram" />
+    </music>
+    <constraints label="sınır" />
+    <directions label="yön" />
+    <filters>
+      <directions label="yön" />
+      <touchbuttons label="düğmeler" />
+      <touchGuiButtons label="Düğmeler" />
+      <gestures label="jestler" />
+    </filters>
+    <expressions label="ifade" />
+    <projectiles label="mermi" />
+    <camera label="görünüm" />
+    <reset label="sıfırla" />
+    <options label="seçenekler" />
+    <compare label="karşılaştır" />
+    <points label="puan" />
+    <time label="zaman" />
+    <speed label="hız" />
+    <strength label="kuvvet" />
+    <angle label="çatı katı" />
+    <tracking label="izleme" />
+    <bots label="robotlar I" />
+    <bots2 label="robotlar II" />
+    <objects label="nesneler" />
+    <tasks label="görev" />
+    <terrains label="türler" />
+    <waters label="türler" />
+    <setwater label="su türü" />
+    <creatables label="yaratılabilenler" />
+    <keyboard>
+      <letters label="harfler" />
+      <numbers label="rakamlar" />
+      <symbols label="semboller" />
+      <misc label="çeşitli" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

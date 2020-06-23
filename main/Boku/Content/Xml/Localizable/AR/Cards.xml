@@ -1,0 +1,1060 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tiles>
+  <sensor>
+    <gamepad label="لوحة العاب">مكِّن اللاعب من التحكم في شخصية وتحديد زر.</gamepad>
+    <keyboard label="لوحة مفاتيح">اسمح للاعب بالتحكم في شخصية.  حدد المفتاح.</keyboard>
+    <mouse label="الفأرة">استجابة لإدخالات الفأرة.</mouse>
+    <touch label="لمس">استجابة للتعليمت الدمدخلة عن طريق اللمس</touch>
+
+    <microbit label="BBC micro:bit">Respond to BBC micro:bit input.</microbit>
+
+    <eyes label="رؤية">الاستجابة عند رؤية كائن, اعتمادا على النوع أو اللون. بإمكان الهضاب والجدران أن تحجب الرؤية عند استخدام فلتر خط-الرؤية.</eyes>
+    <ears label="سماع">استجابة عند سماع كائن اعتمادا على النوع أو الصوت. السماع ممكن عبر الجدران.</ears>
+    <bumpers label="اصطدام">استجابة عند الاصطدام بكائن آخر اعتمادا على النوع أو اللون...الخ</bumpers>
+    <timer label="مؤقت">الاستجابة لعدد الثواني التي تمر.  أضف أرقاما لجعل الوقت أطول.</timer>
+    <got label="التقاط">الاستجابة عند التقاط شيء ما اعتمادا على النوع أو اللون... الخ</got>
+    <scored label="رصيد">الاستجابة عند أي تغير في الرصيد.</scored>
+    <health label="عافية">استجابة عند أي تغير في العافية.</health>
+    <missilehit label="إصابة">استجابة لطلقتك اذا أصابت كائنا آخر.  مفيدة لإحراز النقاط،  لكن بإمكانك ان تعمل ما تشاء - مثل تغيير لون الروبوت إلى وردي من خلال التصويب.</missilehit>
+    <held label="محمول">استجابة لحملك على يد كائن آخر.</held>
+    <terrain label="على الأرض">استجابة لأنواع الارض المختلفة.</terrain>
+    <water label="في الماء">استجابة لأنواع الماء المختلفة.</water>
+    <beamed label="ارسل رسائل ضوئية">استجابة عندما تشع صخرة مريخية رسائل ضوئية</beamed>
+    <inspected label="عُيِّن">استجابة عند تعيين صخرة من المريخ</inspected>
+    <scanned label="مسح ضوئي">استجابة عند مسح صخرة غير معروفة ضوئيا لكشفها</scanned>
+    <endofpath label="نهاية المسار">استجابة عند الوصول لنهاية المسار</endofpath>
+    <always label="دائما">افعل شيئا في كل الأوقات. اختياري.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="كودو">كودو هو شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</boku>
+    <bokubot label="كودو">كودو هو شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</bokubot>
+    <anything label="أي شيء" />
+
+    <dead label="knocked out">React to knocked out characters.</dead>
+
+    <me label="أنا">فقط يفحص الروبوت الذي يشغل هذا البرنامج.</me>
+    <said label="لفظ">سماع شخصية تقول شيئا.  أكتب ما تريد استماعه.</said>
+    <countnone label="لاشيء">استجابة عند عدم رؤيتك أي شيء مطابق للوصف.  مثال، رؤية - أزرق - لاشيء، ستحدث ان لم يكن هناك شيء أزرق يمكنك رؤيته.</countnone>
+    <starfish label="نجم البحر">الاستجابة لنجم البحر</starfish>
+    <clam label="محار">الاستجابة للمحار</clam>
+    <seagrass label="طحالب (اعشاب بحر)">الاستجابة للطحالب (اعشاب البحر)</seagrass>
+    <seagrasssingle label="طحالب (اعشاب بحر)">الاستجابة للطحالب (اعشاب البحر)</seagrasssingle>
+    <lilypad label="زنابق الماء">الاستجابة لزنابق الماء</lilypad>
+    <lilypadsingle label="زنابق الماء">الاستجابة لزنابق الماء</lilypadsingle>
+    <flyfish label="سمكة طائرة">السمكة الطائرة هي شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</flyfish>
+    <jet label="طائرة">الطائرة هي شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</jet>
+    <light label="مصباح">المصباح هو شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكه. كما أن المصباح ينير الأشياء. يمكنك الحصول على 4 مصابيح فقط.</light>
+    <fan label="مروحة">الاستجابة للمروحة</fan>
+    <octopus label="اخطبوط">الاستجابة للاخطبوط</octopus>
+    <fastbot label="دراجة">الدراجة هي شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</fastbot>
+    <saucer label="صحن طائر">معذرة، لن أخبرك.  المعلومات عن الصحن الطائر سرية للغاية.</saucer>
+    <windblimp label="منطاد">المنطاد هو شخصية طائرة يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</windblimp>
+    <balloonbot label="بالون">البالون هو شخصية محلقة يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</balloonbot>
+    <subbot label="غواصة">الغواصة هي شخصية غوص يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</subbot>
+    <terracannon label="مدفع">المدفع هو شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكها.</terracannon>
+    <puck label="قرص">القرص هو شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكه.</puck>
+    <wisp label="وهاج">الوهاج هو شخصية يمكنك إضافتها للعبتك ويمكن برمجة سلوكه.</wisp>
+    <anybot label="أي روبوت">البحث عن أي نوع من الروبوتات.</anybot>
+    <turtle label="سلحفاة">الاستجابة للسلحفاة.</turtle>
+    <rover label="مركبة">الاستجابة للمركبة</rover>
+    <pushpad label="دافع">الاستجابة للدافع.</pushpad>
+    <sputnik label="قمر اصطناعي">الاستجابة للقمر الاصطناعي.</sputnik>
+    <stick label="مغرازة">الاستجابة للمغرازة.</stick>
+    <stickboy label="مغرازة">الاستجابة للمغرازة.</stickboy>
+    <drum label="نطانة">الاستجابة للنطاطة.</drum>
+    <mine label="لغم">الاستجابة للألغام.</mine>
+    <cloud label="سحابة">الاستجابة للسحاب.</cloud>
+    <swimfish label="سمكة">الاستجابة للسمك.</swimfish>
+    <floatbot label="سفينة">الاستجابة للسفينة.</floatbot>
+    <factory label="مصنع">الاستجابة للمصنع.</factory>
+    <hut label="كوخ">الاستجابة للكوخ.</hut>
+    <castle label="قلعة">الاستجابة للقلعة.</castle>
+    <fruit label="تفاحة">الاستجابة للتفاحة.</fruit>
+    <inkjet label="سحابة حبر">الاستجابة لسحابة حبر</inkjet>
+    <iceberg label="جبل جليدي">الاستجابة لجبل جليدي</iceberg>
+    <rock label="صخرة">الاستجابة للصخرة.</rock>
+    <rockLowValue label="الصخر الناري">الاستجابة للصخر الناري</rockLowValue>
+    <rockHighValue label="الصخر الرسوبي">الاستجابة للصخر الرسوبي</rockHighValue>
+    <rockLowValueUnknown label="صخرة غير معرفة">الاستجابة للصخرة الرسوبية</rockLowValueUnknown>
+    <rockHighValueUnknown label="صخرة غير معرفة">الاستجابة للصخرة غير المعرفة</rockHighValueUnknown>
+    <rockUnknown label="صخرة غير معرفة">الاستجابة للصخرة الرسوبية</rockUnknown>
+    <tree label="شجرة">الاستجابة للشجرة.</tree>
+    <pipe label="انبوب">الاستجابة للانبوب</pipe>
+    <pipeStraight label="انبوب مستقيم">الاستجابة للانبوب المستقيم</pipeStraight>
+    <pipeCross label="انبوب مصلب">الاستجابة لانبوب مصلب</pipeCross>
+    <pipeCorner label="انبوب ذو زاوية">الاستجابة لانبوب ذو زاوية</pipeCorner>
+    <underwater label="تحت مائي">الاستجابة لكائن تحت مائي</underwater>
+    <building label="بناية">الاستجابة للبناية.</building>
+    <flower label="زهور" />
+    <gate label="بوابة" />
+    <cursor label="مؤشر">استجابة للمؤشر.</cursor>
+    <star label="نجم">الاستجابة للنجم.</star>
+    <coin label="نقود">الاستجابة للنقود.</coin>
+    <soccerball label="كرة">الاستجابة للكرة.</soccerball>
+    <heart label="قلب">الاستجابة للقلب.</heart>
+    <bullet label="رصاص">الاستجابة للرصاص.</bullet>
+    <Black label="أسود">استجابة لشيء لونه أسود.</Black>
+    <Grey label="رمادي">استجابة لشيء لونه رمادي.</Grey>
+    <white label="أبيض">استجابة لشيء لونه أبيض.</white>
+    <red label="أحمر">استجابة لشيء لونه أحمر.</red>
+    <orange label="برتقالي">استجابة لشيء لونه برتقالي.</orange>
+    <yellow label="أصفر">استجابة لشيء لونه أصفر.</yellow>
+    <green label="أخضر">استجابة لشيء لونه أخضر.</green>
+    <blue label="أزرق">استجابة لشيء لونه أزرق.</blue>
+    <purple label="بنفسجي">استجابة لشيء لونه بنفسجي.</purple>
+    <pink label="وردي">استجابة لشيء لونه وردي.</pink>
+    <brown label="بني">استجابة لشيء لونه بني.</brown>
+    <PathBlack label="المسار الاسود">استجابة للمسار الاسود</PathBlack>
+    <PathGrey label="المسار الرمادي">استجابة للمسار الرمادي</PathGrey>
+    <PathWhite label="المسار الابيض">استجابة للمسار الابيض</PathWhite>
+    <PathRed label="المسار الاحمر">استجابة للمسار الاحمر</PathRed>
+    <PathOrange label="المسار البرتقالي">استجابة للمسار البرتقالي</PathOrange>
+    <PathYellow label="المسار الاصفر">استجابة للمسار الاصفر</PathYellow>
+    <PathGreen label="المسار الاخضر">استجابة للمسار الاخضر</PathGreen>
+    <PathBlue label="المسار الازرق">استجابة للمسار الازرق</PathBlue>
+    <PathPurple label="المسار البنفسجي">استجابة للمسار البنفسجي</PathPurple>
+    <PathPink label="المسار الزهري">استجابة للمسار الزهري</PathPink>
+    <PathBrown label="المسار البني">استجابة للمسار البني</PathBrown>
+    <pathplain label="عادي" />
+    <pathroad label="طريق" />
+    <pathwall label="جدار" />
+    <pathflora label="نباتي" />
+    <yucca1 label="شجرة" />
+    <yucca2 label="شجرة" />
+    <yucca3 label="شجرة" />
+    <bigyucca1 label="شجرة" />
+    <expresshappy label="سعيد">الاستجابة للروبوت السعيد.</expresshappy>
+    <expresssad label="حزين">الاستجابة للروبوت الحزين.</expresssad>
+    <expressangry label="غاضب">الاستجابة للروبوت الغاضب</expressangry>
+    <expresscrazy label="مجنون">الاستجابة لروبوت مجنون.</expresscrazy>
+    <expresshearts label="قلوب">الاستجابة لروبوت يظهر قلوب.</expresshearts>
+    <expressflowers label="زهور">الاستجابة لروبوت يعرض زهور.</expressflowers>
+    <expressstars label="نجوم">الاستجابة لروبوت يعرص نجوم.</expressstars>
+    <expressswear label="تعرق">الاستجابة لروبوت يعرق.</expressswear>
+    <expressnormal label="عادي">الاستجابة لروبوت يتصرف بشكل طبيعي.</expressnormal>
+    <expressnone label="فارغ">الاستجابة لروبوت يتصرف بشكل طبيعي.</expressnone>
+    <moving label="متحرك">الاستجابة لروبوت فقط إذا كان متحركا.</moving>
+    <camouflage label="متخفيا">الاستجابة للروبوت فقط اذا كان متخفيا</camouflage>
+    <closeby label="قريب">جعل الشخصية تهتم فقط بالكائنات القريبة منها. وان تتجاهل الكائنات البعيدة.</closeby>
+    <faraway label="بعيد">استجابة للأشياء البعيدة فقط.</faraway>
+    <infront label="أمام">استجابة للأشياء التي أمام الروبوت فقط.</infront>
+    <behind label="خلف">استجابة فقط للأشياء التي خلف الروبوت.</behind>
+    <toleft label="يسار">استجابة فقط للأشياء التي إلى يسار الروبوت.</toleft>
+    <toright label="يمين">استجابة فقط للأشياء التي إلى يمين الروبوت.</toright>
+    <over label="فوق">استجابة فقط للأشياء التي إلى فوق الروبوت.</over>
+    <under label="تحت">استجابة فقط للأشياء التي إلى تحت الروبوت.</under>
+    <lineofsight label="line of sight">الارضية والجدران تحجب المستشعر.</lineofsight>
+    <countfew label="قليل">استجابة فقط عندما ترى القليل من شيء ما.</countfew>
+    <countmany label="كثير">استجابة فقط عندما ترى الكثير من شيء ما.</countmany>
+    <clustermany label="كتلة">الاستجابة عند رؤية شيء متكتل</clustermany>
+    <countany label="الكل" />
+    <leftstick label="L stick">استجابة لعصى المتحكم اليسرى. جيد للتحريك.</leftstick>
+    <rightstick label="R stick">استجابة لعصى المتحكم اليمنى. جيد للتصويب.</rightstick>
+    <abutton label="A button">استجابة للز A في عصا التحكم.</abutton>
+    <bbutton label="B button">استجابة للز B في عصا التحكم.</bbutton>
+    <xbutton label="X button">استجابة للز X في عصا التحكم.</xbutton>
+    <ybutton label="Y button">استجابة للز Y في عصا التحكم.</ybutton>
+    <lefttrigger label="تريقر يسار">الاستجابة للتريقر الأيسر من المتحكم.</lefttrigger>
+    <righttrigger label="تريقر يمين">الاستجابة للتريقر الأيمن من المتحكم.</righttrigger>
+    <lefttrigger_analog label="تريقر يسار">الاستجابة للتريقر الأيسر من المتحكم.</lefttrigger_analog>
+    <righttrigger_analog label="تريقر يمين">الاستجابة للتريقر الأيمن من المتحكم.</righttrigger_analog>
+    
+    <strongly label="strongly">Detect a strong signal or value.</strongly>
+    <weakly label="weakly">Detect a weak signal or value.</weakly>
+    <microbit label="BBC micro:bit">
+      <tilt label="tilt">React to tilt input from the BBC micro:bit.</tilt>
+      <leftbutton label="A button">React to pressing the BBC micro:bit A button.</leftbutton>
+      <rightbutton label="B button">React to pressing the BBC micro:bit B button.</rightbutton>
+      <pin1 label="pin 0">Read state of BBC micro:bit pin 0.</pin1>
+      <pin2 label="pin 1">Read state of BBC micro:bit pin 1.</pin2>
+      <pin3 label="pin 2">Read state of BBC micro:bit pin 2.</pin3>
+      <shake label="shake">Detects when the micro:bit is shaken.</shake>
+    </microbit>
+
+    <mouse>
+      <button>
+        <left label="يسار">استجابة لزر الفأرة الأيسر.</left>
+        <right label="يمين">استجابة لزر الفأرة الأيمن.</right>
+      </button>
+      <hover label="فوق">استجابة للفأرة التي يمر مؤشرها فوق كائن أو أرضية</hover>
+      <move label="حركة">استجابة لتحركات الفأرة.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="لمس">الاستجابة للمس (شاشة لمس)</touching>
+        <tap label="نقر">الاستجابة للنقر (شاشة لمس)</tap>
+        <rotate label="تدوير">الاستجابة للتدوير (شاشة لمس)</rotate>
+        <swipe label="ضربة">الاستجابة لضربة (شاشة لمس)</swipe>
+        <slide label="انزلاق">الاستجابة للانزلاق (شاشة لمس)</slide>
+      </gesture>
+      <guiButton>
+        <White label="ابيض">الاستجابة للزر الابيض في HUD (اذهب للتعليمات للتغيير)</White>
+        <Black label="اسود">الاستجابة للزر الاسود في HUD (اذهب للتعليمات للتغيير)</Black>
+        <Grey label="رمادي">الاستجابة للزر الرمادي في HUD (اذهب للتعليمات للتغيير)</Grey>
+        <Red label="احمر">الاستجابة للزر الاحمر في HUD (اذهب للتعليمات للتغيير)</Red>
+        <Green label="اخضر">الاستجابة للزر الاخضر في HUD (اذهب للتعليمات للتغيير)</Green>
+        <Blue label="ازرق">الاستجابة للزر الازرق في HUD (اذهب للتعليمات للتغيير)</Blue>
+        <Orange label="برتقالي">الاستجابة للزر البرتقالي في HUD (اذهب للتعليمات للتغيير)</Orange>
+        <Yellow label="اصفر">الاستجابة للزر الاصفر في HUD (اذهب للتعليمات للتغيير)</Yellow>
+        <Purple label="بنفسجي">الاستجابة للزر البنفسجي في HUD (اذهب للتعليمات للتغيير)</Purple>
+        <Pink label="زهري">الاستجابة لزر الزهري في HUD (اذهب للتعليمات للتغيير)</Pink>
+        <Brown label="بني">الاستجابة للزر البني في HUD (اذهب للتعليملات للتغيير)</Brown>
+      </guiButton>
+      <!-- Virtual Controller -->
+      <controllerButton_X label="زر X">ألاستجابة للمس الزر X على الشاشة</controllerButton_X>
+      <controllerButton_Y label="زر Y">ألاستجابة للمس الزر Y على الشاشة</controllerButton_Y>
+      <controllerButton_A label="زر A">ألاستجابة للمس الزر A على الشاشة</controllerButton_A>
+      <controllerButton_B label="زر B">ألاستجابة للمس الزر B على الشاشة</controllerButton_B>
+    </touch>
+    <ArrowKeys label="أسهم">الاستجابة لمفاتيح الأسهم على لوحة المفاتيح.</ArrowKeys>
+    <WASDKeys label="WASD">الاستجابة لمفاتيح WASD.</WASDKeys>
+    <Akey label="A">الاستجابة لزر لوحة المفاتيح A.</Akey>
+    <Bkey label="B">الاستجابة لزر لوحة المفاتيح B.</Bkey>
+    <Ckey label="C">الاستجابة لزر لوحة المفاتيح C.</Ckey>
+    <Dkey label="D">الاستجابة لزر لوحة المفاتيح D.</Dkey>
+    <Ekey label="E">الاستجابة لزر لوحة المفاتيح E.</Ekey>
+    <Fkey label="F">الاستجابة لزر لوحة المفاتيح F.</Fkey>
+    <Gkey label="G">الاستجابة لزر لوحة المفاتيح G.</Gkey>
+    <Hkey label="H">الاستجابة لزر لوحة المفاتيح H.</Hkey>
+    <Ikey label="I">الاستجابة لزر لوحة المفاتيح I.</Ikey>
+    <Jkey label="J">الاستجابة لزر لوحة المفاتيح J.</Jkey>
+    <Kkey label="K">الاستجابة لزر لوحة المفاتيح K.</Kkey>
+    <Lkey label="L">الاستجابة لزر لوحة المفاتيح L.</Lkey>
+    <Mkey label="M">الاستجابة لزر لوحة المفاتيح M.</Mkey>
+    <Nkey label="N">الاستجابة لزر لوحة المفاتيح N.</Nkey>
+    <Okey label="O">الاستجابة لزر لوحة المفاتيح O.</Okey>
+    <Pkey label="P">الاستجابة لزر لوحة المفاتيح P.</Pkey>
+    <Qkey label="Q">الاستجابة لزر لوحة المفاتيح Q.</Qkey>
+    <Rkey label="R">الاستجابة لزر لوحة المفاتيح R.</Rkey>
+    <Skey label="S">الاستجابة لزر لوحة المفاتيح S.</Skey>
+    <Tkey label="T">الاستجابة لزر لوحة المفاتيح T.</Tkey>
+    <Ukey label="U">الاستجابة لزر لوحة المفاتيح U.</Ukey>
+    <Vkey label="V">الاستجابة لزر لوحة المفاتيح V.</Vkey>
+    <Wkey label="W">الاستجابة لزر لوحة المفاتيح W.</Wkey>
+    <Xkey label="X">الاستجابة لزر لوحة المفاتيح X.</Xkey>
+    <Ykey label="Y">الاستجابة لزر لوحة المفاتيح Y.</Ykey>
+    <Zkey label="Z">الاستجابة لزر لوحة المفاتيح Z.</Zkey>
+    <D0key label="0">الاستجابة لزر لوحة المفاتيح 0 .</D0key>
+    <D1key label="1">الاستجابة لزر لوحة المفاتيح 1 .</D1key>
+    <D2key label="2">الاستجابة لزر لوحة المفاتيح 2 .</D2key>
+    <D3key label="3">الاستجابة لزر لوحة المفاتيح 3 .</D3key>
+    <D4key label="4">الاستجابة لزر لوحة المفاتيح 4 .</D4key>
+    <D5key label="5">الاستجابة لزر لوحة المفاتيح 5 .</D5key>
+    <D6key label="6">الاستجابة لزر لوحة المفاتيح 6 .</D6key>
+    <D7key label="7">الاستجابة لزر لوحة المفاتيح 7 .</D7key>
+    <D8key label="8">الاستجابة لزر لوحة المفاتيح 8 .</D8key>
+    <D9key label="9">الاستجابة لزر لوحة المفاتيح 9 .</D9key>
+    <Spacekey label="Space">الاستجابة لزر لوحة المفاتيح Space .</Spacekey>
+    <PageUpkey label="PageUp">الاستجابة لزر لوحة المفاتيح PageUp .</PageUpkey>
+    <PageDownkey label="PageDown">الاستجابة لزر لوحة المفاتيح PageDown .</PageDownkey>
+    <Endkey label="End">الاستجابة لزر لوحة المفاتيح End .</Endkey>
+    <Leftkey label="Left">الاستجابة لزر لوحة المفاتيح Left .</Leftkey>
+    <Upkey label="Up">الاستجابة لزر لوحة المفاتيح Up .</Upkey>
+    <Rightkey label="Right">الاستجابة لزر لوحة المفاتيح Right .</Rightkey>
+    <Downkey label="Down">الاستجابة لزر لوحة المفاتيح Down .</Downkey>
+    <Insertkey label="Insert">الاستجابة لزر لوحة المفاتيح Insert .</Insertkey>
+    <Deletekey label="Delete">الاستجابة لزر لوحة المفاتيح Delete .</Deletekey>
+    <LeftWindowskey label="LeftWindows">الاستجابة لزر لوحة المفاتيح LeftWindows .</LeftWindowskey>
+    <RightWindowskey label="RightWindows">الاستجابة لزر لوحة المفاتيح RightWindows .</RightWindowskey>
+    <Multiplykey label="*">الاستجابة لزر لوحة المفاتيح Multiply .</Multiplykey>
+    <Addkey label="+">الاستجابة لزر لوحة المفاتيح زائد .</Addkey>
+    <Subtractkey label="-">الاستجابة لزر لوحة المفاتيح ناقص .</Subtractkey>
+    <Decimalkey label=".">الاستجابة لزر لوحة المفاتيح نقطة.</Decimalkey>
+    <Dividekey label="/">الاستجابة لزر لوحة المفاتيح تقسيم.</Dividekey>
+    <LeftShiftkey label="LeftShift">الاستجابة لزر لوحة المفاتيح LeftShift.</LeftShiftkey>
+    <RightShiftkey label="RightShift">الاستجابة لزر لوحة المفاتيح RightShift.</RightShiftkey>
+    <LeftControlkey label="LeftControl">الاستجابة لزر لوحة المفاتيح LeftControl.</LeftControlkey>
+    <RightControlkey label="RightControl">الاستجابة لزر لوحة المفاتيح RightControl.</RightControlkey>
+    <LeftAltkey label="LeftAlt">الاستجابة لزر لوحة المفاتيح LeftAlt.</LeftAltkey>
+    <RightAltkey label="RightAlt">الاستجابة لزر لوحة المفاتيح RightAlt.</RightAltkey>
+    <OemSemicolonkey label=";">الاستجابة لزر لوحة المفاتيح الفاصلة المنقوطة.</OemSemicolonkey>
+    <OemPluskey label="+">الاستجابة لزر لوحة المفاتيح +.</OemPluskey>
+    <OemCommakey label=",">الاستجابة لزر لوحة المفاتيح ’ .</OemCommakey>
+    <OemMinuskey label="-">الاستجابة لزر لوحة المفاتيح - .</OemMinuskey>
+    <OemPeriodkey label=".">الاستجابة لزر لوحة المفاتيح . .</OemPeriodkey>
+    <OemQuestionkey label="?">الاستجابة لزر لوحة المفاتيح استفهام .</OemQuestionkey>
+    <OemTildekey label="~">الاستجابة لزر لوحة المفاتيح ~ .</OemTildekey>
+    <OemOpenBracketskey label="[">الاستجابة لزر لوحة المفاتيح OpenBrackets.</OemOpenBracketskey>
+    <OemPipekey label="|">الاستجابة لزر لوحة المفاتيح Pipe .</OemPipekey>
+    <OemCloseBracketskey label="]">الاستجابة لزر لوحة المفاتيح CloseBrackets .</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">الاستجابة لزر لوحة المفاتيح Quotes .</OemQuoteskey>
+    <OemBackslashkey label="\">الاستجابة لزر لوحة المفاتيح Backslash .</OemBackslashkey>
+    <F1key label="F1">الاستجابة لزر لوحة المفاتيح F1 .</F1key>
+    <F2key label="F2">الاستجابة لزر لوحة المفاتيح F2 .</F2key>
+    <F3key label="F3">الاستجابة لزر لوحة المفاتيح F3 .</F3key>
+    <F4key label="F4">الاستجابة لزر لوحة المفاتيح F4 .</F4key>
+    <F5key label="F5">الاستجابة لزر لوحة المفاتيح F5 .</F5key>
+    <F6key label="F6">الاستجابة لزر لوحة المفاتيح F6 .</F6key>
+    <F7key label="F7">الاستجابة لزر لوحة المفاتيح F7 .</F7key>
+    <F8key label="F8">الاستجابة لزر لوحة المفاتيح F8 .</F8key>
+    <F9key label="F9">الاستجابة لزر لوحة المفاتيح F9 .</F9key>
+    <F10key label="F10">الاستجابة لزر لوحة المفاتيح F10 .</F10key>
+    <F11key label="F11">الاستجابة لزر لوحة المفاتيح F11 .</F11key>
+    <F12key label="F12">الاستجابة لزر لوحة المفاتيح F12 .</F12key>
+    <Shiftkey label="Shift">الاستجابة لأي مفتاح Shift .</Shiftkey>
+    <Controlkey label="Control">الاستجابة لأي مفتاح Control .</Controlkey>
+    <Altkey label="Alt">الاستجابة لأي مفتاح Alt .</Altkey>
+    <Windowskey label="Windows">الاستجابة لأي مفتاح Windows .</Windowskey>
+    <player1 label="اللاعب 1">استجابة فقط لمتحكم اللاعب 1 . افتراضيا تتم الاسجابة للكل.</player1>
+    <player2 label="اللاعب 2">استجابة فقط لمتحكم اللاعب 2 . افتراضيا تتم الاسجابة للكل.</player2>
+    <player3 label="اللاعب 3">استجابة فقط لمتحكم اللاعب 3 . افتراضيا تتم الاسجابة للكل.</player3>
+    <player4 label="اللاعب 4">استجابة فقط لمتحكم اللاعب 4 . افتراضيا تتم الاسجابة للكل.</player4>
+    <terrain label="نوع">الاستجابة لنوع محدد من الأرضيات</terrain>
+    <water label="نوع">الاستجابة لنوع محدد من الماء.</water>
+    <quartersecond label="ثانية">1/4 ثانية.    تدمج مع غيرها لإضافة وقت أطول.</quartersecond>
+    <_01second label="ثانية">1 ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_01second>
+    <_02seconds label="ثانيتان">ثانيتان. ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_02seconds>
+    <_03seconds label="ثواني">3 ثواني. ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_03seconds>
+    <_04seconds label="ثواني">4 ثواني. ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_04seconds>
+    <_05seconds label="ثواني">5 ثواني. ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_05seconds>
+    <_10seconds label="ثواني">10 ثواني. ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_10seconds>
+    <_20seconds label="ثانية">20 ثانية. ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_20seconds>
+    <_30seconds label="ثانية">30 ثانية. ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_30seconds>
+    <_60seconds label="ثانية">60 ثانية. ثانية.    تدمج مع غيرها لإضافة وقت أطول.</_60seconds>
+    <_000point label="نقطة">0 نقطة.</_000point>
+    <_001point label="نقطة">نقطة واحدة.  تدمج مع غيرها لإضافة قيم أكبر.</_001point>
+    <_002points label="نقطتان">نقطتان.  تدمج مع غيرها لإضافة قيم أكبر.</_002points>
+    <_003points label="نقاط">3 نقاط.  تدمج مع غيرها لإضافة قيم أكبر.</_003points>
+    <_004points label="نقاط">4 نقاط.  تدمج مع غيرها لإضافة قيم أكبر.</_004points>
+    <_005points label="نقاط">5 نقاط.  تدمج مع غيرها لإضافة قيم أكبر.</_005points>
+    <_010points label="نقاط">10 نقاط.  تدمج مع غيرها لإضافة قيم أكبر.</_010points>
+    <_020points label="نقطة">20 نقطة.  تدمج مع غيرها لإضافة قيم أكبر.</_020points>
+    <_050points label="نقطة">50 نقطة.  تدمج مع غيرها لإضافة قيم أكبر.</_050points>
+    <_100points label="نقطة">100 نقطة.  تدمج مع غيرها لإضافة قيم أكبر.</_100points>
+    <random label="عشوائي">توليد رقم عشوائي باستخدام لبنة الأرقام. على سبيل المثال، عشوائي - 5 ، تولد رقما عشوائيا بين 0 و 4.</random>
+    <scorebucket>
+      <color>
+        <white label="أبيض">فحص الأرصدة البيضاء, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</white>
+        <black label="أسود">فحص الأرصدة السوداء, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</black>
+        <grey label="رمادي">فحص الأرصدة الرمادية, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</grey>
+        <red label="أحمر">فحص الأرصدة الحمراء, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</red>
+        <green label="أخضر">فحص الأرصدة الخضراء, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</green>
+        <blue label="أزرق">فحص الأرصدة الزرقاء, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</blue>
+        <orange label="برتقالي">فحص الأرصدة البرتقالية, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</orange>
+        <yellow label="أصفر">فحص الأرصدة الصفراء, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</yellow>
+        <purple label="بنفسجي">فحص الأرصدة البنفسجية, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</purple>
+        <pink label="وردي">فحص الأرصدة الوردية, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</pink>
+        <brown label="بني">فحص الأرصدة البنية, , والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</brown>
+      </color>
+      <letter>
+        <a label="الرصيد A">اختبار الرصيد 'A' ، والتي لم تعرض في إطار الرصيد.</a>
+        <b label="الرصيد B">اختبار الرصيد 'B' ، والتي لم تعرض في إطار الرصيد.</b>
+        <c label="الرصيد C">اختبار الرصيد 'C' ، والتي لم تعرض في إطار الرصيد.</c>
+        <d label="الرصيد D">اختبار الرصيد 'D' ، والتي لم تعرض في إطار الرصيد.</d>
+        <e label="الرصيد E">اختبار الرصيد 'E' ، والتي لم تعرض في إطار الرصيد.</e>
+        <f label="الرصيد F">اختبار الرصيد 'F' ، والتي لم تعرض في إطار الرصيد.</f>
+        <g label="الرصيد G">اختبار الرصيد 'G' ، والتي لم تعرض في إطار الرصيد.</g>
+        <h label="الرصيد H">اختبار الرصيد 'H' ، والتي لم تعرض في إطار الرصيد.</h>
+        <i label="الرصيد I">اختبار الرصيد 'I' ، والتي لم تعرض في إطار الرصيد.</i>
+        <j label="الرصيد J">اختبار الرصيد 'J' ، والتي لم تعرض في إطار الرصيد.</j>
+        <k label="الرصيد K">اختبار الرصيد 'K' ، والتي لم تعرض في إطار الرصيد.</k>
+        <l label="الرصيد L">اختبار الرصيد 'L' ، والتي لم تعرض في إطار الرصيد.</l>
+        <m label="الرصيد M">اختبار الرصيد 'M' ، والتي لم تعرض في إطار الرصيد.</m>
+        <n label="الرصيد N">اختبار الرصيد 'N' ، والتي لم تعرض في إطار الرصيد.</n>
+        <o label="الرصيد O">اختبار الرصيد 'O' ، والتي لم تعرض في إطار الرصيد.</o>
+        <p label="الرصيد P">اختبار الرصيد 'P' ، والتي لم تعرض في إطار الرصيد.</p>
+        <q label="الرصيد Q">اختبار الرصيد 'Q' ، والتي لم تعرض في إطار الرصيد.</q>
+        <r label="الرصيد R">اختبار الرصيد 'R' ، والتي لم تعرض في إطار الرصيد.</r>
+        <s label="الرصيد S">اختبار الرصيد 'S' ، والتي لم تعرض في إطار الرصيد.</s>
+        <t label="الرصيد T">اختبار الرصيد 'T' ، والتي لم تعرض في إطار الرصيد.</t>
+        <u label="الرصيد U">اختبار الرصيد 'U' ، والتي لم تعرض في إطار الرصيد.</u>
+        <v label="الرصيد V">اختبار الرصيد 'V' ، والتي لم تعرض في إطار الرصيد.</v>
+        <w label="الرصيد W">اختبار الرصيد 'W' ، والتي لم تعرض في إطار الرصيد.</w>
+        <x label="الرصيد X">اختبار الرصيد 'X' ، والتي لم تعرض في إطار الرصيد.</x>
+        <y label="الرصيد Y">اختبار الرصيد 'Y' ، والتي لم تعرض في إطار الرصيد.</y>
+        <z label="الرصيد Z">اختبار الرصيد 'Z' ، والتي لم تعرض في إطار الرصيد.</z>
+      </letter>
+      <local>
+        <a label="الرصيد a">The 'a' score, which is private to this character.</a>
+        <b label="الرصيد b">The 'b' score, which is private to this character.</b>
+        <c label="الرصيد c">The 'c' score, which is private to this character.</c>
+        <d label="الرصيد d">The 'd' score, which is private to this character.</d>
+        <e label="الرصيد e">The 'e' score, which is private to this character.</e>
+        <f label="الرصيد f">The 'f' score, which is private to this character.</f>
+        <g label="الرصيد g">The 'g' score, which is private to this character.</g>
+        <h label="الرصيد h">The 'h' score, which is private to this character.</h>
+        <i label="الرصيد i">The 'i' score, which is private to this character.</i>
+        <j label="الرصيد j">The 'j' score, which is private to this character.</j>
+        <k label="الرصيد k">The 'k' score, which is private to this character.</k>
+        <l label="الرصيد l">The 'l' score, which is private to this character.</l>
+        <m label="الرصيد m">The 'm' score, which is private to this character.</m>
+        <n label="الرصيد n">The 'n' score, which is private to this character.</n>
+        <o label="الرصيد o">The 'o' score, which is private to this character.</o>
+        <p label="الرصيد p">The 'p' score, which is private to this character.</p>
+        <q label="الرصيد q">The 'q' score, which is private to this character.</q>
+        <r label="الرصيد r">The 'r' score, which is private to this character.</r>
+        <s label="الرصيد s">The 's' score, which is private to this character.</s>
+        <t label="الرصيد t">The 't' score, which is private to this character.</t>
+        <u label="الرصيد u">The 'u' score, which is private to this character.</u>
+        <v label="الرصيد v">The 'v' score, which is private to this character.</v>
+        <w label="الرصيد w">The 'w' score, which is private to this character.</w>
+        <x label="الرصيد x">The 'x' score, which is private to this character.</x>
+        <y label="الرصيد y">The 'y' score, which is private to this character.</y>
+        <z label="الرصيد z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="تريقر" />
+    <timertrigger label="تريقر" />
+    <scoreis label="هو" />
+    <scoreequals label="تساوي">الاستجابة عند تساوي الرصيد لرقم معين</scoreequals>
+    <scorenotequals label="تباين">الاستجالة عنج التباين بين الرصيد لرقم معين</scorenotequals>
+    <scoreabove label="فوق">استجابة عند ارتفاع الرصيد فوق رقم محدد.</scoreabove>
+    <scorebelow label="تحت">استجابة عند انخفاض الرصيد دون رقم محدد.</scorebelow>
+    <scoregteq label="اكبر او يساوي">عندما يكون الرصيد اكبر او يساوي رقما معينا</scoregteq>
+    
+    <scorelteq label="اصغر او يساوي">React when a score is equal to or goes below a certain number.</scorelteq>
+    <health label="health">Number of health points the characters has.</health>
+
+    <healthis label="هي" />
+    <healthabove label="فوق">استجابة عند ارتفاع العافية فوق رقم محدد.</healthabove>
+    <healthbelow label="تحت">استجابة عند انخفاض العافية دون رقم محدد.</healthbelow>
+    <direction>
+      <up label="أعلى">الاستجابة لعصى الألعاب عند الضغط لأعلى.</up>
+      <right label="يمين">الاستجابة لعصى الألعاب عند الضغط على يمين.</right>
+      <down label="أسفل">الاستجابة لعصى الألعاب الرسلة لأسفل.</down>
+      <left label="يسار">الاستجابة لعصى الألعاب المضغوطة لليسار.</left>
+      <clockwise label="يمين">الاستجابة للتدوير مع اتجاه الساعة</clockwise>
+      <counterclockwise label="يسار">الاستجابة للتدوير ضد عقارب الساعة</counterclockwise>
+    </direction>
+    <not label="لم">استجابة عندما لا يكون الشرط مطابقا.</not>
+  </filter>
+  <selector>
+    <closest label="الأقرب" />
+    <objectrelative label="علاقة" />
+    <towardclosest label="تقدم">تقدم بالاتجاه نفسه.</towardclosest>
+    <awayfromall label="ابتعد">غير اتجاهك مبتعدا.</awayfromall>
+    <avoidall label="تجنب">تجنب الشيء الذي تسير نحوه بالحفاظ على مسافة محدة.</avoidall>
+    <wander label="تجول">تجول مختارا الاتجاه عشوائيا.  مفيدة  كآخر سطر لبرنامجك لكي يقوم الشخصية بالتنقل حينما لا يكون فعالا.</wander>
+    <cruise label="مستقيم">التحرك بنفس الاتجاه المقصود حاليا.</cruise>
+    <circle label="دائرة" />
+    <spin label="استدارة">الدوران في مكان.</spin>
+    <forward label="تقدم" />
+    <hiddenturn label="استدارة" />
+    <escape label="ابتعاد" />
+    <followwaypoints label="على مسار">تحرك على مسار لون معين.  افتراضيا سيتم التحرك على أي مسار.</followwaypoints>
+    <moveupdown label="أعلى/أسفل">تحرك إلى الأعلى والأسفل.</moveupdown>
+    <moveup label="أعلى">تحرك إلى الأعلى.</moveup>
+    <movedown label="أسفل">تحرك إلى الأسفل.</movedown>
+    <moveleftright label="التفاف">تحرك يمينا أو يسارا.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="اللاعب 1" />
+      <_2 label="اللاعب 2" />
+      <_3 label="اللاعب 3" />
+      <_4 label="اللاعب 4" />
+    </player>
+    <reset>
+      <world label="عالم">إعادة بدء اللعبة، وإطار الرصيد لن يتم تغييره.</world>
+      <score label="الرصيد">تصفير الرصيد، أو رصيد محدد للون مختار.</score>
+      <expression label="تعبير">تصفير تعبيرات الشخصية.</expression>
+      <glow label="توهج">تصفير مقدار توهج الشخصية.</glow>
+      <health label="العافية">تصفير مقدار العافية للشخصية.</health>
+    </reset>
+    <projectile>
+      <blip label="رصاص">الرصاص هي قذائف سريعة التصويب - أخف وزنا من القذائف.</blip>
+      <missile label="قذيفة">القذائف هي كبيرة وليست سريعة جدا، لكنها ذكية بما يكفي لتتبع أهدافها!</missile>
+    </projectile>
+    <slowly label="بطيء">تحرك ببطء.  استخدام أوقاتا متعددة للتحرك أكثر بطئا.</slowly>
+    <quickly label="سريع">تحرك بسرعة.  استخدام أوقاتا متعددة للتحرك أسرع.</quickly>
+    <speednormally label="طبيعي">تحرك بشكل عادي.  اختياري.</speednormally>
+    <weakly label="خفيف">افعل هذا أخف من المعتاد.</weakly>
+    <strongly label="قوي">افعل هذا أقوى من المعتاد.</strongly>
+    <strengthnormally label="عادي">افعل هذا بالقوة الطبيعية.  اختياري.</strengthnormally>
+    <angle>
+      <low label="منخفض">افعل هذا أخف من المعتاد.</low>
+      <high label="عالي">افعل هذا أقوى من المعتاد.</high>
+    </angle>
+    <turnleft label="يسار" />
+    <turnright label="يمين" />
+    <turntoward label="نحو" />
+    <turnforward label="تقدم">تبيين أن الحركة لا تتحدد عن طريق الاتجاه المقصود.</turnforward>
+    <pitchup label="أعلى" />
+    <pitchdown label="أسفل" />
+    <forward label="تقدم">الاتجاه الذي تقصده الشخصية.</forward>
+    <north label="شمال" />
+    <east label="شرق" />
+    <south label="جنوب" />
+    <west label="غرب" />
+    <up label="فوق" />
+    <down label="تحت" />
+    <distance>
+      <near label="قريب">جعل الشخصية تحيط بالهدف على مدى أقرب.</near>
+      <far label="بعيد">جعل الشخصية تحيط بالهدف بدائرة كبيرة.</far>
+    </distance>
+    <objecticeberg label="جبل جليدي">انشاء جبل جليدي</objecticeberg>
+    <objectrock label="صخرة">إنشاء صخرة.</objectrock>
+    <objectrockLowValue label="صخرة">انشاء صخرة نارية</objectrockLowValue>
+    <objectrockHighValue label="صخرة">انشاؤ صخرة رسوبية</objectrockHighValue>
+    <objectfruit label="تفاحة">إنشاء تفاحة.</objectfruit>
+    <objectinkjet label="سحابة حبر">انشاء سحابة حبر</objectinkjet>
+    <objectstar label="نجمة">إنشاء نجمة.</objectstar>
+    <objectcoin label="نقود">إنشاء نقود.</objectcoin>
+    <objectheart label="قلب">إنشاء قلب.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="كرة">إنشاء كرة.</objectsoccerball>
+    <objectbullet label="رصاص">إنشاء رصاص.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="الصفحة 1">الانتقال إلى أو تضمين الصفحة 1.</taska>
+    <taskb label="الصفحة 2">الانتقال إلى أو تضمين الصفحة 2.</taskb>
+    <taskc label="الصفحة 3">الانتقال إلى أو تضمين الصفحة 3.</taskc>
+    <taskd label="الصفحة 4">الانتقال إلى أو تضمين الصفحة 4.</taskd>
+    <taske label="الصفحة 5">الانتقال إلى أو تضمين الصفحة 5.</taske>
+    <taskf label="الصفحة 6">الانتقال إلى أو تضمين الصفحة 6.</taskf>
+    <taskg label="الصفحة 7">الانتقال إلى أو تضمين الصفحة 7.</taskg>
+    <taskh label="الصفحة 8">الانتقال إلى أو تضمين الصفحة 8.</taskh>
+    <taski label="الصفحة 9">الانتقال إلى أو تضمين الصفحة 9.</taski>
+    <taskj label="الصفحة 10">الانتقال إلى أو تضمين الصفحة 10.</taskj>
+    <taskk label="الصفحة 11">الانتقال إلى أو تضمين الصفحة 11.</taskk>
+    <taskl label="الصفحة 12">الانتقال إلى أو تضمين الصفحة 12.</taskl>
+    <expresshappy label="سعادة">إظهار السعادة.</expresshappy>
+    <expresssad label="حزن">إظهار الحزن.</expresssad>
+    <expressangry label="غضب">إظهار الغضب.</expressangry>
+    <expresscrazy label="جنون">أظهار الجنون.</expresscrazy>
+    <expresshearts label="قلوب">أظهار قلوب.</expresshearts>
+    <expressflowers label="زهور">إظهار زهور.</expressflowers>
+    <expressstars label="نجوم">إظهار نجوم.</expressstars>
+    <expressswear label="شرير">إظهار الشر.</expressswear>
+    <expressnone label="بلا">تصرف بشكل طبيعي وأوقف إظهار أي شيء.</expressnone>
+    <_000point label="نقطة">0 نقطة.  بإمكانك أيضا تحديد لون.</_000point>
+    <_001point label="نقطة">نقطة واحدة.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_001point>
+    <_002points label="نقطة">2 نقطة.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_002points>
+    <_003points label="نقاط">3 نقاط.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_003points>
+    <_004points label="نقاط">4 نقاط.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_004points>
+    <_005points label="نقاط">5 نقاط.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_005points>
+    <_010points label="نقاط">10 نقاط.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_010points>
+    <_020points label="نقطة">20 نقطة.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_020points>
+    <_050points label="نقطة">50 نقطة.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_050points>
+    <_100points label="نقطة">100 نقطة.  استخدم نقاط متعددة لإضافة أرقام مختلفة.  بإمكانك أيضا تحديد لون.</_100points>
+    <random label="عشوائي">توليد رقم عشوائي باستخدام لبنة الأرقام. على سبيل المثال، عشوائي - 5 ، تولد رقما عشوائيا بين 0 و45.</random>
+    
+    <health label="health">The number of hitpoints the character has.</health>
+
+    <teama label="الفريق A" />
+    <teamb label="الفريق B" />
+    <payloadzap label="صعق">يصعق الهدف لثواني معدودة.</payloadzap>
+    <payloadpop label="القاضية">جعل الهدف في غيبوبة إلى أن يقوم أحد بتمهيد عافيته.</payloadpop>
+    <payloadboom label="تفجير">يتسبب في زوال الهدف مع التفجير.</payloadboom>
+    <payloadvanish label="تلاشي">إخفاء الهدف بهدوء.</payloadvanish>
+    <black label="أسود" />
+    <grey label="رمادي" />
+    <white label="أبيض" />
+    <red label="أحمر" />
+    <orange label="برتقالي" />
+    <yellow label="أصفر" />
+    <green label="أخضر" />
+    <blue label="أزرق" />
+    <purple label="بنفسجي" />
+    <pink label="وردي" />
+    <brown label="بني" />
+    <glowoff label="وقف">إيقاف أي توهج.</glowoff>
+    <colorrandom label="عشوائي">انتقاء لون عشوائي.</colorrandom>
+    <path>
+      <black label="أسود" />
+      <grey label="رمادي" />
+      <white label="أبيض" />
+      <red label="أحمر" />
+      <orange label="برتقالي" />
+      <yellow label="أصفر" />
+      <green label="أخضر" />
+      <blue label="أزرق" />
+      <purple label="بنفسجي" />
+      <pink label="وردي" />
+      <brown label="بني" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="أبيض">تغير الرصيد الأبيض, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</white>
+        <black label="أسود">تغير الرصيد الأسود, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</black>
+        <grey label="رمادي">تغير الرصيد الرمادي, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</grey>
+        <red label="أحمر">تغير الرصيد الأحمر, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</red>
+        <green label="أخضر">تغير الرصيد الأخضر, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</green>
+        <blue label="أزرق">تغير الرصيد الأزرق, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</blue>
+        <orange label="برتقالي">تغير الرصيد البرتقالي, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</orange>
+        <yellow label="أصفر">تغير الرصيد الأصفر, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</yellow>
+        <purple label="بنفسجي">تغير الرصيد البنفسجي, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</purple>
+        <pink label="وردي">تغير الرصيد الوردي, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</pink>
+        <brown label="بني">تغير الرصيد البني, والمعروضة في إطار الرصيد افتراضيا.  (لتغيير هذا اذهب إلى إعدادات العالم.)</brown>
+      </color>
+      <letter>
+        <a label="الرصيد A">تعديل الرصيد  'A' ، والتي لم تعرض في إطار الرصيد.</a>
+        <b label="الرصيد B">تعديل الرصيد  'B' ، والتي لم تعرض في إطار الرصيد.</b>
+        <c label="الرصيد C">تعديل الرصيد  'C' ، والتي لم تعرض في إطار الرصيد.</c>
+        <d label="الرصيد D">تعديل الرصيد  'D' ، والتي لم تعرض في إطار الرصيد.</d>
+        <e label="الرصيد E">تعديل الرصيد  'E' ، والتي لم تعرض في إطار الرصيد.</e>
+        <f label="الرصيد F">تعديل الرصيد  'F' ، والتي لم تعرض في إطار الرصيد.</f>
+        <g label="الرصيد G">تعديل الرصيد  'G' ، والتي لم تعرض في إطار الرصيد.</g>
+        <h label="الرصيد H">تعديل الرصيد  'H' ، والتي لم تعرض في إطار الرصيد.</h>
+        <i label="الرصيد I">تعديل الرصيد  'I' ، والتي لم تعرض في إطار الرصيد.</i>
+        <j label="الرصيد J">تعديل الرصيد  'J' ، والتي لم تعرض في إطار الرصيد.</j>
+        <k label="الرصيد K">تعديل الرصيد  'K' ، والتي لم تعرض في إطار الرصيد.</k>
+        <l label="الرصيد L">تعديل الرصيد  'L' ، والتي لم تعرض في إطار الرصيد.</l>
+        <m label="الرصيد M">تعديل الرصيد  'M' ، والتي لم تعرض في إطار الرصيد.</m>
+        <n label="الرصيد N">تعديل الرصيد  'N' ، والتي لم تعرض في إطار الرصيد.</n>
+        <o label="الرصيد O">تعديل الرصيد  'O' ، والتي لم تعرض في إطار الرصيد.</o>
+        <p label="الرصيد P">تعديل الرصيد  'P' ، والتي لم تعرض في إطار الرصيد.</p>
+        <q label="الرصيد Q">تعديل الرصيد  'Q' ، والتي لم تعرض في إطار الرصيد.</q>
+        <r label="الرصيد R">تعديل الرصيد  'R' ، والتي لم تعرض في إطار الرصيد.</r>
+        <s label="الرصيد S">تعديل الرصيد  'S' ، والتي لم تعرض في إطار الرصيد.</s>
+        <t label="الرصيد T">تعديل الرصيد  'T' ، والتي لم تعرض في إطار الرصيد.</t>
+        <u label="الرصيد U">تعديل الرصيد  'U' ، والتي لم تعرض في إطار الرصيد.</u>
+        <v label="الرصيد V">تعديل الرصيد  'V' ، والتي لم تعرض في إطار الرصيد.</v>
+        <w label="الرصيد W">تعديل الرصيد  'W' ، والتي لم تعرض في إطار الرصيد.</w>
+        <x label="الرصيد X">تعديل الرصيد  'X' ، والتي لم تعرض في إطار الرصيد.</x>
+        <y label="الرصيد Y">تعديل الرصيد  'Y' ، والتي لم تعرض في إطار الرصيد.</y>
+        <z label="الرصيد Z">تعديل الرصيد  'Z' ، والتي لم تعرض في إطار الرصيد.</z>
+      </letter>
+      <local>
+        <a label="الرصيد a">The 'a' score, which is private to this character.</a>
+        <b label="الرصيد b">The 'b' score, which is private to this character.</b>
+        <c label="الرصيد c">The 'c' score, which is private to this character.</c>
+        <d label="الرصيد d">The 'd' score, which is private to this character.</d>
+        <e label="الرصيد e">The 'e' score, which is private to this character.</e>
+        <f label="الرصيد f">The 'f' score, which is private to this character.</f>
+        <g label="الرصيد g">The 'g' score, which is private to this character.</g>
+        <h label="الرصيد h">The 'h' score, which is private to this character.</h>
+        <i label="الرصيد i">The 'i' score, which is private to this character.</i>
+        <j label="الرصيد j">The 'j' score, which is private to this character.</j>
+        <k label="الرصيد k">The 'k' score, which is private to this character.</k>
+        <l label="الرصيد l">The 'l' score, which is private to this character.</l>
+        <m label="الرصيد m">The 'm' score, which is private to this character.</m>
+        <n label="الرصيد n">The 'n' score, which is private to this character.</n>
+        <o label="الرصيد o">The 'o' score, which is private to this character.</o>
+        <p label="الرصيد p">The 'p' score, which is private to this character.</p>
+        <q label="الرصيد q">The 'q' score, which is private to this character.</q>
+        <r label="الرصيد r">The 'r' score, which is private to this character.</r>
+        <s label="الرصيد s">The 's' score, which is private to this character.</s>
+        <t label="الرصيد t">The 't' score, which is private to this character.</t>
+        <u label="الرصيد u">The 'u' score, which is private to this character.</u>
+        <v label="الرصيد v">The 'v' score, which is private to this character.</v>
+        <w label="الرصيد w">The 'w' score, which is private to this character.</w>
+        <x label="الرصيد x">The 'x' score, which is private to this character.</x>
+        <y label="الرصيد y">The 'y' score, which is private to this character.</y>
+        <z label="الرصيد z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="أنا">تطبيق الإجراء للروبوت الذي يشغل البرنامج.</me>
+    <it label="هو">تطبيق الإجراء للكائن المستهدف.</it>
+    <any label="أي شيء">أي صوت.</any>
+    <event>
+      <any label="حدث">أي صوت.</any>
+      <silly>
+        <any label="سخيف">أي صوت سخيف.</any>
+        <bang label="قرقعة">صوت القرقعة الكرتوني(بانق).</bang>
+        <pow label="بوو">الصوت الكرتوني(بوو).</pow>
+      </silly>
+      <explode>
+        <any label="انفجار">أي صوت انفجار.</any>
+        <A label="بووم أ">صوت انفجار.</A>
+        <B label="بووم ب">صوت انفجار.</B>
+        <C label="بووم ج">صوت انفجار.</C>
+        <D label="بووم د">صوت انفجار.</D>
+        <E label="بووم هـ">صوت انفجار.</E>
+      </explode>
+      <musical>
+        <any label="موسيقي">أي صوت.</any>
+        <glock>
+          <any label="glock">صوت غلوك</any>
+        </glock>
+        <glock01 label="C glock">نغمة غلوك.</glock01>
+        <glock02 label="C# glock">نغمة غلوك.</glock02>
+        <glock03 label="D glock">نغمة غلوك.</glock03>
+        <glock04 label="D# glock">نغمة غلوك.</glock04>
+        <glock05 label="E glock">نغمة غلوك.</glock05>
+        <glock06 label="F glock">نغمة غلوك.</glock06>
+        <glock07 label="F# glock">نغمة غلوك.</glock07>
+        <glock08 label="G glock">نغمة غلوك.</glock08>
+        <glock09 label="G# glock">نغمة غلوك.</glock09>
+        <glock10 label="A glock">نغمة غلوك.</glock10>
+        <glock11 label="A# glock">نغمة غلوك.</glock11>
+        <glock12 label="B glock">نغمة غلوك.</glock12>
+        <gong>
+          <any label="جرس">صوت جرس</any>
+        </gong>
+        <gong01 label="C جرس">صوت جرس</gong01>
+        <gong02 label="C# جرس">صوت جرس</gong02>
+        <gong03 label="D جرس">صوت جرس</gong03>
+        <gong04 label="D# جرس">صوت جرس</gong04>
+        <gong05 label="E جرس">صوت جرس</gong05>
+        <gong06 label="F جرس">صوت جرس</gong06>
+        <gong07 label="F# جرس">صوت جرس</gong07>
+        <gong08 label="G جرس">صوت جرس</gong08>
+        <gong09 label="G# جرس">صوت جرس</gong09>
+        <gong10 label="A جرس">صوت جرس</gong10>
+        <gong11 label="A# جرس">صوت جرس</gong11>
+        <gong12 label="B جرس">صوت جرس</gong12>
+        <saw>
+          <any label="منشار">صوت اسنان المنشار</any>
+        </saw>
+        <saw01 label="منشار C">صوت اسنان المنشار</saw01>
+        <saw02 label="C# منشار">صوت اسنان المنشار</saw02>
+        <saw03 label="D منشار">صوت اسنان المنشار</saw03>
+        <saw04 label="D# منشار">صوت اسنان المنشار</saw04>
+        <saw05 label="E منشار">صوت اسنان المنشار</saw05>
+        <saw06 label="F منشار">صوت اسنان المنشار</saw06>
+        <saw07 label="F# منشار">صوت اسنان المنشار</saw07>
+        <saw08 label="G منشار">صوت اسنان المنشار</saw08>
+        <saw09 label="G# منشار">صوت اسنان المنشار</saw09>
+        <saw10 label="منشار A">صوت اسنان المنشار</saw10>
+        <saw11 label="A# منشار">صوت اسنان المنشار</saw11>
+        <saw12 label="B منشار">صوت اسنان المنشار</saw12>
+        <sine>
+          <any label="سينوس">صوت موجات تربيعية</any>
+        </sine>
+        <sine01 label="C سينوس">صوت موجات تربيعية</sine01>
+        <sine02 label="C# سينوس">صوت موجات تربيعية</sine02>
+        <sine03 label="D سينوس">صوت موجات تربيعية</sine03>
+        <sine04 label="D# سينوس">صوت موجات تربيعية</sine04>
+        <sine05 label="E سينوس">صوت موجات تربيعية</sine05>
+        <sine06 label="F سينوس">صوت موجات تربيعية</sine06>
+        <sine07 label="F# سينوس">صوت موجات تربيعية</sine07>
+        <sine08 label="G سينوس">صوت موجات تربيعية</sine08>
+        <sine09 label="G# سينوس">صوت موجات تربيعية</sine09>
+        <sine10 label="A سينوس">صوت موجات تربيعية</sine10>
+        <sine11 label="A# سينوس">صوت موجات تربيعية</sine11>
+        <sine12 label="B سينوس">صوت موجات تربيعية</sine12>
+        <square>
+          <any label="موجة تربيعية">صوت موجات تربيعية</any>
+        </square>
+        <square01 label="C موجة تربيعية">صوت موجات تربيعية</square01>
+        <square02 label="C# موجة تربيعية">صوت موجات تربيعية</square02>
+        <square03 label="D موجة تربيعية">صوت موجات تربيعية</square03>
+        <square04 label="D# موجة تربيعية">صوت موجات تربيعية</square04>
+        <square05 label="E موجة تربيعية">صوت موجات تربيعية</square05>
+        <square06 label="F موجة تربيعية">صوت موجات تربيعية</square06>
+        <square07 label="F# موجة تربيعية">صوت موجات تربيعية</square07>
+        <square08 label="G موجة تربيعية">صوت موجات تربيعية</square08>
+        <square09 label="G# موجة تربيعية">صوت موجات تربيعية</square09>
+        <square10 label="A موجة تربيعية">صوت موجات تربيعية</square10>
+        <square11 label="A# موجة تربيعية">صوت موجات تربيعية</square11>
+        <square12 label="B موجة تربيعية">صوت موجات تربيعية</square12>
+        <drums>
+          <any label="طبول">صوت طبول</any>
+        </drums>
+        <bassdrum label="طبل كبير">طبلل كبير</bassdrum>
+        <hhclosed label="صنوج مغلقة">صنوج مغلقة</hhclosed>
+        <hhopen label="صنوج مفتوحة">صنوج مفتوحة</hhopen>
+        <shaker label="الة خرخشة">الة خرخشة</shaker>
+        <snare label="طبلة سنير">طبلة سنير</snare>
+        <tomlow label="طبلة ارضية">نغمة منخفضة</tomlow>
+        <tommed label="طبلة متوسطة">نغمة متوسطة</tommed>
+        <tomhi label="طبلة عالية">نغمة عالية</tomhi>
+      </musical>
+      <arcade>
+        <any label="آركييد">أي صوت أركيد.</any>
+        <roboton label="روبوت شغال">تفعيل روبوت.</roboton>
+        <robotoff label="روبوت عغير شغال">تعطيل روبوت.</robotoff>
+        <coinsound label="نقود">صوت نقود.</coinsound>
+        <gethealth label="عافية +">صوت الحصول على عافية.</gethealth>
+        <losehealth label="عافية -">صوت خسارة عافية.</losehealth>
+        <shoot label="اطلاق نار">صوت إطلاق النار.</shoot>
+        <timer label="مؤقت">صوت المؤقت.</timer>
+        <win label="ربح">صوت الربح.</win>
+        <lose label="خسارة">صوت الخسارة.</lose>
+        <inkjet_fire label="اطلاق حبر">صوت اطلاق الحبر</inkjet_fire>
+        <inkjet_impact label="تأثير اطلاق الحبر">صوت تأثير اطلاق الحبر</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="منوع">أي صوت منوع.</any>
+        <countdown_beep label="عد تنازلي">صوت للعد التنازلي</countdown_beep>
+        <countdown_alarm label="صفارة انذار مع العد التنازلي">عد تنازلي طارئ</countdown_alarm>
+        <epic_stinger label="ستينغر">صوت ستينغر</epic_stinger>
+        <epic_stinger_a label="ستينغر a">صوت ستينغر</epic_stinger_a>
+        <epic_stinger_b label="ستينغر b">صوت ستينغر</epic_stinger_b>
+        <firepoof label="حريق">صوت إشعال النار.</firepoof>
+        <forcefieldup label="درع +">صوت صعود الجيش.</forcefieldup>
+        <forcefielddown label="درع -">صوت نزول الجيش.</forcefielddown>
+        <hide label="اختفاء">صوت الاختفاء.</hide>
+        <lockontarget label="قفل">صوت حبس الهدف.</lockontarget>
+        <losetarget label="تحرير">صوت إطلاق الهدف.</losetarget>
+        <positivecondition label="جيد">صوت حدوث شيء جيد.</positivecondition>
+        <negativecondition label="سيء">صوت حدوث شيء سيء.</negativecondition>
+        <points label="نقاط">صوت الفوز بنقاط</points>
+        <pop label="فتح علبة">صوت فتح علبة.</pop>
+        <popout label="خروج">صوت خروج من العلبة.</popout>
+        <powerup label="تشغيل">صوت تشغيل.</powerup>
+        <servo label="مضاعفة">صوت مضاعفة.</servo>
+        <watersplash label="رش">صوت رش الماء.</watersplash>
+        <waterdrop label="قطرة">صوت قطرات الماء.</waterdrop>
+        <tagbase label="تاق بيس">صوت تاق بيس.</tagbase>
+        <whistlehuman label="صفير">صوت صفير الإنسان.</whistlehuman>
+        <whistlereferee label="صفير">صفارة الحكم.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="برج">اصوات مضافة للدفاع عن البرج</any>
+        <air_raid_siren label="صفارات انظار من الغارات الجوية">صوت صفارات انظار</air_raid_siren>
+        <bomb_fall label="القاء قنبلة">صوت القاء قنبلة</bomb_fall>
+        <stun_fire label="مسدس اتوماتي">صوت اطلاق النار</stun_fire>
+        <zapper_fire label="مسدس تحكم">صوت اطلاق النار من مسدس تحكم</zapper_fire>
+        <missile_fire label="قذيفة">صوت قذائف</missile_fire>
+        <shrinker_fire label="اطلاق نار متراجع">صوت اطلاق نار متراجع</shrinker_fire>
+        <clam_coin_spit label="بصق النقود">صوت محارة تبصق النقود</clam_coin_spit>
+        <enemy_converted label="تحول العدو">الصوت الذي يصدر عند تحول العدو</enemy_converted>
+        <enemy_escape label="هروب العدو">صوت هروب العدو</enemy_escape>
+        <place_tower label="اقامة البرج">الصوت الذي يصدر عند اقامة البرج</place_tower>
+        <star_collect label="جمع النجوم">الصوت الذي يصدر عند جمع النجوم</star_collect>
+        <coin_collect label="جمع النقود">الصوت الذي يصدر عند جمع النقود</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="صوتي">أي صوت من هذه المجموعة.</any>
+      <omni>
+        <any label="Omni">أي صوت من هذه المجموعة.</any>
+      </omni>
+    </music>
+    <mu_action label="إجراء">إجراء</mu_action>
+    <mu_ambientlight label="ضوء">موسيقى متعلقة بالضوء</mu_ambientlight>
+    <mu_ambinetmodd label="مزاج">موسيقى حسب المزاج</mu_ambinetmodd>
+    <mu_brightdowntempo label="slo-mo">موسيقى داونتمبو</mu_brightdowntempo>
+    <mu_brightfunk label="funk">رائع</mu_brightfunk>
+    <mu_brightguitar label="guitar">موسيقى جيتار</mu_brightguitar>
+    <mu_kodu label="kodu">ثيم كودو.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="mystery">أي صوت من هذه المجموعة.</any>
+      </mystery>
+    </music>
+    <mysterya label="myst A">موسيقى غامضة</mysterya>
+    <mysteryb label="myst B">موسيقى غامضة</mysteryb>
+    <mysteryc label="myst C">موسيقى غامضة</mysteryc>
+    <music>
+      <driving>
+        <any label="driving">أي صوت من هذه المجموعة.</any>
+      </driving>
+    </music>
+    <drivinga label="fast A">Fast, driving music.</drivinga>
+    <drivingb label="fast B">Fast, driving music.</drivingb>
+    <drivingc label="fast C">Fast, driving music.</drivingc>
+    <music>
+      <drama>
+        <any label="مسرح">أي صوت من هذه المجموعة.</any>
+      </drama>
+    </music>
+    <dramaa label="مسرح A">أصوات مسرحية.</dramaa>
+    <dramab label="مسرح B">أصوات مسرحية.</dramab>
+    <environ>
+      <any label="بيئية">أي صوت من هذه المجموعة.</any>
+      <ambocean label="محيط">أصوات المحيط.</ambocean>
+      <ambforest label="غابة">أصوات الغابة.</ambforest>
+      <ambcity label="مدينة">أصوات المدن.</ambcity>
+      <ambmeadow label="حقل">أصوات الحقل.</ambmeadow>
+      <ambmars label="مريخ">اصوات من المريخ</ambmars>
+      <arena>
+        <any label="حلبة">أي صوت من أصوات الحلبة.</any>
+        <a label="حلبة أ">جمهور كبير.</a>
+        <b label="حلبة ب">جمهور كبير.</b>
+        <c label="حلبة ج">جمهور كبير.</c>
+        <d label="حلبة د">جمهور كبير.</d>
+        <e label="حلبة هـ">جمهور كبير.</e>
+        <f label="حلبة و">جمهور كبير.</f>
+        <g label="حلبة ز">جمهور كبير.</g>
+      </arena>
+    </environ>
+    <trackingnone label="مرحلة">ستحلق القذيفة باستقامة ولن تتحرك للأعلى ولا للأسفل.</trackingnone>
+    <trackinghoming label="ابحار">ستتبع القذيفة الأرض وستحاول التحليق فوق الهضاب والجدران.</trackinghoming>
+    <constraint>
+      <leftright label="يمين/يسار">تحرك يمينا وشمالا فقط.</leftright>
+      <fwdback label="أمام/خلف">تحرك للأمام والخلف فقط.</fwdback>
+      <updown label="أعلى/أسفل" />
+      <northsouth label="ج/ش">تحرك جنوبا وشمالا فقط.</northsouth>
+      <eastwest label="ش/غ">تحرك شرقا وغربا فقط.</eastwest>
+      <immobile label="تجميد">لا تسمح بالحركة، حتى عند الاصطدام.</immobile>
+    </constraint>
+    <once label="مرة">الكود الذي بعد "افعل" سيتم تشغيله لمرة واحدة كل مرة يحدث شرط "عندما".</once>
+    <watertype label="نوع مائي">اعداد النوع المائي</watertype>
+
+    <on label="on">Set the current state to 'on'.</on>
+    <off label="off">Set the current state to 'off'.</off>
+    <microbit>
+      <pattern label="pattern">LED pattern to show on BBC micro:bit screen.</pattern>
+    </microbit>
+    <frequencyunits>
+      <khz label="kHz">The value is a kilohertz frequency.</khz>
+    </frequencyunits>
+
+  </modifier>
+  <actuator>
+    <nothing label="لا شيء" />
+    <movement label="تحريك">تنقل عبر العالم. اكتشف الخبارات. كل شخصية لها قدرة على الحركة تختلف عن غيرها.</movement>
+    <turn label="التفاف">غير اتجاهك.</turn>
+    <eat label="أكل">ابتلاع الكائن المستهدف الذي يجب أن يكون قريبا.</eat>
+    <say label="نطق">أظهر رسالة نصية, إما في بالون أو في مربع حوار. استخدم  &lt;cr&gt;  للتقسيم إلى أسطر.</say>
+    <open label="فتح">تعمل بشكل مختلف للشخصيات المختلفة. جربها!</open>
+    <close label="غلق">تعمل بشكل مختلف للشخصيات المختلفة. جربها!</close>
+    <kick label="ركل">ركل الهدف إذا كان قريبا بما يكفي. يمكن أن تختلف القوة.</kick>
+    <make label="إنشاء">إنشاء كائن آخر. يمكن إنشاء الكائنات الأساسية أو أي شيء تم وسمه كقابل للإنشاء.</make>
+    <launch label="إطلاق">ركل الهدف إذا كان قريبا بما يكفي. يمكن أن تختلف القوة.</launch>
+    <push label="دفع">ادفع الهدف باتجاه معين اذا كان قريبا بما فيه الكفاية. القوة متنوعة</push>
+    <pull label="سحب">اسحب الهدف باتجاه معين اذا كان قربيا بما فيه الكفاية. القوة متنوعة</pull>
+    <camouflage label="تمويه">تمويه الهدف, تصعيب رؤيته</camouflage>
+    <uncamouflage label="توضيح">توضيح الهدف, جعله قابلا للرؤية</uncamouflage>
+    <express label="تعبير">التعبير عن عاطفة أو إظهار تأثير خاص. بعض العواطف تغير وجه الشخصية، وبعضها تظهر فوق الشخصية.</express>
+    <color label="لون">غير اللون الخاص بك أو لون الكائن المستهدف.</color>
+    <glow label="توهج">أصدر شعاعا متوهجا. يمكن أن يتغير اللون.</glow>
+    <sound label="تشغيل">أطلق صوتا! هناك الكثير من الأصوات التي يمكن الاختيار من بينها.</sound>
+    <stopsound label="هدوء">أوقف تشغيل الصوت.</stopsound>
+    <jump label="قفز">الشخصيات المختلفة تقفز بارتفاع مختلف.</jump>
+    <watersurface label="سطح">إجراء السطح يجعل الشخصيات التي تحت الماء ترتفع إلى سطح الماء.</watersurface>
+    <waterdive label="غوص">إجراء الغوص يجعل الشخصيات التي تحت الماء تغوص إلى قاع الماء.</waterdive>
+    <airrise label="لأعلى">إجراء لأعلى يجعل الشخصيات الطائرة تحلق عاليا نحو السماء.</airrise>
+    <airdrop label="لأسفل">إجراء لأسفل يجعل الشخصيات الطائرة تهبط لأسفل نحو الأرض.</airdrop>
+    <switchtask label="تبديل">بدل إلى صفحة أخرى. يتم تطبيق القواعد التي في الصفحة الحالية فقط. والصفحات مفيدة لتغيير السلوك.</switchtask>
+    <inlinetask label="تضمين">في وضع التشغيل تتضمن هذه جميع البرمجة من صفحة أخرى هنا. وهذه مفيدة للكود الذي تريده في صفحات متعددة حيث يمكنك كتابته مرة واحدة، ثم تضمينه في أي مكان تريد.</inlinetask>
+    <nextlevel label="المرحلة القادمة">تحميل المرحلة القادمة. مفيد لالعاب متعددة المراحل</nextlevel>
+    <prevlevel label="المرحلة الفائتة">تحميل المرحلة الفائتة. مفيد لالعاب متعددة المراحل</prevlevel>
+    <waterraise label="رفع الماء">رفع كمية الماء تحت هذا الكائن</waterraise>
+    <waterlower label="خفض الماء">خفض الماء تحت هذا الكائن</waterlower>
+    <setwater label="وضع الماء">وضع الماء تحت هذا الكائن</setwater>
+    <rescale label="وزن">تغيير وزن الكائن</rescale>
+    <rescaleinstant label="وزن (فوري)">تحديد وزن الكائن (بشكل فوري)</rescaleinstant>
+
+    <holddistance label="hold distance">Changes the distance for "held" objects smoothly.</holddistance>
+    <holddistanceinstant label="hold distance (instant)">Changes the distance for "held" objects instantly.</holddistanceinstant>
+
+    <movementspeedmodify label="سرعة">تحديد سرعة الكائن</movementspeedmodify>
+    <turningspeedmodify label="مغير السرعة">تحديد تغيير سرعة الكائن</turningspeedmodify>
+    <worldlightingchange label="اضاءة">تحديد اضاءة العالم بشكل سلس</worldlightingchange>
+    <worldlightingchangeinstant label="اضاءة (فوري)">تحديد اضاءة العالم بشكل فوري</worldlightingchangeinstant>
+    <worldskychange label="سماء">يحدد سماء العالم بشكل سلس</worldskychange>
+    <worldskychangeinstant label="سماء (فوري)">يحدد سماء العالم بشكل فوري</worldskychangeinstant>
+    <shoot label="تصويب" />
+    <shoot2 label="تصويب">تصويب رصاصة أو قذيفة.</shoot2>
+    <beam label="اشعاع رسائل ضوئية">تصويب رسائل ضوئية على صخور مريخية للتعرف على مزايا الصخرة</beam>
+    <inspect label="تعيين">قدح الصخور المريخية, جمع عينات اضافية لدراسة متقدمة اكثر</inspect>
+    <scan label="مسح ضوئي">كشف نوع الصخور غير المعروفة المتواجدة حول المركبة.</scan>
+    <picture label="صورة">تصوير من وجهة نظر اللاعب</picture>
+    <damage label="تضرر">إنقاص مقدار العافية سواء من نفسي أو من الشخصية الهدف.</damage>
+    <heal label="تعافي">أضف مقدارا من العافية سواء لنفسي أو للشخصية الهدف.
+        إجراء التعافي يتسبب في الشفاء من الضرر سواء للشخصية أو للكائن الهدف. بشكل افتراضي سيتم معافاة الكائن المستهدف؛ أما الشخصية فيمكن أن تتعافى بتضمين  معدل "me". ويمكن استخدام المعدلات كذلك في تحديد هدف ومقدار نقاط التعافي.</heal>
+    <zap label="صعق">اصعقني أنا أو الشخصية الهدف لثواني معدودة..</zap>
+    <pop label="القاضية">يتسبب بالتعطيل التام لي شخصيا أو للروبوت إلى أن يتم إعادة تهيئة العافية من قبل شيء آخر.</pop>
+    <boom label="انفجار">قم بإخفائي أنا أو الهدف مع إحداث إنفجار.</boom>
+    <vanish label="اختفاء">قم بإخفائي أنا أو الهدف بهدوء.</vanish>
+    <grab label="إلتقاط">التقط الهدف إذا كان قريبا بما فيه الكفاية. يمكنك حمل شيء واحد في الوقت الواحد..</grab>
+    <drop label="إلقاء">أسقط أي شيء تحمله.</drop>
+    <give label="إعطاء">قم بإعطاء أي شيء تحمله للشخصية المستهدفة. إذا لم يستطع المستهدف حملها فسيتم إسقاطها.</give>
+    <reset label="تصفير">إعادة تمهيد مظهر اللعبة أو شخصية.</reset>
+    <restart label="إعادة تشغيل">إعادة تمهيد مظهر اللعبة أو شخصية.</restart>
+    <gameover label="نهاية">إنهاء اللعبة.</gameover>
+    <victory label="فوز">إنهاء اللعبة وعرض رسالة الفوز. إذا حددت لونا سيتم عرضه.</victory>
+    <score label="نقاط">أضف نقاط إلى الرصيد.</score>
+    <unscore label="طرح">اطرح نقاط من الرصيد.</unscore>
+    <scoreset label="تحديد الرصيد">تحديد الرصيد لقيمة محددة</scoreset>
+    <camera>
+      <followme label="تابع">زاوية المشاهدة يجب أن تتبع الشخصية.</followme>
+      <ignoreme label="تجاهل">لا تقلق بشأن إبقاء هذه الشخصية رهن المشاهدة.</ignoreme>
+      <firstperson label="شخصية أولى">المشاهدة من خلال عيون هذه الشخصية.</firstperson>
+    </camera>
+
+    <microbit>
+      <say label="say">Scroll text on the micro:bit display.</say>
+      <block label="block">Control all the micro:bit lights.</block>
+      <sequential label="meter">Turn on the micro:bit lights sequentially.</sequential>
+      <show label="show pattern">Show a pattern on the micro:bit display.</show>
+      <setpin1 label="set pin 0">Sets the digital output state of the pin.</setpin1>
+      <setpin2 label="set pin 1">Sets the digital output state of the pin.</setpin2>
+      <setpin3 label="set pin 2">Sets the digital output state of the pin.</setpin3>
+      <setpwmfrequency>
+        <pin1 label="PWM 0 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin1>
+        <pin2 label="PWM 1 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin2>
+        <pin3 label="PWM 2 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin3>
+      </setpwmfrequency>
+      <setpwmdutycycle>
+        <pin1 label="PWM 0 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin1>
+        <pin2 label="PWM 1 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin2>
+        <pin3 label="PWM 2 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin3>
+      </setpwmdutycycle>
+    </microbit>
+
+  </actuator>
+  <root />
+  <group>
+    <colors label="ألوان" />
+    <pathcolors label="الوان المسار" />
+    <game label="لعبة" />
+    <more label="المزيد" />
+    <players label="لاعبين" />
+    <playermods label="لاعبين" />
+    <actions label="إجراءات" />
+    <settings label="اعدادات" />
+    <combat label="حرب" />
+    <rover label="مركبة" />
+    <holding label="حمل" />
+    <sounds label="أصوات" />
+    <event label="حدث">
+      <explode label="انفجار" />
+      <silly label="سخيف" />
+      <musical label="موسيقي">
+        <glock label="glock" />
+        <saw label="منشار" />
+        <sine label="سينوس" />
+        <gong label="جرس" />
+        <square label="مربع" />
+        <drums label="طبول" />
+      </musical>
+      <arcade label="أركيد" />
+      <misc label="منوعات" />
+      <tower label="برج" />
+    </event>
+    <environ label="بيئية">
+      <forest label="غابة" />
+      <arena label="حلبة" />
+    </environ>
+    <music label="موسيقى">
+      <omni label="جديد" />
+      <mystery label="لغز" />
+      <driving label="قيادة" />
+      <drama label="دراما" />
+    </music>
+    <constraints label="حد" />
+    <directions label="اتجاه" />
+    <filters>
+      <directions label="اتجاه" />
+      <touchbuttons label="ازرار" />
+      <touchGuiButtons label="ازرار" />
+      <gestures label="إشارات" />
+    </filters>
+    <expressions label="تعبير" />
+    <projectiles label="قذيفة" />
+    <camera label="عرض" />
+    <reset label="إعادة تهيئة" />
+    <options label="خيارات" />
+    <compare label="مقارنة" />
+    <points label="نقاط" />
+    <time label="وقت" />
+    <speed label="سرعة" />
+    <strength label="قوة" />
+    <angle label="عليِّة" />
+    <tracking label="ت" />
+    <bots label="روبوتات I" />
+    <bots2 label="روبوتات II" />
+    <objects label="كائنات" />
+    <tasks label="مهام" />
+    <terrains label="أنواع" />
+    <waters label="أنواع" />
+    <setwater label="نوع مائي" />
+    <creatables label="قابل للإنشاء" />
+    <keyboard>
+      <letters label="حروف" />
+      <numbers label="أرقام" />
+      <symbols label="رموز" />
+      <misc label="منوعات" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+    <microbit>
+      <actions>
+        <gpio label="micro:bit I/O"/>
+      </actions>
+    </microbit>
+
+  </group>
+</Tiles>

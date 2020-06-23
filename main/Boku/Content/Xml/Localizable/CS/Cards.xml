@@ -1,0 +1,1003 @@
+<Tiles>
+  <sensor>
+    <gamepad label="ovladač">Umožní hráči ovládat postavu. Nastavte tlačítko, spouštěč nebo analogovou páčku a volitelně hráče.</gamepad>
+    <keyboard label="klávesnice">Umožní hráči ovládat postavu. Nastavte klávesu.</keyboard>
+    <mouse label="myš">Odezva na myš.</mouse>
+	<touch label="dotyk">Odezva na dotyk.</touch>
+    <eyes label="vidíš">Reakce při spatření objektu vybraného typu nebo barvy. Kopce a zdi mohou blokovat výhled, pokud použijete filtr přímý pohled.</eyes>
+    <ears label="slyšíš">Reakce při uslyšení objektu vybraného typu nebo zvuku. Slyšís taky skrz zdi.</ears>
+    <bumpers label="narazíš do">Reakce při nárazu do jiného objektu vybraného typu, barvy atd.</bumpers>
+    <timer label="časovač">Reakce po uplynutí stanoveného času. Přidejte vteřiny pro delší čas.</timer>
+    <got label="vezmeš">Reakce při sebrání objektu vybraného typu, barvy atd.</got>
+    <scored label="skóruješ">Reakce na změnu skóre.</scored>
+    <health label="zdraví">Reakce na změnu zdraví.</health>
+    <missilehit label="zásahneš">Reakce při zásahu jiného objektu. Vhodné pro uchovávání skóre, ale můžeš použít libovolně.</missilehit>
+    <held label="mě vzal">Reakce při sebrání jiným objektem.</held>
+    <terrain label="se změní zem">Reakce na odlišný typ země.</terrain>
+    <water label="se změní voda">Reakce na odlišný typ vody.</water>
+	<beamed label="odřezal">Reakce při odřezání skály z Marsu paprskem.</beamed>
+    <inspected  label="prozkoumal">Reakce po skončení zkoumání skály z Marsu.</inspected>
+    <scanned label="prohlédl">Reakce po skončení prohlídky neznámé skály určené k dalšímu průzkumu.</scanned>
+    <endofpath  label="dojdeš na konec">Reakce při dosažení konce cesty.</endofpath>
+    <always label="pořád">Neustále něco dělat. Volitelné.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Kodu je postava, kterou můžeš přidat do hry a naprogramovat její chování.</boku>
+    <bokubot label="kodu">Kodu je postava, kterou můžeš přidat do hry a naprogramovat její chování.</bokubot>
+    <anything label="cokoliv" />
+    <me label="já">Kontrolovat pouze postavu, která spouští tento program.</me>
+    <said label="řekl">Poslouchej ostatní postavy. Napiš, co chceš poslouchat.</said>
+    <countnone label="žádná">Reakce pokud nevidíš nic, co odpovídá popisu. Například, vidíš modrou, a pokud není nastavena akce, nestane se nic.</countnone>
+	<starfish label="hvězdice">Reakce na hvězdici.</starfish>
+    <clam label="škeble">Reakce na škeble.</clam>
+    <seagrass label="mořské řasy">Reakce na mořské řasy.</seagrass>
+    <seagrasssingle label="mořská řasa">Reakce na mořskou řasu.</seagrasssingle>
+    <lilypad label="lekníny">Reakce na lekníny.</lilypad>
+    <lilypadsingle label="leknín">Reakce na leknín.</lilypadsingle>
+    <flyfish label="létající ryba">Létající ryba je postava, kterou můžeš přidat do hry a naprogramovat její chování.</flyfish>
+    <jet label="letadlo">Letadlo je postava, kterou můžeš přidat do hry a naprogramovat její chování.</jet>
+    <light label="světlo">Světlo je postava, kterou můžeš přidat do hry a naprogramovat její chování. Dokáže osvětlit věci, ale můžeš použít pouze čtyři.</light>
+    <fan label="ventilátor">Reakce na ventilátor.</fan>
+    <octopus label="chobotnice">Reakce na chobotnici.</octopus>
+    <fastbot label="motorka">Motorka je postava, kterou můžeš přidat do hry a naprogramovat její chování.</fastbot>
+    <saucer label="hvězdice">Omlouvám se, nemohu vám říci více. Informace je tajná.</saucer>
+    <windblimp label="vzducholoď">Vzducholoď je létající postava, kterou můžeš přidat do hry a naprogramovat její chování.</windblimp>
+    <balloonbot label="balón">Balón je postava, kterou můžeš přidat do hry a naprogramovat její chování.</balloonbot>
+    <subbot label="ponorka">Ponorka je postava, kterou můžeš přidat do hry a naprogramovat její chování.</subbot>
+    <terracannon label="kanón">Kanón je postava, kterou můžeš přidat do hry a naprogramovat její chování.</terracannon>
+    <puck label="házecí talíř">Házecí talíř je postava, kterou můžeš přidat do hry a naprogramovat její chování.</puck>
+    <wisp label="bludička">Bludička je postava, kterou můžeš přidat do hry a naprogramovat její chování.</wisp>
+    <anybot label="jakýkoliv bot">Jakýkoliv bot.</anybot>
+    <turtle label="želva">Reakce se želvou.</turtle>
+	<rover label="rover">Reakce s vozítkem z Marsu.</rover>
+    <pushpad label="klika">Reakce s klikou.</pushpad>
+    <sputnik label="družice">Reakce s umělou družicí.</sputnik>
+    <stick label="špalík">Reakce na špalík.</stick>
+    <stickboy label="špalík">Reakce na špalík.</stickboy>
+    <drum label="buben">Reakce s bubnem.</drum>
+    <mine label="mína">Reakce s minou.</mine>
+    <cloud label="mrak">Reakce s mrakem.</cloud>
+    <swimfish label="ryba">Reakce na rybu.</swimfish>
+    <floatbot label="loď">Reakce s lodí.</floatbot>
+    <factory label="továrna">Reakce s továrnou.</factory>
+    <hut label="chýše">Reakce s chýší.</hut>
+    <castle label="zámek">Reakce se zámkem.</castle>
+    <fruit label="jablko">Reakce s jablkem.</fruit>
+	<inkjet label="mrak">Reakce s mrakem.</inkjet>
+    <iceberg label="ledovec">Reakce s ledovcem.</iceberg>
+    <rock label="skála">Reakce se skálou.</rock>
+	<rockLowValue label="vyvřelina">Reakce na vyvřelou horninu.</rockLowValue>
+    <rockHighValue label="hornina">Reakce na usazenou horninou.</rockHighValue>
+    <rockLowValueUnknown label="Neznámá vyvřelina">Vyvřelá hornina bude neznámá, dokud ji neprozkoumáte.</rockLowValueUnknown>
+    <rockHighValueUnknown label="Neznámá hornina">Usazená hornina bude neznámá, dokud ji neprozkoumáte.</rockHighValueUnknown>
+    <rockUnknown label="neznámá skála">Reakce na neznámou skálu.</rockUnknown>
+    <tree label="strom">Reakce se stromem.</tree>
+	<pipe label="trubka">Reakce na trubku.</pipe>
+    <pipeStraight label="rovná trubka">Reakce na rovnou trubkou.</pipeStraight>
+    <pipeCross label="křížení trubek">Reakce na křízení trubek.</pipeCross>
+    <pipeCorner label="zahnutá trubka">Reace na zahnutou trubku.</pipeCorner>
+    <underwater label="pod vodou">Reakce s podvodními objekty.</underwater>
+    <building label="budova">Reakce s budovou.</building>
+    <flower label="kytka" />
+    <gate label="brána" />
+    <cursor label="kurzor">Reakce s kurzorem.</cursor>
+    <star label="hvězda">Reakce s hvězdou.</star>
+    <coin label="mince">Reakce s mincí.</coin>
+    <soccerball label="míč">Reakce s míčem.</soccerball>
+    <heart label="srdce">Reakce se srdcem.</heart>
+    <bullet label="munice">Reakce s municí.</bullet>
+    <Black label="černé">Reakce s něčím černým.</Black>
+    <Grey label="šedé">Reakce s něčím šedým.</Grey>
+    <white label="bílé">Reakce s něčím bílým.</white>
+    <red label="červené">Reakce s něčím červeným.</red>
+    <orange label="oranžové">Reakce s něčím oranžovým.</orange>
+    <yellow label="žluté">Reakce s něčím žlutým.</yellow>
+    <green label="zelené">Reakce s něčím zeleným.</green>
+    <blue label="modré">Reakce s něčím modrým.</blue>
+    <purple label="fialové">Reakce s něčím fialovým.</purple>
+    <pink label="růžové">Reakce s něčím růžovým.</pink>
+    <brown label="hnědé">Reakce s něčím hnědým.</brown>
+    <PathBlack label="černá cesta">Reakce na černou cestu.</PathBlack>
+    <PathGrey label="šedá cesta">Reakce na šedivou cestu.</PathGrey>
+    <PathWhite label="bílá cesta">Reakce na bílou cestu.</PathWhite>
+    <PathRed label="červená cesta">Reakce na červenou cestu.</PathRed>
+    <PathOrange label="oranžová cesta">Reakce na oranžovou cestu.</PathOrange>
+    <PathYellow label="žlutá cesta">Reakce na žlutou cestu.</PathYellow>
+    <PathGreen label="zelená cesta">Reakce na zelenou cesu.</PathGreen>
+    <PathBlue label="modrá cesta">Reakce na modrou cestu.</PathBlue>
+    <PathPurple label="fialová cesta">Reakce na fialovou cestu.</PathPurple>
+    <PathPink label="růžová cesta">Reakce na růžovou cestu.</PathPink>
+    <PathBrown label="hnědá cesta">Reakce na hnědou cestu.</PathBrown>
+    <pathplain label="planina" />
+    <pathroad label="silnice" />
+    <pathwall label="zeď" />
+    <pathflora label="rostlinstvo" />
+    <yucca1 label="strom" />
+    <yucca2 label="strom" />
+    <yucca3 label="strom" />
+    <bigyucca1 label="strom" />
+    <expresshappy label="štastný">Reakce s veselou postavou.</expresshappy>
+    <expresssad label="smutný">Reakce se smutnou postavou.</expresssad>
+    <expressangry label="NAZLOBENÝ">Reakce se nazlobenou postavou.</expressangry>
+    <expresscrazy label="bLáZnIvÝ">Reakce s bláznivou postavou.</expresscrazy>
+    <expresshearts label="zamilovaný">Reakce se zamilovanou postavou.</expresshearts>
+    <expressflowers label="ověnčený">Reakce s ověnčenou postavou.</expressflowers>
+    <expressstars label="omráčený">Reakce s omráčenou postavou.</expressstars>
+    <expressswear label="hromžící">Reakce s hromžící postavou.</expressswear>
+    <expressnormal label="normální">Reakce s normální postavou.</expressnormal>
+    <expressnone label="normální">Reakce s normální postavou.</expressnone>
+    <moving label="pohybující">Reakce pouze s pohybující se postavou.</moving>
+	<camouflage label="maskovaný">Reakce pouze maskovanou postavou.</camouflage>
+    <closeby label="poblíž">Postava reaguje pouze na objekty v její těsné blízkosti. Vzdálené objekty v dálce jsou ignorovány.</closeby>
+    <faraway label="vzdálené">Reakce pouze se vzdálenými objekty.</faraway>
+
+    <infront label="před">Reakce pouze s objekty umístěnými před postavou.</infront>
+    <behind label="za">Reakce pouze s objekty umístěnými za postavou.</behind>
+    <toleft label="vlevo">Reakce pouze s objekty umístěnými vlevo od postavy.</toleft>
+    <toright label="vpravo">Reakce pouze s objekty umístěnými vpravo od postavy.</toright>
+    <over label="nad">Reakce pouze s objekty umístěnými nad objektem.</over>
+    <under label="pod">Reakce pouze s objekty umístěnými pod objektem.</under>
+
+    <lineofsight label="přímý pohled">Terén a zdi blokujou výhled.</lineofsight>
+    
+    <countfew label="několik">Reakce pouze když vidíš málo něčeho.</countfew>
+    <countmany label="hodně">Reakce pouze když vidíš hodně něčeho.</countmany>
+	<clustermany label="shluk">Reakce pouze když vidíš shluk něčeho.</clustermany>
+    <countany label="kterýkoliv" />
+    <leftstick label="L páčka">Reakce na levou analogovou páčku na ovladači. Vhodné pro pohyb.</leftstick>
+    <rightstick label="R páčka">Reakce na pravou analogovou páčku na ovladači. Vhodné pro pohyb.</rightstick>
+    <abutton label="A tlačítko">Reakce na tlačitko A na ovladači.</abutton>
+    <bbutton label="B tlačítko">Reakce na tlačítko B na ovladači.</bbutton>
+    <xbutton label="X tlačítko">Reakce na tlačítko X na ovladači.</xbutton>
+    <ybutton label="Y tlačítko">Reakce na tlačítko Y na ovladači.</ybutton>
+    <lefttrigger label="levá spoušť">Reakce na levou spoušť na ovladači.</lefttrigger>
+    <righttrigger label="pravá spoušť">Reakce na pravou spoušť na ovladači.</righttrigger>
+    <lefttrigger_analog label="levá spoušť">Reakce na levou spoušť na ovladači.</lefttrigger_analog>
+    <righttrigger_analog label="pravá spoušť">Reakce na pravou spoušť na ovladači.</righttrigger_analog>
+    <mouse>
+      <button>
+        <left label="levé">Reakce na stisk levého tlačítka myši.</left>
+        <right label="pravé">Reakce na stisk pravého tlačítka myši.</right>
+      </button>
+      <hover label="kurzor nad">Reakce na přejetí myši nad objektem nebo terénem.</hover>
+      <move label="pohyb">Reakce na pohybování myší.</move>
+    </mouse>
+	<touch>
+      <gesture>
+        <touching label="dotýkání">Reakce na aktivní dotyk (dotyková obrazovka).</touching>
+        <tap label="ťuknutí">Reakce na ťuknutí [angl. tap] (dotyková obrazovka).</tap>
+        <rotate label="otočení">Reakce na gesto otočení (dotyková obrazovka).</rotate>
+        <swipe label="protažení">Reakce na gesto protažení [angl. swipe] (dotyková obrazovka).</swipe>
+        <slide label="potáhnutí">Reakce na gesto potáhnutí [angl. slide] (dotyková obrazovka).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="bílé">Reakce na BÍLÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</White>
+        <Black label="černé">Reakce na ČERNÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Black>
+        <Grey label="šedé">Reakce na ŠEDÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Grey>
+        <Red label="červené">Reakce na ČERVENÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Red>
+        <Green label="zelené">Reakce na ZELENÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Green>
+        <Blue label="modré">Reakce na MODRÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Blue>
+        <Orange label="oranžové">Reakce na ORANŽOVÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Orange>
+        <Yellow label="žluté">Reakce na ŽLUTÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Yellow>
+        <Purple label="fialové">Reakce na FIALOVÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Purple>
+        <Pink label="růžové">Reakce na RŮŽOVÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Pink>
+        <Brown label="hnědé">Reakce na HNĚDÉ tlačítko na HUD. (Pro změnu přejděte do nastavení světa)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="X tlačítko">Reakce na dotyk tlačítka X na obrazovce.</controllerButton_X>
+      <controllerButton_Y label="Y tlačítko">Reakce na dotyk tlačítka Y na obrazovce.</controllerButton_Y>
+      <controllerButton_A label="A tlačítko">Reakce na dotyk tlačítka A na obrazovce.</controllerButton_A>
+      <controllerButton_B label="B tlačítko">Reakce na dotyk tlačítka B na obrazovce.</controllerButton_B>
+
+    </touch>
+	
+    <ArrowKeys label="Šipky">Reakce na šipky na klávesnici.</ArrowKeys>
+    <WASDKeys label="WASD">Reakce na WSAD klávesy na klávesnici.</WASDKeys>
+    <Akey label="A">Reakce na klávesu A na klávesnici.</Akey>
+    <Bkey label="B">Reakce na klávesu B na klávesnici.</Bkey>
+    <Ckey label="C">Reakce na klávesu C na klávesnici.</Ckey>
+    <Dkey label="D">Reakce na klávesu D na klávesnici.</Dkey>
+    <Ekey label="E">Reakce na klávesu E na klávesnici.</Ekey>
+    <Fkey label="F">Reakce na klávesu F na klávesnici.</Fkey>
+    <Gkey label="G">Reakce na klávesu G na klávesnici.</Gkey>
+    <Hkey label="H">Reakce na klávesu H na klávesnici.</Hkey>
+    <Ikey label="I">Reakce na klávesu I na klávesnici.</Ikey>
+    <Jkey label="J">Reakce na klávesu J na klávesnici.</Jkey>
+    <Kkey label="K">Reakce na klávesu K na klávesnici.</Kkey>
+    <Lkey label="L">Reakce na klávesu L na klávesnici.</Lkey>
+    <Mkey label="M">Reakce na klávesu M na klávesnici.</Mkey>
+    <Nkey label="N">Reakce na klávesu N na klávesnici.</Nkey>
+    <Okey label="O">Reakce na klávesu O na klávesnici.</Okey>
+    <Pkey label="P">Reakce na klávesu P na klávesnici.</Pkey>
+    <Qkey label="Q">Reakce na klávesu Q na klávesnici.</Qkey>
+    <Rkey label="R">Reakce na klávesu R na klávesnici.</Rkey>
+    <Skey label="S">Reakce na klávesu S na klávesnici.</Skey>
+    <Tkey label="T">Reakce na klávesu T na klávesnici.</Tkey>
+    <Ukey label="U">Reakce na klávesu U na klávesnici.</Ukey>
+    <Vkey label="V">Reakce na klávesu V na klávesnici.</Vkey>
+    <Wkey label="W">Reakce na klávesu W na klávesnici.</Wkey>
+    <Xkey label="X">Reakce na klávesu X na klávesnici.</Xkey>
+    <Ykey label="Y">Reakce na klávesu Y na klávesnici.</Ykey>
+    <Zkey label="Z">Reakce na klávesu Z na klávesnici.</Zkey>
+    <D0key label="0">Reakce na klávesu 0 na klávesnici.</D0key>
+    <D1key label="1">Reakce na klávesu 1 na klávesnici.</D1key>
+    <D2key label="2">Reakce na klávesu 2 na klávesnici.</D2key>
+    <D3key label="3">Reakce na klávesu 3 na klávesnici.</D3key>
+    <D4key label="4">Reakce na klávesu 4 na klávesnici.</D4key>
+    <D5key label="5">Reakce na klávesu 5 na klávesnici.</D5key>
+    <D6key label="6">Reakce na klávesu 6 na klávesnici.</D6key>
+    <D7key label="7">Reakce na klávesu 7 na klávesnici.</D7key>
+    <D8key label="8">Reakce na klávesu 8 na klávesnici.</D8key>
+    <D9key label="9">Reakce na klávesu 9 na klávesnici.</D9key>
+    <Spacekey label="mezerník">Reakce na klávesu Mezerník na klávesnici.</Spacekey>
+    <PageUpkey label="PageUp">Reakce na klávesu PageUp na klávesnici.</PageUpkey>
+    <PageDownkey label="PageDown">Reakce na klávesu PageDown na klávesnici.</PageDownkey>
+    <Endkey label="End">Reakce na klávesu End na klávesnici.</Endkey>
+    <Leftkey label="šipka vlevo">Reakce na šipku vlevo na klávesnici.</Leftkey>
+    <Upkey label="šipka nahoru">Reakce na šipku nahoru na klávesnici.</Upkey>
+    <Rightkey label="šipka vpravo">Reakce na šipku vpravo na klávesnici.</Rightkey>
+    <Downkey label="šipka dolů">Reakce na šipku dolů na klávesnici.</Downkey>
+    <Insertkey label="Insert">Reakce na klávesu Insert na klávesnici.</Insertkey>
+    <Deletekey label="Delete">Reakce na klávesu Delete na klávesnici.</Deletekey>
+    <LeftWindowskey label="levý Windows">Reakce na klávesu levý Windows.</LeftWindowskey>
+    <RightWindowskey label="pravý Windows">Reakce na klávesu pravý Windows.</RightWindowskey>
+    <Multiplykey label="*">Reakce na klávesu hvězdička na klávesnici.</Multiplykey>
+    <Addkey label="+">Reakce na na klávesu plus na klávesnici.</Addkey>
+    <Subtractkey label="-">Reakce na klávesu minus na klávesnici.</Subtractkey>
+    <Decimalkey label=".">Reakce na klávesu tečka na klávesnici.</Decimalkey>
+    <Dividekey label="/">Reakce na klávesu lomítko na klávesnici.</Dividekey>
+    <LeftShiftkey label="levý Shift">Reakce na klávesu levý Shift na klávesnici.</LeftShiftkey>
+    <RightShiftkey label="pravý Shift">Reakce na klávesu pravý Shift na klávesnici.</RightShiftkey>
+    <LeftControlkey label="levý Control">Reakce na klávesu levý Ctrl na klávesnici.</LeftControlkey>
+    <RightControlkey label="pravý Control">Reakce na klávesu pravý Ctrl na klávesnici.</RightControlkey>
+    <LeftAltkey label="levý Alt">Reakce na klávesu levý Alt na klávesnici.</LeftAltkey>
+    <RightAltkey label="pravý Alt">Reakce na klávesu pravý Alt na klávesnici.</RightAltkey>
+    <OemSemicolonkey label=";">Reakce na klávesu středník na klávesnici.</OemSemicolonkey>
+    <OemPluskey label="+">Reakce na klávesu plus na klávesnici.</OemPluskey>
+    <OemCommakey label=",">Reakce na klávesu čárka na klávesnici.</OemCommakey>
+    <OemMinuskey label="-">Reakce na klávesu mínus na klávesnici.</OemMinuskey>
+    <OemPeriodkey label=".">Reakce na klávesu tečka na klávesnici.</OemPeriodkey>
+    <OemQuestionkey label="?">Reakce na klávesu otazník na klávesnici.</OemQuestionkey>
+    <OemTildekey label="~">Reakce na klávesu vlnovka na klávesnici.</OemTildekey>
+    <OemOpenBracketskey label="[">Reakce na klávesu začátek hranaté závorky na klávesnici.</OemOpenBracketskey>
+    <OemPipekey label="|">Reakce na klávesu svislítko na klávesnici.</OemPipekey>
+    <OemCloseBracketskey label="]">Reakce na klávesu konec hranaté závorky na klávesnici.</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">Reakce na klávesu uvozovky na klávesnici.</OemQuoteskey>
+    <OemBackslashkey label="\">Reakce na klávesu zpětné lomítko na klávesnici.</OemBackslashkey>
+    <F1key label="F1">Reakce na klávesu F1 na klávesnici.</F1key>
+    <F2key label="F2">Reakce na klávesu F2 na klávesnici.</F2key>
+    <F3key label="F3">Reakce na klávesu F3 na klávesnici.</F3key>
+    <F4key label="F4">Reakce na klávesu F4 na klávesnici.</F4key>
+    <F5key label="F5">Reakce na klávesu F5 na klávesnici.</F5key>
+    <F6key label="F6">Reakce na klávesu F6 na klávesnici.</F6key>
+    <F7key label="F7">Reakce na klávesu F7 na klávesnici.</F7key>
+    <F8key label="F8">Reakce na klávesu F8 na klávesnici.</F8key>
+    <F9key label="F9">Reakce na klávesu F9 na klávesnici.</F9key>
+    <F10key label="F10">Reakce na klávesu F10 na klávesnici.</F10key>
+    <F11key label="F11">Reakce na klávesu F11 na klávesnici.</F11key>
+    <F12key label="F12">Reakce na klávesu F12 na klávesnici.</F12key>
+    <Shiftkey label="Shift">Reakce na libovolnou klávesu Shift na klávesnici.</Shiftkey>
+    <Controlkey label="Control">Reakce na libovolnou klávesu Ctrl na klávesnici.</Controlkey>
+    <Altkey label="Alt">Reakce na libovolnou klávesu Alt na klávesnici.</Altkey>
+    <Windowskey label="Windows">Reakce na libovolnou klávesu Windows na klávesnici.</Windowskey>
+    <player1 label="hráč 1">Reakce pouze na ovladač Hráče 1. Standardně reakce na jakýkoli.</player1>
+    <player2 label="hráč 2">Reakce pouze na ovladač Hráče 2. Standardně reakce na jakýkoli.</player2>
+    <player3 label="hráč 3">Reakce pouze na ovladač Hráče 3. Standardně reakce na jakýkoli.</player3>
+    <player4 label="hráč 4">Reakce pouze na ovladač Hráče 4. Standardně reakce na jakýkoli.</player4>
+    <terrain label="typ terénu">Reakce na specifický typ terénu.</terrain>
+    <water label="typ vody">Reakce na specifický typ vody.</water>
+    <quartersecond label="vteřiny">1/4 sekundy. Kombinuj s dalšími pro dosažení vyššího času.</quartersecond>
+    <_01second label="vteřina">1 sekunda. Kombinuj s dalšími pro dosažení vyššího času.</_01second>
+    <_02seconds label="vteřiny">2 sekundy. Kombinuj s dalšími pro dosažení vyššího času.</_02seconds>
+    <_03seconds label="vteřiny">3 sekundy. Kombinuj s dalšími pro dosažení vyššího času.</_03seconds>
+    <_04seconds label="vteřiny">4 sekundy. Kombinuj s dalšími pro dosažení vyššího času.</_04seconds>
+    <_05seconds label="vteřin">5 sekund. Kombinuj s dalšími pro dosažení vyššího času.</_05seconds>
+    <_10seconds label="vteřin">10 sekund. Kombinuj s dalšími pro dosažení vyššího času.</_10seconds>
+    <_20seconds label="vteřin">20 sekund. Kombinuj s dalšími pro dosažení vyššího času.</_20seconds>
+    <_30seconds label="vteřin">30 sekund. Kombinuj s dalšími pro dosažení vyššího času.</_30seconds>
+    <_60seconds label="vteřin">60 sekund. Kombinuj s dalšími pro dosažení vyššího času.</_60seconds>
+    <_000point label="bodů">0 bodů.</_000point>
+    <_001point label="bod">1 bod. Kombinuj s dalšími pro dosažení vyššího počtu.</_001point>
+    <_002points label="body">2 body. Kombinuj s dalšími pro dosažení vyššího počtu.</_002points>
+    <_003points label="body">3 body. Kombinuj s dalšími pro dosažení vyššího počtu.</_003points>
+    <_004points label="body">4 body. Kombinuj s dalšími pro dosažení vyššího počtu.</_004points>
+    <_005points label="bodů">5 bodů. Kombinuj s dalšími pro dosažení vyššího počtu.</_005points>
+    <_010points label="bodů">10 bodů. Kombinuj s dalšími pro dosažení vyššího počtu.</_010points>
+    <_020points label="bodů">20 bodů. Kombinuj s dalšími pro dosažení vyššího počtu.</_020points>
+    <_050points label="bodů">50 bodů. Kombinuj s dalšími pro dosažení vyššího počtu.</_050points>
+    <_100points label="bodů">100 bodů. Kombinuj s dalšími pro dosažení vyššího počtu.</_100points>
+    <random label="náhodné">Vygenerovat náhodné číslo. Například při zadání 5 se vygeneruje náhodné číslo v rozmezí 0 až 5.</random>
+    <scorebucket>
+      <color>
+        <white label="bílé">Otestovat bílé skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</white>
+        <black label="černé">Otestovat černé skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</black>
+        <grey label="šedé">Otestovat šedé skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</grey>
+        <red label="červené">Otestovat červené skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</red>
+        <green label="zelené">Otestovat šedé skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</green>
+        <blue label="modré">Otestovat modré skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</blue>
+        <orange label="oranžové">Otestovat oranžové skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</orange>
+        <yellow label="žluté">Otestovat žluté skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</yellow>
+        <purple label="fialové">Otestovat fialové skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</purple>
+        <pink label="růžové">Otestovat růžové skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</pink>
+        <brown label="hnědé">Otestovat hnědé skóre standardně zobrazené ve výsledkové tabulce. (Přejděte do nastavení světa pro změnu zobrazení.)</brown>
+      </color>
+      <letter>
+        <a label="skóre A">Otestovat skóre 'A' nezobrazované v tabulce výsledků.</a>
+        <b label="skóre B">Otestovat skóre 'B' nezobrazované v tabulce výsledků.</b>
+        <c label="skóre C">Otestovat skóre 'C' nezobrazované v tabulce výsledků.</c>
+        <d label="skóre D">Otestovat skóre 'D' nezobrazované v tabulce výsledků.</d>
+        <e label="skóre E">Otestovat skóre 'E' nezobrazované v tabulce výsledků.</e>
+        <f label="skóre F">Otestovat skóre 'F' nezobrazované v tabulce výsledků.</f>
+        <g label="skóre G">Otestovat skóre 'G' nezobrazované v tabulce výsledků.</g>
+        <h label="skóre H">Otestovat skóre 'H' nezobrazované v tabulce výsledků.</h>
+        <i label="skóre I">Otestovat skóre 'I' nezobrazované v tabulce výsledků.</i>
+        <j label="skóre J">Otestovat skóre 'J' nezobrazované v tabulce výsledků.</j>
+        <k label="skóre K">Otestovat skóre 'K' nezobrazované v tabulce výsledků.</k>
+        <l label="skóre L">Otestovat skóre 'L' nezobrazované v tabulce výsledků.</l>
+        <m label="skóre M">Otestovat skóre 'M' nezobrazované v tabulce výsledků.</m>
+        <n label="skóre N">Otestovat skóre 'N' nezobrazované v tabulce výsledků.</n>
+        <o label="skóre O">Otestovat skóre 'O' nezobrazované v tabulce výsledků.</o>
+        <p label="skóre P">Otestovat skóre 'P' nezobrazované v tabulce výsledků.</p>
+        <q label="skóre Q">Otestovat skóre 'Q' nezobrazované v tabulce výsledků.</q>
+        <r label="skóre R">Otestovat skóre 'R' nezobrazované v tabulce výsledků.</r>
+        <s label="skóre S">Otestovat skóre 'S' nezobrazované v tabulce výsledků.</s>
+        <t label="skóre T">Otestovat skóre 'T' nezobrazované v tabulce výsledků.</t>
+        <u label="skóre U">Otestovat skóre 'U' nezobrazované v tabulce výsledků.</u>
+        <v label="skóre V">Otestovat skóre 'V' nezobrazované v tabulce výsledků.</v>
+        <w label="skóre W">Otestovat skóre 'W' nezobrazované v tabulce výsledků.</w>
+        <x label="skóre X">Otestovat skóre 'X' nezobrazované v tabulce výsledků.</x>
+        <y label="skóre Y">Otestovat skóre 'Y' nezobrazované v tabulce výsledků.</y>
+        <z label="skóre Z">Otestovat skóre 'Z' nezobrazované v tabulce výsledků.</z>
+      </letter>
+      <local>
+        <a label="skóre a">The 'a' score, which is private to this character.</a>
+        <b label="skóre b">The 'b' score, which is private to this character.</b>
+        <c label="skóre c">The 'c' score, which is private to this character.</c>
+        <d label="skóre d">The 'd' score, which is private to this character.</d>
+        <e label="skóre e">The 'e' score, which is private to this character.</e>
+        <f label="skóre f">The 'f' score, which is private to this character.</f>
+        <g label="skóre g">The 'g' score, which is private to this character.</g>
+        <h label="skóre h">The 'h' score, which is private to this character.</h>
+        <i label="skóre i">The 'i' score, which is private to this character.</i>
+        <j label="skóre j">The 'j' score, which is private to this character.</j>
+        <k label="skóre k">The 'k' score, which is private to this character.</k>
+        <l label="skóre l">The 'l' score, which is private to this character.</l>
+        <m label="skóre m">The 'm' score, which is private to this character.</m>
+        <n label="skóre n">The 'n' score, which is private to this character.</n>
+        <o label="skóre o">The 'o' score, which is private to this character.</o>
+        <p label="skóre p">The 'p' score, which is private to this character.</p>
+        <q label="skóre q">The 'q' score, which is private to this character.</q>
+        <r label="skóre r">The 'r' score, which is private to this character.</r>
+        <s label="skóre s">The 's' score, which is private to this character.</s>
+        <t label="skóre t">The 't' score, which is private to this character.</t>
+        <u label="skóre u">The 'u' score, which is private to this character.</u>
+        <v label="skóre v">The 'v' score, which is private to this character.</v>
+        <w label="skóre w">The 'w' score, which is private to this character.</w>
+        <x label="skóre x">The 'x' score, which is private to this character.</x>
+        <y label="skóre y">The 'y' score, which is private to this character.</y>
+        <z label="skóre z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="spoušt" />
+    <timertrigger label="spoušt" />
+    <scoreis label="je" />
+	<scoreequals label="rovné">Reakce když skóre je rovné určité hodnotě.</scoreequals>
+    <scorenotequals label="rozdílné od">Reakce když skóre není rovné určité hodnotě.</scorenotequals>
+    <scoreabove label="větší než">Reakce když skóre překročí určitou hodnotu.</scoreabove>
+    <scorebelow label="menší než">Reakce když skóre klesne pod určitou hodnotu.</scorebelow>
+	<scoregteq label="stejné nebo větší než">Reakce když se skóre rovná nebo je vyšší než určitá hodnota.</scoregteq>
+    <scorelteq label="stejné nebo menší než">Reakce když se skóre rovná nebo je nižší než určitá hodnota.</scorelteq>
+    <healthis label="je" />
+    <healthabove label="větší než">Reakce když úroveň zdraví překročí určitou hodnotu.</healthabove>
+    <healthbelow label="menší než">Reakce když úroveň zdraví klesne pod určitou hodnotu.</healthbelow>
+    <direction>
+      <up label="nahoru">Reakce při pohybu páčkou nahoru.</up>
+      <right label="vpravo">Reakce při pohybu páčkou vpravo.</right>
+      <down label="dolů">Reakce při pohybu páčkou dolů.</down>
+      <left label="vlevo">Reakce při pohybu páčkou vlevo.</left>
+	  <clockwise label="po směru">Reakce na gesto otočení po směru hodinových ručiček.</clockwise>
+      <counterclockwise label="proti směru">Reakce na gesto otočení proti směru hodinových ručiček.</counterclockwise>
+    </direction>
+    <not label="ne">Reakce když podmínka není splněna.</not>
+  </filter>
+  <selector>
+    <closest label="nejbližší" />
+    <objectrelative label="příbuzný" />
+    <towardclosest label="směrem k">Jdi směrem k objektu, na který jsi reagoval.</towardclosest>
+    <awayfromall label="pryč od">Jdi pryč od objektu, na který jsi reagoval.</awayfromall>
+    <avoidall label="kolem">Obejdi objekt, na který jsi reagoval.</avoidall>
+    <wander label="bloumej">Pohyb v libovolném směru. Užitečné na konec programu, kdy již postava nemusí nic vykonávat.</wander>
+    <cruise label="přímo vpřed">Pohyb ve směru pohledu.</cruise>
+    <circle label="dokola" />
+    <spin label="otočit">Otočit na místě.</spin>
+    <forward label="kupředu" />
+    <hiddenturn label="zabočit" />
+    <escape label="utéct" />
+    <followwaypoints label="po cestě">Jdi po cestě vybrané barvy. Standardně se pohybuje po libovolné cestě.</followwaypoints>
+    <moveupdown label="nahoru/dolů">Jdi nahoru a dolů.</moveupdown>
+    <moveup label="nahoru">Jdi nahoru.</moveup>
+    <movedown label="dolů">Jdi dolů.</movedown>
+    <moveleftright label="zabočit">Jdi vlevo nebo vpravo.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="hráč 1" />
+      <_2 label="hráč 2" />
+      <_3 label="hráč 3" />
+      <_4 label="hráč 4" />
+    </player>
+    <reset>
+      <world label="svět">Resetuj hru, kromě tabulky výsledků.</world>
+      <score label="skóre">Resetuj tabulku výsledků nebo vybrané skóre dle barvy.</score>
+      <expression label="výraz">Resetuj výraz postavy.</expression>
+      <glow label="pocit">Resetuj pocit postavy.</glow>
+      <health label="zdraví">Resetuj zdraví postavy.</health>
+    </reset>
+    <projectile>
+      <blip label="kulku">Kulky jsou rychlé projektily lehčí než rakety.</blip>
+      <missile label="raketu">Rakety jsou velké, nepříliš rychlé, ale sledují svůj cíl!</missile>
+    </projectile>
+    <slowly label="pomaleji">Jdi pomaleji. Použijte několikrát pro zpomalení pohybu.</slowly>
+    <quickly label="rychleji">Jdi rychleji. Použijte několikrát pro zrychlení pohybu.</quickly>
+    <speednormally label="normálně">Jdi normální rychlostí. Volitelně.</speednormally>
+    <weakly label="slabějí">Udělej to slaběji než obvykle.</weakly>
+    <strongly label="silnějí">Udělej to silnějí než obvykle.</strongly>
+    <strengthnormally label="normální">Udělej to normální silou. Volitelné.</strengthnormally>
+	<!--CONTINUE HERE-->
+    <angle>
+      <low label="slabší">Učiní slaběji než obvykle.</low>
+      <high label="silnéjší">Učiní silnější než obvykle.</high>
+    </angle>
+    <turnleft label="vlevo" />
+    <turnright label="vpravo" />
+    <turntoward label="směrem k" />
+    <turnforward label="kupředu">Indikuje, že pohyb by neměl záviset na směru natočení postavy.</turnforward>
+    <pitchup label="nahoru" />
+    <pitchdown label="dolů" />
+    <forward label="kupředu">Směr, kam se postava dívá.</forward>
+    <north label="na sever" />
+    <east label="na východ" />
+    <south label="na jih" />
+    <west label="na západ" />
+    <up label="nahoru" />
+    <down label="dolů" />
+    <distance>
+      <near label="blízko">Postava bude kroužit těsně kolem objektu.</near>
+      <far label="daleko">Postava bude kroužit dál od objektu.</far>
+    </distance>
+	<objecticeberg label="ledovec">Vytvoř ledovec.</objecticeberg>
+    <objectrock label="skála">Vytvoř skálu.</objectrock>
+	<objectrockLowValue label="vyvřelina">Vytvoř vyvřelou horninu.</objectrockLowValue>
+    <objectrockHighValue label="usazenina">Vytvoř usazenou horninu.</objectrockHighValue>
+    <objectfruit label="jablko">Vytvoř jablko.</objectfruit>
+	<objectinkjet label="mrak">Vytvoř mrak.</objectinkjet>
+    <objectstar label="hvězda">Vytvoř hvězdu.</objectstar>
+    <objectcoin label="mince">Vytvoř minci.</objectcoin>
+    <objectheart label="srdce">Vytvoř srdce.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="míč">Vytvoř fotbalový míč.</objectsoccerball>
+    <objectbullet label="munice">Vytvoř munici.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="stránka 1">Přepni na stránku 1.</taska>
+    <taskb label="stránka 2">Přepni na stránku 2.</taskb>
+    <taskc label="stránka 3">Přepni na stránku 3.</taskc>
+    <taskd label="stránka 4">Přepni na stránku 4.</taskd>
+    <taske label="stránka 5">Přepni na stránku 5.</taske>
+    <taskf label="stránka 6">Přepni na stránku 6.</taskf>
+    <taskg label="stránka 7">Přepni na stránku 7.</taskg>
+    <taskh label="stránka 8">Přepni na stránku 8.</taskh>
+    <taski label="stránka 9">Přepni na stránku 9.</taski>
+    <taskj label="stránka 10">Přepni na stránku 10.</taskj>
+    <taskk label="stránka 11">Přepni na stránku 11.</taskk>
+    <taskl label="stránka 12">Přepni na stránku 12.</taskl>
+    <expresshappy label="šťastný">Buď šťastný.</expresshappy>
+    <expresssad label="smutný">Buď smutný.</expresssad>
+    <expressangry label="NAZLOBENÝ">Buď naštvaný.</expressangry>
+    <expresscrazy label="bLáZnIvÝ">Buď bláznivý.</expresscrazy>
+    <expresshearts label="zamilovaný">Buď zamilovaný.</expresshearts>
+    <expressflowers label="ověnčený">Buď ověnčený.</expressflowers>
+    <expressstars label="omráčený">Buď omráčený.</expressstars>
+    <expressswear label="hromžící">Buď hromžící.</expressswear>
+    <expressnone label="normální">Buď normální a přestaň se tvářit jinak.</expressnone>
+    <_000point label="bodů">0 bodů. můžeš určit také barvu.</_000point>
+    <_001point label="bod">1 bod. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_001point>
+    <_002points label="body">2 body. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_002points>
+    <_003points label="body">3 body. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_003points>
+    <_004points label="body">4 body. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_004points>
+    <_005points label="bodů">5 bodů. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_005points>
+    <_010points label="bodů">10 bodů. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_010points>
+    <_020points label="bodů">20 bodů. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_020points>
+    <_050points label="bodů">50 bodů. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_050points>
+    <_100points label="bodů">100 bodů. Použij několikrát pro dosažení vyššího počtu. Můžeš určit také barvu.</_100points>
+    <random label="náhodně">Vygeneruj náhodné číslo. Například při zadání 5 se vygeneruje náhodné číslo v rozmezí 0 až 5.</random>
+    <teama label="tým A" />
+    <teamb label="tým B" />
+    <payloadzap label="omráč">Omráč cíl na několik sekund.</payloadzap>
+    <payloadpop label="knockoutuj">Knockoutuj cíl dokud mu někdo neresetuje zdraví.</payloadpop>
+    <payloadboom label="znič">Znič cíl výbuchem.</payloadboom>
+    <payloadvanish label="nech zmizet">Nech cíl tiše zmizet.</payloadvanish>
+    <black label="černá" />
+    <grey label="šedá" />
+    <white label="bílá" />
+    <red label="červená" />
+    <orange label="oranžová" />
+    <yellow label="žlutá" />
+    <green label="zelená" />
+    <blue label="modrá" />
+    <purple label="fialová" />
+    <pink label="růžová" />
+    <brown label="hnědá" />
+    <glowoff label="vypnout">Přestaň zářit.</glowoff>
+    <colorrandom label="náhodná">Vyber náhodnou barvu.</colorrandom>
+    <path>
+      <black label="černá" />
+      <grey label="šedá" />
+      <white label="bílá" />
+      <red label="červená" />
+      <orange label="oranžová" />
+      <yellow label="žlutá" />
+      <green label="zelená" />
+      <blue label="modrá" />
+      <purple label="fialová" />
+      <pink label="růžová" />
+      <brown label="hnědá" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="bílé">Změní barvu skóre na bílé,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</white>
+        <black label="černé">Změní barvu skóre na černé,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</black>
+        <grey label="šedé">Změní barvu skóre na šedé,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</grey>
+        <red label="červené">Změní barvu skóre na červené,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</red>
+        <green label="zelené">Změní barvu skóre na zelené,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</green>
+        <blue label="modré">Změní barvu skóre na modré,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</blue>
+        <orange label="oranžové">Změní barvu skóre na oranžové,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</orange>
+        <yellow label="žlutě">Změní barvu skóre na žluté,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</yellow>
+        <purple label="fialové">Změní barvu skóre na fialové,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</purple>
+        <pink label="růžové">Změní barvu skóre na růžovou, která je zobrazena v tabulce výsledků jako standardní.(Přejděte do nastavení světa pro změnu zobrazení.)</pink>
+        <brown label="hnědé">Změní barvu skóre na hnědé,  standardně zobrazené v tabulce výsledků.(Přejděte do nastavení světa pro změnu zobrazení.)</brown>
+      </color>
+      <letter>
+        <a label="skóre A">Uprav skóre 'A' nezobrazované v tabulce výsledků.</a>
+        <b label="skóre B">Uprav skóre 'B' nezobrazované v tabulce výsledků.</b>
+        <c label="skóre C">Uprav skóre 'C' nezobrazované v tabulce výsledků.</c>
+        <d label="skóre D">Uprav skóre 'D' nezobrazované v tabulce výsledků.</d>
+        <e label="skóre E">Uprav skóre 'E' nezobrazované v tabulce výsledků.</e>
+        <f label="skóre F">Uprav skóre 'F' nezobrazované v tabulce výsledků.</f>
+        <g label="skóre G">Uprav skóre 'G' nezobrazované v tabulce výsledků.</g>
+        <h label="skóre H">Uprav skóre 'H' nezobrazované v tabulce výsledků.</h>
+        <i label="skóre I">Uprav skóre 'I' nezobrazované v tabulce výsledků.</i>
+        <j label="skóre J">Uprav skóre 'J' nezobrazované v tabulce výsledků.</j>
+        <k label="skóre K">Uprav skóre 'K' nezobrazované v tabulce výsledků.</k>
+        <l label="skóre L">Uprav skóre 'L' nezobrazované v tabulce výsledků.</l>
+        <m label="skóre M">Uprav skóre 'M' nezobrazované v tabulce výsledků.</m>
+        <n label="skóre N">Uprav skóre 'N' nezobrazované v tabulce výsledků.</n>
+        <o label="skóre O">Uprav skóre 'O' nezobrazované v tabulce výsledků.</o>
+        <p label="skóre P">Uprav skóre 'P' nezobrazované v tabulce výsledků.</p>
+        <q label="skóre Q">Uprav skóre 'Q' nezobrazované v tabulce výsledků.</q>
+        <r label="skóre R">Uprav skóre 'R' nezobrazované v tabulce výsledků.</r>
+        <s label="skóre S">Uprav skóre 'S' nezobrazované v tabulce výsledků.</s>
+        <t label="skóre T">Uprav skóre 'T' nezobrazované v tabulce výsledků.</t>
+        <u label="skóre U">Uprav skóre 'U' nezobrazované v tabulce výsledků.</u>
+        <v label="skóre V">Uprav skóre 'V' nezobrazované v tabulce výsledků.</v>
+        <w label="skóre W">Uprav skóre 'W' nezobrazované v tabulce výsledků.</w>
+        <x label="skóre X">Uprav skóre 'X' nezobrazované v tabulce výsledků.</x>
+        <y label="skóre Y">Uprav skóre 'Y' nezobrazované v tabulce výsledků.</y>
+        <z label="skóre Z">Uprav skóre 'Z' nezobrazované v tabulce výsledků.</z>
+      </letter>
+      <local>
+        <a label="skóre a">The 'a' score, which is private to this character.</a>
+        <b label="skóre b">The 'b' score, which is private to this character.</b>
+        <c label="skóre c">The 'c' score, which is private to this character.</c>
+        <d label="skóre d">The 'd' score, which is private to this character.</d>
+        <e label="skóre e">The 'e' score, which is private to this character.</e>
+        <f label="skóre f">The 'f' score, which is private to this character.</f>
+        <g label="skóre g">The 'g' score, which is private to this character.</g>
+        <h label="skóre h">The 'h' score, which is private to this character.</h>
+        <i label="skóre i">The 'i' score, which is private to this character.</i>
+        <j label="skóre j">The 'j' score, which is private to this character.</j>
+        <k label="skóre k">The 'k' score, which is private to this character.</k>
+        <l label="skóre l">The 'l' score, which is private to this character.</l>
+        <m label="skóre m">The 'm' score, which is private to this character.</m>
+        <n label="skóre n">The 'n' score, which is private to this character.</n>
+        <o label="skóre o">The 'o' score, which is private to this character.</o>
+        <p label="skóre p">The 'p' score, which is private to this character.</p>
+        <q label="skóre q">The 'q' score, which is private to this character.</q>
+        <r label="skóre r">The 'r' score, which is private to this character.</r>
+        <s label="skóre s">The 's' score, which is private to this character.</s>
+        <t label="skóre t">The 't' score, which is private to this character.</t>
+        <u label="skóre u">The 'u' score, which is private to this character.</u>
+        <v label="skóre v">The 'v' score, which is private to this character.</v>
+        <w label="skóre w">The 'w' score, which is private to this character.</w>
+        <x label="skóre x">The 'x' score, which is private to this character.</x>
+        <y label="skóre y">The 'y' score, which is private to this character.</y>
+        <z label="skóre z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="sebe">Proveď akci na postavě, která spouští tento program.</me>
+    <it label="to">Proveď akci na cílovém objektu.</it>
+    <any label="jakýkoliv">Jakýkoliv zvuk.</any>
+    <event>
+      <any label="jakýkoliv">Jakýkoliv zvuk.</any>
+      <silly>
+        <any label="pošetilý">Jakýkoliv pošetilý zvuk.</any>
+        <bang label="bang">Komiksový zvuk 'bang'.</bang>
+        <pow label="pow">Komiksový zvuk 'pow'.</pow>
+      </silly>
+      <explode>
+        <any label="výbuch">Jakýkoliv zvuk výbuchu.</any>
+        <A label="výbuch A">Zvuk exploze.</A>
+        <B label="výbuch B">Zvuk exploze.</B>
+        <C label="výbuch C">Zvuk exploze.</C>
+        <D label="výbuch D">Zvuk exploze.</D>
+        <E label="výbuch E">Zvuk exploze.</E>
+      </explode>
+      <musical>
+        <any label="hudební">Jakákoliv hudba.</any>
+        <glock>
+          <any label="zvonkohra">Jakýkoliv zvuk zvonkohry.</any>
+        </glock>
+        <glock01 label="C zvonkohra">Zvonkohra.</glock01>
+        <glock02 label="C# zvonkohra">Zvonkohra.</glock02>
+        <glock03 label="D zvonkohra">Zvonkohra.</glock03>
+        <glock04 label="D# zvonkohra">Zvonkohra.</glock04>
+        <glock05 label="E zvonkohra">Zvonkohra.</glock05>
+        <glock06 label="F zvonkohra">Zvonkohra.</glock06>
+        <glock07 label="F# zvonkohra">Zvonkohra.</glock07>
+        <glock08 label="G zvonkohra">Zvonkohra.</glock08>
+        <glock09 label="G# zvonkohra">Zvonkohra.</glock09>
+        <glock10 label="A zvonkohra">Zvonkohra.</glock10>
+        <glock11 label="A# zvonkohra">Zvonkohra.</glock11>
+        <glock12 label="B zvonkohra">Zvonkohra.</glock12>
+        <gong>
+          <any label="gong">Jakýkoliv zvuk gongu.</any>
+        </gong>
+        <gong01 label="C gong">Gong.</gong01>
+        <gong02 label="C# gong">Gong.</gong02>
+        <gong03 label="D gong">Gong.</gong03>
+        <gong04 label="D# gong">Gong.</gong04>
+        <gong05 label="E gong">Gong.</gong05>
+        <gong06 label="F gong">Gong.</gong06>
+        <gong07 label="F# gong">Gong.</gong07>
+        <gong08 label="G gong">Gong.</gong08>
+        <gong09 label="G# gong">Gong.</gong09>
+        <gong10 label="A gong">Gong.</gong10>
+        <gong11 label="A# gong">Gong.</gong11>
+        <gong12 label="B gong">Gong.</gong12>
+        <saw>
+          <any label="pila">Jakýkoliv zvuk pily.</any>
+        </saw>
+        <saw01 label="C pila">Pila.</saw01>
+        <saw02 label="C# pila">Pila.</saw02>
+        <saw03 label="D pila">Pila.</saw03>
+        <saw04 label="D# pila">Pila.</saw04>
+        <saw05 label="E pila">Pila.</saw05>
+        <saw06 label="F pila">Pila.</saw06>
+        <saw07 label="F# pila">Pila.</saw07>
+        <saw08 label="G pila">Pila.</saw08>
+        <saw09 label="G# pila">Pila.</saw09>
+        <saw10 label="A pila">Pila.</saw10>
+        <saw11 label="A# pila">Pila.</saw11>
+        <saw12 label="B pila">Pila.</saw12>
+        <sine>
+          <any label="sinusový">Jakýkoliv sinusový zvuk.</any>
+        </sine>
+        <sine01 label="C sinusový">Sinusový zvuk.</sine01>
+        <sine02 label="C# sinusový">Sinusový zvuk.</sine02>
+        <sine03 label="D sinusový">Sinusový zvuk.</sine03>
+        <sine04 label="D# sinusový">Sinusový zvuk.</sine04>
+        <sine05 label="E sinusový">Sinusový zvuk.</sine05>
+        <sine06 label="F sinusový">Sinusový zvuk.</sine06>
+        <sine07 label="F# sinusový">Sinusový zvuk.</sine07>
+        <sine08 label="G sinusový">Sinusový zvuk.</sine08>
+        <sine09 label="G# sinusový">Sinusový zvuk.</sine09>
+        <sine10 label="A sinusový">Sinusový zvuk.</sine10>
+        <sine11 label="A# sinusový">Sinusový zvuk.</sine11>
+        <sine12 label="B sinusový">Sinusový zvuk.</sine12>
+        <square>
+          <any label="čtvercový">Jakýkoliv čtvercový zvuk.</any>
+        </square>
+        <square01 label="C čtvercový">Čtvercový zvuk.</square01>
+        <square02 label="C# čtvercový">Čtvercový zvuk.</square02>
+        <square03 label="D čtvercový">Čtvercový zvuk.</square03>
+        <square04 label="D# čtvercový">Čtvercový zvuk.</square04>
+        <square05 label="E čtvercový">Čtvercový zvuk.</square05>
+        <square06 label="F čtvercový">Čtvercový zvuk.</square06>
+        <square07 label="F# čtvercový">Čtvercový zvuk.</square07>
+        <square08 label="G čtvercový">Čtvercový zvuk.</square08>
+        <square09 label="G# čtvercový">Čtvercový zvuk.</square09>
+        <square10 label="A čtvercový">Čtvercový zvuk.</square10>
+        <square11 label="A# čtvercový">Čtvercový zvuk.</square11>
+        <square12 label="B čtvercový">Čtvercový zvuk.</square12>
+        <drums>
+          <any label="bicí">Jakýkoliv zvuk bicích nástrojů.</any>
+        </drums>
+        <bassdrum label="basový buben">Basový buben.</bassdrum>  
+        <hhclosed label="hi-hat uzavřená">Hi-hat uzavřená.</hhclosed>  
+        <hhopen label="hi-hat otevřená">Hi-hat otevřená.</hhopen>  
+        <shaker label="shaker">Shaker.</shaker>
+        <snare label="rytmický buben">Rytmický buben.</snare>  
+        <tomlow label="hluboký tom">Hluboký tom.</tomlow>  
+        <tommed label="střední tom">Střední tom.</tommed>  
+        <tomhi label="vysoký tom">Vysoký tom.</tomhi>
+      </musical>
+      <arcade>
+        <any label="arcade">Jakýkoliv arkádový zvuk.</any>
+        <roboton label="robot zap">Zapnout robota.</roboton>
+        <robotoff label="robot vyp">Vypnout robota.</robotoff>
+        <coinsound label="mince">Zvuk mince.</coinsound>
+        <gethealth label="zdraví +">Zdraví navýšeno.</gethealth>
+        <losehealth label="zdraví -">Zdraví ztraceno.</losehealth>
+        <shoot label="výstřel">Zvuk výstřelu.</shoot>
+        <timer label="časovač">Zvuk časovače.</timer>
+        <win label="výhra">Zvuk výhry.</win>
+        <lose label="prohra">Zvuk prohry.</lose>
+		<inkjet_fire label="inkjet výstřel">Zvuk výstřelu ink jet.</inkjet_fire>
+        <inkjet_impact label="inkjet dopad">Zvuk dopadu ink jet.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="misc">Jakýkoliv ostatní zvuk.</any>
+		<countdown_beep label="odpočet">Odpočítávání.</countdown_beep>
+        <countdown_alarm label="alarm odpočet">Důrazné pípání při odpočítávání.</countdown_alarm>
+        <epic_stinger label="epic stinger">Zvuk epic stinger.</epic_stinger>
+        <epic_stinger_a label="epic stinger a">Zvuk epic stinger a.</epic_stinger_a>
+        <epic_stinger_b label="epic stinger b">Zvuk epic stinger b.</epic_stinger_b>
+        <firepoof label="vznícení">Zvuk vznícení.</firepoof>
+        <forcefieldup label="štít +">Zvuk zvýšení účinnosti štítu.</forcefieldup>
+        <forcefielddown label="štít -">Zvuk snížení účinnosti štítu.</forcefielddown>
+        <hide label="ukrytí">Zvuk ukrytí.</hide>
+        <lockontarget label="zaměřeno">Zvuk zaměření cíle.</lockontarget>
+        <losetarget label="ztraceno">Zvuk ztracení cíle.</losetarget>
+        <positivecondition label="dobře">Zvuk, stalo se něco dobrého.</positivecondition>
+        <negativecondition label="špatně">Zvuk, stalo se něco špatného.</negativecondition>
+		<points label="body">Zvuk získání bodů.</points>
+        <pop label="prasknutí">Zvuk prasknutí.</pop>
+        <popout label="vynoření">Zvuk vynoření.</popout>
+        <powerup label="powerup">Zvuk sebrání powerup-u.</powerup>
+        <servo label="servo">Zvuk serva.</servo>
+        <watersplash label="cákntí">Zvuk tekoucí vody.</watersplash>
+        <waterdrop label="kapka">Kapka vody.</waterdrop>
+        <tagbase label="tag base">Zvuk štítkování.</tagbase>
+        <whistlehuman label="hvízdnutí">Lidský pískot.</whistlehuman>
+        <whistlereferee label="hvizd rozhodčího">Pískot rozhodčího.</whistlereferee>
+      </misc>
+	  <tower>
+        <any label="věž">Zvuky přidané pro tower defense hru.</any>
+        <air_raid_siren label="letecký poplach">Zvuk leteckého poplachu.</air_raid_siren>
+        <bomb_fall label="padající bomba">Zvuk padající bomby.</bomb_fall>
+        <stun_fire label="omráčení">Zvuk omráčení.</stun_fire>
+        <zapper_fire label="paralyzér">Zvuk paralyzéru.</zapper_fire>
+        <missile_fire label="raketa">Zvuk vypálení rakety.</missile_fire>
+        <shrinker_fire label="shrinker fire">Zvuk ohýbačky.</shrinker_fire>
+        <clam_coin_spit label="mince">Zvuk spadnutí mince.</clam_coin_spit>
+        <enemy_converted label="přeměněný nepřítel">Zvuk pro proměnu nepřítele.</enemy_converted>
+        <enemy_escape label="únik nepřítele">Zvuk pro únik nepřítele.</enemy_escape>
+        <place_tower label="umístění věže">Zvuk pro umístění věže.</place_tower>
+        <star_collect label="hvězda sebraná">Zvuk pro sebranou hvězdu.</star_collect>
+        <coin_collect label="mince sebraná">Zvuk pro sebranou minci.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="hudba">Jakákoliv hudba z této skupiny.</any>
+      <omni>
+        <any label="všechny">Jakákoliv hudba z této skupiny.</any>
+      </omni>
+    </music>
+    <mu_action label="akce">Akce</mu_action>
+    <mu_ambientlight label="lehká">Lehká uklidňující hudba.</mu_ambientlight>
+    <mu_ambinetmodd label="nálada">Náladová hudba.</mu_ambinetmodd>
+    <mu_brightdowntempo label="pomalá">Zpomalující se hudba.</mu_brightdowntempo>
+    <mu_brightfunk label="funk">Funková hudba!</mu_brightfunk>
+    <mu_brightguitar label="kytarová">Kytarová hudba.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu theme.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="tajemná">Jakákoliv hudba z této skupiny.</any>
+      </mystery>
+    </music>
+    <mysterya label="tajemná A">Tajemná hudba.</mysterya>
+    <mysteryb label="tajemná B">Tajemná hudba.</mysteryb>
+    <mysteryc label="tajemná C">Tajemná hudba.</mysteryc>
+    <music>
+      <driving>
+        <any label="povzbuzující">Jakákoliv hudba z této skupiny.</any>
+      </driving>
+    </music>
+    <drivinga label="rychlá A">Rychlá, povzbuzující hudba.</drivinga>
+    <drivingb label="rychlá B">Rychlá, povzbuzující hudba.</drivingb>
+    <drivingc label="rychlá C">Rychlá, povzbuzující hudba.</drivingc>
+    <music>
+      <drama>
+        <any label="napínavá">Jakákoliv hudba z této skupiny.</any>
+      </drama>
+    </music>
+    <dramaa label="napínavá A">Napínavá hudba.</dramaa>
+    <dramab label="napínavá B">Napínavá hudba.</dramab>
+    <environ>
+      <any label="prostředí">Jakýkoliv zvuk z této skupiny.</any>
+      <ambocean label="oceán">Zvuky oceánu.</ambocean>
+      <ambforest label="les">Zvuky lesa.</ambforest>
+      <ambcity label="město">Zvuky města.</ambcity>
+      <ambmeadow label="louka">Zvuky louky.</ambmeadow>
+	  <ambmars label="Mars">Zvuky Marsu.</ambmars>
+      <arena>
+        <any label="aréna">Žádný zvuk arény.</any>
+        <a label="aréna A">Velký dav.</a>
+        <b label="aréna B">Velký dav.</b>
+        <c label="aréna C">Velký dav.</c>
+        <d label="aréna D">Velký dav.</d>
+        <e label="aréna E">Velký dav.</e>
+        <f label="aréna F">Velký dav.</f>
+        <g label="aréna G">Velký dav.</g>
+      </arena>
+    </environ>
+    <trackingnone label="plochá dráha">Raketa poletí přímo rovně a nemůže se pohybovat nahoru ani dolů.</trackingnone>
+    <trackinghoming label="naváděná">Raketa bude kopírovat povrch terénu a zkusí přeletět kopce a zdi.</trackinghoming>
+    <constraint>
+      <leftright label="vlevo/vpravo">Jdi pouze vlevo a vpravo.</leftright>
+      <fwdback label="vpřed/vzad">Jdi pouze dopředu a dozadu.</fwdback>
+      <updown label="nahoru/dolů" />
+      <northsouth label="S/J">Jdi pouze na server a na jih.</northsouth>
+      <eastwest label="V/Z">Jdi pouze na západ a na východ.</eastwest>
+      <immobile label="znehybni">Stůj, i při nárazu.</immobile>
+    </constraint>
+    <once label="jednou">Kód za DĚLEJ se provede jen jednou, při splnění podmínky KDYŽ.</once>
+	<watertype label="typ vody">Nastavit typ vody.</watertype>
+  </modifier>
+  <actuator>
+    <nothing label="žádný" />
+    <movement label="jdi">Cestuj kolem světa. Prozkoumej možnosti. Odlišné postavy se odlišně hýbou.</movement>
+    <turn label="otoč se">Změň směr, kterým se díváš.</turn>
+    <eat label="sněz">Sněz cílový objekt v dosahu.</eat>
+    <say label="řekni">Zobraz textovou zprávu v bublině nebo dialogu. Použij &lt;cr&gt; pro odřádkování.</say>
+    <open label="otevři">Pro každou postavu pracuje odlišně. Experiment!</open>
+    <close label="zavři">Pro každou postavu pracuje odlišně. Experiment!</close>
+    <kick label="kopni">Kopni cílový objekt v dosahu. Může se lišit silou.</kick>
+    <make label="vytvoř">Vytvoř další objekt. Můžeš vytvořit základní objekty nebo cokoli označeno jako Vytvořitelné.</make>
+    <launch label="odpál">Odpál cílový objekt v dosahu. Může se lišit silou.</launch>
+	<push label="tlač">Potlač cílový objekt v dosahu určitým směrem. Může se lišit silou</push>
+    <pull label="tahej">Potáhni cílový objekt v dosahu určitým směrem. Může se lišit silou.</pull>
+    <camouflage label="zamaskuj">Zamaskuj cílový objekt, bude těžké ho najít.</camouflage>
+    <uncamouflage label="odmaskuj">Odmaskuj cílový objekt, bude dobře viditelný.</uncamouflage>
+    <express label="emoce">Vyjádři emoci. Některé výrazy změní tvář postavy, zatímco jiné se zobrazí nad postavou.</express>
+    <color label="vybarvi">Změň svojí barvu nebo barvu cílového objektu.</color>
+    <glow label="začni zářit">Vysílá radioaktivní záření. Může změnit barvu.</glow>
+    <sound label="přehraj">Spusť přehrávání zvuku.! Vyberte si.</sound>
+    <stopsound label="ztiš">Zastav přehrávání zvuku.</stopsound>
+    <jump label="skoč">Každá postava doskočí do jiné výšky.</jump>
+    <watersurface label="vyplav">Podvodní postava vyplave na hladinu.</watersurface>
+    <waterdive label="ponoř">Podvodní postava se potopí na dno.</waterdive>
+    <airrise label="vzlétni">Létající postava vzlétne do nebe.</airrise>
+    <airdrop label="přistaň">Létající postava přistáne na zemi.</airdrop>
+    <switchtask label="přepni">Přepni na jinou stránku. Použita budou pouze pravidla na této stránce. Stránky jsou skutečně citlivé na změnu chování.</switchtask>
+    <inlinetask label="inline">Spustí vybraný kód z jiné stránky. To je užitečná pomůcka ve chvíli, kdy chceš stejný kód provádět na více stránkách.</inlinetask>
+	<nextlevel label="další úroveň">Načti další úroveň. Užitečné pro hry s více úrovněmi!</nextlevel>
+    <prevlevel label="předchozí úroveň">Načti předchozí úroveň. Užitečné pro hry s více úrovněmi</prevlevel>
+    <waterraise label="zvýš hladinu">Zvýš hladinu vody pod tímto objektem.</waterraise>
+    <waterlower label="sníž hladinu">Sníž hladinu vody pod tímto objektem.</waterlower>
+    <setwater label="nastav typ vody">Nastav typ vody pod tímto objektem.</setwater>
+    <rescale label="změn velikost">Změň plynule velikost objektu.</rescale>
+    <rescaleinstant label="změn velikost (ihned)">Změň okamžitě velikost objektu.</rescaleinstant>
+    <holddistance label="změn odstup">Změň plynule odstup od objektu.</holddistance>
+    <holddistanceinstant label="změň odstup(ihned)">Změň okamžitě odstup od objektu.</holddistanceinstant>
+    <movementspeedmodify label="rychlost pohybu">Nastav rychlost pohybu pro tento objekt.</movementspeedmodify>
+    <turningspeedmodify label="rychlost otáčení">Nastav rychlost otáčení pro tento objekt.</turningspeedmodify>
+    <worldlightingchange label="nasvíť svět">Nastav plynule nasvícení světa.</worldlightingchange>
+    <worldlightingchangeinstant label="nasvíť svět (ihned)">Nastav okamžitě nasvícení světa.</worldlightingchangeinstant>
+    <worldskychange label="nastav oblohu">Nastav plynule oblohu světa.</worldskychange>
+    <worldskychangeinstant label="nastav oblohu (ihned)">Nastav okamžitě oblohu světa.</worldskychangeinstant>
+    <shoot label="vystřel" />
+    <shoot2 label="vystřel">Vystřel kulky nebo rakety.</shoot2>
+	<beam label="vypál">Vypál laserový paprsek na skálu z Marsu pro určení jejího složení.</beam>
+    <inspect label="odeber vzorky">Odeber vzorky skály z Marsu pro budoucí zkoumání.</inspect>
+    <scan label="prohlídni">Prohlídni neznámé skály v okolí roveru.</scan>
+    <picture label="vyfoť">Získej obrázek z pohledu první osoby.</picture>
+    <damage label="poškození">Odeber zdraví sobě nebo cílové postavě.</damage>
+    <heal label="vyléč">Přidej zdraví sobě nebo cílové postavě.
+        Uzdraviení postavy nebo cílového objektu odstraní poškození. Standardně je vyléčen cílový objekt; moje postava může být vyléčena přidáním "sebe" dlaždice. Další dlaždice můžou upřesnit typ a množství vyléčených bodů.</heal>
+    <zap label="omráč">Omráč sebe sama nebo cílovou postavu na několik sekund.</zap>
+    <pop label="knockoutuj">Knockoutuj sebe nebo cílovou postavu dokud jí někdo jiný nevyléčí.</pop>
+    <boom label="výbuchen">Nech vybuchnout sebe nebo cílový objekt.</boom>
+    <vanish label="zmiz">Nech tiše zmizet sebe nebo cíl.</vanish>
+    <grab label="vezmi">Seber cílový objekt v dosahu. V jednu chvíli můžeš nést pouze jednu věc.</grab>
+    <drop label="pusť">Pusť cokoli co právé držíš.</drop>
+    <give label="dej">Předej cokoli co právé držíš cílové postavě. Pokud to postava nemůže vzít, objekt spadne.</give>
+    <reset label="resetuj">Resetuj průběh hry nebo postavy.</reset>
+    <restart label="restartuj">Restartuj průběh hry nebo postavy.</restart>
+    <gameover label="prohra">Ukonči prohranou hru a zobraz zprávu o prohře.</gameover>
+    <victory label="vítězství">Ukonči hru a zobraz zprávu o výhře. Můžeš určit barvu ve které bude zpráva zobrazena.</victory>
+    <score label="přičti">Přičti body ke skóre.</score>
+    <unscore label="odečti">Odečti body ze skóre.</unscore>
+	<scoreset label="nastav skóre">Nastav skóre na určitou hodnotu.</scoreset>
+    <camera>
+      <followme label="následuj">Pohled kamery bude následovat tuto postavu.</followme>
+      <ignoreme label="ignoruj">Pohled kamery se nezajíma se o udržení postavy v pohledu.</ignoreme>
+      <firstperson label="1. osoba">Podívaej se na svět očima této postavy.</firstperson>
+    </camera>
+  </actuator>
+  <root />
+  <group>
+    <colors label="barvy" />
+	<pathcolors label="barvy cesty" />
+    <game label="hra" />
+    <more label="víc" />
+    <players label="hráči" />
+    <playermods label="hráči" />
+    <actions label="akce" />
+	<settings label="nastavení" />
+    <combat label="bojové akce" />
+	<rover label="rover" />
+    <holding label="držení" />
+    <sounds label="zvuky" />
+    <event label="událost">
+      <explode label="exploze" />
+      <silly label="pošetilý" />
+      <musical label="hudební">
+        <glock label="zvonkohra" />
+        <saw label="pila" />
+        <sine label="sinusová" />
+        <gong label="gong" />
+        <square label="čtvercová" />
+        <drums label="bicí" />
+      </musical>
+      <arcade label="arkádová" />
+      <misc label="ostatní" />
+	  <tower label="věž" />
+    </event>
+    <environ label="prostředí">
+      <forest label="les" />
+      <arena label="aréna" />
+    </environ>
+    <music label="hudba">
+      <omni label="nová" />
+      <mystery label="tajemná" />
+      <driving label="povzbuzující" />
+      <drama label="napínavá" />
+    </music>
+    <constraints label="omezení" />
+    <directions label="směrem" />
+    <filters>
+      <directions label="instrukce" />
+	  <touchbuttons label="tlačítka" />
+      <touchGuiButtons label="Tlačítka" />
+      <gestures label="gestá" />
+    </filters>
+    <expressions label="emoce" />
+    <projectiles label="projektil" />
+    <camera label="pohled" />
+    <reset label="resetovat" />
+    <options label="volby" />
+    <compare label="porovnat" />
+    <points label="body" />
+    <time label="čas" />
+    <speed label="rychlost" />
+    <strength label="síla" />
+    <angle label="loft" />
+    <tracking label="sledování" />
+    <bots label="boti I" />
+    <bots2 label="boti II" />
+    <objects label="objekty" />
+    <tasks label="úkol" />
+    <terrains label="typy terénu" />
+    <waters label="typy vody" />
+	<setwater label="typ vody" />
+    <creatables label="vytvořitelné" />
+    <keyboard>
+      <letters label="písmená" />
+      <numbers label="čísla" />
+      <symbols label="symboly" />
+      <misc label="ostatní" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

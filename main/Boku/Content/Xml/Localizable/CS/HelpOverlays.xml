@@ -1,0 +1,2650 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlOverlayData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <overlay>
+    <id>MiniHub</id>
+    <a>Vybrat</a>
+    <back>Pokračovat</back>
+    <bottom>Kdykoli stiskněte &lt;start&gt; pro návrat na tuto obrazovku.</bottom>
+
+    <keyMouse>
+      [Enter] Vybrat
+    </keyMouse>
+    <keyMouseBottom>Kdykoli stiskněte [home] pro návrat na tuto obrazovku.</keyMouseBottom>
+	    <touch></touch>
+    <touchBottom>Kdykoli klikněte na [home] pro návrat na tuto obrazovku.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMessageDialog</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>LoadLevelMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Stiskněte <![CDATA[<back>]]> pro návrat na předchozí nabídku.</bottom>
+
+    <keyMouseBottom>Stiskněte [Esc] pro návrat na předchozí nabídku.</keyMouseBottom>
+    <touchBottom>Klikněte sem pro návrat na předchozí nabídku.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>LoadLevelPopup</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>SelectNextLevel</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Stiskněte <![CDATA[<back>]]> pro návrat na předchozí nabídku.</bottom>
+
+    <keyMouseBottom>Stiskněte [Esc] pro návrat na předchozí nabídku.</keyMouseBottom>
+    <touchBottom>Klikněte sem pro návrat na předchozí nabídku.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditBase</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Mouse Edit Base</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditHome</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Hlavní menu</keyMouseBottom>
+	<touch></touch>
+    <touchBottom>Hlavní menu</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPlay</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Spustit hru</keyMouseBottom>
+	<touch></touch>
+    <touchBottom>Spustit hru</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditCameraMove</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Posunout terén
+      &lt;rightmouse&gt; Změnit pohled kamery
+      &lt;middlemouse&gt; Přiblížit/Oddálit
+      [Tab] Najít další postavu
+
+    </keyMouse>
+    <keyMouseBottom>Posunout kameru</keyMouseBottom>
+	<touch>
+      &lt;doubleDrag&gt; Přesunout terén
+      &lt;drag&gt; Pevná kamera
+      &lt;rotate&gt; Orbitální kamera
+      &lt;pinch&gt; Přiblížit
+    </touch>
+    <touchBottom>Posunout kameru</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditAddItemPieMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>  
+  
+  <overlay>
+    <id>MouseEditEditObject</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Přidat/Vybrat objekt
+      &lt;rightmouse&gt; Možnosti
+
+      HelpLevelMid
+      [F3] Přichytit k mřížce
+      [Tab] Najít další postavu
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</keyMouseBottom>
+	
+	<touch>
+      &lt;doubleTap&gt; Přidat objekt     
+      &lt;tap&gt; Vybrat objekt
+      &lt;drag&gt; Přesunout objekt
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocus</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Posunout objekt
+      &lt;rightmouse&gt; Možnosti
+      [leftarrow][rightarrow] Změnit barvu
+
+      HelpLevelMid
+      [F3] Přichytit k mřížce
+      [Tab] Najít další postavu
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</keyMouseBottom>
+	
+	<touch>
+      &lt;doubleTap&gt; Přidat objekt
+      &lt;tap&gt; Vybrat objekt
+      &lt;drag&gt; Přesunout objekt
+      &lt;touchHold&gt; Možnosti
+      &lt;rotate&gt; Otočit objekt
+      &lt;pinch&gt; Měřítko objektu
+    </touch>
+    <touchBottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</touchBottom>  
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocusTree</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Posunout objekt
+      &lt;rightmouse&gt; Možnosti
+      [leftarrow][rightarrow] Změnit barvu
+      [uparrow][downarrow] Změnit typ stromu
+
+      HelpLevelMid
+      [F3] Přichytit k mřížce
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</keyMouseBottom>
+	
+	<touch>
+      &lt;doubleTap&gt; Přidat objekt
+      &lt;tap&gt; Vybrat objekt
+      &lt;drag&gt; Přesunout objekt
+      &lt;touchHold&gt; Možnosti
+      &lt;rotate&gt; Otočit objekt
+      &lt;pinch&gt; Měřítko objektu
+    </touch>
+    <touchBottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPaths</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Posunout uzel nebo hranu
+      &lt;rightmouse&gt; Možnosti
+      [shift] Vybrat celou cestu
+
+      HelpLevelMid
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nástroj cesty: Přidat nebo odebrat cesty</keyMouseBottom>
+	
+	<touch>
+      &lt;tap&gt; Vybrat uzel nebo roh
+      &lt;drag&gt; Přesunout uzel nebo roh
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Nástroj cesty: Přidat nebo odebrat cesty</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditPathsAllPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Vybrat uzel nebo roh
+      &lt;rightmouse&gt; Možnosti
+      [Shift] Objekty na celé cestě
+
+      HelpLevelMid
+      [Space] Přesunout kameru
+      [Home] Hlavní menu
+      [Esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nástroj cesty: Přidat nebo odebrat cesty</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Vybrat cestu
+      &lt;drag&gt; Přesunout cestu
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Nástroj cesty: Přidat nebo odebrat cesty</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAddPath</id>
+    <keyMouse>
+      &lt;leftmouse&gt; Přesunout uzel nebo roh
+      &lt;rightmouse&gt; Možnosti
+      [Shift] Objekty na celé cestě
+
+      HelpLevelMid
+      [Space] Přesunout kameru
+      [Home] Hlavní menu
+      [Esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nástroj cesty: Přidat nebo odebrat cesty</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Přidat uzel nebo připojit k uzlu
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Nástroj cesty: Přidat cesty</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeletePath</id>
+    <touch>
+      &lt;tap&gt; Vymazat celou cestu
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Nástroj cesty: Odebrat cesty</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeleteNode</id>
+    <touch>
+      &lt;tap&gt; Vymazat uzel
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Nástroj cesty: Odebrat uzly</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditPathsFocusNode</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Posunout uzel
+      &lt;rightmouse&gt; Možnosti
+      [shift] Vybrat celou cestu
+      [leftarrow][rightarrow] Změnit barvu
+      [uparrow][downarrow] Změnit styl cesty
+
+      HelpLevelMid
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nástroj cesty: Přidat nebo odebrat cesty</keyMouseBottom>
+	
+	<touch>
+      &lt;tap&gt; Vybrat uzel
+      &lt;drag&gt; Přesunout uzel
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Nástroj cesty: Přidat nebo odebrat cesty</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusEdge</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Posunout hranu
+      &lt;rightmouse&gt; Možnosti
+      [shift] Vybrat celou cestu
+      [leftarrow][rightarrow] Změnit barvu
+
+      HelpLevelMid
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nástroj cesty: Přidat nebo odebrat cesty</keyMouseBottom>
+	
+	<touch>
+      &lt;tap&gt; Vybrat roh
+      &lt;drag&gt; Přesunout roh
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Nástroj cesty: Přidat nebo odebrat cesty</touchBottom>    
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Posunout cestu
+      &lt;rightmouse&gt; Možnosti
+      [shift] Vybrat celou cestu
+      [leftarrow][rightarrow] Změnit barvu
+
+      HelpLevelMid
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nástroj cesty: Přidat nebo odebrat cesty</keyMouseBottom>
+	
+	<touch>
+      &lt;tap&gt; Vyberte cestu
+      &lt;drag&gt; Přesunout cestu
+      &lt;touchHold&gt; Možnosti
+    </touch>
+    <touchBottom>Nástroj cesty: Přidat nebo odebrat cesty</touchBottom>  
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainPaint</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Obarvit nebo přidat terén
+      [shift] +&lt;leftmouse&gt; Obarvit terén
+      [ctrl] +&lt;leftmouse&gt; Přidat terén
+      &lt;rightmouse&gt; Vymazat
+
+      [leftarrow][rightarrow] Změnit velikost štětce
+
+      HelpLevelMid
+      [alt] Vybrat barvu z terénu
+      [F3] Přichytit k mřížce
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Štětec terénu: Obarvit, přidat nebo vymazat terén</keyMouseBottom>
+	
+	<touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;drag&gt; Přesunout štětec
+    </touch>
+    <touchBottom>Štětec terénu: Obarvit, přidat nebo vymazat terén</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainPaintSmooth</id>
+
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;drag&gt; Přidat a obarvit materiál (hladce)
+    </touch>
+    <touchBottom>Štětec terénu: Obarvit a přidat terén (hladce)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintCubic</id>
+
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;drag&gt; Přidat a obarvit materiál (kubicky)
+    </touch>
+    <touchBottom>Štětec terénu: Obarvit a přidat terén (kubicky)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainDelete</id>
+
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;drag&gt; Odebrat terén
+    </touch>
+    <touchBottom>Štětec terénu: Odebrat terén</touchBottom>
+  </overlay>
+    
+  <overlay>
+    <id>MouseEditTerrainPaintMagicBrush</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Obarvit nebo přidat terén
+      [shift] +&lt;leftmouse&gt; Obarvit terén
+      [ctrl] +&lt;leftmouse&gt; Přidat terén
+      &lt;rightmouse&gt; Vymazat
+
+      [leftarrow][rightarrow] Změnit velikost štětce
+      [uparrow] Styl: krychle
+      [downarrow] Styl: hladký
+
+      HelpLevelMid
+      [alt] Vybrat barvu z terénu
+      [F3] Přichytit k mřížce
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Štětec terénu: Obarvit, přidat nebo vymazat terén</keyMouseBottom>
+	
+	<touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Přesunout štětec
+      &lt;drag&gt; Obarvit a přidat materiál
+    </touch>
+    <touchBottom>Štětec terénu: Obarvit, přidat nebo vymazat terén</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Zvýšit terén
+      &lt;middlemouse&gt; Vyhladit terén
+      &lt;rightmouse&gt; Snížit terén
+
+      [leftarrow][rightarrow] Změnit velikost štětce
+
+      HelpLevelMid
+      [F3] Přichytit k mřížce
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nahoru/Dolů: Vytvořit kopce a údolí</keyMouseBottom>
+	
+	<touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Přesunout štětec
+    </touch>
+    <touchBottom>Nahoru/Dolů: Vytvořit kopce a údolí</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainRaising</id>
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;drag&gt; Zvýšit terén
+    </touch>
+    <touchBottom>Nahoru/Dolů: Vytvořit kopce a údolí</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainLowering</id>
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;drag&gt; Snížit terén
+    </touch>
+    <touchBottom>Nahoru/Dolů: Vytvořit kopce a údolí</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Vyhladit
+      &lt;middlemouse&gt; Vyhladit terén
+      &lt;rightmouse&gt; Srovnat terén
+
+      [leftarrow][rightarrow] Změnit velikost štětce
+
+      HelpLevelMid
+      [F3] Přichytit k mřížce
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Srovnat: Vyhladit nebo srovnat terén</keyMouseBottom>
+	<touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Přesunout štětec
+    </touch>
+    <touchBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleFlatten</id>
+    
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;drag&gt; Zdrsnit terén
+    </touch>
+    <touchBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleSmooth</id>
+
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;drag&gt; Zjemnit terén
+    </touch>
+    <touchBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Zubatý terén
+      &lt;middlemouse&gt; Vyhladit terén
+      &lt;rightmouse&gt; Kopcovitý terén
+
+      [leftarrow][rightarrow] Změnit velikost štětce
+
+      HelpLevelMid
+      [F3] Přichytit k mřížce
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</keyMouseBottom>
+	<touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Přesunout štětec
+    </touch>
+    <touchBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSmooth</id>
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Zjemnit terén
+    </touch>
+    <touchBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleHilly</id>
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Vytvořit koce
+    </touch>
+    <touchBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSpikey</id>
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Vytvořit údolí
+    </touch>
+    <touchBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditWaterRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Zvýšit hladinu vody
+      &lt;middlemouse&gt; Změnit barvu vody
+      &lt;rightmouse&gt; Snížit hladinu vody
+
+      HelpLevelMid
+      [F3] Přichytit k mřížce
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nástroj vody: Přidat, odebrat nebo obarvit vodu</keyMouseBottom>
+		<touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Přesunout štětec
+    </touch>
+    <touchBottom>Nástroj vody: Přidat, odebrat nebo obarvit vodu</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleRaise</id>
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Zvýšit úroveň vody
+    </touch>
+    <touchBottom>Nástroj vody: Přidat, odebrat nebo obarvit vodu</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleLower</id>
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Snížit úroveň vody
+    </touch>
+    <touchBottom>Nástroj vody: Přidat, odebrat nebo obarvit vodu</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditDeleteObjects</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Vymazat
+      &lt;rightmouse&gt; Nic, pokračovat dál
+
+      [leftarrow][rightarrow] Změnit velikost štětce
+
+      HelpLevelMid
+      [F3] Přichytit k mřížce
+      [space] Posunout kameru
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Vymazat objekty</keyMouseBottom>
+
+	<touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Přesunout štětec
+    </touch>
+    <touchBottom>Vymazat: Použijte objekty pro vymazání objektů</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditDeleteObjects_Deleting</id>
+    <touch>
+      &lt;brushBigger&gt; Zvětšit velikost štětce
+      &lt;brushSmaller&gt; Zmenšit velikost štětce
+      &lt;tap&gt; Vymazat objekty
+    </touch>
+    <touchBottom>Vymazat: Použijte objekty pro vymazání objektů</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditWorldTweak</id>
+
+    <keyMouse>
+      Nastavení světa
+
+      HelpLevelMid
+      [home] Hlavní menu
+      [esc] Spustit
+    </keyMouse>
+    <keyMouseBottom>Nastavení světa</keyMouseBottom>
+	<touchBottom>Nastavení světa</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditSlider</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit hodnotu
+      [esc] Potvrdit
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenu</id>
+    <!-- Placeholder, should not be seen. -->
+    <back>Spustit hru</back>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenuRunSim</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Spustit hru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Spustit hru</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      HelpLevelMid
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Spustit hru</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuHomeMenu</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Hlavní menu</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Hlavní menu</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      HelpLevelMid
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Spustit hru</keyMouseBottom>
+	<touchBottom>Spustit hru</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuObjectEdit</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</keyMouseBottom>
+	<touchBottom>Objektový nástroj: Přidat nebo upravit postavy a objekty</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuDeleteObjects</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Vymazat objekty</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Vymazat objekty: Použít štětec pro vymazání objektů</keyMouseBottom>
+	<touchBottom>Vymazat objekty: Použít štětec pro vymazání objektů</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSmoothLevel</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Srovnat: Vyhladit nebo srovnat terén</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Srovnat: Vyhladit nebo srovnat terén</keyMouseBottom>
+	<touchBottom>Srovnat: Vyhladit nebo srovnat terén</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainMaterial</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Štětec terénu: Přidat nebo vymazat terén</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Štětec terénu: Obarvit, přidat nebo vymazat terén</keyMouseBottom>
+	<touchBottom>Štětec terénu: Obarvit, přidat nebo vymazat terén</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSpikeyHilly</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</keyMouseBottom>
+	<touchBottom>Zdrsnit: Vytvořit zubatý nebo kopcovitý terén</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainUpDown</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Nahoru/Dolů: Vytvořit kopce a údolí</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Nahoru/Dolů: Vytvořit kopce a údolí</keyMouseBottom>
+	<touchBottom>Nahoru/Dolů: Vytvořit kopce a údolí</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainWater</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Nástroj vody: Přidat, odebrat nebo obarvit vodu</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Nástroj vody: Přidat, odebrat nebo obarvit vodu</keyMouseBottom>
+	<touchBottom>Nástroj vody: Přidat, odebrat nebo obarvit vodu</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuWorldSettings</id>
+    <back>Spustit hru</back>
+    <start>Hlavní menu</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Nástroj výběru</a>
+    <leftStick mid = "false">Posunout kurzor</leftStick>
+    <rightStick mid = "false">Změnit pohled kamery</rightStick>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+    <leftShoulder mid = "false">Oddálit</leftShoulder>
+    <rightShoulder mid = "false">Přiblížit</rightShoulder>
+    <bottom>Nastavení světa</bottom>
+
+    <keyMouse>
+      [esc] Spustit hru
+      [home] Hlavní menu
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+    </keyMouse>
+    <keyMouseBottom>Nastavení světa</keyMouseBottom>
+	<touchBottom>Nastavení světa</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>BrushPickerSquare</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Čtvercový štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Čtvercový štětec</keyMouseBottom>
+	<touchBottom>Čtvercový štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSquareLinear</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Rovný čtvercový štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Rovný čtvercový štětec</keyMouseBottom>
+	<touchBottom>Rovný čtvercový štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRound</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Tvrdý kulatý štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Tvrdý kulatý štětec</keyMouseBottom>
+	<touchBottom>Tvrdý kulatý štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRound</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Střední kulatý štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Střední kulatý štětec</keyMouseBottom>
+	<touchBottom>Střední kulatý štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRound</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Měkký kulatý štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Měkký kulatý štětec</keyMouseBottom>
+	<touchBottom>Měkký kulatý štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRoundLinear</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Lineární tvrdý kulatý štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Lineární tvrdý kulatý štětec</keyMouseBottom>
+	<touchBottom>Lineární tvrdý kulatý štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRoundLinear</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Lineární střední kulatý štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Lineární střední kulatý štětec</keyMouseBottom>
+	<touchBottom>Lineární střední kulatý štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRoundLinear</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Lineární měkký kulatý štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Lineární měkký kulatý štětec</keyMouseBottom>
+	<touchBottom>Lineární měkký kulatý štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottled</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Strakatý štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Strakatý štětec</keyMouseBottom>
+	<touchBottom>Strakatý štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottledLinear</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Lineární strakatý štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Lineární strakatý štětec</keyMouseBottom>
+	<touchBottom>Lineární strakatý štětec</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMagic</id>
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <b>Zrušit</b>
+    <a>Vybrat štětec</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Kouzelný štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+    <keyMouseBottom>Kouzelný štětec</keyMouseBottom>
+	<touchBottom>Kouzelný štětec</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>CameraSetMode</id>
+    <a>Potvrdit</a>
+    <bottom>Přesuňte kameru do požadované pozice a poté stiskněte &lt;A&gt;</bottom>
+
+    <keyMouse>
+      [enter] Potvrdit
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+    </keyMouse>
+    <keyMouseBottom>Přesuňte kameru do požadované pozice a poté stiskněte [enter]</keyMouseBottom>
+	<touch>
+      &lt;doubleDrag&gt; Přesunout terén
+      &lt;drag&gt; Pevná kamera
+      &lt;rotate&gt; Orbitální kamera
+      &lt;pinch&gt; Přiblížit
+    </touch>
+
+    <touchBottom>Přesuňte kameru do požadované pozice a poté klikněte sem</touchBottom>
+  </overlay>
+
+  <!--Object edit permutations-->
+  <overlay>
+    <!-- Nothing Selected, nothing moused, something in the clipboard-->
+    <id>ObjectEdit</id>
+    <y></y>
+    <x></x>
+    <b>Menu nástrojů</b>
+    <a>Přidat</a>
+
+    <leftTrigger ghosted = "true">Vyjmout</leftTrigger>
+    <rightTrigger ghosted = "false">Vložit</rightTrigger>
+
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [alt]+&lt;leftmouse&gt; Vložit
+      [space]+&lt;leftmouse&gt; Přidat
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Nothing Selected, nothing moused, nothing in the clipboard-->
+    <id>ObjectEditEmptyClipboard</id>
+    <y></y>
+    <x></x>
+    <b>Menu nástrojů</b>
+    <a>Přidat</a>
+
+    <leftTrigger ghosted = "true">Vyjmout</leftTrigger>
+    <rightTrigger ghosted = "true">Vložit</rightTrigger>
+
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [space]+&lt;leftmouse&gt; Přidat
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Something Selected (picked up, red), nothing moused.
+    Selected thing isn't programmable. This never happens any more, since everything except the cursor
+    and waypoints (handled elsewhere) is programmable.
+    -->
+    <id>ObjectEditSelected</id>
+    <y></y>
+    <x>Nastavení</x>
+    <a>Vložit sem</a>
+    <leftTrigger>Vyjmout</leftTrigger>
+    <rightTrigger>Klonovat</rightTrigger>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <dpadVertical>Posunout nahoru/dolů</dpadVertical>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something Selected (picked up, red), nothing moused. Selected thing is a gameactor.-->
+    <id>ObjectEditSelectedProgrammable</id>
+    <y>Naprogramovat</y>
+    <x>Nastavení</x>
+    <a>Vložit sem</a>
+    <leftTrigger>Vyjmout</leftTrigger>
+    <rightTrigger>Klonovat</rightTrigger>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <dpadVertical>Posunout nahoru/dolů</dpadVertical>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something cursored (not picked up, blue), nothing moused. Cursored thing is not a gameactor.
+    This isn't useful anymore, since everything is programmable except the cursor and
+    waypoints (handled elsewhere)
+    -->
+    <id>ObjectEditFocus</id>
+    <y></y>
+    <x>Nastavení</x>
+    <b>Menu nástrojů</b>
+    <a>Zvednout</a>
+    <leftTrigger>Vyjmout</leftTrigger>
+    <rightTrigger>Klonovat</rightTrigger>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <dpadVertical>Změnit velikost</dpadVertical>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <!-- GameActor cursored (not picked up, blue), nothing moused.-->
+    <id>ObjectEditFocusProgrammable</id>
+    <y>Naprogramovat</y>
+    <x>Nastavení</x>
+    <b>Menu nástrojů</b>
+    <a>Zvednout</a>
+    <leftTrigger>Vyjmout</leftTrigger>
+    <rightTrigger>Klonovat</rightTrigger>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <dpadVertical>Změnit velikost</dpadVertical>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <!--And one for the trees-->
+  <overlay>
+    <!--A Tree is cursored (not picked up), nothing highlighted.-->
+    <id>TreeEditFocusProgrammable</id>
+    <y>Naprogramovat</y>
+    <x>Nastavení</x>
+    <b>Menu nástrojů</b>
+    <a>Zvednout</a>
+    <leftTrigger>Vyjmout</leftTrigger>
+    <rightTrigger>Klonovat</rightTrigger>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <dpadVertical>Změnit typ</dpadVertical>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Naprogramovat
+      [X] Nastavení
+      [leftarrow][rightarrow] Změnit barvu
+      [uparrow][downarrow] Změnit velikost
+
+      &lt;leftmouse&gt; Posunout
+      [shift]+&lt;leftmouse&gt; Zvýšit/Snížit
+      [shift]+&lt;rightmouse&gt; Otočit
+
+      [space]+&lt;leftmouse&gt; Přidat
+      [alt]+&lt;leftmouse&gt; Klonovat
+      [ctrl]+&lt;leftmouse&gt; Vyjmout
+
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>TreeEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Naprogramovat
+      [X] Nastavení
+      [leftarrow][rightarrow] Změnit barvu
+      [uparrow][downarrow] Změnit velikost
+      [tab] Změnit typ
+
+      &lt;leftmouse&gt; Posunout
+      [shift]+&lt;leftmouse&gt; Zvýšit/Snížit
+      [shift]+&lt;rightmouse&gt; Otočit
+
+      [space]+&lt;leftmouse&gt; Přidat
+      [alt]+&lt;leftmouse&gt; Klonovat
+      [ctrl]+&lt;leftmouse&gt; Vyjmout
+
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+  <!--End of the Object edit permutations-->
+
+  <overlay>
+    <id>ObjectTweak</id>
+    <y></y>
+    <x></x>
+    <b>Menu nástrojů</b>
+    <a></a>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocus</id>
+    <y></y>
+    <x></x>
+    <b>Menu nástrojů</b>
+    <a>Změnit nastavení</a>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocusProgrammable</id>
+    <y>Naprogramovat</y>
+    <x></x>
+    <b>Menu nástrojů</b>
+    <a>Změnit nastavení</a>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>TextDisplay</id>
+    <a>Pokračovat</a>
+  </overlay>
+
+  <overlay>
+    <id>ScrollableTextDisplay</id>
+    <a>Pokračovat</a>
+    <leftStick>Posunout text</leftStick>
+  </overlay>
+
+  <overlay>
+    <id>PieSelectorProgrammingNoSelection</id>
+    <b>Zrušit</b>
+    <leftStick>Vybrat dlaždici</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorProgramming</id>
+    <a>Přidat dlaždici</a>
+    <b>Zrušit</b>
+    <y>Nápověda</y>
+    <leftStick>Vybrat položku</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItemNoSelection</id>
+    <b>Zrušit</b>
+    <leftStick>Vybrat položku</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItem</id>
+    <a>Přidat výběr</a>
+    <b>Zrušit</b>
+    <y>Nápověda</y>
+    <leftStick>Vybrat položku</leftStick>
+  </overlay>
+  <overlay>
+    <id>HelpCardProgramming</id>
+  </overlay>
+  <overlay>
+    <id>HelpCardAddItem</id>
+  </overlay>
+
+  <overlay>
+    <id>ToolBox</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>BasePicker</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>BrushPicker</id>
+    <y></y>
+    <x></x>
+
+    <b>Zrušit</b>
+    <a>Potvrdit</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Vybrat štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMaterial</id>
+    <!-- Placeholder, should not be seen. -->
+    <y>Potvrdit a přejít na výběr materiálu</y>
+    <x></x>
+
+    <b>Zrušit</b>
+    <a>Potvrdit</a>
+    <leftTrigger>Předchozí štětec</leftTrigger>
+    <rightTrigger>Další štětec</rightTrigger>
+    <bottom>Vyber štětec</bottom>
+
+    <keyMouse>
+      [Y] Potvrdit a přejít na výběr materiálu
+      [leftarrow][rightarrow] Změnit štětec
+      [enter] Vybrat štětec
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialPicker</id>
+    <y>Vybrat materiál pod kurzorem</y>
+    <x>Potvrdit a přejít na výběr štětce</x>
+    <b>Zrušit</b>
+    <a>Potvrdit</a>
+    <dpadVertical>Styl: krychle</dpadVertical>
+    <dpadDown>Styl: hladký</dpadDown>
+    <leftTrigger>Předchozí materiál</leftTrigger>
+    <rightTrigger>Další materiál</rightTrigger>
+    <bottom>Vybrat materiál</bottom>
+
+    <keyMouse>
+      [X] Potvrdit a přejít na výběr štětců
+      [leftarrow][rightarrow] Změnit materiál
+      [uparrow] Styl: Krychle
+      [downarrow] Styl: Hladký
+      [enter] Vybrat materiál
+      &lt;leftmouse&gt; Vybrat materiál pod kurzorem
+      [Alt] + &lt;leftmouse&gt;  Vybrat materiál ze světa
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialFilterPicker</id>
+    <y>Vybrat materiál pod robotem</y>
+    <x></x>
+    <b>Zrušit</b>
+    <a>Potvrdit</a>
+    <leftTrigger>Předchozí materiál</leftTrigger>
+    <rightTrigger>Další materiál</rightTrigger>
+    <bottom>Vyber materiál</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit materiál
+      [enter] Vybrat materiál
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>WaterPicker</id>
+    <y>Vybrat vodu pod kurzorem</y>
+    <x></x>
+    <leftTrigger>Předchozí voda</leftTrigger>
+    <rightTrigger>Další voda</rightTrigger>
+
+    <b>Zrušit</b>
+    <a>Potvrdit</a>
+    <bottom>Vybrat typ vody</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit typ vody
+      [enter] Vybrat typ vody
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>HeightMapTool</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a>Vyhladit</a>
+    <leftTrigger>Snížit</leftTrigger>
+    <rightTrigger>Zvýšit</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Snížit
+      [alt]+&lt;leftmouse&gt; Vyhladit
+      [space]+&lt;leftmouse&gt; Zvýšit
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolStart</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Přeskočit</b>
+    <a>Vyhladit</a>
+    <leftTrigger>Snížit terén</leftTrigger>
+    <rightTrigger>Zvýšit terén</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Snížit
+      [alt]+&lt;leftmouse&gt; Vyhladit
+      [space]+&lt;leftmouse&gt; Zvýšit
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Přeskočit řádek
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolGoing</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a>Vyhladit</a>
+    <leftTrigger>Snížit terén</leftTrigger>
+    <rightTrigger>Zvýšit terén</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Snížit
+      [alt]+&lt;leftmouse&gt; Vyhladit
+      [space]+&lt;leftmouse&gt; Zvýšit
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>AddTool</id>
+    <y>Výběr materiálu</y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a>Změnit barvu terénu</a>
+    <leftTrigger>Vymazat terén</leftTrigger>
+    <rightTrigger>Přidat terén</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Výběr materiálu
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Vymazat terén
+      [alt]+&lt;leftmouse&gt; Změnit barvu terénu
+      [space]+&lt;leftmouse&gt; Přidat terén
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolMagicBrush</id>
+    <y>Vybrat materiál</y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a>Změnit barvu terénu</a>
+    <leftTrigger>Vymazat terén</leftTrigger>
+    <rightTrigger ghosted = "true">Přidat terén</rightTrigger>
+
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <dpadVertical>Styl: rychle</dpadVertical>
+    <dpadDown>Styl: hladký</dpadDown>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Vybrat materiál
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+      [uparrow] Styl: Krychle
+      [downarrow] Styl: Hladký
+
+      [ctrl]+&lt;leftmouse&gt; Vymazat terén
+      [alt]+&lt;leftmouse&gt; Změnit barvu terénu
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+
+  </overlay>
+  <overlay>
+    <id>AddToolStart</id>
+    <y>Vybrat materiál</y>
+    <x>Vybrat štětec</x>
+    <b>Přeskočit</b>
+    <a>Změnit materiál</a>
+    <leftTrigger>Vymazat</leftTrigger>
+    <rightTrigger>Přidat</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Vybrat materiál
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Vymazat terén
+      [alt]+&lt;leftmouse&gt; Změnit barvu terénu
+      [space]+&lt;leftmouse&gt; Přidat terén
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Přeskočit řádek
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolGoing</id>
+    <y>Vybrat materiál</y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a>Změnit materiál</a>
+    <leftTrigger>Vymazat</leftTrigger>
+    <rightTrigger>Přidat</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Vybrat materiál
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Vymazat terén
+      [alt]+&lt;leftmouse&gt; Změnit barvu terénu
+      [space]+&lt;leftmouse&gt; Přidat terén
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>NoiseTool</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a>Vyhladit</a>
+    <leftTrigger>Špičatý</leftTrigger>
+    <rightTrigger>Kopcovitý</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Kopcovitý
+      [alt]+&lt;leftmouse&gt; Vyhladit
+      [space]+&lt;leftmouse&gt; Špičatý
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolStart</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Přeskočit</b>
+    <a>Vyhladit</a>
+    <leftTrigger>Špičatý</leftTrigger>
+    <rightTrigger>Kopcovitý</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Kopcovitý
+      [alt]+&lt;leftmouse&gt; Vyhladit
+      [space]+&lt;leftmouse&gt; Špičatý
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Přeskočit řádek
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolGoing</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a>Vyhladit</a>
+    <leftTrigger>Špičatý</leftTrigger>
+    <rightTrigger>Kopcovitý</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Kopcovitý
+      [alt]+&lt;leftmouse&gt; Vyhladit
+      [space]+&lt;leftmouse&gt; Špičatý
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>LevelTool</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a></a>
+    <leftTrigger>Vyhladit</leftTrigger>
+    <rightTrigger>Srovnat</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [alt]+&lt;leftmouse&gt; Vyhladit
+      [space]+&lt;leftmouse&gt; Srovnat
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>LevelToolStart</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <a>Vydláždit okamžitě</a>
+    <leftTrigger>Vyhladit</leftTrigger>
+    <rightTrigger>Vydláždit pozvolna</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Vyhladit
+      [alt]+&lt;leftmouse&gt; Vydláždit okamžitě
+      [space]+&lt;leftmouse&gt; Vydláždit pozvolna
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Přeskočit řádek
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>LevelToolGoing</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Hotovo</b>
+    <a>Vydláždit okamžitě</a>
+    <leftTrigger>Vyhladit</leftTrigger>
+    <rightTrigger>Vydláždit pozvolna</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Vyhladit
+      [alt]+&lt;leftmouse&gt; Vydláždit okamžitě
+      [space]+&lt;leftmouse&gt; Vydláždit pozvolna
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>WaterAdd</id>
+    <y>Vybrat typ vody</y>
+    <x></x>
+    <b>Menu nástrojů</b>
+    <a>Nastavit typ vody</a>
+    <leftTrigger>Snížit hladinu vody</leftTrigger>
+    <rightTrigger>Zvýšit hladinu vody</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal></dpadHorizontal>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Vybrat typ vody
+
+      [ctrl]+&lt;leftmouse&gt; Snížit hladinu vody
+      [alt]+&lt;leftmouse&gt; Nastavit typ vody
+      [space]+&lt;leftmouse&gt; Zvýšit hladinu vody
+
+      &lt;leftmouse&gt; Posunout kurzor
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>DelObjTool</id>
+    <y></y>
+    <x>Vybrat štětec</x>
+    <b>Menu nástrojů</b>
+    <leftTrigger>Vymazat objekty</leftTrigger>
+    <rightTrigger>Vymazat objekty</rightTrigger>
+    <rightTrigger></rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Velikost štětce</dpadHorizontal>
+    <leftStick>Posunout štětec</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Vybrat štětec
+      [leftarrow][rightarrow] Velikost štětce
+
+      [ctrl]+&lt;leftmouse&gt; Vymazat
+      [space]+&lt;leftmouse&gt; Vymazat
+
+      &lt;leftmouse&gt; Posunout kameru
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointNode</id>
+    <y>Přidat více uzlů</y>
+    <x>Vybrat celou cestu</x>
+    <b>Hotovo</b>
+    <a>Zvednout</a>
+    <dpadVertical>Změnit typ</dpadVertical>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftTrigger>Vymazat uzel</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdge</id>
+    <y>Změnit směr</y>
+    <x>Vybrat celou cestu</x>
+    <b>Hotovo</b>
+    <a>Zvednout</a>
+    <dpadVertical>Změnit typ</dpadVertical>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftTrigger>Vymazat hranu</leftTrigger>
+    <rightTrigger>Rozdělit hranu</rightTrigger>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPath</id>
+    <y>Změnit směr</y>
+    <x>Vybrat uzel/hranu</x>
+    <b>Hotovo</b>
+    <a>Zvednout</a>
+    <dpadVertical>Změnit typ</dpadVertical>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftTrigger>Vymazat cestu</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveNode</id>
+    <y></y>
+    <x>Zachytit celou cestu</x>
+    <b>Hotovo</b>
+    <a>Položit</a>
+    <dpadVertical>Změnit výšku</dpadVertical>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftTrigger>Vymazat uzel</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveEdge</id>
+    <y>Změnit směr</y>
+    <x>Zachytit celou cestu</x>
+    <b>Hotovo</b>
+    <a>Položit</a>
+    <dpadVertical>Změnit výšku</dpadVertical>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftTrigger>Vymazat hranu</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMovePath</id>
+    <y>Změnit směr</y>
+    <x>Vybrat uzel/hranu</x>
+    <b>Hotovo</b>
+    <a>Položit</a>
+    <dpadVertical>Změnit výšku</dpadVertical>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftTrigger>Vymazat cestu</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointAddNode</id>
+    <y>Položit uzel a dokončit</y>
+    <x></x>
+    <b>Hotovo</b>
+    <a>Postavit uzel</a>
+    <dpadVertical>Změnit typ</dpadVertical>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Posunout kurzor</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndAddNode</id>
+    <y></y>
+    <x></x>
+    <b>Hotovo</b>
+    <a></a>
+    <dpadVertical>Změnit typ</dpadVertical>
+    <dpadHorizontal>Změnit barvu</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Nová pozice</leftStick>
+    <rightStick>Změnit pohled kamery</rightStick>
+    <leftShoulder>Oddálit</leftShoulder>
+    <rightShoulder>Přiblížit</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointNodeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit barvu
+      [tab] Změnit typ
+
+      &lt;leftmouse&gt; Posunout uzel
+      [shift]+&lt;leftmouse&gt; Zvýšit/Snížit uzel
+      [X] Režim celé cesty
+
+      [space]+&lt;leftmouse&gt; Přidat více uzlů
+      [ctrl]+&lt;leftmouse&gt; Vymazat uzel
+
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdgeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit barvu
+      [tab] Změnit typ
+
+      &lt;leftmouse&gt; Posunout hranu
+      [shift]+&lt;leftmouse&gt; Zvýšit/Snížit hranu
+      [X] Režim celé cesty
+
+      [space]+&lt;leftmouse&gt; Rozdělit hranu
+      [ctrl]+&lt;leftmouse&gt; Vymazat hranu
+
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPathFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit barvu
+      [tab] Změnit typ
+
+      &lt;leftmouse&gt; Posunout cestu
+      [shift]+&lt;leftmouse&gt; Zvýšit/Snížit cestu
+      [X] Režim uzlu/hrany
+
+      [space]+&lt;leftmouse&gt; Přidat více uzlů
+      [ctrl]+&lt;leftmouse&gt; Vymazat cestu
+
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Menu nástrojů
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointAddFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit barvu
+      [tab] Změnit typ
+
+      &lt;leftmouse&gt; Přidat uzel a pokračovat
+      [alt]+&lt;leftmouse&gt; Přidat uzel a dokončit
+
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Dokončit přidávání
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit barvu
+      [tab] Změnit typ
+
+      &lt;leftmouse&gt; Dokončit přidávání
+
+      &lt;rightmouse&gt; Změnit pohled kamery
+      [pgup][pgdn] Přiblížit/Oddálit
+
+      [esc] Dokončit přidávání
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulation</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Stiskněte <![CDATA[<back>]]> pro úpravu.</bottom>
+
+    <keyMouseBottom>Stiskněte [esc] pro úpravu.</keyMouseBottom>
+	<touchBottom>Přejeďte prstem nahoru pro úpravu.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulationPreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Stiskněte <![CDATA[<a>]]> pro pokračování.</bottom>
+
+    <keyMouseBottom>Stiskněte [enter] pro pokračování.</keyMouseBottom>
+	<touchBottom>Klikněte sem pro pokračování.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>PauseGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Pokračovat</a>
+    <bottom>Hra pozastavena, stiskněte <![CDATA[<a>]]> pro pokračování.</bottom>
+
+    <keyMouse>
+      [pause] Pokračovat
+    </keyMouse>
+
+    <keyMouseBottom>Hra pozastavena, stiskněte [pause] pro pokračování.</keyMouseBottom>
+	<touchBottom>Hra pozastavena, klikněte sem pro pokračování.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>Programming</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>PageHandleFullPasteBuffer</id>
+    <y>Vytisknout</y>
+    <x>Zkopírovat stránku</x>
+    <b>Zavřít</b>
+    <a></a>
+    <leftTrigger>Vyjmout stránku</leftTrigger>
+    <rightTrigger>Vložit stránku</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Přepnout stránku
+      [delete] Vyjmout stránku
+      [insert] Vložit stránku
+      [esc] Zpět
+      [ctrl-P] Vytisknout
+    </keyMouse>
+	<touch>
+      &lt;tap&gt; Přepnout stránku
+      &lt;touchHold&gt; Možnosti
+    </touch>    
+  </overlay>
+  <overlay>
+    <id>PageHandleEmptyPasteBuffer</id>
+    <y>Vytisknout</y>
+    <x>Zkopírovat stránku</x>
+    <b>Zavřít</b>
+    <a></a>
+    <leftTrigger>Vyjmout stránku</leftTrigger>
+    <rightTrigger ghosted = "true">Vložit stránku</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Přepnout stránku
+      [delete] Vyjmout stránku
+      [esc] Zpět
+      [ctrl-P] Vytisknout
+    </keyMouse>
+	<touch>
+      &lt;tap&gt; Přepnout stránku
+      &lt;touchHold&gt; Možnosti
+    </touch>
+  </overlay>
+
+  <overlay>
+    <id>RowHandleFullPasteBuffer</id>
+    <y>Vytisknout</y>
+    <x>Zkopírovat řádek</x>
+    <b>Zavřít</b>
+    <a>Přesunout řádek</a>
+    <leftTrigger>Vyjmout řádek</leftTrigger>
+    <rightTrigger>Vložit řádek</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Zahodit řádek
+      &lt;rightmouse&gt; Vyjmout řádek
+      [enter] Zahodit řádek
+      [tab] Další stránka
+      [shift][tab] Předchozí stránka
+      [delete] Vyjmout řádek
+      [insert] Vložit řádek
+      [esc] Zpět
+      [ctrl-P] Vytisknout
+    </keyMouse>
+	<touch>
+      &lt;tap&gt; Vybrat řádek
+      &lt;drag&gt; Přesunout řádek
+      &lt;touchHold&gt; Možnosti
+    </touch>
+  </overlay>
+  <overlay>
+    <id>RowHandleEmptyPasteBuffer</id>
+    <y>Vytisknout</y>
+    <x>Zkopírovat řádek</x>
+    <b>Zavřít</b>
+    <a>Přesunout řádek</a>
+    <leftTrigger>Vyjmout řádek</leftTrigger>
+    <rightTrigger ghosted = "true">Vložit řádek</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Zahodit řádek
+      &lt;rightmouse&gt; Vyjmout řádek
+      [enter] Zahodit řádek
+      [tab] Další stránka
+      [shift][tab] Předchozí stránka
+      [delete] Vyjmout řádek
+      [esc] Zpět
+      [ctrl-P] Vytisknout
+    </keyMouse>
+	<touch>
+      &lt;tap&gt; Vybrat řádek
+      &lt;drag&gt; Přesunout řádek
+      &lt;touchHold&gt; Možnosti    
+    </touch>
+  </overlay>
+  <overlay>
+    <id>RowMove</id>
+    <y>Nápověda</y>
+    <x></x>
+    <b>Zavřít</b>
+    <leftStick>Změnit prioritu řádku</leftStick>
+    <a>Sem vložit řádek</a>
+    <bottom></bottom>
+
+    <keyMouse>
+      [uparrow] Posunout nahoru
+      [downarrow] Posunout dolů
+      [rightarrow] Odsadit blok
+      [leftarrow] Zrušit odsazení bloku
+      [enter] Vložit zde
+      [ctrl-P] Vytisknout
+    </keyMouse>
+	<touch>
+      &lt;tap&gt; Vybrat řádek
+      &lt;drag&gt; Přesunout řádek
+      &lt;touchHold&gt; Možnosti   
+    </touch>
+  </overlay>
+  <overlay>
+    <id>Tile</id>
+    <y>Nápověda</y>
+    <x>Odstranit dlaždice</x>
+    <b>Zavřít</b>
+    <a>Změnit dlaždice</a>
+    <leftTrigger>Odstranit dlaždice</leftTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Přidat/Změnit dlaždice
+      &lt;rightmouse&gt; Odstranit dlaždice
+      [enter] Přidat/změnit dlaždice
+      [tab] Další stránka
+      [shift][tab] Předchozí stránka
+      [del] Odstranit dlaždice
+      [esc] Zpět
+      [ctrl-P] Vytisknout
+    </keyMouse>
+	<touch>
+      &lt;tap&gt; Přidat/Změnit dlaždici
+      &lt;touchHold&gt; Možnosti
+    </touch>
+  </overlay>
+
+  <overlay>
+    <id>TopLevelPaletteEditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Nastavení světa</bottom>
+  </overlay>
+  <overlay>
+    <id>TopLevelPaletteEditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Změnit nastavení objektu</bottom>
+  </overlay>
+  <overlay>
+    <id>EditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Vybrat</a>
+    <bottom>Nastavení světa</bottom>
+  </overlay>
+  <overlay>
+    <id>EditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Nastavení postav</bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridCheckbox</id>
+    <y></y>
+    <x></x>
+    <b>Konec</b>
+    <a>Změnit</a>
+    <dpadVertical>Přepnout vlastnictví</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridSlider</id>
+    <y></y>
+    <x></x>
+    <b>Konec</b>
+    <a></a>
+    <dpadHorizontal>Levá/Pravá pro změnu</dpadHorizontal>
+    <dpadVertical>Přepnout vlastnictví</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridPictureList</id>
+    <y></y>
+    <x></x>
+    <b>Konec</b>
+    <a></a>
+    <dpadHorizontal>Levá/Pravá pro změnu</dpadHorizontal>
+    <dpadVertical>Přepnout vlastnictví</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridTextList</id>
+    <y></y>
+    <x></x>
+    <b>Konec</b>
+    <a>Vybrat další možnost</a>
+    <dpadVertical>Přepnout vlastnictví</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGameDescription</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Spustit hru</a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom>Stiskněte &lt;a&gt; pro spuštění hry</bottom>
+
+    <keyMouse>
+      [enter] Spustit hru
+    </keyMouse>
+    <keyMouseBottom>Stiskněte [enter] pro spuštění hry</keyMouseBottom>
+	<touchBottom>Klikněte sem pro spuštění hry</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMenu</id>
+    <a>Vybrat</a>
+    <leftStick>Změnit výběr</leftStick>
+  </overlay>
+  <overlay>
+    <id>ModularPictureList</id>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit nastavení
+      [esc] Zpět
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCameraMode</id>
+    <dpadHorizontal>Změnit výběr</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit kameru
+      [X] Nastavit kameru
+      [esc] Zpět
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckbox</id>
+	<a>Změnit</a>
+    <keyMouse>
+      [Enter] Změnit
+      [Esc] Zpět
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularNextLevel</id>
+    <a>Změnit</a>
+    <keyMouse>
+      [enter] Změnit
+      [esc] Zpět
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularSlider</id>
+    <dpadHorizontal>Změnit hodnotu</dpadHorizontal>
+    <keyMouse>
+      [leftarrow][rightarrow] Změnit hodnotu
+      [esc] Zpět
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularRadioBox</id>
+    <a>Změnit</a>
+    <keyMouse>
+      [enter] Změnit výběr
+      [esc] Zpět
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckboxList</id>
+    <a>Změnit</a>
+    <b>Hotovo</b>
+    <keyMouse>
+      [uparrow][downarrow] Vybrat štítek
+      [enter] Změnit štítek
+      [esc] Zpět
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularButtonElement</id>
+    <a>Zobrazit historii změn</a>
+    <x>Vymazat historii změn</x>
+    <keyMouse>
+      [A] Zobrazit historii změn
+      [X] Vymazat historii změn
+      [Esc] Zpět
+    </keyMouse>
+  </overlay>
+
+</XmlOverlayData>

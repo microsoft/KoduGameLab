@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>Objektuak urrunduko diren maila oinarria kontrolatzen du. Objektu-eskalagatiko afektatua ere.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>Objektu-bultzada indarra kontrolatzen du. Indarreko aldatzaileek aldatzen dute.</desc>
+  </helpText>
+  
+  <helpText id="LightRange">
+    <desc>Argi honen distira gradua ezarri (librea soilik argietarako).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+Ezarri bot honen abiadura.
+1.0ko balioa lehenetsitako abiadurarekin bat etorriko da.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+Ezarri bot honen azelerazioa.
+1.0ko balioa lehenetsitako azelerazioarekin bat etorriko da.
+    </desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Blokea ezazu bot honen posizioa inongo norabidetan ezin zaitezela mugitu. Oraindik bira dezake.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>Bot hau suntziezin egin.</desc>
+  </helpText>
+  <helpText id="ShowHitpuntuak">
+    <desc>Ezarrita dagoenean, barra txiki bat agertuko da bot honen buruaren gainealdean bot-ak daukan osasuna adieraziz.</desc>
+  </helpText>
+  <helpText id="MaxHitpuntuak">
+    <desc>Honek bot hau duen kolpeko puntuetako hasierako kopurua kontrolatzea baimentzen dizu. Kolpe-puntuetako kopurua txikiagotuko da bot-a mintzen denean eta handituko sendatzen denean.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+Bot bat markatzen dutenean"sortu ahal da" bezala orduan berezi bihurtzen da bi modutan.
+Bot hau klonatzen baduzu klon guztiek garun bera izango dute, bot bat  aldaketak izanez gero beste guztiak aldaketa berak izango dituzte. "Sortu ahal da"-ren eta bere klonen arteko lotura ikus dezakezu lerro etenen moduan (editatzerakoan).
+Bigarren lekuan, orain beste bot batzuk programa ditzakezu bot oso hau sortzeko bere programazioarekin. Hau oso ona da arkade-jokoetarako etsaiak sortzeko edozein tokitan.
+Kontuan izan hauxe egin dezakela munduaren aurrekontua gainditzea "Sortu" funtzionatzeari uzten dion unean.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+"Sortu ahal dira"-etarako, konteo honek jokoan zehar sor daitekeen kopurua mugatzen du. Edizioan zehar hedatzen diren klonek ez dute kontatzen, honek limitatzen du beste bot batzuek generatu ahal dituztenak "Sortu" botoiarekin erreproduzitzen diren bitartean.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+Nola jokatzen duen kamerak bot honi dagokionez kontrolatzen du. Normalean, kamerak jarraituko du edozein bot jokalari batek kontralatuta izaten badu.
+Hau ezartzen badu Beti-n, kamerak bot hau beti jarraituko du. Bot bat baino gehiago baduzu ezarpen honekin, kamera saiatuko da bot-ak pantailan mantentzen.
+Balio hau ezartzen badu Inoiz-en, kamerak ezikusiarena egingo dio bot-ari nahiz eta erabiltzaileak kontrolatu.
+    </desc>
+  </helpText>
+  <helpText id="HoldDistance">
+    <desc>Honek zein urrunera eraaten duen "atxikitako" objektu bat kontrolatzen du.</desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>Honek kontrolatzen du bot bat zein eztandagarria den lurraren, pareten edo beste bot batzuen kontra harritzerakoan.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>Honek kontrolatzen du zenbat irristatzen da bot bat lurraren, pareten edo beste bot batzuen kontra harritzerakoan.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Bot honen jaurtiketa eragiten duen kalte kantitatea kontrolatzen du.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+Blip-aren denboraren errekarga kontrolak, ondoren bot batek blip bat jaurtitzen du blip-ak berriro jaurtitzen utzi gabe.
+Hauxe neurtuta dago segundotan
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Blips-ek desagertu baino lehen bidaia zer puntutara arte kontrolatzen du.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Kontrolatzen du zer abiaduran  blip-ak jaurtitzen duen bot honen bidaiatik.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+Zenbat interferentzia izan ditzake aireko bot honek batera kontrolatzen du.
+Behin bot-ak kopuru hau bota duenez gero, ezin du bere maila handiena bota berriro blips batzuek zerbait jo edo heldu arte.
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Kontrolatzen du bot honetako botatako misil bat zenbat kolpe-puntu kaltetzen du helburu batera jotzen denean.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+Kontrolatzen du bot batek zenbat denbora itxaron behar du misil bat bota eta gero.
+Hau segundoetan neurtzen da.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Misilek desagertu baino lehen zer puntura arte egin dezaketen bidaia kontrolatzen du.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Misilek bot honetatik bota zuten abiadura kontrolatzen du.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+Zenbat misil batera izan ditzake airean bot honek kontrolatzen du.
+Behin bot-ak kopuru hau bota duenez gero, ezin du bota berriro misil batzuek zerbait jo edo bere irismen maximora heldu arte.
+
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Bot honek botatako misilek kerik igortzen duten kontrolatzen du. Kerik gabeko misilak prozesatzeko ur-laster gehiago dira.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Kontrolatzen du ezkutuaren ikuste-efektua erakusten den bot honek zerbait jotzen duenean edo kalterik jasotzen duenean.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Kontrolatzen du bot hau inola ere erakusten bada. Oraindik ikus dezakete eta beste bot batzuek entzun dezakete.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Kontrolatzen du bot hau ikus dezaketen, entzun dezaketen eta beste bots batzuek jo dezaketen. Robotak oraindik mamuek ikus dezakete eta beste batzuetara entzutea, baina ezin dituzte jo.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Despresta itzazu karaktere honetako gehitutako soinu guztiak. Programatutako soinuak erreproduzitzen jarraituko dute. Kontuan har ezazu entzunez pertsonaia honen presentzia beste pertsonaia batzuek antzeman ahal izango dutela.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Edozein uretako azalaren gainean irrista zaitez. Hau itzaltzen du uretarantz hegan egitea pertsonaiei baimentzeko.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Kontrolatzen du zer urrun entzun ahal dute beste pertsonaiak pertsonaia hau. Ez du aldatzen jokalariak entzuten duenak.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Pertsonaia honek beste pertsonaia batzuk entzun ditzakeen zer puntutara arte kontrolatzen du. Ez du aldatzen jokalariak entzuten duen soinu erreala.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>Egia bot-ak mamu bihurtzen bada, baina oraindik talka egin dezake ingurunearekin.</desc>
+  </helpText>
+  
+  <helpText id="KickStrength">
+    <desc>Kontrolatzen du zenbat indarrarekin bot honek objetuak ostikatzen duen. Ostiko indartsuago bat egiten du objetua urrunago hegan egiten du.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Kontrolatzen du bot honek ostikoak bigarren objektu bati lehena ostikatu ondoren eman diezazkiokeen azkartasuna.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>Handitu proportzionalki bot-a gehiago (handiagoa) edo gutxiago (txikiagoa).1.0ko eskala tamaina arrunta da.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>Zerbait ikusten duzunean, segundo batzuetan gogoratzen duzu oraindik ikusi ahal izango bazenu bezala.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Zein distiratsua eragiten du, pertsonaia honentzako dirdira efektua. Kontuan har ezazu karaktere distiratsuek argirik normalean beste karaktereren gainean ez dutela botatzen.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Objektu honek argia bota dezala egin beste objektu batzuen gaineko argia biziki distira egiten ari denean, eta jar dezan nola den gotorlekurik efektua.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Ezar ezazu bot honen dirdira argitzen den intentsitatea.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>Pertsonaiak hara-hona ibiltzeko, ibiltzeko edo zerbaitetik urruntzeko programatuta daudenean, honek bere bidea ixten duten hesiak erakusten ditu.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>Bot hau ikuspegia edo entzumena erabiltzen ari bada, zer bot ikus dezakeen bot honek eta entzun dezakeen erakusten du.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Gaur egun ez inplementatuta.</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>Sor ezazu hesi ikusezina zure munduko ertzen inguruan. Honek bots-ak munduko ertzetik eror daitezela saihestuko du.
+    
+Globoa, hodeia, jeta, argia, platertxoa, globo gidatu ez zurruna, Wisp eta misila kristal-paretan zehar pasa daitezke.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Pertsonen istorioak mundu hau aldatu dutela erakusten du.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Nola mugitzen den kamera jokoa egiten denean kontrolatzea baimentzen du.
+    
+Posizioa aukera finkoak kamera| mugi dadila bere jokoa egiten ari den bitartean saihesten du. Erabilgarria arcade aireko bista eskatzen duten estilo jokoetarako. Kontuan har ezazu bista desberdina izango dela pantaila panoramikoetan.
+
+Offset Fixed aukerak kamera mantentzen du distantzia finkoan eta kamera jarraitzen ari zaion edozein |objekturen norabidean. Kurtsorea edo bot bat izan daiteke. Erabilgarria sidescrollers-etarako.
+
+Aukera Librea lehenetsitakoa da eta baimentzen du kamera aske pasa dadila bot bateko programazioak ez balio esaten lehen pertsonan egon dadinik edo jarrai diezaionik kamerari. Kamera finko edo mugituta badarabil, botoia presiona dezan &lt;X&gt; kameraren posizioa ezartzea botoia baimenduko du.</desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Kameraren kokapena kontrolatzen du jokoa hasten denean. Hura erabiltzeko, mugiaraz ezazu nonahi egon dadila noiz jokoa hasten duen, munduko Konfigurazioa irekitzen duen eta laukia markatzen duen kamera.
+Geroago posizioa aldatzea desiratzen badu, ahal zaitez presionatu &lt;x&gt; jarriko dela kamera aske lerrokatzea zuk behar duzun posizioari baimenduko dion moduan.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Kamera erabiltzaileak kontrolatutako pertsonaia baten atzera mugitzen den indarra kontrolatzen du. </desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Normalean pantailako beheko eskuineko izkinan agertzen den iparrorratza ezkutatzea baimentzen du. Iparrorratza edizioan zehar beti erakusten da eta ezkutatzen da soilik jokoa egiten denean.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Lets you hide the Resource Meter (thermometer) which normally appears on the right side of the screen.  The Resource Meter is always shown during editing and is only hidden when you run your game.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+Baimentzen dio baliabide-muga erakusten den normalean pantailako eskuineko aldean agertzen den baliabide neurgailuan (termometroan) bezala desaktibatzea. Desaktibatutako aukera honekin, hainbeste gehi dezake lurra bere mundurako bai desira dezan hainbeste objektu bezala.
+OHARTARAZPENA: Muga hau gabe, Kodu-k oso astiro funtziona dezala eragin dezake. Bere sistemaren memoria gaindi dezake ere eta Kodu blokea dadila eragin dezake.
+  </desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>Olatuen altuera kontrolatzen du zure munduan ura duzunean.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>Urak bista distortsionatzen duen indarra kontrolatzen du.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Aukera ezazu funtsezko koloreko multzoa bere mundurako.
+Konbina itzazu zerua eta aldartea bere jokorako sortzen laguntzeko argiztapen doikuntzak.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Aukera ezazu argi-multzo bat bere mundurako. Argiztapen iluneko konfigurazioa aukeratzen badu, ilun egongo da soilik bere jokoa exekutatzen duenean. Edizioan zehar argiztapen konfigurazio distiratsuagoa erabiliko da bere mundua ikusi ahal dezala argi eta garbi.
+Konbina itzazu zerua eta aldartea bere jokorako sortzen laguntzeko argiztapen doikuntzak.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Haizetxoaren kolperik leunenak kontrolatzen ditu jokoaren zuhaitzetan zehar.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Haizetxoaren kolperik gogorrenak kontrolatzen ditu jokoaren zuhaitzetan zehar.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Kontrola ezazu nola hasten duen zure jokoa jokatzen duzunean:
+"Ezer" jokoa hasten du era arruntean, efekturik gabe.
+"Munduaren izenburua" erakusten du munduaren izena 3 segundotan zehar eta gero jolasten hasten da.
+"Munduaren deskribapena" erakusten du munduaren izena eta erabiltzaileari eskatzen du estu dezan &lt;a&gt; jolasten hasteko. Honek jokoa gordetzen duenean ematen duen deskribapena darabil.
+"Atzerako kontaketak" atzeranzko kontua erakusten du 3-2-1 jokoa hasi baino lehen. Hau bikaina da lasterketa-jokoetarako.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>Pertsonaiak bideak jarraitzen ari dituztenean, erakusten du pertsonaia bakoitzak mugitzen ari diren pauso-punturantz. Helburua, erakusten da burdin hari batez eta haienganantz mugitzen ari den pertsonaiaren kolore berdina dute.</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Erakusten du bots-ek eta beste objektuek erabiltzen duten formak haien artean eta lurzoruarekin danba egiteko.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>Edozein robot ikuspegia|ikusmena edo entzuketa erabiltzen ari bada, zer bots ikus dezaketen eta entzun dezaketen erakusten du.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>Lur-edizioetarako abiadura faktorea. Txikiagoa da motelagoa, handiagoa da azkarragoa.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Erabiltzaile-interfazearen soinu-efektuen bolumena, menuak eta botoiak bezala, kontrolatzen du.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Kontrola ezazu efektuen bolumena|liburukia zure jokoan. Honek leherketak, talkak eta bots-ek egiten dituzten soinuak sartzen ditu.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Kontrola ezazu zure jokorako aukeratzen duzun hondo-musikaren bolumena.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Pantailaren tontorra kontrolatzen du kolore honen ekitaldiak markatzeko.
+Off: partitura ez da erakutsiko batere.
+Isiltasuna: puntuazioa izkinan erakutsiko da, baina puntuazio-efekturik ez da egongo.
+Zaratatsu: puntuazioaren ekitaldiak markagailurainoko jokoko bere kokapenetik animatuko dira.
+    </desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>Puntuazio jakina mantenduko den Hurrengo Maila / Aurreko maila akzio batean zehar kontrolatzen du.
+On: puntuazioa mantenduko da eta maila berria kargatzen denean balio bera mantenduko du
+Off: puntuazioa indarberrituko da zerora maila berria kargatzen denean.
+    </desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>Erakusten / Izkutatzen du pantailan kontrolatzaile birtuala.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+      GUI-a botoiak nola azalduko diren kontrolatzen du.
+Off: botoia ez da erakutsiko batere.
+Etiketatu gabe: Botoia erakutsiko da eta ez du testurik izango hartan.
+Etiketatuta: Botoia testuarekin batera erakutsiko da botoia hobeto identifikatzeko.
+    </desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+      "Hurrengo Maila" mosaikoaz kargatuko den maila ezartzen du. Maila horretako "Aurreko maila" mosaikoa prestatzen du ere, jokalariak oraingo mailara bueltatzeko.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+      Objektu honen azpiko uraren kantitatea igotzen du.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+      Objektu honen azpiko uraren kantitatea jaisten du.
+    </desc>
+  </helpText>
+  
+  
+  <helpText id="SetWater">
+    <desc>
+      Objektu honen azpiko uraren mota ezartzen du.
+    </desc>
+  </helpText>
+
+  <!-- Help for User Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>Iradokizunak desaktibatzea baimentzen dio.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>Iradokizunak desaktibatzea baimentzen dio. Iradokizunak erakusten dira baldin eta sistemak arazoa eragin dezakeen egoera antzematen badu.
+Iradokizuna erakusten denean, iradokizuna desaktibatzea aukeratzeko aukera ematen zaio.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>Normalean, Gamepad erremintako menua aktibo dagoenean, hondoa ezabatzen da eta kamera ezin da mugitu. Aukera hau desaktibatzerakoan, kamerak "zuzenean" izaten jarraituko du. Erreminta bat, hala ere, oraindik munduarekin elkar eragin baino lehen aukeratu behar du.
+Hau ere itzaltzeak ezkerreko sticka orain erabiltzen dela kamera kontrolatzeko esan nahi du, eta beraz DPad-a edo desiratzen duen erreminta aukeratzeko katuak erabili behar du.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>Honek ezabatzen du berriro ager daitezela aurrez desaktibatzea aukeratu duen edozein iradokizunetan 'desprestatuta' adierazlea.</desc>
+  </helpText>
+
+  <helpText id ="ShowFramerate">
+    <desc>Aktibatuta dagoenean, gaurko fotograma-abiadura (FPS-a) pantailako beheko ezkerreko izkinan erakusten da.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Kontrolatzen du pantailako goiko ezkerreko izkinan erakusten den laguntza testu kantitatea.</desc>
+  </helpText>
+
+  <helpText id ="Language">
+    <desc>Zer hizkuntza erabiltzen den kontrolatzen du. Gure komunitateak Kodu-ren itzulpenak egiten ditu. Kodu itzultzen lagundu nahi badio bere hizkuntzari, bidal ezazu posta elektronikoa KoduSupport@microsoft.com-etara informazio gehiago lortzeko.</desc>
+  </helpText>
+
+  <helpText id ="InvertYAxis">
+    <desc>Makila bultzatzean bot-a beherantz mugitu.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Makila eskuinerantz bultzatuz bot-ak eskuinerantz biratzea.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Makila aurrerantz bultzatuz kamera gorantz bultzatzea.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>Ezkerreko makila bultzatzerakoan kamera eskuinerantz biratzea</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>"Overscan-a" terminoak adierazten du renderizada pantailako ertzetan moztuta dagoen irudiaren kantitatea. Kantitate hau  bistaratze-gailuaren eta gailurako konexioaren mendean dago. Graduatzaileak baimentzen dio pantailaren zentroko zer puntutara arte erakusten diren laguntza-pantailak kontrolatzea. Pantailan eteten badira, eragin ezazu balio hau handiagoa izatea. % 20k, tutu-telebistetan, eskuarki hobeto funtzionatzen du.  Konputagailu-monitoreengan 0ekin edo % 5ekin lan egiteko gai izan daiteke. Esperimenta ezazu eta erabil ezazu hobeto iruditzen zaizuna.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>Ezartzen bada, bere deskarga-ilararako munduak beste erabiltzaile batzuek gehitu ahal izango dituzte.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>Ezartzen bada, beste jokalari batzuengandik deskargatzen dituzun munduak automatikoki markatuko dira partekatuta bezala , libre haiek etorkizuneko truke-saioetan deskargatzeko egingo dituena.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>Saioak partekatzerakoan, deskarga itzazu automatikoki mundu nabariak "Gustukoena" etiketarekin.</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>Iragazkiak hurbil erabilitako maila, ikuspegiko eta entzuketako sentsoreek erabilita. Unitateak metroetan daude. Erreferentziarako: Lurreko azuleju bat metro erdia da</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>Iragazkiak oso urrun erabilitako maila, ikuspegiko eta entzuketako sentsoreek erabilita. Unitateak metroetan daude. Erreferentziarako: Lurreko azuleju bat metro erdia da</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>Ezarriz gero, Kodu hasieran zehar bertsio berriagoa askatu den egiaztatuko du.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>Itxuratuta badago, Kodu-k informazio anonimoa bidaliko du Microsoft-era Kodu erabiltzeko moduaren gainean. Informazio honek Kodu hobetzen laguntzen digu.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>Ezarriz gero, Kodu hasten den hurbileko|hurrengo aldian, sarrera-bideoa erreproduzituko da.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>Normalean, bere Kodu-ren komunitatearen webgunearen saioa saio-hasierako informazioa ahaztuko da Kodu-ko irteten denean. Aukera hau aktibatuta badago, saiatuko gara zure saioa Kodu-ren hainbat saiotan manten dadila baimentzen.</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>Hau sortzen dituzten berezko tutorialak  pertsonentzako laguntza da. Pizten eta exekutatzen denean tutorial maila bat, erakutsiko du pantailan gainjarritako arazketa informazioa.</desc>
+  </helpText>
+  
+  
+</XmlHelpTextData>

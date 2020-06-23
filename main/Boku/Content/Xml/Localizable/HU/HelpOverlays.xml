@@ -1,0 +1,2577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlOverlayData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <overlay>
+    <id>MiniHub</id>
+    <a>Kiválasztás</a>
+    <back>Folytatás</back>
+    <bottom>Nyomd meg a &lt;start&gt; gombot bármikor, ha vissza szeretnél térni ide.</bottom>
+
+    <keyMouse>
+      [Enter] kiválasztás
+    </keyMouse>
+    <keyMouseBottom>Nyomd meg a [home] gombot bármikor, ha vissza szeretnél térni ide.</keyMouseBottom>
+    <touch></touch>
+    <touchBottom>Koppints [home] gombra bármikor, ha vissza szeretnél térni ide.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMessageDialog</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>LoadLevelMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Nyomd meg <![CDATA[<back>]]> gombot az előző menübe való visszatéréshez.</bottom>
+
+    <keyMouseBottom>Nyomd meg az [Esc] gombot az előző menübe való visszatéréshez.</keyMouseBottom>
+    <touchBottom>Koppints az [Esc] gombra az előző menübe való visszatéréshez.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>LoadLevelPopup</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>SelectNextLevel</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Nyomd meg <![CDATA[<back>]]> gombot az előző menübe való visszatéréshez.</bottom>
+
+    <keyMouseBottom>Nyomd meg az [Esc] gombot az előző menübe való visszatéréshez.</keyMouseBottom>
+    <touchBottom>Koppints az [Esc] gombra az előző menübe való visszatéréshez.</touchBottom>
+  </overlay>  
+
+  <overlay>
+    <id>MouseEditBase</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Egér szerkesztési alap</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditHome</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Főmenü</keyMouseBottom>
+    <touch></touch>
+    <touchBottom>Főmenü</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPlay</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Játék elindítása</keyMouseBottom>
+
+    <touch></touch>
+    <touchBottom>Játék elindítása</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditCameraMove</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Talaj húzása 
+      &lt;rightmouse&gt; Kamera pálya 
+      &lt;middlemouse&gt; Zoomolás a kerék görgetésével 
+      [Tab] Következő karakter keresése
+    </keyMouse>
+    <keyMouseBottom>Kamera mozgatása</keyMouseBottom>
+
+    <touch>
+      &lt;doubleDrag&gt; Talaj húzása 
+      &lt;drag&gt; Kamera forgatása 
+      &lt;rotate&gt; Kamera pálya 
+      &lt;pinch&gt; Zoomolás
+    </touch>
+    <touchBottom>Kamera mozgatása</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditAddItemPieMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>  
+
+  <overlay>
+    <id>MouseEditEditObject</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Tárgy kiválasztása/hozzáadása 
+      &lt;rightmouse&gt; HelpLevelMid beállítások 
+      [F3] Rácshoz kapcsolás 
+      [Tab] Következő karakter keresése 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Tárgy hozzáadása 
+      &lt;tap&gt; Tárgy kiválasztása 
+      &lt;drag&gt; Tárgy húzása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    <touchBottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocus</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Tárgy húzása 
+      &lt;rightmouse&gt; Beállítások 
+      [leftarrow][rightarrow] Szín módosítása HelpLevelMid 
+      [F3] Rácshoz kapcsolás 
+      [Tab] Következő karakter keresése 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Tárgy hozzáadása 
+      &lt;tap&gt; Tárgy kiválasztása 
+      &lt;drag&gt; Tárgy húzása 
+      &lt;touchHold&gt; Beállítások 
+      &lt;rotate&gt; Tárgy forgatása 
+      &lt;pinch&gt; Tárgy méretezése
+    </touch>
+    <touchBottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</touchBottom>    
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocusTree</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Tárgy húzása 
+      &lt;rightmouse&gt; Beállítások 
+      [leftarrow][rightarrow] Szín módosítása 
+      [uparrow][downarrow] Fatípus módosítása HelpLevelMid 
+      [F3] Rácshoz kapcsolás 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Tárgy hozzáadása 
+      &lt;tap&gt; Tárgy kiválasztása 
+      &lt;drag&gt; Tárgy húzása 
+      &lt;touchHold&gt; Beállítások 
+      &lt;rotate&gt; Tárgy forgatása 
+      &lt;pinch&gt; Tárgy méretezése
+    </touch>
+    <touchBottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPaths</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Csomópont vagy él húzása 
+      &lt;rightmouse&gt; Beállítások 
+      [Shift] Teljes útra hatás HelpLevelMid 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Út eszköz: Út hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Csomópont vagy él kiválasztása 
+      &lt;drag&gt; Csomópont vagy él húzása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    <touchBottom>Út eszköz: Út hozzáadása vagy szerkesztése</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAllPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Csomópont vagy él húzása 
+      &lt;rightmouse&gt; Beállítások 
+      [Shift] Teljes útra hatás HelpLevelMid 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Út eszköz: Út hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Út kiválasztása 
+      &lt;drag&gt; Út húzása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    <touchBottom>Út eszköz: Út hozzáadása vagy szerkesztése (hatás az útra)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAddPath</id>
+    <keyMouse>
+      &lt;leftmouse&gt; Csomópont vagy él húzása 
+      &lt;rightmouse&gt; Beállítások 
+      [Shift] Teljes útra hatás HelpLevelMid 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Út eszköz: Út hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Csomópont hozzáadása vagy csatlakozás csomóponthoz 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    <touchBottom>Út eszköz: Út hozzáadása</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeletePath</id>
+    <touch>
+      &lt;tap&gt; Teljes út törlése 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    <touchBottom>Út eszköz: Utak törlése</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeleteNode</id>
+    <touch>
+      &lt;tap&gt; Csomópont törlése 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    <touchBottom>Út eszköz: Csomópontok törlése</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsFocusNode</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Csomópont húzása 
+      &lt;rightmouse&gt; Beállítások 
+      [Shift] Hatás a teljes útra 
+      [leftarrow][rightarrow] Szín módosítása 
+      [uparrow][downarrow] Útstílus módosítása HelpLevelMid 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Út eszköz: Út hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Csomópont kiválasztása 
+      &lt;drag&gt; Csomópont húzása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    <touchBottom>Út eszköz: Út hozzáadása vagy szerkesztése</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusEdge</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Él húzása 
+      &lt;rightmouse&gt; Beállítások 
+      [Shift] Hatás a teljes útra 
+      [leftarrow][rightarrow] Szín módosítása HelpLevelMid 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Út eszköz: Út hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Él kiválasztása 
+      &lt;drag&gt; Él húzása 
+      &lt;touchHold&gt; Beállítások
+     </touch>
+    <touchBottom>Út eszköz: Út hozzáadása vagy szerkesztése</touchBottom>    
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Út húzása 
+      &lt;rightmouse&gt; Beállítások 
+      [Shift] Hatás a teljes útra 
+      [leftarrow][rightarrow] Szín módosítása HelpLevelMid 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Út eszköz: Út hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Út kiválasztása 
+      &lt;drag&gt; Út húzása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    <touchBottom>Út eszköz: Út hozzáadása vagy szerkesztése</touchBottom>    
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainPaint</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Anyag színezése és hozzáadása 
+      [Shift] +&lt;leftmouse&gt; Anyag színezése 
+      [Ctrl] +&lt;leftmouse&gt; Anyag hozzáadása 
+      &lt;rightmouse&gt; Törlés 
+      [leftarrow][rightarrow] Ecset méretének módosítása HelpLevelMid 
+      [Alt] Anyag felvétele a földről 
+      [F3] Rácshoz kapcsolás 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Talaj ecset: Talaj színezése, hozzáadása vagy törlése</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;drag&gt; Ecset mozgatása
+    </touch>
+    <touchBottom>Talaj ecset: Talaj színezése, hozzáadása vagy törlése</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintSmooth</id>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;drag&gt; Anyag hozzáadása és színezése (sima)
+    </touch>
+    <touchBottom>Talaj ecset: Talaj hozzáadása és színezése (sima)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintCubic</id>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;drag&gt; Anyag hozzáadása és színezése (szögletes)
+    </touch>
+    <touchBottom>Talaj ecset: Talaj hozzáadása és színezése (szögletes)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainDelete</id>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;drag&gt; Talaj eltávolítása
+    </touch>
+    <touchBottom>Talaj ecset: Talaj eltávolítása</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintMagicBrush</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Anyag színezése és hozzáadása 
+      [Shift] +&lt;leftmouse&gt; Anyag színezése 
+      [Ctrl] +&lt;leftmouse&gt; Anyag hozzáadása 
+      &lt;rightmouse&gt; Törlés 
+      [leftarrow][rightarrow] Ecsetméret módosítása 
+      [uparrow] Stílus: Szögletes 
+      [downarrow] stílus: Sima HelpLevelMid 
+      [Alt] Anyag felvétele a talajról 
+      [F3] Rácshoz kapcsolás 
+      [Space] Kamera mozgatás 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Talaj ecset: Talaj színezése, hozzáadása vagy törlése</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Ecset mozgatása 
+      &lt;drag&gt; Anyag színezése és hozzáadása
+    </touch>
+    <touchBottom>Talaj ecset: Talaj színezése, hozzáadása vagy törlése</touchBottom>    
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Terep emelése 
+      &lt;middlemouse&gt; Sima terep 
+      &lt;rightmouse&gt; Terep mélyítése 
+      [leftarrow][rightarrow] Ecsetméret módosítása HelpLevelMid 
+      [F3] Rácshoz kapcsolás 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Fel/le: Dombok vagy völgyek létrehozása</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Ecset mozgatása
+    </touch>
+    <touchBottom>Fel/le: Dombok vagy völgyek létrehozása</touchBottom>    
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainRaising</id>
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;drag&gt; Terep emelése
+    </touch>
+    <touchBottom>Fel/le: Dombok vagy völgyek létrehozása</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainLowering</id>
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;drag&gt; Terep mélyítése
+    </touch>
+    <touchBottom>Fel/le: Dombok vagy völgyek létrehozása</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Simává tétel 
+      &lt;middlemouse&gt; Sima terep 
+      &lt;rightmouse&gt; Szint készítés 
+      [leftarrow][rightarrow] Ecsetméret módosítása HelpLevelMid 
+      [F3] Rácshoz kapcsolás 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Simítás: Talaj simává és vízszintessé tétele</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Ecset mozgatása
+    </touch>
+    <touchBottom>Simítás: Talaj simává és vízszintessé tétele</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleFlatten</id>
+    
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;drag&gt; Terep simítása
+    </touch>
+    <touchBottom>Simítás: Talaj simává és vízszintessé tétele</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleSmooth</id>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;drag&gt; Sima terep
+    </touch>
+    <touchBottom>Simítás: Talaj simává és vízszintessé tétele</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Tüskék készítése 
+      &lt;middlemouse&gt; Sima terep 
+      &lt;rightmouse&gt; Domb készítése 
+      [leftarrow][rightarrow] Ecsetméret módosítása HelpLevelMid 
+      [F3] Rácshoz kapcsolás 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Durvává tétel: Tüskés vagy dombos talaj készítése</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Ecset mozgatása
+    </touch>
+    <touchBottom>Durvává tétel: Tüskés vagy dombos talaj készítése</touchBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSmooth</id>
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Sima terep
+    </touch>
+    <touchBottom>Durvává tétel: Tüskés vagy dombos talaj készítése</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleHilly</id>
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Dombossá tétel
+    </touch>
+    <touchBottom>Durvává tétel: Tüskés vagy dombos talaj készítése</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSpikey</id>
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Tüskéssé tétel
+    </touch>
+    <touchBottom>Durvává tétel: Tüskés vagy dombos talaj készítése</touchBottom>
+  </overlay>
+  
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Vízszint emelése 
+      &lt;middlemouse&gt; Vízszín módosítása 
+      &lt;rightmouse&gt; Vízszint csökkentése HelpLevelMid 
+      [F3] Rácshoz kapcsolás 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Víz eszköz: Víz hozzáadása, eltávolítása vagy színezése</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Ecset mozgatása
+    </touch>
+    <touchBottom>Víz eszköz: Víz hozzáadása, eltávolítása vagy színezése</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleRaise</id>
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Vízszint növelése
+    </touch>
+    <touchBottom>Víz eszköz: Víz hozzáadása, eltávolítása vagy színezése</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleLower</id>
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Vízszint csökkentése
+    </touch>
+    <touchBottom>Víz eszköz: Víz hozzáadása, eltávolítása vagy színezése</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditDeleteObjects</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Törlés 
+      &lt;rightmouse&gt; Nincs semmi, menj tovább. 
+      [leftarrow][rightarrow] Ecsetméret módosítása HelpLevelMid 
+      [F3] Rácshoz kapcsolás 
+      [Space] Kamera mozgatása 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Törlés eszköz: Ecset használata tárgyak eltüntetéséhez</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Ecset mozgatása
+    </touch>
+    <touchBottom>Törlés eszköz: Ecset használata tárgyak eltüntetéséhez</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditDeleteObjects_Deleting</id>
+    <touch>
+      &lt;brushBigger&gt; Ecsetméret növelése 
+      &lt;brushSmaller&gt; Ecsetméret csökkentése 
+      &lt;tap&gt; Tárgyak törlése
+    </touch>
+    <touchBottom>Törlés eszköz: Ecset használata tárgyak eltüntetéséhez</touchBottom>
+  </overlay>
+  
+
+  <overlay>
+    <id>MouseEditWorldTweak</id>
+
+    <keyMouse>
+      Világ beállítások módosítása 
+      HelpLevelMid 
+      [Home] Főmenü 
+      [Esc] Futtatás
+    </keyMouse>
+    <keyMouseBottom>Világ beállítások módosítása</keyMouseBottom>
+    <touchBottom>Világ beállítások módosítása</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditSlider</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Érték módosítása 
+      [Esc] Elfogadás
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenu</id><!-- Placeholder, should not be seen. --><back>Játék futtatása</back>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenuRunSim</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Játék elindítása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Játék elindítása</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü HelpLevelMid 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Játék elindítása</keyMouseBottom>
+    <touchBottom>Játék elindítása</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuHomeMenu</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Főmenü</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Főmenü</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      HelpLevelMid 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Játék elindítása</keyMouseBottom>
+    <touchBottom>Játék elindítása</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuObjectEdit</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</keyMouseBottom>
+
+    <touchBottom>Tárgy eszköz: Karakterek és tárgyak hozzáadása vagy szerkesztése</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuDeleteObjects</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Törlés eszköz: Ecset használata tárgyak eltüntetéséhez</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Törlés eszköz: Ecset használata tárgyak eltüntetéséhez</keyMouseBottom>
+
+    <touchBottom>Törlés eszköz: Ecset használata tárgyak eltüntetéséhez</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSmoothLevel</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Simítás: Talaj simává és vízszintessé tétele</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Simítás: Talaj simává és vízszintessé tétele</keyMouseBottom>
+
+    <touchBottom>Simítás: Talaj simává és vízszintessé tétele</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainMaterial</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Talaj ecset: talaj hozzáadása és eltávolítása</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Talaj ecset: Talaj színezése, hozzáadása vagy törlése</keyMouseBottom>
+
+    <touchBottom>Talaj ecset: Talaj színezése, hozzáadása vagy törlése</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSpikeyHilly</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Durvává tétel: Tüskés vagy dombos talaj készítése</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Durvává tétel: Tüskés vagy dombos talaj készítése</keyMouseBottom>
+
+    <touchBottom>Durvává tétel: Tüskés vagy dombos talaj készítése</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainUpDown</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Fel/le: Dombok vagy völgyek létrehozása</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Fel/le: Dombok vagy völgyek létrehozása</keyMouseBottom>
+
+    <touchBottom>Fel/le: Dombok vagy völgyek létrehozása</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainWater</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Víz eszköz: Víz hozzáadása, eltávolítása vagy színezése</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Víz eszköz: Víz hozzáadása, eltávolítása vagy színezése</keyMouseBottom>
+
+    <touchBottom>Víz eszköz: Víz hozzáadása, eltávolítása vagy színezése</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuWorldSettings</id>
+    <back>Játék futtatása</back>
+    <start>Főmenü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Eszköz kiválasztása</a>
+    <leftStick mid = "false">Kurzor mozgatása</leftStick>
+    <rightStick mid = "false">Kamera pálya</rightStick>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+    <leftShoulder mid = "false">Kicsinyítés</leftShoulder>
+    <rightShoulder mid = "false">Nagyítás</rightShoulder>
+    <bottom>Világ beállítások módosítása</bottom>
+
+    <keyMouse>
+      [Esc] Futtatás 
+      [Home] Főmenü 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya
+    </keyMouse>
+    <keyMouseBottom>Világ beállítások módosítása</keyMouseBottom>
+
+    <touchBottom>Világ beállítások módosítása</touchBottom>
+
+  </overlay>
+
+  <overlay>
+    <id>BrushPickerSquare</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Szögletes ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Szögletes ecset</keyMouseBottom>
+
+    <touchBottom>Szögletes ecset</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSquareLinear</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Egyenes szögletes ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Egyenes szögletes ecset</keyMouseBottom>
+
+    <touchBottom>Egyenes szögletes ecset</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRound</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Kemény kerek ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Kemény kerek ecset</keyMouseBottom>
+
+    <touchBottom>Kemény kerek ecset</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRound</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Közepes kerek ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Közepes kerek ecset</keyMouseBottom>
+
+    <touchBottom>Közepes kerek ecset</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRound</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Puha kerek ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Puha kerek ecset</keyMouseBottom>
+
+    <touchBottom>Puha kerek ecset</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRoundLinear</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Egyenes, kemény kerek ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Egyenes, kemény kerek ecset</keyMouseBottom>
+
+    <touchBottom>Egyenes, kemény kerek ecset</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRoundLinear</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Egyenes, közepes kerek ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Egyenes, közepes kerek ecset</keyMouseBottom>
+
+    <touchBottom>Egyenes, közepes kerek ecset</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRoundLinear</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Egyenes, lágy kerek ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Egyenes, lágy kerek ecset</keyMouseBottom>
+
+    <touchBottom>Egyenes, lágy kerek ecset</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottled</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Mintás ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Mintás ecset</keyMouseBottom>
+
+    <touchBottom>Mintás ecset</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottledLinear</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Egyenes mintás ecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Egyenes mintás ecset</keyMouseBottom>
+
+    <touchBottom>Egyenes mintás ecset</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMagic</id>
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <b>Mégsem</b>
+    <a>Ecset kiválasztása</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Varázsecset</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+    <keyMouseBottom>Varázsecset</keyMouseBottom>
+
+    <touchBottom>Varázsecset</touchBottom>
+
+  </overlay>
+
+  <overlay>
+    <id>CameraSetMode</id>
+    <a>Elfogadás</a>
+    <bottom>Helyezd a kamerát a kívánt pozícióba, majd nyomd meg az &lt;A&gt; gombot</bottom>
+
+    <keyMouse>
+      [Enter] Elfogadás 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés
+    </keyMouse>
+    <keyMouseBottom>Helyezd a kamerát a kívánt pozícióba, majd nyomd meg az [Enter] gombot</keyMouseBottom>
+
+    <touch>
+      &lt;doubleDrag&gt; Talaj húzása 
+      &lt;drag&gt; Kamera forgatása 
+      &lt;rotate&gt; Kamera pálya 
+      &lt;pinch&gt; Zoomolás
+    </touch>
+
+    <touchBottom>Helyezd a kamerát a kívánt pozícióba, majd koppints ide.</touchBottom>
+
+  </overlay><!--Object edit permutations--><overlay><!-- Nothing selected, nothing moused, something in the clipboard--><id>ObjectEdit</id>
+    <y></y>
+    <x></x>
+    <b>Eszköz menü</b>
+    <a>Hozzáadás</a>
+
+    <leftTrigger ghosted = "true">Kivágás</leftTrigger>
+    <rightTrigger ghosted = "false">Beillesztés</rightTrigger>
+
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Alt]+&lt;leftmouse&gt; Beillesztés 
+      [Space]+&lt;leftmouse&gt; Hozzáadás 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay><!-- Nothing selected, nothing moused, nothing in the clipboard--><id>ObjectEditEmptyClipboard</id>
+    <y></y>
+    <x></x>
+    <b>Eszköz menü</b>
+    <a>Hozzáadás</a>
+
+    <leftTrigger ghosted = "true">Kivágás</leftTrigger>
+    <rightTrigger ghosted = "true">Beillesztés</rightTrigger>
+
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Space]+&lt;leftmouse&gt; Hozzáadás 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused.
+    Selected thing isn't programmable. This never happens any more, since everything except the cursor
+    and waypoints (handled elsewhere) is programmable.
+    -->
+    <id>ObjectEditSelected</id>
+    <y></y>
+    <x>Beállítások</x>
+    <a>Tedd ide</a>
+    <leftTrigger>Kivágás</leftTrigger>
+    <rightTrigger>Lemásolás</rightTrigger>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <dpadVertical>Fel és le mozgatás</dpadVertical>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused. Selected thing is a gameactor.-->
+    <id>ObjectEditSelectedProgrammable</id>
+    <y>Program</y>
+    <x>Beállítások</x>
+    <a>Tedd ide</a>
+    <leftTrigger>Kivágás</leftTrigger>
+    <rightTrigger>Lemásolás</rightTrigger>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <dpadVertical>Fel és le mozgatás</dpadVertical>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something cursored (not picked up, blue), nothing moused. Cursored thing is not a gameactor.
+    This isn't useful anymore, since everything is programmable except the cursor and
+    waypoints (handled elsewhere)
+    -->
+    <id>ObjectEditFocus</id>
+    <y></y>
+    <x>Beállítások</x>
+    <b>Eszköz menü</b>
+    <a>Felvétel</a>
+    <leftTrigger>Kivágás</leftTrigger>
+    <rightTrigger>Lemásolás</rightTrigger>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <dpadVertical>Méret módosítása</dpadVertical>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <!-- GameActor cursored (not picked up, blue), nothing moused.-->
+    <id>ObjectEditFocusProgrammable</id>
+    <y>Program</y>
+    <x>Beállítások</x>
+    <b>Eszköz menü</b>
+    <a>Felvétel</a>
+    <leftTrigger>Kivágás</leftTrigger>
+    <rightTrigger>Lemásolás</rightTrigger>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <dpadVertical>Méret módosítása</dpadVertical>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  
+  <!--And one for the trees-->
+  <overlay>
+    <!--A Tree is cursored (not picked up), nothing highlighted.-->
+    <id>TreeEditFocusProgrammable</id>
+    <y>Program</y>
+    <x>Beállítások</x>
+    <b>Eszköz menü</b>
+    <a>Felvétel</a>
+    <leftTrigger>Kivágás</leftTrigger>
+    <rightTrigger>Lemásolás</rightTrigger>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <dpadVertical>Típus módosítása</dpadVertical>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Program 
+      [X] Beállítások 
+      [leftarrow][rightarrow] Szín módosítása 
+      [uparrow][downarrow] Méret módosítása 
+      &lt;leftmouse&gt; Drag 
+      [Shift]+&lt;leftmouse&gt; Emelés/csökkentés 
+      [Shift]+&lt;rightmouse&gt; Forgatás 
+      [Space]+&lt;leftmouse&gt; Hozzáadás 
+      [Alt]+&lt;leftmouse&gt; Lemásolás 
+      [Ctrl]+&lt;leftmouse&gt; Kivágás 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>TreeEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Program 
+      [X] Beállítások 
+      [leftarrow][rightarrow] Szín módosítása 
+      [uparrow][downarrow] Méret módosítása 
+      [Tab] Típus módosítása 
+      &lt;leftmouse&gt; Drag 
+      [Shift]+&lt;leftmouse&gt; Emelés/csökkentés 
+      [Shift]+&lt;rightmouse&gt; Forgatás 
+      [Space]+&lt;leftmouse&gt; Hozzáadás 
+      [Alt]+&lt;leftmouse&gt; Lemásolás 
+      [Ctrl]+&lt;leftmouse&gt; Kivágás 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay><!--End of the object edit permutations--><overlay>
+    <id>ObjectTweak</id>
+    <y></y>
+    <x></x>
+    <b>Eszköz menü</b>
+    <a></a>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocus</id>
+    <y></y>
+    <x></x>
+    <b>Eszköz menü</b>
+    <a>Csavarás beállítások</a>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocusProgrammable</id>
+    <y>Program</y>
+    <x></x>
+    <b>Eszköz menü</b>
+    <a>Csavarás beállítások</a>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>TextDisplay</id>
+    <a>Folytatás</a>
+  </overlay>
+
+  <overlay>
+    <id>ScrollableTextDisplay</id>
+    <a>Folytatás</a>
+    <leftStick>Szöveg görgetése</leftStick>
+  </overlay>
+
+  <overlay>
+    <id>PieSelectorProgrammingNoSelection</id>
+    <b>Mégsem</b>
+    <leftStick>Csempe kiválasztása</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorProgramming</id>
+    <a>Csempe hozzáadása</a>
+    <b>Mégsem</b>
+    <y>Súgó</y>
+    <leftStick>Elem kiválasztása</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItemNoSelection</id>
+    <b>Mégsem</b>
+    <leftStick>Elem kiválasztása</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItem</id>
+    <a>Kiválasztott hozzáadása</a>
+    <b>Mégsem</b>
+    <y>Súgó</y>
+    <leftStick>Elem kiválasztása</leftStick>
+  </overlay>
+  <overlay>
+    <id>HelpCardProgramming</id>
+  </overlay>
+  <overlay>
+    <id>HelpCardAddItem</id>
+  </overlay>
+
+  <overlay>
+    <id>ToolBox</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>BasePicker</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>BrushPicker</id>
+    <y></y>
+    <x></x>
+
+    <b>Mégsem</b>
+    <a>Elfogadás</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Egy ecset kiválasztása</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMaterial</id>
+    <!-- Placeholder, should not be seen. -->
+    <y>Elfogadás és váltás anyagválasztóra</y>
+    <x></x>
+
+    <b>Mégsem</b>
+    <a>Elfogadás</a>
+    <leftTrigger>Előző ecset</leftTrigger>
+    <rightTrigger>Következő ecset</rightTrigger>
+    <bottom>Egy ecset kiválasztása</bottom>
+
+    <keyMouse>
+      [Y] Elfogadás és váltás anyagválasztóra 
+      [leftarrow][rightarrow] Ecset módosítása 
+      [Enter] Ecset kiválasztása
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialPicker</id>
+    <y>Kurzor alatti anyag kiválasztása</y>
+    <x>Elfogadás és váltás az ecsetválasztóra</x>
+    <b>Mégsem</b>
+    <a>Elfogadás</a>
+    <dpadUp>Stílus: Szögletes</dpadUp>
+    <dpadDown>Stílus: Sima</dpadDown>
+    <leftTrigger>Előző anyag</leftTrigger>
+    <rightTrigger>Következő anyag</rightTrigger>
+    <bottom>Anyag kiválasztása</bottom>
+
+    <keyMouse>
+      [X] Elfogadás és váltás az ecsetválasztóra 
+      [leftarrow][rightarrow] Anyag módosítása 
+      [uparrow] Stílus: Szögletes 
+      [downarrow] stílus: Sima 
+      [Enter] Anyag kiválasztása 
+      &lt;leftmouse&gt; Kurzor alattu anyag kiválasztása 
+      [Alt] + &lt;leftmouse&gt; Anyag kiválasztása a világból
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialFilterPicker</id>
+    <y>Robot alatti anyag kiválasztása</y>
+    <x></x>
+    <b>Mégsem</b>
+    <a>Elfogadás</a>
+    <leftTrigger>Előző anyag</leftTrigger>
+    <rightTrigger>Következő anyag</rightTrigger>
+    <bottom>Anyag kiválasztása</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Anyag módosítása 
+      [Enter] Anyag kiválasztása
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>WaterPicker</id>
+    <y>Víz kiválasztása a kurzornál</y>
+    <x></x>
+    <leftTrigger>Előző víz</leftTrigger>
+    <rightTrigger>Következő víz</rightTrigger>
+
+    <b>Mégsem</b>
+    <a>Elfogadás</a>
+    <bottom>Víztípus kiválasztása</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Víztípus módosítása 
+      [Enter] Víztípus kiválasztása
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>HeightMapTool</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a>Sima</a>
+    <leftTrigger>Csökkentés</leftTrigger>
+    <rightTrigger>Növelés</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Csökkentés 
+      [Alt]+&lt;leftmouse&gt; Sima 
+      [Space]+&lt;leftmouse&gt; Emelés 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolStart</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Kihagyás</b>
+    <a>Sima</a>
+    <leftTrigger>Talaj mélyítése</leftTrigger>
+    <rightTrigger>Talaj felemelése</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Csökkentés 
+      [Alt]+&lt;leftmouse&gt; Sima 
+      [Space]+&lt;leftmouse&gt; Emelés 
+      &lt;leftmouse&gt; Kamera 
+      &lt;rightmouse&gt; Kamera 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Sor kihagyása
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolGoing</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a>Sima</a>
+    <leftTrigger>Talaj mélyítése</leftTrigger>
+    <rightTrigger>Talaj felemelése</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Csökkentés 
+      [Alt]+&lt;leftmouse&gt; Sima 
+      [Space]+&lt;leftmouse&gt; Emelés 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>AddTool</id>
+    <y>Anyagválasztó</y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a>Talajszín módosítása</a>
+    <leftTrigger>Talaj törlése</leftTrigger>
+    <rightTrigger>Talaj hozzáadása</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Anyagválaztó 
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Talaj törlése 
+      [Alt]+&lt;leftmouse&gt; Talajszín módosítása 
+      [Space]+&lt;leftmouse&gt; Talaj hozzáadása 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolMagicBrush</id>
+    <y>Anyagválasztó</y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a>Talajszín módosítása</a>
+    <leftTrigger>Talaj törlése</leftTrigger>
+    <rightTrigger ghosted = "true">Talaj hozzáadása</rightTrigger>
+
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <dpadUp>Stílus: Szögletes</dpadUp>
+    <dpadDown>Stílus: Sima</dpadDown>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Anyagválasztó 
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [uparrow] Stílus: Szögletes 
+      [downarrow] stílus: Sima 
+      [Ctrl]+&lt;leftmouse&gt; Talaj törlése 
+      [Alt]+&lt;leftmouse&gt; Talajszín módosítása 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+
+  </overlay>
+  <overlay>
+    <id>AddToolStart</id>
+    <y>Anyagválasztó</y>
+    <x>Ecsetválasztó</x>
+    <b>Kihagyás</b>
+    <a>Anyag módosítása</a>
+    <leftTrigger>Törlés</leftTrigger>
+    <rightTrigger>Hozzáadás</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Anyagválaztó 
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Talaj törlése 
+      [Alt]+&lt;leftmouse&gt; Talajszín módosítása 
+      [Space]+&lt;leftmouse&gt; Talaj hozzáadása 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Sor kihagyása
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolGoing</id>
+    <y>Anyagválasztó</y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a>Anyag módosítása</a>
+    <leftTrigger>Törlés</leftTrigger>
+    <rightTrigger>Hozzáadás</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Anyagválaztó 
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Talaj törlése 
+      [Alt]+&lt;leftmouse&gt; Talajszín módosítása 
+      [Space]+&lt;leftmouse&gt; Talaj hozzáadása 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>NoiseTool</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a>Sima</a>
+    <leftTrigger>Tüskés</leftTrigger>
+    <rightTrigger>Dombos</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Dombos 
+      [Alt]+&lt;leftmouse&gt; Sima 
+      [Space]+&lt;leftmouse&gt; Tüskés 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolStart</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Kihagyás</b>
+    <a>Sima</a>
+    <leftTrigger>Tüskés</leftTrigger>
+    <rightTrigger>Dombos</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Dombos 
+      [Alt]+&lt;leftmouse&gt; Sima 
+      [Space]+&lt;leftmouse&gt; Tüskés 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Sor kihagyása
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolGoing</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a>Sima</a>
+    <leftTrigger>Tüskés</leftTrigger>
+    <rightTrigger>Dombos</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Dombos 
+      [Alt]+&lt;leftmouse&gt; Sima 
+      [Space]+&lt;leftmouse&gt; Tüskés 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>LevelTool</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a></a>
+    <leftTrigger>Sima</leftTrigger>
+    <rightTrigger>Vízszintes</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Alt]+&lt;leftmouse&gt; Sima 
+      [Space]+&lt;leftmouse&gt; Vízszintes 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>LevelToolStart</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <a>Azonnali kövezés</a>
+    <leftTrigger>Sima</leftTrigger>
+    <rightTrigger>Lassú kövezés</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Sima 
+      [Alt]+&lt;leftmouse&gt; Azonnali kövezés 
+      [Space]+&lt;leftmouse&gt; Lassú kövezés 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Sor kihagyása
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>LevelToolGoing</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Kész</b>
+    <a>Azonnali kövezés</a>
+    <leftTrigger>Sima</leftTrigger>
+    <rightTrigger>Lassú kövezés</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Sima 
+      [Alt]+&lt;leftmouse&gt; Azonnali kövezés 
+      [Space]+&lt;leftmouse&gt; Lassú kövezés 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>WaterAdd</id>
+    <y>Víztípus választása</y>
+    <x></x>
+    <b>Eszköz menü</b>
+    <a>Víztípus beállítása</a>
+    <leftTrigger>Vízszint csökkentése</leftTrigger>
+    <rightTrigger>Vízszint emelése</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal></dpadHorizontal>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Víztípus választása 
+      [Ctrl]+&lt;leftmouse&gt; Vízszint csökkentése 
+      [Alt]+&lt;leftmouse&gt; Víztípus beállítása 
+      [Space]+&lt;leftmouse&gt; Vízszint emelése 
+      &lt;leftmouse&gt; Kurzor mozgatása 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>DelObjTool</id>
+    <y></y>
+    <x>Ecsetválasztó</x>
+    <b>Eszköz menü</b>
+    <leftTrigger>Tárgyak törlése</leftTrigger>
+    <rightTrigger>Tárgyak törlése</rightTrigger>
+    <rightTrigger></rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Ecset mérete</dpadHorizontal>
+    <leftStick>Ecset mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Ecsetválasztó 
+      [leftarrow][rightarrow] Ecsetméret 
+      [Ctrl]+&lt;leftmouse&gt; Törlés 
+      [Space]+&lt;leftmouse&gt; Törlés 
+      &lt;leftmouse&gt; Kamera mozgatása 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointNode</id>
+    <y>Több csomópont hozzáadása</y>
+    <x>Teljes út kiválasztása</x>
+    <b>Kész</b>
+    <a>Felvétel</a>
+    <dpadVertical>Típus módosítása</dpadVertical>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftTrigger>Csomópont törlése</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdge</id>
+    <y>Irány módosítása</y>
+    <x>Teljes út kiválasztása</x>
+    <b>Kész</b>
+    <a>Felvétel</a>
+    <dpadVertical>Típus módosítása</dpadVertical>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftTrigger>Él törlése</leftTrigger>
+    <rightTrigger>Él osztása</rightTrigger>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPath</id>
+    <y>Irány módosítása</y>
+    <x>Csomópont/él kiválasztása</x>
+    <b>Kész</b>
+    <a>Felvétel</a>
+    <dpadVertical>Típus módosítása</dpadVertical>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftTrigger>Út törlése</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveNode</id>
+    <y></y>
+    <x>Teljes út felvétele</x>
+    <b>Kész</b>
+    <a>Letesz</a>
+    <dpadVertical>Magasság módosítása</dpadVertical>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftTrigger>Csomópont törlése</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveEdge</id>
+    <y>Irány módosítása</y>
+    <x>Teljes út felvétele</x>
+    <b>Kész</b>
+    <a>Letesz</a>
+    <dpadVertical>Magasság módosítása</dpadVertical>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftTrigger>Él törlése</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMovePath</id>
+    <y>Irány módosítása</y>
+    <x>Csomópont/él kiválasztása</x>
+    <b>Kész</b>
+    <a>Letesz</a>
+    <dpadVertical>Magasság módosítása</dpadVertical>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftTrigger>Út törlése</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointAddNode</id>
+    <y>Csomópont elhelyezése és kész</y>
+    <x></x>
+    <b>Kész</b>
+    <a>Csomópont elhelyezése</a>
+    <dpadVertical>Típus módosítása</dpadVertical>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Kurzor mozgatása</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndAddNode</id>
+    <y></y>
+    <x></x>
+    <b>Kész</b>
+    <a></a>
+    <dpadVertical>Típus módosítása</dpadVertical>
+    <dpadHorizontal>Szín módosítása</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Új pozíció</leftStick>
+    <rightStick>Kamera pálya</rightStick>
+    <leftShoulder>Kicsinyítés</leftShoulder>
+    <rightShoulder>Nagyítás</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointNodeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Szín módosítása 
+      [Tab] Típus módosítása 
+      &lt;leftmouse&gt; Csomópont húzása 
+      [Shift]+&lt;leftmouse&gt; Csomópont felemelése/leengedése 
+      [X] Teljes út mód 
+      [Space]+&lt;leftmouse&gt; Több csomópont hozzáadása 
+      [Ctrl]+&lt;leftmouse&gt; Csomópont törlése 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdgeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Szín módosítása 
+      [Tab] Típus módosítása 
+      &lt;leftmouse&gt; Él húzása 
+      [Shift]+&lt;leftmouse&gt; Él felemelése/leengedése 
+      [X] Teljes út mód 
+      [Space]+&lt;leftmouse&gt; Él felosztása 
+      [Ctrl]+&lt;leftmouse&gt; Él törlése 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPathFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Szín módosítása 
+      [Tab] Típus módosítása 
+      &lt;leftmouse&gt; Út húzása 
+      [Shift]+&lt;leftmouse&gt; Út felemelése/leengedése 
+      [X] Csomópont/él mód 
+      [Space]+&lt;leftmouse&gt; Több csomópont hozzáadása 
+      [Ctrl]+&lt;leftmouse&gt; Út törlése 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Eszköz menü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointAddFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Szín módosítása 
+      [Tab] Típus módosítása 
+      &lt;leftmouse&gt; Csomópont hozzáadása és folytatás 
+      [Alt]+&lt;leftmouse&gt; Csomópont hozzáadása és kész 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Hozzáadás kész
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Szín módosítása 
+      [Tab] Típus módosítása 
+      &lt;leftmouse&gt; Hozzáadás kész 
+      &lt;rightmouse&gt; Kamera pálya 
+      [PgUp][PgDn] Nagyítás/kicsinyítés 
+      [Esc] Hozzáadás kész
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulation</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Nyomd meg <![CDATA[<back>]]> gombot a szerkesztéshez.</bottom>
+
+    <keyMouseBottom>Nyomd meg az [Esc] gombot a szerkesztéshez.</keyMouseBottom>
+    <touchBottom>A szerkesztéshez koppints ide.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulationPreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Nyomd meg az <![CDATA[<a>]]> gombot a folytatáshoz.</bottom>
+
+    <keyMouseBottom>Nyomd meg az [Enter] gombot a folytatáshoz.</keyMouseBottom>
+    <touchBottom>A folytatáshoz koppints ide.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>PauseGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Folytatás</a>
+    <bottom>Játék szüneteltetve, nyomd meg az <![CDATA[<a>]]> gombot a folytatáshoz.</bottom>
+
+    <keyMouse>
+      [Pause] Folytatás
+    </keyMouse>
+
+    <keyMouseBottom>Játék szüneteltetve, nyomd meg a [Pause] gombot a folytatáshoz.</keyMouseBottom>
+    <touchBottom>Játék szüneteltetve, koppints ide a folytatáshoz.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>Programming</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>PageHandleFullPasteBuffer</id>
+    <y>Kód nyomtatása</y>
+    <x>Oldal másolása</x>
+    <b>Bezárás</b>
+    <a></a>
+    <leftTrigger>Oldal kivágása</leftTrigger>
+    <rightTrigger>Oldal beillesztése</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Oldal átváltása 
+      [Delete] Oldal kivágása 
+      [Insert] Oldal beillesztése 
+      [Esc] Vissza 
+      [Ctrl-P] Kód nyomtatása
+    </keyMouse>
+    
+    <touch>
+      &lt;tap&gt; Oldal átváltása 
+      &lt;touchHold&gt; Beállítások
+    </touch>    
+  </overlay>
+  <overlay>
+    <id>PageHandleEmptyPasteBuffer</id>
+    <y>Kód nyomtatása</y>
+    <x>Oldal másolása</x>
+    <b>Bezárás</b>
+    <a></a>
+    <leftTrigger>Oldal kivágása</leftTrigger>
+    <rightTrigger ghosted = "true">Oldal beillesztése</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Oldal átváltása 
+      [Delete] Oldal kivágása 
+      [Esc] Vissza 
+      [Ctrl-P] Kód nyomtatása
+    </keyMouse>
+    
+    <touch>
+      &lt;tap&gt; Oldal átváltása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    
+  </overlay>
+
+  <overlay>
+    <id>RowHandleFullPasteBuffer</id>
+    <y>Kód nyomtatása</y>
+    <x>Sor másolása</x>
+    <b>Bezárás</b>
+    <a>Sor mozgatása</a>
+    <leftTrigger>Sor kivágása</leftTrigger>
+    <rightTrigger>Sor beillesztése</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Sor felvétele 
+      &lt;rightmouse&gt; Sor kivágása 
+      [Enter] Sor felvétele 
+      [Tab] Következő oldal 
+      [Shift][Tab] Előző oldal 
+      [Delete] Sor kivágása 
+      [Insert] Sor beillesztése 
+      [Esc] Vissza 
+      [Ctrl-P] Kód nyomtatása
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Sor kiválasztása 
+      &lt;drag&gt; Sor mozgatása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+
+  </overlay>
+  <overlay>
+    <id>RowHandleEmptyPasteBuffer</id>
+    <y>Kód nyomtatása</y>
+    <x>Sor másolása</x>
+    <b>Bezárás</b>
+    <a>Sor mozgatása</a>
+    <leftTrigger>Sor kivágása</leftTrigger>
+    <rightTrigger ghosted = "true">Sor beillesztése</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Sor felvétele 
+      &lt;rightmouse&gt; Sor kivágása 
+      [Enter] Sor felvétele 
+      [Tab] Következő oldal 
+      [Shift][Tab] Előző oldal 
+      [Delete] Sor kivágása 
+      [Esc] Vissza 
+      [Ctrl-P] Kód nyomtatása
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Sor kiválasztása 
+      &lt;drag&gt; Sor mozgatása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+    
+  </overlay>
+  <overlay>
+    <id>RowMove</id>
+    <y>Kód nyomtatása</y>
+    <x></x>
+    <b>Bezárás</b>
+    <leftStick>Sor prioritásának módosítása</leftStick>
+    <a>Sor ide helyezése</a>
+    <bottom></bottom>
+
+    <keyMouse>
+      [uparrow] Mozgatás felfelé 
+      [downarrow] Mozgatás lefelé 
+      [rightarrow] Behúzás blokkolása 
+      [leftarrow] Behúzás visszavonásának blokkolása 
+      [Enter] Ide letesz 
+      [Ctrl-P] Kód nyomtatása
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Sor kiválasztása 
+      &lt;drag&gt; Sor mozgatása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+  </overlay>
+  <overlay>
+    <id>Csempe</id>
+    <y>Súgó</y>
+    <x>Csempe törlése</x>
+    <b>Bezárás</b>
+    <a>Csempe módosítása</a>
+    <leftTrigger>Csempe törlése</leftTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Csempe hozzáadása/módosítása 
+      &lt;rightmouse&gt; Csempe törlése 
+      [Enter] Csempe hozzáadása/módosítása 
+      [Tab] Következő oldal 
+      [Shift][Tab] Előző oldal 
+      [Delete] Csempe törlése 
+      [Esc] Visszatérés 
+      [Ctrl-P] Kód nyomtatása
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Csempe hozzáadás/módosítása 
+      &lt;touchHold&gt; Beállítások
+    </touch>
+  </overlay>
+
+  <overlay>
+    <id>TopLevelPaletteEditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Világ beállításainak szerkesztése</bottom>
+  </overlay>
+  <overlay>
+    <id>TopLevelPaletteEditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Tárgy beállításainak szerkesztése</bottom>
+  </overlay>
+  <overlay>
+    <id>EditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Kiválaszt</a>
+    <bottom>Világ beállításai</bottom>
+  </overlay>
+  <overlay>
+    <id>EditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Karakter beállításai</bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridCheckbox</id>
+    <y></y>
+    <x></x>
+    <b>Kilépés</b>
+    <a>Módosítás</a>
+    <dpadVertical>Tulajdonság átváltása</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridSlider</id>
+    <y></y>
+    <x></x>
+    <b>Kilépés</b>
+    <a></a>
+    <dpadHorizontal>Bal/jobb a módosításhoz</dpadHorizontal>
+    <dpadVertical>Tulajdonság átváltása</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridPictureList</id>
+    <y></y>
+    <x></x>
+    <b>Kilépés</b>
+    <a></a>
+    <dpadHorizontal>Bal/jobb a módosításhoz</dpadHorizontal>
+    <dpadVertical>Tulajdonság átváltása</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridTextList</id>
+    <y></y>
+    <x></x>
+    <b>Kilépés</b>
+    <a>Következő opció választása</a>
+    <dpadVertical>Tulajdonság átváltása</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>Előzetes játék</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGameDescription</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Játék indítása</a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom>A játék indításához nyomd meg az &lt;a&gt; gombot</bottom>
+
+    <keyMouse>
+      [Enter] Játék indítása
+    </keyMouse>
+    <keyMouseBottom>A játék indításához nyomd meg az [Enter] gombot</keyMouseBottom>
+    <touchBottom>A játék indításához koppints ide</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMenu</id>
+    <a>Kiválaszt</a>
+    <leftStick>Kiválasztás módosítása</leftStick>
+  </overlay>
+  <overlay>
+    <id>ModularPictureList</id>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Beállítás módosítása 
+      [Esc] Vissza
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCameraMode</id>
+    <dpadHorizontal>Kiválasztás módosítása</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Kamera módosítása 
+      [X] Kamera beállítása 
+      [Esc] Vissza
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckbox</id>
+    <a>Módosítás</a>
+    <keyMouse>
+      [Enter] Módosítás 
+      [Esc] Vissza
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularNextLevel</id>
+    <a>Módosítás</a>
+    <keyMouse>
+      [Enter] Módosítás 
+      [Esc] Vissza
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularSlider</id>
+    <dpadHorizontal>Érték módosítása</dpadHorizontal>
+    <keyMouse>
+      [leftarrow][rightarrow] Érték módosítása 
+      [Esc] Vissza
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularRadioBox</id>
+    <a>Módosítás</a>
+    <keyMouse>
+      [Enter] Kiválasztás módosítása 
+      [Esc] Vissza
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckboxList</id>
+    <a>Módosítás</a>
+    <b>Kész</b>
+    <keyMouse>
+      [uparrow][downarrow] Címke kiválasztása 
+      [Enter] Címkeváltás 
+      [Esc] Vissza
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularButtonElement</id>
+    <a>Előzmények módosításának megtekintése</a>
+    <x>Előzmények módosításának törlése</x>
+    <keyMouse>
+      [A] Előzmények módosításának megtekintése 
+      [X] Előzmények módosításának törlése 
+      [Esc] Vissza
+    </keyMouse>
+  </overlay>
+
+</XmlOverlayData>

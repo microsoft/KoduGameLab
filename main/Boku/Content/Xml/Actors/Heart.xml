@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt></TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\White</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+	<GlowPosition>
+		<Offset>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0.7</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.25</Z>
+  </HealthBarOffset>
+
+  <MinHeight>0</MinHeight>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>-0.025</Y>
+		<Z>0.35</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.3</CollisionRadius>
+	<HasCushion>false</HasCushion>
+
+	<Cost>1.175</Cost>
+  <CollisionSound>plasticHard</CollisionSound>
+
+  <IsBot>false</IsBot>
+  <IsProp>true</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>0.2</Mass>
+  <StayAboveWater>false</StayAboveWater>
+  <Friction>0.9</Friction>
+  
+  <Classification>
+    <Color>Red</Color>
+    <Physicality>Collectable</Physicality>
+  </Classification>
+
+  <Chassis Type="DynamicProp">
+    <SpinRate>1.0</SpinRate>
+    <Gravity>0.0</Gravity>
+  </Chassis>
+  
+</XmlGameActor>

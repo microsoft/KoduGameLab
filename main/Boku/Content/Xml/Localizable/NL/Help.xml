@@ -1,0 +1,320 @@
+﻿<?xml version="1.0"?>
+<Help xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><programmingExamples>
+
+    <ExamplePage><description>Als ik een appel zie, ga erheen.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.fruit</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik tegen een appel stoot, eet ik die.</description> <reflexes><reflex><upids><upid>sensor.bumpers</upid> <upid>filter.fruit</upid> <upid>actuator.eat</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een paarse appel zie, ga ervandaan.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.purple</upid> <upid>filter.fruit</upid> <upid>actuator.movement</upid> <upid>selector.avoidall</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een Kodu hoor, ga erheen.</description> <reflexes><reflex><upids><upid>sensor.ears</upid> <upid>filter.bokubot</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een appel heb, eet ik die.</description> <reflexes><reflex><upids><upid>sensor.got</upid> <upid>filter.fruit</upid> <upid>actuator.eat</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik tegen een rode appel stoot, eet ik die.</description> <reflexes><reflex><upids><upid>sensor.bumpers</upid> <upid>filter.fruit</upid><upid>filter.red</upid> <upid>actuator.eat</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik 100 punten score, heb ik gewonnen.</description> <reflexes><reflex><upids><upid>sensor.scored</upid> <upid>filter.100points</upid> <upid>actuator.victory</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik 0 gezondheidspunten heb, is het spel afgelopen.</description> <reflexes><reflex><upids><upid>sensor.health</upid> <upid>filter.000point</upid> <upid>actuator.gameover</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik word vastgehouden door een zeppelin, word ik rood</description> <reflexes><reflex><upids><upid>sensor.held</upid> <upid>filter.windblimp</upid> <upid>actuator.color</upid> <upid>modifier.red</upid> <upid>modifier.me</upid></upids></reflex></reflexes></ExamplePage>
+    
+    <ExamplePage><description>Als speler 1 op knop A drukt, wordt een roze raket recht omhoog gelanceerd.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.player1</upid> <upid>filter.abutton</upid> <upid>actuator.shoot</upid> <upid>modifier.pink</upid> <upid>modifier.up</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik op een bepaald terrein ben, krijg ik 10 gezondheidspunten.</description> <reflexes><reflex><upids><upid>sensor.terrain</upid> <upid>filter.terrain</upid> <upid>actuator.heal</upid> <upid>modifier.010points</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik geen Kodu's zie, is het spel afgelopen.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.countnone</upid> <upid>filter.bokubot</upid> <upid>actuator.gameover</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik iets zie, ga ervandaan.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.anything</upid> <upid>actuator.movement</upid> <upid>selector.avoidall</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik op een bepaald type water ben, spring ik 1 keer.  Niet alle karakters kunnen springen.</description> <reflexes><reflex><upids><upid>sensor.water</upid> <upid>filter.water</upid> <upid>actuator.jump</upid> <upid>modifier.once</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een boze trampoline zie, ga ervandaan.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.expressangry</upid> <upid>filter.pushpad</upid> <upid>actuator.movement</upid> <upid>selector.avoidall</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als een appel in de buurt is, ga erheen.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.closeby</upid> <upid>filter.fruit</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik veel mijnen zie, ga ervandaan!</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.countmany</upid> <upid>filter.mine</upid> <upid>actuator.movement</upid> <upid>selector.awayfromall</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Lanceer tussen 0 en 5 seconden een rots.</description> <reflexes><reflex><upids><upid>sensor.timer</upid> <upid>filter.random</upid> <upid>filter.05seconds</upid> <upid>actuator.launch</upid> <upid>modifier.objectrock</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Lanceer tussen 5 en 10 seconden een munt.</description> <reflexes><reflex><upids><upid>sensor.timer</upid> <upid>filter.05seconds</upid> <upid>filter.random</upid> <upid>filter.05seconds</upid> <upid>actuator.launch</upid> <upid>modifier.objectcoin</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als mijn score hoger is dan 20 punten, heb ik het spel gewonnen.</description> <reflexes><reflex><upids><upid>sensor.scored</upid> <upid>filter.scoreabove</upid> <upid>filter.020points</upid> <upid>actuator.victory</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een Kodu in de buurt zie, zeg iets.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.bokubot</upid> <upid>filter.closeby</upid> <upid>actuator.say</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik niks zie, kijk verdrietig.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.countnone</upid> <upid>actuator.express</upid> <upid>modifier.expresssad</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een Kodu zie, kijk blij.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.bokubot</upid> <upid>actuator.express</upid> <upid>modifier.expresshappy</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een wolk zie, ga er snel omheen.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.cloud</upid> <upid>actuator.movement</upid> <upid>selector.circle</upid> <upid>modifier.turnright</upid> <upid>modifier.quickly</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik geen Kodu zie, word ik rood.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.bokubot</upid> <upid>filter.countnone</upid> <upid>actuator.glow</upid> <upid>modifier.red</upid></upids></reflex></reflexes></ExamplePage>
+    
+    <ExamplePage><description>Maak elke 10 seconden een rots.</description> <reflexes><reflex><upids><upid>sensor.timer</upid> <upid>filter.10seconds</upid> <upid>actuator.make</upid> <upid>modifier.objectrock</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Speel altijd een geluid af.</description> <reflexes><reflex><upids><upid>sensor.always</upid> <upid>actuator.sound</upid> <upid>modifier.mu_ambinetmodd</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Altijd gesloten blijven.  Werkt niet voor alle karakters.</description> <reflexes><reflex><upids><upid>sensor.always</upid> <upid>actuator.close</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Altijd open blijven.  Werkt niet voor alle karakters.</description> <reflexes><reflex><upids><upid>sensor.always</upid> <upid>actuator.open</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een boze Kodu zie, geen geluiden meer afspelen.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.bokubot</upid> <upid>filter.expressangry</upid> <upid>actuator.stopsound</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik een ster pak, ga naar pagina 2.</description> <reflexes><reflex><upids><upid>sensor.got</upid> <upid>filter.star</upid> <upid>actuator.switchtask</upid> <upid>modifier.taskb</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als mijn schot een Bot raakt, verdoof die.</description> <reflexes><reflex><upids><upid>sensor.missilehit</upid> <upid>filter.anybot</upid> <upid>actuator.zap</upid> <upid>modifier.it</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als mijn schot een zoeklicht raakt, gaat die KO.</description> <reflexes><reflex><upids><upid>sensor.missilehit</upid> <upid>filter.wisp</upid> <upid>actuator.pop</upid> <upid>modifier.it</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als mijn schot een mijn raakt, explodeert die.</description> <reflexes><reflex><upids><upid>sensor.missilehit</upid> <upid>filter.mine</upid> <upid>actuator.boom</upid> <upid>modifier.it</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als mijn schot een mijn raakt, verdwijnt die.</description> <reflexes><reflex><upids><upid>sensor.missilehit</upid> <upid>filter.sputnik</upid> <upid>actuator.vanish</upid> <upid>modifier.it</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik tegen een appel stoot, pak ik die.</description> <reflexes><reflex><upids><upid>sensor.bumpers</upid> <upid>filter.fruit</upid> <upid>actuator.grab</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik op een bepaald type terrein ben, laat ik alles vallen.</description> <reflexes><reflex><upids><upid>sensor.terrain</upid> <upid>filter.terrain</upid> <upid>actuator.drop</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik ergens tegenaan stoot, geef ik alles af.</description> <reflexes><reflex><upids><upid>sensor.bumpers</upid> <upid>filter.anything</upid> <upid>actuator.give</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik 0 gezondheidspunten heb, wordt het spel opnieuw gestart.</description> <reflexes><reflex><upids><upid>sensor.health</upid> <upid>filter.000point</upid> <upid>actuator.restart</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als mijn schot een schip raakt, wordt een punt afgetrokken.</description> <reflexes><reflex><upids><upid>sensor.missilehit</upid> <upid>filter.floatbot</upid> <upid>actuator.unscore</upid> <upid>modifier.001point</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als op knop A wordt gedrukt, volgt de camera mij.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.camera.followme</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als op knop B wordt gedrukt, negeert de camera mij.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.bbutton</upid> <upid>actuator.camera.ignoreme</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als op knop X wordt gedrukt, gebruik &quot;first person&quot;-weergave.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.xbutton</upid> <upid>actuator.camera.firstperson</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als de linker-stick wordt bewogen, vlieg omhoog of omlaag.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid> <upid>selector.moveupdown</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als de linker-stick wordt bewogen, ga naar rechts.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid> <upid>selector.moveleftright</upid> <upid>modifier.turnright</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als mijn raket een gele Kodu raakt, verliest de Kodu 5 gezondheidspunten.</description> <reflexes><reflex><upids><upid>sensor.missilehit</upid> <upid>filter.yellow</upid> <upid>filter.boku</upid> <upid>actuator.damage</upid> <upid>modifier.it</upid> <upid>modifier.005points</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als de rechter-stick wordt bewogen, ga omhoog of omlaag.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.rightstick</upid> <upid>actuator.movement</upid> <upid>modifier.constraint.northsouth</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als de rechter-stick wordt bewogen, ga naar links of rechts.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.rightstick</upid> <upid>actuator.movement</upid> <upid>modifier.constraint.eastwest</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als op knop Y wordt gedrukt, ga omhoog.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.ybutton</upid> <upid>actuator.movement</upid> <upid>modifier.north</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als op knop B wordt gedrukt, ga naar rechts.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.bbbutton</upid> <upid>actuator.movement</upid> <upid>modifier.east</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als op knop A wordt gedrukt, ga omlaag.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.movement</upid> <upid>modifier.south</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als op knop X wordt gedrukt, ga naar links.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.xbutton</upid> <upid>actuator.movement</upid> <upid>modifier.west</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als de linkertrekker wordt ingedrukt, ga langzaam naar voren.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.lefttrigger_analog</upid> <upid>actuator.movement</upid> <upid>selector.forward</upid> <upid>modifier.slowly</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als de rechtertrekker wordt ingedrukt, ga snel naar voren.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.righttrigger_analog</upid> <upid>actuator.movement</upid> <upid>selector.forward</upid> <upid>modifier.quickly</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik het arenageluid hoor, lanceer een hart de lucht in.</description> <reflexes><reflex><upids><upid>sensor.ears</upid> <upid>filter.environ.arena.any</upid> <upid>actuator.launch</upid> <upid>modifier.strongly</upid> <upid>modifier.angle.high</upid> <upid>modifier.objectheart</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als mijn raket een groene Kodu raakt, worden 5 punten aan de rode score toegevoegd.</description> <reflexes><reflex><upids><upid>sensor.missilehit</upid> <upid>filter.green</upid> <upid>filter.boku</upid> <upid>actuator.score</upid> <upid>modifier.red</upid> <upid>modifier.005points</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Lanceer 1 keer een raket.</description> <reflexes><reflex><upids><upid>actuator.shoot</upid> <upid>modifier.once</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Wandel snel rond de wereld.</description> <reflexes><reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid> <upid>modifier.quickly</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als ik tegen een rots stoot, krijgt het blauwe team 1 punt.</description> <reflexes><reflex><upids><upid>sensor.bumpers</upid> <upid>filter.rock</upid> <upid>actuator.score</upid> <upid>modifier.001point</upid> <upid>modifier.blue</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Als de linker-stick beweegt, beweeg mijn karakter.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex></reflexes></ExamplePage>
+
+    <ExamplePage><description>Wandel de wereld rond.</description> <reflexes><reflex><upids><upid>sensor.always</upid> <upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage>
+
+  </programmingExamples>
+
+
+
+  <actorHelp><item><key><string>BokuBot</string></key> <value><ActorHelp><description>Kodu is een beetje langzaam en heeft moeite om steile hellingen op te klimmen.</description> <upid>filter.boku</upid> <programs>
+
+            <ExampleProgram><description>Maak een Kodu die appels zoekt en eet.</description> <tileUpid>filter.fruit</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.fruit</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex> <reflex><upids><upid>sensor.bumpers</upid> <upid>filter.fruit</upid> <upid>actuator.eat</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een Kodu die je kunt besturen.  Met de linker-stick beweeg je de Kodu.  Als je op knop A drukt, springt de Kodu.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.jump</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een Kodu die rode paden volgt.</description> <tileUpid>selector.followwaypoints</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>actuator.movement</upid> <upid>selector.followwaypoints</upid> <upid>modifier.red</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een Kodu die pagina's gebruikt om tussen verschillend gedrag over te schakelen.  Druk op knop A om te wisselen tussen rood of blauw gloeien.</description> <tileUpid>actuator.switchtask</tileUpid> <pages><ExamplePage><description>Rood gloeien.</description> <reflexes><reflex><upids><upid>actuator.glow</upid> <upid>modifier.red</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.switchtask</upid> <upid>modifier.taskb</upid></upids></reflex></reflexes></ExamplePage>
+
+                <ExamplePage><description>Blauw gloeien.</description> <reflexes><reflex><upids><upid>actuator.glow</upid> <upid>modifier.blue</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.switchtask</upid> <upid>modifier.taska</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>TerraCannon</string></key> <value><ActorHelp><description>Kanon is groot en langzaam, maar zeer krachtig.</description> <upid>filter.terracannon</upid> <programs>
+
+            <ExampleProgram><description>Maak een kanon dat appels zoekt en vindt.</description> <tileUpid>filter.fruit</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.fruit</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex> <reflex><upids><upid>sensor.bumpers</upid> <upid>filter.fruit</upid> <upid>actuator.eat</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een kanon dat je kunt besturen.  Met de linker-stick beweeg je het kanon.  Als je op knop A drukt, springt het kanon.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.jump</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een kanon dat rode paden volgt.</description> <tileUpid>selector.followwaypoints</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>actuator.movement</upid> <upid>selector.followwaypoints</upid> <upid>modifier.red</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een kanon dat paginaschakeling gebruikt om tussen verschillend gedrag over te schakelen.  Druk op knop A om te wisselen tussen rood of blauw gloeien.</description> <tileUpid>actuator.switchtask</tileUpid> <pages><ExamplePage><description>Rood gloeien.</description> <reflexes><reflex><upids><upid>actuator.glow</upid> <upid>modifier.red</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.switchtask</upid> <upid>modifier.taskb</upid></upids></reflex></reflexes></ExamplePage>
+
+                <ExamplePage><description>Blauw gloeien.</description> <reflexes><reflex><upids><upid>actuator.glow</upid> <upid>modifier.blue</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.switchtask</upid> <upid>modifier.taska</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>FlyFish</string></key> <value><ActorHelp><description>Vliegende vis zweeft en draait snel om - geschikt voor snelle acties.</description> <upid>filter.flyfish</upid> <programs>
+
+            <ExampleProgram><description>Maak een vliegende vis die appels zoekt en eet.</description> <tileUpid>filter.fruit</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.fruit</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex> <reflex><upids><upid>sensor.bumpers</upid> <upid>filter.fruit</upid> <upid>actuator.eat</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een vliegende vis die je kunt besturen.  Met de linker-stick bestuur je de vliegende vis.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een vliegende vis die rode paden volgt.</description> <tileUpid>selector.followwaypoints</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>actuator.movement</upid> <upid>selector.followwaypoints</upid> <upid>modifier.red</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een vliegende vis die pagina's gebruikt om tussen verschillend gedrag over te schakelen.  Druk op knop A om te wisselen tussen rood of blauw gloeien.</description> <tileUpid>actuator.switchtask</tileUpid> <pages><ExamplePage><description>Rood gloeien.</description> <reflexes><reflex><upids><upid>actuator.glow</upid> <upid>modifier.red</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.switchtask</upid> <upid>modifier.taskb</upid></upids></reflex></reflexes></ExamplePage>
+
+                <ExamplePage><description>Blauw gloeien.</description> <reflexes><reflex><upids><upid>actuator.glow</upid> <upid>modifier.blue</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.switchtask</upid> <upid>modifier.taska</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>Jet</string></key> <value><ActorHelp><description>Jet verplaatst zich normaal dicht bij de grond, maar je kunt hem programmeren om omhoog of omlaag te gaan.</description> <upid>filter.jet</upid> <programs>
+
+            <ExampleProgram><description>Maak een jet die appels zoekt en eet.</description> <tileUpid>filter.fruit</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.fruit</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex> <reflex><upids><upid>sensor.bumpers</upid> <upid>filter.fruit</upid> <upid>actuator.eat</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een jet die je kunt besturen.  Met de linker-stick bestuur je de jet.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een jet die groene paden volgt.</description> <tileUpid>selector.followwaypoints</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>actuator.movement</upid> <upid>selector.followwaypoints</upid> <upid>modifier.green</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een jet die pagina's gebruikt om tussen verschillend gedrag over te schakelen.  Druk op knop A om te wisselen tussen rood of blauw gloeien.</description> <tileUpid>actuator.switchtask</tileUpid> <pages><ExamplePage><description>Rood gloeien.</description> <reflexes><reflex><upids><upid>actuator.glow</upid> <upid>modifier.red</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.switchtask</upid> <upid>modifier.taskb</upid></upids></reflex></reflexes></ExamplePage>
+
+                <ExamplePage><description>Blauw gloeien.</description> <reflexes><reflex><upids><upid>actuator.glow</upid> <upid>modifier.blue</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.switchtask</upid> <upid>modifier.taska</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>FloatBot</string></key> <value><ActorHelp><description>Schip is een boot die op water drijft, maar niet het land op kan.</description> <upid>filter.floatbot</upid> <programs>
+
+            <ExampleProgram><description>Maak een schip dat je kunt besturen.  Met de linker-stick bestuur je het schip.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een schip dat beweegt en dat elke 10 seconden een appel maakt.</description> <tileUpid>selector.wander</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex> <upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex> <reflex><upids><upid>sensor.timer</upid> <upid>filter.10seconds</upid> <upid>actuator.make</upid> <upid>modifier.objectfruit</upid> <upid>modifier.red</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>FastBot</string></key> <value><ActorHelp><description>Motor is snel, kan steile hellingen opklimmen en kan springen.</description> <upid>filter.fastbot</upid> <programs>
+
+            <ExampleProgram><description>Maak een motor die door de gebruiker wordt bestuurd.  Met de linker-stick beweeg je de motor.  Als je op knop A drukt, springt Mobiko.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.jump</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>StickBoy</string></key> <value><ActorHelp><description>Stok kan zich niet bewegen, maar kan zich onder de grond verstoppen door te sluiten.  Kan niet worden beschadigd als deze gesloten is.</description> <upid>filter.stick</upid> <programs>
+
+            <ExampleProgram><description>Maak een stok door de gebruiker wordt bestuurd.  Met de Y- en A-knoppen wordt de stok geopend en gesloten.  Als je op knop B drukt, wordt een raket gelanceerd.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.ybutton</upid> <upid>actuator.open</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.close</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.bbutton</upid> <upid>actuator.shoot</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>SubBot</string></key> <value><ActorHelp><description>Onderzeeër werkt het best onder water.</description> <upid>filter.subbot</upid> <programs>
+
+            <ExampleProgram><description>Maak een onderzeeër door de gebruiker wordt bestuurd.  Met de linker-stick beweeg je de onderzeeër.  Als je op de Y- en A-knoppen drukt, komt de onderzeeër boven water of duikt deze.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.ybutton</upid> <upid>actuator.watersurface</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.waterdive</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>Light</string></key> <value><ActorHelp><description>Licht beweegt zich snel en kan de wereld verlichten.</description> <upid>filter.light</upid> <programs>
+
+            <ExampleProgram><description>Maak een licht dat schotels zoekt en volgt.</description> <tileUpid>selector.towardclosest</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.saucer</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>Wisp</string></key> <value><ActorHelp><description>Zoeklicht beweegt zich snel en laat gloeiende strepen achter.</description> <upid>filter.wisp</upid> <programs>
+
+            <ExampleProgram><description>Maak een zoeklicht dat andere zoeklichten zoekt en volgt.</description> <tileUpid>selector.towardclosest</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.wisp</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>Saucer</string></key> <value><ActorHelp><description>Schotel is het snelste en meest actieve karakter. Schotels kunnen direct van richting veranderen.</description> <upid>filter.saucer</upid> <programs>
+
+            <ExampleProgram><description>Maak een schotel die appels pakt en verplaatst.  Dit voorbeeld gebruikt meerdere pagina's.</description> <tileUpid>actuator.grab</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.eyes</upid> <upid>filter.fruit</upid> <upid>actuator.movement</upid> <upid>selector.towardclosest</upid></upids></reflex> <reflex><upids><upid>sensor.scan</upid> <upid>filter.fruit</upid> <upid>actuator.grab</upid></upids></reflex> <reflex><upids><upid>sensor.got</upid> <upid>actuator.switchtask</upid> <upid>modifier.taskb</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage>
+
+                <ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.timer</upid> <upid>filter.05seconds</upid> <upid>actuator.drop</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex> <reflex><upids><upid>sensor.got</upid> <upid>filter.countnone</upid> <upid>actuator.switchtask</upid> <upid>modifier.taskc</upid></upids></reflex></reflexes></ExamplePage>
+
+                <ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.timer</upid> <upid>filter.05seconds</upid> <upid>actuator.switchtask</upid> <upid>modifier.taska</upid></upids></reflex> <reflex><upids><upid>actuator.movement</upid> <upid>selector.wander</upid></upids></reflex></reflexes></ExamplePage>
+
+              </pages></ExampleProgram>
+
+            <ExampleProgram><description>Maak een schotel die je kunt besturen.  Met de linker-stick bestuur je de schotel en met de rechter-stick schiet je.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.rightstick</upid> <upid>actuator.shoot</upid></upids></reflex></reflexes></ExamplePage>
+
+              </pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>WindBlimp</string></key> <value><ActorHelp><description>De zeppelin vliegt langzaam rond.</description> <upid>filter.windblimp</upid> <programs>
+
+            <ExampleProgram><description>Maak een zeppelin door de gebruiker wordt bestuurd.  Met de linker-stick bestuur je de zeppelin.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>BalloonBot</string></key> <value><ActorHelp><description>Ballon zweeft langzaam door de lucht en ziet alles.  Dit is een goede scheidsrechter voor spellen.</description> <upid>filter.balloonbot</upid> <programs>
+
+            <ExampleProgram><description>Maak een ballon die door de gebruiker wordt bestuurd.  Met de linker-stick beweeg je de ballon.  Als je op de Y- en A-knoppen drukt, gaat de ballon omhoog of omlaag.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.ybutton</upid> <upid>actuator.airrise</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.airdrop</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>Puck</string></key> <value><ActorHelp><description>Puck is geschikt voor snelle spellen omdat deze zonder wrijving rondvliegt en kan botsen zonder snelheid te verliezen.</description> <upid>filter.puck</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>PushPad</string></key> <value><ActorHelp><description>Trampoline is groot en sterk.</description> <upid>filter.pushpad</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Turtle</string></key> <value><ActorHelp><description>Schildpad kan door de lucht vliegen en kan zich in het schild verbergen via Openen en Sluiten.  Als de schildpad gesloten is, kan deze niet worden aangevallen.</description> <upid>filter.turtle</upid> <programs>
+
+            <ExampleProgram><description>Maak een schildpad die je kunt besturen.  Met de linker-stick beweeg je de schildpad.  Als je op knop A drukt, verbergt de schildpad zich in het schild. Als je op knop Y drukt, wordt het schild geopend.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.gamepad</upid> <upid>filter.ybutton</upid> <upid>actuator.open</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.abutton</upid> <upid>actuator.close</upid></upids></reflex> <reflex><upids><upid>sensor.gamepad</upid> <upid>filter.leftstick</upid> <upid>actuator.movement</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>SwimFish</string></key> <value><ActorHelp><description>De vis voelt zich het beste in het water.  Op het land is de vis gestrand.</description> <upid>filter.swimfish</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Cloud</string></key> <value><ActorHelp><description>Wolk is speciaal voor het weer in Redmond.</description> <upid>filter.cloud</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Mijn</string></key> <value><ActorHelp><description>Mijn heeft spikes die uitgestoken of ingetrokken kunnen worden.  Gebruik de actie Openen om de spikes uit te steken of de actie Sluiten om de spikes te verbergen.</description> <upid>filter.mine</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Drum</string></key> <value><ActorHelp><description>Als andere karakters op de drum springen, vliegen ze door de lucht.</description> <upid>filter.drum</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Sputnik</string></key> <value><ActorHelp><description>Spoetnik is een goede vriend voor schotel.</description> <upid>filter.sputnik</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>BigYucca1</string></key> <value><ActorHelp><description>Bomen kunnen ook worden geprogrammeerd.</description> <upid>filter.bigyucca1</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Yucca1</string></key> <value><ActorHelp><description>Bomen kunnen ook worden geprogrammeerd.</description> <upid>filter.yucca1</upid> <programs></programs></ActorHelp></value></item>
+    
+    <item><key><string>Yucca3</string></key> <value><ActorHelp><description>Bomen kunnen ook worden geprogrammeerd.</description> <upid>filter.yucca3</upid> <programs></programs></ActorHelp></value></item>
+    
+    <item><key><string>Yucca2</string></key> <value><ActorHelp><description>Bomen kunnen ook worden geprogrammeerd.</description> <upid>filter.yucca2</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Fruit</string></key> <value><ActorHelp><description>De appel smaakt lekker en is leuk om te lanceren.</description> <upid>filter.fruit</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Rock</string></key> <value><ActorHelp><description>Rotsen kunnen net als alle dingen worden geprogrammeerd.</description> <upid>filter.rock</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Star</string></key> <value><ActorHelp><description>Sterren kunnen net als alle dingen worden geprogrammeerd.</description> <upid>filter.star</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Coin</string></key> <value><ActorHelp><description>Munten moet je in een klassiek arcadespel hebben.</description> <upid>filter.coin</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>SoccerBall</string></key> <value><ActorHelp><description>Programmeer de bal of schiet hem gewoon. Het blijft een bal, wat dan ook.</description> <upid>filter.soccerball</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Castle</string></key> <value><ActorHelp><description>Kasteel beweegt niet echt.</description> <upid>filter.castle</upid> <programs><ExampleProgram><description>Maak een kasteel dat dingen opblaast als er iets tegenaan botst.</description> <tileUpid>sensor.gamepad</tileUpid> <pages><ExamplePage><description>Dit is de paginabeschrijving.  Wordt niet gebruikt in ActorHelp maar in programmeer-Help.</description> <reflexes><reflex><upids><upid>sensor.bumpers</upid> <upid>filter.anything</upid> <upid>actuator.boom</upid> <upid>modifier.me</upid></upids></reflex></reflexes></ExamplePage></pages></ExampleProgram></programs></ActorHelp></value></item>
+
+    <item><key><string>Heart</string></key> <value><ActorHelp><description>Deze zijn heel erg geschikt voor gezondheidspacks.</description> <upid>filter.heart</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Bullet</string></key> <value><ActorHelp><description>Deze zijn heel erg geschikt voor munitiepacks.</description> <upid>filter.bullet</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Factory</string></key> <value><ActorHelp><description>De ACME-fabriek is een mooie bezienswaardigheid voor elk spel.</description> <upid>filter.factory</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>Hut</string></key> <value><ActorHelp><description>De hut is een mooie bezienswaardigheid voor elk spel.</description> <upid>filter.hut</upid> <programs></programs></ActorHelp></value></item>
+
+    <item><key><string>WayPoint</string></key> <value><ActorHelp><description>Paden zijn erg flexibel.  Je kunt ze gebruiken om een pad te maken dat een bot kan volgen.  Paden zijn normaal onzichtbaar, maar je kunt er wegen of muren van maken door het type pad te wijzigen.  Als je een bot programmeert om een pad te volgen, kun je ook bepalen welk kleur pad gevolgd moet worden.  De kleur van een pad kan op dezelfde manier worden gewijzigd als de kleur van een bot.  In de Wereldopties kun je 'Pad volgen debuggen' selecteren om de paden weer te geven die normaal onzichtbaar zijn als je je wereld activeert.</description> <upid>selector.followwaypoints</upid> <programs>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>PathGeneric</string></key> <value><ActorHelp><description>Paden zijn erg flexibel.  Je kunt ze gebruiken om een pad te maken dat een bot kan volgen.  Paden zijn normaal onzichtbaar als het spel actief is.  Als je een bot programmeert om een pad te volgen, kun je ook bepalen welk kleur pad gevolgd moet worden.  De kleur van een pad kan op dezelfde manier worden gewijzigd als de kleur van een bot.  In de Wereldopties kun je 'Pad volgen debuggen' selecteren om de paden weer te geven die normaal onzichtbaar zijn als je je wereld activeert.</description> <upid>filter.pathplain</upid> <programs>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>PathVeggie</string></key> <value><ActorHelp><description>Met bloemenpaden kun je bloempatronen in je wereld maken.</description> <upid>filter.pathflora</upid> <programs>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>PathRoad</string></key> <value><ActorHelp><description>Met deze paden kun je wegen in je spelwereld aanleggen.</description> <upid>filter.pathroad</upid> <programs>
+
+          </programs></ActorHelp></value></item>
+
+    <item><key><string>PathWall</string></key> <value><ActorHelp><description>Met deze paden kun je muren in je spelwereld bouwen.  Je kunt bepalen hoe hoog de muren zijn door het knooppunt te verhogen of te verlagen.</description> <upid>filter.pathwall</upid> <programs>
+
+          </programs></ActorHelp></value></item>
+
+  </actorHelp></Help>

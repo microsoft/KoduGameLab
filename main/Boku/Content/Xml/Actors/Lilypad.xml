@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SmokeSources>
+		<!--Regular sources-->
+		<XmlSmokeSource>
+			<Bone>eff1</Bone>
+			<Offset>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</Offset>
+			<Usage>Regular</Usage>
+			<AutoGen>false</AutoGen>
+		</XmlSmokeSource>
+	</SmokeSources>
+
+  <SurfaceSets>
+    <SurfaceSet>
+      <Name>BASE</Name>
+      <TechniqueExt>WithSkinning</TechniqueExt>
+      <BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+      <DirtMapName>Textures\White</DirtMapName>
+      <SurfaceNames>
+        <string>TintablePlastic</string>
+        <string>BlackPlastic</string>
+        <string>TintablePlastic</string>
+      </SurfaceNames>
+    </SurfaceSet>
+  </SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithSkinning</TechniqueExt>
+  </Model>
+  
+	<FaceParams>
+		<TypeFace>Wide</TypeFace>
+		<PupilCenter>
+			<X>0.23</X>
+			<Y>0.05</Y>
+		</PupilCenter>
+		<PupilSize>0.4</PupilSize>
+		<LidDistance>0.0</LidDistance>
+		<EyeSpeed>0.3</EyeSpeed>
+		<MaxAsymmetry>0.3</MaxAsymmetry>
+		<PupilsName>Textures\FloatbotFaceEyePupil</PupilsName>
+		<PupilsCrossName>Textures\BokuFaceEyePupilCross</PupilsCrossName>
+	</FaceParams>
+
+	<GlowPosition>
+		<Offset>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>1.6</Z>
+  </HealthBarOffset>
+
+  <EyeOffset>0.6</EyeOffset>
+
+  <CollisionCenter>
+		<X>0.7</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.7</CollisionRadius>
+
+	<Cost>5</Cost>
+  <CollisionSound>plasticSoft</CollisionSound>
+  
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>500.0</Mass>
+
+  <GrabRange>1.8</GrabRange>
+  <KickRange>1.8</KickRange>
+
+  <Domain>Water</Domain>
+
+  <AltitudeOptions>
+    <IgnoreWaves>true</IgnoreWaves>
+  </AltitudeOptions>
+
+  <Actions>
+    <Jump/>
+  </Actions>
+  
+  <IdleSoundName>ch_Boat_Idle</IdleSoundName>
+  <MoveSoundName>ch_Boat_Move</MoveSoundName>
+  <CursorSoundName>ch_Boat_Cursor</CursorSoundName>
+  <JumpSoundName>ch_Boat_Jump</JumpSoundName>
+  <ShootSoundName>ch_Boat_Shoot</ShootSoundName>
+  <Ent1SoundName>ch_Boat_Ent1</Ent1SoundName>
+  <Ent2SoundName>ch_Boat_Ent2</Ent2SoundName>
+
+  <Classification>
+    <Color>Green</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Loud</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="Boat">
+    <HullDraft>0.2</HullDraft>
+    <MaxRotationRate>1.0</MaxRotationRate>
+    <MaxRotationalAcceleration>1.0</MaxRotationalAcceleration>
+    <MaxLinearAcceleration>2.0</MaxLinearAcceleration>
+    <MaxLinearDeceleration>2.0</MaxLinearDeceleration>
+    <MaxSpeed>5.0</MaxSpeed>
+    <DefaultJumpStrength>8.0</DefaultJumpStrength>
+    <JumpRate>4.0</JumpRate>
+    <PreJumpDelay>0.16666</PreJumpDelay> <!--5 / 30.0-->
+    <PreLandDelay>0.03333</PreLandDelay> <!--1 / 30.0-->
+  </Chassis>
+
+  <Feelers>
+    <Nose>1.3</Nose>
+    <Width>0.7</Width>
+  </Feelers>
+
+  <HoldingPosition>
+    <X>1.3</X>
+    <Z>0.1</Z>
+  </HoldingPosition>
+
+  <Sensors>
+    <Direction>
+      <X>1</X> <!--front-->
+    </Direction>
+    <Arc>3.4906</Arc> <!--200 degrees-->
+  </Sensors>
+  
+</XmlGameActor>

@@ -1,0 +1,304 @@
+---------------------------
+Build 1.0.0.84 - 04/22/2009
+---------------------------
+
+Added lots of new sound effects and programmable sound options.
+
+Health sensor can now sense zero points, allowing characters to sense their own demise.
+
+Numerous improvements to AI (artificial intelligence) and physics movement.
+
+Persistent options for:
+	Displaying or hiding tool tips.
+	Volume controls for UI, Effects, and Music.
+	Inverting joysticks.
+	
+Some new experimental terrain textures. Let us know what you think.
+
+---------------------------
+Build 1.0.0.81 - 04/06/2009
+---------------------------
+
+---------------------------
+Build 1.0.0.80 - 04/06/2009
+---------------------------
+
+Objects blocking the camera, or which the camera is passing through now appear 
+ghosted out, to avoid interfering with level creation or game play.
+
+There's a new projectile type for shooting things, called a blip. When programming
+a bot to shoot, you pick out which type of projectile to launch. The old cruise
+missles are smarter, and can seek out targets. The new blips only shoot straight,
+but you can have a lot more of them. Which is appropriate depends on the kind
+of game play you are trying to create.
+
+The height limit on terrain has been raised significantly, so you can make
+taller and/or steeper landscapes.
+
+---------------------------
+Build 1.0.0.79 - 04/03/2009
+---------------------------
+
+Fixed a startup crash that was occurring on some non-English locales.
+
+Un-do and Re-do. After every edit, on getting back to the tool
+menu, a new snapshot is taken. You can un-do your changes to get
+back to a previous snapshot, and after undoing a change you can
+re-do it.
+
+Health Sensor - Characters can now react to changes in their health, though
+they cannot yet react to zero health. This will be a feature of a later build.
+
+Cardinal Movement Constraints - You can limit a character to moving along
+a N/S or E/W line. Useful for creating side-scrollers.
+
+Launch Action - You can now create something and kick it all in one statement:
+
+	Creates an apple and kicks it once per second:
+	when timer 1-second : do launch apple
+	
+Expanded Reset Options - You can now choose what you want the Reset action to affect:
+	- The entire world (except scores)
+	- One or all scores
+	- Your glow
+	- Your health
+	- Your expression
+
+Saucers and Wisps can be programmed to fly upward and downward.
+
+New time option: 0.25 seconds. Allows finer control of timers.
+
+New Main Menu item: Learning - Shows the load screen filtered on Lessons.
+
+New programing group: View - Controls camera behavior in code. You can tell
+the camera to follow your character, ignore it, or go to first-person view.
+
+--------------------------
+Build 1.0.0.77 - 3/20/2009
+--------------------------
+
+When a character eats something, it generates a "got" event:
+- bump apple : eat
+- got apple : score
+
+Characters may now be moved with the gamepad triggers and buttons.
+- gamepad a-button : move
+- gamepad left-trigger : move turn left
+- gamepad right-trigger : move turn right
+
+Added cardinal direction options (North, South, East, West) to these
+actions: Move, Turn, Kick, and Shoot.
+- always : move north.
+- see boku : move turn south.
+- bump apple : kick west.
+	
+Added "up" and "down" options to Kick.
+- bump apple : kick up.
+
+Added "up", "down", and "up/down" options to the Move action, though they
+are not available to all characters.
+- controller left-stick : move up/down.
+
+The "once" option now applies to timers.
+- timer 1 sec : shoot (shoots only one missile, after waiting for 1 second)
+
+The stickboy character can now turn.
+- see nothing : turn quickly.
+
+Add "toward" option to the Turn action.
+- see turtle : move turn toward.
+
+Added "left" and "right" options to the Turn and Circle actions.
+- see boku : move circle left.
+
+Added a profany filter for user-inputted text.
+
+Extend icons in text to include all the bots.  So you can now type
+<boku> to get a Boku icon in your text.  This works with both the
+level description text and the "say" verb text.
+Available icons are:
+    apple, balloon, blimp, boat, boku, bullet, castle, cloud, coin, cursor,
+    drum, factory, fastbot, flyfish, heart, hut, jet, mine, missile, pad,
+    puck, rock, satellite, saucer, star, stick, sub, swimfish, terracannon,
+    tree, turtle and wisp.
+Some also have other, popular aliases: fastbot == cycle, stick == stickboy,
+    apple == fruit, satellite == sputnik
+
+New object type, the light. You only get up to eight of them, so use
+them wisely. They can be placed in a scene or programmed to move about
+like any other robot type. When running with Shader Model 3, they
+illuminate the world around them. Their range and intensity can be
+controlled from the Object Settings Menu.
+
+The UI for paths, roads, walls, and floral trails has been entirely
+overhauled. In addition to new road and wall types, as well as incremental
+improvements, it now supports moving and deleting entire paths, as well as
+nodes and edges within the graph.
+
+Path edges between nodes can be made directional, so that robots following
+that path will only move in one direction. This is particularly valuable for
+setting up racing loops. The conic glyphs at the center of the edge, shown
+when the edge or entire path is highlighted, indicate the direction of travel
+allowed. Default is still to allow travel in both directions.
+
+The game will pause and present a warning when a controller comes unplugged 
+(or uncharged). It waits for a button press before continuing, giving the
+option to plug back in or continue without.
+
+A lot of work improving the underlying physics behavior, which will allow
+more intuitive dynamics use in games. 
+
+Lack of a gamepad is now detected and warned against. On the PC side, it
+also gives an option of hitting <Esc> to exit the program.
+
+--------------------------
+Build 1.0.0.74 - 3/04/2009
+--------------------------
+
+The fonts have been extended to include the Latin Extended-A block of unicode
+characters.  For people doing localization this means we now support unicode
+chars 0020 through 017F.
+
+Fixed a bug in the score sensor that was causing scoreboard changes to be missed
+some percentage of the time. This was a framerate dependent issue: the better
+your system performance, the more broken scoring would be for you.
+
+--------------------------
+Build 1.0.0.72 - 3/02/2009
+--------------------------
+
+Budgets for how much can be put into a level. When the thermometer goes to
+red, you run out and can't add any more object or terrain to the level.
+
+The programming examples help can now be accessed from anywhere in the programming UI.
+When your cursor is over a tile press <Y> to access the help.
+
+In the programming UI you can no longer explicitely insert rows.  If you have no blank
+rows a new one will be inserted for you.  You can then move it to where you need it
+by picking it up on the row handle (cursor allt eh way left, press <A> to pick up / put down).
+
+If your level ends with "Game Over" or "Winner" you can now restart the game by
+pressing the <A> button.
+
+Cloned objects are now placed exactly where the cursor is instead of off to the side.
+We temporarily turn off the collision testing so they don't immediately get pushed
+out of the way.  This allows you to more accurately place objects.
+
+Entering Pause mode is now harder to do which means that it is less likely to happen
+accidentally.  To enter Pause you must press both triggers and both stick-buttons
+at the same time.   Exiting pause mode just requires pressing <A>.  The stick-buttons
+are the buttons built into the analog joysticks which can be pressed straight down.
+
+The help system should now pick examples that better match the tiles you are programming.
+
+The "Eat" verb now generates a "Got" event, this means your characters can now react
+directly to eating something. For example, this program will make your character jump
+after eating an apple:
+
+  - when see apple : do eat
+  - when got apple : do jump
+
+When you put your cursor under a character while editing your level, it will "say" its
+name briefly in a thought balloon. These names are auto-generated, and are unique.
+Character names show up on the creatable pie menu as well, helping to differentiate
+between creatable characters of the same type.
+
+--------------------------
+Build 1.0.0.71 - 2/11/2009
+--------------------------
+
+Level browsing screens now scroll continuously instead of having move page-by-page.
+
+Level browsing screens now populate faster by loading thumbnail images in the background.
+
+Changed Random timer to work properly.  Previously it would only result in 
+times in integer units of seconds.  Now it results in fractions of seconds.
+
+Added ToolTips to the programming UI and the AddItem menu.  The descriptions
+in the AddItem menu are currently missing but should show up when we change
+over from using 3D models in the menu to using the tile icons.
+
+Large scale terrain rendering optimization, removes performance penalty for using
+many different terrain materials within a level.
+
+Support for user specified save folder (academic build only). This is helpful in
+computer lab settings to assist with backups, or where local drive space is limited
+and networked storage is required. Current behavior is:
+* Use BokuSettings to override save folder to your required destination.
+	** Clear the folder name to <blank> to reset to default location in User\Documents\...
+	** Typically administrator runs once on setting up machines, then deletes BokuSetup.
+* There's a login at Boku startup that defaults to windows user name, but allows a name
+	to be specified. 
+	** This login determines all identity for mathing levels to creators.
+	** Ideally the same unique ID used for surveys is used for logins.
+	** There is no password protection.
+* You can't delete a level unless you are the creator or an admin.
+* Saving a level that you didn't create forks off a new version of the level with
+	the same name but you as the creator.
+* Show Only My Worlds only shows levels you created, regardless of folder contents.
+* There's a new tag, "Finished". The idea is that when you are ready for other people
+	to look at your level, you mark it Finished. Then doing a Show Only Finished will 
+	only show the levels you want to show. Very useful when demo-ing, so you don't have
+	to sift through your rough drafts to get to your masterpieces.
+
+
+--------------------------
+Build 1.0.0.70 - 2/2/2009
+--------------------------
+
+Fixed crash at startup: "An item with the same key has already been added."
+
+Added the ability to include button icons in the text used by the 'say' verb.  In 
+the text editor you can type <a> and it will be replaced with the icon for the 
+A button.  If you want you can also spell out the name <a button>.  The full list
+of button icons you can use are:
+<a> A button
+<b> B button
+<x> X button
+<y> Y button
+<lt> left trigger
+<rt> right trigger
+<lb> left bumper (shoulder button)
+<rb> right bumper
+<ls> left stick
+<rs> right stick
+<back> back button
+<start> start button
+
+--------------------------
+Build 1.0.0.69 - 1/26/2009
+--------------------------
+
+    Added the 'say' verb.  This allows your robots to display a text message to the user.
+To use the 'say' verb you need to add it to your program and then press A to enter
+the text of the message you want to have displayed.  There are three options for 
+how the text is displayed:  
+    The first is fullscreen.  When this is activated the game will be paused and the full 
+text message will be displayed.  If the message is too long to fit into the window you 
+can scroll through it using the left stick.
+    The second and third display modes are Thought Balloons.  These display your message
+in a balloon above the robot's head while the game continues.  Since there is a limited
+amount of space in the balloon these will only display a single line of text.  You can
+choose to have this line selected either sequentially or randomly.
+    You can also add a color tile after the 'say' verb.  This will set the color of the 
+border for the Thought Balloons.  The default color is black.
+
+	Sensors for robots to sense what kind of terrain or water they are on.
+	Without modifiers, the sensors fire if the robot is over any kind of land or water.
+To only fire on specific types of land or water, add a type filter. The type filter will
+bring up the same terrain and water cube pickers used in editing the terrain. 
+	To see what type of terrain is currently specified in a program, hit A on that type 
+tile, and the cube picker will pop up with the correct type selected.
+	The Once modifier also works, so When On-Land None, Do Explode would have the robot
+self destruct whenever it leaves the terrain.
+
+Added "X" button to the gamepad programming menu.
+
+--------------------------
+Build 1.0.0.68 - 1/13/2009
+--------------------------
+
+Added prototype debug visualization options for things seen and heard.
+
+Fixed crash on startup with error message:
+"Device does not support multi-level texture width and height values that are not powers of 2."

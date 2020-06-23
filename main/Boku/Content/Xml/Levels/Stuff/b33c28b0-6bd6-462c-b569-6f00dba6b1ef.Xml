@@ -1,0 +1,3656 @@
+<?xml version="1.0"?>
+<XmlLevelData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <waypoints />
+  <actor>
+    <position>
+      <X>46.9768562</X>
+      <Y>52.77394</Y>
+      <Z>1.46704662</Z>
+    </position>
+    <orientation>2.4216876</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Yellow</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Ship 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260032</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>260033</uniqueNum>
+              <sensorUpid>sensor.timer</sensorUpid>
+              <actuatorUpid>actuator.score</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.01second</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.scorebucket.color.red</upid>
+                <upid>modifier.001point</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260039</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.001point</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>Yo, ho, ho and a bottle of cider.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260046</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.002points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>Aye, Matey!</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260054</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.005points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>I said "aye", not "eye".</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260062</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.003points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>There's nothing fishy about fishing, Matey.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260071</uniqueNum>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>1</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.expressangry</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260074</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.004points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>True. Very true.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260084</uniqueNum>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>1</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.expressnone</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260087</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.001point</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>Aye.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260096</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.001point</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString> Not, "I"... Sigh...</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260106</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+                <upid>filter.020points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>I'll only catch me the Yellow, Green and Blue fish.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260114</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.005points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>And  I'll avoid the rest.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>2049</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>0.9</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>false</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0.749999344</glowLights>
+      <glowEmission>0.5000001</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>10</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>FloatBot</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>51.64151</X>
+      <Y>59.52726</Y>
+      <Z>2.952632</Z>
+    </position>
+    <orientation>3.176378</orientation>
+    <heightOffset>0.0412106</heightOffset>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Hut 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260123</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>898735</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>5000</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>25</nearByDistance>
+      <farAwayDistance>50</farAwayDistance>
+    </parameters>
+    <typename>Hut</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>46.3456955</X>
+      <Y>56.29737</Y>
+      <Z>4.403189</Z>
+    </position>
+    <orientation>3.59290648</orientation>
+    <heightOffset>0</heightOffset>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Kodu 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260124</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes>
+            <Reflex>
+              <uniqueNum>260125</uniqueNum>
+              <sensorUpid>sensor.mouse</sensorUpid>
+              <actuatorUpid>actuator.nextlevel</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.mouse.button.left</upid>
+                <upid>filter.touch.guiButton.White</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260130</uniqueNum>
+              <sensorUpid>sensor.touch</sensorUpid>
+              <actuatorUpid>actuator.nextlevel</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.touch.guiButton.White</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260134</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.003points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>Ready for your first day of work?</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260141</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.010points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>Something is wrong with your eye?</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260148</uniqueNum>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>1</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.expresssad</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260151</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.003points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString> ... </SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260160</uniqueNum>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>1</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.expresscrazy</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260163</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoregteq</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.001point</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>Well, AYE think WE  
+should get started with ARRR fishy business.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260169</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>1</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scorelteq</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.001point</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>Well, AYE think WE  
+should get started with ARRR fishy business.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260177</uniqueNum>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>2</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.expressnone</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260180</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.003points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>As long as we do it responsibly, that is.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260189</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.003points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>So make sure you only catch Yellow, Green or Blue fish.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260198</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>And don't catch Turtles, Starfish, or Octopi.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260205</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.004points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString> ... </SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260214</uniqueNum>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>1</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.expresscrazy</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260217</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.002points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString> You'll what?</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260226</uniqueNum>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>1</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.expressnone</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260229</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.say</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.005points</upid>
+                <upid>filter.004points</upid>
+              </filterUpids>
+              <modifierUpids>
+                <upid>modifier.once</upid>
+              </modifierUpids>
+              <SayString>Great! Now let's start our fishing business.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260239</uniqueNum>
+              <actuatorUpid>actuator.express</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>1</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids />
+              <modifierUpids>
+                <upid>modifier.expresshappy</upid>
+              </modifierUpids>
+              <SayString />
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+            <Reflex>
+              <uniqueNum>260242</uniqueNum>
+              <sensorUpid>sensor.scored</sensorUpid>
+              <actuatorUpid>actuator.nextlevel</actuatorUpid>
+              <MaterialType>4096</MaterialType>
+              <WaterType>-1</WaterType>
+              <Indentation>0</Indentation>
+              <ReScaleEnabled>false</ReScaleEnabled>
+              <ReScale>1</ReScale>
+              <MovementSpeedModifierEnabled>false</MovementSpeedModifierEnabled>
+              <MovementSpeedModifier>1</MovementSpeedModifier>
+              <TurningSpeedModifierEnabled>false</TurningSpeedModifierEnabled>
+              <TurningSpeedModifier>1</TurningSpeedModifier>
+              <WorldLightChangeEnabled>false</WorldLightChangeEnabled>
+              <WorldLightChangeIndex>0</WorldLightChangeIndex>
+              <WorldSkyChangeEnabled>false</WorldSkyChangeEnabled>
+              <WorldSkyChangeIndex>0</WorldSkyChangeIndex>
+              <SetWaterTypeIndex>-1</SetWaterTypeIndex>
+              <filterUpids>
+                <upid>filter.scorebucket.color.red</upid>
+                <upid>filter.scoreequals</upid>
+                <upid>filter.050points</upid>
+                <upid>filter.020points</upid>
+                <upid>filter.010points</upid>
+                <upid>filter.005points</upid>
+              </filterUpids>
+              <modifierUpids />
+              <SayString>Great! Now let's start our fishing business.</SayString>
+              <SayMode>1</SayMode>
+              <SayJustification>Left</SayJustification>
+              <SaidMode>1</SaidMode>
+              <SaidJustification>Left</SaidJustification>
+            </Reflex>
+          </reflexes>
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1311934</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>true</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>10</mass>
+      <coefficientOfDrag>0.25</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>BokuBot</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>51.546833</X>
+      <Y>52.7885551</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.998689</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260251</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1314930</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Seagrass</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>49.2311249</X>
+      <Y>48.0939255</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>1.86323988</orientation>
+    <heightOffset>0</heightOffset>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Clam 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260252</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1316236</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>5000</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Clam</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>44.32302</X>
+      <Y>53.47864</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.8432703</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Starfish 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260253</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1316880</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.9</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>0.1</mass>
+      <coefficientOfDrag>0.1</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Starfish</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>47.2091522</X>
+      <Y>48.93078</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.8432703</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Orange</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Starfish 2</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260254</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1316907</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.9</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>0.1</mass>
+      <coefficientOfDrag>0.1</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Starfish</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>44.066452</X>
+      <Y>55.295433</Y>
+      <Z>0.441814125</Z>
+    </position>
+    <orientation>5.843271</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Rock 2</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260255</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317025</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.6</coefficientOfRestitution>
+      <friction>0</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>0.767256439</rescale>
+      <mass>2.5</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Rock</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>43.3560028</X>
+      <Y>56.21406</Y>
+      <Z>0.5138242</Z>
+    </position>
+    <orientation>5.843271</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Rock 3</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260256</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317035</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.6</coefficientOfRestitution>
+      <friction>0</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1.055297</rescale>
+      <mass>2.5</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Rock</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>41.1588554</X>
+      <Y>51.20179</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.998736</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 3</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260257</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317695</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Seagrass</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>51.02689</X>
+      <Y>44.5698471</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.99872</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 4</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260258</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317704</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Seagrass</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>46.006424</X>
+      <Y>38.3447266</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.998738</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Yellow</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 5</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260259</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317713</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Seagrass</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>51.8177643</X>
+      <Y>49.5434151</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.843271</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Yellow</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260260</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317740</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>SeagrassSingle</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>52.56054</X>
+      <Y>41.33405</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.8432703</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 2</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260261</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317748</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>SeagrassSingle</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>50.2587433</X>
+      <Y>39.23466</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.8432703</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 3</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260262</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317757</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>SeagrassSingle</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>51.75387</X>
+      <Y>48.71183</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.843271</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 4</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260263</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317766</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>SeagrassSingle</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>51.3481064</X>
+      <Y>50.7171974</Y>
+      <Z>0.25</Z>
+    </position>
+    <orientation>5.8432703</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Sea Grass 5</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260264</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317775</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>SeagrassSingle</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>51.6857948</X>
+      <Y>47.6988754</Y>
+      <Z>0.4869941</Z>
+    </position>
+    <orientation>5.843271</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Brown</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Rock 4</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260265</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1317907</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.6</coefficientOfRestitution>
+      <friction>0</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>0.947976351</rescale>
+      <mass>2.5</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Rock</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>51.9452057</X>
+      <Y>46.6655426</Y>
+      <Z>0.62414515</Z>
+    </position>
+    <orientation>5.843271</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Brown</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Rock 5</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260266</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1318019</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.6</coefficientOfRestitution>
+      <friction>0</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1.4965806</rescale>
+      <mass>2.5</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Rock</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>53.4658928</X>
+      <Y>56.94159</Y>
+      <Z>2.42618442</Z>
+    </position>
+    <orientation>5.84327126</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Tree 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260267</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1321608</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Yucca2</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>53.8443871</X>
+      <Y>48.85181</Y>
+      <Z>3.057908</Z>
+    </position>
+    <orientation>5.84327126</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Tree 2</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260268</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1321617</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Yucca2</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>56.4990349</X>
+      <Y>53.02467</Y>
+      <Z>6.536965</Z>
+    </position>
+    <orientation>5.84327126</orientation>
+    <heightOffset>0</heightOffset>
+    <color>Green</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Tree 3</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260269</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1321627</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>500</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Yucca2</typename>
+  </actor>
+  <actor>
+    <position>
+      <X>40.53727</X>
+      <Y>52.2748528</Y>
+      <Z>4.325414</Z>
+    </position>
+    <orientation>5.79419136</orientation>
+    <heightOffset>-0.92458564</heightOffset>
+    <color>White</color>
+    <tintable>true</tintable>
+    <creatableId>00000000-0000-0000-0000-000000000000</creatableId>
+    <creatableName>Light 1</creatableName>
+    <brain StartTaskId="-1" ActiveTaskId="-1">
+      <uniqueNum>260270</uniqueNum>
+      <tasks>
+        <Task upid="task.managed0">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed1">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed2">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed3">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed4">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed5">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed6">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed7">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed8">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed9">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed10">
+          <reflexes />
+        </Task>
+        <Task upid="task.managed11">
+          <reflexes />
+        </Task>
+      </tasks>
+    </brain>
+    <parameters>
+      <uniqueNum>1594915</uniqueNum>
+      <immobile>false</immobile>
+      <immobileNoRot>false</immobileNoRot>
+      <invulnerable>false</invulnerable>
+      <showSensors>false</showSensors>
+      <showHitPoints>false</showHitPoints>
+      <creatable>false</creatable>
+      <mute>false</mute>
+      <maxHitPoints>50</maxHitPoints>
+      <blipDamage>5</blipDamage>
+      <missileDamage>50</missileDamage>
+      <movementSpeedModifier>1</movementSpeedModifier>
+      <turningSpeedModifier>1</turningSpeedModifier>
+      <linearAccelerationModifier>1</linearAccelerationModifier>
+      <turningAccelerationModifier>1</turningAccelerationModifier>
+      <verticalSpeedModifier>1</verticalSpeedModifier>
+      <blipReloadTime>0.05</blipReloadTime>
+      <blipSpeed>10</blipSpeed>
+      <blipRange>35</blipRange>
+      <blipsInAir>40</blipsInAir>
+      <beamReloadTime>0.025</beamReloadTime>
+      <beamSpeed>10</beamSpeed>
+      <beamDist>35</beamDist>
+      <beamsInAir>2000</beamsInAir>
+      <revealed>false</revealed>
+      <missileReloadTime>3</missileReloadTime>
+      <missileSpeed>6</missileSpeed>
+      <missileRange>50</missileRange>
+      <missilesInAir>4</missilesInAir>
+      <missileTrails>true</missileTrails>
+      <shieldEffects>true</shieldEffects>
+      <invisible>false</invisible>
+      <ignored>false</ignored>
+      <camouflaged>false</camouflaged>
+      <pushRange>15</pushRange>
+      <pushStrength>50</pushStrength>
+      <kickStrength>10</kickStrength>
+      <kickRate>2</kickRate>
+      <hearing>1</hearing>
+      <loudness>1</loudness>
+      <glowAmt>1</glowAmt>
+      <glowLights>0</glowLights>
+      <glowEmission>0</glowEmission>
+      <displayLOS>false</displayLOS>
+      <displayLOP>false</displayLOP>
+      <cameraMode>UserControlled</cameraMode>
+      <memoryLifetime>4</memoryLifetime>
+      <coefficientOfRestitution>0.8</coefficientOfRestitution>
+      <friction>0.2</friction>
+      <lightRange>10</lightRange>
+      <stayAboveWater>false</stayAboveWater>
+      <maxCreated>100</maxCreated>
+      <rescale>1</rescale>
+      <mass>2</mass>
+      <coefficientOfDrag>0</coefficientOfDrag>
+      <heightOffset>-666</heightOffset>
+      <nearByDistance>5</nearByDistance>
+      <farAwayDistance>15</farAwayDistance>
+    </parameters>
+    <typename>Light</typename>
+  </actor>
+</XmlLevelData>

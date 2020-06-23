@@ -1,0 +1,1955 @@
+<Tiles>
+  <sensor>
+    
+    <gamepad label="tay cầm">Cho phép người chơi điều khiển một nhân vật. Chỉ định nút bấm, cần điều khiển, hoặc người chơi nếu cần.</gamepad>
+    
+    <keyboard label="bàn phím">Cho phép người chơi điều khiển một nhân vật. Chỉ định một nút bấm.</keyboard>
+    
+    <mouse label="chuột">Phản hồi với bấm chuột.</mouse>
+    
+    <touch label="cảm ứng">Phản hồi với màn hình cảm ứng.</touch>
+    
+    <microbit label="BBC micro:bit">Phần hồi với mạch BBC micro:bit.</microbit>
+    
+    <eyes label="nhìn">Phản ứng khi bạn nhìn thấy một vật thể tùy vào loại hoặc màu. Đồi nút hoặc tường có thể chặn tầm nhìn nếu bạn cho bộ lọc tầm nhìn (LOS).</eyes>
+    
+    <ears label="nghe">Phản ứng khi bạn nghe thấy một vật thể, tùy vào loại vật thể đó hay loại âm thanh. Âm thanh truyền qua tường.</ears>
+    
+    <bumpers label="va chạm">Phản ứng khi bạn va chạm vào một vật thể khác phụ thuộc vào loại vật thể, màu sắc, vân vân...</bumpers>
+    
+    <timer label="đếm thời gian">Phản ứng sau một số giây. Ghép các số vào cạnh nhau để tạo ra các khoảng thời gian dài hơn.</timer>
+    
+    <got label="nhặt được">Phản ứng khi nhặt được một vật gì đó, phụ thuộc vào loại vật thể, màu sắc, vân vân</got>
+    
+    <scored label="điểm số">Phản ứng đối với sự thay đổi về điểm số.</scored>
+    
+    <health label="điểm máu">Phản ứng đối với sự thay đổi điểm máu.</health>
+    
+    <missilehit label="bắn trúng">Phản ứng khi viên đạn của bạn bắn trúng một vật thể khác. Hữu dụng để tính điếm, nhưng bạn có thể làm bất cứ điều gì bạn thích - như đổi màu nhân vật thành màu hồng khi bắn trúng nó.</missilehit>
+    
+    <held label="bị nhặt">Phản ứng khi bị một nhân vật khác nhặt lên.</held>
+    
+    <terrain label="trên bờ">Phản ứng khi đứng trên một loại nền đất nào đó.</terrain>
+    
+    <water label="dưới nước">Phản ứng khi ở dưới một loại nước nào đó.</water>
+    
+    <beamed label="chiếu tia">Phản ứng khi một loại đá Sao Hỏa nào đó đã được chiếu tia.</beamed>
+    
+    <inspected label="kiểm tra">Phản ứng khi một loại đá Sao Hỏa nào đó đã được kiểm tra.</inspected>
+    
+    <scanned label="quét">Phản ứng khi một loại đá không xác định nào đó đã được quét để xuất hiện.</scanned>
+    
+    <endofpath label="kết thúc đoạn đường">Phản ứng khi bạn đã đi đến kết thúc của một đoạn đường</endofpath>
+    
+    <endofpathnonmover label="kết thúc đoạn đường">Phản ứng khi bạn đã đi đến kết thúc của một đoạn đường</endofpathnonmover>
+    
+    <always label="luôn làm">Thực hiện một việc gì đó không ngừng nghỉ. Có thể không cần thiết</always>
+  </sensor>
+  <filter>
+    <nothing></nothing>
+    
+    <boku label="kodu">Kodu là một nhân vật bạn có thể đưa vào trong game và có thể lập trình được hành vi.</boku>
+    
+    <bokubot label="kodu">Kodu là một nhân vật bạn có thể đưa vào trong game và có thể lập trình được hành vi</bokubot>
+    
+    <anything label="bất kể cái gì"></anything>
+    
+    <dead label="ngất">Phản ứng với nhân vật đã bị ngất.</dead>
+    
+    <squashed label="bẹp">Phản ứng với nhân vật đã bị đè bẹp.</squashed>
+    
+    <me label="tôi">Chỉ kiểm tra nhân vật đang thực hiện chương trình này</me>
+    
+    <said label="nghe nói">Nghe một nhân vật khác nói. Viết vào điều mà bạn muốn nghe được</said>
+    
+    <countnone label="không vật gì">Phản ứng khi không nhìn thấy bất kì điều gì giống mô tả. Ví dụ: (thấy - xanh nước biển - không vật gì) thì sẽ phản ứng khi không thấy bất kì vật gì màu xanh nước biển trong tầm nhìn.</countnone>
+    
+    <starfish label="sao biển">Phản ứng với một con sao biển.</starfish> 
+    
+    <clam label="sò">Phản ứng với một con sò.</clam>
+    
+    <seagrass label="đám cỏ biển">Phản ứng với đám cỏ biển.</seagrass>
+    
+    <seagrasssingle label="cây cỏ biển">Phản ứng với cây cỏ biển.</seagrasssingle>
+    
+    <lilypad label="đám lá hoa súng">Phản ứng với đám lá hoa súng.</lilypad>
+    
+    <lilypadsingle label="lá hoa súng">Phản ứng với lá hoa súng.</lilypadsingle>
+    
+    <flyfish label="cá bay">Cá bay là một nhân vật mà bạn có thêm vào trò chơi của mình và có thể lập trình hành vi của nó.</flyfish> 
+    
+    <jet label="máy bay">Máy bay là một nhân vật mà bạn có thêm vào trò chơi của mình và có thể lập trình hành vi của nó.</jet>
+    
+    <light label="nguồn phát sáng">Nguồn phát sáng là một nhân vật mà bạn có thêm vào trò chơi của mình và có thể lập trình hành vi của nó. Nó sẽ làm sáng lên mọi thứ. Nhưng bạn chỉ có thể thêm vào tối đa 4 cái.</light>
+    
+    <fan label="quạt">Phản ứng với quạt.</fan>
+    
+    <octopus label="bạch tuộc">Phản ứng với bạch tuộc</octopus>
+    
+    <fastbot label="xe máy">Xe máy là một nhân vật mà bạn có thêm vào trò chơi của mình và bạn có thể lập trình hành vi của nó.</fastbot>
+    
+    <saucer label="đĩa bay">Xin lỗi, Tôi không thể nói cho bạn bất cứ điều gì. Thông tin về đĩa bay được giữ bí mật</saucer>
+    
+    <windblimp label="khinh khí cầu bầu dục">Khinh khí cầu bầu dục là một nhân vật bay mà bạn có thể thêm vào trò chơi của mình và có thể lập trình hành vi của nó.</windblimp>
+    
+    <balloonbot label="khinh khí cầu tròn">Khinh khí cầu tròn là một nhân vật nổi mà bạn có thể thêm vào trò chơi của mình và có thể lập trình hành vi của nó.</balloonbot>
+    
+    <subbot label="tàu ngầm">Tàu ngầm là một nhân vật mà bạn có thể thêm vào trò chơi của mình và có thể lập trình hành vi của nó.</subbot>
+    
+    <terracannon label="pháo">Pháo là một nhân vật mà bạn có thể thêm vào trò chơi của mình và có thể lập trình hành vi của nó.</terracannon>
+    
+    <puck label="vòng bay">Vòng bay là một nhân vật mà bạn có thể thêm vào game của bạn và có thể lập trình hành vi của nó.</puck>
+    
+    <wisp label="đốm sáng">Đốm sáng là một nhân vật mà bạn có thể thêm vào game của mình và có thể lập trình hành vi của nó.</wisp>
+    
+    <anybot label="bất cứ nhân vật nào">Tìm bất cứ nhân vật nào.</anybot>
+    
+    <turtle label="con rùa">Phản ứng với con rùa.</turtle>
+    
+    <rover label="xe tự hành">Phản ứng với xe tự hành.</rover>
+    
+    <pushpad label="đệm đẩy">Phản ứng với đệm đẩy.</pushpad>
+    
+    <sputnik label="vệ tinh">Phản ứng với vệ tinh.</sputnik>
+    
+    <stick label="gậy">Phản ứng với gậy.</stick>
+    
+    <stickboy label="gậy">Phản ứng với gậy.</stickboy>
+    
+    <drum label="tàu không gian">Phản ứng với tàu không gian.</drum>
+    
+    <mine label="mine">React to a mine.</mine>
+    
+    <missile label="tên lửa">Phản ứng với tên lửa.</missile>
+    
+    <cloud label="đám mây">Phản ứng với đám mây.</cloud>
+    
+    <swimfish label="cá">Phản ứng với cá.</swimfish>
+    
+    <floatbot label="tàu thủy">Phản ứng với tàu thủy.</floatbot>
+    
+    <factory label="nhà máy">Phản ứng với nhà máy.</factory>
+    
+    <hut label="trạm nghỉ chân">Phản ứng với trạm nghỉ chân.</hut>
+    
+    <castle label="lâu đài">Phản ứng với lâu đài.</castle>
+    
+    <fruit label="táo">Phản ứng với quả táo.</fruit>
+    
+    <inkjet label="đám khói">Phản ứng với đám khói.</inkjet>
+    
+    <iceberg label="tảng băng">Phản ứng với tảng băng.</iceberg>
+    
+    <rock label="đá">Phản ứng với đá.</rock>
+    
+    <rockLowValue label="đá núi lửa">Phản ứng với đá núi lửa.</rockLowValue>
+    
+    <rockHighValue label="đá lâu năm">Phản ứng với đá lâu năm.</rockHighValue>
+    
+    <rockLowValueUnknown label="đá bí ẩn">Một tảng đá lửa xuất hiện không xác định cho đến khi được quét, chiếu hoặc kiểm tra.</rockLowValueUnknown>
+    
+    <rockHighValueUnknown label="đá bí ẩn">Một đá trầm tích xuất hiện không xác định cho đến khi được quét, chiếu hoặc kiểm tra.</rockHighValueUnknown>
+    
+    <rockUnknown label="đá bí ẩn">Phản ứng với đá bí ẩn.</rockUnknown>
+    
+    <tree label="cây">Phản ứng với cây.</tree>
+    
+    <pipe label="ống">Phản ứng với ống.</pipe>
+    
+    <pipeStraight label="ống thẳng">Phản ứng với ống thẳng.</pipeStraight>
+    
+    <pipeCross label="ống dấu cộng">Phản ứng với ống dấu cộng.</pipeCross>
+    
+    <pipeCorner label="ống rẽ">Phản ứng với ống rẻ.</pipeCorner>
+    
+    <underwater label="dưới nước">Phản ứng với các đối tượng dưới nước.</underwater>
+    
+    <building label="tòa nhà">Phản ứng với tòa nhà.</building>
+    
+    <flower label="hoa"></flower>
+    
+    <gate label="cổng"></gate>
+    
+    <cursor label="con trỏ">Phản ứng với con trỏ.</cursor>
+    
+    <star label="ngôi sao">Phản ứng với ngôi sao.</star>
+    
+    <coin label="đồng tiền">Phản ứng với đồng tiền.</coin>
+    
+    <soccerball label="quả bóng">Phản ứng với quả bóng.</soccerball>
+    
+    <heart label="trái tim">Phản ứng với trái tim.</heart>
+    
+    <bullet label="đạn">Phản ứng với đạn.</bullet>
+    
+    <Black label="đen">Phản ứng với bất cứ thứ gì màu đen.</Black>
+    
+    <Grey label="xám">Phản ứng với bất cứ thứ gì màu xám.</Grey>
+    
+    <white label="trắng">Phản ứng với bất cứ thứ gì màu trắng.</white>
+    
+    <red label="đỏ">Phản ứng với bất cứ thứ gì màu đỏ.</red>
+    
+    <orange label="cam">Phản ứng bất cứ thứ gì màu cam.</orange>
+    
+    <yellow label="vàng">Phản ứng với bất cứ thứ gì màu vàng.</yellow>
+    
+    <green label="xanh lá">Phản ứng với bất cứ thứ gì màu xanh lá.</green>
+    
+    <blue label="xanh nước biển">Phản ứng với bất cứ thứ gì màu xanh nước biển.</blue>
+    
+    <purple label="tím">Phản ứng với bất cứ thứ gì màu tím.</purple>
+    
+    <pink label="hồng">Phản ứng với bất cứ thứ gì màu hồng.</pink>
+    
+    <brown label="nâu">Phản ứng với bất cứ thứ gì màu nâu.</brown>
+    
+    <PathBlack label="đường đen">Phản ứng với đường màu đen.</PathBlack>
+    
+    <PathGrey label="đường xám">Phản ứng với đường xám.</PathGrey>
+    
+    <PathWhite label="đường trắng">Phản ứng với đường trắng.</PathWhite>
+    
+    <PathRed label="đường đỏ">Phản ứng với đường đỏ.</PathRed>
+    
+    <PathOrange label="đường cam">Phản ứng với đường màu cam</PathOrange>
+    
+    <PathYellow label="đường vàng">Phản ứng với đường vàng.</PathYellow>
+    
+    <PathGreen label="đường xanh lá">Phản ứng với đường xanh lá.</PathGreen>
+    
+    <PathBlue label="đường xanh nước biển">Phản ứng với đường xanh nước biển.</PathBlue>
+    
+    <PathPurple label="đường tím">Phản ứng với đường tím</PathPurple>
+    
+    <PathPink label="đường hồng">Phản ứng với đường hồng.</PathPink>
+    
+    <PathBrown label="đường nâu">Phản ứng với đường nâu.</PathBrown>
+    
+    <pathplain label="đồng bằng"></pathplain>
+    
+    <pathroad label="đường"></pathroad>
+    
+    <pathwall label="tường"></pathwall>
+    
+    <pathflora label="đường thực vật"></pathflora>
+    
+    <yucca1 label="cây"></yucca1>
+    
+    <yucca2 label="cây"></yucca2>
+    
+    <yucca3 label="cây"></yucca3>
+    
+    <bigyucca1 label="cây"></bigyucca1>
+    
+    <expresshappy label="hạnh phúc">Phản ứng với đối tượng hạnh phúc.</expresshappy>
+    
+    <expresssad label="buồn">Phản ứng với đối tượng buồn.</expresssad>
+    
+    <expressangry label="tức giận">Phản ứng với đối tượng tức giận</expressangry>
+    
+    <expresscrazy label="điên">Phản ứng với đối tượng điên.</expresscrazy>
+    
+    <expresshearts label="trái tim">Phản ứng với đối tượng bộc lộ trái tim.</expresshearts>
+    
+    <expressflowers label="hoa">Phản ứng với đối tượng bộc lộ bông hoa.</expressflowers>
+    
+    <expressstars label="sao">Phản ứng với đối tượng bộc lộ những ngôi sao.</expressstars>
+    
+    <expressswear label="chửi thề">Phản ứng với đối tượng chửi thề.</expressswear>
+    
+    <expressnormal label="bình thường">Phản ứng với đối tượng hoạt động bình thường</expressnormal>
+    
+    <expressnone label="trống">Phản ứng với đối tượng hoạt động bình thường.</expressnone>
+    
+    <moving label="di chuyển">Phản ứng với đối tượng nếu nó chỉ di chuyển</moving>
+    
+    <camouflage label="ngụy trang">Phản ứng với đối tượng nếu nó đang ngụy trang.</camouflage>
+    
+    <closeby label="đến gần">Đến gần làm cho các nhận vật chú ý đến đối tượng đến gần đó. Đối tượng ở xa bị bỏ qua</closeby>
+    
+    <faraway label="xa">Chỉ phản ứng với những thứ ở xa.</faraway>
+    
+    <infront label="phía trước">Chỉ phản ứng với đối tượng phía trước.</infront>
+    
+    <behind label="phía sau">chỉ phản ứng với những đối tượng phía sau.</behind>
+    
+    <toleft label="bên trái">chỉ phản ứng với những đối tượng bên trái</toleft>
+    
+    <toright label="bên phải">Chỉ phản ứng với những đối tượng bên phải.</toright>
+    
+    <over label="ở trên">Chỉ phản ứng với những thứ ở vị trí cao hơn đối tượng.</over>
+    
+    <under label="ở dưới">Chỉ phản ứng với những thứ thấp hơn đối tượng.</under>    
+    
+    <countfew label="ít">Phản ứng khi bạn chỉ nhìn thấy một vài thứ.</countfew>
+    
+    <countmany label="nhiều">Chỉ phản ứng khi bạn thấy nhiều thứ.</countmany>
+    
+    <clustermany label="đàn">Chỉ phản ứng khi bạn thấy nhiều thứ được nhóm lại gần nhau.</clustermany>
+    
+    <countany label="bất kì"></countany>
+    
+    <leftstick label="thanh L">Phản ứng với thanh bên trái trên bộ điều khiển. Tốt cho việc di chuyển.</leftstick>
+    
+    <rightstick label="thanh R">Phản ứng với thanh bên phải trên bộ điều khiển. Tốt cho bắn.</rightstick>
+    
+    <abutton label="nút A">Phản ứng với nút A trên bộ điều khiển.</abutton>
+    
+    <bbutton label="nút B">Phản ứng với nút B trên bộ điều khiển.</bbutton>
+    
+    <xbutton label="nút X">Phản ứng với nút X trên bộ điều khiển.</xbutton>
+    
+    <ybutton label="nút Y">Phản ứng với nút Y trên bộ điều khiển.</ybutton>
+    
+    <lefttrigger label="bấm nút trái">Phản ứng với kích hoạt bên trái trên bộ điều khiển.</lefttrigger>
+    
+    <righttrigger label="bấm nút phải">Phản ứng với kích hoạt bên phải trên một bộ điều khiển.</righttrigger>
+    
+    <lefttrigger_analog label="bấm nút trái">Phản ứng với kích hoạt bên trái trên bộ điều khiển.</lefttrigger_analog>
+    
+    <righttrigger_analog label="bấm nút phải">Phản ứng với kích hoạt bên phải trên một bộ điều khiển.</righttrigger_analog>
+    
+    <strongly label="mạnh"> Phát hiện tín hiệu hoặc giá trị mạnh.</strongly>
+    
+    <weakly label="yếu">Phát hiện tín hiệu hoặc giá trị yếu.</weakly>
+    
+    <microbit label="BBC micro:bit">
+      
+      <tilt label="nghiêng">Phản ứng đầu vào nghiêng từ BBC micro:bit.</tilt>
+      
+      <leftbutton label="nút A">Phản ứng với việc bấm nút A trong BBC micro:bit</leftbutton>
+      
+      <rightbutton label="nút B">Phản ứng với việc bấm nút A trong BBC micro:bit</rightbutton>
+      
+      <pin1 label="ghim 0">Đọc trạng thái của BBC micro:bit ghim 0.</pin1>
+      
+      <pin2 label="ghim 1">Đọc trạng thái của BBC micro:bit ghim 1.</pin2>
+      
+      <pin3 label="ghim 2">Đọc trạng thái của BBC micro:bit ghim 2.</pin3>
+      
+      <shake label="rung">Phát hiện khi mà micro:bit bị rung.</shake>
+    </microbit>
+    <mouse>
+      <button>
+        
+        <left label="trái">Phản ứng với nút chuột trái.</left>
+        
+        <right label="phải">Phản ứng với nút chuột phải.</right>
+      </button>
+      
+      <hover label="tổng thể">Phản ứng với chuột di chuột qua một vật thể hoặc địa hình.</hover>
+      
+      <move label="di chuyển">Phản ứng với chuột di chuyển.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        
+        <touching label="cảm ứng">Phản ứng với một cảm ứng hoạt động (màn hình cảm ứng).</touching>
+        
+        <tap label="nhấn">Phản ứng với một lần nhấn (màn hình cảm ứng).</tap>
+        
+        <rotate label="xoay">Phản ứng với cử chỉ xoay (màn hình cảm ứng).</rotate>
+        
+        <swipe label="vuốt ">Phản ứng với cử chỉ vuốt (màn hình cảm ứng).</swipe>
+        
+        <slide label="trượt ">Phản ứng với cử chỉ trượt (màn hình cảm ứng).</slide>
+      </gesture>
+
+      <guiButton>
+        
+        <White label="trắng"> Phản ứng với nút TRẮNG trên HUD. (Truy cập cài đặt thế giới để thay đổi)</White>
+        
+        <Black label="đen"> Phản ứng với nút ĐEN trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Black>
+        
+        <Grey label="Xám"> Phản ứng với nút XÁM trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Grey>
+        
+        <Red label="đỏ"> Phản ứng với nút ĐỎ trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Red>
+        
+        <Green label="xanh"> Phản ứng với nút XANH trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Green>
+        
+        <Blue label="màu xanh"> Phản ứng với nút XANH LÁ trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Blue>
+        
+        <Orange label="cam"> Phản ứng với nút CAM trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Orange>
+        
+        <Yellow label="màu vàng"> Phản ứng với nút VÀNG trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Yellow>
+        
+        <Purple label="tím"> Phản ứng với nút TÍM trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Purple>
+        
+        <Pink label="màu hồng "> Phản ứng với nút HỒNG trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Pink>
+        
+        <Brown label="màu nâu "> Phản ứng với nút NÂU trên HUD. (Truy cập cài đặt thế giới để thay đổi)</Brown>
+      </guiButton>
+      
+      
+      
+      <controllerButton_X label="Nút X">Phản ứng khi chạm vào nút trên X màn hình.</controllerButton_X>
+      
+      <controllerButton_Y label="Nút Y">Phản ứng khi chạm vào nút Y trên màn hình.</controllerButton_Y>
+      
+      <controllerButton_A label="Nút A">Phản ứng khi chạm vào nút A trên màn hình.</controllerButton_A>
+      
+      <controllerButton_B label="Nút B">Phản ứng khi chạm vào nút B trên màn hình.</controllerButton_B>
+
+    </touch>
+    
+    
+    <ArrowKeys label="Mũi tên">Phản ứng với các phím mũi tên trên bàn phím.</ArrowKeys>
+    
+    <WASDKeys label="WASD">Phản ứng với các phím WASD trên bàn phím.</WASDKeys>
+    
+    <Akey label="A"> Phản ứng với phím A trên bàn phím.</Akey>
+    
+    <Bkey label="B"> Phản ứng với phím B trên bàn phím.</Bkey>
+    
+    <Ckey label="C"> Phản ứng với phím C trên bàn phím.</Ckey>
+    
+    <Dkey label="D"> Phản ứng với phím D trên bàn phím.</Dkey>
+    
+    <Ekey label="E"> Phản ứng với phím E trên bàn phím.</Ekey>
+    
+    <Fkey label="F"> Phản ứng với phím F trên bàn phím.</Fkey>
+    
+    <Gkey label="G"> Phản ứng với phím G trên bàn phím.</Gkey>
+    
+    <Hkey label="H"> Phản ứng với phím H trên bàn phím.</Hkey>
+    
+    <Ikey label="I"> Phản ứng với phím I trên bàn phím.</Ikey>
+    
+    <Jkey label="J"> Phản ứng với phím J trên bàn phím.</Jkey>
+    
+    <Kkey label="K"> Phản ứng với phím K trên bàn phím.</Kkey>
+    
+    <Lkey label="L"> Phản ứng với phím L trên bàn phím.</Lkey>
+    
+    <Mkey label="M"> Phản ứng với phím M trên bàn phím.</Mkey>
+    
+    <Nkey label="N"> Phản ứng với phím N trên bàn phím.</Nkey>
+    
+    <Okey label="O"> Phản ứng với phím O trên bàn phím.</Okey>
+    
+    <Pkey label="P"> Phản ứng với phím P trên bàn phím.</Pkey>
+    
+    <Qkey label="Q"> Phản ứng với phím Q trên bàn phím.</Qkey>
+    
+    <Rkey label="R"> Phản ứng với phím R trên bàn phím.</Rkey>
+    
+    <Skey label="S"> Phản ứng với phím S trên bàn phím.</Skey>
+    
+    <Tkey label="T"> Phản ứng với phím T trên bàn phím.</Tkey>
+    
+    <Ukey label="U"> Phản ứng với phím U trên bàn phím.</Ukey>
+    
+    <Vkey label="V"> Phản ứng với phím V trên bàn phím.</Vkey>
+    
+    <Wkey label="W"> Phản ứng với phím W trên bàn phím.</Wkey>
+    
+    <Xkey label="X"> Phản ứng với phím X trên bàn phím.</Xkey>
+    
+    <Ykey label="Y"> Phản ứng với phím Y trên bàn phím.</Ykey>
+    
+    <Zkey label="Z"> Phản ứng với phím Z trên bàn phím.</Zkey>
+    
+    <D0key label="0"> Phản ứng với phím 0 trên bàn phím.</D0key>
+    
+    <D1key label="1"> Phản ứng với phím 1 trên bàn phím.</D1key>
+    
+    <D2key label="2"> Phản ứng với phím 2 trên bàn phím.</D2key>
+    
+    <D3key label="3"> Phản ứng với phím 3 trên bàn phím.</D3key>
+    
+    <D4key label="4"> Phản ứng với phím 4 trên bàn phím.</D4key>
+    
+    <D5key label="5"> Phản ứng với phím 5 trên bàn phím.</D5key>
+    
+    <D6key label="6"> Phản ứng với phím 6 trên bàn phím.</D6key>
+    
+    <D7key label="7"> Phản ứng với phím 7 trên bàn phím.</D7key>
+    
+    <D8key label="8"> Phản ứng với phím 8 trên bàn phím.</D8key>
+    
+    <D9key label="9"> Phản ứng với phím 9 trên bàn phím.</D9key>
+    
+    <Spacekey label="Space"> Phản ứng với phím Cách trên bàn phím.</Spacekey>
+    
+    <PageUpkey label="PageUp"> Phản ứng với phím PageUp trên bàn phím ..</PageUpkey>
+    
+    <PageDownkey label="PageDown"> Phản ứng với phím PageDown trên bàn phím.</PageDownkey>
+    
+    <Endkey label="End"> Phản ứng với phím End trên bàn phím.</Endkey>
+    
+    <Leftkey label="Trái"> Phản ứng với phím Trái trên bàn phím.</Leftkey>
+    
+    <Upkey label="Lên"> Phản ứng với phím Lên trên bàn phím.</Upkey>
+    
+    <Rightkey label="Phải"> Phản ứng với phím Phải trên bàn phím.</Rightkey>
+    
+    <Downkey label="Xuống"> Phản ứng với phím Xuống trên bàn phím.</Downkey>
+    
+    <Insertkey label="Insert"> Phản ứng với phím Insert trên bàn phím.</Insertkey>
+    
+    <Deletekey label="Delete"> Phản ứng với phím Delete trên bàn phím.</Deletekey>
+    
+    <LeftWindowskey label="Windows Trái"> Phản ứng với phím Windows Trái trên bàn phím.</LeftWindowskey>
+    
+    <RightWindowskey label="Windows Phải"> Phản ứng với phím Windows Phải trên bàn phím.</RightWindowskey>
+    
+    <Multiplykey label="*"> Phản ứng với phím Nhân trên bàn phím.</Multiplykey>
+    
+    <Addkey label="+">Phản ứng với phím Cộng trên bàn phím.</Addkey>
+    
+    <Subtractkey label="-">Phản ứng với phím Trừ trên bàn phím.</Subtractkey>
+    
+    <Decimalkey label=".">Phản ứng với phím Chấm thập phân trên bàn phím.</Decimalkey>
+    
+    <Dividekey label="/">Phản ứng với phím Chia trên bàn phím.</Dividekey>
+    
+    <LeftShiftkey label="Shift Trái">Phản ứng với phím Shift trái trên bàn phím.</LeftShiftkey>
+    
+    <RightShiftkey label="Shift Phải">Phản ứng với phím Shift phải trên bàn phím.</RightShiftkey>
+    
+    <LeftControlkey label="Control Trái">Phản ứng với phím Control trái trên bàn phím.</LeftControlkey>
+    
+    <RightControlkey label="Control Phải">Phản ứng với phím Control phải trên bàn phím.</RightControlkey>
+    
+    <LeftAltkey label="Alt Trái">Phản ứng với phím Atl trái trên bàn phím.</LeftAltkey>
+    
+    <RightAltkey label="Alt Phải">Phản ứng với phím Alt phải trên bàn phím.</RightAltkey>
+    
+    <OemSemicolonkey label=";">Phản ứng với phím Dấu chấm phẩy trên bàn phím.</OemSemicolonkey>
+    
+    <OemPluskey label="+">Phản ứng với phím Cộng trên bàn phím.</OemPluskey>
+    
+    <OemCommakey label=",">Phản ứng với phím Dấu phẩy trên bàn phím.</OemCommakey>
+    
+    <OemMinuskey label="-">Phản ứng với phím Ngạch ngang trên bàn phím.</OemMinuskey>
+    
+    <OemPeriodkey label=".">Phản ứng với phím Dấu chấm trên bàn phím.</OemPeriodkey>
+    
+    <OemQuestionkey label="?">Phản ứng với phím Dấu hỏi chấm trên bàn phím..</OemQuestionkey>
+    
+    <OemTildekey label="~">Phản ứng với dấu ngã trên bàn phím</OemTildekey>
+    
+    <OemOpenBracketskey label="[">Phản ứng với phím Dấu mở ngoặc vuông trên bàn phím</OemOpenBracketskey>
+    <OemPipekey label="|">Phản ứng với phím Dấu ngạch dọc trên bàn phím.</OemPipekey>
+    
+    <OemCloseBracketskey label="]">Phản ứng với phím Dấu đóng ngoặc vuông trên bàn phím.</OemCloseBracketskey>
+    
+    <OemQuoteskey label="&quot;">Phản ứng với phím ngoặc kép trên bàn phím.</OemQuoteskey>
+    
+    <OemBackslashkey label="\">Phản ứng với phím Dấu ngạch chéo ngược trên bàn phím.</OemBackslashkey>
+    
+    <F1key label="F1">Phản ứng với phím F1 trên bàn phím.</F1key>
+    
+    <F2key label="F2">Phản ứng với phím F2 trên bàn phím.</F2key>
+    
+    <F3key label="F3">Phản ứng với phím F3 trên bàn phím.</F3key>
+    
+    <F4key label="F4">Phản ứng với phím F4 trên bàn phím.</F4key>
+    
+    <F5key label="F5">Phản ứng với phím F5 trên bàn phím.</F5key>
+    
+    <F6key label="F6">Phản ứng với phím F6 trên bàn phím.</F6key>
+    
+    <F7key label="F7">Phản ứng với phím F7 trên bàn phím.</F7key>
+    
+    <F8key label="F8">Phản ứng với phím F8 trên bàn phím.</F8key>
+    
+    <F9key label="F9">Phản ứng với phím F9 trên bàn phím.</F9key>
+    
+    <F10key label="F10">Phản ứng với phím F10 trên bàn phím.</F10key>
+    
+    <F11key label="F11">Phản ứng với phím F11 trên bàn phím.</F11key>
+    
+    <F12key label="F12">Phản ứng với phím F12 trên bàn phím.</F12key>
+    
+    <Shiftkey label="Shift">Phản ứng với bất kỳ phím Shift nào trên bàn phím.</Shiftkey>
+    
+    <Controlkey label="Control">Phản ứng với bất kỳ phím Control nào trên bàn phím.</Controlkey>
+    
+    <Altkey label="Alt">Phản ứng với bất kỳ phím Alt nào trên bàn phím.</Altkey>
+    
+    <player1 label="người chơi 1">Chỉ phản ứng với bộ điều khiển của Người chơi 1. Mặc định là để phản ứng với bất kỳ.</player1>
+    
+    <player2 label="người chơi 2">Chỉ phản ứng với bộ điều khiển của Người chơi 2. Mặc định là để phản ứng với bất kỳ.</player2>
+    
+    <player3 label="người chơi 3">Chỉ phản ứng với bộ điều khiển của Người chơi 3. Mặc định là để phản ứng với bất kỳ.</player3>
+    
+    <player4 label="người chơi 4">Chỉ phản ứng với bộ điều khiển của Người chơi 4. Mặc định là để phản ứng với bất kỳ.</player4>
+    
+    <terrain label="loại"> Phản ứng với một loại địa hình cụ thể.</terrain>
+    
+    <water label="loại"> Phản ứng với một loại nước cụ thể.</water>
+    
+    <eighthsecond label="giây"> 1/8 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</eighthsecond>
+    
+    <quartersecond label="giây"> 1/4 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</quartersecond>
+    
+    <_01second label="giây"> 1 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_01second>
+    
+    <_02seconds label="giây"> 2 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_02seconds>
+    
+    <_03seconds label="giây"> 3 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_03seconds>
+    
+    <_04seconds label="giây"> 4 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_04seconds>
+    
+    <_05seconds label="giây"> 5 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_05seconds>
+    
+    <_10seconds label="giây"> 10 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_10seconds>
+    
+    <_20seconds label="giây"> 20 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_20seconds>
+    
+    <_30seconds label="giây"> 30 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_30seconds>
+    
+    <_60seconds label="giây"> 60 giây. Kết hợp với những con số khác để tạo thành lượng thời gian lớn hơn.</_60seconds>
+    
+    <_000point label="điểm"> 0 điểm.</_000point>
+    
+    <_001point label="điểm"> 1 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_001point>
+    
+    <_002points label="điểm"> 2 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_002points>
+    
+    <_003points label="điểm"> 3 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_003points>
+    
+    <_004points label="điểm"> 4 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_004points>
+    
+    <_005points label="điểm"> 5 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_005points>
+    
+    <_010points label="điểm"> 10 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_010points>
+    
+    <_020points label="điểm"> 20 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_020points>
+    
+    <_050points label="điểm"> 50 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_050points>
+    
+    <_100points label="điểm"> 100 điểm. Kết hợp với những con số khác để tạo thành lượng số điểm lớn hơn.</_100points>
+    
+    <random label="ngẫu nhiên"> Tạo một số ngẫu nhiên bằng cách sử dụng số gạch. Ví dụ: Random - 5 tạo một số ngẫu nhiên trong khoảng từ 0 đến 5.</random>
+    <scorebucket>
+      <color>
+        
+        <white label="trắng"> Kiểm tra điểm trắng, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</white>
+        
+        <black label="đen"> Kiểm tra điểm đen, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</black>
+        
+        <grey label="xám"> Kiểm tra điểm xám, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</grey>
+        
+        <red label="đỏ"> Kiểm tra điểm đỏ, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</red>
+        
+        <green label="xanh lá"> Kiểm tra điểm xanh lá, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</green>
+        
+        <blue label="xanh lam"> Kiểm tra điểm màu xanh lam, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</blue>
+        
+        <orange label="da cam"> Kiểm tra điểm số màu cam, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</orange>
+        
+        <yellow label="vàng"> Kiểm tra điểm vàng, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</yellow>
+        
+        <purple label="tím"> Kiểm tra điểm màu tím, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</purple>
+        
+        <pink label="hồng"> Kiểm tra điểm số màu hồng, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</pink>
+        
+        <brown label="nâu"> Kiểm tra điểm số màu nâu, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</brown>
+      </color>
+      <letter>
+        
+        <a label="điểm A"> Điểm 'A', được chia sẻ bởi tất cả các nhân vật trong thế giới.</a>
+        
+        <b label="điểm B"> Điểm 'B', được chia sẻ bởi tất cả các nhân vật trong thế giới.</b>
+        
+        <c label="điểm C"> Điểm 'C', được chia sẻ bởi tất cả các nhân vật trong thế giới.</c>
+        
+        <d label="điểm D"> Điểm 'D', được chia sẻ bởi tất cả các nhân vật trong thế giới.</d>
+        
+        <e label="điểm E"> Điểm 'E', được chia sẻ bởi tất cả các nhân vật trong thế giới.</e>
+        
+        <f label="điểm F"> Điểm 'F', được chia sẻ bởi tất cả các nhân vật trong thế giới.</f>
+        
+        <g label="điểm G"> Điểm 'G', được chia sẻ bởi tất cả các nhân vật trong thế giới.</g>
+        
+        <h label="điểm H"> Điểm 'H', được chia sẻ bởi tất cả các nhân vật trong thế giới.</h>
+        
+        <i label="điểm I"> Điểm 'I', được chia sẻ bởi tất cả các nhân vật trong thế giới.</i>
+        
+        <j label="điểm J"> Điểm 'J', được chia sẻ bởi tất cả các nhân vật trong thế giới.</j>
+        
+        <k label="điểm K"> Điểm 'K', được chia sẻ bởi tất cả các nhân vật trong thế giới.</k>
+        
+        <l label="điểm L"> Điểm 'L', được chia sẻ bởi tất cả các nhân vật trong thế giới.</l>
+        
+        <m label="điểm M"> Điểm 'M', được chia sẻ bởi tất cả các nhân vật trong thế giới.</m>
+        
+        <n label="điểm N"> Điểm 'N', được chia sẻ bởi tất cả các nhân vật trong thế giới.</n>
+        
+        <o label="điểm O"> Điểm 'O', được chia sẻ bởi tất cả các nhân vật trong thế giới.</o>
+        
+        <p label="điểm P"> Điểm 'P', được chia sẻ bởi tất cả các nhân vật trong thế giới.</p>
+        
+        <q label="điểm Q"> Điểm 'Q', được chia sẻ bởi tất cả các nhân vật trong thế giới.</q>
+        
+        <r label="điểm R"> Điểm 'R', được chia sẻ bởi tất cả các nhân vật trong thế giới.</r>
+        
+        <s label="điểm S"> Điểm 'S', được chia sẻ bởi tất cả các nhân vật trong thế giới.</s>
+        
+        <t label="điểm T"> Điểm 'T', được chia sẻ bởi tất cả các nhân vật trong thế giới.</t>
+        
+        <u label="điểm U"> Điểm 'U', được chia sẻ bởi tất cả các nhân vật trong thế giới.</u>
+        
+        <v label="điểm V"> Điểm 'V', được chia sẻ bởi tất cả các nhân vật trong thế giới.</v>
+        
+        <w label="điểm W"> Điểm 'W', được chia sẻ bởi tất cả các nhân vật trong thế giới.</w>
+        
+        <x label="điểm X"> Điểm 'X', được chia sẻ bởi tất cả các nhân vật trong thế giới.</x>
+        
+        <y label="điểm Y"> Điểm 'Y', được chia sẻ bởi tất cả các nhân vật trong thế giới.</y>
+        
+        <z label="điểm Z"> Điểm 'Z', được chia sẻ bởi tất cả các nhân vật trong thế giới.</z>
+      </letter>
+      <local>
+        
+        <a label="điểm a"> Điểm 'a', dành riêng đối với nhân vật này.</a>
+        
+        <b label="điểm b"> Điểm 'b', dành riêng đối với nhân vật này.</b>
+        
+        <c label="điểm c"> Điểm 'c', dành riêng đối với nhân vật này.</c>
+        
+        <d label="điểm d"> Điểm 'd', dành riêng đối với nhân vật này.</d>
+        
+        <e label="điểm e"> Điểm 'e', dành riêng đối với nhân vật này.</e>
+        
+        <f label="điểm f"> Điểm 'f', dành riêng đối với nhân vật này.</f>
+        
+        <g label="điểm g"> Điểm 'g', dành riêng đối với nhân vật này.</g>
+        
+        <h label="điểm h"> Điểm 'h', dành riêng đối với nhân vật này.</h>
+        
+        <i label="điểm i"> Điểm 'i', dành riêng đối với nhân vật này.</i>
+        
+        <j label="điểm j"> Điểm 'j', dành riêng đối với nhân vật này.</j>
+        
+        <k label="điểm k"> Điểm 'k', dành riêng đối với nhân vật này.</k>
+        
+        <l label="điểm l"> Điểm 'l', dành riêng đối với nhân vật này.</l>
+        
+        <m label="điểm m"> Điểm 'm', dành riêng đối với nhân vật này.</m>
+        
+        <n label="điểm n"> Điểm 'n', dành riêng đối với nhân vật này.</n>
+        
+        <o label="điểm o"> Điểm 'o', dành riêng đối với nhân vật này.</o>
+        
+        <p label="điểm p"> Điểm 'p', dành riêng đối với nhân vật này.</p>
+        
+        <q label="điểm q"> Điểm 'q', dành riêng đối với nhân vật này.</q>
+        
+        <r label="điểm r"> Điểm 'r', dành riêng đối với nhân vật này.</r>
+        
+        <s label="điểm s"> Điểm 's', dành riêng đối với nhân vật này.</s>
+        
+        <t label="điểm t"> Điểm 't', dành riêng đối với nhân vật này.</t>
+        
+        <u label="điểm u"> Điểm 'u', dành riêng đối với nhân vật này.</u>
+        
+        <v label="điểm v"> Điểm 'v', dành riêng đối với nhân vật này.</v>
+        
+        <w label="điểm w"> Điểm 'w', dành riêng đối với nhân vật này.</w>
+        
+        <x label="điểm x"> Điểm 'x', dành riêng đối với nhân vật này.</x>
+        
+        <y label="điểm y"> Điểm 'y', dành riêng đối với nhân vật này.</y>
+        
+        <z label="điểm z"> Điểm 'z', dành riêng đối với nhân vật này.</z>
+      </local>
+    </scorebucket>
+    
+    <scoretrigger label="kích hoạt"></scoretrigger>
+    
+    <timertrigger label="kích hoạt"></timertrigger>
+    
+    <scoreis label="là"></scoreis>
+    
+    <scoreequals label="bằng"> Phản ứng khi điểm bằng một số nhất định.</scoreequals>
+    
+    <scorenotequals label="không bằng"> Phản ứng khi điểm không bằng một số nhất định.</scorenotequals>
+    
+    <scoreabove label="ở trên"> Phản ứng khi điểm vượt quá một số nhất định.</scoreabove>
+    
+    <scorebelow label="bên dưới"> Phản ứng khi điểm dưới một số nhất định.</scorebelow>
+    
+    <scoregteq label=">=">Phản ứng khi điểm bằng hoặc vượt quá một số nhất định.</scoregteq>
+    
+    <scorelteq label="&lt;=">Phản ứng khi điểm bằng hoặc đi dưới một số nhất định.</scorelteq>
+    
+    <health label="điểm máu"> Số điểm điểm máu mà các nhân vật có.</health>
+    
+    <healthis label="is"></healthis>
+    
+    <healthabove label="trên">Phản ứng khi điểm máu vượt quá một số nhất định.</healthabove>
+    
+    <healthbelow label="bên dưới">Phản ứng khi điểm máu xuống dưới một số nhất định.</healthbelow>
+    <direction>
+      
+      <up label="lên"> Phản ứng với một cần điều khiển được đẩy lên.</up>
+      
+      <right label="phải"> Phản ứng với một cần điều khiển được đẩy sang phải.</right>
+      
+      <down label="xuống"> Phản ứng với một cần điều khiển đẩy xuống.</down>
+      
+      <left label="trái">Phản ứng với cần điều khiển bị đẩy sang trái.</left>
+      
+      <clockwise label="phải">Phản ứng với cử chỉ xoay theo chiều kim đồng hồ.</clockwise>
+      
+      <counterclockwise label="trái">Phản ứng với cử chỉ xoay ngược chiều kim đồng hồ.</counterclockwise>
+    </direction>
+    
+    <not label="không">Phản ứng khi điều kiện khi không khớp.</not>
+  </filter>
+  <selector>
+    
+    <closest label="gần nhất"></closest>
+    
+    <objectrelative label="quan hệ"></objectrelative>
+    
+    <towardclosest label="hướng tới">Di chuyển về phía bất cứ điều gì bạn đang phản ứng.</towardclosest>
+    
+    <awayfromall label="đi">Tránh xa mọi thứ bạn đang phản ứng.</awayfromall>
+    
+    <avoidall label="tránh">Tránh bất cứ thứ gì bạn đang phản ứng bằng cách giữ một khoảng cách nhất định.</avoidall>
+    
+    <wander label="đi lang thang">Đi lang thang bằng cách chọn một hướng ngẫu nhiên. Hữu ích như một dòng cuối cùng trong chương trình để nhân vật của bạn di chuyển khi anh ấy không chủ động theo đuổi bất cứ điều gì.</wander>
+    
+    <cruise label="thẳng"> Di chuyển theo bất kỳ hướng nào bạn đang đối mặt.</cruise>
+    
+    <circle label="vòng tròn"></circle>
+    
+    <spin label="quay">Quay tại chỗ.</spin>
+    
+    <forward label="phía trước"></forward>
+    
+    <hiddenturn label="quay"></hiddenturn>
+    
+    <escape label="quay đi"></escape>
+    
+    <followwaypoints label="trên đường dẫn"> Di chuyển trên một đường dẫn có màu nhất định. Mặc định là để di chuyển trên bất kỳ con đường nào.</followwaypoints>
+    
+    <moveupdown label="lên/xuống">Di chuyển lên và xuống.</moveupdown>
+    
+    <moveup label="lên">Di chuyển lên trên.</moveup>
+    
+    <movedown label="xuống">Di chuyển xuống dưới.</movedown>
+    
+    <moveleftright label="quay">Di chuyển sang trái hoặc phải.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      
+      <_1 label="người chơi 1"></_1>
+      
+      <_2 label="người chơi 2"></_2>
+      
+      <_3 label="người chơi 3"></_3>
+      
+      <_4 label="người chơi 4"></_4>
+    </player>
+    <reset>
+      
+      <world label="Thế giới">Đặt lại trò chơi, ngoại trừ bảng điểm.</world>
+      
+      <score label="điểm">Đặt lại bảng điểm hoặc điểm số riêng của bạn cung cấp màu.</score>
+      
+      <expression label="bày tỏ">Đặt lại cảm xúc của nhân vật.</expression>
+      
+      <glow label="phát sáng">Đặt lại ánh sáng của nhân vật.</glow>
+      
+      <health label="sức khỏe">Đặt lại sức khỏe của nhân vật.</health>
+    </reset>
+    <projectile>
+      
+      <blip label="đạn">Đạn là những viên đạn có tốc độ bắn nhanh - trọng lượng nhẹ hơn tên lửa.</blip>
+      
+      <missile label="tên lửa">Tên lửa rất lớn và không nhanh lắm, nhưng đủ thông minh để theo dõi mục tiêu của chúng!</missile>
+    </projectile>
+    
+    <slowly label="chậm">Di chuyển chậm hơn. Sử dụng nhiều lần để di chuyển thậm chí chậm hơn.</slowly>
+    
+    <quickly label="nhanh chóng">Di chuyển nhanh hơn. Sử dụng nhiều lần để di chuyển thậm chí nhanh hơn.</quickly>
+    
+    <speednormally label="bình thường">Chỉ cần di chuyển bình thường. Không bắt buộc.</speednormally>
+    
+    <weakly label="yếu">Làm điều này yếu hơn bình thường.</weakly>
+    
+    <strongly label="mạnh">Làm điều này mạnh hơn bình thường.</strongly>
+    
+    <strengthnormally label="bình thường"> Làm điều này ở cường độ bình thường. Không cần có.</strengthnormally>
+    <angle>
+      
+      <low label="thấp">Làm điều này yếu hơn bình thường.</low>
+      
+      <high label="cao">Làm điều này mạnh hơn bình thường.</high>
+    </angle>
+    
+    <turnleft label="trái"></turnleft>
+    
+    <turnright label="phải"></turnright>
+    
+    <turntoward label="hướng tới"></turntoward>
+    
+    <turnforward label="tiến thẳng"> Cho biết rằng chuyển động không xác định hướng đang quay mặt.</turnforward>
+    
+    <pitchup label="lên"></pitchup>
+    
+    <pitchdown label="xuống"></pitchdown>
+    
+    <forward label="chuyển tiếp"> Hướng mà nhân vật đang đối mặt.</forward>
+    
+    <north label="hướng bắc"></north>
+    
+    <east label="hướng đông"></east>
+    
+    <south label="hướng nam"></south>
+    
+    <west label="hướng tây"></west>
+    
+    <up label="lên"></up>
+    
+    <down label="xuống"></down>
+    <distance>
+      
+      <near label="gần"> Làm cho nhân vật khoanh tròn mục tiêu chặt chẽ hơn.</near>
+      
+      <far label="Xa"> Làm cho nhân vật khoanh tròn mục tiêu theo vòng tròn lớn hơn.</far>
+    </distance>
+    
+    <objecticeberg label="tảng băng trôi">Tạo một tảng băng.</objecticeberg>
+    
+    <objectrock label="đá">Tạo đá.</objectrock>
+    
+    <objectrockLowValue label="rock"> Tạo đá núi lửa.</objectrockLowValue>
+    
+    <objectrockHighValue label="đá">Tạo đá trầm tích.</objectrockHighValue>
+    
+    <objectfruit label="quả táo">Tạo một quả táo.</objectfruit>
+    
+    <objectinkjet label="đám mây đen">Tạo một đám mây đen.</objectinkjet>
+    
+    <objectstar label="sao">Tạo một ngôi sao.</objectstar>
+    
+    <objectcoin label="đống tiền">Tạo một đồng tiền.</objectcoin>
+    
+    <objectheart label="trái tim">Tạo trái tim.</objectheart>
+  </modifier>
+  <modifer>
+    
+    <objectsoccerball label="quả bóng">Tạo một quả bóng đá.</objectsoccerball>
+    
+    <objectbullet label="đạn">Tạo đạn.</objectbullet>
+  </modifer>
+  <modifier>
+    
+    <taska label="trang 1"> Chuyển sang hoặc chạy ngay trang 1.</taska>
+    
+    <taskb label="trang 2"> Chuyển sang hoặc chạy ngay trang 2.</taskb>
+    
+    <taskc label="trang 3"> Chuyển sang hoặc chạy ngay trang 3.</taskc>
+    
+    <taskd label="trang 4"> Chuyển sang hoặc chạy ngay trang 4.</taskd>
+    
+    <taske label="trang 5"> Chuyển sang hoặc chạy ngay trang 5.</taske>
+    
+    <taskf label="trang 6"> Chuyển sang hoặc chạy ngay trang 6.</taskf>
+    
+    <taskg label="trang 7"> Chuyển sang hoặc chạy ngay trang 7.</taskg>
+    
+    <taskh label="trang 8"> Chuyển sang hoặc chạy ngay trang 8.</taskh>
+    
+    <taski label="trang 9"> Chuyển sang hoặc chạy ngay trang 9.</taski>
+    
+    <taskj label="trang 10"> Chuyển sang hoặc chạy ngay trang 10.</taskj>
+    
+    <taskk label="trang 11"> Chuyển sang hoặc chạy ngay trang 11.</taskk>
+    
+    <taskl label="trang 12"> Chuyển sang hoặc chạy ngay trang 12.</taskl>
+    
+    <expresshappy label="happy">Thể hiện sự vui vẻ.</expresshappy>
+    
+    <expresssad label="buồn">Thể hiện sự buồn.</expresssad>
+    
+    <expressangry label="tức giận">Thể hiện sự tức giận.</expressangry>
+    
+    <expresscrazy label="điên">Thể hiện sự điên rồ.</expresscrazy>
+    
+    <expresshearts label="trái tim">Hiện trái tim.</expresshearts>
+    
+    <expressflowers label="hoa">Hiện ảnh hoa.</expressflowers>
+    
+    <expressstars label="sao">Hiện sao.</expressstars>
+    
+    <expressswear label="thề">Hiển thị lời chửi thề kiểu hoạt hình.</expressswear>
+    
+    <expressnone label="none">Hành động bình thường và ngừng hiển thị bất cứ điều gì.</expressnone>
+    
+    <_000point label="điểm"> 0 điểm. Bạn cũng có thể chỉ định một màu.</_000point>
+    
+    <_001point label="điểm"> 1 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu..</_001point>
+    
+    <_002points label="điểm">2 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu..</_002points>
+    
+    <_003points label="điểm">3 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu..</_003points>
+    
+    <_004points label="điểm">4 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu..</_004points>
+    
+    <_005points label="điểm"> 5 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu..</_005points>
+    
+    <_010points label="điểm"> 10 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu..</_010points>
+    
+    <_020points label="điểm"> 20 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu.</_020points>
+    
+    <_050points label="điểm"> 50 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu..</_050points>
+    
+    <_100points label="điểm"> 100 điểm. Sử dụng nhiều ô để cộng thành các số điểm khác nhau. Bạn cũng có thể chỉ định một màu..</_100points>
+    
+    <random label="ngẫu nhiên"> Tạo một số ngẫu nhiên bằng cách sử dụng số gạch. Ví dụ: Random - 5 tạo một số ngẫu nhiên trong khoảng từ 0 đến 5.</random>
+    
+    <health label="điểm máu"> Số lượng điểm nhấn mà nhân vật có.</health>
+    
+    <teama label="đội A"></teama>
+    
+    <teamb label="đội B"></teamb>
+    
+    <payloadzap label="choáng">Làm choáng mục tiêu trong vài giây.</payloadzap>
+    
+    <payloadpop label="hạ gục">Đặt mục tiêu vào trạng thái ngủ cho đến khi người khác đặt lại điểm máu của nó.</payloadpop>
+    
+    <payloadsquash label="đè bẹp">Đè bẹp mục tiêu.</payloadsquash>
+    
+    <payloadboom label="bùng nổ">Làm cho mục tiêu biến mất với một vụ nổ.</payloadboom>
+    
+    <payloadvanish label="tan biến">Làm cho mục tiêu biến mất lặng lẽ.</payloadvanish>
+    
+    <black label="đen"></black>
+    
+    <grey label="xám"></grey>
+    
+    <white label="trắng"></white>
+    
+    <red label="đỏ"></red>
+    
+    <orange label="cam"></orange>
+    
+    <yellow label="vàng"></yellow>
+    
+    <green label="xanh lá"></green>
+    
+    <blue label="xanh lam"></blue>
+    
+    <purple label="tím"></purple>
+    
+    <pink label="hồng"></pink>
+    
+    <brown label="nâu"></brown>
+    
+    <glowoff label="tắt">Tắt bất kỳ ánh sáng.</glowoff>
+    
+    <colorrandom label="ngẫu nhiên">chọn màu ngẫu nhiên.</colorrandom>
+    <path>
+      
+      <black label="đường đen"></black>
+      
+      <grey label="đường xám"></grey>
+      
+      <white label="đường trắng"></white>
+      
+      <red label="đường đỏ"></red>
+      
+      <orange label="đường cam"></orange>
+      
+      <yellow label="đường vàng"></yellow>
+      
+      <green label="đường xanh lá"></green>
+      
+      <blue label="đường xanh lam"></blue>
+      
+      <purple label="đường tím"></purple>
+      
+      <pink label="đường hồng"></pink>
+      
+      <brown label="đường nâu"></brown>
+    </path>
+    <scorebucket>
+      <color>
+        
+        <white label="trắng"> Thay đổi điểm trắng, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</white>
+        
+        <black label="đen"> Thay đổi điểm đen, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</black>
+        
+        <grey label="xám"> Thay đổi điểm xám, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</grey>
+        
+        <red label="đỏ"> Thay đổi điểm đỏ, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</red>
+        
+        <green label="xanh lá"> Thay đổi điểm xanh lá, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</green>
+        
+        <blue label="xanh lam"> Thay đổi điểm xanh lam, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</blue>
+        
+        <orange label="cam"> Thay đổi điểm cam, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</orange>
+        
+        <yellow label="vàng"> Thay đổi điểm vàng, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</yellow>
+        
+        <purple label="tím"> Thay đổi điểm tím, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</purple>
+        
+        <pink label="hồng"> Thay đổi điểm hồng, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</pink>
+        
+        <brown label="nâu"> Thay đổi điểm nâu, được hiển thị trên bảng điểm theo mặc định. (Truy cập cài đặt thế giới để thay đổi.)</brown>
+      </color>
+      <letter>
+        
+        <a label="điểm A"> Sửa đổi điểm 'A', được chia sẻ bởi tất cả các nhân vật trên thế giới.</a>
+        
+        <b label="điểm B"> Sửa đổi điểm 'A', được chia sẻ bởi tất cả các nhân vật trên thế giới.</b>
+        
+        <c label="điểm C"> Sửa đổi điểm 'C', được chia sẻ bởi tất cả các nhân vật trên thế giới.</c>
+        
+        <d label="điểm D"> Sửa đổi điểm 'D', được chia sẻ bởi tất cả các nhân vật trên thế giới.</d>
+        
+        <e label="điểm E"> Sửa đổi điểm 'E', được chia sẻ bởi tất cả các nhân vật trên thế giới.</e>
+        
+        <f label="điểm F"> Sửa đổi điểm 'F', được chia sẻ bởi tất cả các nhân vật trên thế giới.</f>
+        
+        <g label="điểm G"> Sửa đổi điểm 'G', được chia sẻ bởi tất cả các nhân vật trên thế giới.</g>
+        
+        <h label="điểm H"> Sửa đổi điểm 'H', được chia sẻ bởi tất cả các nhân vật trên thế giới.</h>
+        
+        <i label="điểm I"> Sửa đổi điểm 'I', được chia sẻ bởi tất cả các nhân vật trên thế giới.</i>
+        
+        <j label="điểm J"> Sửa đổi điểm 'J', được chia sẻ bởi tất cả các nhân vật trên thế giới.</j>
+        
+        <k label="điểm K"> Sửa đổi điểm 'K', được chia sẻ bởi tất cả các nhân vật trên thế giới.</k>
+        
+        <l label="điểm L"> Sửa đổi điểm 'L', được chia sẻ bởi tất cả các nhân vật trên thế giới.</l>
+        
+        <m label="điểm M"> Sửa đổi điểm 'M', được chia sẻ bởi tất cả các nhân vật trên thế giới.</m>
+        
+        <n label="điểm N"> Sửa đổi điểm 'N', được chia sẻ bởi tất cả các nhân vật trên thế giới.</n>
+        
+        <o label="điểm O"> Sửa đổi điểm 'O', được chia sẻ bởi tất cả các nhân vật trên thế giới.</o>
+        
+        <p label="điểm P"> Sửa đổi điểm 'P', được chia sẻ bởi tất cả các nhân vật trên thế giới.</p>
+        
+        <q label="điểm Q"> Sửa đổi điểm 'Q', được chia sẻ bởi tất cả các nhân vật trên thế giới.</q>
+        
+        <r label="điểm R"> Sửa đổi điểm 'R', được chia sẻ bởi tất cả các nhân vật trên thế giới.</r>
+        
+        <s label="điểm S"> Sửa đổi điểm 'S', được chia sẻ bởi tất cả các nhân vật trên thế giới.</s>
+        
+        <t label="điểm T"> Sửa đổi điểm 'T', được chia sẻ bởi tất cả các nhân vật trên thế giới.</t>
+        
+        <u label="điểm U"> Sửa đổi điểm 'U', được chia sẻ bởi tất cả các nhân vật trên thế giới.</u>
+        
+        <v label="điểm V"> Sửa đổi điểm 'V', được chia sẻ bởi tất cả các nhân vật trên thế giới.</v>
+        
+        <w label="điểm W"> Sửa đổi điểm 'W', được chia sẻ bởi tất cả các nhân vật trên thế giới.</w>
+        
+        <x label="điểm X"> Sửa đổi điểm 'X', được chia sẻ bởi tất cả các nhân vật trên thế giới.</x>
+        
+        <y label="điểm Y"> Sửa đổi điểm 'Y', được chia sẻ bởi tất cả các nhân vật trên thế giới.</y>
+        
+        <z label="điểm Z"> Sửa đổi điểm 'Z', được chia sẻ bởi tất cả các nhân vật trên thế giới.</z>
+      </letter>
+      <local>
+        
+        <a label="điểm a"> Điểm 'a', dành riêng đối với nhân vật này.</a>
+        
+        <b label="điểm b"> Điểm 'b', dành riêng đối với nhân vật này.</b>
+        
+        <c label="điểm c"> Điểm 'c', dành riêng đối với nhân vật này.</c>
+        
+        <d label="điểm d"> Điểm 'd', dành riêng đối với nhân vật này.</d>
+        
+        <e label="điểm e"> Điểm 'e', dành riêng đối với nhân vật này.</e>
+        
+        <f label="điểm f"> Điểm 'f', dành riêng đối với nhân vật này.</f>
+        
+        <g label="điểm g"> Điểm 'g', dành riêng đối với nhân vật này.</g>
+        
+        <h label="điểm h"> Điểm 'h', dành riêng đối với nhân vật này.</h>
+        
+        <i label="điểm i"> Điểm 'i', dành riêng đối với nhân vật này.</i>
+        
+        <j label="điểm j"> Điểm 'j', dành riêng đối với nhân vật này.</j>
+        
+        <k label="điểm k"> Điểm 'k', dành riêng đối với nhân vật này.</k>
+        
+        <l label="điểm l"> Điểm 'l', dành riêng đối với nhân vật này.</l>
+        
+        <m label="điểm m"> Điểm 'm', dành riêng đối với nhân vật này.</m>
+        
+        <n label="điểm n"> Điểm 'n', dành riêng đối với nhân vật này.</n>
+        
+        <o label="điểm o"> Điểm 'o', dành riêng đối với nhân vật này.</o>
+        
+        <p label="điểm p"> Điểm 'p', dành riêng đối với nhân vật này.</p>
+        
+        <q label="điểm q"> Điểm 'q', dành riêng đối với nhân vật này.</q>
+        
+        <r label="điểm r"> Điểm 'r', dành riêng đối với nhân vật này.</r>
+        
+        <s label="điểm s"> Điểm 's', dành riêng đối với nhân vật này.</s>
+        
+        <t label="điểm t"> Điểm 't', dành riêng đối với nhân vật này.</t>
+        
+        <u label="điểm u"> Điểm 'u', dành riêng đối với nhân vật này.</u>
+        
+        <v label="điểm v"> Điểm 'v', dành riêng đối với nhân vật này.</v>
+        
+        <w label="điểm w"> Điểm 'w', dành riêng đối với nhân vật này.</w>
+        
+        <x label="điểm x"> Điểm 'x', dành riêng đối với nhân vật này.</x>
+        
+        <y label="điểm y"> Điểm 'y', dành riêng đối với nhân vật này.</y>
+        
+        <z label="điểm z"> Điểm 'z', dành riêng đối với nhân vật này.</z>
+      </local>
+    </scorebucket>
+    
+    <me label="tôi"> Áp dụng hành động cho đối tượng chạy chương trình.</me>
+    
+    <it label="nó"> Áp dụng hành động cho đối tượng mục tiêu.</it>
+    
+    <any label="bất kỳ"> Bất kỳ âm thanh.</any>
+    <event>
+      
+      <any label="sự kiện"> Bất kỳ âm thanh.</any>
+      <silly>
+        
+        <any label="ngớ ngẩn"> Bất kỳ âm thanh ngớ ngẩn.</any>
+        
+        <bang label="bang "> Một âm thanh 'bang' hoạt hình.</bang>
+        
+        <pow label="pow"> Một phim hoạt hình 'pow' âm thanh.</pow>
+      </silly>
+      <explode>
+        
+        <any label="phát nổ"> Bất kỳ âm thanh nổ.</any>
+        
+        <A label="tiếng nổ A"> Một tiếng nổ.</A>
+        
+        <B label="tiếng nổ B"> Một tiếng nổ.</B>
+        
+        <C label="tiếng nổ C"> Một tiếng nổ.</C>
+        
+        <D label="tiếng nổ D"> Một tiếng nổ.</D>
+        
+        <E label="tiếng nổ E"> Một tiếng nổ.</E>
+      </explode>
+      <musical>
+          
+          <any label="chuông">Bất kỳ âm thanh Đàn chuông.</any>
+        <glock>
+          
+          <any label="chuông">Bất kỳ âm thanh Đàn chuông.</any>
+        </glock>
+        
+        <glock01 label="Đô chuông">Một âm thanh đàn Chuông.</glock01>
+        
+        <glock02 label="Đô# chuông">Một âm thanh đàn Chuông.</glock02>
+        
+        <glock03 label="Rê chuông">Một âm thanh đàn Chuông.</glock03>
+        
+        <glock04 label="Rê# chuông">Một âm thanh đàn Chuông.</glock04>
+        
+        <glock05 label="Mi chuông">Một âm thanh đàn Chuông.</glock05>
+        
+        <glock06 label="Pha chuông">Một âm thanh đàn Chuông.</glock06>
+        
+        <glock07 label="Pha# chuông">Một âm thanh đàn Chuông.</glock07>
+        
+        <glock08 label="Son# chuông">Một âm thanh đàn Chuông.</glock08>
+        
+        <glock09 label="Son# chuông">Một âm thanh đàn Chuông.</glock09>
+        
+        <glock10 label="La chuông">Một âm thanh đàn Chuông.</glock10>
+        
+        <glock11 label="La# chuông">Một âm thanh đàn Chuông.</glock11>
+        
+        <glock12 label="Si chuông">Một âm thanh đàn Chuông.</glock12>
+        <gong>
+          
+          <any label="cồng">Bất kỳ âm thanh cồng.</any>
+        </gong>
+        
+        <gong01 label="Đô cồng "> Một tiếng cồng.</gong01>
+        
+        <gong02 label="Đô# cồng "> Một tiếng cồng.</gong02>
+        
+        <gong03 label="Rê cồng "> Một tiếng cồng.</gong03>
+        
+        <gong04 label="Rê# cồng "> Một tiếng cồng.</gong04>
+        
+        <gong05 label="Mi cồng "> Một tiếng cồng.</gong05>
+        
+        <gong06 label="Pha cồng "> Một tiếng cồng.</gong06>
+        
+        <gong07 label="Pha# cồng "> Một tiếng cồng.</gong07>
+        
+        <gong08 label="Son cồng "> Một tiếng cồng.</gong08>
+        
+        <gong09 label="Son# cồng "> Một tiếng cồng.</gong09>
+        
+        <gong10 label="La cồng "> Một tiếng cồng.</gong10>
+        
+        <gong11 label="La# cồng "> Một tiếng cồng.</gong11>
+        
+        <gong12 label="Si cồng "> Một tiếng cồng.</gong12>
+        <saw>
+          
+          <any label="sóng răng cưa">bất kì giai điệu răng cưa</any>
+        </saw>
+        
+        <saw01 label="Đô răng cưa">một giai điệu răng cưa.</saw01>
+        
+        <saw02 label="Đô# răng cưa">một giai điệu răng cưa</saw02>
+        
+        <saw03 label="Rê răng cưa">một giai điệu răng cưa</saw03>
+        
+        <saw04 label="Rê# răng cưa">một giai điệu răng cưa</saw04>
+        
+        <saw05 label="Mi răng cưa">một giai điệu răng cưa</saw05>
+        
+        <saw06 label="Pha răng cưa">một giai điệu răng cưa</saw06>
+        
+        <saw07 label="Pha# răng cưa">một giai điệu răng cưa</saw07>
+        
+        <saw08 label="Son răng cưa">một giai điệu răng cưa</saw08>
+        
+        <saw09 label="Son# răng cưa">một giai điệu răng cưa</saw09>
+        
+        <saw10 label="La răng cưa">một giai điệu răng cưa</saw10>
+        
+        <saw11 label="La# răng cưa">một giai điệu răng cưa</saw11>
+        
+        <saw12 label="Si răng cưa">một giai điệu răng cưa</saw12>
+        <sine>
+          
+          <any label="sin">Bất kỳ âm thanh sóng hình sin.</any>
+        </sine>
+        
+        <sine01 label="Đô sin">Một giai điệu sóng hình sin.</sine01>
+        
+        <sine02 label="Đô# sin">Một giai điệu sóng hình sin.</sine02>
+        
+        <sine03 label="Rê sin">Một giai điệu sóng hình sin.</sine03>
+        
+        <sine04 label="Rê# sin">Một giai điệu sóng hình sin.</sine04>
+        
+        <sine05 label="Mi sin">Một giai điệu sóng hình sin.</sine05>
+        
+        <sine06 label="Pha sin">Một giai điệu sóng hình sin.</sine06>
+        
+        <sine07 label="Pha# sin">Một giai điệu sóng hình sin.</sine07>
+        
+        <sine08 label="Son sin">Một giai điệu sóng hình sin.</sine08>
+        
+        <sine09 label="Son# sin">Một giai điệu sóng hình sin.</sine09>
+        
+        <sine10 label="La sin">Một giai điệu sóng hình sin.</sine10>
+        
+        <sine11 label="La# sin">Một giai điệu sóng hình sin.</sine11>
+        
+        <sine12 label="Si sin">Một giai điệu sóng hình sin.</sine12>
+        <square>
+          
+          <any label="Vuông">Bất kỳ âm thanh sóng vuông.</any>
+        </square>
+        
+        <square01 label="Đô vuông">Một âm sóng vuông.</square01>
+        
+        <square02 label="Đô# vuông">Một âm sóng vuông.</square02>
+        
+        <square03 label="Rê vuông">Một âm sóng vuông.</square03>
+        
+        <square04 label="Rê# vuông">Một âm sóng vuông.</square04>
+        
+        <square05 label="Mi vuông">Một âm sóng vuông.</square05>
+        
+        <square06 label="Pha vuông">Một âm sóng vuông.</square06>
+        
+        <square07 label="Pha# vuông">Một âm sóng vuông.</square07>
+        
+        <square08 label="Son vuông">Một âm sóng vuông.</square08>
+        
+        <square09 label="Son# vuông">Một âm sóng vuông.</square09>
+        
+        <square10 label="La vuông">Một âm sóng vuông.</square10>
+        
+        <square11 label="La# vuông">Một âm sóng vuông.</square11>
+        
+        <square12 label="Si vuông">Một âm sóng vuông.</square12>
+        <drums>
+          
+          <any label="trống">Bất kỳ âm thanh trống.</any>
+        </drums>
+        
+        <bassdrum label="trầm">Trống trầm.</bassdrum>
+        
+        <hhclosed label="hh đóng">Hi-hat đóng</hhclosed>
+        
+        <hhopen label="hh mở">Hi-hat mở.</hhopen>
+        
+        <shaker label="quả lắc">Quả lắc.</shaker>
+        
+        <snare label="trống snare">Trống snare.</snare>
+        
+        <tomlow label="tom thấp ">Tom âm trầm.</tomlow>
+        
+        <tommed label="tom vừa "> Tom âm trung.</tommed>
+        
+        <tomhi label="tom cao"> Tom âm bổng.</tomhi>
+      </musical>
+      <arcade>
+        
+        <any label="giải trí">Bất kỳ âm thanh giải trí.</any>
+        
+        <roboton label="robot bật">Robot đang hoạt động.</roboton>
+        
+        <robotoff label="robot tắt">Robot ngừng hoạt động.</robotoff>
+        
+        <coinsound label="tiền">Âm thanh tiền.</coinsound>
+        
+        <gethealth label="thêm máu">Âm thanh nhận được điểm máu.</gethealth>
+        
+        <losehealth label="mất máu">Âm thanh mất đi điểm máu.</losehealth>
+        
+        <shoot label="súng">Tiếng súng.</shoot>
+        
+        <timer label="hẹn giờ">Âm thanh hẹn giờ.</timer>
+        
+        <win label="chiến thắng">Âm thanh chiến thắng.</win>
+        
+        <lose label="thua">Âm thanh thua.</lose>
+        
+        <inkjet_fire label="phun mực">Âm thanh phun mực</inkjet_fire>
+        
+        <inkjet_impact label="mực va chạm">Âm thanh mực va chạm</inkjet_impact>
+      </arcade>
+      <misc>
+        
+        <any label="misc">Bất kỳ âm thanh linh tinh.</any>
+        
+        <countdown_beep label="đếm ngược"> Một âm thanh đếm ngược tiếng bíp.</countdown_beep>
+        
+        <countdown_alarm label="đếm ngược báo thức"> đếm ngược tiếng bíp khẩn cấp.</countdown_alarm>
+        
+        <epic_stinger label="giới thiệu">Một âm thanh giới thiệu ngầu.</epic_stinger>
+        
+        <epic_stinger_a label="giới thiệu a">Một âm thanh giới thiệu ngầu.</epic_stinger_a>
+        
+        <epic_stinger_b label="giới thiệu b">Một âm thanh giới thiệu ngầu.</epic_stinger_b>
+        
+        <firepoof label="bốc cháy">Âm thanh bắt lửa.</firepoof>
+        
+        <forcefieldup label="tăng giáp">Âm thanh trường lực kích hoạt.</forcefieldup>
+        
+        <forcefielddown label="giảm giáp">Âm thanh trường lực giảm.</forcefielddown>
+        
+        <hide label="ẩn">Âm thanh ẩn thân.</hide>
+        
+        <lockontarget label="khoá mục tiêu">Âm thanh khóa mục tiêu.</lockontarget>
+        
+        <losetarget label="bỏ khoá">Âm thanh bỏ khoá mục tiêu.</losetarget>
+        
+        <positivecondition label="tốt">Âm thanh của một chuyện gì tốt vừa xảy ra.</positivecondition>
+        
+        <negativecondition label="xấu">Âm thanh của một chuyện gì xấu vừa xảy ra.</negativecondition>
+        
+        <points label="điểm ">Âm thanh điểm thưởng</points>
+        
+        <pop label="pop">Tiếng nổ nhẹ.</pop>
+        
+        <popout label="pop out">Tiếng vỡ tung.</popout>
+        
+        <powerup label="tăng sức mạnh">Âm thanh nhận sức mạnh</powerup>
+        
+        <servo label="servo">Âm thanh khớp máy</servo>
+        
+        <watersplash label="vũng nước">Âm thanh nước bắn tung toé.</watersplash>
+        
+        <waterdrop label="rơi">Âm thanh nước rơi.</waterdrop>
+        
+        <tagbase label="cơ sở">Âm thanh cơ sở.</tagbase>
+        
+        <whistlehuman label="huýt sáo">Tiếng huýt sáo của con người.</whistlehuman>
+        
+        <whistlereferee label="còi">Tiếng còi của trọng tài.</whistlereferee>
+      </misc>
+      <tower>
+        
+        <any label="tower"> Âm thanh được thêm vào cho trò chơi phòng thủ tháp.</any>
+        
+        <air_raid_siren label="còi báo động không kích"> Một tiếng còi báo động không kích.</air_raid_siren>
+        
+        <bomb_fall label="bom rơi"> Một tiếng bom rơi.</bomb_fall>
+        
+        <stun_fire label="pháo choáng">âm thanh pháo gây choáng .</stun_fire>
+        
+        <zapper_fire label="pháo lửa">âm thanh pháo lửa.</zapper_fire>
+        
+        <missile_fire label="lửa tên lửa"> Tiếng pháo của tên lửa.</missile_fire>
+        
+        <shrinker_fire label="lửa co rút"> Âm thanh lửa co rút hiện tại.</shrinker_fire>
+        
+        <clam_coin_spit label="nhả đồng xu">Âm thanh hấp dẫn của một con sò nhả ra một đồng xu.</clam_coin_spit>
+        
+        <enemy_converted label="kẻ địch đã chuyển đổi">Âm thanh khi kẻ địch được chuyển đổi.</enemy_converted>
+        
+        <enemy_escape label="kẻ địch trốn thoát">Âm thanh khi kẻ địch trốn thoát.</enemy_escape>
+        
+        <place_tower label="đặt tháp">Âm thanh khi tháp được đặt.</place_tower>
+        
+        <star_collect label="thu thập sao"> Một âm thanh khi một ngôi sao đã được thu thập.</star_collect>
+        
+        <coin_collect label="thu thập tiền xu">Âm thanh khi thu thập một đồng tiền xu.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      
+      <any label="âm nhạc">Bất kỳ nhạc nào trong nhóm này.</any>
+      <omni>
+        
+        <any label="Omni">Bất kỳ nhạc nào trong nhóm này.</any>
+      </omni>
+    </music>
+    
+    <mu_action label="hành động">Hành động</mu_action>
+    
+    <mu_ambientlight label="ánh sáng">Nhạc xung quanh ánh sáng.</mu_ambientlight>
+    
+    <mu_ambinetmodd label="tâm trạng">Nhạc tâm trạng</mu_ambinetmodd>
+    
+    <mu_brightdowntempo label="slo-mo">Nhạc nhịp chậm tươi sáng.</mu_brightdowntempo>
+    
+    <mu_brightfunk label="vui">Vui nhộn</mu_brightfunk>
+    
+    <mu_brightguitar label="guitar">Nhạc guitar tươi sáng.</mu_brightguitar>
+    
+    <mu_kodu label="kodu">Nhạc chủ đề Kodu.</mu_kodu>
+    <music>
+      <mystery>
+        
+        <any label="mystery">Bất kỳ nhạc nào trong nhóm này.</any>
+      </mystery>
+    </music>
+    
+    <mysterya label="myst A">Âm nhạc bí ẩn.</mysterya>
+    
+    <mysteryb label="myst B">Âm nhạc bí ẩn.</mysteryb>
+    
+    <mysteryc label="myst C">Âm nhạc bí ẩn.</mysteryc>
+    <music>
+      <driving>
+        
+        <any label="Driving"> Bất kỳ nhạc nào trong nhóm này.</any>
+      </driving>
+    </music>
+    
+    <drivinga label="A nhanh ">Âm nhạc tiết tấu nhanh cho cảnh lái xe .</drivinga>
+    
+    <drivingb label="B nhanh">Âm nhạc tiết tấu nhanh cho cảnh lái xe.</drivingb>
+    
+    <drivingc label="C nhanh">Âm nhạc tiết tấu nhanh cho cảnh lái xe.</drivingc>
+    <music>
+      <drama>
+        
+        <any label="drama">Bất kỳ âm nhạc nào từ nhóm này.</any>
+      </drama>
+    </music>
+    
+    <dramaa label="kịch A">Nhạc kịch.</dramaa>
+    
+    <dramab label="kịch B">Nhạc kịch.</dramab>
+    <environ>
+      
+      <any label="môi trường">Bất kỳ âm thanh nào từ nhóm này.</any>
+      
+      <ambocean label="đại dương">âm thanh đại dương.</ambocean>
+      
+      <ambforest label="rừng">Âm thanh rừng.</ambforest>
+      
+      <ambcity label="thành phố">Âm thanh thành phố.</ambcity>
+      
+      <ambmeadow label="đồng cỏ">Âm thanh đồng cỏ.</ambmeadow>
+      
+      <ambmars label="sao hỏa">Âm thanh sao hỏa.</ambmars>
+      <arena>
+        
+        <any label="Đấu trường">Bất kỳ âm thanh đấu trường nào.</any>
+        
+        <a label="Đấu trường A"> Một đám đông lớn.</a>
+        
+        <b label="Đấu trường B"> Một đám đông lớn.</b>
+        
+        <c label="Đấu trường C"> Một đám đông lớn.</c>
+        
+        <d label="Đấu trường D"> Một đám đông lớn.</d>
+        
+        <e label="Đấu trường E"> Một đám đông lớn.</e>
+        
+        <f label="Đấu trường F"> Một đám đông lớn.</f>
+        
+        <g label="Đấu trường G"> Một đám đông lớn.</g>
+      </arena>
+    </environ>
+    
+    <trackingnone label="thẳng">tên lửa sẽ bay thẳng và sẽ không di chuyển lên hoặc xuống</trackingnone>
+    
+    <trackinghoming label="bay thông minh"> Tên lửa sẽ theo mặt đất và cố gắng bay qua những ngọn đồi và bức tường.</trackinghoming>
+    <constraint>
+      
+      <leftright label="trái / phải"> Chỉ di chuyển sang trái và phải.</leftright>
+      
+      <fwdback label="tiến/lùi"> Chỉ di chuyển tiến và lùi.</fwdback>
+      
+      <updown label="lên/xuống">Chỉ di chuyển lên và xuống</updown>
+      
+      <northsouth label="bắc/nam"> Chỉ di chuyển về phía bắc và phía nam.</northsouth>
+      
+      <eastwest label="đông/tây"> Chỉ di chuyển về phía đông và phía tây.</eastwest>
+      
+      <immobile label="đóng băng"> Không cho phép di chuyển, ngay cả khi bị va đập.</immobile>
+    </constraint>
+    
+    <once label="một lần"> Mã sau DO sẽ chỉ được chạy một lần mỗi khi điều kiện WHEN được kích hoạt.</once>
+    
+    <watertype label="loại nước"> Đặt loại nước.</watertype>
+    
+    <on label="bật"> Đặt trạng thái hiện tại thành 'bật'.</on>
+    
+    <off label="tắt"> Đặt trạng thái hiện tại thành 'tắt'.</off>
+    <microbit>
+      
+      <pattern label="mẫu"> Mẫu LED hiển thị trên màn hình trên BBCmicro:bit.</pattern>
+    </microbit>
+    <frequencyunits>
+      
+      <khz label="kHz">Giá trị tần số tính theo kilohertz.</khz>
+    </frequencyunits>
+  </modifier>
+  <actuator>
+    
+    <nothing label="không thứ gì cả"></nothing>
+    
+    <movement label="di chuyển">Du lịch vòng quanh thế giới. Khám phá các tùy chọn. Các nhân vật khác nhau có khả năng di chuyển khác nhau.</movement>
+    
+    <turn label="xoay">Thay đổi hướng đối mặt của bạn.</turn>
+    
+    <eat label="ăn ">Tiêu thụ đối tượng được nhắm mục tiêu khi đứng gần sát.</eat>
+    
+    <say label="nói"> Hiển thị tin nhắn văn bản, trong ô ghi lời nói hoặc trong hộp thoại. Sử dụng &lt;cr&gt; để chia thành các dòng.</say>
+    
+    <open label="mở"> Hoạt động khác nhau cho các nhân vật khác nhau. Thử xem!</open>
+    
+    <close label="đóng">Hoạt động khác nhau cho các nhân vật khác nhau. Thử xem!</close>
+    
+    <kick label="đá">Đá vào mục tiêu, nếu nó đủ gần. Có thể thay đổi sức mạnh.</kick>
+    
+    <make label="tạo ">Tạo một đối tượng khác. Có thể tạo các đối tượng cơ bản hoặc bất kỳ thứ gì được đánh dấu Tạo được.</make>
+    
+    <launch label="ném">Đá vào mục tiêu, nếu nó đủ gần. Có thể thay đổi sức mạnh.</launch>
+    
+    <push label="đẩy">Đẩy mục tiêu theo một hướng nhất định nếu nó đủ gần. Có thể khác nhau về sức mạnh.</push>
+    
+    <pull label="kéo">Kéo mục tiêu theo một hướng nhất định nếu nó đủ gần. Có thể khác nhau về sức mạnh.</pull>
+    
+    <camouflage label="ngụy trang">Ngụy trang mục tiêu, khiến nó khó nhìn.</camouflage>
+    
+    <uncamouflage label="dừng ngụy trang">dừng ngụy trang mục tiêu, làm cho nó hiển thị.</uncamouflage>
+    
+    <express label="biểu lộ"> Thể hiện cảm xúc hoặc thể hiện hiệu ứng đặc biệt. Một số biểu thức thay đổi khuôn mặt của nhân vật trong khi các biểu thức khác được hiển thị phía trên nhân vật.</express>
+    
+    <color label="màu sắc"> Thay đổi màu của chính bạn hoặc đối tượng đích.</color>
+    
+    <glow label="phát sáng"> Phát ra ánh sáng phóng xạ. Có thể thay đổi màu sắc.</glow>
+    
+    <sound label="chơi âm thanh">Tạo âm thanh! Rất nhiều để lựa chọn.</sound>
+    
+    <stopsound label="yên lặng">Dừng phát âm thanh.</stopsound>
+    
+    <jump label="nhảy">Các nhân vật khác nhau có thể nhảy độ cao khác nhau.</jump>
+    
+    <watersurface label="nổi">Hành động nổi làm cho các nhân vật dưới nước nổi lên mặt nước.</watersurface>
+    
+    <waterdive label="lặn">Hành động lặn khiến các nhân vật dưới nước lặn xuống đáy nước.</waterdive>
+    
+    <airrise label="đi lên">Hành động đi lên khiến các nhân vật bay lên trời.</airrise>
+    
+    <airdrop label="đi xuống">Hành động Đi xuống làm cho các nhân vật bay sát xuống mặt đất.</airdrop>
+    
+    <switchtask label="chuyển">Thay đổi sang một trang khác. Chỉ các quy tắc trên trang hiện tại được áp dụng. Các trang thực sự tiện dụng để thay đổi hành vi.</switchtask>
+    
+    <inlinetask label="trên dòng">Khi chạy, phần mềm sẽ bao gồm tất cả các câu lệnh từ một trang khác ở đây. Điều này rất hữu ích cho những câu lệnh mà bạn muốn sử dụng lại nhiều lần vì bạn có thể nhập nó một lần, và sau đó sử dụng lại nó bất cứ nơi nào bạn cần.</inlinetask>
+    
+    <nextlevel label="cấp độ tiếp theo">Tải cấp độ tiếp theo. Hữu ích cho các trò chơi đa cấp!</nextlevel>
+    
+    <prevlevel label="cấp trước ">Tải cấp trước. Hữu ích cho các trò chơi đa cấp!</prevlevel>
+    
+    <waterraise label="tăng nước">Tăng mực nước dưới vật này.</waterraise>
+    
+    <waterlower label="hạ nước">Hạ thấp mực nước dưới vật này..</waterlower>
+    
+    <setwater label="đặt nước">Đặt loại nước ở dưới chân đối tượng này.</setwater>
+    
+    <rescale label="tỉ lệ">Thay đổi tỷ lệ kích thước của đối tượng một cách từ từ.</rescale>
+    
+    <rescaleinstant label="tỷ lệ (tức thời)">Đặt tỷ lệ kích thước của đối tượng ngay lập tức.</rescaleinstant>
+    
+    <holddistance label="giữ khoảng cách"> Thay đổi khoảng cách cho các đối tượng "được giữ" một cách từ từ.</holddistance>
+    
+    <holddistanceinstant label="khoảng cách giữ (tức thời)"> Thay đổi khoảng cách cho các đối tượng "bị giữ" ngay lập tức.</holddistanceinstant>
+    
+    <movementspeedmodify label="tốc độ di chuyển"> Đặt hệ số nhân tốc độ chuyển động cho nhân vật này.</movementspeedmodify>
+    
+    <turningspeedmodify label="tốc độ quay">Đặt hệ số nhân tốc độ quay cho nhân vật này.</turningspeedmodify>
+    
+    <worldlightingchange label="chiếu sáng">Thay đổi ánh sáng trong thế giới một cách từ từ.</worldlightingchange>
+    
+    <worldlightingchangeinstant label="chiếu sáng (tức thời)">Thay đổi ngay ánh sáng trong thế giới.</worldlightingchangeinstant>
+    
+    <worldskychange label="bầu trời">Từ từ đặt màu bầu trời trong thế giới.</worldskychange>
+    
+    <worldskychangeinstant label="bầu trời (tức thời)">Ngay lập tức đặt màu bầu trời trong thế giới.</worldskychangeinstant>
+    
+    <shoot label="súng"></shoot>
+    
+    <shoot2 label="súng">súng đạn hoặc tên lửa.</shoot2>
+    
+    <beam label="chùm"> Bắn chùm tia laser vào loại đá trên sao Hỏa để xác định các đặc điểm cơ bản của đá.</beam>
+    
+    <inspect label="kiểm tra "> Khoan vào loại đá trên sao Hỏa, thu hoạch mẫu để nghiên cứu thêm.</inspect>
+    
+    <scan label="quét"> Hiển thị loại đá của các loại đá không xác định trong một khu vực xung quanh Xe tự hành.</scan>
+    
+    <picture label="hình ảnh"> Chụp ảnh ở góc nhìn thứ nhất.</picture>
+    
+    <damage label="sát thương "> Trừ điểm máu của bản thân hoặc nhân vật mục tiêu.</damage>
+    
+    <heal label="chữa lành"> Tăng thêm điểm máu cho bản thân hoặc cho nhân vật mục tiêu. Hành động chữa lành khiến nhân vật hoặc đối tượng mục tiêu phục hồi sau khi bị tổn thương. Mặc định là cho đối tượng mục tiêu để chữa lành; nhân vật có thể tự chữa lành bằng cách thêm vào mục sửa đổi "tôi". Các mục sửa đổi khác cũng có thể được sử dụng để xác định loại và số lượng điểm chữa bệnh.</heal>
+    
+    <zap label="choáng"> Làm choáng bản thân hoặc nhân vật mục tiêu trong vài giây.</zap>
+    
+    <pop label="loại trực tiếp"> Làm cho đối tượng hoặc bản thân tôi bị vô hiệu hóa hoàn toàn cho đến khi điểm máu được thiết lập lại bởi người khác.</pop>
+    
+    <squash label="squash"> Làm cho đối tượng hoặc bản thân tôi bị nghiền nát.</squash>
+    
+    <boom label="bùng nổ"> Làm cho bản thân hoặc mục tiêu biến mất với một vụ nổ.</boom>
+    
+    <vanish label="tan biến"> Làm cho bản thân hoặc mục tiêu biến mất lặng lẽ.</vanish>
+    
+    <grab label="lấy"> Nhặt mục tiêu nếu nó đủ gần. Bạn chỉ có thể giữ một thứ tại một thời điểm.</grab>
+    
+    <drop label="bỏ"> bỏ bất cứ thứ gì bạn đang mang.</drop>
+    
+    <give label="cho"> Đưa bất cứ thứ gì bạn mang theo cho nhân vật mục tiêu. Nếu mục tiêu không thể giữ nó, nó sẽ bỏ xuống.</give>
+    
+    <reset label="thiết lập lại"> Đặt lại một khía cạnh của trò chơi hoặc một nhân vật.</reset>
+    
+    <restart label="restart"> Đặt lại một khía cạnh của trò chơi hoặc một nhân vật.</restart>
+    
+    <gameover label="kết thúc"> Kết thúc trò chơi.</gameover>
+    
+    <victory label="thắng"> Kết thúc trò chơi và hiển thị thông báo chiến thắng. Nếu bạn chỉ định một màu, chúng tôi sẽ hiển thị nó.</victory>
+    
+    <score label="điểm"> Thêm điểm vào điểm số.</score>
+    
+    <unscore label="trừ"> Lấy điểm khỏi điểm số.</unscore>
+    
+    <scoreset label="đặt điểm"> Đặt điểm thành một giá trị cụ thể.</scoreset>
+    <camera>
+      
+      <followme label="đi theo"> Góc nhìn nên theo nhân vật này.</followme>
+      
+      <ignoreme label="bỏ qua"> Đừng lo lắng về việc giữ nhân vật này trong tầm nhìn.</ignoreme>
+      
+      <firstperson label="người thứ nhất"> Nhìn qua đôi mắt của nhân vật này.</firstperson>
+    </camera>
+    <microbit>
+      
+      <say label="nói"> Di chuyển văn bản trên màn hình micro:bit.</say>
+      
+      <block label="chặn"> Điều khiển tất cả các đèn micro:bit.</block>
+      
+      <sequential label="mét"> Bật đèn micro: bit liên tục.</sequential>
+      
+      <show label="hiển thị mẫu "> Hiển thị một mẫu trên màn hình micro:bit.</show>
+      
+      <setpin1 label="đặt chân 0"> Đặt trạng thái đầu ra kỹ thuật số của chân số 0.</setpin1>
+      
+      <setpin2 label="đặt chân 1"> Đặt trạng thái đầu ra kỹ thuật số của chân số 1.</setpin2>
+      
+      <setpin3 label="đặt chân 2"> Đặt trạng thái đầu ra kỹ thuật số của chân số 2.</setpin3>
+      <setpwmfrequency>
+        
+        <pin1 label="tần số PWM 0"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt tần số tín hiệu (tính bằng giây), với bộ điều chỉnh kHz tùy chọn</pin1>
+        
+        <pin2 label="tần số PWM 1"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt tần số tín hiệu (tính bằng giây), với bộ điều chỉnh kHz tùy chọn</pin2>
+        
+        <pin3 label="tần số PWM 2"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt tần số tín hiệu (tính bằng giây), với bộ điều chỉnh kHz tùy chọn.</pin3>
+      </setpwmfrequency>
+      <setpwmdutycycle>
+        
+        <pin1 label="chu kỳ nhiệm vụ PWM 0"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt thời gian tín hiệu ở trạng thái "bật" (phần trăm).</pin1>
+        
+        <pin2 label="chu kỳ nhiệm vụ PWM 1"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt thời gian tín hiệu ở trạng thái "bật" (phần trăm).</pin2>
+        
+        <pin3 label="chu kỳ nhiệm vụ PWM 2"> Kích hoạt tín hiệu điều chế độ rộng xung và đặt thời gian tín hiệu ở trạng thái "bật" (phần trăm).</pin3>
+      </setpwmdutycycle>
+    </microbit>
+  </actuator>
+  <root></root>
+  <group>
+    
+    <colors label="màu sắc"></colors>
+    
+    <pathcolors label="màu của đường"></pathcolors>
+    
+    <game label="trò chơi"></game>
+    
+    <more label="thêm"></more>
+    
+    <players label="người chơi"></players>
+    
+    <playermods label="người chơi"></playermods>
+    
+    <actions label="hành động"></actions>
+    
+    <settings label="cài đăt"></settings>
+    
+    <combat label="tấn công"></combat>
+    
+    <rover label="xe tự hành"></rover>
+    
+    <holding label="giữ"></holding>
+    
+    <sounds label="âm thanh"></sounds>
+    
+    <event label="sự kiện">
+      
+      <explode label="phát nổ"></explode>
+      
+      <silly label="ngớ ngẩn"></silly>
+      
+      <musical label="âm nhạc">
+        
+        <glock label="glock"></glock>
+        
+        <saw label="sóng răng cưa"></saw>
+        
+        <sine label="sóng hình sin"></sine>
+        
+        <gong label="cồng"></gong>
+        
+        <square label="sóng vuông"></square>
+        
+        <drums label="trống"></drums>
+      </musical>
+      
+      <arcade label="giải trí"></arcade>
+      
+      <misc label="linh tinh"></misc>
+      
+      <tower label="tháp"></tower>
+    </event>
+    
+    <environ label="môi trường">
+      
+      <forest label="rừng"></forest>
+      
+      <arena label="đấu trường"></arena>
+    </environ>
+    
+    <music label="âm nhạc">
+      
+      <omni label="mới"></omni>
+      
+      <mystery label="mystery"></mystery>
+      
+      <driving label="lái xe"></driving>
+      
+      <drama label="kịch"></drama>
+    </music>
+    
+    <constraints label="có hạn"></constraints>
+    
+    <directions label="phương hướng"></directions>
+    <filters>
+      
+      <directions label="phương hướng"></directions>
+      
+      <touchbuttons label="nút"></touchbuttons>
+      
+      <touchGuiButtons label="nút"></touchGuiButtons>
+      
+      <gestures label="cử chỉ"></gestures>
+    </filters>
+    
+    <expressions label="thể hiện"></expressions>
+    
+    <projectiles label="đạn"></projectiles>
+    
+    <camera label="xem"></camera>
+    
+    <reset label="thiết lập lại"></reset>
+    
+    <options label="tùy chọn"></options>
+    
+    <compare label="so sánh"></compare>
+    
+    <points label="điểm"></points>
+    
+    <time label="thời gian"></time>
+    
+    <speed label="tốc độ"></speed>
+    
+    <strength label="sức mạnh"></strength>
+    
+    <angle label="góc"></angle>
+    
+    <tracking label="theo dõi"></tracking>
+    
+    <bots label="nhân vật I"></bots>
+    
+    <bots2 label="nhân vật II"></bots2>
+    
+    <objects label="vật thể"></objects>
+    
+    <tasks label="bài tập"></tasks>
+    
+    <terrains label="loại"></terrains>
+    
+    <waters label="loại"></waters>
+    
+    <setwater label="loại nước"></setwater>
+    
+    <creatables label="tạo vật"></creatables>
+    <keyboard>
+      
+      <letters label="kí tự"></letters>
+      
+      <numbers label="con số"></numbers>
+      
+      <symbols label="biểu tượng"></symbols>
+      
+      <misc label="linh tinh"></misc>
+    </keyboard> 
+    
+    <scorebucketmodifiers label="điểm chính"></scorebucketmodifiers>
+    
+    <scorebucketmodifiers.local label="điểm cá nhân"></scorebucketmodifiers.local>
+    
+    <scorefilters label="điểm"></scorefilters>
+    
+    <scorebucketfilters label="điểm chính"></scorebucketfilters>
+    
+    <scorebucketfilters.local label="điểm cá nhân"></scorebucketfilters.local>
+    <microbit>
+      <actions>
+        
+        <gpio label="micro:bit I/O"></gpio>
+      </actions>
+    </microbit>
+  </group>
+</Tiles>

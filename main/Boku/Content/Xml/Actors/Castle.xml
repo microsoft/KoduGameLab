@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt></TechniqueExt>
+			<BumpDetailName>Textures\EggDetail</BumpDetailName>
+			<DirtMapName>Textures\White</DirtMapName>
+			<SurfaceNames>
+				<string>TintableBumpyMetal</string>
+				<string>BlackMatte</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+	<GlowPosition>
+		<Offset>
+			<X>0.75</X>
+			<Y>-0.4</Y>
+			<Z>7</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.4</Z>
+  </HealthBarOffset>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>3</Z>
+	</CollisionCenter>
+	<CollisionRadius>4</CollisionRadius>
+
+	<Cost>1</Cost>
+  <CollisionSound>rock</CollisionSound>
+
+  <IsBot>false</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>true</IsBuilding>
+
+  <Mass>5000.0</Mass>
+
+  <GrabRange>2.5</GrabRange>
+  <KickRange>2.5</KickRange>
+  
+  <Classification>
+    <Color>Grey</Color>
+    <Physicality>Static</Physicality>
+  </Classification>
+
+  <HoldingPosition>
+    <X>2.5</X>
+    <Z>2.5</Z>
+  </HoldingPosition>
+
+  <Chassis Type="StaticProp"/>
+  
+</XmlGameActor>

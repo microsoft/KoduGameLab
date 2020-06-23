@@ -1,0 +1,2708 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlOverlayData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <overlay>
+    <id>MiniHub</id>
+    <a>Seç</a>
+    <back>Devam Et</back>
+    <bottom>Buraya istediğin zaman geri dönmek için bas :&lt;start&gt; </bottom>
+
+    <keyMouse>
+      [Enter] Seç
+    </keyMouse>
+    <keyMouseBottom>Buraya dönmek için [home] tuşuna bas.</keyMouseBottom>
+    <touch></touch>
+    <touchBottom>Buraya dönmek için [home] a dokun.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMessageDialog</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>LoadLevelMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false"><![CDATA[<back>]]></bottom>
+
+    <keyMouseBottom>Önceki menüye dönmek için [Esc] tuşuna bas.</keyMouseBottom>
+    <touchBottom>Önceki menüye dönmek için buraya dokun.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>LoadLevelPopup</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>SelectNextLevel</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false"><![CDATA[<back>]]></bottom>
+
+    <keyMouseBottom>Önceki menüye dönmek için [Esc] tuşuna bas.</keyMouseBottom>
+    <touchBottom>Önceki menüye dönmek için buraya dokun.</touchBottom>
+  </overlay>  
+
+  <overlay>
+    <id>MouseEditBase</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Fareyle  Düzenleme Merkezi</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditHome</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Ana Menü</keyMouseBottom>
+    <touch></touch>
+    <touchBottom>Ana Menü</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPlay</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Oyunu Başlat</keyMouseBottom>
+
+    <touch></touch>
+    <touchBottom>Oyunu Başlat</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditCameraMove</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Zemini Taşı
+&lt;rightmouse&gt;  Yörünge Kamera
+&lt;middlemouse&gt; Fare Tekerleği Zoom
+[Tab] Sonraki Karakteri Bul
+
+    </keyMouse>
+    <keyMouseBottom>Kamerayı Hareket Ettir</keyMouseBottom>
+
+    <touch>
+      &lt;doubleDrag&gt; Zemini Taşı
+&lt;drag&gt; Eğimli Kamera
+&lt;rotate&gt; Yörünge Kamera
+&lt;pinch&gt; Zoom
+    </touch>
+    <touchBottom>Kamerayı Hareket Ettir</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditAddItemPieMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditMenu</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+
+    <keyMouseBottom></keyMouseBottom>
+    <touchBottom></touchBottom>
+  </overlay>  
+
+  <overlay>
+    <id>MouseEditEditObject</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Nesne Ekle/Seç
+&lt;rightmouse&gt; Seçenekler
+
+ _
+ [F3] Karelere Yapış/Yapışma
+ [Tab] Bir Sonraki Karakteri Bul
+ [Space] Kamerayı Hareket Ettir
+ [Home] Ana Menü
+ [Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Nesne Aracı: Karakterleri ve Nesneleri Ekle ya da Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Nesne Ekle
+&lt;tap&gt; Nesne Seç
+&lt;drag&gt; Nesneyi Taşı
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Nesne Aracı: Karakterleri ve Nesneleri Ekle ya da Düzenle</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocus</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Nesneyi Taşı
+&lt;rightmouse&gt; Seçenekler
+[leftarrow][rightarrow] Renk Değiştir
+
+_
+[F3] Karelere Yapış/Yapışma 
+[Tab] Bir Sonraki Karakteri Bul
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Sayfa
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Nesne Aracı: Karakter ve Nesneler Ekle veya Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Nesne Ekle
+&lt;tap&gt; Nesneyi Seç
+&lt;drag&gt; Nesneyi Taşı
+&lt;touchHold&gt; Seçenekler
+&lt;rotate&gt; Rotate Nesneyi Döndür
+&lt;pinch&gt; Nesneyi Oranla
+    </touch>
+    <touchBottom>Nesne Aracı: Karakterleri ve Nesneleri Ekle ya da Düzenle</touchBottom>    
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocusTree</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Nesneyi Taşı
+&lt;rightmouse&gt; Seçenekler
+[leftarrow][rightarrow] Renk Değiştir
+[uparrow][downarrow] Ağaç Tipini Değiştir
+
+_
+[F3] Toggle Karelere Yapış/Yapışma
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menu
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Nesne Aracı: Karakterleri ve Nesneleri Ekle ya da Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;doubleTap&gt; Nesne Ekle
+&lt;tap&gt; Nesneyi Seç
+&lt;drag&gt; Nesneyi Taşı
+&lt;touchHold&gt; Seçenekler
+&lt;rotate&gt; Rotate Nesneyi Döndür
+&lt;pinch&gt; Nesneyi Oranla
+    </touch>
+    <touchBottom>Nesne Aracı: Karakterleri ve Nesneleri Ekle ya da Düzenle</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPaths</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Noktaları ya da Kenarı Taşı
+&lt;rightmouse&gt; Seçenekler
+[Shift] Tüm Patika Üzerinde Uygula
+
+_
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Patika Aracı: Patika Ekle ya da Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Uç Nokta ya da Kenar Seç
+&lt;drag&gt; Uç Nokta ya da Kenarı Taşı
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Patika Aracı: Patika Ekle ya da Düzenle</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAllPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Noktalar ya da Kenarı Taşı
+&lt;rightmouse&gt; Seçenekler
+[Shift] Tüm Patika Üzerinde Uygula
+
+_
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Patika Aracı: Patika Ekle ya da Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Patika Seç
+&lt;drag&gt; Patikayı Taşı
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Patika Aracı: Patika Ekle ya da Düzenle (Patika Üzerine Uygula)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsAddPath</id>
+    <keyMouse>
+      &lt;leftmouse&gt; Noktalar ya da Kenarı Taşı
+&lt;rightmouse&gt; Seçenekler
+[Shift] Tüm Patika Üzerinde Uygula
+
+_
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Patika Aracı: Patika Ekle ya da Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Uç Nokta Ekle ya da Uç Noktaya Bağla
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Patika Aracı: Patika Ekle</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeletePath</id>
+    <touch>
+      &lt;tap&gt; Bütün Patikayı Sil
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Patika Aracı: Patikaları Sil</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsDeleteNode</id>
+    <touch>
+      &lt;tap&gt; Uç Noktayı Kaldır
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Patika Aracı: Uç Noktaları Kaldır</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditPathsFocusNode</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Uç Noktayı Taşı
+&lt;rightmouse&gt; Seçenekler
+[Shift] Tüm Patika Üzerinde Uygula
+[leftarrow][rightarrow] Renk Değiştir
+[uparrow][downarrow] Patika Stilini Değiştir
+
+_
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Patika Aracı: Patika Ekle ya da Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Patika Seç
+&lt;drag&gt; Patikayı Taşı
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Patika Aracı: Patika Ekle ya da Düzenle</touchBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusEdge</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Uç Noktayı Taşı
+&lt;rightmouse&gt; Seçenekler
+[Shift] Tüm Patika Üzerinde Uygula
+[leftarrow][rightarrow] Renk Değiştir
+[uparrow][downarrow] Patika Stilini Değiştir
+
+_
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Patika Aracı: Patika Ekle ya da Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Kenar Seç
+&lt;drag&gt; Kenarı Taşı
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Patika Aracı: Patika Ekle ya da Düzenle</touchBottom>    
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Patikayı Taşı
+&lt;rightmouse&gt; Seçenekler
+[Shift] Tüm Patika Üzerinde Uygula
+[leftarrow][rightarrow] Renk Değiştir
+
+_
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Patika Aracı: Patika Ekle ya da Düzenle</keyMouseBottom>
+
+    <touch>
+      &lt;tap&gt; Patika Seç
+&lt;drag&gt; Patikayı Taşı
+&lt;touchHold&gt; Seçenekler
+    </touch>
+    <touchBottom>Patika Aracı: Patika Ekle ya da Düzenle</touchBottom>    
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainPaint</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Yüzey Ekle ve Boya
+[Shift] +&lt;leftmouse&gt; Yüzeyi Boya
+[Ctrl] +&lt;leftmouse&gt; Yüzey Ekle
+&lt;rightmouse&gt; Sil
+
+[leftarrow][rightarrow] Fırça Boyutunu Değiştir
+
+_
+[Alt] Zeminden Yüzey Seç
+[F3] Karelere Yapıştır
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Zemin Fırçası: Zemin Boya, Ekle ya da Sil</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Fırçayı Hareket Ettir
+    </touch>
+    <touchBottom>Zemin Fırçası: Zemin Boya, Ekle ya da Sil</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintSmooth</id>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Yüzey Ekle ve Boya (Düz)
+    </touch>
+    <touchBottom>Zemin Fırçası: Yüzey Ekle ve Boya (Düz)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintCubic</id>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Yüzey Ekle ve Boya (Kübik)
+    </touch>
+    <touchBottom>Zemin Fırçası: Yüzey Ekle ve Boya (Yumuşak)</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainDelete</id>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Zemin Sil
+    </touch>
+    <touchBottom>Zemin fırçası: Zemini Sil</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainPaintMagicBrush</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Yüzey Ekle ve Boya
+[Shift] +&lt;leftmouse&gt; Yüzeyi Boya
+[Ctrl] +&lt;leftmouse&gt; Yüzey Ekle
+&lt;rightmouse&gt; Sil
+
+[leftarrow][rightarrow] Fırça Boyutunu Değiştir
+[uparrow] Stil:Kübik
+[downarrow] Stil:Düz
+
+_
+[Alt] Zeminden Yüzey Seç
+[F3] Karelere Yapıştır
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Zemin Fırçası: Zemin Boya, Ekle ya da Sil</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyutunu Artır
+&lt;brushSmaller&gt; Fırça Boyutunu Azalt
+&lt;tap&gt; Fırçayı Hareket Ettir
+&lt;drag&gt; Yüzey Ekle ve Boya
+    </touch>
+    <touchBottom>Zemin Fırçası: Zemin Boya, Ekle ya da Sil</touchBottom>    
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Zemini Yükselt
+&lt;middlemouse&gt; Zemini Düzleştir
+&lt;rightmouse&gt; Zemini Alçalt
+
+[leftarrow][rightarrow] Fırça Boyunu Değiştir.
+
+_
+[F3] Karelere Yapış/Yapışma
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Yukarı/Aşağı: Vadiler veya Tepeler Yarat</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Fırçayı Hareket Ettir
+    </touch>
+    <touchBottom>Yukarı/Aşağı: Vadiler veya Tepeler Yarat</touchBottom>    
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainRaising</id>
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Zemini Yükselt
+    </touch>
+    <touchBottom>Yukarı/Aşağı: Vadiler veya Tepeler Yarat</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainLowering</id>
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Zemini Alçalt
+    </touch>
+    <touchBottom>Yukarı/Aşağı: Vadiler veya Tepeler Yarat</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Zemini Yükselt
+&lt;middlemouse&gt; Zemini Yumuşat
+&lt;rightmouse&gt; Zemini Düzleştir
+
+[leftarrow][rightarrow] Fırça Boyunu Değiştir.
+
+_
+[F3] Karelere Yapış/Yapışma
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Düzleştir: Zemini Düzleştir ya da Dümdüz Hale Getir</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Fırçayı Hareket Ettir
+    </touch>
+    <touchBottom>Düzleştir: Zemini Düzleştir ya da Dümdüz Hale Getir</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleFlatten</id>
+    
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Zemini Düzleştir
+    </touch>
+    <touchBottom>Düzleştir: Zemini Yumuşak ya da Düz Hale Getir</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel_ToggleSmooth</id>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Zemini Alçalt
+    </touch>
+    <touchBottom>Düzleştir: Zemini Yumuşak ya da Düz Hale Getir</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Sivrileştir
+&lt;middlemouse&gt; Zemini Yumuşat
+&lt;rightmouse&gt; Tepeli Yap
+
+[leftarrow][rightarrow] Fırça Boyunu Değiştir.
+
+_
+[F3] Karelere Yapış/Yapışma
+[Space] Kamerayı Hareket Ettir
+[Home] Ana Menü
+[Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Engebelileştir: Zemini Sivri ya da Tepeli Hale Getir</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Fırçayı Hareket Ettir
+    </touch>
+    <touchBottom>Engebelileştir: Zemini Sivri ya da Tepeli Hale Getir</touchBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSmooth</id>
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Zemini Yumuşat
+    </touch>
+    <touchBottom>Engebelileştir: Zemini Sivri ya da Tepeli Hale Getir</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleHilly</id>
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Tepeli Hale Getir
+    </touch>
+    <touchBottom>Engebelileştir: Zemini Sivri ya da Tepeli Hale Getir</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly_ToggleSpikey</id>
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Sivrileştir
+    </touch>
+    <touchBottom>Engebelileştir: Zemini Sivri ya da Tepeli Hale Getir</touchBottom>
+  </overlay>
+  
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Suyu Yükselt
+      &lt;middlemouse&gt; Suyun Rengini Değiştir
+      &lt;rightmouse&gt; Suyu Alçalt
+
+      _
+      [F3] Karelere Yapış/Yapışma
+      [Space] Kamerayı Hareket Ettir
+      [Home] Ana Menü
+      [Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Su Aracı: Suyu Artır, Azalt, ya da Renklendir</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Fırçayı Hareket Ettir
+    </touch>
+    <touchBottom>Su Aracı: Suyu Artır, Azalt, ya da Renklendir</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleRaise</id>
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Suyu Yükselt
+    </touch>
+    <touchBottom>Su Aracı: Suyu Artır, Azalt, ya da Renklendir</touchBottom>
+  </overlay>
+  
+  <overlay>
+    <id>MouseEditWaterRaiseLower_ToggleLower</id>
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Suyu Alçalt
+    </touch>
+    <touchBottom>Su Aracı: Suyu Artır, Azalt, ya da Renklendir</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditDeleteObjects</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Sil
+      &lt;rightmouse&gt; Burada bir şey yok, devam et.
+
+      [leftarrow][rightarrow] Fırça Boyunu Değiştir
+
+     _
+      [F3] Karelere Yapış/Yapışma
+      [Space] Kamerayı Hareket Ettir
+      [Home] Ana Menü
+      [Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Silme Aracı: Nesneleri Silmek için bir Fırça Kullan</keyMouseBottom>
+
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Fırçayı Hareket Ettir
+    </touch>
+    <touchBottom>Silme Aracı: Nesneleri Silmek için bir Fırça Kullan</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditDeleteObjects_Deleting</id>
+    <touch>
+      &lt;brushBigger&gt; Fırça Boyunu Büyüt
+&lt;brushSmaller&gt; Fırça Boyunu Küçült
+&lt;drag&gt; Nesneleri Sil
+    </touch>
+    <touchBottom>Silme Aracı: Nesneleri Silmek için bir Fırça Kullan</touchBottom>
+  </overlay>
+  
+
+  <overlay>
+    <id>MouseEditWorldTweak</id>
+
+    <keyMouse>
+      Dünya Ayarlarını Değiştir
+
+      _
+      [Home] Ana Menü
+      [Esc] Çalıştır
+    </keyMouse>
+    <keyMouseBottom>Dünya Ayarlarını Değiştir</keyMouseBottom>
+    <touchBottom>Dünya Ayarlarını Değiştir</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditSlider</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Değeri Değiştir
+      [Esc] Kabul Et
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenu</id>
+    <!-- Placeholder, should not be seen. -->
+    <back>Oyunu Çalıştır</back>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenuRunSim</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Oyunu Başlat</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Oyunu Başlat</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      _
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Oyunu Başlat</keyMouseBottom>
+    <touchBottom>Oyunu Başlat</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuHomeMenu</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ana Menü</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Ana Menü</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      _
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Oyunu Başlat</keyMouseBottom>
+    <touchBottom>Oyunu Başlat</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuObjectEdit</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Nesne Aracı: Karakterleri ve Nesneleri Ekle ya da Düzenle</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Nesne Aracı: Karakterleri ve Nesneleri Ekle ya da Düzenle</keyMouseBottom>
+
+    <touchBottom>Nesne Aracı: Karakterleri ve Nesneleri Ekle ya da Düzenle</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuDeleteObjects</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Silme Aracı: Nesneleri Silmek için bir Fırça Kullan</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Silme Aracı: Nesneleri Silmek için bir Fırça Kullan</keyMouseBottom>
+
+    <touchBottom>Silme Aracı: Nesneleri Silmek için bir Fırça Kullan</touchBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSmoothLevel</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Düzleştir: Zemini Yumuşak ya da Düz Hale Getir</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Düzleştir: Zemini Yumuşak ya da Düz Hale Getir</keyMouseBottom>
+
+    <touchBottom>Düzleştir: Zemini Yumuşak ya da Düz Hale Getir</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainMaterial</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Zemin Fırçası: zemin ekle ve kaldır</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Zemin Fırçası: Zemin Boya, Ekle ya da Sil</keyMouseBottom>
+
+    <touchBottom>Zemin Fırçası: Zemin Boya, Ekle ya da Sil</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSpikeyHilly</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Engebelileştir: Zemini Sivri ya da Tepeli Hale Getir</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Engebelileştir: Zemini Sivri ya da Tepeli Hale Getir</keyMouseBottom>
+
+    <touchBottom>Engebelileştir: Zemini Sivri ya da Tepeli Hale Getir</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainUpDown</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Yukarı/Aşağı: Vadiler veya Tepeler Yarat</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Yukarı/Aşağı: Vadiler veya Tepeler Yarat</keyMouseBottom>
+
+    <touchBottom>Yukarı/Aşağı: Vadiler veya Tepeler Yarat</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainWater</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Su Aracı: Suyu Artır, Azalt, ya da Renklendir</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Su Aracı: Suyu Artır, Azalt, ya da Renklendir</keyMouseBottom>
+
+    <touchBottom>Su Aracı: Suyu Artır, Azalt, ya da Renklendir</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>ToolMenuWorldSettings</id>
+    <back>Oyunu Çalıştır</back>
+    <start>Ana Menü</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seçme Aracı</a>
+    <leftStick mid = "false">İmleci Hareket Ettir</leftStick>
+    <rightStick mid = "false">Yörünge Kamera</rightStick>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+    <leftShoulder mid = "false">Uzaklaştır</leftShoulder>
+    <rightShoulder mid = "false">Yakınlaştır</rightShoulder>
+    <bottom>Dünya Ayarlarını Değiştir</bottom>
+
+    <keyMouse>
+      [Esc] Çalıştır
+      [Home] Ana Menü
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+    </keyMouse>
+    <keyMouseBottom>Dünya Ayarlarını Değiştir</keyMouseBottom>
+
+    <touchBottom>Dünya Ayarlarını Değiştir</touchBottom>
+
+  </overlay>
+
+  <overlay>
+    <id>BrushPickerSquare</id>
+    <y>Kabul Et ve Malzeme Seçiciye Dön</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki fırça</leftTrigger>
+    <rightTrigger>Sonraki fırça</rightTrigger>
+    <bottom>Kare fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Kare fırça</keyMouseBottom>
+
+    <touchBottom>Kare fırça</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSquareLinear</id>
+    <y>Kabul Et ve Malzeme Seçiciye Geç</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki fırça</leftTrigger>
+    <rightTrigger>Sonraki fırça</rightTrigger>
+    <bottom>Doğrusal kare fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Doğrusal kare fırça</keyMouseBottom>
+
+    <touchBottom>Doğrusal kare fırça</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRound</id>
+    <y>Kabul Et ve Malzeme Seçiciye Geç</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki fırça</leftTrigger>
+    <rightTrigger>Sonraki fırça</rightTrigger>
+    <bottom>Sert yuvarlak fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Sert yuvarlak fırça</keyMouseBottom>
+
+    <touchBottom>Sert yuvarlak fırça</touchBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRound</id>
+    <y>Kabul Et ve Malzeme Seçiciye Geç</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Orta yuvarlak fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Orta yuvarlak fırça</keyMouseBottom>
+
+    <touchBottom>Orta yuvarlak fırça</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRound</id>
+    <y>Kabul Et ve Malzeme Seçiciye Dön</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Yumuşak ve Yuvarlak Fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Yumuşak yuvarlak fırça</keyMouseBottom>
+
+    <touchBottom>Yumuşak yuvarlak fırça</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRoundLinear</id>
+    <y>Kabul Et ve Malzeme Seçiciye Geç</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Doğrusal sert fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Doğrusal sert fırça</keyMouseBottom>
+
+    <touchBottom>Doğrusal sert fırça</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRoundLinear</id>
+    <y>Kabul Et ve Malzeme Seçiciye Dön</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Doğrusal orta yuvarlak fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Doğrusal orta yuvarlak fırça</keyMouseBottom>
+
+    <touchBottom>Doğrusal orta yuvarlak fırça</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRoundLinear</id>
+    <y>Kabul Et ve Malzeme Seçiciye Dön</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Doğrusal yumuşak yuvarlak fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Doğrusal yumuşak yuvarlak fırça</keyMouseBottom>
+
+    <touchBottom>Doğrusal yumuşak yuvarlak fırça</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottled</id>
+    <y>Kabul Et ve Malzeme Seçiciye Dön</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Benekli fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Benekli fırça</keyMouseBottom>
+
+    <touchBottom>Benekli fırça</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottledLinear</id>
+    <y>Kabul Et ve Malzeme Seçiciye Dön</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Doğrusal benekli fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Doğrusal benekli fırça</keyMouseBottom>
+
+    <touchBottom>Doğrusal benekli fırça</touchBottom>
+
+  </overlay>
+  <overlay>
+    <id>BrushPickerMagic</id>
+    <y>Kabul Et ve Malzeme Seçiciye Dön</y>
+    <b>İptal</b>
+    <a>Fırça seç</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Sihirli fırça</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+    <keyMouseBottom>Sihirli fırça</keyMouseBottom>
+
+    <touchBottom>Sihirli fırça</touchBottom>
+
+  </overlay>
+
+  <overlay>
+    <id>CameraSetMode</id>
+    <a>Kabul Et</a>
+    <bottom>Kamerayı istediğin konuma götür ve sonra &lt;A&gt; düğmesine bas;</bottom>
+
+    <keyMouse>
+      [Enter] Kabul Et
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+    </keyMouse>
+    <keyMouseBottom>Kamerayı istediğin konuma götür e sonra [Enter] tuşuna bas</keyMouseBottom>
+
+    <touch>
+      &lt;doubleDrag&gt; Zemini Taşı
+&lt;drag&gt; Eğimli Kamera
+&lt;rotate&gt; Yörünge Kamera
+&lt;pinch&gt; Zoom
+    </touch>
+
+    <touchBottom>Kamerayı istediğin konuma götür ve sonra buraya dokun.</touchBottom>
+
+  </overlay>
+
+  <!--Object edit permutations-->
+  <overlay>
+    <!-- Nothing selected, nothing moused, something in the clipboard-->
+    <id>ObjectEdit</id>
+    <y></y>
+    <x></x>
+    <b>Araç Menüsü</b>
+    <a>Ekle</a>
+
+    <leftTrigger ghosted = "true">Kes</leftTrigger>
+    <rightTrigger ghosted = "false">Yapıştır</rightTrigger>
+
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Alt]+&lt;leftmouse&gt; Yapıştır
+      [Space]+&lt;leftmouse&gt; Ekle
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Nothing selected, nothing moused, nothing in the clipboard-->
+    <id>ObjectEditEmptyClipboard</id>
+    <y></y>
+    <x></x>
+    <b>Araç Menüsü</b>
+    <a>Ekle</a>
+
+    <leftTrigger ghosted = "true">Kes</leftTrigger>
+    <rightTrigger ghosted = "true">Yapıştır</rightTrigger>
+
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Space]+&lt;leftmouse&gt; Ekle
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused.
+    Selected thing isn't programmable. This never happens any more, since everything except the cursor
+    and waypoints (handled elsewhere) is programmable.
+    -->
+    <id>ObjectEditSelected</id>
+    <y></y>
+    <x>Ayarlar</x>
+    <a>Buraya Koy</a>
+    <leftTrigger>Kes</leftTrigger>
+    <rightTrigger>Klonla</rightTrigger>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <dpadVertical>Yukarı/Aşağı Hareket Et</dpadVertical>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused. Selected thing is a gameactor.-->
+    <id>ObjectEditSelectedProgrammable</id>
+    <y>Programla</y>
+    <x>Ayarlar</x>
+    <a>Buraya Koy</a>
+    <leftTrigger>Kes</leftTrigger>
+    <rightTrigger>Klonla</rightTrigger>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <dpadVertical>Yukarı/Aşağı Hareket Et</dpadVertical>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something cursored (not picked up, blue), nothing moused. Cursored thing is not a gameactor.
+    This isn't useful anymore, since everything is programmable except the cursor and
+    waypoints (handled elsewhere)
+    -->
+    <id>ObjectEditFocus</id>
+    <y></y>
+    <x>Ayarlar</x>
+    <b>Araç Menüsü</b>
+    <a>Topla</a>
+    <leftTrigger>Kes</leftTrigger>
+    <rightTrigger>Klonla</rightTrigger>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <dpadVertical>Büyült/Küçült</dpadVertical>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <!-- GameActor cursored (not picked up, blue), nothing moused.-->
+    <id>ObjectEditFocusProgrammable</id>
+    <y>Programla</y>
+    <x>Ayarlar</x>
+    <b>Araç Menüsü</b>
+    <a>Topla</a>
+    <leftTrigger>Kes</leftTrigger>
+    <rightTrigger>Klonla</rightTrigger>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <dpadVertical>Büyült/Küçült</dpadVertical>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <!--And one for the trees-->
+  <overlay>
+    <!--A Tree is cursored (not picked up), nothing highlighted.-->
+    <id>TreeEditFocusProgrammable</id>
+    <y>Programla</y>
+    <x>Ayarlar</x>
+    <b>Araç Menüsü</b>
+    <a>Topla</a>
+    <leftTrigger>Kes</leftTrigger>
+    <rightTrigger>Klonla</rightTrigger>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <dpadVertical>Değişiklik Türü</dpadVertical>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Programla
+      [X] Ayarlar
+      [leftarrow][rightarrow] Renk Değiştir
+      [uparrow][downarrow] Büyült/Küçült
+
+      &lt;leftmouse&gt; Taşı
+      [Shift]+&lt;leftmouse&gt; Yükselet/Alçalt
+      [Shift]+&lt;rightmouse&gt; Çevir
+
+      [Space]+&lt;leftmouse&gt; Ekle
+      [Alt]+&lt;leftmouse&gt; Klonla
+      [Ctrl]+&lt;leftmouse&gt; Kes
+
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>TreeEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Programla
+      [X] Ayarlar
+      [leftarrow][rightarrow] Renk Değiştir
+      [uparrow][downarrow] Büyült/Küçült
+      [Tab] Change Type
+
+      &lt;leftmouse&gt; Taşı
+      [Shift]+&lt;leftmouse&gt; Yükselet/Alçalt
+      [Shift]+&lt;rightmouse&gt; Çevir
+
+      [Space]+&lt;leftmouse&gt; Ekle
+      [Alt]+&lt;leftmouse&gt; Klonla
+      [Ctrl]+&lt;leftmouse&gt; Kes
+
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+  <!--End of the object edit permutations-->
+
+  <overlay>
+    <id>ObjectTweak</id>
+    <y></y>
+    <x></x>
+    <b>Araç Menüsü</b>
+    <a></a>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocus</id>
+    <y></y>
+    <x></x>
+    <b>Araç Menüsü</b>
+    <a>Ayarları Değiştir</a>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocusProgrammable</id>
+    <y>Programla</y>
+    <x></x>
+    <b>Araç Menüsü</b>
+    <a>Ayarları Değiştir</a>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>TextDisplay</id>
+    <a>Devam Et</a>
+  </overlay>
+
+  <overlay>
+    <id>ScrollableTextDisplay</id>
+    <a>Devam Et</a>
+    <leftStick>Metni Kaydır</leftStick>
+  </overlay>
+
+  <overlay>
+    <id>PieSelectorProgrammingNoSelection</id>
+    <b>İptal</b>
+    <leftStick>Karo Seç</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorProgramming</id>
+    <a>Karo Ekle</a>
+    <b>İptal</b>
+    <y>Yardım</y>
+    <leftStick>Öğe Seç</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItemNoSelection</id>
+    <b>İptal</b>
+    <leftStick>Öğe Seç</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItem</id>
+    <a>Seçime Ekle</a>
+    <b>İptal</b>
+    <y>Yardım</y>
+    <leftStick>Öğe Seç</leftStick>
+  </overlay>
+  <overlay>
+    <id>HelpCardProgramming</id>
+  </overlay>
+  <overlay>
+    <id>HelpCardAddItem</id>
+  </overlay>
+
+  <overlay>
+    <id>ToolBox</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>BasePicker</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>BrushPicker</id>
+    <y></y>
+    <x></x>
+
+    <b>İptal</b>
+    <a>Kabul Et</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Bir Fırça Seç</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMaterial</id>
+    <!-- Placeholder, should not be seen. -->
+    <y>Kabul Et ve Malzeme Seçiciye Dön</y>
+    <x></x>
+
+    <b>İptal</b>
+    <a>Kabul Et</a>
+    <leftTrigger>Önceki Fırça</leftTrigger>
+    <rightTrigger>Sonraki Fırça</rightTrigger>
+    <bottom>Bir Fırça Seç</bottom>
+
+    <keyMouse>
+      [Y] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Fırça Değiştir
+      [Enter] Fırça seç
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialPicker</id>
+    <y>İmlecin Altındaki Malzemeyi Seç</y>
+    <x>Kabul Et ve Fırça Seçiciye Geç</x>
+    <b>İptal</b>
+    <a>Kabul Et</a>
+    <dpadUp>Stil: Kübik</dpadUp>
+    <dpadDown>Stil: Pürüzsüz</dpadDown>
+    <leftTrigger>Önceki Malzeme</leftTrigger>
+    <rightTrigger>Sonraki Malzeme</rightTrigger>
+    <bottom>Bir Malzeme Seç</bottom>
+
+    <keyMouse>
+      [X] Kabul Et ve Malzeme Seçiciye Geç
+      [leftarrow][rightarrow] Malzeme Değiştir
+      [uparrow] Stil:Kübik
+      [downarrow] Stil: Pürüzsüz
+      [Enter] Malzeme Seç
+      &lt;leftmouse&gt; İmlecin Altındaki Malzemeyi Seç
+      [Alt] + &lt;leftmouse&gt;  Dünyadan Malzeme Seç
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialFilterPicker</id>
+    <y>Robotun Altındaki Malzemeyi Seç</y>
+    <x></x>
+    <b>İptal</b>
+    <a>Kabul Et</a>
+    <leftTrigger>Önceki Malzeme</leftTrigger>
+    <rightTrigger>Sonraki Malzeme</rightTrigger>
+    <bottom>Bir Malzeme Seç</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Malzeme Değiştir
+      [Enter] Malzeme Seç
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>WaterPicker</id>
+    <y>İmleçteki Suyu Seç</y>
+    <x></x>
+    <leftTrigger>Önceki Su</leftTrigger>
+    <rightTrigger>Sonraki Su</rightTrigger>
+
+    <b>İptal</b>
+    <a>Kabul Et</a>
+    <bottom>Su Türünü Seç</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Su Türünü Değiştir
+      [Enter] Su Türünü Seç
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>HeightMapTool</id>
+    <y></y>
+    <x>Fırça seçici</x>
+    <b>Araç Menüsü</b>
+    <a>Düzleştir</a>
+    <leftTrigger>Alçalt</leftTrigger>
+    <rightTrigger>Yükselt</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Alçalt
+      [Alt]+&lt;leftmouse&gt; Düzleştir
+      [Space]+&lt;leftmouse&gt; Yükselt
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Kamera Yörünge
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araçlar menüsü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolStart</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Atla</b>
+    <a>Düzleştir</a>
+    <leftTrigger>Zemini Alçalt</leftTrigger>
+    <rightTrigger>Zemini Yükselt</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Alçalt
+      [Alt]+&lt;leftmouse&gt; Düzleştir
+      [Space]+&lt;leftmouse&gt; Yükselt
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Kamera Yörünge
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Satırı Atla
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolGoing</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <a>Düzleştir</a>
+    <leftTrigger>Zemini Alçalt</leftTrigger>
+    <rightTrigger>Zemini Yükselt</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Alçalt
+      [Alt]+&lt;leftmouse&gt; Düzleştir
+      [Space]+&lt;leftmouse&gt; Yükselt
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Kamera Yörünge
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araçlar menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>AddTool</id>
+    <y>Malzeme Seçici</y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <a>Zemin Rengini Değiştir</a>
+    <leftTrigger>Zemini Sil</leftTrigger>
+    <rightTrigger>Zemin Ekle</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Malzeme Seçici
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Zemin Sil
+      [Alt]+&lt;leftmouse&gt; Zemin Rengini Değiştir
+      [Space]+&lt;leftmouse&gt; Zemin Ekle
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolMagicBrush</id>
+    <y>Malzeme Seçici</y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <a>Zemin Rengini Değiştir</a>
+    <leftTrigger>Zemini Sil</leftTrigger>
+    <rightTrigger ghosted = "true">Zemin Ekle</rightTrigger>
+
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <dpadUp>Stil: Kübik</dpadUp>
+    <dpadDown>Stil: Düz</dpadDown>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Malzeme Seçici
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+      [uparrow] Stil: Kübik
+      [downarrow] Stil: Düz
+
+      [Ctrl]+&lt;leftmouse&gt; Zemin Sil
+      [Alt]+&lt;leftmouse&gt; Zemin Rengini Değiştir
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+
+  </overlay>
+  <overlay>
+    <id>AddToolStart</id>
+    <y>Malzeme Seçici</y>
+    <x>Fırça Seçici</x>
+    <b>Atla</b>
+    <a>Malzeme Değiştir</a>
+    <leftTrigger>Sil</leftTrigger>
+    <rightTrigger>Ekle</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Malzeme Seçici
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Zemin Sil
+      [Alt]+&lt;leftmouse&gt; Zemin Rengini Değiştir
+      [Space]+&lt;leftmouse&gt; Zemin Ekle
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Satır Atla
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolGoing</id>
+    <y>Malzeme Seçici</y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <a>Malzeme Değiştir</a>
+    <leftTrigger>Sil</leftTrigger>
+    <rightTrigger>Ekle</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Malzeme Seçici
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Zemin Sil
+      [Alt]+&lt;leftmouse&gt; Zemin Rengini Değiştir
+      [Space]+&lt;leftmouse&gt; Zemin Ekle
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>NoiseTool</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <a>Düzleştir</a>
+    <leftTrigger>Sivri</leftTrigger>
+    <rightTrigger>Tepelik</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Tepelik
+      [Alt]+&lt;leftmouse&gt; Düz
+      [Space]+&lt;leftmouse&gt; Sivri
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Kamera Yörünge
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolStart</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Atla</b>
+    <a>Düz</a>
+    <leftTrigger>Sivri</leftTrigger>
+    <rightTrigger>Tepelik</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Tepelik
+      [Alt]+&lt;leftmouse&gt; Düz
+      [Space]+&lt;leftmouse&gt; Sivri
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Satır Atla
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolGoing</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <a>Düz</a>
+    <leftTrigger>Sivri</leftTrigger>
+    <rightTrigger>Tepelik</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Tepelik
+      [Alt]+&lt;leftmouse&gt; Düz
+      [Space]+&lt;leftmouse&gt; Sivri
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>LevelTool</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <a></a>
+    <leftTrigger>Düzleştir</leftTrigger>
+    <rightTrigger>Dümdüz Yap</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Alt]+&lt;leftmouse&gt; Düzleştir
+      [Space]+&lt;leftmouse&gt; Dümdüz Yap
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>LevelToolStart</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <a>Hızlıca Yol Döşe</a>
+    <leftTrigger>Düz</leftTrigger>
+    <rightTrigger>Yavaşça Yol Döşe</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Düzleştir
+      [Alt]+&lt;leftmouse&gt; Hızlıca Yol Döşe
+      [Space]+&lt;leftmouse&gt; Yavaşça Yol Döşe
+
+      &lt;leftmouse&gt;  Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştrı
+
+      [Esc] Satır Atla
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>LevelToolGoing</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Yapıldı</b>
+    <a>Hızlıca Yol Döşe</a>
+    <leftTrigger>Düzleştir</leftTrigger>
+    <rightTrigger>Yavaşça Yol Döşe</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Brush Picker Fırça Seçici
+      [leftarrow][rightarrow] Brush Size Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Düzleştir
+      [Alt]+&lt;leftmouse&gt; Hızlıca Yol Döşe
+      [Space]+&lt;leftmouse&gt; Yavaşça Yol Döşe
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araçlar Menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>WaterAdd</id>
+    <y>Su Türü Seç</y>
+    <x></x>
+    <b>Araç Menüsü</b>
+    <a>Su Türünü Ayarla</a>
+    <leftTrigger>Suyu Alçalt</leftTrigger>
+    <rightTrigger>Suyu Yükselt</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal></dpadHorizontal>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Pick Water Type Su Türü Seç
+
+      [Ctrl]+&lt;leftmouse&gt; Suyu Alçalt
+      [Alt]+&lt;leftmouse&gt; Su Türünü Ayarla
+      [Space]+&lt;leftmouse&gt; Suyu Yükselt
+
+      &lt;leftmouse&gt; İmleci Hareket Ettir
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>DelObjTool</id>
+    <y></y>
+    <x>Fırça Seçici</x>
+    <b>Araç Menüsü</b>
+    <leftTrigger>Nesneleri Sil</leftTrigger>
+    <rightTrigger>Nesneleri Sil</rightTrigger>
+    <rightTrigger></rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Fırça Boyu</dpadHorizontal>
+    <leftStick>Fırçayı Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Fırça Seçici
+      [leftarrow][rightarrow] Fırça Boyu
+
+      [Ctrl]+&lt;leftmouse&gt; Sil
+      [Space]+&lt;leftmouse&gt; Sil
+
+      &lt;leftmouse&gt; Kamerayı Hareket Ettir
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointNode</id>
+    <y>Daha Fazla Uç Nokta Ekle</y>
+    <x>Bütün Yolu Seç</x>
+    <b>Yapıldı</b>
+    <a>Topla</a>
+    <dpadVertical>Tür Değiştir</dpadVertical>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftTrigger>Uç Nokta Sil</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdge</id>
+    <y>Yön Değiştir</y>
+    <x>Bütün Yolu Seç</x>
+    <b>Yapıldı</b>
+    <a>Topla</a>
+    <dpadVertical>Tür Değiştir</dpadVertical>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftTrigger>Kenarı Sil</leftTrigger>
+    <rightTrigger>Kenarı Ayır</rightTrigger>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPath</id>
+    <y>Yön Değiştir</y>
+    <x>Düğüm/Edge seçin</x>
+    <b>Yapıldı</b>
+    <a>Topla</a>
+    <dpadVertical>Tür Değiştir</dpadVertical>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftTrigger>Patika Sil</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveNode</id>
+    <y></y>
+    <x>Bütün Patikayı Kaldır</x>
+    <b>Yapıldı</b>
+    <a>İndir</a>
+    <dpadVertical>Yükseklik Değiştir</dpadVertical>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftTrigger>Uç Nokta Sil</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveEdge</id>
+    <y>Yön Değiştir</y>
+    <x>Bütün Patikayı Kaldır</x>
+    <b>Yapıldı</b>
+    <a>İndir</a>
+    <dpadVertical>Yükseklik Değiştir</dpadVertical>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftTrigger>Kenarı Sil</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMovePath</id>
+    <y>Yön Değiştir</y>
+    <x>Uç Nokta/Kenar Seç</x>
+    <b>Yapıldı</b>
+    <a>İndir</a>
+    <dpadVertical>Yükseklik Değiştir</dpadVertical>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftTrigger>Patika Sil</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointAddNode</id>
+    <y>Uç Nokta Koy ve Bitir</y>
+    <x></x>
+    <b>Yapıldı</b>
+    <a>Uç Nokta Koy</a>
+    <dpadVertical>Tür Değiştir</dpadVertical>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>İmleci Hareket Ettir</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndAddNode</id>
+    <y></y>
+    <x></x>
+    <b>Yapıldı</b>
+    <a></a>
+    <dpadVertical>Tür Değiştir</dpadVertical>
+    <dpadHorizontal>Renk Değiştir</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Yeni Pozisyon</leftStick>
+    <rightStick>Yörünge Kamera</rightStick>
+    <leftShoulder>Uzaklaştır</leftShoulder>
+    <rightShoulder>Yakınlaştır</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointNodeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Renk Değiştir
+      [Tab] Tür Değiştir
+
+      &lt;leftmouse&gt; Uç Noktayı Taşı
+      [Shift]+&lt;leftmouse&gt; Uç Noktayı Alçalt/Yükselt
+      [X] Bütün Patika Modu
+
+      [Space]+&lt;leftmouse&gt; Daha Fazla Uç Nokta Ekle
+      [Ctrl]+&lt;leftmouse&gt; Uç Nokta Sil
+
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdgeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Renk Değiştir
+      [Tab] Tür Değiştir
+
+      &lt;leftmouse&gt; Kenar Taşı
+      [Shift]+&lt;leftmouse&gt; Kenarı Yükselt/Alçalt
+      [X] Bütün Patika Modu
+
+      [Space]+&lt;leftmouse&gt; Kenarı Ayır
+      [Ctrl]+&lt;leftmouse&gt; Kenarı Sil
+
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPathFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Renk Değiştir
+      [Tab] Tür Değiştir
+
+      &lt;leftmouse&gt; Uç Noktayı Taşı
+      [Shift]+&lt;leftmouse&gt; Uç Noktayı Alçalt/Yükselt
+      [X] Bütün Patika Modu
+
+      [Space]+&lt;leftmouse&gt; Daha Fazla Uç Nokta Ekle
+      [Ctrl]+&lt;leftmouse&gt; Uç Nokta Sil
+
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Araç Menüsü
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointAddFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Renk Değiştir
+      [Tab] Tür Değiştir
+
+      &lt;leftmouse&gt; Uç Nokta Ekle ve Devam Et
+      [Alt]+&lt;leftmouse&gt; Uç Nokta Ekle ve Bitir
+
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Ekleme Bitti
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Renk Değiştir
+      [Tab] Tür Değiştir
+
+      &lt;leftmouse&gt; Ekleme Bitti
+
+      &lt;rightmouse&gt; Yörünge Kamera
+      [PgUp][PgDn] Yakınlaştır/Uzaklaştır
+
+      [Esc] Ekleme Bitti
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulation</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false"><![CDATA[<back>]]></bottom>
+
+    <keyMouseBottom>Düzenlemek için [Esc] tuşuna bas.</keyMouseBottom>
+    <touchBottom>Düzenlemek için buraya dokun.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulationPreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false"><![CDATA[<a>]]></bottom>
+
+    <keyMouseBottom>Devam etmek için [Enter] tuşuna bas.</keyMouseBottom>
+    <touchBottom>Devam etmek için buraya dokun.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>PauseGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Devam Et</a>
+    <bottom><![CDATA[<a>]]></bottom>
+
+    <keyMouse>
+      [pause] Devam Et
+    </keyMouse>
+
+    <keyMouseBottom>Oyun durakladı, devam etmek için [pause] tuşuna bas.</keyMouseBottom>
+    <touchBottom>Oyun durakladı, devam etmek için buraya dokun.</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>Programming</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>PageHandleFullPasteBuffer</id>
+    <y>Kodu Yazdır</y>
+    <x>Sayfayı Kopyala</x>
+    <b>Kapat</b>
+    <a></a>
+    <leftTrigger>Sayfayı Kes</leftTrigger>
+    <rightTrigger>Sayfayı Yapıştır</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Sayfa Geç
+      [Delete] Sayfa Kes
+      [Insert] Sayfa Yapıştır
+      [Esc] Geri 
+      [Ctrl-P] Kodu Yazdır
+    </keyMouse>
+    
+    <touch>
+      &lt;tap&gt; Sayfa Geç
+      &lt;touchHold&gt; Seçenekler
+    </touch>    
+  </overlay>
+  <overlay>
+    <id>PageHandleEmptyPasteBuffer</id>
+    <y>Kodu Yazdır</y>
+    <x>Sayfayı Kopyala</x>
+    <b>Kapat</b>
+    <a></a>
+    <leftTrigger>Sayfayı Kes</leftTrigger>
+    <rightTrigger ghosted = "true">Sayfayı Yapıştır</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Sayfa Geç
+      [Delete] Sayfayı Kes
+      [Esc] Geri
+      [Ctrl-P] Kodu Yazdır
+    </keyMouse>
+    
+    <touch>
+      &lt;tap&gt; Sayfa Geç
+      &lt;touchHold&gt; Seçenekler
+    </touch>
+    
+  </overlay>
+
+  <overlay>
+    <id>RowHandleFullPasteBuffer</id>
+    <y>Kodu Yazdır</y>
+    <x>Satır Kopyala</x>
+    <b>Kapat</b>
+    <a>Satırı Hareket Ettir</a>
+    <leftTrigger>Satırı Kes</leftTrigger>
+    <rightTrigger>Satırı Yapıştır</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Satırı Al
+      &lt;rightmouse&gt; Satırı Kes
+      [Enter] Satırı Al
+      [Tab] Sonraki Sayfa
+      [Shift][Tab] Önceki Sayfa
+      [Delete] Satırı Kes
+      [Insert] Satırı Yapıştır
+      [Esc] Geri
+      [Ctrl-P] Kodu Yazdır
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Satırı Seç 
+      &lt;drag&gt; Satırı Hareket Ettir
+      &lt;touchHold&gt; Seçenekler
+    </touch>
+
+  </overlay>
+  <overlay>
+    <id>RowHandleEmptyPasteBuffer</id>
+    <y>Kodu Yazdır</y>
+    <x>Satır Kopyala</x>
+    <b>Kapat</b>
+    <a>Satırı Hareket Ettir</a>
+    <leftTrigger>Satırı Kes</leftTrigger>
+    <rightTrigger ghosted = "true">Satırı Yapıştır</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Satırı Al
+      &lt;rightmouse&gt; Satırı Kes
+      [Enter] Satırı Al
+      [Tab] Sonraki Sayfa
+      [Shift][Tab] Önceki Sayfa
+      [Delete] Satırı Kes
+      [Insert] Satırı Yapıştır
+      [Esc] Geri
+      [Ctrl-P] Kodu Yazdır
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Satırı Seç 
+      &lt;drag&gt; Satırı Hareket Ettir
+      &lt;touchHold&gt; Seçenekler      
+    </touch>
+    
+  </overlay>
+  <overlay>
+    <id>RowMove</id>
+    <y>Kodu Yazdır</y>
+    <x></x>
+    <b>Kapat</b>
+    <leftStick>Sıra Önceliğini Değiştir</leftStick>
+    <a>Satırı Buraya Koy</a>
+    <bottom></bottom>
+
+    <keyMouse>
+      [uparrow] Move Up Yukarı Çık
+      [downarrow] Move Down Aşağı İn
+      [rightarrow] Bloğu İçe Kaydır
+      [leftarrow] Bloğu Dışa Kaydır
+      [Enter] Buraya Koy
+      [Ctrl-P] Kodu Yazdır
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Satırı Seç 
+      &lt;drag&gt; Satırı Hareket Ettir
+      &lt;touchHold&gt; Seçenekler
+
+    </touch>
+  </overlay>
+  <overlay>
+    <id>Tile</id>
+    <y>Yardım</y>
+    <x>Karoyu Sil</x>
+    <b>Kapat</b>
+    <a>Karoyu Değiştir</a>
+    <leftTrigger>Karoyu Sil</leftTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Karo Ekle/Değiştir
+      &lt;rightmouse&gt; Karoyu Sil
+      [Enter] Karoyu Değiştir
+      [Tab] Sonraki Sayfa
+      [Shift][Tab] Önceki Sayfa
+      [Delete] Karoyu Sil
+      [Esc] Geri Dön
+      [Ctrl-P]Kodu Yazdır
+    </keyMouse>
+
+    <touch>
+      &lt;tap&gt; Karo Ekle/Değiştir
+      &lt;touchHold&gt; Seçenekler
+    </touch>
+  </overlay>
+
+  <overlay>
+    <id>TopLevelPaletteEditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Dünya Ayarlarını Düzenle</bottom>
+  </overlay>
+  <overlay>
+    <id>TopLevelPaletteEditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Nesne Ayarlarını Düzenle</bottom>
+  </overlay>
+  <overlay>
+    <id>EditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Seç</a>
+    <bottom>Dünya Ayarları</bottom>
+  </overlay>
+  <overlay>
+    <id>EditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Karakter Ayarları</bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridCheckbox</id>
+    <y></y>
+    <x></x>
+    <b>Çıkış</b>
+    <a>Değiştir</a>
+    <dpadVertical>Özelliği Değiştir</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridSlider</id>
+    <y></y>
+    <x></x>
+    <b>Çıkış</b>
+    <a></a>
+    <dpadHorizontal>Değiştirmek için Sol/Sağ</dpadHorizontal>
+    <dpadVertical>Özelliği Geç</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridPictureList</id>
+    <y></y>
+    <x></x>
+    <b>Çıkış</b>
+    <a></a>
+    <dpadHorizontal>Değiştirmek için Sol/Sağ</dpadHorizontal>
+    <dpadVertical>Özelliği Geç</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridTextList</id>
+    <y></y>
+    <x></x>
+    <b>Çıkış</b>
+    <a>Bir Sonraki Seçeneği Seç</a>
+    <dpadVertical>Özelliği Geç</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGameDescription</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Oyunu Başlat</a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom>Oyunu Başlatmak için &lt;a&gt; Tuşuna Bas</bottom>
+
+    <keyMouse>
+      [Enter] Oyunu Başlat
+    </keyMouse>
+    <keyMouseBottom>Oyunu Başlatmak için [Enter] Tuşuna Bas</keyMouseBottom>
+    <touchBottom>Oyunu Başlatmak için Buraya Dokun</touchBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMenu</id>
+    <a>Seç</a>
+    <leftStick>Seçimi Değiştir</leftStick>
+  </overlay>
+  <overlay>
+    <id>ModularPictureList</id>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Ayar Değiştir
+      [Esc] Geri
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCameraMode</id>
+    <dpadHorizontal>Seçimi Değiştir</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Kamera Değiştir
+      [X] Kamera Ayarla
+      [Esc] Geri
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckbox</id>
+    <a>Değiştir</a>
+    <keyMouse>
+      [Enter] Değiştir
+      [Esc] Geri
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularNextLevel</id>
+    <a>Değiştir</a>
+    <keyMouse>
+      [Enter] Değiştir
+      [Esc] Geri
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularSlider</id>
+    <dpadHorizontal>Değer Değiştir</dpadHorizontal>
+    <keyMouse>
+      [leftarrow][rightarrow] Değer Değiştir
+      [Esc] Geri
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularRadioBox</id>
+    <a>Değiştir</a>
+    <keyMouse>
+      [Enter] Seçimi Değiştir
+      [Esc] Geri
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckboxList</id>
+    <a>Değiştir</a>
+    <b>Yapıldı</b>
+    <keyMouse>
+      [uparrow][downarrow] Etiket Seç
+      [Enter] Etiket Değiştir
+      [Esc] Geri
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularButtonElement</id>
+    <a>Değişiklik Geçmişini Görüntüle</a>
+    <x>Değişiklik Geçmişini Sil</x>
+    <keyMouse>
+      [A] Değişiklik Geçmişini Görüntüle
+      [X] Değişiklik Geçmişini Sil
+      [Esc] Geri
+    </keyMouse>
+  </overlay>
+
+</XmlOverlayData>

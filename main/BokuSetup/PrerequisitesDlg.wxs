@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import current version number, etc. -->
+<?include Build.wxi ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <!-- Our custom extensions -->
+    <Binary Id="BokuSetupActions" SourceFile="..\BokuSetupActions\bin\x86\Installer\BokuSetupActions.CA.dll" />
+
+    <!-- Prerequisite detection -->
+    <CustomAction Id="CA_DetectSoftwarePackages" BinaryKey="BokuSetupActions" DllEntry="DetectSoftwarePackages" Execute="immediate" />
+
+    <!-- Commands for launching browsers -->
+    <CustomAction Id="LaunchNetFrameworkSite" ExeCommand="cmd /C start http://www.microsoft.com/downloads/details.aspx?familyid=AB99342F-5D1A-413D-8319-81DA479AB0D7" Directory="TARGETDIR" Return="asyncNoWait" />
+    <CustomAction Id="LaunchXnaFrameworkSite" ExeCommand="cmd /C start http://www.microsoft.com/en-us/download/details.aspx?id=27598" Directory="TARGETDIR" Return="asyncNoWait" />
+
+    <!-- Prerequisites dialog -->
+    <UI>  
+      <Dialog Id="PrerequisitesDlg" Width="370" Height="270" Title="!(loc.PrerequisitesDlg_DlgTitle)">
+        
+        <!-- Header -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.AdvancedWelcomeEulaDlgBannerBitmap)" />
+        <Control Id="WndTitle" Type="Text" X="20" Y="10" Width="300" Height="24" Transparent="yes" NoPrefix="yes" Text="!(loc.PrerequisitesDlg_WndTitle)" />
+        <Control Id="WndSubTitle" Type="Text" X="10" Y="215" Width="370" Height="24" Transparent="yes" NoPrefix="yes" Text="!(loc.PrerequisitesDlg_WndSubTitle)" Hidden="yes">
+          <Condition Action="show">NOT NETFRAMEWORK40 OR NOT XNAFRAMEWORK40</Condition>
+          <Condition Action="hide">NETFRAMEWORK40 AND XNAFRAMEWORK40</Condition>
+        </Control>
+
+        <!-- .NET Framework controls -->
+        <Control Id="NetFramework" Type="Text" X="20" Y="60" Width="300" Height="60" Transparent="yes" NoPrefix="yes">
+          <Text>{\UI_Font_Bold}.NET Framework 3.5</Text>
+        </Control>
+        <Control Id="YesNetFramework" Type="Text" X="40" Y="75" Width="300" Height="60" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>!(loc.PrerequisitesDlg_Installed)</Text>
+          <Condition Action="show">NETFRAMEWORK40</Condition>
+          <Condition Action="hide">NOT NETFRAMEWORK40</Condition>
+        </Control>
+        <Control Id="NoNetFramework" Type="Text" X="40" Y="75" Width="300" Height="60" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>!(loc.PrerequisitesDlg_NotInstalled)</Text>
+          <Condition Action="show">NOT NETFRAMEWORK40</Condition>
+          <Condition Action="hide">NETFRAMEWORK40</Condition>
+        </Control>
+        <Control Id="NoNetFramework_Link" Type="PushButton" X="40" Y="90" Width="100" Height="20" TabSkip="yes" Default="no" Hidden="yes">
+          <Text>!(loc.PrerequisitesDlg_ClickToDownload)</Text>
+          <Condition Action="show">NOT NETFRAMEWORK40</Condition>
+          <Condition Action="hide">NETFRAMEWORK40</Condition>
+          <Publish Event="DoAction" Value="LaunchNetFrameworkSite"></Publish>
+        </Control>
+
+        <!-- XNA Framework controls -->
+        <Control Id="XnaFramework" Type="Text" X="20" Y="120" Width="300" Height="60" Transparent="yes" NoPrefix="yes">
+          <Text>{\UI_Font_Bold}XNA Framework 4.0</Text>
+        </Control>
+        <Control Id="YesXnaFramework" Type="Text" X="40" Y="135" Width="300" Height="60" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>!(loc.PrerequisitesDlg_Installed)</Text>
+          <Condition Action="show">XNAFRAMEWORK40</Condition>
+          <Condition Action="hide">NOT XNAFRAMEWORK40</Condition>
+        </Control>
+        <Control Id="NoXnaFramework" Type="Text" X="40" Y="135" Width="300" Height="60" Transparent="yes" NoPrefix="yes" Hidden="yes">
+          <Text>!(loc.PrerequisitesDlg_NotInstalled)</Text>
+          <Condition Action="show">NOT XNAFRAMEWORK40</Condition>
+          <Condition Action="hide">XNAFRAMEWORK40</Condition>
+        </Control>
+        <Control Id="NoXnaFramework_Link" Type="PushButton" X="40" Y="150" Width="100" Height="20" TabSkip="yes" Default="no" Hidden="yes">
+          <Text>!(loc.PrerequisitesDlg_ClickToDownload)</Text>
+          <Condition Action="show">NOT XNAFRAMEWORK40</Condition>
+          <Condition Action="hide">XNAFRAMEWORK40</Condition>
+          <Publish Event="DoAction" Value="LaunchXnaFrameworkSite"></Publish>
+        </Control>
+
+        <!-- Footer -->
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+
+        <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)" Hidden="yes">
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+          <Condition Action="hide">NOT NETFRAMEWORK40 OR NOT XNAFRAMEWORK40</Condition>
+          <Condition Action="show">NETFRAMEWORK40 AND XNAFRAMEWORK40</Condition>
+        </Control>
+        <Control Id="Refresh" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="Refresh" Hidden="yes">
+          <Publish Event="DoAction" Value="CA_DetectSoftwarePackages">1</Publish>
+          <Publish Event="Reset" Value="0">1</Publish>
+          <Condition Action="show">NOT NETFRAMEWORK40 OR NOT XNAFRAMEWORK40</Condition>
+          <Condition Action="hide">NETFRAMEWORK40 AND XNAFRAMEWORK40</Condition>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+
+      </Dialog>
+
+      <!-- Display the prerequisites dialog if necessary -->
+      <InstallUISequence>
+        <Custom Action="CA_DetectSoftwarePackages" Before="LaunchConditions">NOT Installed</Custom>
+        <Show Dialog="PrerequisitesDlg" Before="AdvancedWelcomeEulaDlg">(NOT NETFRAMEWORK40 OR NOT XNAFRAMEWORK40) AND NOT Installed</Show>
+      </InstallUISequence>
+
+    </UI>
+    
+  </Fragment>
+</Wix>

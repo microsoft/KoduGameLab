@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt></TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\White</DirtMapName>
+			<SurfaceNames>
+				<string>ShinyMetal</string>
+				<string>TintablePlastic</string>
+				<string>TintablePlastic</string>
+				<string>TintablePlastic</string>
+				<string>RedBloom</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+  <DefaultEditHeight>1.6</DefaultEditHeight>
+
+  <CollisionCenter>
+		<X>-0.1</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.25</CollisionRadius>
+
+	<Cost>1.666</Cost>
+  <CollisionSound>unknown</CollisionSound>
+
+  <GrabRange>1.1</GrabRange>
+  <KickRange>1.1</KickRange>
+  
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Loud</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <HoldingPosition>
+    <X>0.9</X>
+    <Z>1.2</Z>
+  </HoldingPosition>
+
+  <Sensors>
+    <Disable>true</Disable> <!--missile has no sensors-->
+  </Sensors>
+
+  <Chassis Type="Missile"/>
+  
+</XmlGameActor>

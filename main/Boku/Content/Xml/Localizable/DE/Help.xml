@@ -1,0 +1,2660 @@
+﻿<?xml version="1.0"?>
+<Help xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <programmingExamples>
+
+    <ExamplePage>
+      <description>Wenn ich einen Apfel sehe, gehe ich auf ihn zu.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich an einen Apfel stosse, esse ich ihn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich einen lila Apfel sehe, meide ich ihn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.purple</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich einen Kodu höre, gehe ich auf ihn zu.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.ears</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich einen Apfel habe, esse ich ihn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.got</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich an einen roten Apfel stosse, esse ich ihn.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>filter.red</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich 100 Punkte erreicht habe, ist das Spiel gewonnen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.scored</upid>
+            <upid>filter.100points</upid>
+            <upid>actuator.victory</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich 0 Punkte Lebensenergie habe, ist das Spiel beendet.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.health</upid>
+            <upid>filter.000point</upid>
+            <upid>actuator.gameover</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich von einem Zeppelin gehalten werde, färbe ich mich rot.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.held</upid>
+            <upid>filter.windblimp</upid>
+            <upid>actuator.color</upid>
+            <upid>modifier.red</upid>
+            <upid>modifier.me</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    
+    <ExamplePage>
+      <description>Wenn Spieler 1 den A-Knopf drückt, schiesse ich eine rosa Rakete ab.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.player1</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.shoot</upid>
+            <upid>modifier.pink</upid>
+            <upid>modifier.up</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Auf einem bestimmten Gebiet erhalte ich 10 Punkte Lebensenergie.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.terrain</upid>
+            <upid>filter.terrain</upid>
+            <upid>actuator.heal</upid>
+            <upid>modifier.010points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich keine Kodus mehr sehe, ist das Spiel beendet.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countnone</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.gameover</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich irgend welche Dinge sehe, meide ich sie.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.anything</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <!-- description>When on a certain type of water, jump once.  Only certain characters can jump.</description -->
+      <description>Wenn ich mich auf einer bestimmten Wasserart befinde, hüpfe ich ein Mal.  Nur manche Spielfiguren können hüpfen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.water</upid>
+            <upid>filter.water</upid>
+            <upid>actuator.jump</upid>
+            <upid>modifier.once</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich ein verärgertes Trampolin sehe, meide ich es.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.expressangry</upid>
+            <upid>filter.pushpad</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ein Apfel nahe bei mir ist, bewege ich mich auf ihn zu.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.closeby</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich viele Minen sehe, bewege ich mich weg!</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countmany</upid>
+            <upid>filter.mine</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.awayfromall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Nach 0 bis 5 Sekunden erzeuge ich einen Felsen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.random</upid>
+            <upid>filter.05seconds</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.objectrock</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Nach 5 bis 10 Sekunden erzeuge ich eine Münze.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.05seconds</upid>
+            <upid>filter.random</upid>
+            <upid>filter.05seconds</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.objectcoin</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich mehr als 20 Punkte erreicht habe, ist das Spiel gewonnen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.scored</upid>
+            <upid>filter.scoreabove</upid>
+            <upid>filter.020points</upid>
+            <upid>actuator.victory</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich einen Kodu in meiner Nähe sehe, sage ich etwas.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.closeby</upid>
+            <upid>actuator.say</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich nichts sehe, bin ich traurig.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countnone</upid>
+            <upid>actuator.express</upid>
+            <upid>modifier.expresssad</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich einen Kodu sehe, bin ich froh.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.express</upid>
+            <upid>modifier.expresshappy</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich eine Wolke sehe, umkreise ich sie schnell.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.cloud</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.circle</upid>
+            <upid>modifier.turnright</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich keinen Kodu sehe, leuchte ich rot.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.countnone</upid>
+            <upid>actuator.glow</upid>
+            <upid>modifier.red</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    
+    <ExamplePage>
+      <description>Erzeuge alle 10 Sekunden einen Felsen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.10seconds</upid>
+            <upid>actuator.make</upid>
+            <upid>modifier.objectrock</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Spiele immer eine Melodie./Mache immer Geräusche.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.sound</upid>
+            <upid>modifier.mu_ambinetmodd</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Bleibe immer nah dran.  Funktioniert nur bei manchen Spielfiguren.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.close</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Bleibe immer offen.  Funktioniert nur bei manchen Spielfiguren.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.open</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich einen verärgerten Kodu sehe, dann spiele keine Melodie.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.expressangry</upid>
+            <upid>actuator.stopsound</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich einen Stern einsammle, dann wechsle zu Seite 2.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.got</upid>
+            <upid>filter.star</upid>
+            <upid>actuator.switchtask</upid>
+            <upid>modifier.taskb</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn mein Schuss eine Figur trifft, dann betäube sie.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.anybot</upid>
+            <upid>actuator.zap</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn mein Schuss ein Irrlicht trifft, dann schlag es K.O.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.wisp</upid>
+            <upid>actuator.pop</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn mein Schuss eine Mine trifft, lass sie explodieren.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.mine</upid>
+            <upid>actuator.boom</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn mein Schuss einen Sputnik trifft, lass ihn verschwinden.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.sputnik</upid>
+            <upid>actuator.vanish</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich an einen Apfel stosse, dann sammle ich ihn ein.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.grab</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich auf einem bestimmten Gebiet bin, dann lasse ich alles fallen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.terrain</upid>
+            <upid>filter.terrain</upid>
+            <upid>actuator.drop</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich an jemanden stosse, dann gebe ich ihm alles was ich gesammelt habe.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.anything</upid>
+            <upid>actuator.give</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn meine Lebensenergie 0 ist, dann starte das Spiel neu.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.health</upid>
+            <upid>filter.000point</upid>
+            <upid>actuator.restart</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn mein Schuss ein Schiff trifft, dann zieh mir einen Punkt ab.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.floatbot</upid>
+            <upid>actuator.unscore</upid>
+            <upid>modifier.001point</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der A-Knopf gedrückt wird, dann soll mir die Kamera folgen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.camera.followme</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der B-Knopf gedrückt wird, dann soll mich die Kamera ignorieren.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.bbutton</upid>
+            <upid>actuator.camera.ignoreme</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der X-Knopf gedrückt wird, dann wechsle in die Ich-Ansicht.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.xbutton</upid>
+            <upid>actuator.camera.firstperson</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der linke Steuerknüppel bewegt wird, dann fliege hoch und runter.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.moveupdown</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der linke Steuerknüppel nach rechts bewegt wird, dann drehe nach rechts.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.moveleftright</upid>
+            <upid>modifier.turnright</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn meine Rakete einen gelben Kodu trifft, dann ziehe dem Kodu 5 Punkte Lebensenergie ab.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.yellow</upid>
+            <upid>filter.boku</upid>
+            <upid>actuator.damage</upid>
+            <upid>modifier.it</upid>
+            <upid>modifier.005points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der rechte Steuerknüppel vor oder zurück bewegt wird, dann bewege dich auf der Nord/Süd-Achse.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.rightstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.constraint.northsouth</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der rechte Steuerknüppel nach links oder rechts bewegt wird, dann bewege dich auf der West/Ost-Achse.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.rightstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.constraint.eastwest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der Y-Knopf gedrückt wird, dann bewege dich nach Norden.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.ybutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.north</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der B-Knopf gedrückt wird, dann bewege dich nach Osten.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.bbutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.east</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der A-Knopf gedrückt wird, dann bewege dich nach Süden.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.south</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der X-Knopf gedrückt wird, dann bewege dich nach Westen.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.xbutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.west</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der linke Abzug (Trigger) gedrückt wird, dann bewege dich langsam vorwärts.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.lefttrigger_analog</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.forward</upid>
+            <upid>modifier.slowly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der rechte Abzug (Trigger) gedrückt wird, dann bewege dich schnell vorwärts.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.righttrigger_analog</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.forward</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich einen der Arena-Klänge höre, dann schicke ein Herz hoch in die Luft.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.ears</upid>
+            <upid>filter.environ.arena.any</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.strongly</upid>
+            <upid>modifier.angle.high</upid>
+            <upid>modifier.objectheart</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn meine Rakete einen grünen Kodu trifft, dann zähle 5 Punkte zu meinem roten Punktestand dazu.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.green</upid>
+            <upid>filter.boku</upid>
+            <upid>actuator.score</upid>
+            <upid>modifier.red</upid>
+            <upid>modifier.005points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Schieße ein Mal.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>actuator.shoot</upid>
+            <upid>modifier.once</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wandere schnell in der Welt umher.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>actuator.movement</upid>
+            <upid>selector.wander</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn ich an einen Felsen stoße, dann erhöhe den blauen Punktestand um einen Punkt.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.rock</upid>
+            <upid>actuator.score</upid>
+            <upid>modifier.001point</upid>
+            <upid>modifier.blue</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wenn der linke Steuerknüppel bewegt wird, dann bewege meine Figur.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+    <ExamplePage>
+      <description>Wandere immer in der Welt umher.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.wander</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+
+  </programmingExamples>
+
+
+
+  <actorHelp>
+    <item>
+      <key>
+        <string>BokuBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Kodu ist ein wenig langsam, und hat Probleme, steile Hänge hoch zu gehen.
+          </description>
+          <upid>filter.boku</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Kodu, der Äpfel sucht und isst.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn ich einen Apfel sehe, bewege ich mich auf den nähesten zu.
+					Wenn ich an einen Apfel stoße, esse ich ihn.
+					Ich wandere in der Welt umher.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Kodu, der fahren kann.  Der linke Steuerknüppel bestimmt die Bewegung.  Der A-Knopf lässt ihn hüpfen.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der linke Steuerknüppel bewegt wird, bewege ich mich.
+					Wenn der A-Knopf gedrückt wird, hüpfe ich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Kodu, der den roten Pfaden folgt.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Ich bewege mich entlang des roten Pfades.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Kodu, der Seiten benutzt um zwischen Verhaltensweisen zu wechseln.  Drücke den A-Knopf um zwischen rot und blau leuchtend zu wechseln.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+				    Glühe rot.
+				    Wenn der A-Knopf gedrückt wird, dann wechsle zu Seite 2.
+				  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+				    Glühe blau.
+				    Wenn der A-Knopf gedrückt wird, dann wechsle zu Seite 1.
+				  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>TerraCannon</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Die Kanone ist groß und sehr langsam, aber kraftvoll.
+          </description>
+          <upid>filter.terracannon</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle eine Kanone, die Äpfel sucht und isst.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn ich einen Apfel sehe, dann bewege ich mich auf den nähesten zu.
+					Wenn ich an einen Apfel stoße, dann esse ich ihn.
+					Ich wandere in der Welt umher.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle eine Kanone, mit der du fahren kannst. Der linke Steuerknüppel kontrolliert die Bewegungen. Mit dem A-Knopf kann sie hüpfen.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der linke Steuerknüppel bewegt wird, dann bewege ich mich.
+					Wenn der A-Knopf gedrückt wird, dann hüpfe ich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle eine Kanone die den roten Pfaden folgt.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Ich bewege mich entlang des roten Pfades.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle eine Kanone, die über Seitenwechsel zwischen Verhaltensweisen wechselt.  Drücke den A-Knopf um zwischen rot und blau leuchtend zu wechseln.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+				    Ich glühe rot.
+					Wenn der A-Knopf gedrückt wird, dann wechsle ich zu Seite 2.
+				  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+				    Ich glühe blau.
+					Wenn der A-Knopf gedrückt wird, dann wechsle ich zu Seite 1.
+				  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>FlyFish</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Flugfisch schwebt und dreht sich schnell - perfekt für flotte Action.
+          </description>
+          <upid>filter.flyfish</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Flugfisch, der Äpfel sucht und isst.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn ich einen Apfel sehe, bewege ich mich auf den nähesten zu.
+					Wenn ich an einen Apfel stoße, esse ich ihn.
+					Ich wandere in der Welt herum.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen fliegenden Fisch, den du bewegen kannst. Der linke Steuerknüppel kontrolliert die Bewegungen.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der linke Steuerknüppel bewegt wird, dann bewege ich mich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen fliegenden Fisch, der einem roten Pfad folgt.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Ich bewege mich entlang des roten Pfades.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen fliegenden Fisch, der über Seitenwechsel zwischen Verhaltensweisen wechselt.  Drücke den A-Knopf, um zwischen rot und blau leuchtend zu wechseln.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+				    Ich glühe rot.
+					Wenn der A-Knopf gedrückt wird, dann wechsle ich zu Seite 2.
+				  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+				    Ich glühe blau.
+					Wenn der A-Knopf gedrückt wird, dann wechsle ich zu Seite 1.
+				  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Jet</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Jet bewegt sich normalerweise dicht über dem Boden. Du kannst ihn so programmieren, dass er hoch und runter fliegen kann.
+          </description>
+          <upid>filter.jet</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Jet, der Äpfel sucht und isst.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn ich einen Apfel sehe, dann bewege ich mich auf den nähesten zu.
+					Wenn ich an einen Apfel stoße, dann esse ich ihn.
+					Ich wandere in der Welt herum.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Jet, mit dem du umher fliegen kannst. Der linke Steuerknüppel kontrolliert die Bewegungen.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der Steuerknüppel bewegt wird, dann bewege ich mich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Jet, der dem grünen Pfad folgt.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Ich bewege mich entlang des grünen Pfades.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.green</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Jet, der über Seitenwechsel zwischen Verhaltensweisen wechselt.  Drücke den A-Knopf, um zwischen rot und blau leuchtend zu wechseln.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+				    Ich glühe rot.
+					Wenn der A-Knopf gedrückt wird, dann wechsle ich zu Seite 2.
+				  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+				    Ich glühe blau.
+					Wenn der A-Knopf gedrückt wird, dann wechsle ich zu Seite 1.
+				  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>FloatBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Das Schiff kann auf dem Wasser fahren, kann sich aber nicht auf dem Land bewegen.
+          </description>
+          <upid>filter.floatbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle ein Schiff, mit dem du umher fahren kannst. Der linke Steuerknüppel kontrolliert die Bewegungen.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der Steuerknüppel bewegt wird, bewege ich mich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle ein Schiff, das umher fährt und alle 10 Sekunden einen Apfel erstellt.
+              </description>
+              <tileUpid>selector.wander</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					  Ich wandere in der Welt umher.
+					Ich wandere in der Welt umher.
+					Nach 10 Sekunden erzeuge ich einen roten Apfel.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <reflex>
+                        <upids>
+                          <upid>actuator.movement</upid>
+                          <upid>selector.wander</upid>
+                        </upids>
+                      </reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.10seconds</upid>
+                        <upid>actuator.make</upid>
+                        <upid>modifier.objectfruit</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>FastBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Das Motorrad ist schnell, kann steile Hügel erklimmen, und hüpfen.
+          </description>
+          <upid>filter.fastbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle ein Motorrad, das du lenken kannst. Der linke Steuerknüppel kontrolliert die Bewegungen, der A-Knopf lässt es hüpfen.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der Steuerknüppel bewegt wird, dann bewege ich mich.
+					Wenn der A-Knopf gedrückt wird, dann hüpfe ich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>StickBoy</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Stock kann sich nicht bewegen, durch "schließen" versteckt er sich unter der Erde und ist dann unverwundbar.
+          </description>
+          <upid>filter.stick</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen von dir gesteuerten Stock. Die Knöpfe Y und A öffnen und schließen den Stock. Der B-Knopf schiesst eine Rakete ab.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der Y-Knopf gedrückt wird, dann öffne ich mich.
+					Wenn der A-Knopf gedrückt wird, dann schließe ich mich.
+					Wenn der B-Knopf gedrückt wird, dann schieße ich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.shoot</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>SubBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Das U-Boot bewegt sich bestens unter Wasser.
+          </description>
+          <upid>filter.subbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle ein selbst gesteuertes U-Boot. Der linke Steuerknüppel kontrolliert die Bewegungen. Die Knöpfe Y und A lassen es aufsteigen und tauchen.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der Y-Knopf gedrückt wird, dann steige ich an die Oberfläche.
+					Wenn der A-Knopf gedrückt wird, dann tauche ich ab.
+					Wenn der linke Steuerknüppel bewegt wird, dann bewege ich mich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.watersurface</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.waterdive</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Light</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Das Licht bewegt sich schnell und kann die Umgebung erhellen.
+          </description>
+          <upid>filter.light</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle ein Licht, das nach UFOs Ausschau hält und ihnen folgt.
+              </description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn ich ein UFO sehe, dann bewege ich mich auf das näheste zu.
+					Ich wandere in der Welt umher.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.saucer</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Wisp</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Das Irrlicht bewegt sich schnell und hinterlässt eine leuchtende Spur.
+          </description>
+          <upid>filter.wisp</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle eine Irrlicht, das nach anderen Irrlichtern ausschau hält und ihnen folgt.
+              </description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn ich ein anderes Irrlicht sehe, dann bewege ich mich auf das näheste zu.
+					Ich wandere in der Welt umher.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.wisp</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Saucer</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Das UFO ist die schnellste und geschickteste Figur. Es kann schnell die Richtung wechseln.
+          </description>
+          <upid>filter.saucer</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle ein UFO, das Äpfel sammelt und bewegt. Dieses Beispiel nutzt mehrere Seiten.
+              </description>
+              <tileUpid>actuator.grab</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn ich einen Apfel sehe, dann bewege ich mich auf den nähesten zu.
+					Wenn ich einen Apfel scanne, dann nehme ich ihn.
+					Wenn ich einen Apfel habe, dann wechsle ich zu Seite 2.
+					Ich wandere in der Welt umher.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.scan</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.grab</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.got</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Nach 5 Sekunden lege ich ab, was immer ich halte.
+					Ich wandere in der Welt umher.
+					Wenn ich nichts halte, dann wechsle ich zu Seite 3.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.05seconds</upid>
+                        <upid>actuator.drop</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.got</upid>
+                        <upid>filter.countnone</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskc</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Nach 5 Sekunden wechsle ich zu Seite 1.
+					Ich wandere in der Welt umher.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.05seconds</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+              </pages>
+            </ExampleProgram>
+
+            <ExampleProgram>
+              <description>
+                Erstelle ein UFO, mit dem du umher fliegen kannst. Der linke Steuerknüppel kontrolliert die Bewegung, der rechte schiesst. 
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der linke Steuerknüppel bewegt wird, dann bewege ich mich.
+					Wenn der rechte Steuerknüppel bewegt wird, dann schieße ich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.rightstick</upid>
+                        <upid>actuator.shoot</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>WindBlimp</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Zeppelin fliegt langsam.
+          </description>
+          <upid>filter.windblimp</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Zeppelin, den du steuern kannst. Der linke Steuerknüppel kontrolliert die Bewegung.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der linke Steuerknüppel bewegt wird, dann bewege ich mich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>BalloonBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Ballon schwebt langsam durch die Luft und überblickt alles. Das macht ihn zu einem guten Schiedsrichter für Spiele.
+          </description>
+          <upid>filter.balloonbot</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle einen Ballon, den du steuern kannst. Der linke Steuerknüppel kontrolliert die Bewegung. Die Knöpfe Y und A lassen ihn steigen und sinken.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der Y-Knopf gedrückt wird, dann steige ich nach oben.
+					Wenn der A-Knopf gedrückt wird, dann sinke ich nach unten.
+					Wenn der linke Steuerknüppel bewegt wird, dann bewege ich mich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.airrise</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.airdrop</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Puck</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Puck ist gut für schnelle Spiele, er fliegt ohne Wiederstand umher und verliert keine Geschwindigkeit bei Zusammenstößen.
+          </description>
+          <upid>filter.puck</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PushPad</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Das Trampolin ist groß und stark.
+          </description>
+          <upid>filter.pushpad</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Turtle</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Die Schildkröte kann fliegen und sich mit Öffnen und Schließen Aktionen in seinem Panzer verstecken.  In geschlossenem Zustand ist die Schildkröte unverwundbar.
+          </description>
+          <upid>filter.turtle</upid>
+          <programs>
+
+            <ExampleProgram>
+              <description>
+                Erstelle eine Schildkröte, die du steuern kannst.  Der linke Steuerknüppel kontrolliert die Bewegung.  Der A Knopf lässt die Schildkröte sich im Gehäuse verstecken, der Y Knopf lässt sie wieder heraus.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn der Y-Knopf gedrückt wird, dann öffne ich mich.
+					Wenn der A-Knopf gedrückt wird, dann schließe ich mich.
+					Wenn der linke Steuerknüppel bewegt wird, dann bewege ich mich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>SwimFish</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Fisch fühlt sich im Wasser am wohlsten.  An Land ist er bloß ein Fisch auf dme Trockenen.
+          </description>
+          <upid>filter.swimfish</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Cloud</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Die Wolke ist eine Hommage an unser Redmonder Wetter.
+          </description>
+          <upid>filter.cloud</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Mine</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Die Mine hat Stacheln, die ausgefahren oder eingezogen werden können.  Verwende die Öffnen Aktion, um die Stacheln auszufahren, und die schließen Aktion, um sie einzuziehen.
+          </description>
+          <upid>filter.mine</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Trommel</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Wenn andere Spielfiguren auf die Trommel springen, werden sie in die Luft geschleudert.
+          </description>
+          <upid>filter.drum</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Sputnik</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Sputnik gibt einen tollen Begleiter für die Untertasse ab.
+          </description>
+          <upid>filter.sputnik</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>BigYucca1</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Bäume können auch programmiert werden..
+          </description>
+          <upid>filter.bigyucca1</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Yucca1</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Bäume können auch programmiert werden.
+          </description>
+          <upid>filter.yucca1</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>Yucca3</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Bäume können auch programmiert werden.
+          </description>
+          <upid>filter.yucca3</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>Yucca2</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Bäume können auch programmiert werden.
+          </description>
+          <upid>filter.yucca2</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Fruit</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Apfel schmeckt toll, und es macht Spaß, damit zu werfen.
+          </description>
+          <upid>filter.fruit</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Rock</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Steine können programmiert werden, genau wie alles andere.
+          </description>
+          <upid>filter.rock</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Star</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Sterne können auch wie der ganze Rest programmiert werden.
+          </description>
+          <upid>filter.star</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Coin</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Münzen sind ein "Muss" für jedes klassische Automatenspiel.
+          </description>
+          <upid>filter.coin</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>SoccerBall</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Programmiere ihn, oder tritt ihn, es bleibt doch immer ein Ball.
+          </description>
+          <upid>filter.soccerball</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Castle</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Der Turm ist ein Bewegungsmuffel.
+          </description>
+          <upid>filter.castle</upid>
+          <programs>
+            <ExampleProgram>
+              <description>
+                Erstelle einen Turm, der explodiert, wenn etwas mit ihm zusammenstößt.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+				  <!-- description>This is the page description.  Not used in ActorHelp but used in programming help.</description -->
+                  <description>
+                    (Dies ist die Seitenbeschreibung.  Sie wird nicht in der Spielerhilfe, aber in der Programmierhilfe verwendet.)
+					Wenn ich an irgendwas stoße, dann explodiere ich.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.anything</upid>
+                        <upid>actuator.boom</upid>
+                        <upid>modifier.me</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Heart</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Die sind toll als Erste-Hilfe Kästen.
+          </description>
+          <upid>filter.heart</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Bullet</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Die eignen sich hervorragend als Munitionskisten.
+          </description>
+          <upid>filter.bullet</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Factory</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Die ACME Fabrik eignet sich toll als Hingucker in jedem Spiel.
+          </description>
+          <upid>filter.factory</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>Hut</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Die Hütte eignet sich toll als Hingucker in jedem Spiel.
+          </description>
+          <upid>filter.hut</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>WayPoint</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Pfade sind extrem vielseitig.  Du kannst sie verwenden, um den Laufweg für einen Bot vorzugeben.  Normalerweise sind Pfade unsichtbar, aber sie können zu Straßen oder Mauern umgewandelt werden, indem der Typ geändert wird.  Wenn ein Bot darauf programmiert wird, einem Pfad zu folgen, kann ein Pfad einer bestimmten Farbe gewählt werden.  Die Farbe eines Pfades kann auf die selbe Weise geändert werden, wie die Farbe eines Bots.  In den Welt Einstellungen kannst du Debug Path Following einschalten, damit die normalerweise unsichtbaren Pfade sichtbar werden, während die Welt gespielt wird.
+          </description>
+          <upid>selector.followwaypoints</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PathGeneric</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Pfade sind extrem vielseitig.  Du kannst sie verwenden, um den Laufweg für einen Bot vorzugeben.  Normalerweise sind Pfade unsichtbar, aber sie können zu Straßen oder Mauern umgewandelt werden, indem der Typ geändert wird.  Wenn ein Bot darauf programmiert wird, einem Pfad zu folgen, kann ein Pfad einer bestimmten Farbe gewählt werden.  Die Farbe eines Pfades kann auf die selbe Weise geändert werden, wie die Farbe eines Bots.  In den Welt Einstellungen kannst du Debug Path Following einschalten, damit die normalerweise unsichtbaren Pfade sichtbar werden, während die Welt gespielt wird.
+          </description>
+          <upid>filter.pathplain</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PathVeggie</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Blumenpfade lassen dich ein Muster aus Blumen in deiner Welt gestalten.
+          </description>
+          <upid>filter.pathflora</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PathRoad</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Diese Pfade gestatten es, in deiner Spielwelt Straßen anzulegen.
+          </description>
+          <upid>filter.pathroad</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+    <item>
+      <key>
+        <string>PathWall</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Mit diesen Pfaden kannst du in deiner Spielwelt Mauern errichten.  Indem du Knoten höher oder niedriger ziehst, kannst du die Höhe der Mauern steuern.
+          </description>
+          <upid>filter.pathwall</upid>
+          <programs>
+
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+
+  </actorHelp>
+</Help>

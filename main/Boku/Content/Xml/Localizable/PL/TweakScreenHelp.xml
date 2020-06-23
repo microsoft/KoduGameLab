@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="LightRange">
+    <desc>Określ jak daleko światło świeci (dostępne tylko dla świateł).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+Dostosuj prędkość tego bota. 
+Wartość 1.0 odpowiada domyślnej prędkości.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+Dostosuj przyspieszenie dla tego bota. 
+Wartość 1.0 określa wartość domyślną przyspieszenia.
+    </desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Blokuje pozycję tego bota tak, że nie może zostać poruszony. Można go nadal obrócić.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>Powoduje, że bot jest niezniszczalny.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>Kiedy jest ustawiony, mały pasek pokaże się nad tym botem. Pasek będzie wskazywał jak dużo zdrowia zostało dla tego bota.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>Ta opcja pozwala kontrolować początkową liczbę punków bota. Liczba punków uderzeń zmniejszy się gdy bot jest niszczony, a zwiększy się gdy bot jest leczony.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+Kiedy bot jest ustawiony jako "Do tworzenia" otrzymuje specjalne dwie właściwości. 
+Pierwsza, gdy bot jest klonowany to wszystkie klony dzielą ten sam mózg. Zmiany jednego wpływają na wszystkie. Połączenia pomiędzy botami sklonowanymi widoczne są jako przerywane linie (podczas edycji). 
+Druga, możesz zaprogramować inne boty by tworzyły tego bota (razem z programem). Idealnie sprawuje się to w grach w których tworzeni są przeciwnicy w sposób ciągły. 
+Uważać należy na to, że takie tworzenie może przekroczyć wielkość bufora. Przekroczenie bufora powoduje, że dalsze tworzenie przestaje działać.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+Dla botów ustawionych jako "do tworzenia" określa liczbę limitującą jaka może zostać osiągnięta liczba tworzonych botów podczas gry. Klony jakie powielasz na planszy nie jest wliczana do tego limitu. Ten limit określa tylko i wyłącznie liczbę botów jaka jest tworzona przez inne boty podczas grania.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+Kontroluje jak kamera współpracuje z tym botem. Normalnie kamera będzie podążała za botem kontrolowanym przez gracza. 
+Jeżeli ustawisz na Zawsze, to kamera będzie zawsze podążała za botem. Jeżeli posiadasz więcej niż jednego bota z takim ustawieniem kamera będzie starała się zmieścić je w ekranie.
+Jeżeli ustawisz wartość na Nigdy, to kamera będzie ignorowała tego bota nawet gdy kontrolowany jest przez użytkownika.    
+    </desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>Ustawienie jak bot będzie się odbijał od przeszkód gdy będą zderzać się z podłożem, ścianą lub innymi botami.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>Ustawia jak bardzo bot przesuwa się przy zderzeniu z ziemią, ścianami, lub innymi botami.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Określa jak dużo szkody powoduje wstrzelony punkt.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+Długość czasu przeładowania punktów po każdym wystrzelonym punkcie (jak długo czeka się na następny wystrzał).
+Czas mierzony jest w sekundach.
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Kontroluje jak daleko lecą punkty przed tym jak znikną.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Określa jak szybko punkt jest wystrzelany.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+Określa jak dużo wystrzelonych punktów bot może posiadać jednocześnie. 
+Kiedy bot wystrzeli taką liczbę puktów, nie może wystrzelić więcej dopóki któryś z punktów zniknie.
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Określa jak dużo Punktów trafienia odejmuje wystrzelony pocisk, gdy trafi w cel.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+Określa jak długo bot musi oczekiwać na następną możliwość wystrzału. 
+Wartość mierzona w sekundach.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Określa jak długo pociski mogą podróżować aż znikną.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Określa jak szybko podróżują pociski wystrzelane przez tego bot-a.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+Określa jak dużo pocisków na raz może wystrzelić ten bot. 
+Kiedy bot wystrzeli taką liczbę pocisków, nie może wystrzelić ich więcej aż któryś z nich zniknie.    
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Określa kiedy wystrzelony pocisk emituje za sobą dym. Pociski bez dymu, mniej obciążają komputer.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Kontroluje kiedy efekty wizualne tarczy są pokazywane i kiedy bot uderza w coś lub otrzymuje uderzenie.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Określa czy bot ten będzie w ogóle pokazywany. Mimo wszystko bot może być słyszany i widziany przez inne boty.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Określa czy bot będzie widziany, słyszany i podlegał kolizji z innymi botami. Boty duchy mogą widzieć inne boty ale nie mogą się z nimi zderzać.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Wyłącza wszystkie dźwięki dla tego bot-a. Uwaga: wszystkie inne boty mogą wykryć obecność tego bota poprzez nasłuch.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Pozostaje ponad powierzchnią każdej wody. Wyłącz tą opcję gdy chcesz by obiekty zanurzały się w wodzie.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Określa jak daleko słyszalny jest ten bot. Nie zmienia poziom głośności jaki słyszy gracz kontrolujący bota.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Określa jak daleko sięga słuch tego bot-a. Nie zmienia poziom głośności jaki słyszy gracz kontrolujący bota.</desc>
+  </helpText>
+
+  <helpText id="KickStrength">
+    <desc>Określa jak mocno ten bot kopie inne obiekty. Mocniejszy kopniak spowoduje, że obiekt poleci dalej.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Określa jak szybko ten bot może kopnąć następny obiekt zaraz po kopnięciu poprzedniego.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>Skaluje obiekt w górę lub w dół. Skala 1.0 jest normalną wielkością.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>Kiedy zobaczysz coś zapamiętujesz to na parę sekund pomimo, że nadal to widzisz.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Wpływa na to jak jasno świeci ten bot. Uwaga - świecące boty normalnie nie przenoszą świecenia na pozostałe boty.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Powoduje, że ten obiekt przenosi swoje światło podczas świecenia na inne obiekty. Określa jak mocno przenosi się światło.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Określa jak dużo światła emituje ten bot podczas świecenia.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>Pokazuje jak bot widzi inne boty i kiedy jego pole widzenia jest blokowane przez ściany i powierzchnię.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>Kiedy ten bot używa wzroku lub słuchu, ta opcja pokazuje jak ten bot widzi inne boty.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Aktualnie nie zaimplementowane.</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>Tworzy niewidzialna barierę wokół krawędzi tego świata. Zabezpieczy to boty by wypadały poza granice tego świata.
+        
+Balon, chmura, samolot, światło, spodek, sterowiec, wstęga i pocisk mogą przenikać przez szklane ściany.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Wyświetla historię ludzi którzy zmieniali ten świat.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Pozwala na kontrolę jak kamera przesuwa się podczas gry. 
+    
+Pozycja stała zatrzymuje kamerę w jednym miejscu. Ta opcja przydaje się w grach arkadowych gdy potrzebne jest całościowe spojrzenie na planszę. Proszę zwrócić uwagę, że obszar widzenia będzie inny w szerokątnych wyświetlaczach. 
+
+Opcja stały odstęp kamery utrzymuje kamerę w stałym odstępie i kierunku od obiektu za którym kamera podąża. Obiektem może być kursor lub bot. Użyteczne dla gier w których obraz się przesuwa. 
+
+Opcja wolnej kamery jest domyślna i pozwala kamerze na własne spojrzenie na obszar gry, aż do momentu gdy oprogramowanie bota powie kamerze by kamera zwróciła na niego uwagę. Gdy wybierzesz jedną z ustalonych opcji odstęp lub pozycja jest ustalana na podstawie pozycji początkowej kamery (takiej jaką otrzymała kamera przy wejściu do świata). Gdy naciśniesz &lt;x&gt; zostaniesz przeniesiony w tryb pracy kamery, który pozwoli na dowolne określanie pozycji kamery.    
+    </desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Określa gdzie kamera jest umiejscowiona na początku gry. Wykonuje się to w ten sposób, że umieszcza się kamerę w miejscu które chcesz by było w momencie uruchomienia gry, następnie otwierasz Opcje świata i zaznaczasz tą opcję. 
+Gdy później istnieje potrzeba zmiany pozycji startowej naciska się &lt;x&gt;, który to przeniesie w tryb pracy umożliwiający dowolne ustalenie pozycji kamery.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Określa jak mocno kamera reaguje na kontrolowanego bota przez użytkownika.</desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Pozwala na ukrycie Kompasu, który normalnie pojawia się w dolnym prawym rogu ekranu. Kompas zawsze jest widoczny podczas edycji gry i może być ukryty tylko podczas gry.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Pozwala na ukrycie licznika zasobów (termometru) który normalnie pojawia sie z prawej strony ekranu. Licznik zasobów pokazuje sie zawsze podczas edycji i jest ukryty gdy uruchomiono grę.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+Pozwala na wyłączenie limitu zasobów, który pokazuje się poprzez Zasobometr (termometr) w prawym rogu ekranu. Z tą opcją wyłączoną możesz dodać tak dużo obszarów i obiektów do Twojego świata jak tylko zechcesz.
+UWAGA: Bez tego limitu można spowodować, że Kodu będzie działać baaardzo wolno. Można też przekroczyć wielkość pamięci systemu i spowodować wyłączenie się Kodu bez ostrzeżenia.  
+  </desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>Określa wysokość fali gdy woda została umieszczona w planszy świata.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>Siła wody.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Wybierz zestaw kolorów tła dla świata. 
+Połączenie ustawień Nieba i Oświetlenia pozwala na utworzenie własnego rodzaju gry.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Wybierz zestaw oświetleń dla świata. Jeżeli wybierzesz ciemne oświetlenie, wtedy będzie tylko ciemno w Twojej grze. Podczas edycji będzie użyte jaśniejsze oświetlenie tak byś mógł bez problemowo edytować świat. 
+Połączenie ustawień Nieba i Oświetlenia pozwala na utworzenie własnego rodzaju gry.</desc>  
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Określa minimalną prędkość wiatru w grze.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Określa maksymalną prędkość wiatru w grze.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Określa jaki rodzaj efektu rozpoczyna grę: 
+"Żaden" tylko uruchamia grę bez efektu. 
+"Tytuł poziomu" wyświetla nazwę poziomu i prosi gracza o naciśnięcie &lt;a&gt; by rozpocząć grę. 
+"Opis poziomu" wyświetla nazwę poziomu i prosi gracza o naciśnięcie &lt;a&gt; by rozpocząć grę. Do wyświetlenia użyty jest opis podany przy zapisie gry. 
+"Odliczanie" wyświetla odliczanie 3-2-1 przed rozpoczęciem gry. Doskonale nadaje się do gier z wyścigami.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>Gry bot podąża za ścieżką ta opcja pokazuje za którymi punktami ścieżki podąża który bot. Cele ścieżki pokazane są jako siatki pokolorowane w taki sam sposób jak bot dla którego przeznaczona jest ścieżka.</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Pokazuje kształty jakie używane są przez boty i obiekty przy uderzeniu w siebie nawzajem lub ziemię.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>Jeżeli któryś z botów używa wzroku lub słuchu, pokazuje które boty mogą one widzieć lub słyszeć.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>Mnożnik przyspieszenia edycji dla ziemi. Mniejsze zmniejsza prędkość, większy przyspiesza.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Określa głośność interfejsu użytkownika to jest menu i przycisków.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Określa głośność efektów w grze. Dotyczy to eksplozji, kolizji oraz dźwięków wydawanych przez bot-a.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Określa głośność wybranej muzyki odgrywanej w tle.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Określa widoczność wyników w tym kolorze. 
+Wyłączony: wynik nie będzie wogóle wyświetlany. 
+Cichy: wynik będzie wyświetlany w rogu ekranu bez efektów dodatkowych. 
+Głośny: zdarzenia związane z wynikiem będą animowane z miejsca powstania wyniku do tablicy wyników.</desc>
+  </helpText>
+
+  <!-- Help for USer Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>Pozwala na wyłączenie chmurek z podpowiedziami.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>Pozwala na wyłączenie podpowiedzi systemowych. Podpowiedzi wyświetlane są zawsze gdy system wykryje sytuację która może spowodowac problem.
+Kiedy podpowiedź jest wyświetlana, otrzymasz możliwość wyłączenia takiej podpowiedzi w przyszłości.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>Normalnie gdy menu narzędziowe kontrolera jest aktywne, tło jest rozmyte i nie można poruszać kamerą. Przez wyłączenie tej opcji kamera ciągle może działać, jednakże ciągle musisz wybrać jedno z narzędzi zanim zaczniesz zmieniać świat.
+Wyłączenie tej opcji powowduje, że lewy drążek służy do kontrolowania kamerą i należy używać DPada lub spustów do wyboru narzędzia.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>Ta opcja czyści flagę wyłączenia podpowiedzi systemowych gdy poprzednio wybrano wyłączenie podpowiedzi (tak by nie pojawiała się ponownie).</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Określa ilość tekstu pomocy wyświetlanej w lewym górnym rogu ekranu.</desc>
+  </helpText>
+  
+  <helpText id ="InvertYAxis">
+    <desc>Odwraca ruch gracza w osi Y (góra/dół)</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Odwraca ruch gracza w osi X (lewo/prawo)</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Przesuwając drążek powoduje zmianę położenia kamery.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>Przesuwając drążek w lewo powoduje obrót kamery w prawo.</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>Określenie "overscan" mówi o ilości renderowanych obrazów które są obcinane na krawędziach ekranu. Liczba ta zależy od urządzenia wyświetlającego jak i połączenia do urządzenia. Suwak pozwala na kontrolowanie jak bardzo w środku ekranu pomocniki wyświetlania są wypozycjonowane. W telewizorach TV zwykle 20% daje najlepsze wyniki. Na monitorach komputerowych można pracować spokojnie z wartościami 0 lub 5%. Eksperymentuj i użyj wartości które najlepsze są dla Ciebie.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>Kiedy jest ustawione inni użytkownicy będą mogli dodawać światy do Twojej kolejki wczytywanych światów.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>Jeżeli jest ustawione, światy które wczytujesz od innych użytkowników będą automatycznie ustawione jako współdzielone, powodując, że w przyszłych sesjach współdzielonych będą dostępne do pobrania.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>W sesjach współdzielonych, automatycznie pobieraj światy oznaczone jako "ulubione".</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>Zasięg użyty przez filtr blisko, używany przez sensory widoczności i słuchu. Jednostki przedstawione w metrach. Jako wzór można posłużyć się tym, że pojedyncza kostka z lądem ma pół metra.</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>Zasięg użyty dla filtru daleko, używany przez sensory widoczności i słuchu. Jednostki przedstawione w metrach. Jako wzór można posłużyć się tym, że pojedyncza kostka z lądem ma pół metra.</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>Jeżeli jest zaznaczony, podczas startu KODU będzie sprawdzało czy są dostępne nowe wersje programu.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>Jeżeli jest zaznaczone KODU będzie wysyło anonimowe informacje do Microsoft o tym jak używane jest KODU. Ta inforamcja pomoże w rozwoju KODU.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>Jeżeli zaznaczono, podczas następnego uruchomienia KODU film wideo zostanie odtworzony (w języku angielskim).</desc>
+  </helpText>
+
+</XmlHelpTextData>
+

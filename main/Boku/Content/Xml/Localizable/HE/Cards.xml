@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tiles>
+  <sensor>
+    <gamepad label="שלט משחק">אפשר לשחקן לשלוט בדמות. ציין כפתור, הדק או סטיק, ואם תרצה גם משתתף.</gamepad>
+    <keyboard label="מקלדת">אפשר לשחקן לשלוט בדמות. ציין איזה מקש.</keyboard>
+    <mouse label="עכבר">הגב לקלט עכבר</mouse>
+    <touch label="מגע">הגב לקלט מגע</touch>
+    <eyes label="לראות">הגב כאשר אתה רואה עצם בתלות בסוג או צבע. גבעות וקירות  יכולים לחסום ראייה אם אתה משתמש במסנן קו-ראייה</eyes>
+    <ears label="לשמוע">הגב כאשר אתה שומע עצם בתלות בסוג או בקול. שמיעה עובדת דרך קירות.</ears>
+    <bumpers label="להתנגש">הגב כאשר אתה מתנגש בעצם בתלות בסוג, צבע וכו'.</bumpers>
+    <timer label="שעון">הגב למספר השניות שעוברות. הוסף מספרים כדי להאריך זמנים.</timer>
+    <got label="קיבל">הגב כאשר אתה מרים משהו בתלות בסוג, צבע וכו'.</got>
+    <scored label="תוצאה">הגב לשינויים בתוצאות.</scored>
+    <health label="בריאות">הגב לשינויים בבריאות.</health>
+    <missilehit label="פגיעה">הגב לפגיעה שלך בעצם אחר. טוב לספירת תוצאות, אבל אפשר לעשות מה שרוצים - כמו להפוך רובוטים לורודים ע"י פגיעה בהם.</missilehit>
+    <held label="מוחזק">הגב להרמה ע"י עצם אחר.</held>
+    <terrain label="ביבשה">הגב לסוגים שונים של קרקע.</terrain>
+    <water label="במים">הגב לסוגים שונים של מים.</water>
+    <beamed label="משוגר">הגב לשיגור של סלע מאדים.</beamed>
+    <inspected label="נבדק">הגב לבדיקה של סלע מאדים.</inspected>
+    <scanned label="נסרק">הגב כאשר סלע לא מוכר נסרק לצורך חשיפתו.</scanned>
+    <endofpath label="סוף מסלול">הגב בהגעה לסוף מסלול.</endofpath>
+    <always label="תמיד">עשה משהו כל הזמן. לא חובה.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="קודו">קודו הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</boku>
+    <bokubot label="קודו">קודו הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</bokubot>
+    <anything label="דבר כלשהו" />
+    <me label="אני">בדוק רק את הרובוט המריץ תוכנית זו</me>
+    <said label="אמר">הקשב לדמות אחרת והמתן שתאמר משהו. הקלד למה אתה רוצה להקשיב.</said>
+    <countnone label="כלום">הגב כאשר אתה לא רואה דבר שמתאים לתיאור. לדוגמה, לראות - כחול - כלום יגיב כאשר לא נראה דבר כחול.</countnone>
+    <starfish label="כוכב ים">כוכב הים הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</starfish>
+    <clam label="צדפה">צדפה היא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותה ניתן לתכנת.</clam>
+    <seagrass label="עשבי ים">עשבי ים הם דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותם ניתן לתכנת.</seagrass>
+    <seagrasssingle label="עשב ים">עשב ים הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</seagrasssingle>
+    <lilypad label="חבצלות מים">חבצלות המים הן דמויות אותן אתה יכול להוסיף למשחקך שאת התנהגותן ניתן לתכנת.</lilypad>
+    <lilypadsingle label="חבצלת מים">חבצלת המים היא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותה ניתן לתכנת.</lilypadsingle>
+    <flyfish label="דג מעופף">דג מעופף הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</flyfish>
+    <jet label="סילון">סילון הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</jet>
+    <light label="אור">האור הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת. הוא מאיר דברים. אבל יכולים להיות רק ארבעה.</light>
+    <fan label="מאוורר">המאוורר הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</fan>
+    <octopus label="תמנון">התמנון הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</octopus>
+    <fastbot label="אופנוע">אופנוע הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</fastbot>
+    <saucer label="צלחת">מצטער, אני לא יכול לספר יותר.  המידע על צלחת מעופפת מסווג.</saucer>
+    <windblimp label="ספינת אוויר">ספינת אוויר היא דמות מעופפת אותה אתה יכול להוסיף למשחקך שאת התנהגותה ניתן לתכנת.</windblimp>
+    <balloonbot label="בלון">בלון הוא דמות מרחפת אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</balloonbot>
+    <subbot label="צוללת">צוללת היא דמות תת מימית אותה אתה יכול להוסיף למשחקך שאת התנהגותה ניתן לתכנת.</subbot>
+    <terracannon label="תותח">תותח הוא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותו ניתן לתכנת.</terracannon>
+    <puck label="דיסקית">דיסקית היא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותה ניתן לתכנת.</puck>
+    <wisp label="ערפילית">ערפילית היא דמות אותה אתה יכול להוסיף למשחקך שאת התנהגותה ניתן לתכנת.</wisp>
+    <anybot label="רובוט כלשהו">חפש רובוט כלשהו.</anybot>
+    <turtle label="צב">הגב לצב.</turtle>
+    <rover label="משוטט">הגב למשוטט.</rover>
+    <pushpad label="דחפן">הגב לדחפן.</pushpad>
+    <sputnik label="ספוטניק">הגב לספוטניק.</sputnik>
+    <stick label="מקל">הגב למקל.</stick>
+    <stickboy label="מקל">הגב למקל.</stickboy>
+    <drum label="תוף">הגב לתוף.</drum>
+    <mine label="מוקש">הגב למוקש.</mine>
+    <cloud label="ענן">הגב לענן.</cloud>
+    <swimfish label="דג">הגב לדג.</swimfish>
+    <floatbot label="אונייה">הגב לאונייה.</floatbot>
+    <factory label="מפעל">הגב למפעל.</factory>
+    <hut label="בקתה">הגב לבקתה.</hut>
+    <castle label="טירה">הגב לטירה.</castle>
+    <fruit label="תפוח">הגב לתפוח.</fruit>
+    <inkjet label="ענן דיו">הגב לענן דיו.</inkjet>
+    <iceberg label="קרחון">הגב לקרחון.</iceberg>
+    <rock label="סלע">הגב לסלע.</rock>
+    <rockLowValue label="געשי">הגב לסלע געשי.</rockLowValue>
+    <rockHighValue label="משקע">הגב לסלע משקע.</rockHighValue>
+    <rockLowValueUnknown label="לא מוכר">סלע געשי המופיע כלא מוכר עד לסריקה, שיגור או בדיקה.</rockLowValueUnknown>
+    <rockHighValueUnknown label="לא מוכר">סלע משקע המופיע כלא מוכר עד לסריקה, שיגור או בדיקה.</rockHighValueUnknown>
+    <rockUnknown label="לא מוכר">הגב לסלע לא מוכר.</rockUnknown>
+    <tree label="עץ">הגב לעץ.</tree>
+    <pipe label="צינור">הגב לצינור.</pipe>
+    <pipeStraight label="צינור ישר">הגב לצינור ישר.</pipeStraight>
+    <pipeCross label="צינור מוצלב">הגב לצינור מוצלב.</pipeCross>
+    <pipeCorner label="צינור פינתי">הגב לצינור פינתי.</pipeCorner>
+    <underwater label="תת מימי">הגב לעצמים תת מימיים.</underwater>
+    <building label="בנין">הגב לבנין.</building>
+    <flower label="פרח" />
+    <gate label="שער" />
+    <cursor label="סמן">הגב לסמן.</cursor>
+    <star label="כוכב">הגב לכוכב.</star>
+    <coin label="מטבע">הגב למטבע.</coin>
+    <soccerball label="כדורגל">הגב לכדורגל.</soccerball>
+    <heart label="לב">הגב ללב.</heart>
+    <bullet label="תחמושת">הגב לתחמושת.</bullet>
+    <Black label="שחור">הגב למשהו שחור.</Black>
+    <Grey label="אפור">הגב למשהו אפור.</Grey>
+    <white label="לבן">הגב למשהו לבן.</white>
+    <red label="אדום">הגב למשהו אדום.</red>
+    <orange label="כתום">הגב למשהו כתום.</orange>
+    <yellow label="צהוב">הגב למשהו צהוב.</yellow>
+    <green label="ירוק">הגב למשהו ירוק.</green>
+    <blue label="כחול">הגב למשהו כחול.</blue>
+    <purple label="סגול">הגב למשהו סגול.</purple>
+    <pink label="ורוד">הגב למשהו ורוד.</pink>
+    <brown label="חום">הגב למשהו חום.</brown>
+    <PathBlack label="מסלול שחור">הגב למסלול שחור.</PathBlack>
+    <PathGrey label="מסלול אפור">הגב למסלול אפור.</PathGrey>
+    <PathWhite label="מסלול לבן">הגב למסלול לבן.</PathWhite>
+    <PathRed label="מסלול אדום">הגב למסלול אדום.</PathRed>
+    <PathOrange label="מסלול כתום">הגב למסלול כתום.</PathOrange>
+    <PathYellow label="מסלול צהוב">הגב למסלול צהוב.</PathYellow>
+    <PathGreen label="מסלול ירוק">הגב למסלול ירוק.</PathGreen>
+    <PathBlue label="מסלול כחול">הגב למסלול כחול.</PathBlue>
+    <PathPurple label="מסלול סגול">הגב למסלול סגול.</PathPurple>
+    <PathPink label="מסלול ורוד">הגב למסלול ורוד.</PathPink>
+    <PathBrown label="מסלול חום">הגב למסלול חום.</PathBrown>
+    <pathplain label="פשוט" />
+    <pathroad label="דרך" />
+    <pathwall label="קיר" />
+    <pathflora label="צמחיה" />
+    <yucca1 label="עץ" />
+    <yucca2 label="עץ" />
+    <yucca3 label="עץ" />
+    <bigyucca1 label="עץ" />
+    <expresshappy label="שמח">הגב לרובוט שמח.</expresshappy>
+    <expresssad label="עצוב">הגב לרובוט עצוב.</expresssad>
+    <expressangry label="כועס">הגב לרובוט כועס.</expressangry>
+    <expresscrazy label="משוגע">הגב לרובוט משוגע.</expresscrazy>
+    <expresshearts label="לבבות">הגב לרובוט מראה לבבות.</expresshearts>
+    <expressflowers label="פרחים">הגב לרובוט מראה פרחים.</expressflowers>
+    <expressstars label="כוכבים">הגב לרובוט מראה כוכבים.</expressstars>
+    <expressswear label="מקלל">הגב לרובוט מקלל.</expressswear>
+    <expressnormal label="רגיל">הגב לרובוט שפשוט מתנהג רגיל</expressnormal>
+    <expressnone label="ריק">הגב לרובוט שפשוט מתנהג רגיל</expressnone>
+    <moving label="זז">הגב לרובוט רק אם הוא זז.</moving>
+    <camouflage label="הסוואה">הגב לרובוט רק אם הוא מוסווה.</camouflage>
+    <closeby label="קרוב">קרוב גורם לדמות לשים לב רק לעצמים קרובים אליה.  מעצמים רחוקים היא תתעלם.</closeby>
+    <faraway label="רחוק">הגב רק לדברים רחוקים.</faraway>
+    <infront label="לפני">הגב רק לדברים לפני הרובוט.</infront>
+    <behind label="מאחורי">הגב רק לדברים מאחורי הרובוט.</behind>
+    <toleft label="משמאל">הגב רק לדברים משמאל לרובוט.</toleft>
+    <toright label="מימין">הגב רק לדברים מימין לרובוט.</toright>
+    <over label="מעל">הגב רק לדברים גבוהים מהרובוט.</over>
+    <under label="מתחת">הגב רק לדברים נמוכים מהרובוט.</under>
+    <lineofsight label="קו ראייה">שטח וקירות חוסמים חיישן.</lineofsight>
+    <countfew label="מעט">הגב רק כאשר אתה רואה מעט ממשהו.</countfew>
+    <countmany label="הרבה">הגב רק כאשר אתה רואה הרבה ממשהו.</countmany>
+    <clustermany label="מקבץ">הגב רק כשאתה רואה מקבץ של דברים.</clustermany>
+    <countany label="כלשהו" />
+    <leftstick label="L ג'ויסטיק">הגב לג'ויסטיק שמאל בשלט. טוב לתזוזה.</leftstick>
+    <rightstick label="R ג'ויסטיק">הגב לג'ויסטיק ימין בשלט. טוב לירי.</rightstick>
+    <abutton label="כפתור A">הגב לכפתור A בשלט</abutton>
+    <bbutton label="כפתור B">הגב לכפתור B בשלט</bbutton>
+    <xbutton label="כפתור X">הגב לכפתור X בשלט</xbutton>
+    <ybutton label="כפתור Y">הגב לכפתור Y בשלט</ybutton>
+    <lefttrigger label="הדק שמאל">הגב להדק שמאל בשלט.</lefttrigger>
+    <righttrigger label="הדק ימין">הגב להדק ימין בשלט.</righttrigger>
+    <lefttrigger_analog label="הדק שמאל">הגב להדק שמאל בשלט.</lefttrigger_analog>
+    <righttrigger_analog label="הדק ימין">הגב להדק ימין בשלט.</righttrigger_analog>
+    <mouse>
+      <button>
+        <left label="שמאל">הגב לכפתור השמאלי של העכבר.</left>
+        <right label="ימין">הגב לכפתור הימני של העכבר.</right>
+      </button>
+      <hover label="מעל">הגב לריחוף של העכבר מעל עצן או שטח.</hover>
+      <move label="זוז">הגב לתזוזה של העכבר.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="נגיעה">הגב לנגיעה פעילה (מסך מגע)</touching>
+        <tap label="גע">הגב לנגיעה (מסך מגע).</tap>
+        <rotate label="סובב">הגב למחוות סובב (מסך מגע).</rotate>
+        <swipe label="החלק (קצר)">הגב למחוות החלקה קצרה (מסך מגע).</swipe>
+        <slide label="החלק (ארוך)">הגב למחוות החלקה ארוכה (מסך מגע).</slide>
+      </gesture>
+      <guiButton>
+        <White label="לבן">בודק כפתור פנל לבן, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</White>
+        <Black label="שחור">בודק כפתור פנל שחור, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Black>
+        <Grey label="אפור">בודק כפתור פנל אפור, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Grey>
+        <Red label="אדום">בודק כפתור פנל אדום, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Red>
+        <Green label="ירוק">בודק כפתור פנל ירוק, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Green>
+        <Blue label="כחול">בודק כפתור פנל כחול, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Blue>
+        <Orange label="כתום">בודק כפתור פנל כתום, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Orange>
+        <Yellow label="צהוב">בודק כפתור פנל צהוב, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Yellow>
+        <Purple label="סגול">בודק כפתור פנל סגול, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Purple>
+        <Pink label="ורוד">בודק כפתור פנל ורוד, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Pink>
+        <Brown label="חום">בודק כפתור פנל חום, אשר מוצג בתצוגה עילית בברירת מחדל. (בקרו בהגדרות עולם כדי לשנות)</Brown>
+      </guiButton>
+      <!-- Virtual Controller -->
+      <controllerButton_X label="כפתור X">הגב למגע בכפתור X על המסך.</controllerButton_X>
+      <controllerButton_Y label="כפתור Y">הגב למגע בכפתור Y על המסך.</controllerButton_Y>
+      <controllerButton_A label="כפתור A">הגב למגע בכפתור A על המסך.</controllerButton_A>
+      <controllerButton_B label="כפתור B">הגב למגע בכפתור B על המסך.</controllerButton_B>
+    </touch>
+    <ArrowKeys label="חיצים">הגב למקשי החץ במקלדת</ArrowKeys>
+    <WASDKeys label="WASD">הגב למקשי WASD ('שדג) במקלדת</WASDKeys>
+    <Akey label="A">הגב למקש A במקלדת</Akey>
+    <Bkey label="B">הגב למקש B במקלדת</Bkey>
+    <Ckey label="C">הגב למקש C במקלדת</Ckey>
+    <Dkey label="D">הגב למקש D במקלדת</Dkey>
+    <Ekey label="E">הגב למקש E במקלדת</Ekey>
+    <Fkey label="F">הגב למקש F במקלדת</Fkey>
+    <Gkey label="G">הגב למקש G במקלדת</Gkey>
+    <Hkey label="H">הגב למקש H במקלדת</Hkey>
+    <Ikey label="I">הגב למקש I במקלדת</Ikey>
+    <Jkey label="J">הגב למקש J במקלדת</Jkey>
+    <Kkey label="K">הגב למקש K במקלדת</Kkey>
+    <Lkey label="L">הגב למקש L במקלדת</Lkey>
+    <Mkey label="M">הגב למקש M במקלדת</Mkey>
+    <Nkey label="N">הגב למקש N במקלדת</Nkey>
+    <Okey label="O">הגב למקש O במקלדת</Okey>
+    <Pkey label="P">הגב למקש P במקלדת</Pkey>
+    <Qkey label="Q">הגב למקש Q במקלדת</Qkey>
+    <Rkey label="R">הגב למקש R במקלדת</Rkey>
+    <Skey label="S">הגב למקש S במקלדת</Skey>
+    <Tkey label="T">הגב למקש T במקלדת</Tkey>
+    <Ukey label="U">הגב למקש U במקלדת</Ukey>
+    <Vkey label="V">הגב למקש V במקלדת</Vkey>
+    <Wkey label="W">הגב למקש W במקלדת</Wkey>
+    <Xkey label="X">הגב למקש X במקלדת</Xkey>
+    <Ykey label="Y">הגב למקש Y במקלדת</Ykey>
+    <Zkey label="Z">הגב למקש Z במקלדת</Zkey>
+    <D0key label="0">הגב למקש 0 במקלדת</D0key>
+    <D1key label="1">הגב למקש 1 במקלדת</D1key>
+    <D2key label="2">הגב למקש 2 במקלדת</D2key>
+    <D3key label="3">הגב למקש 3 במקלדת</D3key>
+    <D4key label="4">הגב למקש 4 במקלדת</D4key>
+    <D5key label="5">הגב למקש 5 במקלדת</D5key>
+    <D6key label="6">הגב למקש 6 במקלדת</D6key>
+    <D7key label="7">הגב למקש 7 במקלדת</D7key>
+    <D8key label="8">הגב למקש 8 במקלדת</D8key>
+    <D9key label="9">הגב למקש 9 במקלדת</D9key>
+    <Spacekey label="רווח">הגב למקש רווח במקלדת</Spacekey>
+    <PageUpkey label="PageUp">הגב למקש PageUp במקלדת</PageUpkey>
+    <PageDownkey label="PageDown">הגב למקש PageDown במקלדת</PageDownkey>
+    <Endkey label="End">הגב למקש End במקלדת</Endkey>
+    <Leftkey label="חץ שמאלה">הגב למקש חץ שמאלה במקלדת</Leftkey>
+    <Upkey label="חץ למעלה">הגב למקש חץ למעלה במקלדת</Upkey>
+    <Rightkey label="חץ ימינה">הגב למקש חץ ימינה במקלדת</Rightkey>
+    <Downkey label="חץ למטה">הגב למקש חץ למטה במקלדת</Downkey>
+    <Insertkey label="Insert">הגב למקש Insert במקלדת</Insertkey>
+    <Deletekey label="Delete">הגב למקש Delete במקלדת</Deletekey>
+    <LeftWindowskey label="חלונות שמאלי">הגב למקש חלונות שמאלי במקלדת</LeftWindowskey>
+    <RightWindowskey label="חלונות ימני">הגב למקש חלונות ימני במקלדת</RightWindowskey>
+    <Multiplykey label="*">הגב למקש כפל במקלדת</Multiplykey>
+    <Addkey label="+">הגב למקש חיבור במקלדת</Addkey>
+    <Subtractkey label="-">הגב למקש חיסור במקלדת</Subtractkey>
+    <Decimalkey label=".">הגב למקש נקודה עשרונית במקלדת</Decimalkey>
+    <Dividekey label="/">הגב למקש חלוקה במקלדת</Dividekey>
+    <LeftShiftkey label="שיפט שמאלי">הגב למקש שיפט (Shift) שמאלי במקלדת</LeftShiftkey>
+    <RightShiftkey label="שיפט ימני">הגב למקש שיפט (Shift) ימני במקלדת</RightShiftkey>
+    <LeftControlkey label="קונטרול שמאלי">הגב למקש קונטרול (Ctrl) שמאלי במקלדת</LeftControlkey>
+    <RightControlkey label="קונטרול ימני">הגב למקש קונטרול (Ctrl) ימני במקלדת</RightControlkey>
+    <LeftAltkey label="אלט שמאלי">הגב למקש אלט (Alt) שמאלי במקלדת</LeftAltkey>
+    <RightAltkey label="אלט ימני">הגב למקש אלט (Alt) ימני במקלדת</RightAltkey>
+    <OemSemicolonkey label=";">הגב למקש נקודה פסיק במקלדת</OemSemicolonkey>
+    <OemPluskey label="+">הגב למקש פלוס במקלדת</OemPluskey>
+    <OemCommakey label=",">הגב למקש פסיק במקלדת</OemCommakey>
+    <OemMinuskey label="-">הגב למקש מינוס במקלדת</OemMinuskey>
+    <OemPeriodkey label=".">הגב למקש נקודה במקלדת</OemPeriodkey>
+    <OemQuestionkey label="?">הגב למקש סימן שאלה במקלדת</OemQuestionkey>
+    <OemTildekey label="~">הגב למקש טילדה במקלדת</OemTildekey>
+    <OemOpenBracketskey label="[">הגב למקש פתח סוגרים מרובעים במקלדת</OemOpenBracketskey>
+    <OemPipekey label="|">הגב למקש קו במקלדת</OemPipekey>
+    <OemCloseBracketskey label="]">הגב למקש סגור סוגרים מרובעים במקלדת</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">הגב למקש מרכאות במקלדת</OemQuoteskey>
+    <OemBackslashkey label="\">הגב למקש קו נטוי הפוך במקלדת</OemBackslashkey>
+    <F1key label="F1">הגב למקש F1 במקלדת</F1key>
+    <F2key label="F2">הגב למקש F2 במקלדת</F2key>
+    <F3key label="F3">הגב למקש F3 במקלדת</F3key>
+    <F4key label="F4">הגב למקש F4 במקלדת</F4key>
+    <F5key label="F5">הגב למקש F5 במקלדת</F5key>
+    <F6key label="F6">הגב למקש F6 במקלדת</F6key>
+    <F7key label="F7">הגב למקש F7 במקלדת</F7key>
+    <F8key label="F8">הגב למקש F8 במקלדת</F8key>
+    <F9key label="F9">הגב למקש F9 במקלדת</F9key>
+    <F10key label="F10">הגב למקש F10 במקלדת</F10key>
+    <F11key label="F11">הגב למקש F11 במקלדת</F11key>
+    <F12key label="F12">הגב למקש F12 במקלדת</F12key>
+    <Shiftkey label="שיפט">הגב למקש שיפט (Shift) כלשהו במקלדת</Shiftkey>
+    <Controlkey label="קונטרול">הגב למקש קונטרול (Control) כלשהו במקלדת</Controlkey>
+    <Altkey label="אלט">הגב למקש אלט (Alt) כלשהו במקלדת</Altkey>
+    <Windowskey label="חלונות">הגב למקש חלונות (Windows) כלשהו במקלדת</Windowskey>
+    <player1 label="שחקן 1">הגב רק לשלט של שחקן מס' 1. ברירת המחדל היא להגיב לשלט כלשהו.</player1>
+    <player2 label="שחקן 2">הגב רק לשלט של שחקן מס' 2. ברירת המחדל היא להגיב לשלט כלשהו.</player2>
+    <player3 label="שחקן 3">הגב רק לשלט של שחקן מס' 3. ברירת המחדל היא להגיב לשלט כלשהו.</player3>
+    <player4 label="שחקן 4">הגב רק לשלט של שחקן מס' 4. ברירת המחדל היא להגיב לשלט כלשהו.</player4>
+    <terrain label="סוג">הגב לסוג מסויים של שטח.</terrain>
+    <water label="סוג">הגב לסוג מסויים של מים.</water>
+    <quartersecond label="שנייה">1/4 שנייה.  שלב עם אחרים לסכום לזמנים גדולים יותר.</quartersecond>
+    <_01second label="שנייה">שניה אחת. שלב עם אחרים לסכום לזמנים גדולים יותר.</_01second>
+    <_02seconds label="שניות">2 שניות. שלב עם אחרים לסכום לזמנים גדולים יותר.</_02seconds>
+    <_03seconds label="שניות">3 שניות. שלב עם אחרים לסכום לזמנים גדולים יותר.</_03seconds>
+    <_04seconds label="שניות">4 שניות. שלב עם אחרים לסכום לזמנים גדולים יותר.</_04seconds>
+    <_05seconds label="שניות">5 שניות. שלב עם אחרים לסכום לזמנים גדולים יותר.</_05seconds>
+    <_10seconds label="שניות">10 שניות. שלב עם אחרים לסכום לזמנים גדולים יותר.</_10seconds>
+    <_20seconds label="שניות">20 שניות. שלב עם אחרים לסכום לזמנים גדולים יותר.</_20seconds>
+    <_30seconds label="שניות">30 שניות. שלב עם אחרים לסכום לזמנים גדולים יותר.</_30seconds>
+    <_60seconds label="שניות">60 שניות. שלב עם אחרים לסכום לזמנים גדולים יותר.</_60seconds>
+    <_000point label="נקודות">0 נקודות.</_000point>
+    <_001point label="נקודה">נקודה אחת. שלב עם אחרים לסכום לסכומים גדולים יותר.</_001point>
+    <_002points label="נקודות">2 נקודות. שלב עם אחרים לסכום לסכומים גדולים יותר.</_002points>
+    <_003points label="נקודות">3 נקודות. שלב עם אחרים לסכום לסכומים גדולים יותר.</_003points>
+    <_004points label="נקודות">4 נקודות. שלב עם אחרים לסכום לסכומים גדולים יותר.</_004points>
+    <_005points label="נקודות">5 נקודות. שלב עם אחרים לסכום לסכומים גדולים יותר.</_005points>
+    <_010points label="נקודות">10 נקודות. שלב עם אחרים לסכום לסכומים גדולים יותר.</_010points>
+    <_020points label="נקודות">20 נקודות. שלב עם אחרים לסכום לסכומים גדולים יותר.</_020points>
+    <_050points label="נקודות">50 נקודות. שלב עם אחרים לסכום לסכומים גדולים יותר.</_050points>
+    <_100points label="נקודות">100 נקודות. שלב עם אחרים לסכום לסכומים גדולים יותר.</_100points>
+    <random label="אקראי">צור מספר אקראי באמצעות מספר אריחים. לדוגמה, אקראי - 5 יוצר מספר אקראי בין 0 ל-5.</random>
+    <scorebucket>
+      <color>
+        <white label="לבן">בודק תוצאות לבנות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</white>
+        <black label="שחור">בודק תוצאות שחורות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</black>
+        <grey label="אפור">בודק תוצאות אפואות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</grey>
+        <red label="אדום">בודק תוצאות אדומות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</red>
+        <green label="ירוק">בודק תוצאות ירודות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</green>
+        <blue label="כחול">בודק תוצאות כחולות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</blue>
+        <orange label="כתום">בודק תוצאות כתומות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</orange>
+        <yellow label="צהוב">בודק תוצאות צהובות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</yellow>
+        <purple label="סגול">בודק תוצאות סגולות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</purple>
+        <pink label="ורוד">בודק תוצאות ורודות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</pink>
+        <brown label="חום">בודק תוצאות חומות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</brown>
+      </color>
+      <letter>
+        <a label="תוצאה A">בודק את תוצאה A, אשר לעולם אינה מוצגת על לוח התוצאות.</a>
+        <b label="תוצאה B">בודק את תוצאה B, אשר לעולם אינה מוצגת על לוח התוצאות.</b>
+        <c label="תוצאה C">בודק את תוצאה C, אשר לעולם אינה מוצגת על לוח התוצאות.</c>
+        <d label="תוצאה D">בודק את תוצאה D, אשר לעולם אינה מוצגת על לוח התוצאות.</d>
+        <e label="תוצאה E">בודק את תוצאה E, אשר לעולם אינה מוצגת על לוח התוצאות.</e>
+        <f label="תוצאה F">בודק את תוצאה F, אשר לעולם אינה מוצגת על לוח התוצאות.</f>
+        <g label="תוצאה G">בודק את תוצאה G, אשר לעולם אינה מוצגת על לוח התוצאות.</g>
+        <h label="תוצאה H">בודק את תוצאה H, אשר לעולם אינה מוצגת על לוח התוצאות.</h>
+        <i label="תוצאה I">בודק את תוצאה I, אשר לעולם אינה מוצגת על לוח התוצאות.</i>
+        <j label="תוצאה J">בודק את תוצאה J, אשר לעולם אינה מוצגת על לוח התוצאות.</j>
+        <k label="תוצאה K">בודק את תוצאה K, אשר לעולם אינה מוצגת על לוח התוצאות.</k>
+        <l label="תוצאה L">בודק את תוצאה L, אשר לעולם אינה מוצגת על לוח התוצאות.</l>
+        <m label="תוצאה M">בודק את תוצאה M, אשר לעולם אינה מוצגת על לוח התוצאות.</m>
+        <n label="תוצאה N">בודק את תוצאה N, אשר לעולם אינה מוצגת על לוח התוצאות.</n>
+        <o label="תוצאה O">בודק את תוצאה O, אשר לעולם אינה מוצגת על לוח התוצאות.</o>
+        <p label="תוצאה P">בודק את תוצאה P, אשר לעולם אינה מוצגת על לוח התוצאות.</p>
+        <q label="תוצאה Q">בודק את תוצאה Q, אשר לעולם אינה מוצגת על לוח התוצאות.</q>
+        <r label="תוצאה R">בודק את תוצאה R, אשר לעולם אינה מוצגת על לוח התוצאות.</r>
+        <s label="תוצאה S">בודק את תוצאה S, אשר לעולם אינה מוצגת על לוח התוצאות.</s>
+        <t label="תוצאה T">בודק את תוצאה T, אשר לעולם אינה מוצגת על לוח התוצאות.</t>
+        <u label="תוצאה U">בודק את תוצאה U, אשר לעולם אינה מוצגת על לוח התוצאות.</u>
+        <v label="תוצאה V">בודק את תוצאה V, אשר לעולם אינה מוצגת על לוח התוצאות.</v>
+        <w label="תוצאה W">בודק את תוצאה W, אשר לעולם אינה מוצגת על לוח התוצאות.</w>
+        <x label="תוצאה X">בודק את תוצאה X, אשר לעולם אינה מוצגת על לוח התוצאות.</x>
+        <y label="תוצאה Y">בודק את תוצאה Y, אשר לעולם אינה מוצגת על לוח התוצאות.</y>
+        <z label="תוצאה Z">בודק את תוצאה Z, אשר לעולם אינה מוצגת על לוח התוצאות.</z>
+      </letter>
+      <local>
+        <a label="תוצאה a">The 'a' score, which is private to this character.</a>
+        <b label="תוצאה b">The 'b' score, which is private to this character.</b>
+        <c label="תוצאה c">The 'c' score, which is private to this character.</c>
+        <d label="תוצאה d">The 'd' score, which is private to this character.</d>
+        <e label="תוצאה e">The 'e' score, which is private to this character.</e>
+        <f label="תוצאה f">The 'f' score, which is private to this character.</f>
+        <g label="תוצאה g">The 'g' score, which is private to this character.</g>
+        <h label="תוצאה h">The 'h' score, which is private to this character.</h>
+        <i label="תוצאה i">The 'i' score, which is private to this character.</i>
+        <j label="תוצאה j">The 'j' score, which is private to this character.</j>
+        <k label="תוצאה k">The 'k' score, which is private to this character.</k>
+        <l label="תוצאה l">The 'l' score, which is private to this character.</l>
+        <m label="תוצאה m">The 'm' score, which is private to this character.</m>
+        <n label="תוצאה n">The 'n' score, which is private to this character.</n>
+        <o label="תוצאה o">The 'o' score, which is private to this character.</o>
+        <p label="תוצאה p">The 'p' score, which is private to this character.</p>
+        <q label="תוצאה q">The 'q' score, which is private to this character.</q>
+        <r label="תוצאה r">The 'r' score, which is private to this character.</r>
+        <s label="תוצאה s">The 's' score, which is private to this character.</s>
+        <t label="תוצאה t">The 't' score, which is private to this character.</t>
+        <u label="תוצאה u">The 'u' score, which is private to this character.</u>
+        <v label="תוצאה v">The 'v' score, which is private to this character.</v>
+        <w label="תוצאה w">The 'w' score, which is private to this character.</w>
+        <x label="תוצאה x">The 'x' score, which is private to this character.</x>
+        <y label="תוצאה y">The 'y' score, which is private to this character.</y>
+        <z label="תוצאה z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="גורם" />
+    <timertrigger label="גורם" />
+    <scoreis label="שווה" />
+    <scoreequals label="שווה">הגב כאשר התוצאה שווה למספר מסוים.</scoreequals>
+    <scorenotequals label="שונה">הגב כאשר התוצאה שונה ממספר מסוים.</scorenotequals>
+    <scoreabove label="מעל">הגב כאשר התוצאה מעל מספר כלשהו.</scoreabove>
+    <scorebelow label="מתחת">הגב כאשר התוצאה מעל מספר כלשהו.</scorebelow>
+    <scoregteq label="&gt;=">הגב כאשר התוצאה שווה למספר מסוים או גדולה ממנו.</scoregteq>
+    <scorelteq label="&lt;=">הגב כאשר התוצאה שווה למספר מסוים או קטנה ממנו.</scorelteq>
+    <healthis label="שווה" />
+    <healthabove label="מעל">הגב כאשר הבריאות מעל מספר כלשהו.</healthabove>
+    <healthbelow label="מתחת">הגב כאשר הבריאות מעל מספר כלשהו.</healthbelow>
+    <direction>
+      <up label="למעלה">הגב לדחיפת ג'ויסטיק למעלה.</up>
+      <right label="ימינה">הגב לדחיפת ג'ויסטיק ימינה.</right>
+      <down label="למטה">הגב לדחיפת ג'ויסטיק למטה.</down>
+      <left label="שמאלה">הגב לדחיפת ג'ויסטיק שמאלה.</left>
+      <clockwise label="ימינה">הגב למחוות סיבוב בכייון השעון.</clockwise>
+      <counterclockwise label="שמאלה">הגב למחוות סיבוב כנגד כיוון השעון.</counterclockwise>
+    </direction>
+    <not label="לא">הגב כאשר התנאי אינו מתאים.</not>
+  </filter>
+  <selector>
+    <closest label="קרוב ביותר" />
+    <objectrelative label="יחסי" />
+    <towardclosest label="לעבר">זוז לעבר מה שאתה מגיב אליו.</towardclosest>
+    <awayfromall label="הרחק מ">זוז הרחק ממה שאתה מגיב אליו.</awayfromall>
+    <avoidall label="התחמק">התחמק ממה שאתה מגיב אליו ע"י שמירת מרחק.</avoidall>
+    <wander label="טייל">טייל בכיוון אקראי. שמיש כשורה אחרונה בתוכנית כך שהדמות תזוז כאשר היא לא רודפת אחר משהו באופן פעיל.</wander>
+    <cruise label="ישר">זוז בכיוון אליו אתה מסתכל.</cruise>
+    <circle label="עיגול" />
+    <spin label="סיבוב">הסתובב במקום.</spin>
+    <forward label="קדימה" />
+    <hiddenturn label="פנה" />
+    <escape label="ברח" />
+    <followwaypoints label="בתוואי">זוז לאורך מסלול בצבע מסויים. ברירת המחדל היא לזוז במסלול כלשהו.</followwaypoints>
+    <moveupdown label="למעלה/למטה">זוז למעלה ולמטה.</moveupdown>
+    <moveup label="למעלה">זוז למעלה.</moveup>
+    <movedown label="למטה">זוז למטה.</movedown>
+    <moveleftright label="פנה">זוז שמאלה וימינה.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="שחקן 1" />
+      <_2 label="שחקן 2" />
+      <_3 label="שחקן 3" />
+      <_4 label="שחקן 4" />
+    </player>
+    <reset>
+      <world label="עולם">מאפס את המשחק, למעט תוצאות.</world>
+      <score label="תוצאה">מאפס את לוח התוצאות, או תוצאה מסוימת אם תספק צבע.</score>
+      <expression label="הבעה">מאפס את ההבעה של הדמות.</expression>
+      <glow label="זוהר">מאפס את הזוהר של הדמות.</glow>
+      <health label="בריאות">מאפס את הבריאות של הדמות.</health>
+    </reset>
+    <projectile>
+      <blip label="בליפ">בליפים הם קליעים מהירי-ירי - קלי-משקל יותר מאשר טילים.</blip>
+      <missile label="טיל">טילים הם גדולים ולא מאד מהירים, אבל חכמים מספיק לעקוב אחר מטרותיהם!</missile>
+    </projectile>
+    <slowly label="לאט">זוז לאט יותר. השתמש מספר פעמים כדי לזוז לאט אף יותר.</slowly>
+    <quickly label="מהר">זוז מרה יותר. השתמש מספר פעמים כדי לזוז מהר אף יותר.</quickly>
+    <speednormally label="רגיל">זוז רגיל. לא חובה.</speednormally>
+    <weakly label="חלש">עשה את זה חלש מהרגיל.</weakly>
+    <strongly label="חזק">עשה את זה חזק מהרגיל.</strongly>
+    <strengthnormally label="רגיל">עשה את זה חזק כרגיל. לא חובה.</strengthnormally>
+    <angle>
+      <low label="נמוכה">עשה את זה חלש מהרגיל.</low>
+      <high label="גבוהה">עשה את זה חזק מהרגיל.</high>
+    </angle>
+    <turnleft label="שמאל" />
+    <turnright label="ימין" />
+    <turntoward label="לעבר" />
+    <turnforward label="קדימה">מציין כי התנועה לא תקבע להיכן לפנות</turnforward>
+    <pitchup label="למעלה" />
+    <pitchdown label="למטה" />
+    <forward label="קדימה">הכיוון אליו פונה הדמות.</forward>
+    <north label="צפון" />
+    <east label="מזרח" />
+    <south label="דרום" />
+    <west label="מערב" />
+    <up label="למעלה" />
+    <down label="למטה" />
+    <distance>
+      <near label="קרוב">גרום לדמות להסתובב סביב המטרה מקרוב.</near>
+      <far label="רחוק">גרום לדמות להסתובב סביב המטרה מרחוק.</far>
+    </distance>
+    <objecticeberg label="קרחון">צור קרחון.</objecticeberg>
+    <objectrock label="סלע">צור סלע.</objectrock>
+    <objectrockLowValue label="סלע">צור סלע געשי.</objectrockLowValue>
+    <objectrockHighValue label="סלע">צור סלע משקע.</objectrockHighValue>
+    <objectfruit label="תפוח">צור תפוח.</objectfruit>
+    <objectinkjet label="ענן דיו">צור ענן דיו.</objectinkjet>
+    <objectstar label="כוכב">צור כוכב.</objectstar>
+    <objectcoin label="מטבע">צור מטבע.</objectcoin>
+    <objectheart label="לב">צור לב.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="כדור">צור כדורגל.</objectsoccerball>
+    <objectbullet label="תחמושת">צור תחמושת.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="עמוד 1">החלף לעמוד 1 או הכנס לתוך השורה.</taska>
+    <taskb label="עמוד 2">החלף לעמוד 2 או הכנס לתוך השורה.</taskb>
+    <taskc label="עמוד 3">החלף לעמוד 3 או הכנס לתוך השורה.</taskc>
+    <taskd label="עמוד 4">החלף לעמוד 4 או הכנס לתוך השורה.</taskd>
+    <taske label="עמוד 5">החלף לעמוד 5 או הכנס לתוך השורה.</taske>
+    <taskf label="עמוד 6">החלף לעמוד 6 או הכנס לתוך השורה.</taskf>
+    <taskg label="עמוד 7">החלף לעמוד 7 או הכנס לתוך השורה.</taskg>
+    <taskh label="עמוד 8">החלף לעמוד 8 או הכנס לתוך השורה.</taskh>
+    <taski label="עמוד 9">החלף לעמוד 9 או הכנס לתוך השורה.</taski>
+    <taskj label="עמוד 10">החלף לעמוד 10 או הכנס לתוך השורה.</taskj>
+    <taskk label="עמוד 11">החלף לעמוד 11 או הכנס לתוך השורה.</taskk>
+    <taskl label="עמוד 12">החלף לעמוד 12 או הכנס לתוך השורה.</taskl>
+    <expresshappy label="שמח">התנהג שמח.</expresshappy>
+    <expresssad label="עצוב">התנהג עצוב.</expresssad>
+    <expressangry label="כועס">התנהג כועס.</expressangry>
+    <expresscrazy label="משוגע">התנהג משוגע.</expresscrazy>
+    <expresshearts label="לבבות">הראה לבבות.</expresshearts>
+    <expressflowers label="פרחים">הראה פרחים.</expressflowers>
+    <expressstars label="כוכבים">הראה כוכבים.</expressstars>
+    <expressswear label="מקלל">הראה קללות ציוריות.</expressswear>
+    <expressnone label="ריק">התנהג רגיל והפסק להראות הכל</expressnone>
+    <_000point label="נקודות">0 נקודות. ניתן לציין גם צבע.</_000point>
+    <_001point label="נקודה">1 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_001point>
+    <_002points label="נקודות">2 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_002points>
+    <_003points label="נקודות">3 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_003points>
+    <_004points label="נקודות">4 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_004points>
+    <_005points label="נקודות">5 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_005points>
+    <_010points label="נקודות">10 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_010points>
+    <_020points label="נקודות">20 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_020points>
+    <_050points label="נקודות">50 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_050points>
+    <_100points label="נקודות">100 נקודות. השתמש במספר נקודות לסכום למספרים שונים. ניתן לציין גם צבע.</_100points>
+    <random label="אקראי">צור מספר אקראי באמצעות מספר אריחים. לדוגמה, אקראי - 5 יוצר מספר אקראי בין 0 ל-5.</random>
+    <teama label="קבוצה A" />
+    <teamb label="קבוצה B" />
+    <payloadzap label="המם">המם את המטרה למספר שניות.</payloadzap>
+    <payloadpop label="עלף">הרדם את המטרה עד שמישהו אחר יאפס את בריאותה.</payloadpop>
+    <payloadboom label="בום">העלם את המטרה בפיצוץ.</payloadboom>
+    <payloadvanish label="העלם">העלם את המטרה בשקט.</payloadvanish>
+    <black label="שחור" />
+    <grey label="אפור" />
+    <white label="לבן" />
+    <red label="אדום" />
+    <orange label="כתום" />
+    <yellow label="צהוב" />
+    <green label="ירוק" />
+    <blue label="כחול" />
+    <purple label="סגול" />
+    <pink label="ורוד" />
+    <brown label="חום" />
+    <glowoff label="כבוי">כבה כל זוהר.</glowoff>
+    <colorrandom label="אקראי">בחר צבע אקראי.</colorrandom>
+    <path>
+      <black label="שחור" />
+      <grey label="אפור" />
+      <white label="לבן" />
+      <red label="אדום" />
+      <orange label="כתום" />
+      <yellow label="צהוב" />
+      <green label="ירוק" />
+      <blue label="כחול" />
+      <purple label="סגול" />
+      <pink label="ורוד" />
+      <brown label="חום" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="לבן">משנה תוצאות לבנות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</white>
+        <black label="שחור">משנה תוצאות שחורות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</black>
+        <grey label="אפור">משנה תוצאות אפואות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</grey>
+        <red label="אדום">משנה תוצאות אדומות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</red>
+        <green label="ירוק">משנה תוצאות ירודות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</green>
+        <blue label="כחול">משנה תוצאות כחולות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</blue>
+        <orange label="כתום">משנה תוצאות כתומות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</orange>
+        <yellow label="צהוב">משנה תוצאות צהובות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</yellow>
+        <purple label="סגול">משנה תוצאות סגולות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</purple>
+        <pink label="ורוד">משנה תוצאות ורודות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</pink>
+        <brown label="חום">משנה תוצאות חומות, אשר מוצגות על לוח התוצאות בברירת המחדל. (בקר בהגדרות העולם כדי לשנות).</brown>
+      </color>
+      <letter>
+        <a label="תוצאה A">משנה את תוצאה A, אשר לעולם אינה מוצגת על לוח התוצאות.</a>
+        <b label="תוצאה B">משנה את תוצאה B, אשר לעולם אינה מוצגת על לוח התוצאות.</b>
+        <c label="תוצאה C">משנה את תוצאה C, אשר לעולם אינה מוצגת על לוח התוצאות.</c>
+        <d label="תוצאה D">משנה את תוצאה D, אשר לעולם אינה מוצגת על לוח התוצאות.</d>
+        <e label="תוצאה E">משנה את תוצאה E, אשר לעולם אינה מוצגת על לוח התוצאות.</e>
+        <f label="תוצאה F">משנה את תוצאה F, אשר לעולם אינה מוצגת על לוח התוצאות.</f>
+        <g label="תוצאה G">משנה את תוצאה G, אשר לעולם אינה מוצגת על לוח התוצאות.</g>
+        <h label="תוצאה H">משנה את תוצאה H, אשר לעולם אינה מוצגת על לוח התוצאות.</h>
+        <i label="תוצאה I">משנה את תוצאה I, אשר לעולם אינה מוצגת על לוח התוצאות.</i>
+        <j label="תוצאה J">משנה את תוצאה J, אשר לעולם אינה מוצגת על לוח התוצאות.</j>
+        <k label="תוצאה K">משנה את תוצאה K, אשר לעולם אינה מוצגת על לוח התוצאות.</k>
+        <l label="תוצאה L">משנה את תוצאה L, אשר לעולם אינה מוצגת על לוח התוצאות.</l>
+        <m label="תוצאה M">משנה את תוצאה M, אשר לעולם אינה מוצגת על לוח התוצאות.</m>
+        <n label="תוצאה N">משנה את תוצאה N, אשר לעולם אינה מוצגת על לוח התוצאות.</n>
+        <o label="תוצאה O">משנה את תוצאה O, אשר לעולם אינה מוצגת על לוח התוצאות.</o>
+        <p label="תוצאה P">משנה את תוצאה P, אשר לעולם אינה מוצגת על לוח התוצאות.</p>
+        <q label="תוצאה Q">משנה את תוצאה Q, אשר לעולם אינה מוצגת על לוח התוצאות.</q>
+        <r label="תוצאה R">משנה את תוצאה R, אשר לעולם אינה מוצגת על לוח התוצאות.</r>
+        <s label="תוצאה S">משנה את תוצאה S, אשר לעולם אינה מוצגת על לוח התוצאות.</s>
+        <t label="תוצאה T">משנה את תוצאה T, אשר לעולם אינה מוצגת על לוח התוצאות.</t>
+        <u label="תוצאה U">משנה את תוצאה U, אשר לעולם אינה מוצגת על לוח התוצאות.</u>
+        <v label="תוצאה V">משנה את תוצאה V, אשר לעולם אינה מוצגת על לוח התוצאות.</v>
+        <w label="תוצאה W">משנה את תוצאה W, אשר לעולם אינה מוצגת על לוח התוצאות.</w>
+        <x label="תוצאה X">משנה את תוצאה X, אשר לעולם אינה מוצגת על לוח התוצאות.</x>
+        <y label="תוצאה Y">משנה את תוצאה Y, אשר לעולם אינה מוצגת על לוח התוצאות.</y>
+        <z label="תוצאה Z">משנה את תוצאה Z, אשר לעולם אינה מוצגת על לוח התוצאות.</z>
+      </letter>
+      <local>
+        <a label="תוצאה a">The 'a' score, which is private to this character.</a>
+        <b label="תוצאה b">The 'b' score, which is private to this character.</b>
+        <c label="תוצאה c">The 'c' score, which is private to this character.</c>
+        <d label="תוצאה d">The 'd' score, which is private to this character.</d>
+        <e label="תוצאה e">The 'e' score, which is private to this character.</e>
+        <f label="תוצאה f">The 'f' score, which is private to this character.</f>
+        <g label="תוצאה g">The 'g' score, which is private to this character.</g>
+        <h label="תוצאה h">The 'h' score, which is private to this character.</h>
+        <i label="תוצאה i">The 'i' score, which is private to this character.</i>
+        <j label="תוצאה j">The 'j' score, which is private to this character.</j>
+        <k label="תוצאה k">The 'k' score, which is private to this character.</k>
+        <l label="תוצאה l">The 'l' score, which is private to this character.</l>
+        <m label="תוצאה m">The 'm' score, which is private to this character.</m>
+        <n label="תוצאה n">The 'n' score, which is private to this character.</n>
+        <o label="תוצאה o">The 'o' score, which is private to this character.</o>
+        <p label="תוצאה p">The 'p' score, which is private to this character.</p>
+        <q label="תוצאה q">The 'q' score, which is private to this character.</q>
+        <r label="תוצאה r">The 'r' score, which is private to this character.</r>
+        <s label="תוצאה s">The 's' score, which is private to this character.</s>
+        <t label="תוצאה t">The 't' score, which is private to this character.</t>
+        <u label="תוצאה u">The 'u' score, which is private to this character.</u>
+        <v label="תוצאה v">The 'v' score, which is private to this character.</v>
+        <w label="תוצאה w">The 'w' score, which is private to this character.</w>
+        <x label="תוצאה x">The 'x' score, which is private to this character.</x>
+        <y label="תוצאה y">The 'y' score, which is private to this character.</y>
+        <z label="תוצאה z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="אני">בצע את הפעולה על הרובוט המריץ את התוכנית.</me>
+    <it label="זה">בצע את התוכנית על רובוט המטרה.</it>
+    <any label="כלשהו">צליל כלשהו.</any>
+    <event>
+      <any label="אירוע">צליל כלשהו.</any>
+      <silly>
+        <any label="טפשי">צליל טפשי כלשהו.</any>
+        <bang label="באנג">צליל 'באנג' מסרטים מצויירים.</bang>
+        <pow label="פאו">צליל 'פאו' מסרטים מצויירים.</pow>
+      </silly>
+      <explode>
+        <any label="התפוצץ">צליל פיצוץ כלשהו</any>
+        <A label="בום A">צליל פיצוץ</A>
+        <B label="בום B">צליל פיצוץ</B>
+        <C label="בום C">צליל פיצוץ</C>
+        <D label="בום D">צליל פיצוץ</D>
+        <E label="בום E">צליל פיצוץ</E>
+      </explode>
+      <musical>
+        <any label="מוזיקלי">צליל מוזיקלי כלשהו.</any>
+        <glock>
+          <any label="פעמונה">צליל פעמונה כלשהו.</any>
+        </glock>
+        <glock01 label="דו פעמונה">טון של פעמונה.</glock01>
+        <glock02 label="דו דיאז פעמונה">טון של פעמונה.</glock02>
+        <glock03 label="רה פעמונה">טון של פעמונה.</glock03>
+        <glock04 label="רה דיאז פעמונה">טון של פעמונה.</glock04>
+        <glock05 label="מי פעמונה">טון של פעמונה.</glock05>
+        <glock06 label="פה פעמונה">טון של פעמונה.</glock06>
+        <glock07 label="פה דיאז פעמונה">טון של פעמונה.</glock07>
+        <glock08 label="סול פעמונה">טון של פעמונה.</glock08>
+        <glock09 label="סול דיאז פעמונה">טון של פעמונה.</glock09>
+        <glock10 label="לה פעמונה">טון של פעמונה.</glock10>
+        <glock11 label="לה דיאז פעמונה">טון של פעמונה.</glock11>
+        <glock12 label="סי פעמונה">טון של פעמונה.</glock12>
+        <gong>
+          <any label="גונג">צליל גונג כלשהו.</any>
+        </gong>
+        <gong01 label="דו גונג">טון של גונג.</gong01>
+        <gong02 label="דו דיאז גונג">טון של גונג.</gong02>
+        <gong03 label="רה גונג">טון של גונג.</gong03>
+        <gong04 label="רה דיאז גונג">טון של גונג.</gong04>
+        <gong05 label="מי גונג">טון של גונג.</gong05>
+        <gong06 label="פה גונג">טון של גונג.</gong06>
+        <gong07 label="פה דיאז גונג">טון של גונג.</gong07>
+        <gong08 label="סול גונג">טון של גונג.</gong08>
+        <gong09 label="סול דיאז גונג">טון של גונג.</gong09>
+        <gong10 label="לה גונג">טון של גונג.</gong10>
+        <gong11 label="לה דיאז גונג">טון של גונג.</gong11>
+        <gong12 label="סי גונג">טון של גונג.</gong12>
+        <saw>
+          <any label="גל שן מסור">צליל בצורת שן מסור כלשהו.</any>
+        </saw>
+        <saw01 label="דו גל שן מסור">טון גל בצורת שן מסור.</saw01>
+        <saw02 label="דו דיאז גל שן מסור">טון גל בצורת שן מסור.</saw02>
+        <saw03 label="רה גל שן מסור">טון גל בצורת שן מסור.</saw03>
+        <saw04 label="רה דיאז גל שן מסור">טון גל בצורת שן מסור.</saw04>
+        <saw05 label="מי גל שן מסור">טון גל בצורת שן מסור.</saw05>
+        <saw06 label="פה גל שן מסור">טון גל בצורת שן מסור.</saw06>
+        <saw07 label="פה דיאז גל שן מסור">טון גל בצורת שן מסור.</saw07>
+        <saw08 label="סול גל שן מסור">טון גל בצורת שן מסור.</saw08>
+        <saw09 label="סול דיאז גל שן מסור">טון גל בצורת שן מסור.</saw09>
+        <saw10 label="לה גל שן מסור">טון גל בצורת שן מסור.</saw10>
+        <saw11 label="לה דיאז גל שן מסור">טון גל בצורת שן מסור.</saw11>
+        <saw12 label="סי גל שן מסור">טון גל בצורת שן מסור.</saw12>
+        <sine>
+          <any label="גל סינוס">צליל  סינוס כלשהו.</any>
+        </sine>
+        <sine01 label="דו גל סינוס">טון גל סינוס.</sine01>
+        <sine02 label="דו דיאז גל סינוס">טון גל סינוס.</sine02>
+        <sine03 label="רה גל סינוס">טון גל סינוס.</sine03>
+        <sine04 label="רה דיאז גל סינוס">טון גל סינוס.</sine04>
+        <sine05 label="מי גל סינוס">טון גל סינוס.</sine05>
+        <sine06 label="פה גל סינוס">טון גל סינוס.</sine06>
+        <sine07 label="פה דיאז גל סינוס">טון גל סינוס.</sine07>
+        <sine08 label="סול גל סינוס">טון גל סינוס.</sine08>
+        <sine09 label="סול דיאז גל סינוס">טון גל סינוס.</sine09>
+        <sine10 label="לה גל סינוס">טון גל סינוס.</sine10>
+        <sine11 label="לה דיאז גל סינוס">טון גל סינוס.</sine11>
+        <sine12 label="סי גל סינוס">טון גל סינוס.</sine12>
+        <square>
+          <any label="גל סינוס">צליל מרובע כלשהו.</any>
+        </square>
+        <square01 label="דו גל סינוס">טון גל מרובע.</square01>
+        <square02 label="דו דיאז גל סינוס">טון גל מרובע.</square02>
+        <square03 label="רה גל סינוס">טון גל מרובע.</square03>
+        <square04 label="רה דיאז גל סינוס">טון גל מרובע.</square04>
+        <square05 label="מי גל סינוס">טון גל מרובע.</square05>
+        <square06 label="פה גל סינוס">טון גל מרובע.</square06>
+        <square07 label="פה דיאז גל סינוס">טון גל מרובע.</square07>
+        <square08 label="סול גל סינוס">טון גל מרובע.</square08>
+        <square09 label="סול דיאז גל סינוס">טון גל מרובע.</square09>
+        <square10 label="לה גל סינוס">טון גל מרובע.</square10>
+        <square11 label="לה דיאז גל סינוס">טון גל מרובע.</square11>
+        <square12 label="סי גל סינוס">טון גל מרובע.</square12>
+        <drums>
+          <any label="תופים">צליל תופים כלשהו.</any>
+        </drums>
+        <bassdrum label="בס">תופי בס.</bassdrum>
+        <hhclosed label="ה&quot;ה סגור">מצילת היי האט גבוהה סגורה.</hhclosed>
+        <hhopen label="ה&quot;ה פתוח">מצילת היי האט גבוהה פתוחה.</hhopen>
+        <shaker label="שייקר">שייקר.</shaker>
+        <snare label="סנר">תוף סנר.</snare>
+        <tomlow label="טם טם נמוך">טם טם נמוך צליל.</tomlow>
+        <tommed label="טם טם בינוני">טם טם בצליל בינוני.</tommed>
+        <tomhi label="טם טם גבוה">טם טם גבוה צליל.</tomhi>
+      </musical>
+      <arcade>
+        <any label="משחקי וידאו">צליל משחקי וידאו כלשהו.</any>
+        <roboton label="הפעל רובוט">צליל הפעלת רובוט.</roboton>
+        <robotoff label="כבה רובוט">צליל כיבוי רובוט.</robotoff>
+        <coinsound label="מטבע">צליל מטבע.</coinsound>
+        <gethealth label="בריאות+">צליל קבל בריאות.</gethealth>
+        <losehealth label="בריאות-">צליל אבד בריאות.</losehealth>
+        <shoot label="ירייה">צליל ירייה.</shoot>
+        <timer label="טיימר">צליל שעון טיימר.</timer>
+        <win label="נצחון">צליל נצחון.</win>
+        <lose label="הפסד">צליל הפסד.</lose>
+        <inkjet_fire label="יריית סילון דיו">צליל עבור יריית סילון דיו.</inkjet_fire>
+        <inkjet_impact label="פגיעת סילון דיו">צליל עבור פגיעת סילון דיו בעצם.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="שונות">צליל מרשימת השונות.</any>
+        <countdown_beep label="ספירה לאחור">צליל ביפ של ספירה לאחור.</countdown_beep>
+        <countdown_alarm label="ספירה לאחור רועשת">צליל ביפ דחוף של ספירה לאחור.</countdown_alarm>
+        <epic_stinger label="עוקץ עלילתי">צליל עוקץ עלילתי.</epic_stinger>
+        <epic_stinger_a label="עוקץ עלילתי א'">צליל עוקץ עלילתי.</epic_stinger_a>
+        <epic_stinger_b label="עוקץ עלילתי ב'">צליל עוקץ עלילתי.</epic_stinger_b>
+        <firepoof label="אש">צליל של הצתת אש.</firepoof>
+        <forcefieldup label="מגן +">צליל של הפעלת מגן.</forcefieldup>
+        <forcefielddown label="מגן -">צליל של כיבוי מגן.</forcefielddown>
+        <hide label="התחבא">צליל של התחבאות.</hide>
+        <lockontarget label="נעילה">צליל של נעילה על מטרה.</lockontarget>
+        <losetarget label="איבוד">צליל של איבוד מטרה.</losetarget>
+        <positivecondition label="טוב">צליל של משהו טוב קרה.</positivecondition>
+        <negativecondition label="רע">צליל של משהו רע קרה.</negativecondition>
+        <points label="נקודות">צליל קבלת נקודות.</points>
+        <pop label="פופ">צליל פופ.</pop>
+        <popout label="יציאה">צליל של יציאה.</popout>
+        <powerup label="הפעלה">צליל של הפעלה.</powerup>
+        <servo label="מנוע">צליל של מנוע.</servo>
+        <watersplash label="ספלאש">צליל של מכה במים.</watersplash>
+        <waterdrop label="טפטוף">צליל של טפטוף מים.</waterdrop>
+        <tagbase label="tag base">Tag base sound.</tagbase>
+        <whistlehuman label="שריקה">צליל של שריקה אנושית.</whistlehuman>
+        <whistlereferee label="שריקה">צליל של שריקת שופט.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="מגדל">צליל של שריקת שופט.</any>
+        <air_raid_siren label="אזעקה">צליל של אזעקה.</air_raid_siren>
+        <bomb_fall label="נפילת פצצה">צליל של נפילת פצצה.</bomb_fall>
+        <stun_fire label="יריית הלם">צליל של יריית הלם מהצריח.</stun_fire>
+        <zapper_fire label="יריית לייזר">צליל של יריית לייזר מהצריח.</zapper_fire>
+        <missile_fire label="יריית טיל">צליל של יריית טיל מהצריח.</missile_fire>
+        <shrinker_fire label="יריית מכווץ">צליל של יריית מכווץ מהצריח.</shrinker_fire>
+        <clam_coin_spit label="יריקת מטבע">צליל של יריקת מטבע.</clam_coin_spit>
+        <enemy_converted label="אויב הומר">צליל של אויב הומר.</enemy_converted>
+        <enemy_escape label="בריחת אויב">צליל של בריחת אויב.</enemy_escape>
+        <place_tower label="מיקום מגדל">צליל של מיקום מגדל.</place_tower>
+        <star_collect label="איסוף כוכב">צליל של איסוף כוכב.</star_collect>
+        <coin_collect label="איסוף מטבע">צליל של איסוף מטבע.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="מוזיקה">מוזיקה כלשהי מקבוצה זו.</any>
+      <omni>
+        <any label="אומני">מוזיקה כלשהי מקבוצה זו.</any>
+      </omni>
+    </music>
+    <mu_action label="פעולה">פעולה</mu_action>
+    <mu_ambientlight label="קליל">מוזיקת רקע קלה.</mu_ambientlight>
+    <mu_ambinetmodd label="אווירה">מוזיקת אווירה.</mu_ambinetmodd>
+    <mu_brightdowntempo label="איטי">מוזיקה בקצב איטי.</mu_brightdowntempo>
+    <mu_brightfunk label="פאנק">פאנקי!</mu_brightfunk>
+    <mu_brightguitar label="גיטרה">מוזיקת גיטרה</mu_brightguitar>
+    <mu_kodu label="קודו">נעימת קודו.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="מסתורית">מוזיקה כלשהי מקבוצה זו.</any>
+      </mystery>
+    </music>
+    <mysterya label="מסתורית A">מוזיקה מסתורית.</mysterya>
+    <mysteryb label="מסתורית B">מוזיקה מסתורית.</mysteryb>
+    <mysteryc label="מסתורית C">מוזיקה מסתורית.</mysteryc>
+    <music>
+      <driving>
+        <any label="מניעה">מוזיקה כלשהי מקבוצה זו.</any>
+      </driving>
+    </music>
+    <drivinga label="מהירה A">מוזיקה מהירה, מניעה.</drivinga>
+    <drivingb label="מהירה B">מוזיקה מהירה, מניעה.</drivingb>
+    <drivingc label="מהירה C">מוזיקה מהירה, מניעה.</drivingc>
+    <music>
+      <drama>
+        <any label="דרמה">מוזיקה כלשהי מקבוצה זו.</any>
+      </drama>
+    </music>
+    <dramaa label="דרמה A">מוזיקה דרמטית.</dramaa>
+    <dramab label="דרמה B">מוזיקה דרמטית.</dramab>
+    <environ>
+      <any label="סביבה">צליל כלשהו מקבוצה זו.</any>
+      <ambocean label="ים">צלילי ים.</ambocean>
+      <ambforest label="יער">צלילי יער.</ambforest>
+      <ambcity label="עיר">צלילי עיר.</ambcity>
+      <ambmeadow label="אחו">צלילי אחו.</ambmeadow>
+      <ambmars label="מאדים">צליל מאדים.</ambmars>
+      <arena>
+        <any label="זירה">צליל כלשהו מצלילי הזירה.</any>
+        <a label="זירה A">קהל גדול.</a>
+        <b label="זירה B">קהל גדול.</b>
+        <c label="זירה C">קהל גדול.</c>
+        <d label="זירה D">קהל גדול.</d>
+        <e label="זירה E">קהל גדול.</e>
+        <f label="זירה F">קהל גדול.</f>
+        <g label="זירה G">קהל גדול.</g>
+      </arena>
+    </environ>
+    <trackingnone label="ישר">הטיל יטוס ישר ולא יזוז למעלה ולמטה.</trackingnone>
+    <trackinghoming label="שיוט">הטיל יטוס לאורך הקרקע וינסה לטוס מעל הרים וגבעות.</trackinghoming>
+    <constraint>
+      <leftright label="שמאל/ימין">זוז שמאלה וימינה בלבד.</leftright>
+      <fwdback label="קדימה/אחורה">זוז קדימה ואחורה בלבד.</fwdback>
+      <updown label="מעלה/מטה" />
+      <northsouth label="צ/ד">זוז צפונה ודרומה בלבד.</northsouth>
+      <eastwest label="מז/מע">זוז מזרחה ומערבה בלבד.</eastwest>
+      <immobile label="קפוא">אל תאפשר תזוזה, אפילו אחרי התנגשות.</immobile>
+    </constraint>
+    <once label="פעם אחת">הקוד אחרי DO ירוץ רק פעם אחת בכל פעם שהתנאי אחרי WHEN מופעל.</once>
+    <watertype label="סוג מים">ציין את סוג המים.</watertype>
+  </modifier>
+  <actuator>
+    <nothing label="כלום" />
+    <movement label="זוז">טייל בעולם. סקור את האפשרויות. לדמויות שונות יש יכולות תזוזה שונות.</movement>
+    <turn label="פנה">שנה את כיוון ההסתכלות.</turn>
+    <eat label="אכול">צרוך את עצם המטרה, שחייב להיות קרוב.</eat>
+    <say label="אמור">הצג הודעת טקסט, בתוך בלון או תיבת דיאלוג. השתמש במקש אנטר כדי לפצל לשורות.</say>
+    <open label="פתח">פועל בדרכים שונות לדמויות שונות. נסה!</open>
+    <close label="סגור">פועל בדרכים שונות לדמויות שונות. נסה!</close>
+    <kick label="בעט">בעט במטרה, אם היא קרובה מספיק . ניתן לשנות עוצמה.</kick>
+    <make label="צור">צור עצם אחר. ניצן ליצור עצמים בסיסיים או כל עצם המסומן בר-יצירה.</make>
+    <launch label="שגר">בעט במטרה, אם היא קרובה מספיק . ניתן לשנות עוצמה.</launch>
+    <push label="דחוף">דחוף את המטרה לכיוון מסויים, אם היא קרובה מספיק . ניתן לשנות עוצמה.</push>
+    <pull label="משוך">משוך את המטרה לכיווננו, אם היא קרובה מספיק . ניתן לשנות עוצמה.</pull>
+    <camouflage label="הסווה">הסווה את המטרה כך שתהפוך לרוח רפאים עם התנגשות</camouflage>
+    <uncamouflage label="גלה">גלה את המטרה כך שתהפוך לעצם רגיל, נראה</uncamouflage>
+    <express label="הבע">הבע רגש או הראה אפקט מיוחד.  חלק מההבעות משנות את פני הדמות ואחרות מוצגות מעליה.</express>
+    <color label="צבע">שנה צבע שלך או של עצם המטרה.</color>
+    <glow label="האר">פלוט זוהר רדיואקטיבי. ניתן לשנות צבע.</glow>
+    <sound label="נגן">נגן צליל! יש הרבה לבחור מביניהם.</sound>
+    <stopsound label="שתוק">הפסק לנגן.</stopsound>
+    <jump label="קפוץ">דמויות שונות יכולות לקפוץ לגבהים שונים.</jump>
+    <watersurface label="צוף">פעולת הציפה גורמת לדמויות תת-מימיות לעלות לפני המים</watersurface>
+    <waterdive label="צלול">פעולת הצלילה גורמת לדמויות תת-מימיות לצלול לתחתית.</waterdive>
+    <airrise label="עוף">פעולת עוף גורמת לדמויות מעופפות לעוף לכיוון השמים.</airrise>
+    <airdrop label="נחת">פעולת נחת גורמת לדמויות מעופפות לעוף לכיוון הקרקע.</airdrop>
+    <switchtask label="החלף">החלף עמוד. רק כללים בדף הנוכחי קובעים. עמודים הם שמישים מאד להחלפת התנהגות.</switchtask>
+    <inlinetask label="מוכלל">בזמן ריצה זה יכלול את כל התכנות מדף אחר. זה שמיש עבור קוד קודו שתרצה לפרט על מספר דפים כי ניתן להכניסו פעם אחת ואז להכלילו היכן שתרצו.</inlinetask>
+    <nextlevel label="השלב הבא">מפעיל את השלב הבא בחבילה זו. שמיש עבור משחקים מרובי שלבים!</nextlevel>
+    <prevlevel label="השלב הקודם">מפעיל את השלב הקודם בחבילה זו. שמיש עבור משחקים מרובי שלבים!</prevlevel>
+    <waterraise label="העלה מפלס מים">העלה את מפלס המים תחת שחקן זה.</waterraise>
+    <waterlower label="הורד מפלס מים">הורד את מפלס המים תחת שחקן זה.</waterlower>
+    <setwater label="קבע סוג מים">קבע את סוג המים תחת שחקן זה.</setwater>
+    <rescale label="שנה גודל">משנה את גודל הדמות בתנועה חלקה.</rescale>
+    <rescaleinstant label="שנה גודל (מיד)">משנה את גודל הדמות באופן מיידי.</rescaleinstant>
+    <movementspeedmodify label="מהירות תזוזה">קובע את מהירות התנועה של הדמות.</movementspeedmodify>
+    <turningspeedmodify label="מהירות סיבוב">קובע את מהירות הסיבוב של הדמות.</turningspeedmodify>
+    <worldlightingchange label="תאורה">משנה את תאורת העולם בתנועה חלקה.</worldlightingchange>
+    <worldlightingchangeinstant label="תאורה (מיד)">משנה את תאורת העולם באופן מיידי.</worldlightingchangeinstant>
+    <worldskychange label="שמיים">משנה את שמי העולם בתנועה חלקה.</worldskychange>
+    <worldskychangeinstant label="שמיים (מיד)">משנה את שמי העולם באופן מיידי.</worldskychangeinstant>
+    <shoot label="תירה" />
+    <shoot2 label="תירה">תירה בליפים או טילים.</shoot2>
+    <beam label="קרן">משגר קרן לייזר לעבר סלע מאדים בכדי לזהות את תכונותיו הבסיסיות.</beam>
+    <inspect label="בדוק">קודח לתוך סלע מאדים תוך לקיחת דגימות למחקר עתידי.</inspect>
+    <scan label="סרוק">מגלה את סוגו של סלע לא מוכר בתוך המשוטט ובסביבתו.</scan>
+    <picture label="צלם">מצלם תמונה מזווית המבט של המשוטט.</picture>
+    <damage label="פגיעה">הפחת בריאות מעצמי או מדמות המטרה.</damage>
+    <heal label="הירפא">הוסף בריאות לעצמי או לדמות המטרה.
+        פעולת הרפואה גורמת לדמות או לדמות המטרה להירפא מפגיעה. ברירת המחדל היא שדמות המטרה תחלים; בדמות עצמה יכולה להחלים ע"י צרוף האריח "אני". אריחים נוספים יכולים לשמש לקבוע את סוג וכמות הריפוי.</heal>
+    <zap label="המם">המם אותי או את המטרה למספר שניות.</zap>
+    <pop label="עלף">שתק לחלוטין אותי או את המטרה עד שמישהו אחר יאפס את בריאותה.</pop>
+    <boom label="בום">העלם אותי או את המטרה בפיצוץ.</boom>
+    <vanish label="העלם">העלם אותי או את המטרה בשקט.</vanish>
+    <grab label="תפוס">הרם את המטרה אם אתה מספיק קרוב. ניתן להחזיק דבר אחד בלבד בכל עת.</grab>
+    <drop label="עזוב">עזוב את מה שאתה מחזיק.</drop>
+    <give label="תן">תן את מה שאתה מחזיק למטרה. אם המטרה לא יכולה להחזיק את זה, זה ייפול.</give>
+    <reset label="אפס">אפס תחום במשחק או בדמות.</reset>
+    <restart label="אתחל">אפס תחום במשחק או בדמות.</restart>
+    <gameover label="סיים">סיים את המשחק.</gameover>
+    <victory label="נצח">סיים את המשחק והראה הודעת נצחון. אם תציין צבע נראה אותו.</victory>
+    <score label="תוצאה">הוסף נקודות לתוצאה.</score>
+    <unscore label="הפחת">הפחת נקודות מתוצאה.</unscore>
+    <scoreset label="קבע תוצאה">קבע בתוצאה ערך מסוים.</scoreset>
+    <camera>
+      <followme label="עקוב">נקודת המבט צריכה לעקוב אחר הדמות.</followme>
+      <ignoreme label="התעלם">אל תטרח לעקוב אחר הדמות.</ignoreme>
+      <firstperson label="גוף ראשון">צפה דרך עיני הדמות.</firstperson>
+    </camera>
+  </actuator>
+  <root />
+  <group>
+    <colors label="צבעים" />
+    <pathcolors label="צבעי מסלול" />
+    <game label="משחק" />
+    <more label="עוד" />
+    <players label="שחקנים" />
+    <playermods label="שחקנים" />
+    <actions label="פעולות" />
+    <settings label="הגדרות" />
+    <combat label="קרב" />
+    <rover label="משוטט" />
+    <holding label="מחזיק" />
+    <sounds label="צלילים" />
+    <event label="אירוע">
+      <explode label="פיצוץ" />
+      <silly label="טפשי" />
+      <musical label="מוזיקלי">
+        <glock label="פעמונה" />
+        <saw label="מסור" />
+        <sine label="סינוס" />
+        <gong label="גונג" />
+        <square label="ריבועי" />
+        <drums label="תופים" />
+      </musical>
+      <arcade label="משחקי וידאו" />
+      <misc label="שונות" />
+      <tower label="מגדל" />
+    </event>
+    <environ label="סביבה">
+      <forest label="יער" />
+      <arena label="זירה" />
+    </environ>
+    <music label="מוזיקה">
+      <omni label="חדשה" />
+      <mystery label="מסתורית" />
+      <driving label="מניעה" />
+      <drama label="דרמה" />
+    </music>
+    <constraints label="גבול" />
+    <directions label="כיוון" />
+    <filters>
+      <directions label="כיוון" />
+      <touchbuttons label="כפתורים" />
+      <touchGuiButtons label="כפתורים" />
+      <gestures label="מחוות" />
+    </filters>
+    <expressions label="הבעה" />
+    <projectiles label="קליע" />
+    <camera label="מבט" />
+    <reset label="אפס" />
+    <options label="אפשרויות" />
+    <compare label="השווה" />
+    <points label="נקודות" />
+    <time label="זמן" />
+    <speed label="מהירות" />
+    <strength label="עוצמה" />
+    <angle label="זווית" />
+    <tracking label="מעקב" />
+    <bots label="רובוטים I" />
+    <bots2 label="רובוטים II" />
+    <objects label="עצמים" />
+    <tasks label="משימה" />
+    <terrains label="סוגים" />
+    <waters label="סוגים" />
+    <setwater label="סוג מים" />
+    <creatables label="ברי יצירה" />
+    <keyboard>
+      <letters label="אותיות" />
+      <numbers label="מספרים" />
+      <symbols label="סמלים" />
+      <misc label="שונות" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

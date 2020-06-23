@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>Nustato zoną aplink veikėją, kurioje atsidūrę objektai bus nustumti į šalį. Šis atstumas taip pat priklauso ir nuo objekto dydžio.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>Nustato, kokia jėga veikėjas stumia objektus. Ši jėga gali būti keičiama jėgos daugikliu.</desc>
+  </helpText>
+  
+  <helpText id="LightRange">
+    <desc>Nustato, kaip toli siekia ši šviesa (galioja tik šviečiantiems objektams).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+Šiuo daugikliu galima reguliuoti veikėjo greitį.
+Daugiklio reiškmė 1.0 atitinka standartinį greitį.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+Šiuo daugikliu galima reguliuoti veikėjo įsibėgėjimą.
+Daugiklio reiškmė 1.0 atitinka standartinį įsibėgėjimą.
+    </desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Užrakina veikėjo poziciją, kad jis nejudėtų. Bet veikėjas gali suktis.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>Padaro šį veikėją nesunaikinamu.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>Kai pasirinkta, virš veikėjo galvos bus rodoma nedidelė juostelė, vaizduojanti, kiek jam liko sveikatos.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>Nustato pradinę veikėjo sveikatos reikšmę. Kai veikėjas bus pažeistas, šis skaičius mažės, o kai bus pagydytas - didės.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+Kai nustatoma, kad veikėjas yra "sukuriamas", jis įgauna dvi specialias savybes.
+Pirma, jei nukopijuosi (klonuosi) veikėją, visos kopijos perims tą pačią elgseną - pakeitus ją vienam veikėjui, pasikeis ir kitų veikėjų veiksmai. Kai kuri žaidimą, tarp pagrindinio veikėjo ir jo klonų gali matyti punktyrines linijas, rodančias jų tarpusavio sąryšį.
+Antra, gali suprogramuoti, kad kiti veikėjai sukurtų šį veikėją su visa jo programa. Tai puikiai tinka žaidimams, kuriuose nori nenutrūkstamai kurti priešus.
+Tačiau nepamiršk, kad taip gali lengvai išnaudoti visus pasaulio išteklius, ir tada nauji veikėjai jau nebus kuriami.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+Sukuriamiems veikėjams šis skaičius nustato, kiek jų gali būti sukurta žaidimo metu. Klonai, kuriuos tu sukuri žaidimo programavimo metu, neįskaičiuojami. Šis nustatymas apriboja tik kitų veikėjų žaidimo metu sukuriamų objektų skaičių.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+Nustato, kaip kamera elgsis šio veikėjo atžvilgiu. Paprastai kamera seka paskui bet kurį žaidėjo valdomą veikėją. 
+Jei pasirinksi "visada", tai kamera seks paskui šį veikėją. Jei šį nustatymą turės keli veikėjai, tai kamera stengsis visus juos išlaikyti ekrane.
+Jei pasirinksi "niekada", tai kamera neseks paskui šį veikėją netgi tada, kai jis bus žaidėjo valdomas.
+    </desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>Nustato, kaip stipriai veikėjas atšoks, susidūręs su žeme, sienomis ar kitais veikėjais.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>Nustato, kaip toli veikėjas slys, susidūręs su žeme, sienomis ar kitais veikėjais.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Nustato, kiek žalos padarys šio veikėjo iššautas sviedinys.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+Nustato, kiek laiko turi praeiti iššovus sviedinį, kad veikėjas vėl galėtų šauti.
+Laikas nurodomas sekundėmis.
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Nustato, kiek toli lekia sviediniai prieš išnykdami.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Nustato, kaip greitai lekia šio veikėjo iššauti sviediniai.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+Nustato, kiek sviedinių šis veikėjas gali būti paleidęs vienu metu.
+Kai veikėjas bus iššovęs nurodytą skaičių sviedinių, jis vėl galės šauti tik tada, kai bent vienas sviedinys kažkur pataikys arba nuskries maksimalų atstumą.
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Nustato, kiek sveikatos taškų atims šio veikėjo iššauta raketa, pataikiusi į taikinį.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+Nustato, kas kiek laiko veikėjas gali paleisti raketą.
+Laikas nurodomas sekundėmis.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Nustato, kiek toli lekia raketos prieš išnykdamos.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Nustato, kaip greitai lekia šio veikėjo iššautos raketos.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+Nustato, kiek raketų šis veikėjas gali būti paleidęs vienu metu.
+Kai veikėjas bus iššovęs nurodytą skaičių raketų, jis vėl galės šauti tik tada, kai bent viena raketa kažkur pataikys arba nuskries maksimalų atstumą.
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Nustato, ar šio veikėjo iššautos raketos leidžia dūmus. Raketas be dūmų kompiuteris atvaizduoja greičiau.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Nustato, ar yra rodomas vaizdinis skydo efektas, kai veikėjas susiduria su kuo nors ar yra pažeistas.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Nustato, ar veikėjas yra rodomas žaidėjams. Bet kokiu atveju kiti veikėjai jį matys ir girdės.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Nustato, ar kiti veikėjai gali matyti, girdėti ar atsitrenkti į šį veikėją. Vaiduokliški veikėjai gali matyti ir girdėti kitus veikėjus, bet negali į juos atsitrenkti.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Išjungia visus standartinius šio veikėjo garsus. Specialiai suprogramuoti garsai bus girdimi. Kiti veikėjai klausydamiesi taip pat galės nustatyti šio veikėjo buvimo vietą.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Sklendimas vandens paviršiumi. Jei šis pasirinkimas yra išjungtas, veikėjas gali panerti po vandeniu.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Nustato, kiek toli šio veikėjo garsai yra girdimi kitiems veikėjams. Šis nustatymas nekeičia garso, kurį girdi žaidimo žaidėjas.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Nustato, kiek toli šis veikėjas gali girdėti kitus veikėjus. Šis nustatymas nekeičia garso, kurį girdi žaidimo žaidėjas.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>Jei įjungta, veikėjas yra užsimaskavęs, bet vis tiek gali susidurti su aplinka.</desc>
+  </helpText>
+  
+  <helpText id="KickStrength">
+    <desc>Nustato, kaip stipriai šis veikėjas smūgiuoja objektus. Kuo stipresni smūgiai, tuo toliau lekia objektai.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Nustato, kaip greitai po pirmojo smūgio veikėjas gali smūgiuoti antrą kartą</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>Padidina arba sumažina veikėją. Reikšmė 1.0 atitinka normalų dydį.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>Kai ką nors matai, gali kelias sekundes tai atsiminti, lyg vis dar matytum.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Nustato, kaip stipriai švyti šis veikėjas. Atminkite, kad švytintys veikėjai paprastai neapšviečia kitų veikėjų.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Įjungus šį nustatymą, švytėdamas šis veikėjas apšvies kitus veikėjus. Nustatykite, kiek stiprus bus šis apšvietimo efektas.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Nustato, kiek stipriai švytėjimas apšviečia patį veikėją.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>Kai veikėjų programa liepia jiems klajoti, suktis ratu ar vengti kažko, šis nustatymas parodo, kokios kliūtys pastoja jiems kelią.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>Jei veikėjas naudoja matymą ar girdėjimą, šis nustatymas parodo, kuriuos kitus veikėjus jis gali matyti ar girdėti.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Šis nustatymas dar neįgyvendintas.</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>Sukuria nematomas sienas aplink pasaulį palei jo kraštus. Tai apsaugo veikėjus, kad jie nenukristų nuo pasaulio krašto.
+    
+Bet Balionas, Debesis, Turbo, Blykstė, Lėkštė, Ceplius, Žaltvykslė ar Raketa gali perskristi per stiklinę sieną.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Parodo, kas anksčiau keitė šį pasaulį.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Leidžia pasirinkti, kaip žaidimo metu juda kamera.
+    
+Pasirinkus "Stovi vietoje", kamera žaidimo metu nejudės. Tinka tokiems žaidimams, kai vaizdas rodomas iš viršaus. Atsiminkite, kad plačiuose ekranuose vaizdas gali atrodyti šiek tiek kitaip.
+
+Pasirinkus "Juda paskui", kamera seks pasirinkto objekto judėjimo kryptimi, atsilikusi per tam tikrą atstumą. Pasirinktas objektas gali būti pelės žymeklis ar veikėjas. Tinka "slenkančio vaizdo" žaidimams.
+
+Laisvas kameros judėjimas yra numatytoji parinktis, leidžianti kamerai klajoti po pasaulį, jei tik kažkurio veikėjo programoje nėra nustatyta, kad kamera rodytų pasaulį jo akimis ar kad kamera jį sektų.
+
+Jei pasirenkate stovinčią vietoje ar judančią paskui kamerą, paspaudę &lt;X&gt; mygtuką, galite nustatyti kameros vietą.
+    </desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Nustato, kur turi būti kamera žaidimo pradžioje. Pastatyk kamerą į norimą vietą, o tada atidaryk pasaulio nustatymus ir įjunk šią parinktį.
+Jei vėliau norėsi pakeisti pradinę kameros vietą, spausk &lt;x&gt; ir nustatyk naują kameros poziciją.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Nustato, kaip greitai kamera seka paskui žaidėjo valdomą veikėją.</desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Leidžia paslėpti kompasą, kuris paprastai yra rodomas apatiniame dešiniajame ekrano kampe. Žaidimo kūrimo metu kompasas yra visada rodomas, jis būna paslėptas tik paties žaidimo metu.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Leidžia paslėpti išteklių matuoklę (termometrą), kuri paprastai yra rodoma dešinėje ekrano pusėje. Žaidimo kūrimo metu matuoklė yra visada rodoma, ji būna paslėpta tik paties žaidimo metu.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+Leidžia išjungti išteklių kontrolę, rodomą išteklių matuoklės (termometro) dešinėje ekrano pusėje. Išjungus kontrolę, gali savo pasaulyje sukurti kiek nori žemės ar bet kokį skaičių objektų.
+DĖMESIO! Viršijus kompiuterio išteklius, Kodu gali veikti labai lėtai. Jei kompiuterio programai neužteks atminties, Kodu gali ir "nulūžti".
+  </desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>Nustato bangų aukštį, jei tavo pasaulyje yra vandens.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>Nustato, kaip stipriai vanduo iškreipia vaizdą.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Parink savo pasaulio fonui tinkamą spalvų rinkinį.
+Sukurk savo žaidimui tinkamą nuotaiką, derindamas dangaus spalvas ir apšvietimą.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Parink savo pasauliui tinkamą apšvietimą. Jei pasirinksi tamsų apšvietimą, tamsu bus tik kai paleisi žaidimą. Kuriant žaidimą, bus naudojamas ryškesnis apšvietimas, kad galėtum gerai matyti savo pasaulį.
+Sukurk savo žaidimui tinkamą nuotaiką, derindamas dangaus spalvas ir apšvietimą.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Nustato silpniausio medžius kedenančio vėjo greitį.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Nustato stipriausio medžius kedenančio vėjo greitį.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Nustato, ką rodyti prieš prasidedant žaidimui:
+"Nieko" tiesiog iš karto pradeda žaidimą, be jokių efektų.
+"Pasaulio antraštė" 3 sekundes rodo pasaulio pavadinimą ir tada pradeda žaidimą.
+"Pasaulio aprašymas" parodo pasaulio pavadinimą bei aprašymą ir prašo žaidėją paspausti &lt;a&gt;, kad pradėti žaidimą. Čia rodomas aprašymas, kurį įrašai išsaugodamas žaidimą.
+"Starto atskaita" rodo 3-2-1 atskaitą prieš žaidimo pradžią. Puikiai tinka lenktynių žaidimams.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>Kai veikėjai keliauja nustatytais takais, šis nustatymas rodo, kur link juda kiekvienas veikėjas. Veikėjo tikslas yra nuspalvintas ta pačia spalva, kaip ir pats veikėjas, kuris link jo juda.</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Rodo geometrines formas, naudojamas veikėjų ir objektų tarpusavio susidūrimams bei susidūrimams su žeme.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>Jei veikėjas naudoja matymą ar girdėjimą, rodo, kuriuos kitus veikėjus jis gali matyti ar girdėti.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>Žemės formavimo greitis. Mažesnis skaičius - lėčiau, didesnis - greičiau.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Nustato vartotojo sąsajos (meniu, mygtukų) efektų garsumą.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Nustato žaidimo efektų garsumą: sprogimų, susidūrimų ir veikėjų skleidžiamų garsų.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Nustato foninės tavo parinktos žaidimo muzikos garsumą.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Nustato, kaip bus rodomas šios spalvos taškų skaičiavimas.
+Išjungta: taškai nebus rodomi visai.
+Be efekto: taškai bus rodomi ekrano kampe, bet be jokių efektų.
+Su efektu: taškai keliaus nuo žaidimo vietos iki taškų lentelės.
+    </desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>Nustato, ar taškai bus įsimenami ir toliau skaičiuojami pereinant iš vieno lygio į kitą.
+Įjungta: taškai bus įsimenami ir toliau rodomi, kai bus pereita į kitą lygį.
+Išjungta: taškai vėl prasidės nuo nulio, kai bus pereita į kitą lygį.
+    </desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>Rodyti ar nerodyti virtualų valdymo pultą ekrane.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+      Nustato, kaip bus rodomi ekrano mygtukai.
+      Išjungta: mygtukai visai nebus rodomi.
+      Be užrašo: mygtukai bus rodomi, bet ant jų nebus jokio teksto.
+      Su užrašu: mygtukai bus rodomi su tekstu, kad juos būtų lengviau pažinti.
+    </desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>Nustato, koks lygis bus įkeltas, vykdant programos kortelę "Kitas lygis". Taip pat įgalina tame lygyje naudoti kortelę "Ankstesnis lygis", kad galima būtų sugrįžti į šį lygį.</desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+      Padidina vandens gylį po šiuo objektu.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+      Sumažina vandens gylį po šiuo objektu.
+    </desc>
+  </helpText>
+  
+  
+  <helpText id="SetWater">
+    <desc>
+      Nustato pasirinktą vandens tipą po šiuo objektu.
+    </desc>
+  </helpText>
+
+  <!-- Help for USer Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>Leidžia išjungti įrankių aprašymų rodymą.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>Leidžia išjunti patarimus. Patarimai rodomi tada, kai sistema nustato situaciją, galinčią sukelti problemų.
+Kai patarimas yra rodomas, kartu yra suteikiama ir galimybė jį išjungti.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>Kai rodomas valdymo pultelio įrankių meniu, paprastai fonas būna neryškus ir negalima valdyti kameros. Išjungus šią parinktį, kamera išliks aktyvi, tačiau prieš atliekant kitus veiksmus žaidimo pasaulyje, reikės pasirinkti įrankį.
+Išjungus šią parinktį, kairė pultelio svirtelė bus naudojama kamerai valdyti, todėl įrankio pasirinkimui teks naudoti mygtukus ar jungiklius.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>Ši parinktis leidžia išvalyti visas patarimų išjungimo žymas, kad visi patarimai būtų vėl rodomi.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Nustato, kiek pagalbos teksto bus rodoma viršutiniame kairiajame ekrano kampe.</desc>
+  </helpText>
+  
+  <helpText id ="InvertYAxis">
+    <desc>Stumiant valdymo svirtelę aukštyn, veikėjas judės žemyn.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Stumiant valdymo svirtelę kairėn, veikėjas suksis dešinėn.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Stumiant valdymo svirtelę pirmyn, kamera kils aukštyn.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>Stumiant valdymo svirtelę kairėn, kamera suksis dešinėn.</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>Kartais dalis vaizdo netelpa į ekraną ir lieka už jo ribų. Tai priklauso ir nuo ekrano tipo, ir nuo jo pajungimo būdo. Šis nustatymas leidžia pasirinkti, kiek toli nuo ekrano krašto bus rodomi visi pagalbos tekstai. Jei tekstas netelpa ekrane, pasirink didesnį skaičių. Televizoriaus ekranams 20% paprastai yra tinkamas pasirinkimas. Kompiuterių ekranams dažniausiai tinka 0% ar 5%. Eksperimentuok ir pasirink, kas tau geriausiai tinka.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>Jei pasirinkta, kiti vartotojai galės pridėti pasaulius į tavo siuntinių eilę.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>Jei pasirinkta, pasauliais, kuriuos atsisiųsi iš kitų žaidėjų, bus automatiškai leidžiama dalintis ir juos galėsi nusiųsti kitiems vartotojams.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>Dalinantis pasauliais, automatiškai atsisiųsti visus pasaulius, su žyma "mėgstamiausias".</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>Atstumas, naudojamas artumo apibrėžimui matymo bei girdėjimo davikliuose. Skaičiai reiškia metrus. Informacijai: žemės kvadratėlio kraštinė yra pusės metro dydžio.</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>Atstumas, naudojamas tolumo apibrėžimui matymo bei girdėjimo davikliuose. Skaičiai reiškia metrus. Informacijai: žemės kvadratėlio kraštinė yra pusės metro dydžio.</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>Jei pasirinka, paleidimo metu Kodu tikrins, ar nėra naujesnių programos versijų.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>Jei pasirinkta, programa siųs anoniminę informaciją Microsoft kompanijai apie tai, kaip tu naudoji Kodu. Ši informacija padeda mums tobulinti Kodu.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>Jei pasirinkta, paleidžiant Kodu bus rodomas pradinis video filmukas.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>Išjungiant Kodu, paprastai tavo Kodu bendruomenės svetainės prisijungimo informacija bus pamiršta. Jei ši parinktis bus įjungta, bandysime atsiminti prisijungimo informaciją, kad jos nereikėtų įvesti kitą kartą paleidus Kodu.</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>Tai pagalbinis įrankis žmonėms, kuriantiems mokomąją medžiagą. Kai ši parinktis įjungta, peržiūrint pamoką, ekrane bus rodoma ir programos derinimui reikalinga informacija.</desc>
+  </helpText>
+
+</XmlHelpTextData>
+

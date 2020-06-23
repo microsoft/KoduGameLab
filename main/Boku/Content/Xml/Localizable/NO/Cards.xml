@@ -1,0 +1,1051 @@
+<Tiles>
+  <sensor>
+    <gamepad label="spillekontroller">Gjør en spiller i stand til å bruke en håndholdt spillekontroller.</gamepad>
+    <keyboard label="tastatur">Reager på bruk av tastaturet.  Spesifiser en knapp.</keyboard>
+    <mouse label="mus">Reager på musebevegelser.</mouse>
+    <touch label="berører">Reager på bruk av berøringsskjerm.</touch>
+    <microbit label="BBC micro:bit">Reager på signaler fra BBC micro:bit innganger.</microbit>
+    <eyes label="ser">Reager på noe karakteren ser avhengig av type eller farge. Bakketopper og vegger kan blokkere sikten dersom du benytter LOS (line-of-sight) filteret.</eyes>
+    <ears label="hørere">Reager på noe karakteren hører avhengig av type og lyd. Lyder går gjennom bakketopper og vegger.</ears>
+    <bumpers label="støter på">Reager dersom karakteren støter borti ett annet objekt avhengig av type, farge m.m.</bumpers>
+    <timer label="klokke">Reager etter at ett gitt antall sekunder har gått. Legg til tall for å øke tiden.</timer>
+    <got label="har">Reager på at noe er blitt plukket opp avhengig av type, farge e.l..</got>
+    <scored label="fikk poeng">Reager på endringer i poengsummen.</scored>
+    <health label="helse">Reager på endringer i helsetilstand.</health>
+    <missilehit label="treff">Reagerer på at ditt skudd traff ett annet object. Fint å bruke til å øke poengsummen blant annet.</missilehit>
+    <held label="holdt av">Reager på at ett annet object har plukket opp noe.</held>
+    <terrain label="på land">Reager på ulike typer underlag i terrenget.</terrain>
+    <water label="på vann">Reager på ulike typer vann.</water>
+    <beamed label="teleportert">Reager når en Mars stein har blitt teleportert.</beamed>
+    <inspected  label="undersøkt">Reager når en Mars stein er blitt undersøkt.</inspected>
+    <scanned label="skannet">Reager på en at Mars stein er blitt skanner for å kunne avsløre hva det er.</scanned>
+    <endofpath  label="slutt på sti">Reager når du når enden av stien du følger</endofpath>
+    <always label="alltid">Gjør noe hele tiden</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Kodu er en programmerbar spillkatakter som du kan bruke i ditt spill.</boku>
+    <bokubot label="kodu">Kodu er en programmerbar spillkatakter som du kan bruke i ditt spill.</bokubot>
+    <anything label="anything" />
+    <dead label="besvimt">Reager på besvimte/utslåtte karakterer.</dead>
+    <me label="meg">Sjekk kun roboten som kjører programmet.</me>
+    <said label="sa noe">Hør etter om andre karakterer sier noe.  Skriv inn hva du ønsker å høre etter.</said>
+    <countnone label="tomt">Reager på at du ikke ser noe av det du har beskrevet at du ser etter.</countnone>
+    <starfish label="sjøstjerne">Reager på en sjøstjerne.</starfish>
+    <clam label="musling">Reager på en musling.</clam>
+    <seagrass label="Sjøgress">Reager på sjøgress.</seagrass>
+    <seagrasssingle label="ett sjøgress">Reager på ETT sjøgress.</seagrasssingle>
+    <lilypad label="linjedam">Reager på en dam med linjer.</lilypad>
+    <lilypadsingle label="linjedam">Reager på en dam med linjer.</lilypadsingle>
+    <flyfish label="flyvefisk">Flyvefisken er en programmerbar spillkatakter som du kan bruke i ditt spill</flyfish>
+    <jet label="ragett">Raketten er en flyvende programmerbar spillkatakter som du kan bruke i ditt spill</jet>
+    <light label="lys">Lyser er en programmerbar spillkatakter som du kan bruke i ditt spill. Den kan også brukes til å lyse oppting, men du kan kun ha 4 stk. i din verden.</light>
+    <fan label="vifte">Reager på en visfte.</fan>
+    <octopus label="blekksprut">Reager på en blekksprut.</octopus>
+    <fastbot label="syklist">Syklisten er en programmerbar spillkatakter som du kan bruke i ditt spill.</fastbot>
+    <saucer label="UFO">Beklager, men jeg kan ikke så mer om UFOen. Informasjon om denne er hemmeligstemplet.</saucer>
+    <windblimp label="luftskip">Luftskipet er en flyvende programmerbar spillkatakter som du kan bruke i ditt spill.</windblimp>
+    <balloonbot label="ballong">Ballongen er en svevende programmerbar spillkatakter som du kan bruke i ditt spill.</balloonbot>
+    <subbot label="ubåt">Ubåten er en programmerbar undervanns spillkatakter som du kan bruke i ditt spill.</subbot>
+    <terracannon label="kanon">Kanonen er en programmerbar spillkatakter som du kan bruke i ditt spill.</terracannon>
+    <puck label="smultering">Denne smulteringformede tingen er en programmerbar spillkatakter som du kan bruke i ditt spill.</puck>
+    <wisp label="wisp">Wisp er en programmerbar spillkatakter som du kan bruke i ditt spill.</wisp>
+    <anybot label="robot">Se etter hvilken som helst robot/spiller.</anybot>
+    <turtle label="skilpadde">Reager på en skilpadde.</turtle>
+    <rover label="månebil">Reager på månebiler.</rover>
+    <pushpad label="krabberobot">Reager på krabberoboter.</pushpad>
+    <sputnik label="satelitt">Reager på satelitter.</sputnik>
+    <stick label="pinne">Reager på en pinne.</stick>
+    <stickboy label="pinne">Reager på en pinne.</stickboy>
+    <drum label="tromme">Reager på en tromme.</drum>
+    <mine label="mine">Reager på en mine.</mine>
+    <cloud label="sky">Reager på en sky.</cloud>
+    <swimfish label="fisk">Reager på fisker.</swimfish>
+    <vlogster label="rom-robot">Reager på rom-roboter.</vlogster>
+    <floatbot label="båt">Reager på båter.</floatbot>
+    <factory label="fabrikk">Reager på fabrikker.</factory>
+    <hut label="hytte">Reager på hytter.</hut>
+    <castle label="slott">Reager på slott.</castle>
+    <fruit label="eple">Reager på eplser.</fruit>
+    <inkjet label="blekksy">Reager på blekksky.</inkjet>
+    <iceberg label="isfjell">Reager på isfjell.</iceberg>
+    <rock label="stein">Reager på steiner.</rock>
+    <rockLowValue label="lava">Reager på lava.</rockLowValue>
+    <rockHighValue label="gråstein">Reager på gråstein.</rockHighValue>
+    <rockLowValueUnknown label="Ukjent lavastein">En lavasteing som er ukjent frem til den blir skannet, teleportert eller undersøkt.</rockLowValueUnknown>
+    <rockHighValueUnknown label="Ukjent gråstein">En gråstein som er ukjent frem til den blir skannet, teleportert eller undersøkt.</rockHighValueUnknown>
+    <rockUnknown label="Ukjent stein">Reager på ukjente steiner.</rockUnknown>
+    <tree label="tre">Reager på trær.</tree>
+    <pipe label="rør">Reager på rør.</pipe>
+    <pipeStraight label="rett rør">Reager på ett rett rør.</pipeStraight>
+    <pipeCross label="rørkryss">Reager på rørkryss.</pipeCross>
+    <pipeCorner label="hjørnerør">Reager på hjørnerør.</pipeCorner>
+    <underwater label="under vann">Reager på "ting" under vann.</underwater>
+    <building label="bygning">Reager på bygninger.</building>
+    <flower label="blomst" />
+    <gate label="port" />
+    <cursor label="markør">Reager på markøren.</cursor>
+    <star label="stjerne">Reager på stjerner.</star>
+    <coin label="mynt">Reager på mynter.</coin>
+    <soccerball label="ball">Reager på baller.</soccerball>
+    <heart label="hjerte">Reager på hjerter.</heart>
+    <bullet label="ammunisjon">Reager på ammunisjon.</bullet>
+    <Black label="sort">Reager på sorte ting.</Black>
+    <Grey label="grå">Reager på gråe ting.</Grey>
+    <white label="hvit">Reager på hvite ting.</white>
+    <red label="rød">Reager opå røde ting.</red>
+    <orange label="oransje">Reager på oransje ting.</orange>
+    <yellow label="gul">Reager på gule ting.</yellow>
+    <green label="grønn">Reager på grønne ting.</green>
+    <blue label="blå">Reager på ting som er blå.</blue>
+    <purple label="lilla">Reager på ting som er lilla.</purple>
+    <pink label="rosa">Reager på ting som er rosa.</pink>
+    <brown label="brun">Reager på brune ting.</brown>
+    <PathBlack label="sort sti">Reager på en sort sti.</PathBlack>
+    <PathGrey label="grå sti">Reager på gråe stier.</PathGrey>
+    <PathWhite label="hvit sti">Reager på en hvis sti.</PathWhite>
+    <PathRed label="rød sti">Reager på en rød sti.</PathRed>
+    <PathOrange label="oransje sti">Reager å oransje stier.</PathOrange>
+    <PathYellow label="gul sti">Reager på en gul sti.</PathYellow>
+    <PathGreen label="grønn sti">Reager på en grønn sti.</PathGreen>
+    <PathBlue label="blå sti">Reager på på en blå sti.</PathBlue>
+    <PathPurple label="lilla sti">Reager på en lilla sti.</PathPurple>
+    <PathPink label="rosa sti">Reager på en rosa sti.</PathPink>
+    <PathBrown label="brun sti">Reager på en brun sti.</PathBrown>
+    <pathplain label="slette" />
+    <pathroad label="vei" />
+    <pathwall label="vegg" />
+    <pathflora label="vegetasjon" />
+    <yucca1 label="tre" />
+    <yucca2 label="tre" />
+    <yucca3 label="tre" />
+    <bigyucca1 label="stort tre" />
+    <expresshappy label="glad">Reager på en glad og fornøyd robot.</expresshappy>
+    <expresssad label="trist">Reager på en trist og lei robot.</expresssad>
+    <expressangry label="SINT">Reager på en sint robot</expressangry>
+    <expresscrazy label="gal">Reager på en sprø og gal robot.</expresscrazy>
+    <expresshearts label="hjerter">Reager på en robot som vier hjerter.</expresshearts>
+    <expressflowers label="blomster">Reager på en robot som viser blomster.</expressflowers>
+    <expressstars label="stjerner">Reager på en robot som viser stjerner.</expressstars>
+    <expressswear label="banner">Reager på en robot som banner og sier stygge ting.</expressswear>
+    <expressnormal label="normal">Reager på en robot som oppfører seg normat.</expressnormal>
+    <expressnone label="blank">Reager på en robot som oppfører seg normat.</expressnone>
+    <moving label="i bevegelse">Reager på en robot kun når den er i bevegelse.</moving>
+    <camouflage label="kamuflasje">Reager på kamuflerte roboter.</camouflage>
+    <closeby label="i nærheten">Reager kun på ting i nærheten</closeby>
+    <faraway label="på avstand">Reager kun på ting på lang avatand.</faraway>
+
+    <infront label="foran">Reager på ting kun når de er foran deg.</infront>
+    <behind label="bak">Reager på ting kun når de er bak deg.</behind>
+    <toleft label="til venstre">Reager på ting kun når de er til venstre for deg.</toleft>
+    <toright label="til høyre">Reager på ting kun når de er til høyre for deg.</toright>
+    <over label="over">Reager på ting kun når de er over deg.</over>
+    <under label="under">Reager på ting kun når de er under deg.</under>
+
+    <lineofsight label="line of sight">Terreng og vegg blokkering (Siktelinje sensor).</lineofsight>
+    
+    <countfew label="få">Reager når du kun ser noen få av noe.</countfew>
+    <countmany label="mange">Reager først når du ser mange av noe.</countmany>
+    <clustermany label="samling">Reager kun når det er samlet mange av noe tett ved hverandre.</clustermany>
+    <countany label="hva som helst" />
+    <leftstick label="L spak">Reager på venstre spak på spillekontrollen. Egner til å styre bevegelse.</leftstick>
+    <rightstick label="R spak">REager på høyre spak på spillekontrollen. Egner seg til skyting.</rightstick>
+    <abutton label="A knapp">Reager på A kanppen på spillekontrollen.</abutton>
+    <bbutton label="B knapp">Reager på B kanppen på spillekontrollen.</bbutton>
+    <xbutton label="X knapp">Reager på X kanppen på spillekontrollen.</xbutton>
+    <ybutton label="Y knapp">Reager på Y kanppen på spillekontrollen.</ybutton>
+    <lefttrigger label="venstre avtrekker">Reager på venste avtrekker på spillekontrollen.</lefttrigger>
+    <righttrigger label="høyre avtrekker">Reager på høyre avtrekker på spillekontrollen.</righttrigger>
+    <lefttrigger_analog label="venstre avtrekker">Reager på venste avtrekker på spillekontrollen.</lefttrigger_analog>
+    <righttrigger_analog label="høyre avtrekker">Reager på høyre avtrekker på spillekontrollen.</righttrigger_analog>
+    <strongly label="sterkt">Oppdag en stor verdi eller ett sterkt signal.</strongly>
+    <weakly label="svakt">Oppdag en liten verdi eller ett svakt signal</weakly>
+    <microbit label="BBC micro:bit">
+      <tilt label="tilt">Tilt fra BBC micro:bit.</tilt>
+      <leftbutton label="A knapp">BBC micro:bit - A knapp.</leftbutton>
+      <rightbutton label="B knapp">BBC micro:bit - B knapp.</rightbutton>
+      <pin0 label="pinne 0">BBC micro:bit - Inngang 0.</pin0>
+      <pin1 label="pinnne 1">BBC micro:bit - Inngang 1.</pin1>
+      <pin2 label="pinne 2">BBC micro:bit - Inngang 2.</pin2>
+      <shake label="risting">BBC micro:bit blir ristet på.</shake>
+    </microbit>
+    <mouse>
+      <button>
+        <left label="venstre">Reager på venstre museknapp.</left>
+        <right label="høyre">Reager på høyre museknapp.</right>
+      </button>
+      <hover label="over">Reager på at musa er over noe.</hover>
+      <move label="bevegelse">Reager på at musa beveger seg.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="berøring">Reager på at noen berører skjermen (berøringsskjerm).</touching>
+        <tap label="trykk">Reager på at noen klikker/trykker på skjermen (berøringsskjerm).</tap>
+        <rotate label="sirkel">Reager på en sirkelberøring (berøringsskjerm).</rotate>
+        <swipe label="swipe">Reager på "swipe" berøring (berøringsskjerm).</swipe>
+        <slide label="slide">Reager på "slide" berøring (berøringsskjerm).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="white">Reager på den hvite knappen. (Åpne alternativer for verden for å endre)</White>
+        <Black label="sort">Reager på den sorte knappen. (Åpne alternativer for verden for å endre)</Black>
+        <Grey label="grå">Reager på den gråe knappen. (Åpne alternativer for verden for å endre)</Grey>
+        <Red label="rød">Reager på den røde knappen. (Åpne alternativer for verden for å endre)</Red>
+        <Green label="grønn">Reager på den grønne knappen. (Åpne alternativer for verden for å endre)</Green>
+        <Blue label="blå">Reager på den blåe knappen. (Åpne alternativer for verden for å endre)</Blue>
+        <Orange label="oransje">Reager på den oransje knappen. (Åpne alternativer for verden for å endre)</Orange>
+        <Yellow label="gul">Reager på den gule knappen. (Åpne alternativer for verden for å endre)</Yellow>
+        <Purple label="lilla">Reager på den lilla knappen. (Åpne alternativer for verden for å endre)</Purple>
+        <Pink label="rosa">Reager på den rosa knappen. (Åpne alternativer for verden for å endre)</Pink>
+        <Brown label="brune">Reager på den brune knappen. (Åpne alternativer for verden for å endre)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="X knappen">Reager på berøring av skjermknappen X.</controllerButton_X>
+      <controllerButton_Y label="Y knappen">Reager på berøring av skjermknappen Y.</controllerButton_Y>
+      <controllerButton_A label="A knappen">Reager på berøring av skjermknappen A.</controllerButton_A>
+      <controllerButton_B label="B knappen">Reager på berøring av skjermknappen B.</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="Piltaster">Reager på tastaturets piltaster.</ArrowKeys>
+    <WASDKeys label="WASD">Reager på WASD knappene på tastaturet.</WASDKeys>
+    <Akey label="A">Reager på tastaturknappen: A</Akey>
+    <Bkey label="B">Reager på tastaturknappen: B</Bkey>
+    <Ckey label="C">Reager på tastaturknappen: C</Ckey>
+    <Dkey label="D">Reager på tastaturknappen: D</Dkey>
+    <Ekey label="E">Reager på tastaturknappen: E</Ekey>
+    <Fkey label="F">Reager på tastaturknappen: F</Fkey>
+    <Gkey label="G">Reager på tastaturknappen: G</Gkey>
+    <Hkey label="H">Reager på tastaturknappen: H</Hkey>
+    <Ikey label="I">Reager på tastaturknappen: I</Ikey>
+    <Jkey label="J">Reager på tastaturknappen: J</Jkey>
+    <Kkey label="K">Reager på tastaturknappen: K</Kkey>
+    <Lkey label="L">Reager på tastaturknappen: L</Lkey>
+    <Mkey label="M">Reager på tastaturknappen: M</Mkey>
+    <Nkey label="N">Reager på tastaturknappen: N</Nkey>
+    <Okey label="O">Reager på tastaturknappen: O</Okey>
+    <Pkey label="P">Reager på tastaturknappen: P</Pkey>
+    <Qkey label="Q">Reager på tastaturknappen: Q</Qkey>
+    <Rkey label="R">Reager på tastaturknappen: R</Rkey>
+    <Skey label="S">Reager på tastaturknappen: S</Skey>
+    <Tkey label="T">Reager på tastaturknappen: T</Tkey>
+    <Ukey label="U">Reager på tastaturknappen: U</Ukey>
+    <Vkey label="V">Reager på tastaturknappen: V</Vkey>
+    <Wkey label="W">Reager på tastaturknappen: W</Wkey>
+    <Xkey label="X">Reager på tastaturknappen: X</Xkey>
+    <Ykey label="Y">Reager på tastaturknappen: Y</Ykey>
+    <Zkey label="Z">Reager på tastaturknappen: Z</Zkey>
+    <D0key label="0">Reager på tastaturknappen: 0</D0key>
+    <D1key label="1">Reager på tastaturknappen: 1</D1key>
+    <D2key label="2">Reager på tastaturknappen: 2</D2key>
+    <D3key label="3">Reager på tastaturknappen: 3</D3key>
+    <D4key label="4">Reager på tastaturknappen: 4</D4key>
+    <D5key label="5">Reager på tastaturknappen: 5</D5key>
+    <D6key label="6">Reager på tastaturknappen: 6</D6key>
+    <D7key label="7">Reager på tastaturknappen: 7</D7key>
+    <D8key label="8">Reager på tastaturknappen: 8</D8key>
+    <D9key label="9">Reager på tastaturknappen: 9</D9key>
+    <Spacekey label="Mellomrom">Reager på tastaturknappen: Mellomrom</Spacekey>
+    <PageUpkey label="Side opp">Reager på tastaturknappen: Side opp (PgUp)</PageUpkey>
+    <PageDownkey label="Side ned">Reager på tastaturknappen: SIde ned (PgDn)</PageDownkey>
+    <Endkey label="End">Reager på tastaturknappen: End</Endkey>
+    <Leftkey label="Venstre">Reager på tastaturknappen: Pil venstre</Leftkey>
+    <Upkey label="opp">React to the Up key on the keyboard.</Upkey>
+    <Rightkey label="Høyre">Reager på tastaturknappen: Pil høyre</Rightkey>
+    <Downkey label="Ned">Reager på tastaturknappen: Pil ned</Downkey>
+    <Insertkey label="Insert">Reager på tastaturknappen: Sett inn (Insert)</Insertkey>
+    <Deletekey label="Delete">Reager på tastaturknappen: Slett (Del/Delete)</Deletekey>
+    <LeftWindowskey label="Venstre Windows">Reager på tastaturknappen: Venstre Windows</LeftWindowskey>
+    <RightWindowskey label="HøyreWindows">Reager på tastaturknappen: Høyre Windows</RightWindowskey>
+    <Multiplykey label="*">Reager på tastaturknappen: *</Multiplykey>
+    <Addkey label="+">Reager på tastaturknappen: Pluss (+)</Addkey>
+    <Subtractkey label="-">Reager på tastaturknappen: Minus (-)</Subtractkey>
+    <Decimalkey label=".">Reager på tastaturknappen: Desimalskille (. eller ,)</Decimalkey>
+    <Dividekey label="/">Reager på tastaturknappen: Dele (/)</Dividekey>
+    <LeftShiftkey label="VenstreShift">Reager på Shift knappen til venstre på tastaturer.</LeftShiftkey>
+    <RightShiftkey label="HøyreShift">Reager på Shift knappen til høyre på tastaturer.</RightShiftkey>
+    <LeftControlkey label="VentreControl">Reager på Kontrol (Ctrl) knappen til venstre på tastaturer.</LeftControlkey>
+    <RightControlkey label="HøyreControl">Reager på Kontrol (Ctrl) knappen til høyre på tastaturer.</RightControlkey>
+    <LeftAltkey label="VenstreAlt">Reager på Alt knappen til venstre på tastaturer.</LeftAltkey>
+    <RightAltkey label="HøyreAlt">Reager på Alt knappen til venstre på tastaturer.</RightAltkey>
+    <OemSemicolonkey label=";">Reager på tastaturknappen: Semikolon (;)</OemSemicolonkey>
+    <OemPluskey label="+">Reager på tastaturknappen: Plus (+)</OemPluskey>
+    <OemCommakey label=",">Reager på tastaturknappen: Komma (,)</OemCommakey>
+    <OemMinuskey label="-">Reager på tastaturknappen: Minus (-)</OemMinuskey>
+    <OemPeriodkey label=".">Reager på tastaturknappen: Punktum (.)</OemPeriodkey>
+    <OemQuestionkey label="?">Reager på tastaturknappen: Spørsmåltegn (?)</OemQuestionkey>
+    <OemTildekey label="~">Reager på tastaturknappen: Tilde (~)</OemTildekey>
+    <OemOpenBracketskey label="[">Reager på tastaturknappen: Åpne brakett ([)</OemOpenBracketskey>
+    <OemPipekey label="|">Reager på tastaturknappen: Stolpe (|)</OemPipekey>
+    <OemCloseBracketskey label="]">Reager på tastaturknappen: Lukk brakett (])</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">Reager på tastaturknappen: Apostrof (")</OemQuoteskey>
+    <OemBackslashkey label="\">Reager på tastaturknappen: Bakover strek - Backshlash (\)</OemBackslashkey>
+    <F1key label="F1">Reager på tastaturknappen: F1</F1key>
+    <F2key label="F2">Reager på tastaturknappen: F2</F2key>
+    <F3key label="F3">Reager på tastaturknappen: F3</F3key>
+    <F4key label="F4">Reager på tastaturknappen: F4</F4key>
+    <F5key label="F5">Reager på tastaturknappen: F5</F5key>
+    <F6key label="F6">Reager på tastaturknappen: F6</F6key>
+    <F7key label="F7">Reager på tastaturknappen: F7</F7key>
+    <F8key label="F8">Reager på tastaturknappen: F8</F8key>
+    <F9key label="F9">Reager på tastaturknappen: F9</F9key>
+    <F10key label="F10">Reager på tastaturknappen: F10</F10key>
+    <F11key label="F11">Reager på tastaturknappen: F11</F11key>
+    <F12key label="F12">Reager på tastaturknappen: F12</F12key>
+    <Shiftkey label="Shift">Reager på tastaturknappen: Shift (Stor bokstav)</Shiftkey>
+    <Controlkey label="Control">Reager på tastaturknappen: Kontrol (Ctrl)</Controlkey>
+    <Altkey label="Alt">Reager på tastaturknappen: Alt</Altkey>
+    <Windowskey label="Windows">Reager på tastaturknappen: Windows</Windowskey>
+    <player1 label="spiller 1">Reager på kontrolleren til spiller 1. Normalt så reageres det på alle.</player1>
+    <player2 label="spiller 2">Reager på kontrolleren til spiller 2. Normalt så reageres det på alle.</player2>
+    <player3 label="spiller 3">Reager på kontrolleren til spiller 3. Normalt så reageres det på alle.</player3>
+    <player4 label="spiller 4">Reager på kontrolleren til spiller 4. Normalt så reageres det på alle.</player4>
+    <terrain label="type">Reager på en bestemt type terreng.</terrain>
+    <water label="type">Reager på en bestemt type vann.</water>
+    <quartersecond label="kvartsekund">1/4 av ett sekund.  Kan kombineres med andre tider for "lage" større tidsintervaller.</quartersecond>
+    <_01second label="sekund">1 sekund.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_01second>
+    <_02seconds label="sekunder">2 sekunder.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_02seconds>
+    <_03seconds label="sekunder">3 sekunder.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_03seconds>
+    <_04seconds label="sekunder">4 sekunder.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_04seconds>
+    <_05seconds label="sekunder">5 sekunder.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_05seconds>
+    <_10seconds label="sekunder">10 sekunder.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_10seconds>
+    <_20seconds label="sekunder">20 sekunder.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_20seconds>
+    <_30seconds label="sekunder">30 sekunder.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_30seconds>
+    <_60seconds label="sekunder">60 sekunder.  Kan kombineres med andre tider for "lage" større tidsintervaller.</_60seconds>
+    <_000point label="poeng">0 poeng.</_000point>
+    <_001point label="poeng">1 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_001point>
+    <_002points label="poeng">2 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_002points>
+    <_003points label="poeng">3 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer..</_003points>
+    <_004points label="poeng">4 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_004points>
+    <_005points label="poeng">5 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_005points>
+    <_010points label="poeng">10 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_010points>
+    <_020points label="poeng">20 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_020points>
+    <_050points label="poeng">50 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_050points>
+    <_100points label="poeng">100 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_100points>
+    <random label="tilfeldig">Lag en tilfeldig (random) verdi for tall brukken. Eksempel: Tilfeldig 5 vil gi ett tall mellom 0 og 5.</random>
+    <scorebucket>
+      <color>
+        <white label="hvit">Sjekk "hvite" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</white>
+        <black label="sort">Sjekk "sorte" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</black>
+        <grey label="grå">Sjekk "gråe" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</grey>
+        <red label="rød">Sjekk "røde" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</red>
+        <green label="grønn">Sjekk "grønne" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</green>
+        <blue label="blå">Sjekk "blå" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</blue>
+        <orange label="oransje">Sjekk "oransje" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</orange>
+        <yellow label="gule">Sjekk "gule" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</yellow>
+        <purple label="lilla">Sjekk "lilla" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</purple>
+        <pink label="rosa">Sjekk "rosa" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</pink>
+        <brown label="brun">Sjekk "brune" skåringer som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</brown>
+      </color>
+      <letter>
+        <a label="A skåring">Tester 'A' skåring, som ikke vises på poengtavla.</a>
+        <b label="B skåring">Tester 'B' skåring, som ikke vises på poengtavla.</b>
+        <c label="C skåring">Tester 'C' skåring, som ikke vises på poengtavla.</c>
+        <d label="D skåring">Tester 'D' skåring, som ikke vises på poengtavla.</d>
+        <e label="E skåring">Tester 'E' skåring, som ikke vises på poengtavla.</e>
+        <f label="F skåring">Tester 'F' skåring, som ikke vises på poengtavla.</f>
+        <g label="G skåring">Tester 'G' skåring, som ikke vises på poengtavla.</g>
+        <h label="H skåring">Tester 'H' skåring, som ikke vises på poengtavla.</h>
+        <i label="I skåring">Tester 'I' skåring, som ikke vises på poengtavla.</i>
+        <j label="J skåring">Tester 'J' skåring, som ikke vises på poengtavla.</j>
+        <k label="K skåring">Tester 'K' skåring, som ikke vises på poengtavla.</k>
+        <l label="L skåring">Tester 'L' skåring, som ikke vises på poengtavla.</l>
+        <m label="M skåring">Tester 'M' skåring, som ikke vises på poengtavla.</m>
+        <n label="N skåring">Tester 'N' skåring, som ikke vises på poengtavla.</n>
+        <o label="O skåring">Tester 'O' skåring, som ikke vises på poengtavla.</o>
+        <p label="P skåring">Tester 'P' skåring, som ikke vises på poengtavla.</p>
+        <q label="Q skåring">Tester 'Q' skåring, som ikke vises på poengtavla.</q>
+        <r label="R skåring">Tester 'R' skåring, som ikke vises på poengtavla.</r>
+        <s label="S skåring">Tester 'S' skåring, som ikke vises på poengtavla.</s>
+        <t label="T skåring">Tester 'T' skåring, som ikke vises på poengtavla.</t>
+        <u label="U skåring">Tester 'U' skåring, som ikke vises på poengtavla.</u>
+        <v label="V skåring">Tester 'V' skåring, som ikke vises på poengtavla.</v>
+        <w label="W skåring">Tester 'W' skåring, som ikke vises på poengtavla.</w>
+        <x label="X skåring">Tester 'X' skåring, som ikke vises på poengtavla.</x>
+        <y label="Y skåring">Tester 'Y' skåring, som ikke vises på poengtavla.</y>
+        <z label="Z skåring">Tester 'Z' skåring, som ikke vises på poengtavla.</z>
+      </letter>
+      <local>
+        <a label="a skåring">The 'a' score, which is private to this character.</a>
+        <b label="b skåring">The 'b' score, which is private to this character.</b>
+        <c label="c skåring">The 'c' score, which is private to this character.</c>
+        <d label="d skåring">The 'd' score, which is private to this character.</d>
+        <e label="e skåring">The 'e' score, which is private to this character.</e>
+        <f label="f skåring">The 'f' score, which is private to this character.</f>
+        <g label="g skåring">The 'g' score, which is private to this character.</g>
+        <h label="h skåring">The 'h' score, which is private to this character.</h>
+        <i label="i skåring">The 'i' score, which is private to this character.</i>
+        <j label="j skåring">The 'j' score, which is private to this character.</j>
+        <k label="k skåring">The 'k' score, which is private to this character.</k>
+        <l label="l skåring">The 'l' score, which is private to this character.</l>
+        <m label="m skåring">The 'm' score, which is private to this character.</m>
+        <n label="n skåring">The 'n' score, which is private to this character.</n>
+        <o label="o skåring">The 'o' score, which is private to this character.</o>
+        <p label="p skåring">The 'p' score, which is private to this character.</p>
+        <q label="q skåring">The 'q' score, which is private to this character.</q>
+        <r label="r skåring">The 'r' score, which is private to this character.</r>
+        <s label="s skåring">The 's' score, which is private to this character.</s>
+        <t label="t skåring">The 't' score, which is private to this character.</t>
+        <u label="u skåring">The 'u' score, which is private to this character.</u>
+        <v label="v skåring">The 'v' score, which is private to this character.</v>
+        <w label="w skåring">The 'w' score, which is private to this character.</w>
+        <x label="x skåring">The 'x' score, which is private to this character.</x>
+        <y label="y skåring">The 'y' score, which is private to this character.</y>
+        <z label="z skåring">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="utløser" />
+    <timertrigger label="utløser" />
+    <scoreis label="er" />
+    <scoreequals label="lik">Reager når poengsummen er det samme som oppgitt verdi.</scoreequals>
+    <scorenotequals label="ulik">Reager når poengsummen IKKE er lik oppgitt verdi.</scorenotequals>
+    <scoreabove label="over">Reager når poengsummer er over oppgitt verdi.</scoreabove>
+    <scorebelow label="under">Reager når poengsummer er under oppgitt verdi.</scorebelow>
+    <scoregteq label="&gt;=">Reager når poengsummer er lik eller større enn oppgitt verdi.</scoregteq>
+    <scorelteq label="&lt;=">Reager når poengsummer er lik eller mindre enn oppgitt verdi.</scorelteq>
+    <health label="helse">Helse "verdier" en spiller har.</health>
+    <healthis label="er" />
+    <healthabove label="over">Reager når helsen er bedre (høyere helseverdi) enn oppgitt verdi.</healthabove>
+    <healthbelow label="under">Reager når helsen er dårligere (lavere helseverdi) enn oppgitt verdi.</healthbelow>
+    <direction>
+      <up label="opp">Reager når spillekontrollen pekes opp.</up>
+      <right label="høyre">Reager når spillekontrollen pekes mot høyre.</right>
+      <down label="ned">Reager når spillekontrollen pekes nedover.</down>
+      <left label="venstre">Reager når spillekontrollen pekes mot venstre.</left>
+      <clockwise label="høyre">Reager når man gjør en berøringsbevegelse med klokka mot høyre.</clockwise>
+      <counterclockwise label="venstre">Reager når man gjør en berøringsbevegelse mot klokka, altå mot venstre.</counterclockwise>
+    </direction>
+    <not label="ikke">Reager når sammenligningen ikke stemmer.</not>
+  </filter>
+  <selector>
+    <closest label="nærmest" />
+    <objectrelative label="relativt" />
+    <towardclosest label="mot">Flytt deg mot det du reagerer på.</towardclosest>
+    <awayfromall label="vekk fra">Flytt deg vekk fra det du reagerer på.</awayfromall>
+    <avoidall label="unngå">Unnga det du reagerer på og hold en viss avstand.</avoidall>
+    <wander label="vandre">Vandre rundt ved å velge ut en tilfeldig retning. Kjekk funksjon som siste linje i ett progra slik at din karakter beveger seg når han ikke har noe annet å gjøre.</wander>
+    <cruise label="rett">Beveg det rett frem i den retningen du står.</cruise>
+    <circle label="sirkel" />
+    <spin label="snu">Snu deg rundt uten å forflytte deg.</spin>
+    <forward label="fremover" />
+    <hiddenturn label="snu" />
+    <escape label="snu vekk" />
+    <followwaypoints label="på sti">Beveg deg langt en sti av en bestemt farge. Uten denne så vil man følge hvilken som helst sti.</followwaypoints>
+    <moveupdown label="opp/ned">Beveg opp og ned.</moveupdown>
+    <moveup label="opp">Beveg deg oppover.</moveup>
+    <movedown label="ned">Beveg deg nedover.</movedown>
+    <moveleftright label="sving">Sving og beveg deg mot høyre eller venstre.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="spiller 1" />
+      <_2 label="spiller 2" />
+      <_3 label="spiller 3" />
+      <_4 label="spiller 4" />
+    </player>
+    <reset>
+      <world label="verden">Nullstill spillet med unntak av poengsummen.</world>
+      <score label="poeng">Nullstill poengsummen.</score>
+      <expression label="uttrykk">Nullstill spillerkarakterens utrykk (Sur, blid o.l.).</expression>
+      <glow label="glød">Nullstill spillekarakterens glød.</glow>
+      <health label="helse">Nullstill spillekarakterens helsepoeng.</health>
+    </reset>
+    <projectile>
+      <blip label="blip">Blip'er er prosjektiler mans kan skyte fort - Lettere vekt enn missilier.</blip>
+      <missile label="missil">Missil tunge og ikke så raske, men er smarte slik at de kan følge etter deres må-+*0,!</missile>
+    </projectile>
+    <slowly label="sakte">Beveg sakte. Bruk flere ganger for å bevege enda saktere.</slowly>
+    <quickly label="fort">Beveg fort. Bruk flere ganger for å bevege deg enda fortere.</quickly>
+    <speednormally label="normalt">Normale bevegelser.</speednormally>
+    <weakly label="svak">Gjør dette litt svakere enn normal.</weakly>
+    <strongly label="sterk">Gjør dette litt sterkere enn normal.</strongly>
+    <strengthnormally label="normalt">Gjør dette med normal styrke.</strengthnormally>
+    <angle>
+      <low label="lav">Gjør dette med lavere/svakere enn normalt.</low>
+      <high label="høy">Gjør dette med høyere/sterkere enn normalt.</high>
+    </angle>
+    <turnleft label="venstre" />
+    <turnright label="høyre" />
+    <turntoward label="mot" />
+    <turnforward label="fremover"></turnforward>
+    <pitchup label="opp" />
+    <pitchdown label="ned" />
+    <forward label="forward">Retningen spillekarakteren ser.</forward>
+    <north label="nord" />
+    <east label="øst" />
+    <south label="sør" />
+    <west label="vest" />
+    <up label="opp" />
+    <down label="ned" />
+    <distance>
+      <near label="nærme">Få karakteren til å ringe tettere rundt målet.</near>
+      <far label="lengere unna">Få karakteren til å øke avstanden rundt målet.</far>
+    </distance>
+    <objecticeberg label="isfjell">Lag ett isfjell.</objecticeberg>
+    <objectrock label="stein">Lag en stein.</objectrock>
+    <objectrockLowValue label="lavastein">Lag en lavastein.</objectrockLowValue>
+    <objectrockHighValue label="gråstein">Lag en gråstein.</objectrockHighValue>
+    <objectfruit label="eple">Lag ett eple.</objectfruit>
+    <objectinkjet label="blekk sky">Lag en blekk sky.</objectinkjet>
+    <objectstar label="stjerne">Lage en stjerne.</objectstar>
+    <objectcoin label="mynt">Lag en mynt.</objectcoin>
+    <objectheart label="hjerte">Lage ett hjerte.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="fotball">Lag en fotball.</objectsoccerball>
+    <objectbullet label="amunisjon">La amunisjon.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="side 1">Gå til side 1.</taska>
+    <taskb label="side 2">Gå til side 2.</taskb>
+    <taskc label="side 3">Gå til side 3.</taskc>
+    <taskd label="side 4">Gå til side 4.</taskd>
+    <taske label="side 5">Gå til side 5.</taske>
+    <taskf label="side 6">Gå til side 6.</taskf>
+    <taskg label="side 7">Gå til side 7.</taskg>
+    <taskh label="side 8">Gå til side 8.</taskh>
+    <taski label="side 9">Gå til side 9.</taski>
+    <taskj label="side 10">Gå til side 10.</taskj>
+    <taskk label="side 11">Gå til side 11.</taskk>
+    <taskl label="side 12">Gå til side 12.</taskl>
+    <expresshappy label="glad">Vær glad.</expresshappy>
+    <expresssad label="lei seg">vær lei seg.</expresssad>
+    <expressangry label="SINT">Vær sint.</expressangry>
+    <expresscrazy label="gal">Vær gal.</expresscrazy>
+    <expresshearts label="hjerte">Vis hjerte (forelskelse).</expresshearts>
+    <expressflowers label="blomster">Vis blomster.</expressflowers>
+    <expressstars label="stjerner">Vis stjerner.</expressstars>
+    <expressswear label="banning">Vis tegneserie banning.</expressswear>
+    <expressnone label="ingenting">Vær i normalt humør og ikke vis noe.</expressnone>
+
+    <_000point label="poeng">0 poeng.</_000point>
+    <_001point label="poeng">1 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_001point>
+    <_002points label="poeng">2 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_002points>
+    <_003points label="poeng">3 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer..</_003points>
+    <_004points label="poeng">4 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_004points>
+    <_005points label="poeng">5 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_005points>
+    <_010points label="poeng">10 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_010points>
+    <_020points label="poeng">20 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_020points>
+    <_050points label="poeng">50 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_050points>
+    <_100points label="poeng">100 poeng.  Kan kombineres med andre verdier for "lage" større poengsummer.</_100points>
+
+    <random label="tilfeldig">Lag en tilfeldig (random) verdi for tall brukken. Eksempel: Tilfeldig 5 vil gi ett tall mellom 0 og 5.</random>
+    <health label="¨helse">Antallet treffpoenger en spillekatakter har fått.</health>
+    <teama label="gruppe A" />
+    <teamb label="gruppe B" />
+    <payloadzap label="lam">Gjør målet "lam" (bevegelsesløs) i noen sekunder.</payloadzap>
+    <payloadpop label="slått ut">Slår ut målet helt til en annen spiller resetter hans helsepoeng.</payloadpop>
+    <payloadboom label="bang">Får målet til å bli borte i en eksplosjon.</payloadboom>
+    <payloadvanish label="forsvinn">Får målet til å bli borte umiddelbart.</payloadvanish>
+    <black label="sort" />
+    <grey label="grå" />
+    <white label="hvit" />
+    <red label="rød" />
+    <orange label="oransje" />
+    <yellow label="gul" />
+    <green label="grønn" />
+    <blue label="blå" />
+    <purple label="lilla" />
+    <pink label="rosa" />
+    <brown label="brun" />
+    <glowoff label="av">Slå av glød.</glowoff>
+    <colorrandom label="tilfeldig">Velger en tilfeldig farge.</colorrandom>
+    <path>
+      <black label="sort sti" />
+      <grey label="grå sti" />
+      <white label="hvit sti" />
+      <red label="rød sti" />
+      <orange label="oransje sti" />
+      <yellow label="gul sti" />
+      <green label="grønn sti" />
+      <blue label="blå sti" />
+      <purple label="lilla sti" />
+      <pink label="rosa sti" />
+      <brown label="brun sti" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="hvit">Endrer "hvite" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</white>
+        <black label="sort">Endrer "sorte" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</black>
+        <grey label="grå">Endrer "gråe" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</grey>
+        <red label="rød">Endrer "røde" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</red>
+        <green label="grønn">Endrer "grønne" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</green>
+        <blue label="blå">Endrer "blå" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</blue>
+        <orange label="oransje">Endrer "oransje" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</orange>
+        <yellow label="gule">Endrer "gule" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</yellow>
+        <purple label="lilla">Endrer "lilla" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</purple>
+        <pink label="rosa">Endrer "rosa" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</pink>
+        <brown label="brun">Endrer "brune" skåringer/poengsum som normalt blir vist på poenglista. (Kan endres under "Verden alternativer")</brown>
+      </color>
+      <letter>
+        <a label="A skåring">Endrer 'A' skåring, som ikke vises på poengtavla.</a>
+        <b label="B skåring">Endrer 'B' skåring, som ikke vises på poengtavla.</b>
+        <c label="C skåring">Endrer 'C' skåring, som ikke vises på poengtavla.</c>
+        <d label="D skåring">Endrer 'D' skåring, som ikke vises på poengtavla.</d>
+        <e label="E skåring">Endrer 'E' skåring, som ikke vises på poengtavla.</e>
+        <f label="F skåring">Endrer 'F' skåring, som ikke vises på poengtavla.</f>
+        <g label="G skåring">Endrer 'G' skåring, som ikke vises på poengtavla.</g>
+        <h label="H skåring">Endrer 'H' skåring, som ikke vises på poengtavla.</h>
+        <i label="I skåring">Endrer 'I' skåring, som ikke vises på poengtavla.</i>
+        <j label="J skåring">Endrer 'J' skåring, som ikke vises på poengtavla.</j>
+        <k label="K skåring">Endrer 'K' skåring, som ikke vises på poengtavla.</k>
+        <l label="L skåring">Endrer 'L' skåring, som ikke vises på poengtavla.</l>
+        <m label="M skåring">Endrer 'M' skåring, som ikke vises på poengtavla.</m>
+        <n label="N skåring">Endrer 'N' skåring, som ikke vises på poengtavla.</n>
+        <o label="O skåring">Endrer 'O' skåring, som ikke vises på poengtavla.</o>
+        <p label="P skåring">Endrer 'P' skåring, som ikke vises på poengtavla.</p>
+        <q label="Q skåring">Endrer 'Q' skåring, som ikke vises på poengtavla.</q>
+        <r label="R skåring">Endrer 'R' skåring, som ikke vises på poengtavla.</r>
+        <s label="S skåring">Endrer 'S' skåring, som ikke vises på poengtavla.</s>
+        <t label="T skåring">Endrer 'T' skåring, som ikke vises på poengtavla.</t>
+        <u label="U skåring">Endrer 'U' skåring, som ikke vises på poengtavla.</u>
+        <v label="V skåring">Endrer 'V' skåring, som ikke vises på poengtavla.</v>
+        <w label="W skåring">Endrer 'W' skåring, som ikke vises på poengtavla.</w>
+        <x label="X skåring">Endrer 'X' skåring, som ikke vises på poengtavla.</x>
+        <y label="Y skåring">Endrer 'Y' skåring, som ikke vises på poengtavla.</y>
+        <z label="Z skåring">Endrer 'Z' skåring, som ikke vises på poengtavla.</z>
+      </letter>
+      <local>
+        <a label="a skåring">The 'a' score, which is private to this character.</a>
+        <b label="b skåring">The 'b' score, which is private to this character.</b>
+        <c label="c skåring">The 'c' score, which is private to this character.</c>
+        <d label="d skåring">The 'd' score, which is private to this character.</d>
+        <e label="e skåring">The 'e' score, which is private to this character.</e>
+        <f label="f skåring">The 'f' score, which is private to this character.</f>
+        <g label="g skåring">The 'g' score, which is private to this character.</g>
+        <h label="h skåring">The 'h' score, which is private to this character.</h>
+        <i label="i skåring">The 'i' score, which is private to this character.</i>
+        <j label="j skåring">The 'j' score, which is private to this character.</j>
+        <k label="k skåring">The 'k' score, which is private to this character.</k>
+        <l label="l skåring">The 'l' score, which is private to this character.</l>
+        <m label="m skåring">The 'm' score, which is private to this character.</m>
+        <n label="n skåring">The 'n' score, which is private to this character.</n>
+        <o label="o skåring">The 'o' score, which is private to this character.</o>
+        <p label="p skåring">The 'p' score, which is private to this character.</p>
+        <q label="q skåring">The 'q' score, which is private to this character.</q>
+        <r label="r skåring">The 'r' score, which is private to this character.</r>
+        <s label="s skåring">The 's' score, which is private to this character.</s>
+        <t label="t skåring">The 't' score, which is private to this character.</t>
+        <u label="u skåring">The 'u' score, which is private to this character.</u>
+        <v label="v skåring">The 'v' score, which is private to this character.</v>
+        <w label="w skåring">The 'w' score, which is private to this character.</w>
+        <x label="x skåring">The 'x' score, which is private to this character.</x>
+        <y label="y skåring">The 'y' score, which is private to this character.</y>
+        <z label="z skåring">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="meg">Utfør handlingen på spillekarakteren som kjører programmet.</me>
+    <it label="den">Utfør handlingen på målet til eller motstanderen til spillekarakteren som kjører programmet.</it>
+    <any label="alle">Utfør handlingen på alle spillekarakterer.</any>
+    <event>
+      <any label="alle">Alle lyder.</any>
+      <silly>
+        <any label="tullete">Alle tullete lyder.</any>
+        <bang label="bang">En tegneserie "bang" lyd.</bang>
+        <pow label="pow">En tegneserie "pow" lyd.</pow>
+      </silly>
+      <explode>
+        <any label="eksplosjon">Alle eksplosjoner.</any>
+        <A label="bang A">En eksplosjonslyd.</A>
+        <B label="bang B">En eksplosjonslyd.</B>
+        <C label="bang C">En eksplosjonslyd.</C>
+        <D label="bang D">En eksplosjonslyd.</D>
+        <E label="bang E">En eksplosjonslyd.</E>
+      </explode>
+      <musical>
+        <any label="musikk">Lyden av musikk.</any>
+        <glock>
+          <any label="klokkespill">Lyd fra klokkespill.</any>
+        </glock>
+        <glock01 label="C klokkespill">En klokkepill tone.</glock01>
+        <glock02 label="C# klokkespill">En klokkepill tone.</glock02>
+        <glock03 label="D klokkespill">En klokkepill tone.</glock03>
+        <glock04 label="D# klokkespill">En klokkepill tone.</glock04>
+        <glock05 label="E klokkespill">En klokkepill tone.</glock05>
+        <glock06 label="F klokkespill">En klokkepill tone.</glock06>
+        <glock07 label="F# klokkespill">En klokkepill tone.</glock07>
+        <glock08 label="G klokkespill">En klokkepill tone.</glock08>
+        <glock09 label="G# klokkespill">En klokkepill tone.</glock09>
+        <glock10 label="A klokkespill">En klokkepill tone.</glock10>
+        <glock11 label="A# klokkespill">En klokkepill tone.</glock11>
+        <glock12 label="B klokkespill">En klokkepill tone.</glock12>
+        <gong>
+          <any label="gong-gong">En gong-gong lyd.</any>
+		</gong>
+        <gong-gong01 label="C gong-gong">En gong-gong tone.</gong-gong01>
+        <gong-gong02 label="C# gong-gong">En gong-gong tone.</gong-gong02>
+        <gong-gong03 label="D gong-gong">En gong-gong tone.</gong-gong03>
+        <gong-gong04 label="D# gong-gong">En gong-gong tone.</gong-gong04>
+        <gong-gong05 label="E gong-gong">En gong-gong tone.</gong-gong05>
+        <gong-gong06 label="F gong-gong">En gong-gong tone.</gong-gong06>
+        <gong-gong07 label="F# gong-gong">En gong-gong tone.</gong-gong07>
+        <gong-gong08 label="G gong-gong">En gong-gong tone.</gong-gong08>
+        <gong-gong09 label="G# gong-gong">En gong-gong tone.</gong-gong09>
+        <gong-gong10 label="A gong-gong">En gong-gong tone.</gong-gong10>
+        <gong-gong11 label="A# gong-gong">En gong-gong tone.</gong-gong11>
+        <gong-gong12 label="B gong-gong">En gong-gong tone.</gong-gong12>
+        <saw>
+          <any label="sagtann">Sagtann bølge tone.</any>
+        </saw>
+        <sagtann01 label="C sagtann">En sagtann bølge tone.</sagtann01>
+        <sagtann02 label="C# sagtann">En sagtann bølge tone.</sagtann02>
+        <sagtann03 label="D sagtann">En sagtann bølge tone.</sagtann03>
+        <sagtann04 label="D# sagtann">En sagtann bølge tone.</sagtann04>
+        <sagtann05 label="E sagtann">En sagtann bølge tone.</sagtann05>
+        <sagtann06 label="F sagtann">En sagtann bølge tone.</sagtann06>
+        <sagtann07 label="F# sagtann">En sagtann bølge tone.</sagtann07>
+        <sagtann08 label="G sagtann">En sagtann bølge tone.</sagtann08>
+        <sagtann09 label="G# sagtann">En sagtann bølge tone.</sagtann09>
+        <sagtann10 label="A sagtann">En sagtann bølge tone.</sagtann10>
+        <sagtann11 label="A# sagtann">En sagtann bølge tone.</sagtann11>
+        <sagtann12 label="B sagtann">En sagtann bølge tone.</sagtann12>
+        <sine>
+          <any label="sine">Sinus bølge tone.</any>
+        </sine>
+        <sinus01 label="C sinus">En sinus bølge tone.</sinus01>
+        <sinus02 label="C# sinus">En sinus bølge tone.</sinus02>
+        <sinus03 label="D sinus">En sinus bølge tone.</sinus03>
+        <sinus04 label="D# sinus">En sinus bølge tone.</sinus04>
+        <sinus05 label="E sinus">En sinus bølge tone.</sinus05>
+        <sinus06 label="F sinus">En sinus bølge tone.</sinus06>
+        <sinus07 label="F# sinus">En sinus bølge tone.</sinus07>
+        <sinus08 label="G sinus">En sinus bølge tone.</sinus08>
+        <sinus09 label="G# sinus">En sinus bølge tone.</sinus09>
+        <sinus10 label="A sinus">En sinus bølge tone.</sinus10>
+        <sinus11 label="A# sinus">En sinus bølge tone.</sinus11>
+        <sinus12 label="B sinus">En sinus bølge tone.</sinus12>
+        <square>
+          <any label="square">Firkantbølge lyd.</any>
+        </square>
+        <square01 label="C firkantbølge">En firkantbølge tone.</square01>
+        <square02 label="C# firkantbølge">En firkantbølge tone.</square02>
+        <square03 label="D firkantbølge">En firkantbølge tone.</square03>
+        <square04 label="D# firkantbølge">En firkantbølge tone.</square04>
+        <square05 label="E firkantbølge">En firkantbølge tone.</square05>
+        <square06 label="F firkantbølge">En firkantbølge tone.</square06>
+        <square07 label="F# firkantbølge">En firkantbølge tone.</square07>
+        <square08 label="G firkantbølge">En firkantbølge tone.</square08>
+        <square09 label="G# firkantbølge">En firkantbølge tone.</square09>
+        <square10 label="A firkantbølge">En firkantbølge tone.</square10>
+        <square11 label="A# firkantbølge">En firkantbølge tone.</square11>
+        <square12 label="B firkantbølge">En firkantbølge tone.</square12>
+        <drums>
+          <any label="trommer">Trommelyd.</any>
+        </drums>
+        <bassdrum label="bass">Bass trommer.</bassdrum>
+        <hhclosed label="hh lukket">Hi-hat cymbal lukket.</hhclosed>
+        <hhopen label="hh åpen">Hi-hat cymbal åpen.</hhopen>
+        <shaker label="shaker">Shaker.</shaker>
+        <snare label="skarptromme">Skarptromme</snare>
+        <tomlow label="tom lav">Tom tromme med lav tonehøyde.</tomlow>
+        <tommed label="tom middels">Tom tromme med middels tonehøyde.</tommed>
+        <tomhi label="tom høy">Tom tromme med høy tonehøyde.</tomhi>
+      </musical>
+      <arcade>
+        <any label="spillehall">Hvilken som hels spillehall lyd.</any>
+        <roboton label="robot på">Aktiver en.</roboton>
+        <robotoff label="robot av">Deaktiver robot.</robotoff>
+        <coinsound label="mynt">Lyden av mynter.</coinsound>
+        <gethealth label="helse+">Lyden av å få mer helse.</gethealth>
+        <losehealth label="helse-">Lyden av å få mindre helse.</losehealth>
+        <shoot label="skyte">Lyden av skyting.</shoot>
+        <timer label="klokke">Klokke lyd.</timer>
+        <win label="vinne">Lyden av å vinne.</win>
+        <lose label="tape">Lyden av å tape.</lose>
+        <inkjet_fire label="blekkstråle skudd">Lyden av ett blekkstråleskudd.</inkjet_fire>
+        <inkjet_impact label="blekkstråle treff">Lyden av ett blekkstråletreff.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="diverse">Hvilken som helst lyd.</any>
+        <countdown_beep label="nedtelling">Nedtellings blippelyd.</countdown_beep>
+        <countdown_alarm label="nedtellings alarm">Alarmlyd ved nedtelling.</countdown_alarm>
+        <epic_stinger label="bazooka">Lyden av an bazooka.</epic_stinger>
+        <epic_stinger_a label="bazooka a">Lyden av an bazooka.</epic_stinger_a>
+        <epic_stinger_b label="bazooka b">Lyden av an bazooka.</epic_stinger_b>
+        <firepoof label="brann">Lyden av brann.</firepoof>
+        <forcefieldup label="skjold +">lyden av kraftfelt/skjold som øker.</forcefieldup>
+        <forcefielddown label="skjold -">lyden av kraftfelt/skjold som avtar.</forcefielddown>
+        <hide label="gjem">Gjemmelyd.</hide>
+        <lockontarget label="lås aktivert">Lyden av at sikte er låst til målet.</lockontarget>
+        <losetarget label="lås deaktivert">Lyden av at sikte mistet målet sitt.</losetarget>
+        <positivecondition label="bra">Lyden av at noe bra har skjedd.</positivecondition>
+        <negativecondition label="gårlig">Lyden av at noe dårlig/negativt har skjedd.</negativecondition>
+        <points label="poeng">Lyden når man får poeng.</points>
+        <pop label="pop">"Pop" lyd.</pop>
+        <popout label="pop ut">Pop ut lyd.</popout>
+        <powerup label="starter">Lyden av at noe starter.</powerup>
+        <servo label="servo">Lyden av en servo.</servo>
+        <watersplash label="plask">Lyden av vann som plasker.</watersplash>
+        <waterdrop label="dråpe">Vanndråpelyd.</waterdrop>
+        <tagbase label="tag base">Tag base lyd.</tagbase>
+        <whistlehuman label="plystring">Plystrelyd.</whistlehuman>
+        <whistlereferee label="dommerfløyte">Lyden av en dommerfløyte.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="tårn">Tårnforsvarslyd.</any>
+        <air_raid_siren label="flysirene">Lyden av flysirene.</air_raid_siren>
+        <bomb_fall label="bombe faller">Lyden av en bombe som faller.</bomb_fall>
+        <stun_fire label="lammende skudd">Lyden av ett ikke dødlig, men lammende skudd.</stun_fire>
+        <zapper_fire label="elektrosjokk skudd">Lyden av ett elektrosjokk skudd.</zapper_fire>
+        <missile_fire label="missil skudd">Lyden av ett missil skudd.</missile_fire>
+        <shrinker_fire label="forminsker skudd">Lyden av ett forminsker skudd.</shrinker_fire>
+        <clam_coin_spit label="myntsplitting">Den majestetiske lyden av mynter som splittes.</clam_coin_spit>
+        <enemy_converted label="omvendt finde">Lyden av en fiende som blir omvendt til din side.</enemy_converted>
+        <enemy_escape label="finde stakk av">En lys som spilles når en fiende kommer seg unna.</enemy_escape>
+        <place_tower label="plasser tårn">Luden som spilles når ett tårn blir plassert.</place_tower>
+        <star_collect label="stjerne plukket opp">Lyden av at man har plukket opp en stjerne.</star_collect>
+        <coin_collect label="myn plukket opp">Lyden av en mynt som plukkes opp.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="musikk">Hvilken som helst musikk fra denne gruppen.</any>
+      <omni>
+        <any label="Omni">Hvilken som helst musikk fra denne gruppen</any>
+      </omni>
+    </music>
+    <mu_action label="action">Action</mu_action>
+    <mu_ambientlight label="rolig">Rolig musikk.</mu_ambientlight>
+    <mu_ambinetmodd label="steming">Stemingsmusikk</mu_ambinetmodd>
+    <mu_brightdowntempo label="slo-mo">Lys og rolig musikk.</mu_brightdowntempo>
+    <mu_brightfunk label="funk">Funk musikk</mu_brightfunk>
+    <mu_brightguitar label="gitar">Lett gitarmusikk.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu theme.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="Mysterium">Hvilken som helst musikk fra denne gruppen.</any>
+      </mystery>
+    </music>
+    <mysterya label="myst A">Mystisk musikk.</mysterya>
+    <mysteryb label="myst B">Mystisk musikk.</mysteryb>
+    <mysteryc label="myst C">Mystisk musikk.</mysteryc>
+    <music>
+      <driving>
+        <any label="kjører">Hvilken som helst musikk fra denne gruppen.</any>
+      </driving>
+    </music>
+    <drivinga label="rask A">Musikk når man kjører fort.</drivinga>
+    <drivingb label="rask B">Musikk når man kjører fort.</drivingb>
+    <drivingc label="rask C">Musikk når man kjører fort.</drivingc>
+    <music>
+      <drama>
+        <any label="drama">Hvilken som helst musikk fra denne gruppen.</any>
+      </drama>
+    </music>
+    <dramaa label="drama A">Dramatisk musikk.</dramaa>
+    <dramab label="drama B">Dramatisk musikk</dramab>
+    <environ>
+      <any label="miljø">Hvilken som helst musikk fra denne gruppen.</any>
+      <ambocean label="sjø">Sjø lyder.</ambocean>
+      <ambforest label="skog">Skogslyder.</ambforest>
+      <ambcity label="by">Bylarm.</ambcity>
+      <ambmeadow label="rolig">Rolig avslappende lyder.</ambmeadow>
+      <ambmars label="mars">Mars lyder.</ambmars>
+      <arena>
+        <any label="arena">Hvilken som helst arena lyd.</any>
+        <a label="arena A">Lyd av ett stort publikum.</a>
+        <b label="arena B">Lyd av ett stort publikum.</b>
+        <c label="arena C">Lyd av ett stort publikum.</c>
+        <d label="arena D">Lyd av ett stort publikum.</d>
+        <e label="arena E">Lyd av ett stort publikum.</e>
+        <f label="arena F">Lyd av ett stort publikum.</f>
+        <g label="arena G">A big crowd.</g>
+      </arena>
+    </environ>
+    <trackingnone label="rett">Missilen vil fly rett uten å følge noen mål.</trackingnone>
+    <trackinghoming label="flyr">Missilen flyr rundt omkring og følger landskapet.</trackinghoming>
+    <constraint>
+      <leftright label="venstre/høyre">Flytt kun til sidene.</leftright>
+      <fwdback label="frem/tilbake">Flytt kun fremover eller bakover.</fwdback>
+      <updown label="opp/ned" />
+      <northsouth label="N/S">Beveg deg nord eller sør.</northsouth>
+      <eastwest label="Ø/V">Beveg deg øst eller nord.</eastwest>
+      <immobile label="frys">Ikke tillatt bevegelse, selv om du blir dyttet.</immobile>
+    </constraint>
+    <once label="en gang">Koden etter UTFØR vil kun kjøres en gang etter aktivering av NÅR.</once>
+    <watertype label="Type vann">Velg type vann.</watertype>
+    <on label="på">Sett nåværende tilstand til 'på'.</on>
+    <off label="av">Sett nåværende tilstand til 'av'.</off>
+    <microbit>
+      <pattern label="mønster">LED mønster viser på BBC micro:bit screen.</pattern>
+    </microbit>
+    <frequencyunits>
+      <khz label="kHz">Verdien er målt kilohertz frekvens.</khz>
+    </frequencyunits>
+  </modifier>
+  <actuator>
+    <nothing label="ingenting" />
+    <movement label="bevegelse">Reis rundt i verden. Utforsk alternativer. De forskjellige karakterene har forsjellige bevegelses evne. Travel around the world. Explore the options. Different characters have different movement abilities.</movement>
+    <turn label="vending">Endre veien du ser.</turn>
+    <eat label="Spis">Spis objektet, når det er nærme.</eat>
+    <say label="snakke">Skriv en melding, enten i en boble eller i en samtale. Bruk &lt;cr&gt; for å dele inn i linjer.</say>
+    <open label="åpne">Fungerer forskjellig ved de forskjellige karakterene. Eksperiment!</open>
+    <close label="lukket">Fungererforskjellig ved de forskjellige karakterene. Eksperiment!</close>
+    <kick label="spark">Spark målet, hvis det er nært nok. Styrken kan variere.</kick>
+    <make label="lage">lage et annet objekt. Kan lage objekter eller noe annet som er merket med å kunne lages. </make>
+    <launch label="iverksett">Spark objektet, hvis det er nærme nok. Styrken kan variere.</launch>
+    <push label="dyttet">Dytt objektet i en bestemt vei, hvis den er nærme nok. Styrken kan variere.</push>
+    <pull label="dra">Dra objekter i en bestemt vei, hvis den er nærme nok. Styrken kan variere.</pull>
+    <camouflage label="skjule">Kamuflerer objektet, gjør det vanskelig å se den.</camouflage>
+    <uncamouflage label="vise">Gjør objektet synelig, gjør den synelig igjen.</uncamouflage>
+    <express label="uttrykk">Uttrykk en følelse eller vis en spesial effekt. Noen uttrykker endrer ansiktet til karakteren, mens noen vises over karakteren.</express>
+    <color label="farge">Endre fargen på deg selv eller ditt mål objekt.</color>
+    <glow label="gløde">Avgir en radioaktiv glødning. Kan endre fargen.</glow>
+    <sound label="lyd">Lag en lyd! Mye å velge mellom.</sound>
+    <stopsound label="stille">Stop med å spille ne lyd.</stopsound>
+    <jump label="Hopp">Forskjellige karakterer kan hoppe i forskjellige høyder.</jump>
+    <watersurface label="overflate"> Overflate BRIKKEN får undervanns karakterer til å komme opp til overflaten.</watersurface>
+    <waterdive label="dykke">Dykke BRIKKEN får undervanns karakterer til å dykke ned til bunnen av vannet.</waterdive>
+    <airrise label="gå opp">Gå opp BRIKKEN får flyvende karakterer til å fly opp til himmelen.</airrise>
+    <airdrop label="gå ned">Gå ned BRIKKEN får flyvende karakterer til å fly ned mot bakken.</airdrop>
+    <switchtask label="bytt side">Byt til forskjellige sider.Bare reglene på den siden du er på gjelder. Sider er veldig nyttige for å endre oppførsel.</switchtask>
+    <inlinetask label="sette inn">Ved spilling vil dette inkludere all programelring fra en annen side. Dette er nyttig for kode som du vil a på flere sider siden du kan skrive det en gang, og da sette den inn hvor du vil.</inlinetask>
+    <nextlevel label="Neste nivå"> Last inn neste nivå. Nyttig for et spill med flere nivåer!</nextlevel>
+    <prevlevel label="forrige nivå">Last inn forrige nivå. Nyttig for et spill med flere nivåer.</prevlevel>
+    <waterraise label="hev vannstanden">Hev vannstanden under dette objektet.</waterraise>
+    <waterlower label="senk vannstnden">Senk vannstanden under dette objektet.</waterlower>
+    <setwater label="definer vanntype">Definer vanntype under dette objektet.</setwater>
+    <rescale label="skala">Endre objektes størrelse gradvis.</rescale>
+    <rescaleinstant label="skala (umiddelbart)">endre objektes størrelse umiddelbart.</rescaleinstant>
+    <holddistance label="hold avstanden">Endre avstanden til objekter man følger gradvis.</holddistance>
+    <holddistanceinstant label="hold avstanden (umiddelbart)"> Endrer avstanden til objekter man følger umiddelbart.</holddistanceinstant>
+    <movementspeedmodify label="bevegelses hastighet"> Bestemmer bevegelses hastigheten for denne spilleren.</movementspeedmodify>
+    <turningspeedmodify label="snu hastighet"> Bestemmer snu hastigheten for denne spilleren.</turningspeedmodify>
+    <worldlightingchange label="lys">Endrer gradvis på lyset i verden, f.eks fra natt til dag.</worldlightingchange>
+    <worldlightingchangeinstant label="lys (umiddelbart)"> Endrer umiddelbart lyset i verden, f.eks fra natt til dag.</worldlightingchangeinstant>
+    <worldskychange label="Himmel"> Endrer gradvis verdens himmel. </worldskychange>
+    <worldskychangeinstant label="Himmel (umiddelbart)"> Endrer umiddelbart verdens himmel.</worldskychangeinstant>
+    <shoot label="Skyt" />
+    <shoot2 label="Skyt">Skyter kuler eller missil.</shoot2>
+    <beam label="Stråle"> Skyter en laser stråle på en Mars steintype for å se hvilke egenskaper den har.</beam>
+    <inspect label="undersøk">Borre seg inn i en Mars steintype, henter ut prøver for senere undersøkelser.</inspect>
+    <scan label="skanne">Avslører en steintype på en ukjent stein i et område rundt en månebil.</scan>
+    <picture label="bilder">Tar bilder i spillerens synsvinkel.</picture>
+    <damage label="ødelegelse">Tar til seg helse fra enten megselv eller en annen valgt karakter.</damage>
+    <heal label="helbrede">Øker helsen for megselv eller en annen valgt karakter.Helbreder BRIKKEN brukes for at enten karakteren eller objektet til å gjennopprette helsen fra ødelegelsen. Normalt så helbredes målobjektet. Bruk meg BRIKKEN for å helbrede deg selv.</heal>
+    <zap label="bedøve">Bedøver enten megselv eller en annen valgt karakter i noen sekunder.</zap>
+    <pop label="utslått"> Får en robot eller meg selv til å bli fulstendig utslått helt til en annen kommer å resetter helsepoengene.</pop>
+    <boom label="bang">Får megselv eller målet til å forsvinne i en eksplusjon.</boom>
+    <vanish label="forsvinne">Får megselv eller målet til å forsvinne umiddelbart.</vanish>
+    <grab label="ta">Plukk opp målet hvis den er nærme nok. Du kan holde en ting om gangen.</grab>
+    <drop label="slipp">Slipp det du holder.</drop>
+    <give label="gi">Gi det du holder til mål karakter. Hvis målet ikke kan holde den, vil den slippe.</give>
+    <reset label="tilbakestill">Tilbakestill en del av spillet eller en karakter.</reset>
+    <restart label="ommstart">Nullstill en del av spillet eller en karakter.</restart>
+    <gameover label="slutt">Slutt spillet.</gameover>
+    <victory label="vinn">Slutt spillet og vis en vinner melding.Hvis du har valgt en farge, vil den synes.</victory>
+    <score label="poengsum">Legg til poeng til poengsummen.</score>
+    <unscore label="trekke fra">Ta bort poeng fra poengsummen.</unscore>
+    <scoreset label="sett poengsum">Sett poengsum for å gi en verdi.</scoreset>
+    <camera>
+      <followme label="følge">Meningen er å følge denne karakteren.</followme>
+      <ignoreme label="ignorere">Ikke bry deg om å ha denne karakteren i synsfeltet.</ignoreme>
+      <firstperson label="første person">Se gjennom denne karakterens øyne.</firstperson>
+    </camera>
+    <microbit>
+      <say label="si"> Scroll text on the micro:bit display.</say>
+      <block label="block">Control all the micro:bit lights.</block>
+      <sequential label="meter">Turn on the micro:bit lights sequentially.</sequential>
+      <show label="show pattern">Show a pattern on the micro:bit display.</show>
+      <setpin1 label="sett pinne 0">Setter status på de digitale utgangene.</setpin1>
+      <setpin2 label="sett pinne 1">Setter status på de digitale utgangene.</setpin2>
+      <setpin3 label="sett pinne 2">Setter status på de digitale utgangene.</setpin3>
+      <setpwmfrequency>
+        <pin1 label="PWM 0 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin1>
+        <pin2 label="PWM 1 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin2>
+        <pin3 label="PWM 2 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin3>
+      </setpwmfrequency>
+      <setpwmdutycycle>
+        <pin1 label="PWM 0 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin1>
+        <pin2 label="PWM 1 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin2>
+        <pin3 label="PWM 2 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin3>
+      </setpwmdutycycle>
+    </microbit>
+  </actuator>
+  <root />
+  <group>
+    <colors label="farger" />
+    <pathcolors label="sti farger" />
+    <game label="spill" />
+    <more label="mer" />
+    <players label="spillere" />
+    <playermods label="spillere" />
+    <actions label="handling" />
+    <settings label="instillinger" />
+    <combat label="kamp" />
+    <rover label="månebil" />
+    <holding label="holder" />
+    <sounds label="lyder" />
+    <event label="hendelse">
+      <explode label="eksplodere" />
+      <silly label="tullete" />
+      <musical label="musikal">
+        <glock label="klokke" />
+        <saw label="sag" />
+        <sine label="sinus" />
+        <gong label="gong" />
+        <square label="kvadrat" />
+        <drums label="trommer" />
+      </musical>
+      <arcade label="spillehald" />
+      <misc label="div" />
+      <tower label="tårn" />
+    </event>
+    <environ label="miljø">
+      <forest label="skog" />
+      <arena label="arena" />
+    </environ>
+    <music label="musikk">
+      <omni label="ny" />
+      <mystery label="mysterium" />
+      <driving label="kjøre" />
+      <drama label="drama" />
+    </music>
+    <constraints label="begrenset" />
+    <directions label="vei" />
+    <filters>
+      <directions label="vei" />
+      <touchbuttons label="knapper" />
+      <touchGuiButtons label="knapper" />
+      <gestures label="berørings mønster" />
+    </filters>
+    <expressions label="uttrykke" />
+    <projectiles label="projektil" />
+    <camera label="visning" />
+    <reset label="nullstill" />
+    <options label="alternativer" />
+    <compare label="sammenligne" />
+    <points label="poeng" />
+    <time label="tid" />
+    <speed label="fart" />
+    <strength label="styrke" />
+    <angle label="vinkel" />
+    <tracking label="sporing" />
+    <bots label="robot I" />
+    <bots2 label="robot II" />
+    <objects label="objekter" />
+    <tasks label="oppgaver" />
+    <terrains label="typer" />
+    <waters label="typer" />
+    <setwater label="vanntype" />
+    <creatables label="kan lages" />
+    <keyboard>
+      <letters label="brev" />
+      <numbers label="tall" />
+      <symbols label="symboler" />
+      <misc label="div" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+    <microbit>
+      <actions>
+        <gpio label="micro:bit I/O"/>
+      </actions>
+    </microbit>
+  </group>
+</Tiles>

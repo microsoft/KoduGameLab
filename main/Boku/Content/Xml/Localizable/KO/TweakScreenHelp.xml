@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>얼마나 멀리 떨어져 있는 물체를 밀거나 당길 수 있을지 설정합니다. 이 설정으로 멀리 있는 물체를 밀거나 당길 수 있습니다.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>물체를 밀거나 당기는 힘을 설정합니다. 이 설정으로 물체를 세게 밀거나 당길 수 있습니다.</desc>
+  </helpText>
+
+  <helpText id="LightRange">
+    <desc>조명이 얼마나 멀리까지 빛나는지 설정합니다. (조명에만 적용됩니다)</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+로봇의 속도를 자세히 조정합니다.
+기본 속도 값은 1.0 입니다.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+로봇의 가속도를 자세히 조정합니다.
+기본 가속도 값은 1.0 입니다.
+    </desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>로봇이 다른 방향으로 움직이지 못하게 위치를 고정합니다. 로봇이 회전할 수는 있습니다.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>로봇을 부서지지 않는 상태로 설정합니다.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>이 설정으로, 로봇의 머리 위에 로봇에게 남아있는 체력을 보여주는 표시 막대가 보입니다.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>로봇의 기본 체력 값을 설정합니다. 체력은 공격을 받으면 줄어들고, 치료를 받으면 채워집니다.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>로봇을 "생성가능"으로 표시하면, 두 가지의 특별한 능력이 생깁니다.
+      첫째로, 이 로봇을 복제하면 모든 클론들이 뇌를 공유합니다. 한 개의 클론을 편집하면 다른 모든 클론들도 같이 바뀝니다. 생성가능 로봇과 클론 로봇들 사이의 연결은 점선으로 표시됩니다.
+      둘째로, 다른 로봇을 프로그램을 바꿔서 원래 로봇의 프로그램을 완성할 수 있습니다.
+      이 설정은 게임에서 여러 개의 적을 만들고 싶을 때 적당합니다.
+      그런데 생성을 계속하다 보면 프로그램의 제한을 쉽게 넘어갈 수 있어서 조심해야 합니다.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+생성가능 로봇은, 게임에서 있을 수 있는 수가 제한됩니다. 게임을 편집할 때 있는 클론의 수가 아니라, 게임 플레이 중에 늘어날 수 있는 클론의 수가 제한됩니다.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+로봇에 대한 카메라 움직임을 설정합니다. 기본적으로 카메라는 여러분이 움직이는 로봇을 따라갑니다.
+카메라를 "항상 표시"로 설정하면, 카메라는 로봇을 계속 따라다닙니다. 여러 대의 로봇이 있는데 이 설정을 하면, 카메라는 모든 로봇을 계속 화면에 표시하려고 합니다.
+카메라를 "표시 안함"으로 설정하면, 여러분이 로봇을 조종할 때라도 카메라는 로봇을 따라가지 않습니다.
+    </desc>
+  </helpText>
+  <helpText id="HoldDistance">
+    <desc>물체를 잡아서 어디까지 옮길 수 있는지 설정합니다.</desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>로봇이 지형, 벽, 다른 로봇과 부딪혔을 때 얼마나 멀리 튕기는지 설정합니다.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>로봇이 지형, 벽, 다른 로봇과 부딪혔을 때 얼마나 멀리 미끄러지는지 설정합니다.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>로봇에서 발사된 총알이 얼마나 피해를 줄 수 있는지 설정합니다.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+로봇이 총알을 발사하고 다시 발사할 수 있을 때까지의 준비 시간을 설정합니다.
+이 시간은 1초 단위로 정해집니다.
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>총알이 어느 정도까지 가서 사라질 것인지 설정합니다.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>로봇에서 발사된 총알이 얼마나 빠르게 날아갈 것인지 설정합니다.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+로봇이 한 번에 얼마나 많은 총알을 발사할 수 있는지 설정합니다.
+로봇이 정해진 숫자만큼 발사를 하면, 발사된 총알이 무언가를 맞추거나 멀리 가서 사라지기 전까지는 다시 발사할 수 없습니다.
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>로봇에서 발사된 총알이 목표물을 맞췄을 때, 체력을 얼마나 감소시킬 수 있는지 설정합니다.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+로봇이 미사일을 발사하고 다시 발사할 수 있을 때까지의 준비 시간을 설정합니다.
+이 시간은 1초 단위로 정해집니다.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>미사일이 어느 정도까지 가서 사라질 것인지 설정합니다.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>로봇에서 발사된 미사일이 얼마나 빠르게 날아갈 것인지 설정합니다.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+로봇이 한 번에 얼마나 많은 미사일을 발사할 수 있는지 설정합니다.
+로봇이 정해진 숫자만큼 발사를 하면, 발사된 미사일이 무언가를 맞추거나 멀리 가서 사라지기 전까지는 다시 발사할 수 없습니다.
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>로봇에서 발사된 미사일에서 연기가 날 것인지를 설정합니다. 연기가 나지 않는 미사일은 더 빠르게 표현됩니다.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>로봇이 무언가와 부딪히거나 충격을 받은 경우 보호막 효과를 표시할 것인지를 설정합니다.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>로봇이 모두에게 보여질 지를 설정합니다. 로봇이 다른 로봇에게 계속 보여지거나 소리가 들리게 할 수 있습니다.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>로봇이 다른 로봇들에게 보이거나, 들리거나, 부딪칠 수 있는지 설정합니다. 유령 로봇은 다른 로봇을 보고 들을 수 있지만, 다른 로봇과 부딪칠 수는 없습니다.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>캐릭터에서 나는 소리만 끕니다. 프로그램의 소리는 계속 들립니다. 다른 캐릭터들은 이 캐릭터의 소리를 계속 들을 수 있기 때문에, 캐릭터가 있는지 눈치챌 수 있다는 점을 조심하세요.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>모든 물 위를 미끄러지며 날아가게 합니다. 이 설정을 끄면 캐릭터가 물 아래로 내려갈 수 있습니다.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>다른 캐릭터가 어느 정도 거리에서 이 캐릭터의 소리를 들을 수 있는지 설정합니다. 여러분에게 실제로 들리는 소리가 변하지는 않습니다.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>이 캐릭터가 어느 정도 거리에서 다른 캐릭터의 소리를 들을 수 있는지 설정합니다. 여러분에게 실제로 들리는 소리가 변하지는 않습니다.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>로봇이 유령이 되어도 계속 주위 환경과 부딪칠 수 있게 한다.</desc>
+  </helpText>
+
+  <helpText id="KickStrength">
+    <desc>로봇이 다른 물체를 차는 힘을 설정합니다. 차는 힘을 세게 하면 물체들이 더 멀리 날아갑니다.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>로봇이 첫 번째 물체를 찬 후, 얼마나 빨리 두 번째 물체를 차는지 설정합니다.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>로봇의 크기를 크게 하거나 작게 합니다. 기본 크기는 1.0 입니다.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>무언가를 보면 몇 초 동안 기억되도록 설정합니다.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>캐릭터에 비춰지는 조명의 밝기를 설정합니다. 빛나는 캐릭터가 다른 물체까지 밝아지게 하지는 않습니다.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>물체가 빛나고 있으면 다른 물체까지 밝아지게 하고, 얼마나 밝아지게 할 것인지 설정합니다.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>로봇에서 나오는 조명이 얼마나 밝게 빛날지 설정합니다.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>캐릭터들이 돌아다니거나, 돌거나, 또는 무언가로부터 멀리 떨어지도록 프로그래밍 했을 때, 가는 길을 막는 모든 방해물들을 보여줍니다.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>로봇이 어떤 다른 로봇들을 보고 들을 수 있는지 보여줍니다.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>(아직 작동하지 않는 부분입니다)</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>세계의 가장자리 주변에 투명한 벽을 만듭니다. 이 설정은 로봇이 가장자리 밖으로 떨어지지 않도록 합니다.
+
+풍선, 구름, 제트, 빛, 비행접시, 블림프, 도깨비불, 미사일은 투명한 벽을 통과할 수 있습니다.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>이 세계를 변화시킨 사람들의 기록을 보여줍니다.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>게임이 진행되는 중에도 카메라가 움직이는 방식을 바꿀 수 있게 해줍니다.
+      "위치 고정" 선택은 게임이 진행될 때 카메라가 움직이지 않게 합니다. 이 설정은 캐릭터의 위쪽 하늘에서 화면이 보여져야 하는 적과 싸우는 유형의 게임에서 유용합니다. 와이드스크린 디스플레이에서는 보여지는 모습이 달라질 수 있습니다.
+      "화면 고정" 선택은 카메라와 물체 사이에 일정한 거리와 방향이 유지됩니다. 또는 마우스 화살표나 로봇과도 그렇게 할 수 있습니다. 이 설정은 화면이 옆으로 흘러가야 할 때 유용합니다.
+      "자유 이동" 선택은 기본 값이고, 카메라를 고정하거나 따라다니게 설정하기 전까지 카메라가 자유롭게 이동하도록 합니다.
+      위치나 화면고정 카메라일 경우 &lt;X&gt;버튼을 누르면 카메라 위치를 자유롭게 설정할 수 있습니다.
+    </desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>게임을 시작할 때의 카메라 위치를 설정합니다. 게임을 시작할 때 카메라가 있어야 하는 곳으로 카메라를 옮기고 이 설정을 켭니다.
+      나중에 카메라 위치를 바꾸고 싶다면, 카메라 위치를 자유롭게 조정하는 상태로 들어가는 &lt;x&gt;를 누릅니다.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>카메라가 여러분이 조종하는 캐릭터 뒤에서 얼마나 힘차게 돌아가는지를 설정합니다.</desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>보통 화면 오른쪽 아래 보이는 나침반을 숨겨줍니다. 나침반은 편집을 할 때는 항상 보이고, 게임을 실행하면 보이지 않습니다.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>보통 화면 오른쪽에 보이는 자원표시기를 숨겨줍니다. 자원표시기는 편집을 할 때는 항상 보이고, 게임을 실행하면 보이지 않습니다.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+보통 화면 오른쪽에 나타나는 자원표시기에 정해진 자원 제한을 없앱니다. 이 설정을 끄면, 여러분의 세계에 지형과 물체를 원하는 만큼 추가할 수 있습니다.
+경고 : 자원 제한을 해제하면 코두가 매우 느려질 수도 있습니다. 또는 시스템 메모리가 초과되어 코두가 꺼질 수도 있습니다.
+  </desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>여러분의 세계에 물이 있다면, 파도의 높낮이를 설정합니다.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>물 때문에 달라져 보이는 정도를 설정합니다.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>여러분의 세계의 배경 색을 설정합니다.
+게임이 분위기 있도록 하늘과 조명의 설정을 연결합니다.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>여러분의 세계에 조명의 설정합니다. 조명을 어둡게 하면 게임이 시작했을 때 깜깜하게 보일 것입니다. 편집을 할 때는 여러분의 세계가 잘 보이게 조명이 밝게 설정됩니다.
+게임이 분위기 있도록 하늘과 조명의 설정을 연결합니다.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>게임에서 나무 사이로 부는 바람이 가장 약하게 설정합니다.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>게임에서 나무 사이로 부는 바람을 가장 세게 설정합니다.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>게임이 어떻게 시작될 것인지 설정합니다. :
+"아무것도 없음"을 선택하면 아무런 효과 없이 평범하게 게임이 시작됩니다.
+“이 세계의 제목” 3초간 여러분이 만든 세계의 이름이 표시되고 게임이 시작됩니다.
+“이 세계에 대한 설명” 여러분이 만든 세계에 대한 설명이 표시되고 사용자에게 &lt;a&gt;를 눌러 게임을 시작하라는 글이 보입니다. 여러분이 게임을 저장할 때 적어두는 설명이 보이게 됩니다.
+“카운트 다운” 게임이 시작되기 직전에 3-2-1 수를 셉니다. 경주 게임에 잘 맞습니다.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>캐릭터가 패스를 따라갈 때, 캐릭터가 지나가는 길을 보여줍니다. 목표 지점까지 가는 패스가 캐릭터 색깔인 선으로 표시됩니다.</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>로봇과 다른 물체가 서로 부딪히거나 로봇이 땅에 부딪힐 때 표시 효과를 보여줍니다.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>로봇이 보거나 들을 수 있는 경우, 다른 어떤 로봇을 보고 들을 수 있는지 보여줍니다.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>지형 편집 속도를 설정합니다. 작으면 느려지고, 크면 빨라집니다.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>메뉴나 버튼을 눌렀을 때 들리는 소리의 크기를 설정합니다.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>게임 안에서 들리는 소리의 크기를 설정합니다. 폭발, 충돌, 로봇이 내는 소리 등입니다.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>게임 안에서 들리도록 정한 배경 음악의 소리 크기를 설정합니다.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>점수를 얻을 때 마다 얼마나 눈에 띄게 표시될지 설정합니다.
+      끄기 : 점수가 표시되지 않습니다.
+      조용히 : 점수는 표시되고, 득점 효과는 표시되지 않습니다.
+      요란히 : 점수가 표시되고, 득점을 할 때마다 점수판 애니메이션을 보여줍니다.
+    </desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>다음 레벨이나 이전 레벨로 이동했을 때, 점수가 계속 이어질 지 설정합니다.
+계속 : 새 레벨로 이동해도 지금 점수가 유지됩니다.
+새로 : 새 레벨로 이동하면 점수가 처음부터 시작됩니다.
+    </desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>화면에 가상 컨트롤러를 보이거나 숨깁니다.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+      버튼들이 어떻게 보일지 설정합니다.
+      숨기기 : 버튼을 보이지 않게 합니다.
+      설명 없음 : 버튼은 보이고 글자는 보이지 않습니다.
+      설명 있음 : 버튼과 함께 버튼을 설명하는 글자가 보입니다.
+    </desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+      "다음 레벨" 타일을 누르면 이동할 레벨을 설정합니다. 또, "이전 레벨" 타일을 써서 플레이어가 지금 레벨로 돌아올 수 있게 해줍니다.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+      선택한 물체 아래쪽의 물을 채웁니다.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+      선택한 물체 아래쪽의 물을 뺍니다.
+    </desc>
+  </helpText>
+
+
+  <helpText id="SetWater">
+    <desc>
+      선택한 물체 아래쪽의 물에 대해 설정합니다.
+    </desc>
+  </helpText>
+
+  <!-- Help for User Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>도구 설명을 보이지 않게 합니다.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>도움말을 보이지 않게 합니다. 도움말은 문제가 일어날 것 같은 상황을 시스템이 감지할 때마다 보입니다.
+도움말이 보일 때마다, 다시 도움말을 보이지 않도록 선택할 수 있습니다.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>보통 게임패드 도구 메뉴가 켜져 있으면, 배경이 흐려지면서 카메라가 움직이지 않습니다.
+    이 설정을 끄면, 항상 카메라를 움직일 수 있게 됩니다. 하지만 여러분의 세계를 작동시키기 전에 도구를 선택해야 합니다.
+    이 설정을 끄면, 지금부터 왼쪽 스틱으로 카메라를 조종합니다. 원하는 도구를 선택하려면 방향키나 트리거를 사용합니다.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>여러분이 예전에 보이지 않도록 설정했던 도움말들을 다시 모두 보이게 합니다.</desc>
+  </helpText>
+
+  <helpText id ="ShowFramerate">
+    <desc>이 설정을 켜면, 화면 왼쪽 아래에 지금 화면이 얼마나 빠르게 바뀌고 있는지(FPS) 숫자가 보입니다.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>화면 왼쪽 위에 보이는 도움말의 양을 설정합니다.</desc>
+  </helpText>
+
+  <helpText id ="Language">
+    <desc>여러분이 사용하는 언어를 설정합니다. 코두는 우리 모두의 힘으로 번역됩니다. 코두를 여러분의 언어로 번역하는데 힘이 되고 싶다면, 자세한 내용을 KoduSupport@microsoft.com로 이메일을 보내 문의해주시기 바랍니다.</desc>
+  </helpText>
+
+  <helpText id ="InvertYAxis">
+    <desc>막대를 밀어서 로봇을 아래쪽으로 이동합니다.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>막대를 밀어서 로봇을 위쪽으로 이동합니다.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>막대를 밀어서 카메라를 위쪽으로 이동합니다.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>막대를 밀어서 카메라를 오른쪽으로 이동합니다.</desc>
+  </helpText>
+
+  <helpText id ="Overscan">
+    <desc>"오버스캔"은 화면이 가장자리에 얼마나 잘려나갈지를 정하는 것입니다. 이 설정은 연결된 화면 장치가 무엇인지에 따라 달라집니다.
+      막대를 조절해서 도움말이 얼마나 화면 바깥쪽에 보일지 설정할 수 있습니다. 그림이 화면에서 잘려나가면, 이 값을 더 크게 설정합니다.
+      텔레비전 화면은 20%에서 잘 보입니다. 컴퓨터 모니터 화면은 0%나 5%에서도 잘 보일 수 있습니다. 어떻게 해야 가장 잘 보일지 실험을 통해 정할 수 있습니다.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>이 설정을 하면, 다른 사용자들이 여러분의 세계를 다운로드 목록에 추가할 수 있게 됩니다.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>이 설정을 하면, 다른 사용자들로부터 다운로드 한 세계가 자동으로 공유되어 나중에 공유 세션에서 다운로드가 가능해집니다.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>자동으로 다운로드 된 세계는 공유 세션에서 "좋아함"으로 표시됩니다.</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>센서가 얼마나 가까운 거리에서부터 보거나 들을 것인지 설정합니다. 설정 단위는 미터입니다. 참고 : 지형 타일 한 개의 길이는 0.5 미터입니다.</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>센서가 얼마나 먼 거리까지 보거나 들을 것인지 설정합니다. 설정 단위는 미터입니다. 참고 : 지형 타일 한 개의 길이는 0.5 미터입니다.</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>이 설정을 하면, 코두가 시작할 때 새로운 버전을 확인합니다.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>이 설정을 하면, 여러분이 어떻게 코두를 사용하고 있는지 익명으로 된 정보를 Microsoft에 보냅니다. 이 정보들은 코두가 발전하는 힘이 됩니다.</desc>
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>이 설정을 하면, 다음에 코두를 시작할 때 소개 영상이 재생됩니다.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>보통 코두가 종료될 때마다 여러분이 코두 커뮤니티 웹사이트에 로그인하는 정보가 삭제됩니다. 이 설정을 하면, 계속 로그인 되어 있을 수 있도록 합니다.
+</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>여러분이 나만의 튜토리얼을 만들 때 도움을 주는 설정입니다. 이 설정을 켜고 튜토리얼 레벨을 실행하면, 화면 위쪽에 어떤 부분을 수정해야 할 지 정보를 표시해줍니다. </desc>
+  </helpText>
+
+</XmlHelpTextData>

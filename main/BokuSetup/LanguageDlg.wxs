@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Import current version number, etc. -->
+<?include Build.wxi ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+    <!-- These properties contain localized language names -->
+    <Property Id="Language_AR" Value="!(loc.Language_AR)"/>
+    <Property Id="Language_CS" Value="!(loc.Language_CS)"/>
+    <Property Id="Language_CY" Value="!(loc.Language_CY)"/>
+    <Property Id="Language_DE" Value="!(loc.Language_DE)"/>
+    <Property Id="Language_EL" Value="!(loc.Language_EL)"/>
+    <Property Id="Language_EN" Value="!(loc.Language_EN)"/>
+    <Property Id="Language_ES" Value="!(loc.Language_ES)"/>
+    <Property Id="Language_FR" Value="!(loc.Language_FR)"/>
+    <Property Id="Language_HE" Value="!(loc.Language_HE)"/>
+    <Property Id="Language_IS" Value="!(loc.Language_IS)"/>
+    <Property Id="Language_IT" Value="!(loc.Language_IT)"/>
+    <Property Id="Language_JA" Value="!(loc.Language_JA)"/>
+    <Property Id="Language_KO" Value="!(loc.Language_KO)"/>
+    <Property Id="Language_LT" Value="!(loc.Language_LT)"/>
+    <Property Id="Language_NL" Value="!(loc.Language_NL)"/>
+    <Property Id="Language_PL" Value="!(loc.Language_PL)"/>
+    <Property Id="Language_PT" Value="!(loc.Language_PT)"/>
+    <Property Id="Language_RU" Value="!(loc.Language_RU)"/>
+    <Property Id="Language_TR" Value="!(loc.Language_TR)"/>
+
+    <UI>
+      <Dialog Id="LanguageDlg" Width="370" Height="270" Title="!(loc.LanguageDlg_DlgTitle)">
+
+        <!-- Header -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.AdvancedWelcomeEulaDlgBannerBitmap)" />
+        <Control Id="WndTitle" Type="Text" X="20" Y="10" Width="300" Height="24" Transparent="yes" NoPrefix="yes" Text="!(loc.LanguageDlg_WndTitle)" />
+
+        <!-- Content -->
+        <Control Id="LanguageSelectionLabel" Type="Text" X="20" Y="55" Width="330" Height="24" Transparent="yes" Text="!(loc.LanguageDlg_Label)"/>
+        <Control Id="LanguageSelectionComboBox" Type="ComboBox" X="20" Y="70" Width="330" Height="171" Sunken="yes" TabSkip="no"
+                 Property="CONTENT_LANGUAGE_NAME" Text="CONTENT_LANGUAGE_NAME">
+          <ComboBox Property="CONTENT_LANGUAGE_NAME">
+            <ListItem Value="[Language_AR]"/>
+            <ListItem Value="[Language_CS]"/>
+            <ListItem Value="[Language_CY]"/>
+            <ListItem Value="[Language_DE]"/>
+            <ListItem Value="[Language_EL]"/>
+            <ListItem Value="[Language_EN]"/>
+            <ListItem Value="[Language_ES]"/>
+            <ListItem Value="[Language_FR]"/>
+            <ListItem Value="[Language_HE]"/>
+            <ListItem Value="[Language_IS]"/>
+            <ListItem Value="[Language_IT]"/>
+            <ListItem Value="[Language_JA]"/>
+            <ListItem Value="[Language_KO]"/>
+            <ListItem Value="[Language_LT]"/>
+            <ListItem Value="[Language_NL]"/>
+            <ListItem Value="[Language_PL]"/>
+            <ListItem Value="[Language_PT]"/>
+            <ListItem Value="[Language_RU]"/>
+            <ListItem Value="[Language_TR]"/>
+          </ComboBox>
+        </Control>
+        
+        <!-- Footer -->
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+
+        <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization AR">CONTENT_LANGUAGE_NAME = Language_AR</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization CS">CONTENT_LANGUAGE_NAME = Language_CS</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization CY">CONTENT_LANGUAGE_NAME = Language_CY</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization DE">CONTENT_LANGUAGE_NAME = Language_DE</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization EL">CONTENT_LANGUAGE_NAME = Language_EL</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" >CONTENT_LANGUAGE_NAME = Language_EN</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization ES">CONTENT_LANGUAGE_NAME = Language_ES</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization FR">CONTENT_LANGUAGE_NAME = Language_FR</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization HE">CONTENT_LANGUAGE_NAME = Language_HE</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization IS">CONTENT_LANGUAGE_NAME = Language_IS</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization IT">CONTENT_LANGUAGE_NAME = Language_IT</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization IT">CONTENT_LANGUAGE_NAME = Language_JA</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization IT">CONTENT_LANGUAGE_NAME = Language_KO</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization LT">CONTENT_LANGUAGE_NAME = Language_LT</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization NL">CONTENT_LANGUAGE_NAME = Language_NL</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization PL">CONTENT_LANGUAGE_NAME = Language_PL</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization PT">CONTENT_LANGUAGE_NAME = Language_PT</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization RU">CONTENT_LANGUAGE_NAME = Language_RU</Publish>
+          <Publish Property="CONTENT_LANGUAGE_SHORTCUT_ARGS" Value=" /Localization TR">CONTENT_LANGUAGE_NAME = Language_TR</Publish>
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+
+      </Dialog>
+
+      <!-- Display the consent dialog -->
+      <InstallUISequence>
+        <Show Dialog="LanguageDlg" After="ConsentDlg">NOT Installed</Show>
+      </InstallUISequence>
+    </UI>
+	</Fragment>
+</Wix>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SurfaceSets>
+    <SurfaceSet>
+      <Name>BASE</Name>
+      <TechniqueExt>WithSkinning</TechniqueExt>
+      <BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+      <DirtMapName>Textures\White</DirtMapName>
+      <SurfaceNames>
+        <string>TintablePlastic</string>
+        <string>BrushedMetalDark</string>
+        <string>TintablePlastic</string>
+      </SurfaceNames>
+    </SurfaceSet>
+  </SurfaceSets>
+  <Model>
+    <TechniqueExt>WithSkinning</TechniqueExt>
+  </Model>
+  <GlowPosition>
+    <Offset>
+      <X>0</X>
+      <Y>0</Y>
+      <Z>1.0</Z>
+    </Offset>
+  </GlowPosition>
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>1.8</Z>
+  </HealthBarOffset>
+  <CollisionCenter>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.5</Z>
+  </CollisionCenter>
+  <CollisionRadius>0.8</CollisionRadius>
+  <Cost>2</Cost>
+  <CollisionSound>metalHard</CollisionSound>
+  <IsBot>false</IsBot>
+  <IsProp>true</IsProp>
+  <IsBuilding>false</IsBuilding>
+  <Mass>5000.0</Mass>
+  <GrabRange>4</GrabRange>
+  <KickRange>4</KickRange>
+  <Actions>
+    <OpenClose>
+      <DefaultPosition>Closed</DefaultPosition>
+    </OpenClose>
+  </Actions>
+
+  <OpenSoundName>sfx_kodu_clam_open</OpenSoundName>
+  <CloseSoundName>sfx_kodu_clam_close</CloseSoundName>  
+  
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Static</Physicality>
+  </Classification>
+  <CreatedItemOffset>
+    <X>0.5</X>
+    <Y>0.0</Y>
+    <Z>0.0</Z>
+  </CreatedItemOffset>
+  <Chassis Type="StaticProp" />
+</XmlGameActor>

@@ -1,0 +1,1091 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tiles>
+  <sensor>
+    <gamepad label="gamepad">Allow a player to control a character.  Specify button, trigger, or stick, and optionally player.</gamepad>
+    <keyboard label="keyboard">Allow a player to control a character.  Specify which key.</keyboard>
+    <mouse label="mouse">Respond to mouse input.</mouse>
+    <touch label="touch">Respond to touch input.</touch>
+    <microbit label="BBC micro:bit">Respond to BBC micro:bit input.</microbit>
+    <eyes label="see">React when you see an object depending on type or color. Hills and walls can block sight if you use the line-of-sight(LOS) filter.</eyes>
+    <ears label="hear">React when you hear an object depending on type or sound. Hearing works through walls.</ears>
+    <bumpers label="bumped">React when you bump into another object depending on type, color, etc.</bumpers>
+    <timer label="timer">React to a number of seconds passing. Add numbers to make longer times.</timer>
+    <got label="got">React to picking something up depending on type, color, etc.</got>
+    <scored label="scored">React to changes in a score.</scored>
+    <health label="health">React to changes in health.</health>
+    <missilehit label="shot hit">React to your shot hitting another object. Good for keeping score, but you can do whatever you want - like turn bots pink by shooting them.</missilehit>
+    <held label="held by">React to being picked up by another object.</held>
+    <terrain label="on land">React to different types of ground.</terrain>
+    <water label="on water">React to different types of water.</water>
+    <path label="on path">React when on a road or fence.</path>
+    <beamed label="beamed">React to when a Mars rock type has been beamed.</beamed>
+    <inspected  label="inspected">React to when a Mars rock type has been inspected.</inspected>
+    <scanned label="scanned">React to when an unknown rock has been scanned in order to reveal it.</scanned>
+    <endofpath  label="end of path">React to when you have reached the end of a path</endofpath>
+    <endofpathnonmover  label="end of path">React to when another character reaches the end of a path</endofpathnonmover>
+    <always label="always">Do something all the time. Optional.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <named label="">React to any character named</named>
+
+    <boku label="kodu">Kodu is a character you can add to your game and whose behavior can be programmed.</boku>
+    <bokubot label="kodu">Kodu is a character you can add to your game and whose behavior can be programmed.</bokubot>
+    <anything label="anything" />
+    <dead label="knocked out">React to knocked out characters.</dead>
+    <squashed label="squashed">React to squashed characters.</squashed>
+    <me label="me">Only check the bot running this program.</me>
+    <said label="said">Listen for another character to say something.  Type in what you want to listen for.</said>
+    <countnone label="none">React when you can't see anything that matches the description. For example, see - blue - none will react when nothing blue is in sight.</countnone>
+    <starfish label="starfish">React to a starfish.</starfish>
+    <clam label="clam">React to a clam.</clam>
+    <seagrass label="seagrass">React to seagrass.</seagrass>
+    <seagrasssingle label="seagrass">React to seagrass.</seagrasssingle>
+    <lilypad label="lily pads">React to lily pads.</lilypad>
+    <lilypadsingle label="lily pad">React to a lily pad.</lilypadsingle>
+    <flyfish label="fly fish">Flyfish is a character you can add to your game and whose behavior can be programmed.</flyfish>
+    <jet label="jet">Jet is a character you can add to your game and whose behavior can be programmed.</jet>
+    <light label="light">The Light is a character you can add to your game and whose behavior can be programmed. It also lights things up. But you can only have four.</light>
+    <fan label="fan">React to a fan.</fan>
+    <octopus label="octopus">React to an octopus.</octopus>
+    <fastbot label="cycle">Cycle is a character you can add to your game and whose behavior can be programmed.</fastbot>
+    <saucer label="saucer">Sorry, I can't tell you any more.  Information about the saucer is classified.</saucer>
+    <windblimp label="blimp">Blimp is a flying character you can add to your game and whose behavior can be programmed.</windblimp>
+    <balloonbot label="balloon">Balloon is a floating character you can add to your game and whose behavior can be programmed.</balloonbot>
+    <subbot label="sub">Sub is a submarine character you can add to your game and whose behavior can be programmed.</subbot>
+    <terracannon label="cannon">Cannon is a character you can add to your game and whose behavior can be programmed.</terracannon>
+    <puck label="puck">Puck is a character you can add to your game and whose behavior can be programmed.</puck>
+    <wisp label="wisp">Wisp is a character you can add to your game and whose behavior can be programmed.</wisp>
+    <anybot label="anybot">Look for any kind of bot.</anybot>
+    <turtle label="turtle">React to a turtle.</turtle>
+    <rover label="rover">React to a rover.</rover>
+    <pushpad label="pushpad">React to a pushpad.</pushpad>
+    <sputnik label="sputnik">React to a sputnik.</sputnik>
+    <stick label="stick">React to a stick.</stick>
+    <stickboy label="stick">React to a stick.</stickboy>
+    <drum label="drum">React to a drum.</drum>
+    <mine label="mine">React to a mine.</mine>
+    <missile label="missile">React to a missile.</missile>
+    <cloud label="cloud">React to a cloud.</cloud>
+    <swimfish label="fish">React to a fish.</swimfish>
+    <floatbot label="ship">React to a ship.</floatbot>
+    <factory label="factory">React to a factory.</factory>
+    <hut label="hut">React to a hut.</hut>
+    <castle label="castle">React to a castle.</castle>
+    <fruit label="apple">React to an apple.</fruit>
+    <inkjet label="ink cloud">React to an ink cloud.</inkjet>
+    <iceberg label="iceberg">React to an ice berg.</iceberg>
+    <rock label="rock">React to a rock.</rock>
+    <rockLowValue label="Igneous">React to an igneous rock.</rockLowValue>
+    <rockHighValue label="Sedimentary">React to a sedimentary rock.</rockHighValue>
+    <rockLowValueUnknown label="Unknown Rock">An igneous rock that appears unknown until scanned, beamed, or inspected.</rockLowValueUnknown>
+    <rockHighValueUnknown label="Unknown Rock">A sedimentary rock that appears unknown until scanned, beamed, or inspected.</rockHighValueUnknown>
+    <rockUnknown label="Unknown Rock">React to an unknown rock.</rockUnknown>
+    <tree label="tree">React to a tree.</tree>
+    <pipe label="pipe">React to a pipe.</pipe>
+    <pipeStraight label="straight pipe">React to a straight pipe.</pipeStraight>
+    <pipeCross label="cross pipe">React to a cross pipe.</pipeCross>
+    <pipeCorner label="corner pipe">React to a corner pipe.</pipeCorner>
+    <underwater label="underwater">React to underwater objects.</underwater>
+    <building label="building">React to a building.</building>
+    <flower label="flower" />
+    <gate label="gate" />
+    <cursor label="cursor">React to the cursor.</cursor>
+    <star label="star">React to a star.</star>
+    <coin label="coin">React to a coin.</coin>
+    <soccerball label="ball">React to a ball.</soccerball>
+    <heart label="heart">React to a heart.</heart>
+    <bullet label="ammo">React to ammo.</bullet>
+    <Black label="black">React to something black.</Black>
+    <Grey label="grey">React to something grey.</Grey>
+    <white label="white">React to something white.</white>
+    <red label="red">React to something red.</red>
+    <orange label="orange">React to something orange.</orange>
+    <yellow label="yellow">React to something yellow.</yellow>
+    <green label="green">React to something green.</green>
+    <blue label="blue">React to something blue.</blue>
+    <purple label="purple">React to something purple.</purple>
+    <pink label="pink">React to something pink.</pink>
+    <brown label="brown">React to something brown.</brown>
+    <PathBlack label="black path">React to a black path.</PathBlack>
+    <PathGrey label="grey path">React to a grey path.</PathGrey>
+    <PathWhite label="white path">React to a white path.</PathWhite>
+    <PathRed label="red path">React to a red path.</PathRed>
+    <PathOrange label="orange path">React to an orange path.</PathOrange>
+    <PathYellow label="yellow path">React to a yellow path.</PathYellow>
+    <PathGreen label="green path">React to a green path.</PathGreen>
+    <PathBlue label="blue path">React to a blue path.</PathBlue>
+    <PathPurple label="purple path">React to a purple path.</PathPurple>
+    <PathPink label="pink path">React to a pink path.</PathPink>
+    <PathBrown label="brown path">React to a brown path.</PathBrown>
+    <pathplain label="plain" />
+    <pathroad label="road" />
+    <pathwall label="wall" />
+    <pathflora label="flora" />
+    <yucca1 label="tree" />
+    <yucca2 label="tree" />
+    <yucca3 label="tree" />
+    <bigyucca1 label="tree" />
+    <expresshappy label="happy">React to a happy bot.</expresshappy>
+    <expresssad label="sad">React to a sad bot.</expresssad>
+    <expressangry label="ANGRY">React to a mad bot</expressangry>
+    <expresscrazy label="cRaZy">React to a crazy bot.</expresscrazy>
+    <expresshearts label="hearts">React to a bot showing hearts.</expresshearts>
+    <expressflowers label="flowers">React to a bot showing flowers.</expressflowers>
+    <expressstars label="stars">React to a bot showing stars.</expressstars>
+    <expressswear label="swears">React to a swearing bot.</expressswear>
+    <expressnormal label="normal">React to bot that's just acting normal.</expressnormal>
+    <expressnone label="blank">React to a bot that's just acting normal.</expressnone>
+    <moving label="moving">React to a bot only if it's moving.</moving>
+    <camouflage label="camouflage">React to a bot only if it's camouflaged.</camouflage>
+    <closeby label="close by">Close By causes the character to only pay attention to objects that are close to itself.  Far objects are ignored.</closeby>
+    <faraway label="far away">React only to things that are far away.</faraway>
+
+    <infront label="in front">React only to things in front of bot.</infront>
+    <behind label="behind">React only to things behind the bot.</behind>
+    <toleft label="to left">React only to things to the left of the bot.</toleft>
+    <toright label="to right">React only to things to the right of the bot.</toright>
+    <over label="above">React only to things higher than the bot.</over>
+    <under label="below">React only to things lower than the bot.</under>
+
+    <lineofsight label="line of sight">Terrain and walls block sensor.</lineofsight>
+    
+    <countfew label="few">React when you only see a few of something.</countfew>
+    <countmany label="many">React only when you see many of something.</countmany>
+    <clustermany label="cluster">React only when you see many of something that are clustered close together.</clustermany>
+    <countany label="any" />
+    <leftstick label="L stick">React to the left stick on a controller. Good for moving.</leftstick>
+    <rightstick label="R stick">React to the right stick on a controller. Good for shooting.</rightstick>
+    <abutton label="A button">React to the A button on a controller.</abutton>
+    <bbutton label="B button">React to the B button on a controller.</bbutton>
+    <xbutton label="X button">React to the X button on a controller.</xbutton>
+    <ybutton label="Y button">React to the Y button on a controller.</ybutton>
+    <lefttrigger label="left trig">React to the left trigger on a controller.</lefttrigger>
+    <righttrigger label="right trig">React to the right trigger on a controller.</righttrigger>
+    <lefttrigger_analog label="left trig">React to the left trigger on a controller.</lefttrigger_analog>
+    <righttrigger_analog label="right trig">React to the right trigger on a controller.</righttrigger_analog>
+    <strongly label="strongly">Detect a strong signal or value.</strongly>
+    <weakly label="weakly">Detect a weak signal or value.</weakly>
+    <microbit label="BBC micro:bit">
+      <tilt label="tilt">React to tilt input from the BBC micro:bit.</tilt>
+      <leftbutton label="A button">React to pressing the BBC micro:bit A button.</leftbutton>
+      <rightbutton label="B button">React to pressing the BBC micro:bit B button.</rightbutton>
+      <pin1 label="pin 0">Read state of BBC micro:bit pin 0.</pin1>
+      <pin2 label="pin 1">Read state of BBC micro:bit pin 1.</pin2>
+      <pin3 label="pin 2">Read state of BBC micro:bit pin 2.</pin3>
+      <shake label="shake">Detects when the micro:bit is shaken.</shake>
+    </microbit>
+    <mouse>
+      <button>
+        <left label="left">React to the mouse left button.</left>
+        <right label="right">React to the mouse right button.</right>
+      </button>
+      <hover label="over">React to the mouse hovering over an object or terrain.</hover>
+      <move label="move">React to the mouse moving.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="touching">React to an active touch (touch screen).</touching>
+        <tap label="tap">React to a tap (touch screen).</tap>
+        <rotate label="rotate">React to the rotate gesture (touch screen).</rotate>
+        <swipe label="swipe">React to the swipe gesture (touch screen).</swipe>
+        <slide label="slide">React to the slide gesture (touch screen).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="white">React to the WHITE button on the HUD. (Visit world settings to change)</White>
+        <Black label="black">React to the BLACK button on the HUD. (Visit world settings to change)</Black>
+        <Grey label="grey">React to the GREY button on the HUD. (Visit world settings to change)</Grey>
+        <Red label="red">React to the RED button on the HUD. (Visit world settings to change)</Red>
+        <Green label="green">React to the GREEN button on the HUD. (Visit world settings to change)</Green>
+        <Blue label="blue">React to the BLUE button on the HUD. (Visit world settings to change)</Blue>
+        <Orange label="orange">React to the ORANGE button on the HUD. (Visit world settings to change)</Orange>
+        <Yellow label="yellow">React to the YELLOW button on the HUD. (Visit world settings to change)</Yellow>
+        <Purple label="purple">React to the PURPLE button on the HUD. (Visit world settings to change)</Purple>
+        <Pink label="pink">React to the PINK button on the HUD. (Visit world settings to change)</Pink>
+        <Brown label="brown">React to the BROWN button on the HUD. (Visit world settings to change)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="X Button">React to touching on-screen button X.</controllerButton_X>
+      <controllerButton_Y label="Y Button">React to touching on-screen button Y.</controllerButton_Y>
+      <controllerButton_A label="A Button">React to touching on-screen button A.</controllerButton_A>
+      <controllerButton_B label="B Button">React to touching on-screen button B.</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="Arrows">React to the arrow keys on the keyboard.</ArrowKeys>
+    <WASDKeys label="WASD">React to the WASD keys on the keyboard.</WASDKeys>
+    <Akey label="A">React to the A key on the keyboard.</Akey>
+    <Bkey label="B">React to the B key on the keyboard.</Bkey>
+    <Ckey label="C">React to the C key on the keyboard.</Ckey>
+    <Dkey label="D">React to the D key on the keyboard.</Dkey>
+    <Ekey label="E">React to the E key on the keyboard.</Ekey>
+    <Fkey label="F">React to the F key on the keyboard.</Fkey>
+    <Gkey label="G">React to the G key on the keyboard.</Gkey>
+    <Hkey label="H">React to the H key on the keyboard.</Hkey>
+    <Ikey label="I">React to the I key on the keyboard.</Ikey>
+    <Jkey label="J">React to the J key on the keyboard.</Jkey>
+    <Kkey label="K">React to the K key on the keyboard.</Kkey>
+    <Lkey label="L">React to the L key on the keyboard.</Lkey>
+    <Mkey label="M">React to the M key on the keyboard.</Mkey>
+    <Nkey label="N">React to the N key on the keyboard.</Nkey>
+    <Okey label="O">React to the O key on the keyboard.</Okey>
+    <Pkey label="P">React to the P key on the keyboard.</Pkey>
+    <Qkey label="Q">React to the Q key on the keyboard.</Qkey>
+    <Rkey label="R">React to the R key on the keyboard.</Rkey>
+    <Skey label="S">React to the S key on the keyboard.</Skey>
+    <Tkey label="T">React to the T key on the keyboard.</Tkey>
+    <Ukey label="U">React to the U key on the keyboard.</Ukey>
+    <Vkey label="V">React to the V key on the keyboard.</Vkey>
+    <Wkey label="W">React to the W key on the keyboard.</Wkey>
+    <Xkey label="X">React to the X key on the keyboard.</Xkey>
+    <Ykey label="Y">React to the Y key on the keyboard.</Ykey>
+    <Zkey label="Z">React to the Z key on the keyboard.</Zkey>
+    <D0key label="0">React to the 0 key on the keyboard.</D0key>
+    <D1key label="1">React to the 1 key on the keyboard.</D1key>
+    <D2key label="2">React to the 2 key on the keyboard.</D2key>
+    <D3key label="3">React to the 3 key on the keyboard.</D3key>
+    <D4key label="4">React to the 4 key on the keyboard.</D4key>
+    <D5key label="5">React to the 5 key on the keyboard.</D5key>
+    <D6key label="6">React to the 6 key on the keyboard.</D6key>
+    <D7key label="7">React to the 7 key on the keyboard.</D7key>
+    <D8key label="8">React to the 8 key on the keyboard.</D8key>
+    <D9key label="9">React to the 9 key on the keyboard.</D9key>
+    <Spacekey label="Space">React to the Space key on the keyboard.</Spacekey>
+    <PageUpkey label="PageUp">React to the PageUp key on the keyboard.</PageUpkey>
+    <PageDownkey label="PageDown">React to the PageDown key on the keyboard.</PageDownkey>
+    <Endkey label="End">React to the End key on the keyboard.</Endkey>
+    <Leftkey label="Left">React to the Left key on the keyboard.</Leftkey>
+    <Upkey label="Up">React to the Up key on the keyboard.</Upkey>
+    <Rightkey label="Right">React to the Right key on the keyboard.</Rightkey>
+    <Downkey label="Down">React to the Down key on the keyboard.</Downkey>
+    <Insertkey label="Insert">React to the Insert key on the keyboard.</Insertkey>
+    <Deletekey label="Delete">React to the Delete key on the keyboard.</Deletekey>
+    <LeftWindowskey label="LeftWindows">React to the LeftWindows key on the keyboard.</LeftWindowskey>
+    <RightWindowskey label="RightWindows">React to the RightWindows key on the keyboard.</RightWindowskey>
+    <Multiplykey label="*">React to the Multiply key on the keyboard.</Multiplykey>
+    <Addkey label="+">React to the Add key on the keyboard.</Addkey>
+    <Subtractkey label="-">React to the Subtract key on the keyboard.</Subtractkey>
+    <Decimalkey label=".">React to the Decimal key on the keyboard.</Decimalkey>
+    <Dividekey label="/">React to the Divide key on the keyboard.</Dividekey>
+    <LeftShiftkey label="LeftShift">React to the LeftShift key on the keyboard.</LeftShiftkey>
+    <RightShiftkey label="RightShift">React to the RightShift key on the keyboard.</RightShiftkey>
+    <LeftControlkey label="LeftControl">React to the LeftControl key on the keyboard.</LeftControlkey>
+    <RightControlkey label="RightControl">React to the RightControl key on the keyboard.</RightControlkey>
+    <LeftAltkey label="LeftAlt">React to the LeftAlt key on the keyboard.</LeftAltkey>
+    <RightAltkey label="RightAlt">React to the RightAlt key on the keyboard.</RightAltkey>
+    <OemSemicolonkey label=";">React to the Semicolon key on the keyboard.</OemSemicolonkey>
+    <OemPluskey label="+">React to the Plus key on the keyboard.</OemPluskey>
+    <OemCommakey label=",">React to the Comma key on the keyboard.</OemCommakey>
+    <OemMinuskey label="-">React to the Minus key on the keyboard.</OemMinuskey>
+    <OemPeriodkey label=".">React to the Period key on the keyboard.</OemPeriodkey>
+    <OemQuestionkey label="?">React to the Question key on the keyboard.</OemQuestionkey>
+    <OemTildekey label="~">React to the Tilde key on the keyboard.</OemTildekey>
+    <OemOpenBracketskey label="[">React to the OpenBrackets key on the keyboard.</OemOpenBracketskey>
+    <OemPipekey label="|">React to the Pipe key on the keyboard.</OemPipekey>
+    <OemCloseBracketskey label="]">React to the CloseBrackets key on the keyboard.</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">React to the Quotes key on the keyboard.</OemQuoteskey>
+    <OemBackslashkey label="\">React to the Backslash key on the keyboard.</OemBackslashkey>
+    <F1key label="F1">React to the F1 key on the keyboard.</F1key>
+    <F2key label="F2">React to the F2 key on the keyboard.</F2key>
+    <F3key label="F3">React to the F3 key on the keyboard.</F3key>
+    <F4key label="F4">React to the F4 key on the keyboard.</F4key>
+    <F5key label="F5">React to the F5 key on the keyboard.</F5key>
+    <F6key label="F6">React to the F6 key on the keyboard.</F6key>
+    <F7key label="F7">React to the F7 key on the keyboard.</F7key>
+    <F8key label="F8">React to the F8 key on the keyboard.</F8key>
+    <F9key label="F9">React to the F9 key on the keyboard.</F9key>
+    <F10key label="F10">React to the F10 key on the keyboard.</F10key>
+    <F11key label="F11">React to the F11 key on the keyboard.</F11key>
+    <F12key label="F12">React to the F12 key on the keyboard.</F12key>
+    <Shiftkey label="Shift">React to any Shift key on the keyboard.</Shiftkey>
+    <Controlkey label="Control">React to any Control key on the keyboard.</Controlkey>
+    <Altkey label="Alt">React to any Alt key on the keyboard.</Altkey>
+    <Windowskey label="Windows">React to any Windows key on the keyboard.</Windowskey>
+    <player1 label="player 1">React only to Player 1's controller. Default is to react to any.</player1>
+    <player2 label="player 2">React only to Player 2's controller. Default is to react to any.</player2>
+    <player3 label="player 3">React only to Player 3's controller. Default is to react to any.</player3>
+    <player4 label="player 4">React only to Player 4's controller. Default is to react to any.</player4>
+    <terrain label="type">React to a specific type of terrain.</terrain>
+    <water label="type">React to a specific type of water.</water>
+    <eighthsecond label="seconds">1/8 of a second.  Combine with others to add up to larger times.</eighthsecond>
+    <quartersecond label="seconds">1/4 of a second.  Combine with others to add up to larger times.</quartersecond>
+    <_01second label="second">1 second.  Combine with others to add up to larger times.</_01second>
+    <_02seconds label="seconds">2 seconds.  Combine with others to add up to larger times.</_02seconds>
+    <_03seconds label="seconds">3 seconds.  Combine with others to add up to larger times.</_03seconds>
+    <_04seconds label="seconds">4 seconds.  Combine with others to add up to larger times.</_04seconds>
+    <_05seconds label="seconds">5 seconds.  Combine with others to add up to larger times.</_05seconds>
+    <_10seconds label="seconds">10 seconds.  Combine with others to add up to larger times.</_10seconds>
+    <_20seconds label="seconds">20 seconds.  Combine with others to add up to larger times.</_20seconds>
+    <_30seconds label="seconds">30 seconds.  Combine with others to add up to larger times.</_30seconds>
+    <_60seconds label="seconds">60 seconds.  Combine with others to add up to larger times.</_60seconds>
+    <_000point label="points">0 points.</_000point>
+    <_001point label="point">1 point.  Combine with others to add up to larger amounts.</_001point>
+    <_002points label="points">2 points.  Combine with others to add up to larger amounts.</_002points>
+    <_003points label="points">3 points.  Combine with others to add up to larger amounts.</_003points>
+    <_004points label="points">4 points.  Combine with others to add up to larger amounts.</_004points>
+    <_005points label="points">5 points.  Combine with others to add up to larger amounts.</_005points>
+    <_010points label="points">10 points.  Combine with others to add up to larger amounts.</_010points>
+    <_020points label="points">20 points.  Combine with others to add up to larger amounts.</_020points>
+    <_050points label="points">50 points.  Combine with others to add up to larger amounts.</_050points>
+    <_100points label="points">100 points.  Combine with others to add up to larger amounts.</_100points>
+    <random label="random">Make a random number using number tiles. For example, Random - 5 creates a random number between 0 and 5.</random>
+    <percent label="percent">Take a percentage of another number.  For instance 50 % Red will give you half of the Red score.</percent>
+    <scorebucket>
+      <color>
+        <white label="white">Tests white scores, which are shown on the scoreboard by default. (Visit world settings to change.)</white>
+        <black label="black">Tests black scores, which are shown on the scoreboard by default. (Visit world settings to change.)</black>
+        <grey label="grey">Tests grey scores, which are shown on the scoreboard by default. (Visit world settings to change.)</grey>
+        <red label="red">Tests red scores, which are shown on the scoreboard by default. (Visit world settings to change.)</red>
+        <green label="green">Tests green scores, which are shown on the scoreboard by default. (Visit world settings to change.)</green>
+        <blue label="blue">Tests blue scores, which are shown on the scoreboard by default. (Visit world settings to change.)</blue>
+        <orange label="orange">Tests orange scores, which are shown on the scoreboard by default. (Visit world settings to change.)</orange>
+        <yellow label="yellow">Tests yellow scores, which are shown on the scoreboard by default. (Visit world settings to change.)</yellow>
+        <purple label="purple">Tests purple scores, which are shown on the scoreboard by default. (Visit world settings to change.)</purple>
+        <pink label="pink">Tests pink scores, which are shown on the scoreboard by default. (Visit world settings to change.)</pink>
+        <brown label="brown">Tests brown scores, which are shown on the scoreboard by default. (Visit world settings to change.)</brown>
+      </color>
+      <letter>
+        <a label="score A">The 'A' score, which is shared by all the characters in the world.</a>
+        <b label="score B">The 'B' score, which is shared by all the characters in the world.</b>
+        <c label="score C">The 'C' score, which is shared by all the characters in the world.</c>
+        <d label="score D">The 'D' score, which is shared by all the characters in the world.</d>
+        <e label="score E">The 'E' score, which is shared by all the characters in the world.</e>
+        <f label="score F">The 'F' score, which is shared by all the characters in the world.</f>
+        <g label="score G">The 'G' score, which is shared by all the characters in the world.</g>
+        <h label="score H">The 'H' score, which is shared by all the characters in the world.</h>
+        <i label="score I">The 'I' score, which is shared by all the characters in the world.</i>
+        <j label="score J">The 'J' score, which is shared by all the characters in the world.</j>
+        <k label="score K">The 'K' score, which is shared by all the characters in the world.</k>
+        <l label="score L">The 'L' score, which is shared by all the characters in the world.</l>
+        <m label="score M">The 'M' score, which is shared by all the characters in the world.</m>
+        <n label="score N">The 'N' score, which is shared by all the characters in the world.</n>
+        <o label="score O">The 'O' score, which is shared by all the characters in the world.</o>
+        <p label="score P">The 'P' score, which is shared by all the characters in the world.</p>
+        <q label="score Q">The 'Q' score, which is shared by all the characters in the world.</q>
+        <r label="score R">The 'R' score, which is shared by all the characters in the world.</r>
+        <s label="score S">The 'S' score, which is shared by all the characters in the world.</s>
+        <t label="score T">The 'T' score, which is shared by all the characters in the world.</t>
+        <u label="score U">The 'U' score, which is shared by all the characters in the world.</u>
+        <v label="score V">The 'V' score, which is shared by all the characters in the world.</v>
+        <w label="score W">The 'W' score, which is shared by all the characters in the world.</w>
+        <x label="score X">The 'X' score, which is shared by all the characters in the world.</x>
+        <y label="score Y">The 'Y' score, which is shared by all the characters in the world.</y>
+        <z label="score Z">The 'Z' score, which is shared by all the characters in the world.</z>
+      </letter>
+      <local>
+        <a label="score a">The 'a' score, which is private to this character.</a>
+        <b label="score b">The 'b' score, which is private to this character.</b>
+        <c label="score c">The 'c' score, which is private to this character.</c>
+        <d label="score d">The 'd' score, which is private to this character.</d>
+        <e label="score e">The 'e' score, which is private to this character.</e>
+        <f label="score f">The 'f' score, which is private to this character.</f>
+        <g label="score g">The 'g' score, which is private to this character.</g>
+        <h label="score h">The 'h' score, which is private to this character.</h>
+        <i label="score i">The 'i' score, which is private to this character.</i>
+        <j label="score j">The 'j' score, which is private to this character.</j>
+        <k label="score k">The 'k' score, which is private to this character.</k>
+        <l label="score l">The 'l' score, which is private to this character.</l>
+        <m label="score m">The 'm' score, which is private to this character.</m>
+        <n label="score n">The 'n' score, which is private to this character.</n>
+        <o label="score o">The 'o' score, which is private to this character.</o>
+        <p label="score p">The 'p' score, which is private to this character.</p>
+        <q label="score q">The 'q' score, which is private to this character.</q>
+        <r label="score r">The 'r' score, which is private to this character.</r>
+        <s label="score s">The 's' score, which is private to this character.</s>
+        <t label="score t">The 't' score, which is private to this character.</t>
+        <u label="score u">The 'u' score, which is private to this character.</u>
+        <v label="score v">The 'v' score, which is private to this character.</v>
+        <w label="score w">The 'w' score, which is private to this character.</w>
+        <x label="score x">The 'x' score, which is private to this character.</x>
+        <y label="score y">The 'y' score, which is private to this character.</y>
+        <z label="score z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="trigger" />
+    <timertrigger label="trigger" />
+    <scoreis label="is" />
+    <scoreequals label="equals">React when a score is equal to a certain number.</scoreequals>
+    <scorenotequals label="notequals">React when a score is not equal to a certain number.</scorenotequals>
+    <scoreabove label="above">React when a score goes above a certain number.</scoreabove>
+    <scorebelow label="below">React when a score goes below a certain number.</scorebelow>
+    <scoregteq label="&gt;=">React when a score is equal to or goes above a certain number.</scoregteq>
+    <scorelteq label="&lt;=">React when a score is equal to or goes below a certain number.</scorelteq>
+    <health label="health">Number of health points the character has.</health>
+    <healthis label="is" />
+    <healthabove label="above">React when a health goes above a certain number.</healthabove>
+    <healthbelow label="below">React when a health goes below a certain number.</healthbelow>
+    <maxhealth label="max health">Maximum health points the character can have.</maxhealth>
+
+    <settings>
+      <maxhealth label="max health">Maximum health points the character can have.</maxhealth>
+      <blipdamage label="blip damage">Damage done by blips.</blipdamage>
+      <missiledamage label="missile damage">Damage done by missiles.</missiledamage>
+    </settings>
+
+    <direction>
+      <up label="up">React to a game stick pushed upward.</up>
+      <right label="right">React to a game stick pushed rightward.</right>
+      <down label="down">React to a game stick pushed downward.</down>
+      <left label="left">React to a game stick pushed leftward.</left>
+      <clockwise label="right">React to a clockwise rotation gesture.</clockwise>
+      <counterclockwise label="left">React to a counterclockwise rotation gesture.</counterclockwise>
+    </direction>
+    <not label="not">React when the when condition doesn't match.</not>
+  </filter>
+  <selector>
+    <closest label="nearest" />
+    <objectrelative label="relative" />
+    <towardclosest label="toward">Move toward whatever you're reacting to.</towardclosest>
+    <awayfromall label="away">Move away from whatever you're reacting to.</awayfromall>
+    <avoidall label="avoid">Avoid whatever you're reacting to by keeping a certain distance.</avoidall>
+    <wander label="wander">Wander around by picking a random direction. Useful as a last line in the program so you character moves when he's not actively pursuing anything.</wander>
+    <cruise label="straight">Move in whatever direction you're currently facing.</cruise>
+    <circle label="circle" />
+    <spin label="turn">Spin in place.</spin>
+    <forward label="forward" />
+    <hiddenturn label="turn" />
+    <escape label="turn away" />
+    <followwaypoints label="on path">Move on a path of a certain color. Default is to move on any path.</followwaypoints>
+    <moveupdown label="up/down">Move up and down.</moveupdown>
+    <moveup label="up">Move upward.</moveup>
+    <movedown label="down">Move downward.</movedown>
+    <moveleftright label="turn">Move left or right.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="player 1" />
+      <_2 label="player 2" />
+      <_3 label="player 3" />
+      <_4 label="player 4" />
+    </player>
+    <reset>
+      <world label="world">Resets the game, except for the scoreboard.</world>
+      <score label="score">Resets the scoreboard, or an individual score of you provide a color.</score>
+      <expression label="express">Resets the character's expression.</expression>
+      <glow label="glow">Resets the character's glow.</glow>
+      <health label="health">Resets the character's health.</health>
+    </reset>
+    <projectile>
+      <blip label="blip">Blips are rapid-fire projectiles - lighter weight than missiles.</blip>
+      <missile label="missile">Missiles are big and not very fast, but are smart enough to track their targets!</missile>
+    </projectile>
+    <slowly label="slowly">Move more slowly. Use several times to move even slower.</slowly>
+    <quickly label="quickly">Move more quickly. Use several times to move even faster.</quickly>
+    <speednormally label="normally">Just move normally. Optional.</speednormally>
+    <weakly label="weak">Do this more weakly than usual.</weakly>
+    <strongly label="strong">Do this more strongly than usual.</strongly>
+    <strengthnormally label="normal">Do this at normal strength. Optional.</strengthnormally>
+    <angle>
+      <low label="low">Do this more weakly than usual.</low>
+      <high label="high">Do this more strongly than usual.</high>
+    </angle>
+    <turnleft label="left" />
+    <turnright label="right" />
+    <turntoward label="toward" />
+    <turnforward label="forward">Indicates that movement should not determine facing direction.</turnforward>
+    <pitchup label="up" />
+    <pitchdown label="down" />
+    <forward label="forward">The direction the character is facing.</forward>
+    <north label="north" />
+    <east label="east" />
+    <south label="south" />
+    <west label="west" />
+    <up label="up" />
+    <down label="down" />
+    <distance>
+      <near label="close">Make the character circle the target more closely.</near>
+      <far label="far">Make the character circle the target in a bigger circle.</far>
+    </distance>
+    <objecticeberg label="iceberg">Create an ice berg.</objecticeberg>
+    <objectrock label="rock">Create a rock.</objectrock>
+    <objectrockLowValue label="rock">Create an igneous rock.</objectrockLowValue>
+    <objectrockHighValue label="rock">Create a sedimentary rock.</objectrockHighValue>
+    <objectfruit label="apple">Create an apple.</objectfruit>
+    <objectinkjet label="ink cloud">Create an ink cloud.</objectinkjet>
+    <objectstar label="star">Create a star.</objectstar>
+    <objectcoin label="coin">Create a coin.</objectcoin>
+    <objectheart label="heart">Create a heart.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="ball">Create a soccer ball.</objectsoccerball>
+    <objectbullet label="ammo">Create ammo.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="page 1">Switch to or inline page 1.</taska>
+    <taskb label="page 2">Switch to or inline page 2.</taskb>
+    <taskc label="page 3">Switch to or inline page 3.</taskc>
+    <taskd label="page 4">Switch to or inline page 4.</taskd>
+    <taske label="page 5">Switch to or inline page 5.</taske>
+    <taskf label="page 6">Switch to or inline page 6.</taskf>
+    <taskg label="page 7">Switch to or inline page 7.</taskg>
+    <taskh label="page 8">Switch to or inline page 8.</taskh>
+    <taski label="page 9">Switch to or inline page 9.</taski>
+    <taskj label="page 10">Switch to or inline page 10.</taskj>
+    <taskk label="page 11">Switch to or inline page 11.</taskk>
+    <taskl label="page 12">Switch to or inline page 12.</taskl>
+    <expresshappy label="happy">Act happy.</expresshappy>
+    <expresssad label="sad">Act sad.</expresssad>
+    <expressangry label="ANGRY">Act angry.</expressangry>
+    <expresscrazy label="CrAzY">Act crazy.</expresscrazy>
+    <expresshearts label="hearts">Show hearts.</expresshearts>
+    <expressflowers label="flowers">Show flowers.</expressflowers>
+    <expressstars label="stars">Show stars.</expressstars>
+    <expressswear label="swears">Show cartoon swears.</expressswear>
+    <expressnone label="none">Act normal and stop showing anything.</expressnone>
+    <_000point label="points">0 points.  You can specify a color too.</_000point>
+    <_001point label="point">1 point.  Use several to add up different numbers. You can specify a color too.</_001point>
+    <_002points label="points">2 points.  Use several to add up different numbers. You can specify a color too.</_002points>
+    <_003points label="points">3 points.  Use several to add up different numbers. You can specify a color too.</_003points>
+    <_004points label="points">4 points.  Use several to add up different numbers. You can specify a color too.</_004points>
+    <_005points label="points">5 points.  Use several to add up different numbers. You can specify a color too.</_005points>
+    <_010points label="points">10 points.  Use several to add up different numbers. You can specify a color too.</_010points>
+    <_020points label="points">20 points.  Use several to add up different numbers. You can specify a color too.</_020points>
+    <_050points label="points">50 points.  Use several to add up different numbers. You can specify a color too.</_050points>
+    <_100points label="points">100 points.  Use several to add up different numbers. You can specify a color too.</_100points>
+    <random label="random">Make a random number using number tiles. For example, Random - 5 creates a random number between 0 and 5.</random>
+    <percent label="percent">Take a percentage of another number.  For instance 50 % Red will give you half of the Red score.</percent>
+    <health label="health">The number of hitpoints the character has.</health>
+    <maxhealth label="max health">Maximum hitpoints the character can have.</maxhealth>
+    <teama label="team A" />
+    <teamb label="team B" />
+    <payloadzap label="stun">Stuns the target for a few seconds.</payloadzap>
+    <payloadpop label="knockout">Put the target to sleep until someone else resets its health.</payloadpop>
+    <payloadsquash label="squash">Squash the target.</payloadsquash>
+    <payloadboom label="boom">Make the target disappear with an explosion.</payloadboom>
+    <payloadvanish label="vanish">Make the target disappear quietly.</payloadvanish>
+    <black label="black" />
+    <grey label="grey" />
+    <white label="white" />
+    <red label="red" />
+    <orange label="orange" />
+    <yellow label="yellow" />
+    <green label="green" />
+    <blue label="blue" />
+    <purple label="purple" />
+    <pink label="pink" />
+    <brown label="brown" />
+    <glowoff label="off">Turn off any glow.</glowoff>
+    <colorrandom label="random">Pick a random color.</colorrandom>
+    <path>
+      <black label="black path" />
+      <grey label="grey path" />
+      <white label="white path" />
+      <red label="red path" />
+      <orange label="orange path" />
+      <yellow label="yellow path" />
+      <green label="green path" />
+      <blue label="blue path" />
+      <purple label="purple path" />
+      <pink label="pink path" />
+      <brown label="brown path" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="white">Changes the white score, which is shown on the scoreboard by default. (Visit world settings to change.)</white>
+        <black label="black">Changes the black score, which is shown on the scoreboard by default. (Visit world settings to change.)</black>
+        <grey label="grey">Changes the grey score, which is shown on the scoreboard by default. (Visit world settings to change.)</grey>
+        <red label="red">Changes the red score, which is shown on the scoreboard by default. (Visit world settings to change.)</red>
+        <green label="green">Changes the green score, which is shown on the scoreboard by default. (Visit world settings to change.)</green>
+        <blue label="blue">Changes the blue score, which is shown on the scoreboard by default. (Visit world settings to change.)</blue>
+        <orange label="orange">Changes the orange score, which is shown on the scoreboard by default. (Visit world settings to change.)</orange>
+        <yellow label="yellow">Changes the yellow score, which is shown on the scoreboard by default. (Visit world settings to change.)</yellow>
+        <purple label="purple">Changes the purple score, which is shown on the scoreboard by default. (Visit world settings to change.)</purple>
+        <pink label="pink">Changes the pink score, which is shown on the scoreboard by default. (Visit world settings to change.)</pink>
+        <brown label="brown">Changes the brown score, which is shown on the scoreboard by default. (Visit world settings to change.)</brown>
+      </color>
+      <letter>
+        <a label="score A">Modifies the 'A' score, which is shared by all the characters in the world.</a>
+        <b label="score B">Modifies the 'B' score, which is shared by all the characters in the world.</b>
+        <c label="score C">Modifies the 'C' score, which is shared by all the characters in the world.</c>
+        <d label="score D">Modifies the 'D' score, which is shared by all the characters in the world.</d>
+        <e label="score E">Modifies the 'E' score, which is shared by all the characters in the world.</e>
+        <f label="score F">Modifies the 'F' score, which is shared by all the characters in the world.</f>
+        <g label="score G">Modifies the 'G' score, which is shared by all the characters in the world.</g>
+        <h label="score H">Modifies the 'H' score, which is shared by all the characters in the world.</h>
+        <i label="score I">Modifies the 'I' score, which is shared by all the characters in the world.</i>
+        <j label="score J">Modifies the 'J' score, which is shared by all the characters in the world.</j>
+        <k label="score K">Modifies the 'K' score, which is shared by all the characters in the world.</k>
+        <l label="score L">Modifies the 'L' score, which is shared by all the characters in the world.</l>
+        <m label="score M">Modifies the 'M' score, which is shared by all the characters in the world.</m>
+        <n label="score N">Modifies the 'N' score, which is shared by all the characters in the world.</n>
+        <o label="score O">Modifies the 'O' score, which is shared by all the characters in the world.</o>
+        <p label="score P">Modifies the 'P' score, which is shared by all the characters in the world.</p>
+        <q label="score Q">Modifies the 'Q' score, which is shared by all the characters in the world.</q>
+        <r label="score R">Modifies the 'R' score, which is shared by all the characters in the world.</r>
+        <s label="score S">Modifies the 'S' score, which is shared by all the characters in the world.</s>
+        <t label="score T">Modifies the 'T' score, which is shared by all the characters in the world.</t>
+        <u label="score U">Modifies the 'U' score, which is shared by all the characters in the world.</u>
+        <v label="score V">Modifies the 'V' score, which is shared by all the characters in the world.</v>
+        <w label="score W">Modifies the 'W' score, which is shared by all the characters in the world.</w>
+        <x label="score X">Modifies the 'X' score, which is shared by all the characters in the world.</x>
+        <y label="score Y">Modifies the 'Y' score, which is shared by all the characters in the world.</y>
+        <z label="score Z">Modifies the 'Z' score, which is shared by all the characters in the world.</z>
+      </letter>
+      <local>
+        <a label="score a">The 'a' score, which is private to this character.</a>
+        <b label="score b">The 'b' score, which is private to this character.</b>
+        <c label="score c">The 'c' score, which is private to this character.</c>
+        <d label="score d">The 'd' score, which is private to this character.</d>
+        <e label="score e">The 'e' score, which is private to this character.</e>
+        <f label="score f">The 'f' score, which is private to this character.</f>
+        <g label="score g">The 'g' score, which is private to this character.</g>
+        <h label="score h">The 'h' score, which is private to this character.</h>
+        <i label="score i">The 'i' score, which is private to this character.</i>
+        <j label="score j">The 'j' score, which is private to this character.</j>
+        <k label="score k">The 'k' score, which is private to this character.</k>
+        <l label="score l">The 'l' score, which is private to this character.</l>
+        <m label="score m">The 'm' score, which is private to this character.</m>
+        <n label="score n">The 'n' score, which is private to this character.</n>
+        <o label="score o">The 'o' score, which is private to this character.</o>
+        <p label="score p">The 'p' score, which is private to this character.</p>
+        <q label="score q">The 'q' score, which is private to this character.</q>
+        <r label="score r">The 'r' score, which is private to this character.</r>
+        <s label="score s">The 's' score, which is private to this character.</s>
+        <t label="score t">The 't' score, which is private to this character.</t>
+        <u label="score u">The 'u' score, which is private to this character.</u>
+        <v label="score v">The 'v' score, which is private to this character.</v>
+        <w label="score w">The 'w' score, which is private to this character.</w>
+        <x label="score x">The 'x' score, which is private to this character.</x>
+        <y label="score y">The 'y' score, which is private to this character.</y>
+        <z label="score z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="me">Apply the action to the bot running the program.</me>
+    <it label="it">Apply the action to the target object.</it>
+    <any label="any">Any sound.</any>
+
+    <settings>
+      <maxhealth label="max health">Maximum health points the character can have.</maxhealth>
+      <blipdamage label="blip damage">Damage done by blips.</blipdamage>
+      <missiledamage label="missile damage">Damage done by missiles.</missiledamage>
+    </settings>
+
+    <event>
+      <any label="event">Any sound.</any>
+      <silly>
+        <any label="silly">Any silly sound.</any>
+        <bang label="bang">A cartoon 'bang' sound.</bang>
+        <pow label="pow">A cartoon 'pow' sound.</pow>
+      </silly>
+      <explode>
+        <any label="explode">Any explosion sound.</any>
+        <A label="boom A">An explosion sound.</A>
+        <B label="boom B">An explosion sound.</B>
+        <C label="boom C">An explosion sound.</C>
+        <D label="boom D">An explosion sound.</D>
+        <E label="boom E">An explosion sound.</E>
+      </explode>
+      <musical>
+        <any label="musical">Any musical sound.</any>
+        <glock>
+          <any label="glock">Any Glockenspiel sound.</any>
+        </glock>
+        <glock01 label="C glock">A Glockenspiel tone.</glock01>
+        <glock02 label="C# glock">A Glockenspiel tone.</glock02>
+        <glock03 label="D glock">A Glockenspiel tone.</glock03>
+        <glock04 label="D# glock">A Glockenspiel tone.</glock04>
+        <glock05 label="E glock">A Glockenspiel tone.</glock05>
+        <glock06 label="F glock">A Glockenspiel tone.</glock06>
+        <glock07 label="F# glock">A Glockenspiel tone.</glock07>
+        <glock08 label="G glock">A Glockenspiel tone.</glock08>
+        <glock09 label="G# glock">A Glockenspiel tone.</glock09>
+        <glock10 label="A glock">A Glockenspiel tone.</glock10>
+        <glock11 label="A# glock">A Glockenspiel tone.</glock11>
+        <glock12 label="B glock">A Glockenspiel tone.</glock12>
+        <gong>
+          <any label="gong">Any gong sound.</any>
+        </gong>
+        <gong01 label="C gong">A gong tone.</gong01>
+        <gong02 label="C# gong">A gong tone.</gong02>
+        <gong03 label="D gong">A gong tone.</gong03>
+        <gong04 label="D# gong">A gong tone.</gong04>
+        <gong05 label="E gong">A gong tone.</gong05>
+        <gong06 label="F gong">A gong tone.</gong06>
+        <gong07 label="F# gong">A gong tone.</gong07>
+        <gong08 label="G gong">A gong tone.</gong08>
+        <gong09 label="G# gong">A gong tone.</gong09>
+        <gong10 label="A gong">A gong tone.</gong10>
+        <gong11 label="A# gong">A gong tone.</gong11>
+        <gong12 label="B gong">A gong tone.</gong12>
+        <saw>
+          <any label="saw">Any saw tooth wave sound.</any>
+        </saw>
+        <saw01 label="C saw">A saw tooth wave tone.</saw01>
+        <saw02 label="C# saw">A saw tooth wave tone.</saw02>
+        <saw03 label="D saw">A saw tooth wave tone.</saw03>
+        <saw04 label="D# saw">A saw tooth wave tone.</saw04>
+        <saw05 label="E saw">A saw tooth wave tone.</saw05>
+        <saw06 label="F saw">A saw tooth wave tone.</saw06>
+        <saw07 label="F# saw">A saw tooth wave tone.</saw07>
+        <saw08 label="G saw">A saw tooth wave tone.</saw08>
+        <saw09 label="G# saw">A saw tooth wave tone.</saw09>
+        <saw10 label="A saw">A saw tooth wave tone.</saw10>
+        <saw11 label="A# saw">A saw tooth wave tone.</saw11>
+        <saw12 label="B saw">A saw tooth wave tone.</saw12>
+        <sine>
+          <any label="sine">Any sine wave sound.</any>
+        </sine>
+        <sine01 label="C sine">A sine wave tone.</sine01>
+        <sine02 label="C# sine">A sine wave tone.</sine02>
+        <sine03 label="D sine">A sine wave tone.</sine03>
+        <sine04 label="D# sine">A sine wave tone.</sine04>
+        <sine05 label="E sine">A sine wave tone.</sine05>
+        <sine06 label="F sine">A sine wave tone.</sine06>
+        <sine07 label="F# sine">A sine wave tone.</sine07>
+        <sine08 label="G sine">A sine wave tone.</sine08>
+        <sine09 label="G# sine">A sine wave tone.</sine09>
+        <sine10 label="A sine">A sine wave tone.</sine10>
+        <sine11 label="A# sine">A sine wave tone.</sine11>
+        <sine12 label="B sine">A sine wave tone.</sine12>
+        <square>
+          <any label="square">Any square wave sound.</any>
+        </square>
+        <square01 label="C square">A square wave tone.</square01>
+        <square02 label="C# square">A square wave tone.</square02>
+        <square03 label="D square">A square wave tone.</square03>
+        <square04 label="D# square">A square wave tone.</square04>
+        <square05 label="E square">A square wave tone.</square05>
+        <square06 label="F square">A square wave tone.</square06>
+        <square07 label="F# square">A square wave tone.</square07>
+        <square08 label="G square">A square wave tone.</square08>
+        <square09 label="G# square">A square wave tone.</square09>
+        <square10 label="A square">A square wave tone.</square10>
+        <square11 label="A# square">A square wave tone.</square11>
+        <square12 label="B square">A square wave tone.</square12>
+        <drums>
+          <any label="drums">Any drum sound.</any>
+        </drums>
+        <bassdrum label="bass">Bass drum.</bassdrum>
+        <hhclosed label="hh closed">Hi-hat cymbal closed.</hhclosed>
+        <hhopen label="hh open">Hi-hat cymbal open.</hhopen>
+        <shaker label="shaker">Shaker.</shaker>
+        <snare label="snare">Snare drum.</snare>
+        <tomlow label="tom low">Low pitched tom.</tomlow>
+        <tommed label="tom med">Medium pitched tom.</tommed>
+        <tomhi label="tom hi">High pitched tom.</tomhi>
+      </musical>
+      <arcade>
+        <any label="arcade">Any arcade sound.</any>
+        <roboton label="robot on">Activate robot.</roboton>
+        <robotoff label="robot off">Deactivate robot.</robotoff>
+        <coinsound label="coin">Coin sound.</coinsound>
+        <gethealth label="health+">Get health sound.</gethealth>
+        <losehealth label="health-">Lose health sound.</losehealth>
+        <shoot label="shoot">Shoot sound.</shoot>
+        <timer label="timer">Timer sound.</timer>
+        <win label="win">Win sound.</win>
+        <lose label="lose">Lose sound.</lose>
+        <inkjet_fire label="inkjet fire">Ink Jet fire sound.</inkjet_fire>
+        <inkjet_impact label="inkjet impact">Ink Jet impact sound.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="misc">Any miscellaneous sound.</any>
+        <countdown_beep label="countdown">A beep countdown sound.</countdown_beep>
+        <countdown_alarm label="alarm countdown">An urgent beep countdown.</countdown_alarm>
+        <epic_stinger label="epic stinger">An epic stinger sound.</epic_stinger>
+        <epic_stinger_a label="epic stinger a">An epic stinger sound.</epic_stinger_a>
+        <epic_stinger_b label="epic stinger b">An epic stinger sound.</epic_stinger_b>
+        <firepoof label="fire poof">Fire ignition sound.</firepoof>
+        <forcefieldup label="shield +">Force field up sound.</forcefieldup>
+        <forcefielddown label="shield -">Force field down sound.</forcefielddown>
+        <hide label="hide">Hide sound.</hide>
+        <lockontarget label="lock on">Lock on target sound.</lockontarget>
+        <losetarget label="lock off">Lose target sound.</losetarget>
+        <positivecondition label="good">Something good happened sound.</positivecondition>
+        <negativecondition label="bad">Something bad happened sound.</negativecondition>
+        <points label="points">Points awarded sound.</points>
+        <pop label="pop">Pop sound.</pop>
+        <popout label="pop out">Pop out sound.</popout>
+        <powerup label="powerup">Pick up powerup sound.</powerup>
+        <servo label="servo">Servo sound.</servo>
+        <watersplash label="splash">Water splash sound.</watersplash>
+        <waterdrop label="drop">Water drop sound.</waterdrop>
+        <tagbase label="tag base">Tag base sound.</tagbase>
+        <whistlehuman label="whistle">Human whistle sound.</whistlehuman>
+        <whistlereferee label="whistle">Referee whistle sound.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="tower">Sounds added for tower defense gameplay.</any>
+        <air_raid_siren label="air raid siren">An air raid siren sound.</air_raid_siren>
+        <bomb_fall label="bomb fall">An falling bomb sound.</bomb_fall>
+        <stun_fire label="stun fire">Turret stun fire sound.</stun_fire>
+        <zapper_fire label="zapper fire">Turret zapper fire sound.</zapper_fire>
+        <missile_fire label="missile fire">Turret missile fire sound.</missile_fire>
+        <shrinker_fire label="shrinker fire">Turrent shrinker fire sound.</shrinker_fire>
+        <clam_coin_spit label="coin spit">The majestic sound of a clam spitting a coin out.</clam_coin_spit>
+        <enemy_converted label="enemy converted">A sound for when an enemy is converted.</enemy_converted>
+        <enemy_escape label="enemy escape">A sound for when an enemy escapes.</enemy_escape>
+        <place_tower label="place tower">A sound for when a tower has been placed.</place_tower>
+        <star_collect label="star collect">A sound for when a star has been collected.</star_collect>
+        <coin_collect label="coin collect">A sound for when a coin hs been collected.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="music">Any music from this group.</any>
+      <omni>
+        <any label="Omni">Any music from this group.</any>
+      </omni>
+    </music>
+    <mu_action label="action">Action</mu_action>
+    <mu_ambientlight label="light">Light ambient music.</mu_ambientlight>
+    <mu_ambinetmodd label="mood">Mood music</mu_ambinetmodd>
+    <mu_brightdowntempo label="slo-mo">Bright downtempo music.</mu_brightdowntempo>
+    <mu_brightfunk label="funk">Funkaliscious!</mu_brightfunk>
+    <mu_brightguitar label="guitar">Bright guitar music.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu theme.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="mystery">Any music from this group.</any>
+      </mystery>
+    </music>
+    <mysterya label="myst A">Mysterious music.</mysterya>
+    <mysteryb label="myst B">Mysterious music.</mysteryb>
+    <mysteryc label="myst C">Mysterious music.</mysteryc>
+    <music>
+      <driving>
+        <any label="driving">Any music from this group.</any>
+      </driving>
+    </music>
+    <drivinga label="fast A">Fast, driving music.</drivinga>
+    <drivingb label="fast B">Fast, driving music.</drivingb>
+    <drivingc label="fast C">Fast, driving music.</drivingc>
+    <music>
+      <drama>
+        <any label="drama">Any music from this group.</any>
+      </drama>
+    </music>
+    <dramaa label="drama A">Dramatic music.</dramaa>
+    <dramab label="drama B">Dramatic music.</dramab>
+    <environ>
+      <any label="environ">Any sound from this group.</any>
+      <ambocean label="ocean">Ocean sounds.</ambocean>
+      <ambforest label="forest">Forest sounds.</ambforest>
+      <ambcity label="city">City sounds.</ambcity>
+      <ambmeadow label="meadow">Meadow sounds.</ambmeadow>
+      <ambmars label="mars">Mars sounds.</ambmars>
+      <arena>
+        <any label="arena">Any of the arena sounds.</any>
+        <a label="arena A">A big crowd.</a>
+        <b label="arena B">A big crowd.</b>
+        <c label="arena C">A big crowd.</c>
+        <d label="arena D">A big crowd.</d>
+        <e label="arena E">A big crowd.</e>
+        <f label="arena F">A big crowd.</f>
+        <g label="arena G">A big crowd.</g>
+      </arena>
+    </environ>
+    <trackingnone label="level">The missile will fly straight and will not move up or down.</trackingnone>
+    <trackinghoming label="cruise">The missile will follow the ground and try to fly over hills and walls.</trackinghoming>
+    <constraint>
+      <leftright label="left/right">Move left and right only.</leftright>
+      <fwdback label="fwd/back">Move forward and back only.</fwdback>
+      <updown label="up/down" />
+      <northsouth label="N/S">Move north and south only.</northsouth>
+      <eastwest label="E/W">Move east and west only.</eastwest>
+      <immobile label="freeze">Do not allow movement, even when bumped.</immobile>
+    </constraint>
+    <once label="once">The code after DO will only be run once each time the WHEN condition is activated.</once>
+    <watertype label="water type">Set the water type.</watertype>
+    <on label="on">Set the current state to 'on'.</on>
+    <off label="off">Set the current state to 'off'.</off>
+    <microbit>
+      <pattern label="pattern">LED pattern to show on BBC micro:bit screen.</pattern>
+    </microbit>
+    <frequencyunits>
+      <khz label="kHz">The value is a kilohertz frequency.</khz>
+    </frequencyunits>
+  </modifier>
+  <actuator>
+    <nothing label="nothing" />
+    <movement label="move">Travel around the world. Explore the options. Different characters have different movement abilities.</movement>
+    <turn label="turn">Change your facing direction.</turn>
+    <eat label="eat">Consume the targeted object, which must be close.</eat>
+    <say label="say">Display a text message, either in a balloon or in a dialog. Use &lt;cr&gt;  to split into lines.</say>
+    <open label="open">Works differently for different characters. Experiment!</open>
+    <close label="close">Works differently for different characters. Experiment!</close>
+    <kick label="kick">Kick the target, if it's close enough. Can vary strength.</kick>
+    <make label="create">Make another object. Can create basic objects or anything marked Creatable.</make>
+    <launch label="launch">Kick the target, if it's close enough. Can vary strength.</launch>
+    <push label="push">Push a target in a certain direction if it's close enough. Can vary in strength.</push>
+    <pull label="pull">Pull a target in a certain direction if it's close enough. Can vary in strength.</pull>
+    <camouflage label="camouflage">Camouflage the target, making it hard to see.</camouflage>
+    <uncamouflage label="uncamouflage">Uncamouflage the target, making it visible.</uncamouflage>
+    <express label="express">Express an emotion or show a special effect.  Some expressions change the face of the character while others are displayed above the character.</express>
+    <color label="color">Change the color of yourself or the target object.</color>
+    <glow label="glow">Emit a radioactive glow. Can change color.</glow>
+    <sound label="play">Make a sound! Lots to choose from.</sound>
+    <stopsound label="quiet">Stop playing a sound.</stopsound>
+    <jump label="jump">Different characters can jump different heights.</jump>
+    <watersurface label="surface">The Surface action causes underwater characters to rise to the surface of the water.</watersurface>
+    <waterdive label="dive">The Dive action cause underwater characters to dive to the bottom of the water.</waterdive>
+    <airrise label="go up">The Go Up action causes flying characters to rise up into the sky.</airrise>
+    <airdrop label="go down">The Go Down action causes flying characters to fly down toward the ground.</airdrop>
+    <switchtask label="switch">Change to a different page. Only rules on the current page are applied. Pages are really handy for changing behavior.</switchtask>
+    <inlinetask label="inline">At runtime this will include all the programming from another page here.  This is handy for kode that you want on several pages since you can type it in once, and then inline it wherever you need it.</inlinetask>
+    <nextlevel label="next level">Load the next level. Useful for multi-level games!</nextlevel>
+    <prevlevel label="previous level">Load the previous level. Useful for multi-level games!</prevlevel>
+    <waterraise label="raise water">Raise the water level under this object.</waterraise>
+    <waterlower label="lower water">Lower the water level under this object.</waterlower>
+    <setwater label="set water">Sets the water type under this object.</setwater>
+    <rescale label="scale">Changes the object's size scale smoothly.</rescale>
+    <rescaleinstant label="scale (instant)">Sets the object's size scale instantly.</rescaleinstant>
+    <holddistance label="hold distance">Changes the distance for "held" objects smoothly.</holddistance>
+    <holddistanceinstant label="hold distance (instant)">Changes the distance for "held" objects instantly.</holddistanceinstant>
+    <maxhitpoints label="max health">Changes the maximum health for the character.</maxhitpoints>
+    <movementspeedmodify label="move speed">Sets the movement forward speed multiplier for this actor.</movementspeedmodify>
+    <turningspeedmodify label="turn speed">Sets the turning speed multiplier for this actor.</turningspeedmodify>
+    <worldlightingchange label="lighting">Smoothly sets the world lighting.</worldlightingchange>
+    <worldlightingchangeinstant label="lighting (instant)">Instantly sets the world lighting.</worldlightingchangeinstant>
+    <worldskychange label="sky">Smoothly sets the world sky.</worldskychange>
+    <worldskychangeinstant label="sky (instant)">Instantly sets the world sky.</worldskychangeinstant>
+    <blipdamage label="blip damage">Set the damage done by blips.</blipdamage>
+    <missiledamage label="missile damage">Set the damage done by missiles.</missiledamage>
+    <blipreloadtime label="blip reload time">Set the time between blips when shooting</blipreloadtime>
+    <bliprange label="blip range">Set the range for blips.</bliprange>
+    <missilereloadtime label="missile reload time">Set the time between missiles when shooting</missilereloadtime>
+    <missilerange label="missile range">Set the range for missiles.</missilerange>
+    <closebyrange label="close by">Set the close by distance.</closebyrange>
+    <farawayrange label="far away">Set the far away distance.</farawayrange>
+    <hearingrange label="hearing">Set the object's hearing range.</hearingrange>
+    <shoot label="shoot" />
+    <shoot2 label="shoot">Shoot blips or missiles.</shoot2>
+    <beam label="beam">Fires a laser beam at a Mars rock type to identify the rock's basic characteristics.</beam>
+    <inspect label="inspect">Drills into a Mars rock type, harvesting samples for further study.</inspect>
+    <scan label="scan">Reveals the rock type of unknown rocks in an area around the Rover.</scan>
+    <picture label="picture">Takes a picture in first person view.</picture>
+    <damage label="damage">Subtract health from either myself or the target character.</damage>
+    <heal label="heal">Add health to myself or to the target character.
+        The Heal action causes either the character or the target object to recover from damage. The default is for the target object to heal; the character can be healed by including the "me" modifier. Modifiers can also be used to determine the type and amount of healing points.</heal>
+    <zap label="stun">Stun either myself or the target character for a few seconds.</zap>
+    <pop label="knockout">Causes a bot or myself to be completely disabled until health is reset by someone else.</pop>
+    <squash label="squash">Causes a bot or myself to be squashed.</squash>
+    <boom label="boom">Make myself or the target disappear with an explosion.</boom>
+    <vanish label="vanish">Make myself or the target disappear quietly.</vanish>
+    <grab label="grab">Pick up the target if it's close enough. You can only hold one thing at a time.</grab>
+    <drop label="drop">Drop whatever you're carrying.</drop>
+    <give label="give">Give whatever you're carrying to the target character. If the target can't hold it, it'll drop.</give>
+    <reset label="reset">Reset an aspect of the game or a character.</reset>
+    <restart label="restart">Reset an aspect of the game or a character.</restart>
+    <gameover label="end">End the game.</gameover>
+    <victory label="win">End the game and show a winning message. If you specify a color we'll show it.</victory>
+    <score label="score">Add points to a score.</score>
+    <unscore label="subtract">Take points away from a score.</unscore>
+    <scoreset label="set score">Set score to a specific value.</scoreset>
+    <camera>
+      <followme label="follow">The point of view should follow this character.</followme>
+      <ignoreme label="ignore">Don't worry about keeping this character in view.</ignoreme>
+      <firstperson label="1st person">See through this character's eyes.</firstperson>
+    </camera>
+    <microbit>
+      <say label="say">Scroll text on the micro:bit display.</say>
+      <block label="block">Control all the micro:bit lights.</block>
+      <sequential label="meter">Turn on the micro:bit lights sequentially.</sequential>
+      <show label="show pattern">Show a pattern on the micro:bit display.</show>
+      <setpin1 label="set pin 0">Sets the digital output state of the pin.</setpin1>
+      <setpin2 label="set pin 1">Sets the digital output state of the pin.</setpin2>
+      <setpin3 label="set pin 2">Sets the digital output state of the pin.</setpin3>
+      <setpwmfrequency>
+        <pin1 label="PWM 0 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin1>
+        <pin2 label="PWM 1 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin2>
+        <pin3 label="PWM 2 frequency">Activates a pulse-width modulated signal, and sets the signal frequency (in seconds), with optional kHz modifier.</pin3>
+      </setpwmfrequency>
+      <setpwmdutycycle>
+        <pin1 label="PWM 0 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin1>
+        <pin2 label="PWM 1 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin2>
+        <pin3 label="PWM 2 duty cycle">Activates a pulse-width-modulated signal, and sets how long the signal is the "on" state (a percentage).</pin3>
+      </setpwmdutycycle>
+    </microbit>
+  </actuator>
+  <root />
+  <group>
+    <colors label="colors" />
+    <pathcolors label="path colors" />
+    <game label="game" />
+    <more label="more" />
+    <players label="players" />
+    <playermods label="players" />
+    <actions label="actions" />
+    <settings label="settings" />
+    <combat label="combat" />
+    <rover label="rover" />
+    <holding label="holding" />
+    <sounds label="sounds" />
+    <event label="event">
+      <explode label="explode" />
+      <silly label="silly" />
+      <musical label="musical">
+        <glock label="glock" />
+        <saw label="saw" />
+        <sine label="sine" />
+        <gong label="gong" />
+        <square label="square" />
+        <drums label="drums" />
+      </musical>
+      <arcade label="arcade" />
+      <misc label="misc" />
+      <tower label="tower" />
+    </event>
+    <environ label="environ">
+      <forest label="forest" />
+      <arena label="arena" />
+    </environ>
+    <music label="music">
+      <omni label="new" />
+      <mystery label="mystery" />
+      <driving label="driving" />
+      <drama label="drama" />
+    </music>
+    <constraints label="limit" />
+    <directions label="direction" />
+    <filters>
+      <directions label="direction" />
+      <touchbuttons label="buttons" />
+      <touchGuiButtons label="Buttons" />
+      <gestures label="gestures" />
+    </filters>
+    <expressions label="express" />
+    <projectiles label="projectile" />
+    <camera label="view" />
+    <reset label="reset" />
+    <options label="options" />
+    <compare label="compare" />
+    <points label="points" />
+    <time label="time" />
+    <speed label="speed" />
+    <strength label="strength" />
+    <angle label="loft" />
+    <tracking label="tracking" />
+    <bots label="bots I" />
+    <bots2 label="bots II" />
+    <objects label="objects" />
+    <tasks label="task" />
+    <terrains label="types" />
+    <waters label="types" />
+    <setwater label="water type" />
+    <creatables label="creatables" />
+    <named label="user-named" />
+    <keyboard>
+      <letters label="letters" />
+      <numbers label="numbers" />
+      <symbols label="symbols" />
+      <misc label="misc" />
+    </keyboard>
+    
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+    <settingsfilters label="settings" />
+    <settingsmodifiers label="settings" />
+
+    <microbit>
+      <actions>
+        <gpio label="micro:bit I/O"/>
+      </actions>
+    </microbit>
+  </group>
+
+</Tiles>

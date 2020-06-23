@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <SurfaceSets>
+    <SurfaceSet>
+      <Name>BASE</Name>
+      <TechniqueExt></TechniqueExt>
+      <BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+      <DirtMapName>Textures\White</DirtMapName>
+      <SurfaceNames>
+        <string>TintablePlastic</string>
+        <string>BlackMatte</string>
+      </SurfaceNames>
+    </SurfaceSet>
+  </SurfaceSets>
+
+  <GlowPosition>
+    <Offset>
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </Offset>
+  </GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>1.2</Z>
+  </HealthBarOffset>
+
+  <!--These should match collision radius-->
+  <DefaultEditHeight>1.0</DefaultEditHeight>
+  <MinHeight>1.0</MinHeight>
+
+  <CollisionCenter>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0</Z>
+  </CollisionCenter>
+  <CollisionRadius>1.0</CollisionRadius> <!--Change with Chassis.TumbleRadius and Feelers.Radius-->
+  <HasCushion>false</HasCushion>
+
+  <Cost>1.666</Cost>
+  <CollisionSound>metalHard</CollisionSound>
+
+  <IsBot>false</IsBot>
+  <IsProp>true</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <StayAboveWater>false</StayAboveWater>
+
+  <!--
+  For tumbling objects ignore the friction value and just
+  use the CoR on all components of the velocity.  For back
+  compat we now set the friction for tumbling objects to
+  0.0.  This way, previously saved levels with different
+  settings will still act as they used to.
+  -->
+  <CoefficientOfRestitution>0.9</CoefficientOfRestitution>
+  <Friction>0.0</Friction>
+  
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+  </Classification>
+
+  <Chassis Type="DynamicProp">
+    <Density>0.1</Density>
+    <SpinRate>0.0</SpinRate>
+    <Tumbles>true</Tumbles>
+    <TumbleRadius>1.0</TumbleRadius> <!--From CollisionRadius-->
+  </Chassis>
+
+  <Feelers>
+    <Radius>1.0</Radius> <!--From CollisionRadius-->
+  </Feelers>
+  
+</XmlGameActor>

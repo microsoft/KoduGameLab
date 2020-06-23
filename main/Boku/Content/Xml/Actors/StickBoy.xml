@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt>WithSkinning</TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\Character\TEX_STIKKATO_DIRT</DirtMapName>
+			<SurfaceNames>
+				<string>LightGreyShiny</string>
+				<string>BlackHole</string>
+				<string>DarkGreyMatte</string>
+				<string>PurpleDarkShinyGlass</string>
+				<string>TintablePlastic</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithSkinning</TechniqueExt>
+  </Model>
+  
+	<GlowPosition>
+		<Bone>bone3</Bone>
+		<Offset>
+			<X>0.12</X>
+			<Y>0</Y>
+			<Z>0</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.5</Z>
+  </HealthBarOffset>
+
+  <DefaultEditHeight>0</DefaultEditHeight>
+  <MinHeight>0</MinHeight>
+  <EyeOffset>0.6</EyeOffset>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0.5</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.75</CollisionRadius>
+
+	<Cost>3.333</Cost>
+  <CollisionSound>plasticHard</CollisionSound>
+  
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>10.0</Mass>
+
+  <GrabRange>2.0</GrabRange>
+  <KickRange>4.0</KickRange>
+
+  <Actions>
+    <OpenClose>
+      <Invulnerable>true</Invulnerable>
+      <DefaultPosition>Open</DefaultPosition>
+      <Freeze>true</Freeze>
+    </OpenClose>
+  </Actions>
+  
+  <IdleSoundName>ch_Sutekki_Idle</IdleSoundName>
+  <CursorSoundName>ch_Sutekki_Cursor</CursorSoundName>
+  <ShootSoundName>ch_Sutekki_Shoot</ShootSoundName>
+  <RapidFireSoundName>ch_Sutekki_Rapidfire</RapidFireSoundName>
+  <CloseSoundName>ch_Sutekki_Close</CloseSoundName>
+  <Ent1SoundName>ch_Sutekki_Ent1</Ent1SoundName>
+  <Ent2SoundName>ch_Sutekki_Ent2</Ent2SoundName>
+
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Soft</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="SitAndSpin">
+    <MaxRotationalAcceleration>10.0</MaxRotationalAcceleration>
+    <MaxRotationRate>4.0</MaxRotationRate>
+  </Chassis>
+
+  <HoldingPosition>
+    <X>0.6</X>
+    <Z>0.6</Z>
+  </HoldingPosition>
+
+  <Sensors>
+    <Direction>
+      <Z>1</Z> <!--up-->
+    </Direction>
+    <Arc>6.1575</Arc> <!--300 degrees, small cone downward that it can't see-->
+  </Sensors>
+  
+</XmlGameActor>

@@ -1,0 +1,985 @@
+﻿<Tiles>
+  <sensor>
+    <gamepad label="játékvezérlő">Lehetővé teszi a játékosnak a karakter irányítását.  Meghatározza a gombot, ravaszt vagy kart és adott esetben a játékost.</gamepad>
+    <keyboard label="billentyűzet">Lehetővé teszi a játékosnak a karakter irányítását.  Meghatározza melyik gomb.</keyboard>
+    <mouse label="egér">Reagál az egér bevitelére.</mouse>
+    <touch label="érintés">Reagál az érintési bevitelre.</touch>
+    <eyes label="lát">Reagál egy tárgy megpillantásakor a típus vagy szín alapján. A dombok és falak kitakarhatják a látványt, ha a nézetirány (LOS) szűrőt használod.</eyes>
+    <ears label="hall">Reagál, ha valamit hall típustól és hangtól függően. A hallás falakon keresztül is működik.</ears>
+    <bumpers label="ütközés">Reagál, amikor másik tárgyba ütközik a típustól, színtől stb. függően.</bumpers>
+    <timer label="időzítő">Az elmúló másodpercekre reagál. Adj hozzá számokat az idő meghosszabbításához.</timer>
+    <got label="megszerez">Reagál, ha valamit felemel a típustól, színtől stb. függően.</got>
+    <scored label="pontszám">Reagál a pontszámban bekövetkező változásra.</scored>
+    <health label="életerő">Reagál az életerőben bekövetkező változásra.</health>
+    <missilehit label="betalált lövés">Reagál arra, ha a lövése eltalál egy másik tárgyat. Jó a pontszám megtartásához, de azt teheted, amit szeretnél - a robotok rózsaszínűvé válnak, ha meglövöd őket.</missilehit>
+    <held label="tart">Reagál, ha egy másik tárgy felveszi.</held>
+    <terrain label="földön">Különböző talajtípusokra reagál.</terrain>
+    <water label="vízen">Különböző víztípusokra reagál.</water>
+    <beamed label="megvilágított">Reagál, ha egy Mars típusú kőzetet megvilágít.</beamed>
+    <inspected  label="megvizsgált">Reagál, ha egy Mars típusú kőzetet megvizsgál.</inspected>
+    <scanned label="beolvasott">Reagál, ha egy ismeretlen kőzetet beolvas a felfedés érdekében.</scanned>
+    <endofpath  label="út vége">Reagál, ha elérte az út végét.</endofpath>
+    <always label="mindig">Mindig valamit csinál. Opcionális.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Kodu egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</boku>
+    <bokubot label="kodu">Kodu egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</bokubot>
+    <anything label="bármi" />
+    <me label="én">Csak a programot futtató robotot ellenőrzi.</me>
+    <said label="elmondott">Meghallgatja a másik karaktert, aki mond valamit.  Írd be, mit szeretnél meghallgatni.</said>
+    <countnone label="nincs">Reagál, ha nem lát semmit, ami megfelelne a leírásnak. Például lát - kék - nincs esetén reagál, ha nincs kék a láthatáron.</countnone>
+    <starfish label="tengeri csillag">Reagál a tengeri csillagra.</starfish>
+    <clam label="kagyló">Reagál a kagylóra.</clam>
+    <seagrass label="tengerifű">Reagál a tengerifűre.</seagrass>
+    <seagrasssingle label="tengerifű">Reagál a tengerifűre.</seagrasssingle>
+    <lilypad label="tündérrózsák">Reagál a tündérrózsákra.</lilypad>
+    <lilypadsingle label="tündérrózsa">Reagál a tündérrózsára.</lilypadsingle>
+    <flyfish label="Repülőhal">A repülőhal egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</flyfish>
+    <jet label="sugárhajtású repülő">A sugárhajtású repülő egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</jet>
+    <light label="fény">Fény egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod. Megvilágít dolgokat. De csak négy lehet belőle.</light>
+    <fan label="ventilátor">Reagál a ventilátorra.</fan>
+    <octopus label="polip">Reagál a polipra.</octopus>
+    <fastbot label="biciklis">A biciklis egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</fastbot>
+    <saucer label="csészealj">Bocsánat, nem mondhatok többet.  A csészealjjal kapcsolatos információk osztályozva vannak.</saucer>
+    <windblimp label="léghajó">A léghajó egy repülő karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</windblimp>
+    <balloonbot label="lufi">A lufi egy lebegő karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</balloonbot>
+    <subbot label="tengeralattjáró">A tengeralattjáró egy tenger alatti karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</subbot>
+    <terracannon label="ágyú">Az ágyú egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</terracannon>
+    <puck label="korong">A korong egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</puck>
+    <wisp label="lidérc">A lidérc egy karakter, amelyet hozzáadhatsz a játékhoz és a viselkedését programozhatod.</wisp>
+    <anybot label="bármilyen robot">Bármilyen típusú robotot keres.</anybot>
+    <turtle label="teknőc">Reagál a teknőcre.</turtle>
+    <rover label="felderítő">Reagál a felderítőre.</rover>
+    <pushpad label="nyomólap">Reagál a nyomólapra.</pushpad>
+    <sputnik label="műhold">Reagál a műholdra.</sputnik>
+    <stick label="bot">Reagál a botra.</stick>
+    <stickboy label="bot">Reagál a botra.</stickboy>
+    <drum label="dob">Reagál a dobra.</drum>
+    <mine label="bánya">Reagál a bányára.</mine>
+    <cloud label="felhő">Reagál a felhőre.</cloud>
+    <swimfish label="hal">Reagál a halra.</swimfish>
+    <floatbot label="hajó">Reagál a hajóra.</floatbot>
+    <factory label="gyár">Reagál a gyárra.</factory>
+    <hut label="kunyhó">Reagál a kunyhóra.</hut>
+    <castle label="kastély">Reagál a kastélyra.</castle>
+    <fruit label="alma">Reagál az almára.</fruit>
+    <inkjet label="tinta felhő">Reagál a tinta felhőre.</inkjet>
+    <iceberg label="jéghegy">Reagál a jéghegyre.</iceberg>
+    <rock label="kőzet">Reagál a kőzetre.</rock>
+    <rockLowValue label="vulkáni">Reagál a vulkáni kőzetre.</rockLowValue>
+    <rockHighValue label="üledékes">Reagál az üledékes kőzetre.</rockHighValue>
+    <rockLowValueUnknown label="ismeretlen kőzet">A vulkáni kőzet ismeretlennek számít, amíg nincs átkutatva, megvilágítva vagy megvizsgálva.</rockLowValueUnknown>
+    <rockHighValueUnknown label="ismeretlen kőzet">Az üledékes kőzet ismeretlennek számít, amíg nincs átkutatva, megvilágítva vagy megvizsgálva.</rockHighValueUnknown>
+    <rockUnknown label="ismeretlen kőzet">Reagál az ismeretlen kőzetre.</rockUnknown>
+    <tree label="fa">Reagál a fára.</tree>
+    <pipe label="cső">Reagál a csőre.</pipe>
+    <pipeStraight label="egyenes cső">Reagál az egyenes csőre.</pipeStraight>
+    <pipeCross label="keresztcső">Reagál a keresztcsőre.</pipeCross>
+    <pipeCorner label="sarokcső">Reagál a sarokcsőre.</pipeCorner>
+    <underwater label="vízalatti">Reagál a vízalatti tárgyakra.</underwater>
+    <building label="épület">Reagál az épületre.</building>
+    <flower label="virág" />
+    <gate label="kapu" />
+    <cursor label="kurzor">Reagál a kurzorra.</cursor>
+    <star label="csillag">Reagál a csillagra.</star>
+    <coin label="érme">Reagál az érmére.</coin>
+    <soccerball label="labda">Reagál a labdára.</soccerball>
+    <heart label="szív">Reagál a szívre.</heart>
+    <bullet label="lőszer">Reagál a lőszerre.</bullet>
+    <Black label="fekete">Reagál a fekete tárgyakra.</Black>
+    <Grey label="szürke">Reagál a szürke tárgyakra.</Grey>
+    <white label="fehér">Reagál a fehér tárgyakra.</white>
+    <red label="piros">Reagál a piros tárgyakra.</red>
+    <orange label="narancssárga">Reagál a narancssárga tárgyakra.</orange>
+    <yellow label="sárga">Reagál a sárga tárgyakra.</yellow>
+    <green label="zöld">Reagál a zöld tárgyakra.</green>
+    <blue label="kék">Reagál a kék tárgyakra.</blue>
+    <purple label="lila">Reagál a lila tárgyakra.</purple>
+    <pink label="rózsaszín">Reagál a rózsaszín tárgyakra.</pink>
+    <brown label="barna">Reagál a barna tárgyakra.</brown>
+    <PathBlack label="fekete út">Reagál a fekete útra.</PathBlack>
+    <PathGrey label="szürke út">Reagál a szürke útra.</PathGrey>
+    <PathWhite label="fehér út">Reagál a fehér útra.</PathWhite>
+    <PathRed label="piros út">Reagál a piros útra.</PathRed>
+    <PathOrange label="narancssárga út">Reagál a narancssárga útra.</PathOrange>
+    <PathYellow label="sárga út">Reagál a sárga útra.</PathYellow>
+    <PathGreen label="zöld út">Reagál a zöld útra.</PathGreen>
+    <PathBlue label="kék út">Reagál a kék útra.</PathBlue>
+    <PathPurple label="lila út">Reagál a lila útra.</PathPurple>
+    <PathPink label="rózsaszín út">Reagál a rózsaszín útra.</PathPink>
+    <PathBrown label="barna út">Reagál a barna útra.</PathBrown>
+    <pathplain label="sík" />
+    <pathroad label="országút" />
+    <pathwall label="fal" />
+    <pathflora label="növényvilág" />
+    <yucca1 label="fa" />
+    <yucca2 label="fa" />
+    <yucca3 label="fa" />
+    <bigyucca1 label="fa" />
+    <expresshappy label="boldog">Reagál a boldog robotra.</expresshappy>
+    <expresssad label="szomorú">Reagál a szomorú robotra.</expresssad>
+    <expressangry label="MÉRGES">Reagál a dühös robotra.</expressangry>
+    <expresscrazy label="ŐRÜLT">Reagál az őrült robotra.</expresscrazy>
+    <expresshearts label="szívek">Reagál a szíveket mutató robotra.</expresshearts>
+    <expressflowers label="virágok">Reagál a virágokat mutató robotra.</expressflowers>
+    <expressstars label="csillagok">Reagál a csillagokat mutató robotra.</expressstars>
+    <expressswear label="szitkozódás">Reagál a szitkozódó robotra.</expressswear>
+    <expressnormal label="normál">Reagál a normálisan viselkedő robotra.</expressnormal>
+    <expressnone label="üres">Reagál a normálisan viselkedő robotra.</expressnone>
+    <moving label="mozgó">Csak akkor reagál a robotra, ha mozog.</moving>
+    <camouflage label="álcázás">Csak akkor reagál a robotra, ha álcázza magát.</camouflage>
+    <closeby label="közeli">A közeli opció esetén a karakter csak akkor figyel a tárgyakra, ha azok közel vannak hozzá.  A távoli tárgyakat nem veszi figyelembe.</closeby>
+    <faraway label="távoli">Csak a távoli dolgokra reagál.</faraway>
+
+    <infront label="szemben">Csak a robottal szembeni dolgokra reagál.</infront>
+    <behind label="mögötte">Csak a robot mögötti dolgokra reagál.</behind>
+    <toleft label="balra">Csak a robot bal oldalán lévő dolgokra reagál.</toleft>
+    <toright label="jobbra">Csak a robot jobb oldalán lévő dolgokra reagál.</toright>
+    <over label="felül">Csak a robot felett lévő dolgokra reagál.</over>
+    <under label="alul">Csak a robot alatt lévő dolgokra reagál.</under>
+
+    <lineofsight label="line of sight">A domborzat és a falak akadályozzák a érzékelő érzékelését.</lineofsight>
+    
+    <countfew label="kevés">Reagál, amikor csak néhány dolgot látsz.</countfew>
+    <countmany label="sok">Reagál, amikor sok dolgot látsz.</countmany>
+    <clustermany label="csoport">Csak akkor reagál, ha sok, csoportba rendeződött dolgot látsz.</clustermany>
+    <countany label="bármi" />
+    <leftstick label="B kar">A vezérlő bal karjára reagál. Jó mozgáshoz.</leftstick>
+    <rightstick label="J kar">A vezérlő jobb karjára reagál. Jó lövéshez.</rightstick>
+    <abutton label="A gomb">A vezérlő A gombjára reagál.</abutton>
+    <bbutton label="B gomb">A vezérlő B gombjára reagál.</bbutton>
+    <xbutton label="X gomb">A vezérlő X gombjára reagál.</xbutton>
+    <ybutton label="Y gomb">A vezérlő Y gombjára reagál.</ybutton>
+    <lefttrigger label="bal ravasz">A vezérlő bal ravaszára reagál.</lefttrigger>
+    <righttrigger label="jobb ravasz">A vezérlő jobb ravaszára reagál.</righttrigger>
+    <lefttrigger_analog label="bal ravasz">A vezérlő bal ravaszára reagál.</lefttrigger_analog>
+    <righttrigger_analog label="jobb ravasz">A vezérlő jobb ravaszára reagál.</righttrigger_analog>
+    <mouse>
+      <button>
+        <left label="bal">Reagál az egér bal gombjára.</left>
+        <right label="jobb">Reagál az egér jobb gombjára.</right>
+      </button>
+      <hover label="rajta">Reagál, ha az egeret egy tárgy vagy tereprész fölé viszi.</hover>
+      <move label="mozog">Reagál az egér mozgására.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="érintés">Reagál az aktív érintésre (érintőképernyő).</touching>
+        <tap label="koppintás">Reagál a koppintásra (érintőképernyő).</tap>
+        <rotate label="forgatás">Reagál a forgató kézmozdulatra (érintőképernyő).</rotate>
+        <swipe label="pöccintés">Reagál a pöccintő kézmozdulatra (érintőképernyő).</swipe>
+        <slide label="húzás">Reagál a húzó kézmozdulatra (érintőképernyő).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="fehér">Reagál a HUD FEHÉR gombjára. (A módosításhoz nézd meg a világ beállításokat)</White>
+        <Black label="fekete">Reagál a HUD FEKETE gombjára. (A módosításhoz nézd meg a világ beállításokat)</Black>
+        <Grey label="szürke">Reagál a HUD SZÜRKE gombjára. (A módosításhoz nézd meg a világ beállításokat)</Grey>
+        <Red label="piros">Reagál a HUD PIROS gombjára. (A módosításhoz nézd meg a világ beállításokat)</Red>
+        <Green label="zöld">Reagál a HUD ZÖLD gombjára. (A módosításhoz nézd meg a világ beállításokat)</Green>
+        <Blue label="kék">Reagál a HUD KÉK gombjára. (A módosításhoz nézd meg a világ beállításokat)</Blue>
+        <Orange label="narancssárga">Reagál a HUD NARANCSSÁRGA gombjára. (A módosításhoz nézd meg a világ beállításokat)</Orange>
+        <Yellow label="sárga">Reagál a HUD SÁRGA gombjára. (A módosításhoz nézd meg a világ beállításokat)</Yellow>
+        <Purple label="lila">Reagál a HUD LILA gombjára. (A módosításhoz nézd meg a világ beállításokat)</Purple>
+        <Pink label="rózsaszín">Reagál a HUD RÓZSASZÍN gombjára. (A módosításhoz nézd meg a világ beállításokat)</Pink>
+        <Brown label="barna">Reagál a HUD BARNA gombjára. (A módosításhoz nézd meg a világ beállításokat)</Brown>
+      </guiButton><!-- Virtual Controller --><controllerButton_X label="X gomb">Reagál a képernyőn található X gomb megérintésére.</controllerButton_X>
+      <controllerButton_Y label="Y gomb">Reagál a képernyőn található Y gomb megérintésére.</controllerButton_Y>
+      <controllerButton_A label="A gomb">Reagál a képernyőn található A gomb megérintésére.</controllerButton_A>
+      <controllerButton_B label="B gomb">Reagál a képernyőn található B gomb megérintésére.</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="Nyilak">Reagál a billentyűzeten található nyíl gombokra.</ArrowKeys>
+    <WASDKeys label="WASD">Reagál a billentyűzeten található WASD gombokra.</WASDKeys>
+    <Akey label="A">Reagál a billentyűzeten található A gombra.</Akey>
+    <Bkey label="B">Reagál a billentyűzeten található B gombra.</Bkey>
+    <Ckey label="C">Reagál a billentyűzeten található C gombra.</Ckey>
+    <Dkey label="D">Reagál a billentyűzeten található D gombra.</Dkey>
+    <Ekey label="E">Reagál a billentyűzeten található E gombra.</Ekey>
+    <Fkey label="F">Reagál a billentyűzeten található F gombra.</Fkey>
+    <Gkey label="G">Reagál a billentyűzeten található G gombra.</Gkey>
+    <Hkey label="H">Reagál a billentyűzeten található H gombra.</Hkey>
+    <Ikey label="I">Reagál a billentyűzeten található I gombra.</Ikey>
+    <Jkey label="J">Reagál a billentyűzeten található J gombra.</Jkey>
+    <Kkey label="K">Reagál a billentyűzeten található K gombra.</Kkey>
+    <Lkey label="L">Reagál a billentyűzeten található L gombra.</Lkey>
+    <Mkey label="M">Reagál a billentyűzeten található M gombra.</Mkey>
+    <Nkey label="N">Reagál a billentyűzeten található N gombra.</Nkey>
+    <Okey label="O">Reagál a billentyűzeten található O gombra.</Okey>
+    <Pkey label="P">Reagál a billentyűzeten található P gombra.</Pkey>
+    <Qkey label="Q">Reagál a billentyűzeten található Q gombra.</Qkey>
+    <Rkey label="R">Reagál a billentyűzeten található R gombra.</Rkey>
+    <Skey label="S">Reagál a billentyűzeten található S gombra.</Skey>
+    <Tkey label="T">Reagál a billentyűzeten található T gombra.</Tkey>
+    <Ukey label="U">Reagál a billentyűzeten található U gombra.</Ukey>
+    <Vkey label="V">Reagál a billentyűzeten található V gombra.</Vkey>
+    <Wkey label="W">Reagál a billentyűzeten található W gombra.</Wkey>
+    <Xkey label="X">Reagál a billentyűzeten található X gombra.</Xkey>
+    <Ykey label="Y">Reagál a billentyűzeten található Y gombra.</Ykey>
+    <Zkey label="Z">Reagál a billentyűzeten található Z gombra.</Zkey>
+    <D0key label="0">Reagál a billentyűzeten található 0 gombra.</D0key>
+    <D1key label="1">Reagál a billentyűzeten található 1 gombra.</D1key>
+    <D2key label="2">Reagál a billentyűzeten található 2 gombra.</D2key>
+    <D3key label="3">Reagál a billentyűzeten található 3 gombra.</D3key>
+    <D4key label="4">Reagál a billentyűzeten található 4 gombra.</D4key>
+    <D5key label="5">Reagál a billentyűzeten található 5 gombra.</D5key>
+    <D6key label="6">Reagál a billentyűzeten található 6 gombra.</D6key>
+    <D7key label="7">Reagál a billentyűzeten található 7 gombra.</D7key>
+    <D8key label="8">Reagál a billentyűzeten található 8 gombra.</D8key>
+    <D9key label="9">Reagál a billentyűzeten található 9 gombra.</D9key>
+    <Spacekey label="Space">Reagál a billentyűzeten található space gombra.</Spacekey>
+    <PageUpkey label="PageUp">Reagál a billentyűzeten található PageUp gombra.</PageUpkey>
+    <PageDownkey label="PageDown">Reagál a billentyűzeten található PageDown gombra.</PageDownkey>
+    <Endkey label="End">Reagál a billentyűzeten található End gombra.</Endkey>
+    <Leftkey label="Bal">Reagál a billentyűzeten található bal nyíl gombra.</Leftkey>
+    <Upkey label="Fel">Reagál a billentyűzeten található fel nyíl gombra.</Upkey>
+    <Rightkey label="Jobb">Reagál a billentyűzeten található jobb nyíl gombra.</Rightkey>
+    <Downkey label="Le">Reagál a billentyűzeten található le nyíl gombra.</Downkey>
+    <Insertkey label="Insert">Reagál a billentyűzeten található Insert gombra.</Insertkey>
+    <Deletekey label="Delete">Reagál a billentyűzeten található Delete gombra.</Deletekey>
+    <LeftWindowskey label="BalWindows">Reagál a billentyűzeten található bal Windows gombra.</LeftWindowskey>
+    <RightWindowskey label="JobbWindows">Reagál a billentyűzeten található jobb Windows gombra.</RightWindowskey>
+    <Multiplykey label="*">Reagál a billentyűzeten található szorzás gombra.</Multiplykey>
+    <Addkey label="+">Reagál a billentyűzeten található hozzáadás gombra.</Addkey>
+    <Subtractkey label="-">Reagál a billentyűzeten található kivonás gombra.</Subtractkey>
+    <Decimalkey label=".">Reagál a billentyűzeten található tizedesjegy gombra.</Decimalkey>
+    <Dividekey label="/">Reagál a billentyűzeten található osztás gombra.</Dividekey>
+    <LeftShiftkey label="BalShift">Reagál a billentyűzeten található bal Shift gombra.</LeftShiftkey>
+    <RightShiftkey label="JobbShift">Reagál a billentyűzeten található jobb Shift gombra.</RightShiftkey>
+    <LeftControlkey label="BalControl">Reagál a billentyűzeten található bal Control gombra.</LeftControlkey>
+    <RightControlkey label="JobbControl">Reagál a billentyűzeten található jobb Control gombra.</RightControlkey>
+    <LeftAltkey label="BalAlt">Reagál a billentyűzeten található bal Alt gombra.</LeftAltkey>
+    <RightAltkey label="JobbAlt">Reagál a billentyűzeten található jobb Alt gombra.</RightAltkey>
+    <OemSemicolonkey label=";">Reagál a billentyűzeten található pontosvessző gombra.</OemSemicolonkey>
+    <OemPluskey label="+">Reagál a billentyűzeten található plusz gombra.</OemPluskey>
+    <OemCommakey label=",">Reagál a billentyűzeten található vessző gombra.</OemCommakey>
+    <OemMinuskey label="-">Reagál a billentyűzeten található mínusz gombra.</OemMinuskey>
+    <OemPeriodkey label=".">Reagál a billentyűzeten található pont gombra.</OemPeriodkey>
+    <OemQuestionkey label="?">Reagál a billentyűzeten található kérdőjel gombra.</OemQuestionkey>
+    <OemTildekey label="~">Reagál a billentyűzeten található hullámvonal gombra.</OemTildekey>
+    <OemOpenBracketskey label="[">Reagál a billentyűzeten található nyitó szögletes zárójel gombra.</OemOpenBracketskey>
+    <OemPipekey label="|">Reagál a billentyűzeten található függőleges vonal gombra.</OemPipekey>
+    <OemCloseBracketskey label="]">Reagál a billentyűzeten található záró szögletes zárójel gombra.</OemCloseBracketskey>
+    <OemQuoteskey label="&amp;quot;">Reagál a billentyűzeten található idézőjel gombra.</OemQuoteskey>
+    <OemBackslashkey label="\">Reagál a billentyűzeten található fordított perjel gombra.</OemBackslashkey>
+    <F1key label="F1">Reagál a billentyűzeten található F1 gombra.</F1key>
+    <F2key label="F2">Reagál a billentyűzeten található F2 gombra.</F2key>
+    <F3key label="F3">Reagál a billentyűzeten található F3 gombra.</F3key>
+    <F4key label="F4">Reagál a billentyűzeten található F4 gombra.</F4key>
+    <F5key label="F5">Reagál a billentyűzeten található F5 gombra.</F5key>
+    <F6key label="F6">Reagál a billentyűzeten található F6 gombra.</F6key>
+    <F7key label="F7">Reagál a billentyűzeten található F7 gombra.</F7key>
+    <F8key label="F8">Reagál a billentyűzeten található F8 gombra.</F8key>
+    <F9key label="F9">Reagál a billentyűzeten található F9 gombra.</F9key>
+    <F10key label="F10">Reagál a billentyűzeten található F10 gombra.</F10key>
+    <F11key label="F11">Reagál a billentyűzeten található F11 gombra.</F11key>
+    <F12key label="F12">Reagál a billentyűzeten található F12 gombra.</F12key>
+    <Shiftkey label="Shift">Reagál a billentyűzeten található Shift gombra.</Shiftkey>
+    <Controlkey label="Control">Reagál a billentyűzeten található Control gombra.</Controlkey>
+    <Altkey label="Alt">Reagál a billentyűzeten található Alt gombra.</Altkey>
+    <Windowskey label="Windows">Reagál a billentyűzeten található Windows gombra.</Windowskey>
+    <player1 label="1. játékos">Csak a vezérlőn található 1. játékos gombra reagál. Az alapértelmezett beállítás - reakció bármire.</player1>
+    <player2 label="2. játékos">Csak a vezérlőn található 2. játékos gombra reagál. Az alapértelmezett beállítás - reakció bármire.</player2>
+    <player3 label="3. játékos">Csak a vezérlőn található 3. játékos gombra reagál. Az alapértelmezett beállítás - reakció bármire.</player3>
+    <player4 label="4. játékos">Csak a vezérlőn található 4. játékos gombra reagál. Az alapértelmezett beállítás - reakció bármire.</player4>
+    <terrain label="típus">A terep egy bizonyos típusára reagál.</terrain>
+    <water label="típus">A víz egy bizonyos típusára reagál.</water>
+    <quartersecond label="másodperc">1/4 másodperc  Kombináld másokkal, hogy több időt kapj.</quartersecond>
+    <_01second label="másodperc">1 másodperc.  Kombináld másokkal, hogy több időt kapj.</_01second>
+    <_02seconds label="másodperc">2 másodperc.  Kombináld másokkal, hogy több időt kapj.</_02seconds>
+    <_03seconds label="másodperc">3 másodperc.  Kombináld másokkal, hogy több időt kapj.</_03seconds>
+    <_04seconds label="másodperc">4 másodperc.  Kombináld másokkal, hogy több időt kapj.</_04seconds>
+    <_05seconds label="másodperc">5 másodperc.  Kombináld másokkal, hogy több időt kapj.</_05seconds>
+    <_10seconds label="másodperc">10 másodperc.  Kombináld másokkal, hogy több időt kapj.</_10seconds>
+    <_20seconds label="másodperc">20 másodperc.  Kombináld másokkal, hogy több időt kapj.</_20seconds>
+    <_30seconds label="másodperc">30 másodperc.  Kombináld másokkal, hogy több időt kapj.</_30seconds>
+    <_60seconds label="másodperc">60 másodperc.  Kombináld másokkal, hogy több időt kapj.</_60seconds>
+    <_000point label="pont">0 pont.</_000point>
+    <_001point label="pont">1 pont.  Kombináld másokkal, hogy több pontot kapj.</_001point>
+    <_002points label="pont">2 pont.  Kombináld másokkal, hogy több pontot kapj.</_002points>
+    <_003points label="pont">3 pont.  Kombináld másokkal, hogy több pontot kapj.</_003points>
+    <_004points label="pont">4 pont.  Kombináld másokkal, hogy több pontot kapj.</_004points>
+    <_005points label="pont">5 pont.  Kombináld másokkal, hogy több pontot kapj.</_005points>
+    <_010points label="pont">10 pont.  Kombináld másokkal, hogy több pontot kapj.</_010points>
+    <_020points label="pont">20 pont.  Kombináld másokkal, hogy több pontot kapj.</_020points>
+    <_050points label="pont">50 pont.  Kombináld másokkal, hogy több pontot kapj.</_050points>
+    <_100points label="pont">100 pont.  Kombináld másokkal, hogy több pontot kapj.</_100points>
+    <random label="véletlen">Hozz létre véletlen számot a számos csempék segítségével. Például a véletlen - 5 létrehoz egy véletlen számot 0 és 5 között.</random>
+    <scorebucket>
+      <color>
+        <white label="fehér">Teszteli a fehér eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</white>
+        <black label="fekete">Teszteli a fekete eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</black>
+        <grey label="szürke">Teszteli a szürke eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</grey>
+        <red label="piros">Teszteli a piros eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</red>
+        <green label="zöld">Teszteli a zöld eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</green>
+        <blue label="kék">Teszteli a kék eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</blue>
+        <orange label="narancssárga">Teszteli a narancssárga eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</orange>
+        <yellow label="sárga">Teszteli a sárga eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</yellow>
+        <purple label="lila">Teszteli a lila eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</purple>
+        <pink label="rózsaszín">Teszteli a rózsaszín eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</pink>
+        <brown label="barna">Teszteli a barna eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</brown>
+      </color>
+      <letter>
+        <a label="A eredmény">Teszteli az „A” eredményt, amely soha nem jelenik meg az eredménytáblán.</a>
+        <b label="B eredmény">Teszteli a „B” eredményt, amely soha nem jelenik meg az eredménytáblán.</b>
+        <c label="C eredmény">Teszteli a „C” eredményt, amely soha nem jelenik meg az eredménytáblán.</c>
+        <d label="D eredmény">Teszteli a „D” eredményt, amely soha nem jelenik meg az eredménytáblán.</d>
+        <e label="E eredmény">Teszteli az „E” eredményt, amely soha nem jelenik meg az eredménytáblán.</e>
+        <f label="F eredmény">Teszteli az „F” eredményt, amely soha nem jelenik meg az eredménytáblán.</f>
+        <g label="G eredmény">Teszteli a „G” eredményt, amely soha nem jelenik meg az eredménytáblán.</g>
+        <h label="H eredmény">Teszteli a „H” eredményt, amely soha nem jelenik meg az eredménytáblán.</h>
+        <i label="I eredmény">Teszteli az „I” eredményt, amely soha nem jelenik meg az eredménytáblán.</i>
+        <j label="J eredmény">Teszteli a „J” eredményt, amely soha nem jelenik meg az eredménytáblán.</j>
+        <k label="K eredmény">Teszteli a „K” eredményt, amely soha nem jelenik meg az eredménytáblán.</k>
+        <l label="L eredmény">Teszteli az „L” eredményt, amely soha nem jelenik meg az eredménytáblán.</l>
+        <m label="M eredmény">Teszteli az „M” eredményt, amely soha nem jelenik meg az eredménytáblán.</m>
+        <n label="N eredmény">Teszteli az „N” eredményt, amely soha nem jelenik meg az eredménytáblán.</n>
+        <o label="O eredmény">Teszteli az „O” eredményt, amely soha nem jelenik meg az eredménytáblán.</o>
+        <p label="P eredmény">Teszteli a „P” eredményt, amely soha nem jelenik meg az eredménytáblán.</p>
+        <q label="Q eredmény">Teszteli a „Q” eredményt, amely soha nem jelenik meg az eredménytáblán.</q>
+        <r label="R eredmény">Teszteli az „R” eredményt, amely soha nem jelenik meg az eredménytáblán.</r>
+        <s label="S eredmény">Teszteli az „S” eredményt, amely soha nem jelenik meg az eredménytáblán.</s>
+        <t label="T eredmény">Teszteli a „T” eredményt, amely soha nem jelenik meg az eredménytáblán.</t>
+        <u label="U eredmény">Teszteli az „U” eredményt, amely soha nem jelenik meg az eredménytáblán.</u>
+        <v label="V eredmény">Teszteli a „V” eredményt, amely soha nem jelenik meg az eredménytáblán.</v>
+        <w label="W eredmény">Teszteli a „W” eredményt, amely soha nem jelenik meg az eredménytáblán.</w>
+        <x label="X eredmény">Teszteli az „X” eredményt, amely soha nem jelenik meg az eredménytáblán.</x>
+        <y label="Y eredmény">Teszteli az „Y” eredményt, amely soha nem jelenik meg az eredménytáblán.</y>
+        <z label="Z eredmény">Teszteli a „Z” eredményt, amely soha nem jelenik meg az eredménytáblán.</z>
+      </letter>
+      <local>
+        <a label="a eredmény">The 'a' score, which is private to this character.</a>
+        <b label="b eredmény">The 'b' score, which is private to this character.</b>
+        <c label="c eredmény">The 'c' score, which is private to this character.</c>
+        <d label="d eredmény">The 'd' score, which is private to this character.</d>
+        <e label="e eredmény">The 'e' score, which is private to this character.</e>
+        <f label="f eredmény">The 'f' score, which is private to this character.</f>
+        <g label="g eredmény">The 'g' score, which is private to this character.</g>
+        <h label="h eredmény">The 'h' score, which is private to this character.</h>
+        <i label="i eredmény">The 'i' score, which is private to this character.</i>
+        <j label="j eredmény">The 'j' score, which is private to this character.</j>
+        <k label="k eredmény">The 'k' score, which is private to this character.</k>
+        <l label="l eredmény">The 'l' score, which is private to this character.</l>
+        <m label="m eredmény">The 'm' score, which is private to this character.</m>
+        <n label="n eredmény">The 'n' score, which is private to this character.</n>
+        <o label="o eredmény">The 'o' score, which is private to this character.</o>
+        <p label="p eredmény">The 'p' score, which is private to this character.</p>
+        <q label="q eredmény">The 'q' score, which is private to this character.</q>
+        <r label="r eredmény">The 'r' score, which is private to this character.</r>
+        <s label="s eredmény">The 's' score, which is private to this character.</s>
+        <t label="t eredmény">The 't' score, which is private to this character.</t>
+        <u label="u eredmény">The 'u' score, which is private to this character.</u>
+        <v label="v eredmény">The 'v' score, which is private to this character.</v>
+        <w label="w eredmény">The 'w' score, which is private to this character.</w>
+        <x label="x eredmény">The 'x' score, which is private to this character.</x>
+        <y label="y eredmény">The 'y' score, which is private to this character.</y>
+        <z label="z eredmény">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="ravasz" />
+    <timertrigger label="ravasz" />
+    <scoreis label="van" />
+    <scoreequals label="egyenlő">Reagál, amikor az eredmény egy bizonyos számmal egyenlő.</scoreequals>
+    <scorenotequals label="nem egyenlő">Reagál, amikor az eredmény egy bizonyos számmal nem egyenlő.</scorenotequals>
+    <scoreabove label="felül">Reagál, amikor az eredmény egy bizonyos szám felett van.</scoreabove>
+    <scorebelow label="alul">Reagál, amikor az eredmény egy bizonyos szám alatt van.</scorebelow>
+    <scoregteq label="&amp;gt;=">Reagál, amikor az eredmény egy bizonyos számmal egyenlő vagy afölött van.</scoregteq>
+    <scorelteq label="&amp;lt;=">Reagál, amikor az eredmény egy bizonyos számmal egyenlő vagy az alatt van.</scorelteq>
+    <healthis label="van" />
+    <healthabove label="felül">Reagál, amikor az életerő egy bizonyos szám felett van.</healthabove>
+    <healthbelow label="alul">Reagál, amikor az életerő egy bizonyos szám alatt van.</healthbelow>
+    <direction>
+      <up label="fel">Reagál, amikor a játékbotot felfelé nyomja.</up>
+      <right label="jobb">Reagál, amikor a játékbotot jobbra nyomja.</right>
+      <down label="le">Reagál, amikor a játékbotot lefelé nyomja.</down>
+      <left label="bal">Reagál, amikor a játékbotot balra nyomja.</left>
+      <clockwise label="jobb">Az óramutató járásával megegyező forgató kézmozdulatra reagál.</clockwise>
+      <counterclockwise label="bal">Az óramutató járásával ellentétes forgató kézmozdulatra reagál.</counterclockwise>
+    </direction>
+    <not label="nem">Reagál, amikor a feltétel nem egyezik meg.</not>
+  </filter>
+  <selector>
+    <closest label="legközelebb" />
+    <objectrelative label="vonatkozó" />
+    <towardclosest label="felé">Feléd mozdul el, bármit reagálsz.</towardclosest>
+    <awayfromall label="távol">Úgy mozdul el, hogy távolodjon bármit reagálsz.</awayfromall>
+    <avoidall label="elkerül">Kerüld el azt, amire reagálsz, tarts megfelelő távolságot.</avoidall>
+    <wander label="barangol">Barangolás véletlenszerű irányokkal. Hasznos a program utolsó soraként, így a karakter mozog, ha aktívan nem csinál semmit.</wander>
+    <cruise label="egyenes">Abba az irányba mozog, amelyik irányban éppen áll.</cruise>
+    <circle label="kör" />
+    <spin label="fordul">Helyben forog.</spin>
+    <forward label="előre" />
+    <hiddenturn label="fordul" />
+    <escape label="elfordul" />
+    <followwaypoints label="úton">Bizonyos színű úton halad. Az alapértelmezett beállítás bármilyen úton való haladás.</followwaypoints>
+    <moveupdown label="fel/le">Fel és le halad.</moveupdown>
+    <moveup label="fel">Felfelé mozog.</moveup>
+    <movedown label="le">Lefelé mozog.</movedown>
+    <moveleftright label="fordul">Balra vagy jobbra fordul.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="1. játékos" />
+      <_2 label="2. játékos" />
+      <_3 label="3. játékos" />
+      <_4 label="4. játékos" />
+    </player>
+    <reset>
+      <world label="világ">Visszaállítja a játékot az eredménytáblát kivéve.</world>
+      <score label="eredmény">Visszaállítja az eredménytáblát vagy egyéni eredményt, aminek megadtad a színét.</score>
+      <expression label="kifejez">Visszaállítja a karakter kifejezését.</expression>
+      <glow label="ragyogás">Visszaállítja a karakter ragyogását.</glow>
+      <health label="életerő">Visszaállítja a karakter életerejét.</health>
+    </reset>
+    <projectile>
+      <blip label="lövedék">A lövedékek gyorstüzelő lőszerek - könnyebbek, mint a rakéták.</blip>
+      <missile label="rakéta">A rakéták nagyok és nem túl gyorsak, de elég okosak a célok követéséhez!</missile>
+    </projectile>
+    <slowly label="lassan">Lassabban mozog. Használd többször a lassabb mozgáshoz.</slowly>
+    <quickly label="gyorsan">Gyorsabban mozog. Használd többször a gyorsabb mozgáshoz.</quickly>
+    <speednormally label="normálisan">Normálisan mozog. Opcionális.</speednormally>
+    <weakly label="gyenge">A szokásosnál gyengébben csináld.</weakly>
+    <strongly label="erős">A szokásosnál erősebben csináld.</strongly>
+    <strengthnormally label="normál">Normál erővel csináld. Opcionális.</strengthnormally>
+    <angle>
+      <low label="alacsony">A szokásosnál gyengébben csináld.</low>
+      <high label="magas">A szokásosnál erősebben csináld.</high>
+    </angle>
+    <turnleft label="bal" />
+    <turnright label="jobb" />
+    <turntoward label="felé" />
+    <turnforward label="előre">Azt jelzi, hogy a mozgás nem határozza meg a nézés irányát.</turnforward>
+    <pitchup label="fel" />
+    <pitchdown label="le" />
+    <forward label="előre">Az az irány amerre a karakter néz.</forward>
+    <north label="észak" />
+    <east label="kelet" />
+    <south label="dél" />
+    <west label="nyugat" />
+    <up label="fel" />
+    <down label="le" />
+    <distance>
+      <near label="közel">Közelíti a karakter cél körüli mozgását.</near>
+      <far label="messze">Távolítja a karakter cél körüli mozgását.</far>
+    </distance>
+    <objecticeberg label="jéghegy">Jéghegyet hoz létre.</objecticeberg>
+    <objectrock label="kőzet">Kőzetet hoz létre.</objectrock>
+    <objectrockLowValue label="kőzet">Vulkáni kőzetet hoz létre.</objectrockLowValue>
+    <objectrockHighValue label="kőzet">Üledékes kőzetet hoz létre.</objectrockHighValue>
+    <objectfruit label="alma">Almát hoz létre.</objectfruit>
+    <objectinkjet label="tinta felhő">Tintafelhőt hoz létre.</objectinkjet>
+    <objectstar label="csillag">Csillagot hoz létre.</objectstar>
+    <objectcoin label="érme">Érmét hoz létre.</objectcoin>
+    <objectheart label="szív">Szívet hoz létre.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="labda">Focilabdát hoz létre.</objectsoccerball>
+    <objectbullet label="lőszer">Lőszert hoz létre.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="1. oldal">Váltás vagy beágyazott 1. oldal.</taska>
+    <taskb label="2. oldal">Váltás vagy beágyazott 2. oldal.</taskb>
+    <taskc label="3. oldal">Váltás vagy beágyazott 3. oldal.</taskc>
+    <taskd label="4. oldal">Váltás vagy beágyazott 4. oldal.</taskd>
+    <taske label="5. oldal">Váltás vagy beágyazott 5. oldal.</taske>
+    <taskf label="6. oldal">Váltás vagy beágyazott 6. oldal.</taskf>
+    <taskg label="7. oldal">Váltás vagy beágyazott 7. oldal.</taskg>
+    <taskh label="8. oldal">Váltás vagy beágyazott 8. oldal.</taskh>
+    <taski label="9. oldal">Váltás vagy beágyazott 9. oldal.</taski>
+    <taskj label="10. oldal">Váltás vagy beágyazott 10. oldal.</taskj>
+    <taskk label="11. oldal">Váltás vagy beágyazott 11. oldal.</taskk>
+    <taskl label="12. oldal">Váltás vagy beágyazott 12. oldal.</taskl>
+    <expresshappy label="boldog">Boldogként viselkedik.</expresshappy>
+    <expresssad label="szomorú">Szomorúként viselkedik.</expresssad>
+    <expressangry label="MÉRGES">Mérgesként viselkedik.</expressangry>
+    <expresscrazy label="ŐRÜLT">Őrülten viselkedik.</expresscrazy>
+    <expresshearts label="szívek">Szívek jelennek meg.</expresshearts>
+    <expressflowers label="virágok">Virágok jelennek meg.</expressflowers>
+    <expressstars label="csillagok">Csillagok jelennek meg.</expressstars>
+    <expressswear label="szitkozódás">Rajzfilmes szitkozódások jelennek meg.</expressswear>
+    <expressnone label="nincs">Normálisan viselkedik és már nem jelenik meg semmi.</expressnone>
+    <_000point label="pont">0 pont.  Meghatározhatsz egy színt is.</_000point>
+    <_001point label="pont">1 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_001point>
+    <_002points label="pont">2 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_002points>
+    <_003points label="pont">3 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_003points>
+    <_004points label="pont">4 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_004points>
+    <_005points label="pont">5 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_005points>
+    <_010points label="pont">10 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_010points>
+    <_020points label="pont">20 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_020points>
+    <_050points label="pont">50 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_050points>
+    <_100points label="pont">100 pont.  Használj sokat különböző számok hozzáadásához. Meghatározhatsz egy színt is.</_100points>
+    <random label="véletlen">Hozz létre véletlen számot a számos csempék segítségével. Például a véletlen - 5 létrehoz egy véletlen számot 0 és 5 között.</random>
+    <teama label="A csapat" />
+    <teamb label="B csapat" />
+    <payloadzap label="elkábít">Elkábítja a célt néhány másodpercre.</payloadzap>
+    <payloadpop label="kiüt">Alvásban tartja a célt, amíg valaki más visszaállítja az életerőt.</payloadpop>
+    <payloadboom label="bumm">Tüntesd el a címet egy robbanással.</payloadboom>
+    <payloadvanish label="eltüntet">Csendesen eltünteti a célt.</payloadvanish>
+    <black label="fekete" />
+    <grey label="szürke" />
+    <white label="fehér" />
+    <red label="piros" />
+    <orange label="narancssárga" />
+    <yellow label="sárga" />
+    <green label="zöld" />
+    <blue label="kék" />
+    <purple label="lila" />
+    <pink label="rózsaszín" />
+    <brown label="barna" />
+    <glowoff label="ki">Kikapcsol minden ragyogást.</glowoff>
+    <colorrandom label="véletlen">Véletlen színt ad.</colorrandom>
+    <scorebucket>
+      <color>
+        <white label="fehér">Módosítja a fehér eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</white>
+        <black label="fekete">Módosítja a fekete eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</black>
+        <grey label="szürke">Módosítja a szürke eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</grey>
+        <red label="piros">Módosítja a piros eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</red>
+        <green label="zöld">Módosítja a zöld eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</green>
+        <blue label="kék">Módosítja a kék eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</blue>
+        <orange label="narancssárga">Módosítja a narancssárga eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</orange>
+        <yellow label="sárga">Módosítja a sárga eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</yellow>
+        <purple label="lila">Módosítja a lila eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</purple>
+        <pink label="rózsaszín">Módosítja a rózsaszín eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</pink>
+        <brown label="barna">Módosítja a barna eredményeket, amelyek alapértelmezés szerint megjelennek az eredménytáblán. (A módosításhoz nézd meg a világ beállításokat.)</brown>
+      </color>
+      <letter>
+        <a label="A eredmény">Módosítja az „A” eredményt, amely soha nem jelenik meg az eredménytáblán.</a>
+        <b label="B eredmény">Módosítja a „B” eredményt, amely soha nem jelenik meg az eredménytáblán.</b>
+        <c label="C eredmény">Módosítja a „C” eredményt, amely soha nem jelenik meg az eredménytáblán.</c>
+        <d label="D eredmény">Módosítja a „D” eredményt, amely soha nem jelenik meg az eredménytáblán.</d>
+        <e label="E eredmény">Módosítja az „E” eredményt, amely soha nem jelenik meg az eredménytáblán.</e>
+        <f label="F eredmény">Módosítja az „F” eredményt, amely soha nem jelenik meg az eredménytáblán.</f>
+        <g label="G eredmény">Módosítja a „G” eredményt, amely soha nem jelenik meg az eredménytáblán.</g>
+        <h label="H eredmény">Módosítja a „H” eredményt, amely soha nem jelenik meg az eredménytáblán.</h>
+        <i label="I eredmény">Módosítja az „I” eredményt, amely soha nem jelenik meg az eredménytáblán.</i>
+        <j label="J eredmény">Módosítja a „J” eredményt, amely soha nem jelenik meg az eredménytáblán.</j>
+        <k label="K eredmény">Módosítja a „K” eredményt, amely soha nem jelenik meg az eredménytáblán.</k>
+        <l label="L eredmény">Módosítja az „L” eredményt, amely soha nem jelenik meg az eredménytáblán.</l>
+        <m label="M eredmény">Módosítja az „M” eredményt, amely soha nem jelenik meg az eredménytáblán.</m>
+        <n label="N eredmény">Módosítja az „N” eredményt, amely soha nem jelenik meg az eredménytáblán.</n>
+        <o label="O eredmény">Módosítja az „O” eredményt, amely soha nem jelenik meg az eredménytáblán.</o>
+        <p label="P eredmény">Módosítja a „P” eredményt, amely soha nem jelenik meg az eredménytáblán.</p>
+        <q label="Q eredmény">Módosítja a „Q” eredményt, amely soha nem jelenik meg az eredménytáblán.</q>
+        <r label="R eredmény">Módosítja az „R” eredményt, amely soha nem jelenik meg az eredménytáblán.</r>
+        <s label="S eredmény">Módosítja az „S” eredményt, amely soha nem jelenik meg az eredménytáblán.</s>
+        <t label="T eredmény">Módosítja a „T” eredményt, amely soha nem jelenik meg az eredménytáblán.</t>
+        <u label="U eredmény">Módosítja az „U” eredményt, amely soha nem jelenik meg az eredménytáblán.</u>
+        <v label="V eredmény">Módosítja a „V” eredményt, amely soha nem jelenik meg az eredménytáblán.</v>
+        <w label="W eredmény">Módosítja a „W” eredményt, amely soha nem jelenik meg az eredménytáblán.</w>
+        <x label="X eredmény">Módosítja az „X” eredményt, amely soha nem jelenik meg az eredménytáblán.</x>
+        <y label="Y eredmény">Módosítja az „Y” eredményt, amely soha nem jelenik meg az eredménytáblán.</y>
+        <z label="Z eredmény">Módosítja a „Z” eredményt, amely soha nem jelenik meg az eredménytáblán.</z>
+      </letter>
+      <local>
+        <a label="a eredmény">The 'a' score, which is private to this character.</a>
+        <b label="b eredmény">The 'b' score, which is private to this character.</b>
+        <c label="c eredmény">The 'c' score, which is private to this character.</c>
+        <d label="d eredmény">The 'd' score, which is private to this character.</d>
+        <e label="e eredmény">The 'e' score, which is private to this character.</e>
+        <f label="f eredmény">The 'f' score, which is private to this character.</f>
+        <g label="g eredmény">The 'g' score, which is private to this character.</g>
+        <h label="h eredmény">The 'h' score, which is private to this character.</h>
+        <i label="i eredmény">The 'i' score, which is private to this character.</i>
+        <j label="j eredmény">The 'j' score, which is private to this character.</j>
+        <k label="k eredmény">The 'k' score, which is private to this character.</k>
+        <l label="l eredmény">The 'l' score, which is private to this character.</l>
+        <m label="m eredmény">The 'm' score, which is private to this character.</m>
+        <n label="n eredmény">The 'n' score, which is private to this character.</n>
+        <o label="o eredmény">The 'o' score, which is private to this character.</o>
+        <p label="p eredmény">The 'p' score, which is private to this character.</p>
+        <q label="q eredmény">The 'q' score, which is private to this character.</q>
+        <r label="r eredmény">The 'r' score, which is private to this character.</r>
+        <s label="s eredmény">The 's' score, which is private to this character.</s>
+        <t label="t eredmény">The 't' score, which is private to this character.</t>
+        <u label="u eredmény">The 'u' score, which is private to this character.</u>
+        <v label="v eredmény">The 'v' score, which is private to this character.</v>
+        <w label="w eredmény">The 'w' score, which is private to this character.</w>
+        <x label="x eredmény">The 'x' score, which is private to this character.</x>
+        <y label="y eredmény">The 'y' score, which is private to this character.</y>
+        <z label="z eredmény">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="én">Alkalmazza a műveletet, hogy a robot futtassa a programot.</me>
+    <it label="az">Alkalmazza a műveletet a céltárgyra.</it>
+    <any label="bármi">Bármilyen hang.</any>
+    <event>
+      <any label="esemény">Bármilyen hang.</any>
+      <silly>
+        <any label="bolondos">Bármilyen bolondos hang.</any>
+        <bang label="bumm">Rajzfilmes „bumm” hang.</bang>
+        <pow label="durr">Rajzfilmes „durr” hang.</pow>
+      </silly>
+      <explode>
+        <any label="robban">Bármilyen robbanás hang.</any>
+        <A label="A bumm">Egy robbanás hang.</A>
+        <B label="B bumm">Egy robbanás hang.</B>
+        <C label="C bumm">Egy robbanás hang.</C>
+        <D label="D bumm">Egy robbanás hang.</D>
+        <E label="E bumm">Egy robbanás hang.</E>
+      </explode>
+      <musical>
+        <any label="zenei">Bármilyen zenei hang.</any>
+        <glock>
+          <any label="xilofon">Bármilyen xilofon hang.</any>
+        </glock>
+        <glock01 label="C xilofon">Egy xilofon hang.</glock01>
+        <glock02 label="C# xilofon">Egy xilofon hang.</glock02>
+        <glock03 label="D xilofon">Egy xilofon hang.</glock03>
+        <glock04 label="D# xilofon">Egy xilofon hang.</glock04>
+        <glock05 label="E xilofon">Egy xilofon hang.</glock05>
+        <glock06 label="F xilofon">Egy xilofon hang.</glock06>
+        <glock07 label="F# xilofon">Egy xilofon hang.</glock07>
+        <glock08 label="G xilofon">Egy xilofon hang.</glock08>
+        <glock09 label="G# xilofon">Egy xilofon hang.</glock09>
+        <glock10 label="A xilofon">Egy xilofon hang.</glock10>
+        <glock11 label="A# xilofon">Egy xilofon hang.</glock11>
+        <glock12 label="B xilofon">Egy xilofon hang.</glock12>
+        <gong>
+          <any label="gong">Bármilyen gong hang.</any>
+        </gong>
+        <gong01 label="C gong">Egy gong hang.</gong01>
+        <gong02 label="C# gong">Egy gong hang.</gong02>
+        <gong03 label="D gong">Egy gong hang.</gong03>
+        <gong04 label="D# gong">Egy gong hang.</gong04>
+        <gong05 label="E gong">Egy gong hang.</gong05>
+        <gong06 label="F gong">Egy gong hang.</gong06>
+        <gong07 label="F# gong">Egy gong hang.</gong07>
+        <gong08 label="G gong">Egy gong hang.</gong08>
+        <gong09 label="G# gong">Egy gong hang.</gong09>
+        <gong10 label="A gong">Egy gong hang.</gong10>
+        <gong11 label="A# gong">Egy gong hang.</gong11>
+        <gong12 label="B gong">Egy gong hang.</gong12>
+        <saw>
+          <any label="fűrész">Bármilyen fűrészfog alakú hullám hang.</any>
+        </saw>
+        <saw01 label="C fűrész">Egy fűrészfog alakú hullám hang.</saw01>
+        <saw02 label="C# fűrész">Egy fűrészfog alakú hullám hang.</saw02>
+        <saw03 label="D fűrész">Egy fűrészfog alakú hullám hang.</saw03>
+        <saw04 label="D# fűrész">Egy fűrészfog alakú hullám hang.</saw04>
+        <saw05 label="E fűrész">Egy fűrészfog alakú hullám hang.</saw05>
+        <saw06 label="F fűrész">Egy fűrészfog alakú hullám hang.</saw06>
+        <saw07 label="F# fűrész">Egy fűrészfog alakú hullám hang.</saw07>
+        <saw08 label="G fűrész">Egy fűrészfog alakú hullám hang.</saw08>
+        <saw09 label="G# fűrész">Egy fűrészfog alakú hullám hang.</saw09>
+        <saw10 label="A fűrész">Egy fűrészfog alakú hullám hang.</saw10>
+        <saw11 label="A# fűrész">Egy fűrészfog alakú hullám hang.</saw11>
+        <saw12 label="B fűrész">Egy fűrészfog alakú hullám hang.</saw12>
+        <sine>
+          <any label="szinusz">Bármilyen szinuszhullám hang.</any>
+        </sine>
+        <sine01 label="C szinusz">Egy szinuszhullám hang.</sine01>
+        <sine02 label="C# szinusz">Egy szinuszhullám hang.</sine02>
+        <sine03 label="D szinusz">Egy szinuszhullám hang.</sine03>
+        <sine04 label="D# szinusz">Egy szinuszhullám hang.</sine04>
+        <sine05 label="E szinusz">Egy szinuszhullám hang.</sine05>
+        <sine06 label="F szinusz">Egy szinuszhullám hang.</sine06>
+        <sine07 label="F# szinusz">Egy szinuszhullám hang.</sine07>
+        <sine08 label="G szinusz">Egy szinuszhullám hang.</sine08>
+        <sine09 label="G# szinusz">Egy szinuszhullám hang.</sine09>
+        <sine10 label="A szinusz">Egy szinuszhullám hang.</sine10>
+        <sine11 label="A# szinusz">Egy szinuszhullám hang.</sine11>
+        <sine12 label="B szinusz">Egy szinuszhullám hang.</sine12>
+        <square>
+          <any label="négyzet">Bármilyen négyzetes hullám hang.</any>
+        </square>
+        <square01 label="C négyzet">Egy négyzetes hullám hang.</square01>
+        <square02 label="C# négyzet">Egy négyzetes hullám hang.</square02>
+        <square03 label="D négyzet">Egy négyzetes hullám hang.</square03>
+        <square04 label="D# négyzet">Egy négyzetes hullám hang.</square04>
+        <square05 label="E négyzet">Egy négyzetes hullám hang.</square05>
+        <square06 label="F négyzet">Egy négyzetes hullám hang.</square06>
+        <square07 label="F# négyzet">Egy négyzetes hullám hang.</square07>
+        <square08 label="G négyzet">Egy négyzetes hullám hang.</square08>
+        <square09 label="G# négyzet">Egy négyzetes hullám hang.</square09>
+        <square10 label="A négyzet">Egy négyzetes hullám hang.</square10>
+        <square11 label="A# négyzet">Egy négyzetes hullám hang.</square11>
+        <square12 label="B négyzet">Egy négyzetes hullám hang.</square12>
+        <drums>
+          <any label="dobok">Bármilyen dob hang.</any>
+        </drums>
+        <bassdrum label="basszus">Basszusdob.</bassdrum>
+        <hhclosed label="lábcin zárva">Lábcin le van zárva.</hhclosed>
+        <hhopen label="lábcin nyitva">Lábcin nyitva van.</hhopen>
+        <shaker label="shaker">Rázós hangszer.</shaker>
+        <snare label="pergő">Pergődob.</snare>
+        <tomlow label="álló tam">Alacsony hangolású tam.</tomlow>
+        <tommed label="középső tam">Közepes hangolású tam.</tommed>
+        <tomhi label="felső tam">Magas hangolású tam.</tomhi>
+      </musical>
+      <arcade>
+        <any label="ügyességi">Bármilyen ügyességi játék hang.</any>
+        <roboton label="robot be">Aktiválja a robotot.</roboton>
+        <robotoff label="robot ki">Kikapcsolja a robotot.</robotoff>
+        <coinsound label="érme">Érme hangja.</coinsound>
+        <gethealth label="életerő+">Megszerzi az életerő hangot.</gethealth>
+        <losehealth label="életerő-">Elveszti az életerő hangot.</losehealth>
+        <shoot label="lövés">Lövés hangja.</shoot>
+        <timer label="időzítő">Időzítő hangja.</timer>
+        <win label="győzelem">Győzelem hangja.</win>
+        <lose label="elveszít">Vesztés hangja.</lose>
+        <inkjet_fire label="tintasugár kilövése">Tintasugár kilövésének hangja.</inkjet_fire>
+        <inkjet_impact label="tintasugár hatás">Tintasugár hatás hangja.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="vegyes">Bármilyen vegyes hang.</any>
+        <countdown_beep label="visszaszámlálás">Sípoló visszaszámlálás hang.</countdown_beep>
+        <countdown_alarm label="riasztás visszaszámlálás">Sürgős sípoló visszaszámlálás.</countdown_alarm>
+        <epic_stinger label="hősies ütés">Hősies ütés hangja.</epic_stinger>
+        <epic_stinger_a label="hősies ütés a">Hősies ütés hangja.</epic_stinger_a>
+        <epic_stinger_b label="hősies ütés b">Hősies ütés hangja.</epic_stinger_b>
+        <firepoof label="tűzgyújtás">Tűzgyújtás hangja.</firepoof>
+        <forcefieldup label="pajzs +">Erőtér fel hangja.</forcefieldup>
+        <forcefielddown label="pajzs -">Erőtér le hangja.</forcefielddown>
+        <hide label="elrejtőzik">Elrejtőzés hangja.</hide>
+        <lockontarget label="bemér">Célpont bemérése hang.</lockontarget>
+        <losetarget label="elveszít">Célpont elvesztése hang.</losetarget>
+        <positivecondition label="jó">Valami jó történt hang.</positivecondition>
+        <negativecondition label="rossz">Valami rossz történt hang.</negativecondition>
+        <points label="pont">Elnyert pontok hang.</points>
+        <pop label="pukkanás">Pukkanás hang.</pop>
+        <popout label="kipukkanás">Kipukkanás hang.</popout>
+        <powerup label="erőfelvétel">Erőfelvételi hang.</powerup>
+        <servo label="szervo">Szervo hang.</servo>
+        <watersplash label="csobbanás">Vízcsobbanás hang.</watersplash>
+        <waterdrop label="csepp">Vízcsöppenés hang.</waterdrop>
+        <tagbase label="kódalap">Címke alap hang.</tagbase>
+        <whistlehuman label="fütty">Emberi füttyszó hangja.</whistlehuman>
+        <whistlereferee label="fütty">Játékvezető füttyszó hangja.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="torony">A toronyvédelem játékhoz hozzáadott hangok.</any>
+        <air_raid_siren label="légriadó sziréna">Légiriadó sziréna hangja.</air_raid_siren>
+        <bomb_fall label="bomba lezuhanás">Lezuhanó bomba hangja.</bomb_fall>
+        <stun_fire label="kábító lövés">Lövegtorony kábító lövés hangja.</stun_fire>
+        <zapper_fire label="elektrosokk lövés">Lövegtorony elektrosokkos lövésének hangja.</zapper_fire>
+        <missile_fire label="rakétakilövés">Lövegtorony rakétakilövés hangja.</missile_fire>
+        <shrinker_fire label="zsugorító lövés">Lövegtorony zsugorító kilövés hangja.</shrinker_fire>
+        <clam_coin_spit label="Érme kiköpése">Egy érmét kiköpő kagyló fenséges hangja.</clam_coin_spit>
+        <enemy_converted label="ellenség átalakítása">Az ellenség átalakításakor hallható hang.</enemy_converted>
+        <enemy_escape label="ellenség menekülése">Az ellenség menekülésekor hallható hang.</enemy_escape>
+        <place_tower label="torony elhelyezése">A torony elhelyezésekor hallható hang.</place_tower>
+        <star_collect label="csillag gyűjtése">A csillag gyűjtésekor hallható hang.</star_collect>
+        <coin_collect label="érme gyűjtése">Az érme gyűjtésekor hallható hang.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="zene">Bármilyen zene a csoportból.</any>
+      <omni>
+        <any label="Bármi">Bármilyen zene a csoportból.</any>
+      </omni>
+    </music>
+    <mu_action label="művelet">Művelet</mu_action>
+    <mu_ambientlight label="könnyű">Könnyű környezeti zene.</mu_ambientlight>
+    <mu_ambinetmodd label="hangulat">Hangulatzene</mu_ambinetmodd>
+    <mu_brightdowntempo label="lassítás">Lágy lassú zene.</mu_brightdowntempo>
+    <mu_brightfunk label="funky">Funky!</mu_brightfunk>
+    <mu_brightguitar label="gitár">Lágy gitár zene.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu téma.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="rejtély">Bármilyen zene a csoportból.</any>
+      </mystery>
+    </music>
+    <mysterya label="A rejtély">Titokzatos zene.</mysterya>
+    <mysteryb label="B rejtély">Titokzatos zene.</mysteryb>
+    <mysteryc label="C rejtély">Titokzatos zene.</mysteryc>
+    <music>
+      <driving>
+        <any label="vezetés">Bármilyen zene a csoportból.</any>
+      </driving>
+    </music>
+    <drivinga label="A gyors">Gyors zene vezetéskor.</drivinga>
+    <drivingb label="B gyors">Gyors zene vezetéskor.</drivingb>
+    <drivingc label="C gyors">Gyors zene vezetéskor.</drivingc>
+    <music>
+      <drama>
+        <any label="dráma">Bármilyen zene a csoportból.</any>
+      </drama>
+    </music>
+    <dramaa label="A dráma">Drámai zene.</dramaa>
+    <dramab label="B dráma">Drámai zene.</dramab>
+    <environ>
+      <any label="környezet">Bármilyen hang a csoportból.</any>
+      <ambocean label="óceán">Az óceán hangja.</ambocean>
+      <ambforest label="erdő">Az erdő hangja.</ambforest>
+      <ambcity label="város">A város hangja.</ambcity>
+      <ambmeadow label="mező">A mező hangja.</ambmeadow>
+      <ambmars label="mars">Mars hangok.</ambmars>
+      <arena>
+        <any label="aréna">Bármilyen aréna hang.</any>
+        <a label="A aréna">Nagy tömeg.</a>
+        <b label="B aréna">Nagy tömeg.</b>
+        <c label="C aréna">Nagy tömeg.</c>
+        <d label="D aréna">Nagy tömeg.</d>
+        <e label="E aréna">Nagy tömeg.</e>
+        <f label="F aréna">Nagy tömeg.</f>
+        <g label="G aréna">Nagy tömeg.</g>
+      </arena>
+    </environ>
+    <trackingnone label="vízszintes">A rakéta vízszintesen repül, nem mozdul el fel vagy lefelé.</trackingnone>
+    <trackinghoming label="cirkálás">A rakéta követi a talajszintet és megpróbál a dobokon és falakon átrepülni.</trackinghoming>
+    <constraint>
+      <leftright label="bal/jobb">Csak balra és jobbra mozog.</leftright>
+      <fwdback label="előre/hátra">Csak előre és hátra mozog.</fwdback>
+      <updown label="fel/le" />
+      <northsouth label="É/D">Csak észak és dél irányába mozog.</northsouth>
+      <eastwest label="K/Ny">Csak kelet és nyugat irányába mozog.</eastwest>
+      <immobile label="fagyaszt">Nem engedélyezi a mozgást, ütközéskor sem.</immobile>
+    </constraint>
+    <once label="egyszer">CSINÁL utáni kód csak egyszer fut le minden egyes alkalommal, amikor a HA feltétel aktív.</once>
+    <watertype label="víztípus">Beállítja a víz típusát.</watertype>
+  </modifier>
+  <actuator>
+    <nothing label="semmi" />
+    <movement label="mozog">Körbeutazza a világot. Felfedezi a lehetőségeket. A különböző karakterek különböző mozgási képességekkel rendelkeznek.</movement>
+    <turn label="fordul">Megváltoztatja a karakter nézési irányát.</turn>
+    <eat label="eszik">Elfogyasztja a céltárgyat, amelyet be kell zárni.</eat>
+    <say label="beszél">Megjelenít egy szöveges üzenetet buborékban vagy párbeszédablakban. Használd a &lt;cr&gt; kódot a sorokra osztáshoz.</say>
+    <open label="kinyit">Karakterenként különbözően működik. Kísérlet!</open>
+    <close label="bezár">Karakterenként különbözően működik. Kísérlet!</close>
+    <kick label="rúg">Belerúg a célpontba, ha elég közel van. Az erősség változtatható.</kick>
+    <make label="létrehoz">Másik tárgyat hoz létre. Alap tárgyakat hozhat létre vagy bármi mást, ami Létrehozhatónak van minősítve.</make>
+    <launch label="elrepít">Belerúg a célpontba, ha elég közel van. Az erősség változtatható.</launch>
+    <push label="tol">A célt egy bizonyos irányba eltolja, ha elég közel van. Az erőssége változtatható.</push>
+    <pull label="húz">A célt egy bizonyos irányba húzza, ha elég közel van. Az erőssége változtatható.</pull>
+    <camouflage label="álcáz">Álcázza a célt, így nehezen látható.</camouflage>
+    <uncamouflage label="álcázást felfed">Felfedi a célt, így látható lesz.</uncamouflage>
+    <express label="kifejez">Kifejez egy érzelmet vagy megmutat egy speciális hatást.  Néhány kifejezés megváltoztatja a karakter arcát, míg mások a karakter felett jelennek meg.</express>
+    <color label="szín">Megváltoztatja a színedet vagy a céltárgy színét.</color>
+    <glow label="ragyogás">Radioaktív sugárzást bocsát ki. A színe megváltoztatható.</glow>
+    <sound label="játék">Adj egy hangot! Sok hang közül választhatsz.</sound>
+    <stopsound label="csendes">Leállítja a hanglejátszást.</stopsound>
+    <jump label="ugrás">A különböző karakterek különböző magasra tudnak ugrani.</jump>
+    <watersurface label="felszín">A Felszín művelet következtében a víz alatti karakterek feljönnek a víz felszínére.</watersurface>
+    <waterdive label="merülés">A Merülés művelet következtében a víz alatti karakterek lemerülnek a víz aljára.</waterdive>
+    <airrise label="felfelé">A Felfelé művelet következtében a repülő karakterek felmennek az égbe.</airrise>
+    <airdrop label="lefelé">A Lefelé művelet következtében a repülő karakterek lejönnek a földre.</airdrop>
+    <switchtask label="átvált">Másik oldalra vált. Csak az aktuális oldalon lévő szabályok alkalmazhatók. Az oldalak készek a viselkedés módosítására.</switchtask>
+    <inlinetask label="beágyazott">Futás közben minden másik oldalról származó programot tartalmaz.  Hasznos olyan kódok esetén, amelyet több oldalon szeretnél használni, egyszer beírod és beilleszted, ahová szeretnéd.</inlinetask>
+    <nextlevel label="következő szint">Betölti a következő szintet. Több szinttel rendelkező játékok esetén hasznos!</nextlevel>
+    <prevlevel label="előző szint">Betölti az előző szintet. Több szinttel rendelkező játékok esetén hasznos!</prevlevel>
+    <waterraise label="vízszint emelése">A tárgy alatt megemeli a vízszintet.</waterraise>
+    <waterlower label="vízszint csökkentése">A tárgy alatt csökkenti a vízszintet.</waterlower>
+    <setwater label="víz beállítása">Beállítja a víz típusát a tárgy alatt.</setwater>
+    <rescale label="méretezés">Zökkenőmentesen megváltoztatja a tárgy méretét.</rescale>
+    <rescaleinstant label="méretezés (azonnal)">Azonnal beállítja a tárgy méretét.</rescaleinstant>
+    <holddistance label="távolság tartása">Zökkenőmentesen megváltoztatja a „tartott” tárgyak távolságát.</holddistance>
+    <holddistanceinstant label="távolságot tart (azonnal)">Azonnal megváltoztatja a „tartott” tárgyak távolságát.</holddistanceinstant>
+    <movementspeedmodify label="mozgás sebessége">Beállítja az előre haladó mozgás sebességének szorzóját ezen tényezőre.</movementspeedmodify>
+    <turningspeedmodify label="fordulás sebessége">Beállítja a forgás sebességének szorzóját ezen tényezőre.</turningspeedmodify>
+    <worldlightingchange label="világítás">Zökkenőmentesen beállítja a világ világítását.</worldlightingchange>
+    <worldlightingchangeinstant label="világítás (azonnal)">Azonnal beállítja a világ világítását.</worldlightingchangeinstant>
+    <worldskychange label="ég">Zökkenőmentesen beállítja a világ egét.</worldskychange>
+    <worldskychangeinstant label="ég (azonnal)">Azonnal beállítja a világ egét.</worldskychangeinstant>
+    <shoot label="lövés" />
+    <shoot2 label="lövés">Lövedékeket vagy rakétákat lő ki.</shoot2>
+    <beam label="nyaláb">Lézernyalábot lő ki a Mars kőzetre a kőzet alapvető tulajdonságainak meghatározása érdekében.</beam>
+    <inspect label="vizsgál">Belefúr a Mars kőzetbe és mintát vesz a további tanulmányozáshoz.</inspect>
+    <scan label="átvizsgál">Meghatározza az ismeretlen kőzetek típusát a felderítő körüli területen.</scan>
+    <picture label="kép">Képet készít a karakter szemszögéből.</picture>
+    <damage label="sérülés">Életerőt nyer magából vagy a célkarakterből.</damage>
+    <heal label="gyógyít">Életerőt ad magának vagy a célkarakternek. A Gyógyítás művelet segítségével a karakter vagy a céltárgy felépülhet egy sérülésből. A gyógyítás a céltárgyra alapértelmezett beállítás; a karakter gyógyítható az „én” módosítót is beleértve. A módosítókat használhatod a gyógyítási pontok típusának és mennyiségének meghatározásához.</heal>
+    <zap label="elkábít">Elkábít engem vagy a célkaraktert néhány másodpercre.</zap>
+    <pop label="kiüt">Teljesen lebénítja a robotot vagy engem, amíg valaki más meg nem gyógyít.</pop>
+    <boom label="bumm">Eltüntet engem vagy a célt egy robbanással.</boom>
+    <vanish label="eltüntet">Csendesen eltüntet engem vagy a célt.</vanish>
+    <grab label="megragad">Felemeli a célpontot, ha elég közel van. Egyszerre csak egy dolgot tarthatsz a kezedben.</grab>
+    <drop label="leejt">Elejti amit visz.</drop>
+    <give label="ad">Odaadja a célkarakternek amit visz. Ha a cél nem tartja meg, az leesik.</give>
+    <reset label="visszaállít">Visszaállítja a játék egy szempontját vagy egy karaktert.</reset>
+    <restart label="újraindítás">Visszaállítja a játék egy szempontját vagy egy karaktert.</restart>
+    <gameover label="befejez">Befejezi a játékot.</gameover>
+    <victory label="győzelem">Befejezi a játékot és megjelenít egy győzelmet igazoló üzenetet. Ha megadsz egy színt, megmutatjuk.</victory>
+    <score label="eredmény">Hozzáad pontokat az eredményhez.</score>
+    <unscore label="levon">Elvesz pontokat az eredményből.</unscore>
+    <scoreset label="eredmény beállítása">Beállítja az eredményt egy megadott értékre.</scoreset>
+    <camera>
+      <followme label="követ">A nézőpont követi a karaktert.</followme>
+      <ignoreme label="figy. kívül hagy">Ne aggódj, hogy a karakter a látótérben marad-e.</ignoreme>
+      <firstperson label="1. személy">A karakter szemével lát.</firstperson>
+    </camera>
+  </actuator>
+  <root />
+  <group>
+    <colors label="szín" />
+    <pathcolors label="út színei" />
+    <game label="játék" />
+    <more label="több" />
+    <players label="játékosok" />
+    <playermods label="játékosok" />
+    <actions label="műveletek" />
+    <settings label="beállítások" />
+    <combat label="leküzd" />
+    <rover label="felderítő" />
+    <holding label="tartás" />
+    <sounds label="hangok" />
+    <event label="esemény">
+      <explode label="robban" />
+      <silly label="bolondos" />
+      <musical label="zenei">
+        <glock label="xilofon" />
+        <saw label="fűrész" />
+        <sine label="szinusz" />
+        <gong label="gong" />
+        <square label="négyzet" />
+        <drums label="dobok" />
+      </musical>
+      <arcade label="ügyességi" />
+      <misc label="vegyes" />
+      <tower label="torony" />
+    </event>
+    <environ label="környezet">
+      <forest label="erdő" />
+      <arena label="aréna" />
+    </environ>
+    <music label="zene">
+      <omni label="új" />
+      <mystery label="rejtély" />
+      <driving label="vezetés" />
+      <drama label="dráma" />
+    </music>
+    <constraints label="határérték" />
+    <directions label="irány" />
+    <filters>
+      <directions label="irány" />
+      <touchbuttons label="gombok" />
+      <touchGuiButtons label="Gombok" />
+      <gestures label="kézmozdulatok" />
+    </filters>
+    <expressions label="kifejez" />
+    <projectiles label="lövedék" />
+    <camera label="nézet" />
+    <reset label="visszaállít" />
+    <options label="beállítások" />
+    <compare label="összehasonlít" />
+    <points label="pont" />
+    <time label="idő" />
+    <speed label="sebesség" />
+    <strength label="erő" />
+    <angle label="padlás" />
+    <tracking label="nyomkövetés" />
+    <bots label="robot I" />
+    <bots2 label="robot II" />
+    <objects label="tárgyak" />
+    <tasks label="feladat" />
+    <terrains label="típusok" />
+    <waters label="típusok" />
+    <setwater label="víztípus" />
+    <creatables label="létrehozhatók" />
+    <keyboard>
+      <letters label="betűk" />
+      <numbers label="számok" />
+      <symbols label="szimbólumok" />
+      <misc label="vegyes" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

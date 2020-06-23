@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.0</ProductVersion>
+    <ProjectGuid>{570b894f-6693-4706-8afc-d75044ec80f9}</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>KoduSetup</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <SccProjectName>%24/Boku/Master/Main/BokuSetup</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://fuselabs.visualstudio.com/defaultcollection</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Installer|x86' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <CompilerAdditionalOptions>
+    </CompilerAdditionalOptions>
+    <SuppressPdbOutput>True</SuppressPdbOutput>
+    <LinkerAdditionalOptions>-cultures:en-us</LinkerAdditionalOptions>
+    <VerboseOutput>True</VerboseOutput>
+    <SuppressIces>ICE69</SuppressIces>
+    <SuppressAllWarnings>False</SuppressAllWarnings>
+    <Pedantic>False</Pedantic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Installer|AnyCPU' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Installer|Any CPU' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Signed_Installer|x86' ">
+    <CompilerAdditionalOptions>
+    </CompilerAdditionalOptions>
+    <SuppressPdbOutput>True</SuppressPdbOutput>
+    <LinkerAdditionalOptions>-cultures:en-us</LinkerAdditionalOptions>
+    <VerboseOutput>True</VerboseOutput>
+    <SuppressIces>ICE69</SuppressIces>
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Signed_Installer|AnyCPU' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Signed_Installer|Any CPU' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ConsentDlg.wxs" />
+    <Compile Include="Content.wxs" />
+    <Content Include="Build.wxi" />
+    <Compile Include="Executables.wxs" />
+    <Compile Include="LanguageDlg.wxs" />
+    <Compile Include="Options.wxs" />
+    <Compile Include="PrerequisitesDlg.wxs" />
+    <Compile Include="PrivacyStatementDlg.wxs" />
+    <Compile Include="Product.wxs" />
+    <Content Include="Releases\KoduSetup.exe" />
+    <Content Include="Releases\KoduSetup.msi" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PreBuild.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="excludes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Strings.en-us.wxl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images" />
+    <Folder Include="dependencies" />
+    <Folder Include="InnoLoc" />
+    <Folder Include="InnoLoc\Custom" />
+    <Folder Include="Releases" />
+    <Folder Include="Options" />
+    <Folder Include="Releases\Signed" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dependencies\dotNetFx40_Full_setup.exe" />
+    <Content Include="dependencies\dotNetFx40_Full_x86_x64.exe" />
+    <Content Include="dependencies\xnafx40_redist.msi" />
+    <Content Include="Images\InnoSideBanner100.bmp" />
+    <Content Include="Images\InnoSideBanner125.bmp" />
+    <Content Include="Images\InnoSideBanner150.bmp" />
+    <Content Include="Images\InnoSideBanner200.bmp" />
+    <Content Include="Images\InnoTopBanner100.bmp" />
+    <Content Include="Images\InnoTopBanner125.bmp" />
+    <Content Include="Images\InnoTopBanner150.bmp" />
+    <Content Include="Images\InnoTopBanner200.bmp" />
+    <Content Include="Images\SideBanner.bmp" />
+    <Content Include="Images\TopBanner.bmp" />
+    <Content Include="InnoLoc\Arabic.isl" />
+    <Content Include="InnoLoc\ChineseSimplified.isl" />
+    <Content Include="InnoLoc\ChineseTraditional.isl" />
+    <Content Include="InnoLoc\Custom\Dutch.isl" />
+    <Content Include="InnoLoc\Custom\English.isl" />
+    <Content Include="InnoLoc\Custom\French.isl" />
+    <Content Include="InnoLoc\Custom\German.isl" />
+    <Content Include="InnoLoc\Custom\Greek.isl" />
+    <Content Include="InnoLoc\Custom\Hungarian.isl" />
+    <Content Include="InnoLoc\Custom\Icelandic.isl" />
+    <Content Include="InnoLoc\Custom\Italian.isl" />
+    <Content Include="InnoLoc\Custom\Portuguese.isl" />
+    <Content Include="InnoLoc\Custom\Spanish.isl" />
+    <Content Include="InnoLoc\Hungarian.isl" />
+    <Content Include="InnoLoc\Icelandic.isl" />
+    <Content Include="InnoLoc\Korean.isl" />
+    <Content Include="InnoLoc\Lithuanian.isl" />
+    <Content Include="KoduInstaller.iss" />
+    <Content Include="Kodu_Game_Lab_EULA_and_Code_of_Conduct.rtf" />
+    <Content Include="Kodu_Game_Lab_Privacy_Statement.rtf" />
+    <Content Include="Options\1F2B5B79-6EB0-45c4-A8BD-0EBDF4EE10C3.opt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Options\C90D3C0E-D0B4-4aa6-B35D-0A1D9931FB38.opt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BokuSetupActions\BokuSetupActions.csproj">
+      <Name>BokuSetupActions</Name>
+      <Project>{81c87afe-eec8-415f-afd4-0829d39af3a4}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+  <PropertyGroup>
+    <BindInputPaths>.</BindInputPaths>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)PreBuild.cmd "$(SolutionDir)" "$(SolutionName)" "$(OutDir)" "$(ConfigurationName)" "$(ProjectDir)"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if DEFINED INNO_SETUP_LOCATION (
+	"%25INNO_SETUP_LOCATION%25\iscc.exe" "$(ProjectDir)KoduInstaller.iss"
+) else (
+	if exist "%25programfiles(x86)%25\Inno Setup 5\iscc.exe" (
+		"%25programfiles(x86)%25\Inno Setup 5\iscc.exe" "$(ProjectDir)KoduInstaller.iss"
+	) else (
+		echo Can%27t find INNO_SETUP_LOCATION enviroment variable.
+	)
+)
+start "Installer Output" "$(TargetDir)en-us\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

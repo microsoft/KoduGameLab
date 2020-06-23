@@ -1,0 +1,1000 @@
+﻿<Tiles>
+  <sensor>
+    <gamepad label="stýri">Bregðast við aðgerðum frá áhöldum leikjastýris, þ.e. hnöppum, gikkjum eða pinnum. Gerir mögulegt að tiltekinn spilari stýri tilteknum hlut.</gamepad>
+    <keyboard label="lyklaborð">Bregðast við tilteknum lykli eða lyklum lyklaborðs.</keyboard>
+    <mouse label="mús">Bregðast við inntaki frá mús.</mouse>
+    <touch label="snerta">Bregðast við snertingu.</touch>
+    <eyes label="sjá">Bregðast við því að sjá hlut, skilgreint ef vill út frá gerð og lit hlutar. Hæðir og veggir geta hindrað sjón ef sjónlínusían (SLSÍA) er notuð.</eyes>
+    <ears label="heyra">Bregðast við því að heyra í hlut, skilgreint ef vill út frá gerð og tegund hljóðs. Heyrn virkar í gegnum veggi.</ears>
+    <bumpers label="rekst á">Bregðast við því að rekast á hlut, skilgreint ef vill út frá gerð hlutar, lit, o.fl.</bumpers>
+    <timer label="tími">Bregðast við fjölda sekúndna sem líða. Notaðu fleiri tölur til að fá tiltekinn tíma.</timer>
+    <got label="taka">Bregðast við því að taka upp hlut, skilgreint ef vill út frá gerð hlutar, lit, o.fl.</got>
+    <scored label="skor">Bregðast við breytingum á skori.</scored>
+    <health label="heilsa">Bregðast við breytingum á heilsu.</health>
+    <missilehit label="hæfir">Bregðast við því að skot hæfi markhlut. Gagnlegt fyrir stigatalningu, en er líka notað til að hafa áhrif á markið.</missilehit>
+    <held label="haldið af">Bregðast við því að vera tekinn upp af öðrum hlut.</held>
+    <terrain label="á landi">Bregðast við mismunandi gerðum lands.</terrain>
+    <water label="á vatni">Bregðast við mismunandi gerðum vatns.</water>
+    <beamed label="geisli">Bregðast við því að leysigeisla var beint að Mars steintegund.</beamed>
+    <inspected  label="skoðun">Bregðast við því að Mars steintegund hefur verið skoðuð.</inspected>
+    <scanned label="skönnun">Bregðast við því að óþekkt steintegund hefur verið skönnuð til að greina hana.</scanned>
+    <endofpath  label="endi slóðar">Bregðast við því að hafa náð enda slóðar</endofpath>
+    <always label="alltaf">Endurtaka valda aðgerð aftur og aftur.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Kodu er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</boku>
+    <bokubot label="kodu">Kodu er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</bokubot>
+    <anything label="eitthvað" />
+    <me label="mig" />
+    <said label="sagði">Hlusta eftir að annar hlutur segi eitthvað. Skrifaðu það sem á að hlusta eftir.</said>
+    <countnone label="ekkert">Bregðast við ef ekkert sést sem passar við lýsinguna.Til dæmis, Sjá - Blátt - Ekkert mun bregðast við ef ekkert blátt er sýnilegt.</countnone>
+    <starfish label="krossfiskur">Bregðast við krossfiski.</starfish>
+    <clam label="skel">Bregðast við skel.</clam>
+    <seagrass label="sægras">Bregðast við sægrasi.</seagrass>
+    <seagrasssingle label="sægras">Bregðast við sægrasi.</seagrasssingle>
+    <lilypad label="vatnaliljur">Bregðast við vatnaliljum.</lilypad>
+    <lilypadsingle label="vatnalilja">Bregðast við vatnalilju.</lilypadsingle>
+    <flyfish label="flugfiskur">Flugfiskur er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</flyfish>
+    <jet label="þota">Þota er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</jet>
+    <light label="ljós">Ljós er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun. Það lýsir líka upp aðra hluti. En þú getur aðeins haft fjögur.</light>
+    <fan label="vifta">Bregðast við viftu.</fan>
+    <octopus label="kolkrabbi">Bregðast við kolkrabba.</octopus>
+    <fastbot label="hjól">Hjól er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</fastbot>
+    <saucer label="diskur">Því miður eru allar upplýsingar um diskinn algjört leyndarmál.</saucer>
+    <windblimp label="vindbelgur">Vindbelgur er fljúgandi hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</windblimp>
+    <balloonbot label="loftbelgur">Loftbelgur er svífandi hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</balloonbot>
+    <subbot label="kafbátur">Kafbátur er neðansjávarhlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</subbot>
+    <terracannon label="fallbyssa">Fallbyssa er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</terracannon>
+    <puck label="pukkur">Pukkur er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</puck>
+    <wisp label="hnoðri">Hnoðri er hlutur sem þú getur bætt í leiki og er með forritanlega hegðun.</wisp>
+    <anybot label="bóti">Leita að einhverskonar bóta.</anybot>
+    <turtle label="skjaldbaka">Bregðast við skjaldböku.</turtle>
+    <rover label="jeppi">Bregðast við jeppa.</rover>
+    <pushpad label="hnappur">Bregðast við hnappi.</pushpad>
+    <sputnik label="gervitungl">Bregðast við gervitungli.</sputnik>
+    <stick label="pinni">Bregðast við pinna.</stick>
+    <stickboy label="pinni">Bregðast við pinna.</stickboy>
+    <drum label="tromma">Bregðast við trommu.</drum>
+    <mine label="sprengja">Bregðast við sprengju.</mine>
+    <cloud label="ský">Bregðast við skýi.</cloud>
+    <swimfish label="fiskur">Bregðast við fiski.</swimfish>
+    <floatbot label="skip">Bregðast við skipi.</floatbot>
+    <factory label="smiðja">Bregðast við smiðju.</factory>
+    <hut label="kofi">Bregðast við kofa.</hut>
+    <castle label="kastali">Bregðast við kastala.</castle>
+    <fruit label="epli">Bregðast við epli.</fruit>
+    <inkjet label="blekský">Bregðast við blekskýi.</inkjet>
+    <iceberg label="ísjaki">Bregðast við ísjaka.</iceberg>
+    <rock label="steinn">Bregðast við steini.</rock>
+    <rockLowValue label="Hraunsteinn">Bregðast við hraunsteini.</rockLowValue>
+    <rockHighValue label="Setlagssteinn">Bregðast við setlagssteini.</rockHighValue>
+    <rockLowValueUnknown label="Óþekktur steinn">Hraunsteinn sem er óþekktur þar til hann hefur verið skannaður, upplýstur eða skoðaður.</rockLowValueUnknown>
+    <rockHighValueUnknown label="Óþekktur steinn">Setlagssteinn sem er óþekktur þar til hann hefur verið skannaður, upplýstur eða skoðaður.</rockHighValueUnknown>
+    <rockUnknown label="Óþekktur steinn">Bregðast við óþekktum steini.</rockUnknown>
+    <tree label="tré">Bregðast við tré.</tree>
+    <pipe label="rör">Bregðast við röri.</pipe>
+    <pipeStraight label="beint rör">Bregðast við beinu röri.</pipeStraight>
+    <pipeCross label="krossrör">Bregðast við krossröri.</pipeCross>
+    <pipeCorner label="hornrör">Bregðast við hornröri.</pipeCorner>
+    <underwater label="neðansjávar">Bregðast við neðansjávarhlutum.</underwater>
+    <building label="bygging">Bregðast við byggingu.</building>
+    <flower label="blóm" />
+    <gate label="hlið" />
+    <cursor label="bendill">Bregðast við bendli.</cursor>
+    <star label="stjarna">Bregðast við stjörnu.</star>
+    <coin label="peningur">Bregðast við peningi.</coin>
+    <soccerball label="bolti">Bregðast við bolta.</soccerball>
+    <heart label="hjarta">Bregðast við hjarta.</heart>
+    <bullet label="skeyti">Bregðast við skeyti.</bullet>
+    <Black label="svart">Bregðast við einhverju svörtu.</Black>
+    <Grey label="grátt">Bregðast við einhverju gráu.</Grey>
+    <white label="hvítt">Bregðast við einhverju hvítu.</white>
+    <red label="rautt">Bregðast við einhverju rauðu.</red>
+    <orange label="appelsín">Bregðast við einhverju appelsínugulu.</orange>
+    <yellow label="gult">Bregðast við einhverju gulu.</yellow>
+    <green label="grænt">Bregðast við einhverju grænu.</green>
+    <blue label="blátt">Bregðast við einhverju bláu.</blue>
+    <purple label="fjólublátt">Bregðast við einhverju fjólubláu.</purple>
+    <pink label="bleikt">Bregðast við einhverju bleiku.</pink>
+    <brown label="brúnt">Bregðast við einhverju brúnu.</brown>
+    <PathBlack label="svört slóð">Bregðast við svartri slóð.</PathBlack>
+    <PathGrey label="grá slóð">Bregðast við grárri slóð.</PathGrey>
+    <PathWhite label="hvít slóð">Bregðast við hvítri slóð.</PathWhite>
+    <PathRed label="rauð slóð">Bregðast við rauðri slóð.</PathRed>
+    <PathOrange label="appelsínugul slóð">Bregðast við appelsínugulri slóð.</PathOrange>
+    <PathYellow label="gul slóð">Bregðast við gulri slóð.</PathYellow>
+    <PathGreen label="græn slóð">Bregðast við grænni slóð.</PathGreen>
+    <PathBlue label="blá slóð">Bregðast við blárri slóð.</PathBlue>
+    <PathPurple label="fjólublá slóð">Bregðast við fjólublárri slóð.</PathPurple>
+    <PathPink label="bleik slóð">Bregðast við bleikri slóð.</PathPink>
+    <PathBrown label="brún slóð">Bregðast við brúnni slóð.</PathBrown>
+    <pathplain label="venjuleg" />
+    <pathroad label="vegur" />
+    <pathwall label="veggur" />
+    <pathflora label="gróður" />
+    <yucca1 label="tré" />
+    <yucca2 label="tré" />
+    <yucca3 label="tré" />
+    <bigyucca1 label="tré" />
+    <expresshappy label="glatt">Bregðast við glöðum bóta.</expresshappy>
+    <expresssad label="dapurt">Bregðast við döprum bóta.</expresssad>
+    <expressangry label="REITT">Bregðast við reiðum bóta.</expressangry>
+    <expresscrazy label="rUgLAð">Bregðast við rugluðum bóta.</expresscrazy>
+    <expresshearts label="hjörtu">Bregðast við bóta sem sýnir hjörtu.</expresshearts>
+    <expressflowers label="blóm">Bregðast við bóta sem sýnir blóm.</expressflowers>
+    <expressstars label="stjörnur">Bregðast við bóta sem sýnir stjörnur.</expressstars>
+    <expressswear label="orðljótt">Bregðast við orðljótum bóta.</expressswear>
+    <expressnormal label="eðlilegt">Bregðast við bóta sem hegðar sér bara eðlilega.</expressnormal>
+    <expressnone label="ekkert">Bregðast við bóta með ekkert sérstakt viðmót.</expressnone>
+    <moving label="hreyfist">Bregðast við bóta en aðeins ef hann hreyfist.</moving>
+    <camouflage label="felulitaður">Bregðast við bóta en aðeins ef hann er felulitaður.</camouflage>
+    <closeby label="nálægt">Bregðast aðeins við nálægum hlutum.  Hunsa fjarlæga hluti.</closeby>
+    <faraway label="fjarlægt">Bregðast aðeins við hlutum sem eru fjarlægir.</faraway>
+
+    <infront label="framan við">Bregðast aðeins við hlutum sem er framan við.</infront>
+    <behind label="aftan við">Bregðast aðeins við hlutum sem eru aftan við.</behind>
+    <toleft label="til vinstri">Bregðast aðeins við hlutum til vinstri.</toleft>
+    <toright label="til hægri">Bregðast aðeins við hlutum til hægri.</toright>
+    <over label="ofar">Bregðast aðeins við hlutum sem eru ofar.</over>
+    <under label="neðar">Bregðast aðeins við hlutum sem eru neðar.</under>
+
+    <lineofsight label="SLSÍA">Nemi fyrir að yfirborð og veggir skyggi á.</lineofsight>
+
+    <countfew label="fáir">Bregðast við þegar fáir hlutir sjást.</countfew>
+    <countmany label="margir">Bregðast aðeins við þegar margir hlutir sjást.</countmany>
+    <clustermany label="klasi">Bregðast við en aðeins ef sjást margir eins hlutir sem eru þétt saman í klasa.</clustermany>
+    <countany label="einhverjir" />
+    <leftstick label="V pinni">Bregðast við vinstri stýripinna. Ágætt fyrir hreyfingar.</leftstick>
+    <rightstick label="H pinni">Bregðast við hægri stýripinna. Ágætt fyrir skot.</rightstick>
+    <abutton label="A hnappur">Bregðast við A hnappi á stýri.</abutton>
+    <bbutton label="B hnappur">Bregðast við B hnappi á stýri.</bbutton>
+    <xbutton label="X hnappur">Bregðast við X hnappi á stýri.</xbutton>
+    <ybutton label="Y hnappur">Bregðast við Y hnappi á stýri.</ybutton>
+    <lefttrigger label="v gikkur">Bregðast við vinstri gikki á stýri.</lefttrigger>
+    <righttrigger label="h gikkur">Bregðast við hægri gikki á stýri.</righttrigger>
+    <lefttrigger_analog label="v gikkur">Bregðast við vinstri gikki á stýri.</lefttrigger_analog>
+    <righttrigger_analog label="h gikkur">Bregðast við hægri gikki á stýri.</righttrigger_analog>
+    <mouse>
+      <button>
+        <left label="vinstri">Bregðast við vinstri músarhnappi.</left>
+        <right label="hægri">Bregðast við hægri músarhnappi.</right>
+      </button>
+      <hover label="yfir">Bregðast við músarbendli yfir hlut eða yfirborði.</hover>
+      <move label="hreyfa">Bregðast við hreyfingu músar.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="snerting">Bregðast við virkri snertibendingu (gesture).</touching>
+        <tap label="slá">Bregðast við snertibendingunni slá (tap).</tap>
+        <rotate label="snúa">Bregðast við snertibendingunni snúa (rotate).</rotate>
+        <swipe label="sópa">Bregðast við snertibendingunni sópa (swipe).</swipe>
+        <slide label="strjúka">Bregðast við snertibendingunni strjúka (slide).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="hvítt">Bregðast við HVÍTA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</White>
+        <Black label="svart">Bregðast við SVARTA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Black>
+        <Grey label="grátt">Bregðast við GRÁA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Grey>
+        <Red label="rautt">Bregðast við RAUÐA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Red>
+        <Green label="grænt">Bregðast við GRÆNA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Green>
+        <Blue label="blátt">Bregðast við BLÁA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Blue>
+        <Orange label="appelsínugult">Bregðast við APPELSÍNUGULA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Orange>
+        <Yellow label="gult">Bregðast við GULA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Yellow>
+        <Purple label="fjólublátt">Bregðast við FJÓLUBLÁA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Purple>
+        <Pink label="bleikt">Bregðast við BLEIKA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Pink>
+        <Brown label="brúnt">Bregðast við BRÚNA hnappnum á mælaskjánum. (Farðu í stillingar heims til að breyta)</Brown>
+      </guiButton>
+
+      <!-- Virtual Controller -->
+      <controllerButton_X label="X hnappur">Bregðast við snertingu á X hnapp sýndarstýris á skjá.</controllerButton_X>
+      <controllerButton_Y label="Y hnappur">Bregðast við snertingu á Y hnapp sýndarstýris á skjá.</controllerButton_Y>
+      <controllerButton_A label="A hnappur">Bregðast við snertingu á A hnapp sýndarstýris á skjá.</controllerButton_A>
+      <controllerButton_B label="B hnappur">Bregðast við snertingu á B hnapp sýndarstýris á skjá.</controllerButton_B>
+
+    </touch>
+
+    <ArrowKeys label="Örvar">Bregðast við örvarlyklunum á lyklaborðinu.</ArrowKeys>
+    <WASDKeys label="WASD">Bregðast við WASD lyklunum á lyklaborðinu.</WASDKeys>
+    <Akey label="A">Bregðast við A lyklinum á lyklaborðinu.</Akey>
+    <Bkey label="B">Bregðast við B lyklinum á lyklaborðinu.</Bkey>
+    <Ckey label="C">Bregðast við C lyklinum á lyklaborðinu.</Ckey>
+    <Dkey label="D">Bregðast við D lyklinum á lyklaborðinu.</Dkey>
+    <Ekey label="E">Bregðast við E lyklinum á lyklaborðinu.</Ekey>
+    <Fkey label="F">Bregðast við F lyklinum á lyklaborðinu.</Fkey>
+    <Gkey label="G">Bregðast við G lyklinum á lyklaborðinu.</Gkey>
+    <Hkey label="H">Bregðast við H lyklinum á lyklaborðinu.</Hkey>
+    <Ikey label="I">Bregðast við I lyklinum á lyklaborðinu.</Ikey>
+    <Jkey label="J">Bregðast við J lyklinum á lyklaborðinu.</Jkey>
+    <Kkey label="K">Bregðast við K lyklinum á lyklaborðinu.</Kkey>
+    <Lkey label="L">Bregðast við L lyklinum á lyklaborðinu.</Lkey>
+    <Mkey label="M">Bregðast við M lyklinum á lyklaborðinu.</Mkey>
+    <Nkey label="N">Bregðast við N lyklinum á lyklaborðinu.</Nkey>
+    <Okey label="O">Bregðast við O lyklinum á lyklaborðinu.</Okey>
+    <Pkey label="P">Bregðast við P lyklinum á lyklaborðinu.</Pkey>
+    <Qkey label="Q">Bregðast við Q lyklinum á lyklaborðinu.</Qkey>
+    <Rkey label="R">Bregðast við R lyklinum á lyklaborðinu.</Rkey>
+    <Skey label="S">Bregðast við S lyklinum á lyklaborðinu.</Skey>
+    <Tkey label="T">Bregðast við T lyklinum á lyklaborðinu.</Tkey>
+    <Ukey label="U">Bregðast við U lyklinum á lyklaborðinu.</Ukey>
+    <Vkey label="V">Bregðast við V lyklinum á lyklaborðinu.</Vkey>
+    <Wkey label="W">Bregðast við W lyklinum á lyklaborðinu.</Wkey>
+    <Xkey label="X">Bregðast við X lyklinum á lyklaborðinu.</Xkey>
+    <Ykey label="Y">Bregðast við Y lyklinum á lyklaborðinu.</Ykey>
+    <Zkey label="Z">Bregðast við Z lyklinum á lyklaborðinu.</Zkey>
+    <D0key label="0">Bregðast við 0 lyklinum á lyklaborðinu.</D0key>
+    <D1key label="1">Bregðast við 1 lyklinum á lyklaborðinu.</D1key>
+    <D2key label="2">Bregðast við 2 lyklinum á lyklaborðinu.</D2key>
+    <D3key label="3">Bregðast við 3 lyklinum á lyklaborðinu.</D3key>
+    <D4key label="4">Bregðast við 4 lyklinum á lyklaborðinu.</D4key>
+    <D5key label="5">Bregðast við 5 lyklinum á lyklaborðinu.</D5key>
+    <D6key label="6">Bregðast við 6 lyklinum á lyklaborðinu.</D6key>
+    <D7key label="7">Bregðast við 7 lyklinum á lyklaborðinu.</D7key>
+    <D8key label="8">Bregðast við 8 lyklinum á lyklaborðinu.</D8key>
+    <D9key label="9">Bregðast við 9 lyklinum á lyklaborðinu.</D9key>
+    <Spacekey label="bilslá">Bregðast við bilslánni á lyklaborðinu.</Spacekey>
+    <PageUpkey label="PageUp">Bregðast við PageUp lyklinum á lyklaborðinu.</PageUpkey>
+    <PageDownkey label="PageDown">Bregðast við PageDown lyklinum á lyklaborðinu.</PageDownkey>
+    <Endkey label="End">Bregðast við End lyklinum á lyklaborðinu.</Endkey>
+    <Leftkey label="Vinstri">Bregðast við vinstri-ör lyklinum á lyklaborðinu.</Leftkey>
+    <Upkey label="Upp">Bregðast við upp-ör lyklinum á lyklaborðinu.</Upkey>
+    <Rightkey label="Hægri">Bregðast við hægri-ör lyklinum á lyklaborðinu.</Rightkey>
+    <Downkey label="Niður">Bregðast við niður-ör lyklinum á lyklaborðinu.</Downkey>
+    <Insertkey label="Insert">Bregðast við Insert lyklinum á lyklaborðinu.</Insertkey>
+    <Deletekey label="Delete">Bregðast við Delete lyklinum á lyklaborðinu.</Deletekey>
+    <LeftWindowskey label="V Win">Bregðast við vinstri Windows lyklinum á lyklaborðinu.</LeftWindowskey>
+    <RightWindowskey label="H Win">Bregðast við hægri Windows lyklinum á lyklaborðinu.</RightWindowskey>
+    <Multiplykey label="*">Bregðast við * lyklinum á talnaborðinu.</Multiplykey>
+    <Addkey label="+">Bregðast við + lyklinum á talnaborðinu.</Addkey>
+    <Subtractkey label="-">Bregðast við - lyklinum á talnaborðinu.</Subtractkey>
+    <Decimalkey label=".">Bregðast við , lyklinum á talnaborðinu.</Decimalkey>
+    <Dividekey label="/">Bregðast við / lyklinum á talnaborðinu.</Dividekey>
+    <LeftShiftkey label="V Shift">Bregðast við vinstri Shift lyklinum á lyklaborðinu.</LeftShiftkey>
+    <RightShiftkey label="H Shift">Bregðast við hægri Shift lyklinum á lyklaborðinu.</RightShiftkey>
+    <LeftControlkey label="V Control">Bregðast við vinstri Control lyklinum á lyklaborðinu.</LeftControlkey>
+    <RightControlkey label="H Control">Bregðast við hægri Control lyklinum á lyklaborðinu.</RightControlkey>
+    <LeftAltkey label="V Alt">Bregðast við vinstri Alt lyklinum á lyklaborðinu.</LeftAltkey>
+    <RightAltkey label="AltGr">Bregðast við AltGr lyklinum á lyklaborðinu.</RightAltkey>
+    <OemSemicolonkey label=";">Bregðast við ; lyklinum á lyklaborðinu.</OemSemicolonkey>
+    <OemPluskey label="+">Bregðast við + lyklinum á lyklaborðinu.</OemPluskey>
+    <OemCommakey label=",">Bregðast við , lyklinum á lyklaborðinu.</OemCommakey>
+    <OemMinuskey label="-">Bregðast við - lyklinum á lyklaborðinu.</OemMinuskey>
+    <OemPeriodkey label=".">Bregðast við . lyklinum á lyklaborðinu.</OemPeriodkey>
+    <OemQuestionkey label="?">Bregðast við ? lyklinum á lyklaborðinu.</OemQuestionkey>
+    <OemTildekey label="~">Bregðast við ~ lyklinum á lyklaborðinu.</OemTildekey>
+    <OemOpenBracketskey label="[">Bregðast við [ lyklinum á lyklaborðinu.</OemOpenBracketskey>
+    <OemPipekey label="|">Bregðast við | lyklinum á lyklaborðinu.</OemPipekey>
+    <OemCloseBracketskey label="]">Bregðast við ] lyklinum á lyklaborðinu.</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">Bregðast við " lyklinum á lyklaborðinu.</OemQuoteskey>
+    <OemBackslashkey label="\">Bregðast við \ lyklinum á lyklaborðinu.</OemBackslashkey>
+    <F1key label="F1">Bregðast við F1 lyklinum á lyklaborðinu.</F1key>
+    <F2key label="F2">Bregðast við F2 lyklinum á lyklaborðinu.</F2key>
+    <F3key label="F3">Bregðast við F3 lyklinum á lyklaborðinu.</F3key>
+    <F4key label="F4">Bregðast við F4 lyklinum á lyklaborðinu.</F4key>
+    <F5key label="F5">Bregðast við F5 lyklinum á lyklaborðinu.</F5key>
+    <F6key label="F6">Bregðast við F6 lyklinum á lyklaborðinu.</F6key>
+    <F7key label="F7">Bregðast við F7 lyklinum á lyklaborðinu.</F7key>
+    <F8key label="F8">Bregðast við F8 lyklinum á lyklaborðinu.</F8key>
+    <F9key label="F9">Bregðast við F9 lyklinum á lyklaborðinu.</F9key>
+    <F10key label="F10">Bregðast við F10 lyklinum á lyklaborðinu.</F10key>
+    <F11key label="F11">Bregðast við F11 lyklinum á lyklaborðinu.</F11key>
+    <F12key label="F12">Bregðast við F12 lyklinum á lyklaborðinu.</F12key>
+    <Shiftkey label="Shift">Bregðast við Shift lykli á lyklaborðinu.</Shiftkey>
+    <Controlkey label="Control">Bregðast við Control lykli á lyklaborðinu.</Controlkey>
+    <Altkey label="Alt">Bregðast við Alt lykli á lyklaborðinu.</Altkey>
+    <Windowskey label="Windows">Bregðast við Windows lykli á lyklaborðinu.</Windowskey>
+    <player1 label="spilari 1">Bregðast aðeins við stýri Spilara 1. Sjálfgefið er brugðist við öllum.</player1>
+    <player2 label="spilari 2">Bregðast aðeins við stýri Spilara 2. Sjálfgefið er brugðist við öllum.</player2>
+    <player3 label="spilari 3">Bregðast aðeins við stýri Spilara 3. Sjálfgefið er brugðist við öllum.</player3>
+    <player4 label="spilari 4">Bregðast aðeins við stýri Spilara 4. Sjálfgefið er brugðist við öllum.</player4>
+    <terrain label="gerð">Bregðast við tiltekinni gerð lands.</terrain>
+    <water label="gerð">Bregðast við tiltekinni gerð vatns.</water>
+    <quartersecond label="sekúnda">1/4 úr sekúndu. Notaðu fleiri saman til að fá tiltekinn tíma.</quartersecond>
+    <_01second label="sekúnda">1 sekúnda. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_01second>
+    <_02seconds label="sekúndur">2 sekúndur. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_02seconds>
+    <_03seconds label="sekúndur">3 sekúndur. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_03seconds>
+    <_04seconds label="sekúndur">4 sekúndur. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_04seconds>
+    <_05seconds label="sekúndur">5 sekúndur. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_05seconds>
+    <_10seconds label="sekúndur">10 sekúndur. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_10seconds>
+    <_20seconds label="sekúndur">20 sekúndur. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_20seconds>
+    <_30seconds label="sekúndur">30 sekúndur. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_30seconds>
+    <_60seconds label="sekúndur">60 sekúndur. Notaðu fleiri en eina flögu til að fá tiltekinn tíma samanlagt.</_60seconds>
+    <_000point label="stig">0 stig.</_000point>
+    <_001point label="stig">1 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_001point>
+    <_002points label="stig">2 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_002points>
+    <_003points label="stig">3 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_003points>
+    <_004points label="stig">4 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_004points>
+    <_005points label="stig">5 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_005points>
+    <_010points label="stig">10 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_010points>
+    <_020points label="stig">20 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_020points>
+    <_050points label="stig">50 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_050points>
+    <_100points label="stig">100 stig. Notaðu fleiri en eina flögu til að fá hærri tölu samanlagt.</_100points>
+    <random label="slembi">Búa til slembitölu með talnaflögum. T.d. býr Random - 5 til slembitölu á milli 0 og 5.</random>
+    <scorebucket>
+      <color>
+        <white label="hvítt">Athugar hvít skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</white>
+        <black label="svart">Athugar svört skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</black>
+        <grey label="grátt">Athugar grá skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</grey>
+        <red label="rautt">Athugar rauð skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</red>
+        <green label="grænt">Athugar græn skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</green>
+        <blue label="blátt">Athugar blá skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</blue>
+        <orange label="appelsínugult">Athugar appelsínugul skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</orange>
+        <yellow label="gult">Athugar gul skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</yellow>
+        <purple label="fjólublátt">Athugar fjólublá skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</purple>
+        <pink label="bleikt">Athugar bleik skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</pink>
+        <brown label="brúnt">Athugar brún skor, sem eru sjálfgefið sýnd á stigatöflunni. (Farðu í stillingar heims til að breyta.)</brown>
+      </color>
+      <letter>
+        <a label="skor A">Athugar 'A' skorið, sem aldrei er sýnt á stigatöflunni.</a>
+        <b label="skor B">Athugar 'B' skorið, sem aldrei er sýnt á stigatöflunni.</b>
+        <c label="skor C">Athugar 'C' skorið, sem aldrei er sýnt á stigatöflunni.</c>
+        <d label="skor D">Athugar 'D' skorið, sem aldrei er sýnt á stigatöflunni.</d>
+        <e label="skor E">Athugar 'E' skorið, sem aldrei er sýnt á stigatöflunni.</e>
+        <f label="skor F">Athugar 'F' skorið, sem aldrei er sýnt á stigatöflunni.</f>
+        <g label="skor G">Athugar 'G' skorið, sem aldrei er sýnt á stigatöflunni.</g>
+        <h label="skor H">Athugar 'H' skorið, sem aldrei er sýnt á stigatöflunni.</h>
+        <i label="skor I">Athugar 'I' skorið, sem aldrei er sýnt á stigatöflunni.</i>
+        <j label="skor J">Athugar 'J' skorið, sem aldrei er sýnt á stigatöflunni.</j>
+        <k label="skor K">Athugar 'K' skorið, sem aldrei er sýnt á stigatöflunni.</k>
+        <l label="skor L">Athugar 'L' skorið, sem aldrei er sýnt á stigatöflunni.</l>
+        <m label="skor M">Athugar 'M' skorið, sem aldrei er sýnt á stigatöflunni.</m>
+        <n label="skor N">Athugar 'N' skorið, sem aldrei er sýnt á stigatöflunni.</n>
+        <o label="skor O">Athugar 'O' skorið, sem aldrei er sýnt á stigatöflunni.</o>
+        <p label="skor P">Athugar 'P' skorið, sem aldrei er sýnt á stigatöflunni.</p>
+        <q label="skor Q">Athugar 'Q' skorið, sem aldrei er sýnt á stigatöflunni.</q>
+        <r label="skor R">Athugar 'R' skorið, sem aldrei er sýnt á stigatöflunni.</r>
+        <s label="skor S">Athugar 'S' skorið, sem aldrei er sýnt á stigatöflunni.</s>
+        <t label="skor T">Athugar 'T' skorið, sem aldrei er sýnt á stigatöflunni.</t>
+        <u label="skor U">Athugar 'U' skorið, sem aldrei er sýnt á stigatöflunni.</u>
+        <v label="skor V">Athugar 'V' skorið, sem aldrei er sýnt á stigatöflunni.</v>
+        <w label="skor W">Athugar 'W' skorið, sem aldrei er sýnt á stigatöflunni.</w>
+        <x label="skor X">Athugar 'X' skorið, sem aldrei er sýnt á stigatöflunni.</x>
+        <y label="skor Y">Athugar 'Y' skorið, sem aldrei er sýnt á stigatöflunni.</y>
+        <z label="skor Z">Athugar 'Z' skorið, sem aldrei er sýnt á stigatöflunni.</z>
+      </letter>
+      <local>
+        <a label="skor a">The 'a' score, which is private to this character.</a>
+        <b label="skor b">The 'b' score, which is private to this character.</b>
+        <c label="skor c">The 'c' score, which is private to this character.</c>
+        <d label="skor d">The 'd' score, which is private to this character.</d>
+        <e label="skor e">The 'e' score, which is private to this character.</e>
+        <f label="skor f">The 'f' score, which is private to this character.</f>
+        <g label="skor g">The 'g' score, which is private to this character.</g>
+        <h label="skor h">The 'h' score, which is private to this character.</h>
+        <i label="skor i">The 'i' score, which is private to this character.</i>
+        <j label="skor j">The 'j' score, which is private to this character.</j>
+        <k label="skor k">The 'k' score, which is private to this character.</k>
+        <l label="skor l">The 'l' score, which is private to this character.</l>
+        <m label="skor m">The 'm' score, which is private to this character.</m>
+        <n label="skor n">The 'n' score, which is private to this character.</n>
+        <o label="skor o">The 'o' score, which is private to this character.</o>
+        <p label="skor p">The 'p' score, which is private to this character.</p>
+        <q label="skor q">The 'q' score, which is private to this character.</q>
+        <r label="skor r">The 'r' score, which is private to this character.</r>
+        <s label="skor s">The 's' score, which is private to this character.</s>
+        <t label="skor t">The 't' score, which is private to this character.</t>
+        <u label="skor u">The 'u' score, which is private to this character.</u>
+        <v label="skor v">The 'v' score, which is private to this character.</v>
+        <w label="skor w">The 'w' score, which is private to this character.</w>
+        <x label="skor x">The 'x' score, which is private to this character.</x>
+        <y label="skor y">The 'y' score, which is private to this character.</y>
+        <z label="skor z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="kveikja" />
+    <timertrigger label="kveikja" />
+    <scoreis label="er" />
+    <scoreequals label="jafnt">Bregðast við þegar skor er jafnt tiltekinni tölu.</scoreequals>
+    <scorenotequals label="ójafnt">Bregðast við þegar skor er ekki jafnt tiltekinni tölu.</scorenotequals>
+    <scoreabove label="yfir">Bregðast við þegar stigin fara upp fyrir vissa tölu.</scoreabove>
+    <scorebelow label="undir">Bregðast við þegar stigin fara niður fyrir vissa tölu.</scorebelow>
+    <scoregteq label="&gt;=">Bregðast við þegar skor er jafnt og eða hærra en tiltekin tala.</scoregteq>
+    <scorelteq label="&lt;=">Bregðast við þegar skor er jafnt og eða lægra en tiltekin tala.</scorelteq>
+    <healthis label="er" />
+    <healthabove label="yfir">Bregðast við þegar heilsan fer upp fyrir vissa tölu.</healthabove>
+    <healthbelow label="undir">Bregðast við þegar heilsan fer niður fyrir vissa tölu.</healthbelow>
+    <direction>
+      <up label="upp">Bregðast við þegar leikjapinna er ýtt upp.</up>
+      <right label="hægri">Bregðast við þegar leikjapinna er ýtt til hægri.</right>
+      <down label="niður">Bregðast við þegar leikjapinna er ýtt niður.</down>
+      <left label="vinstri">Bregðast við þegar leikjapinna er ýtt til vinstri.</left>
+      <clockwise label="hægri">Bregðast við snertibendingu sem snýr réttsælis.</clockwise>
+      <counterclockwise label="vinstri">Bregðast við snertibendingu sem snýr rangsælis.</counterclockwise>
+    </direction>
+    <not label="ekki">Bregðast við þegar WHEN skilyrðið er ekki uppfyllt.</not>
+  </filter>
+  <selector>
+    <closest label="nálægast" />
+    <objectrelative label="afstætt" />
+    <towardclosest label="til">Hreyfa sig í átt að því sem brugðist er við.</towardclosest>
+    <awayfromall label="frá">Hreyfa sig frá því sem brugðist er við.</awayfromall>
+    <avoidall label="forðast">Forðast það sem brugðist er við með því að halda sig í vissri fjarlægð.</avoidall>
+    <wander label="ráfa">Ráfa um með því að velja stefnu af handahófi. Gagnlegt sem síðasta lína í forriti svo að hlutur hreyfi sig þó hann sé ekki að gera neitt sérstakt.</wander>
+    <cruise label="beint">Hreyfa sig í þá átt sem horft er.</cruise>
+    <circle label="hringur" />
+    <spin label="snúast">Hringsnúast á staðnum.</spin>
+    <forward label="áfram" />
+    <hiddenturn label="snúa" />
+    <escape label="snúa frá" />
+    <followwaypoints label="á slóð">Hreyfast eftir slóð í vissum lit. Sjálfgefið er að hreyfast á hvaða slóð sem er.</followwaypoints>
+    <moveupdown label="upp/niður">Hreyfast upp og niður.</moveupdown>
+    <moveup label="upp">Hreyfast upp.</moveup>
+    <movedown label="niður">Hreyfast niður.</movedown>
+    <moveleftright label="snúa">Hreyfast til vinstri eða hægri.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="spilari 1" />
+      <_2 label="spilari 2" />
+      <_3 label="spilari 3" />
+      <_4 label="spilari 4" />
+    </player>
+    <reset>
+      <world label="heimur">Endurstillir leikinn, nema stigatöfluna.</world>
+      <score label="skor">Endurstillir stigatöfluna, eða einstakt skor ef litur er tiltekinn.</score>
+      <expression label="viðmót">Endurstillir viðmót hlutar.</expression>
+      <glow label="glóð">Endurstillir glóð hlutar.</glow>
+      <health label="heilsu">Endurstillir heilsu hlutar.</health>
+    </reset>
+    <projectile>
+      <blip label="kúlur">Kúluskot eru hríðskotavopn - léttari en flugskeyti.</blip>
+      <missile label="flugskeyti">Flugskeyti eru stór og ekki mjög fljót, en hafa vit á að þefa uppi skotmarkið!</missile>
+    </projectile>
+    <slowly label="hægt">Hreyfast hægar. Endurtaktu flöguna til að hreyfa enn hægar.</slowly>
+    <quickly label="hratt">Hreyfast hraðar. Endurtaktu flöguna til að hreyfa enn hraðar.</quickly>
+    <speednormally label="eðlilega">Hreyfast á eðlilegum hraða (sem er valinn í stillingum hlutar). </speednormally>
+    <weakly label="veikt">Gera þetta með minna afli en venjulega.</weakly>
+    <strongly label="sterkt">Gera þetta með meira afli en venjulega.</strongly>
+    <strengthnormally label="eðlilegt">Gera þetta með venjulegu afli (sem er valið í stillingum hlutar).</strengthnormally>
+    <angle>
+      <low label="lágt">Senda lægra en venjulega.</low>
+      <high label="hátt">Senda hærra en venjulega.</high>
+    </angle>
+    <turnleft label="vinstri" />
+    <turnright label="hægri" />
+    <turntoward label="í átt til" />
+    <turnforward label="áfram">Gefur til kynna að hreyfing skuli ekki ráða í hvaða átt er horft.</turnforward>
+    <pitchup label="upp" />
+    <pitchdown label="niður" />
+    <forward label="áfram">Í hvaða átt hluturinn horfir.</forward>
+    <north label="norður" />
+    <east label="austur" />
+    <south label="suður" />
+    <west label="vestur" />
+    <up label="upp" />
+    <down label="niður" />
+    <distance>
+      <near label="nær">Láta hlutinn hringsóla nær í kringum markhlutinn.</near>
+      <far label="fjær">Láta hlutinn hringsóla fjær í kringum markhlutinn.</far>
+    </distance>
+    <objecticeberg label="ísjaki">Búa til ísjaka.</objecticeberg>
+    <objectrock label="steinn">Búa til stein.</objectrock>
+    <objectrockLowValue label="steinn">Búa til hraunstein.</objectrockLowValue>
+    <objectrockHighValue label="steinn">Búa til setlagsstein.</objectrockHighValue>
+    <objectfruit label="epli">Búa til epli.</objectfruit>
+    <objectinkjet label="blekský">Búa til blekský.</objectinkjet>
+    <objectstar label="stjarna">Búa til stjörnu.</objectstar>
+    <objectcoin label="peningur">Búa til pening.</objectcoin>
+    <objectheart label="hjarta">Búa til hjarta.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="bolti">Búa til bolta.</objectsoccerball>
+    <objectbullet label="skeyti">Búa til skeyti.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="blað 1">Fara á blað 1.</taska>
+    <taskb label="blað 2">Fara á blað 2.</taskb>
+    <taskc label="blað 3">Fara á blað 3.</taskc>
+    <taskd label="blað 4">Fara á blað 4.</taskd>
+    <taske label="blað 5">Fara á blað 5.</taske>
+    <taskf label="blað 6">Fara á blað 6.</taskf>
+    <taskg label="blað 7">Fara á blað 7.</taskg>
+    <taskh label="blað 8">Fara á blað 8.</taskh>
+    <taski label="blað 9">Fara á blað 9.</taski>
+    <taskj label="blað 10">Fara á blað 10.</taskj>
+    <taskk label="blað 11">Fara á blað 11.</taskk>
+    <taskl label="blað 12">Fara á blað 12.</taskl>
+    <expresshappy label="gleði">Sýna gleði.</expresshappy>
+    <expresssad label="depurð">Sýna depurð.</expresssad>
+    <expressangry label="REIÐI">Sýna reiði.</expressangry>
+    <expresscrazy label="rUgL">Sýna rugl.</expresscrazy>
+    <expresshearts label="hjörtu">Sýna hjörtu.</expresshearts>
+    <expressflowers label="blóm">Sýna blóm.</expressflowers>
+    <expressstars label="stjörnur">Sýna stjörnur.</expressstars>
+    <expressswear label="bölv">Sýna teiknimyndablót.</expressswear>
+    <expressnone label="ekkert">Haga sér eðlilega og hætta að sýna nokkuð.</expressnone>
+    <_000point label="stig">0 stig.  Þú getur líka tiltekið lit.</_000point>
+    <_001point label="stig">1 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_001point>
+    <_002points label="stig">2 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_002points>
+    <_003points label="stig">3 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_003points>
+    <_004points label="stig">4 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_004points>
+    <_005points label="stig">5 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_005points>
+    <_010points label="stig">10 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_010points>
+    <_020points label="stig">20 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_020points>
+    <_050points label="stig">50 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_050points>
+    <_100points label="stig">100 stig.  Notaðu fleiri flögur til að fá summu þeirra. Þú getur líka tiltekið lit.</_100points>
+    <random label="slembi">Búa til slembitölu með talnaflögum. T.d. gefur Random - 5 slembitölu á milli 0 og 5.</random>
+    <teama label="lið A" />
+    <teamb label="lið B" />
+    <payloadzap label="vanka">Vankar markhlutinn í nokkrar sekúndur.</payloadzap>
+    <payloadpop label="rota">Svæfir markhlutinn þar til einhver annar endurstillir heilsu hans.</payloadpop>
+    <payloadboom label="búmm">Lætur markhlutinn hverfa með sprengingu.</payloadboom>
+    <payloadvanish label="eyða">Eyðir markhlutnum hljóðlega.</payloadvanish>
+    <black label="svart" />
+    <grey label="grátt" />
+    <white label="hvítt" />
+    <red label="rautt" />
+    <orange label="appelsín" />
+    <yellow label="gult" />
+    <green label="grænt" />
+    <blue label="blátt" />
+    <purple label="fjólublátt" />
+    <pink label="bleikt" />
+    <brown label="brúnt" />
+    <glowoff label="af">Slökkva á allri glóð.</glowoff>
+    <colorrandom label="slembi">Velja lit af handahófi.</colorrandom>
+    <path>
+      <black label="svart" />
+      <grey label="grátt" />
+      <white label="hvítt" />
+      <red label="rautt" />
+      <orange label="appelsín" />
+      <yellow label="gult" />
+      <green label="grænt" />
+      <blue label="blátt" />
+      <purple label="fjólublátt" />
+      <pink label="bleikt" />
+      <brown label="brúnt" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="hvítt">Breytir hvítu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</white>
+        <black label="svart">Breytir svörtu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</black>
+        <grey label="grátt">Breytir gráu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</grey>
+        <red label="rautt">Breytir rauðu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</red>
+        <green label="grænt">Breytir grænu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</green>
+        <blue label="blátt">Breytir bláu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</blue>
+        <orange label="appelsín">Breytir appelsínugulu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</orange>
+        <yellow label="gult">Breytir gulu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</yellow>
+        <purple label="fjólublátt">Breytir fjólubláu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</purple>
+        <pink label="bleikt">Breytir bleiku stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</pink>
+        <brown label="brúnt">Breytir brúnu stigunum, sem eru sjálfgefið sýnd á stigatöflunni. (Breytt í stillingum heims.)</brown>
+      </color>
+      <letter>
+        <a label="skor A">Breytir 'A' skorið, sem aldrei er sýnt á stigatöflunni.</a>
+        <b label="skor B">Breytir 'B' skorið, sem aldrei er sýnt á stigatöflunni.</b>
+        <c label="skor C">Breytir 'C' skorið, sem aldrei er sýnt á stigatöflunni.</c>
+        <d label="skor D">Breytir 'D' skorið, sem aldrei er sýnt á stigatöflunni.</d>
+        <e label="skor E">Breytir 'E' skorið, sem aldrei er sýnt á stigatöflunni.</e>
+        <f label="skor F">Breytir 'F' skorið, sem aldrei er sýnt á stigatöflunni.</f>
+        <g label="skor G">Breytir 'G' skorið, sem aldrei er sýnt á stigatöflunni.</g>
+        <h label="skor H">Breytir 'H' skorið, sem aldrei er sýnt á stigatöflunni.</h>
+        <i label="skor I">Breytir 'I' skorið, sem aldrei er sýnt á stigatöflunni.</i>
+        <j label="skor J">Breytir 'J' skorið, sem aldrei er sýnt á stigatöflunni.</j>
+        <k label="skor K">Breytir 'K' skorið, sem aldrei er sýnt á stigatöflunni.</k>
+        <l label="skor L">Breytir 'L' skorið, sem aldrei er sýnt á stigatöflunni.</l>
+        <m label="skor M">Breytir 'M' skorið, sem aldrei er sýnt á stigatöflunni.</m>
+        <n label="skor N">Breytir 'N' skorið, sem aldrei er sýnt á stigatöflunni.</n>
+        <o label="skor O">Breytir 'O' skorið, sem aldrei er sýnt á stigatöflunni.</o>
+        <p label="skor P">Breytir 'P' skorið, sem aldrei er sýnt á stigatöflunni.</p>
+        <q label="skor Q">Breytir 'Q' skorið, sem aldrei er sýnt á stigatöflunni.</q>
+        <r label="skor R">Breytir 'R' skorið, sem aldrei er sýnt á stigatöflunni.</r>
+        <s label="skor S">Breytir 'S' skorið, sem aldrei er sýnt á stigatöflunni.</s>
+        <t label="skor T">Breytir 'T' skorið, sem aldrei er sýnt á stigatöflunni.</t>
+        <u label="skor U">Breytir 'U' skorið, sem aldrei er sýnt á stigatöflunni.</u>
+        <v label="skor V">Breytir 'V' skorið, sem aldrei er sýnt á stigatöflunni.</v>
+        <w label="skor W">Breytir 'W' skorið, sem aldrei er sýnt á stigatöflunni.</w>
+        <x label="skor X">Breytir 'X' skorið, sem aldrei er sýnt á stigatöflunni.</x>
+        <y label="skor Y">Breytir 'Y' skorið, sem aldrei er sýnt á stigatöflunni.</y>
+        <z label="skor Z">Breytir 'Z' skorið, sem aldrei er sýnt á stigatöflunni.</z>
+      </letter>
+      <local>
+        <a label="skor a">The 'a' score, which is private to this character.</a>
+        <b label="skor b">The 'b' score, which is private to this character.</b>
+        <c label="skor c">The 'c' score, which is private to this character.</c>
+        <d label="skor d">The 'd' score, which is private to this character.</d>
+        <e label="skor e">The 'e' score, which is private to this character.</e>
+        <f label="skor f">The 'f' score, which is private to this character.</f>
+        <g label="skor g">The 'g' score, which is private to this character.</g>
+        <h label="skor h">The 'h' score, which is private to this character.</h>
+        <i label="skor i">The 'i' score, which is private to this character.</i>
+        <j label="skor j">The 'j' score, which is private to this character.</j>
+        <k label="skor k">The 'k' score, which is private to this character.</k>
+        <l label="skor l">The 'l' score, which is private to this character.</l>
+        <m label="skor m">The 'm' score, which is private to this character.</m>
+        <n label="skor n">The 'n' score, which is private to this character.</n>
+        <o label="skor o">The 'o' score, which is private to this character.</o>
+        <p label="skor p">The 'p' score, which is private to this character.</p>
+        <q label="skor q">The 'q' score, which is private to this character.</q>
+        <r label="skor r">The 'r' score, which is private to this character.</r>
+        <s label="skor s">The 's' score, which is private to this character.</s>
+        <t label="skor t">The 't' score, which is private to this character.</t>
+        <u label="skor u">The 'u' score, which is private to this character.</u>
+        <v label="skor v">The 'v' score, which is private to this character.</v>
+        <w label="skor w">The 'w' score, which is private to this character.</w>
+        <x label="skor x">The 'x' score, which is private to this character.</x>
+        <y label="skor y">The 'y' score, which is private to this character.</y>
+        <z label="skor z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="mig">Beita aðgerðinni á bótann sem er að keyra forritið.</me>
+    <it label="það">Beita aðgerðinni á annan hlut sem er þá markhluturinn.</it>
+    <any label="eitthvað">Einhver hljóð.</any>
+    <event>
+      <any label="atburði">Einhver hljóð tengd atburðum.</any>
+      <silly>
+        <any label="grín">Einhver hljóð tengd gríni.</any>
+        <bang label="bang">'Bang' teiknimyndahljóð.</bang>
+        <pow label="klang">'Klang' teiknimyndahljóð.</pow>
+      </silly>
+      <explode>
+        <any label="búmm">Einhver sprengjuhljóð.</any>
+        <A label="búmm A">Sprengjuhljóð.</A>
+        <B label="búmm B">Sprengjuhljóð.</B>
+        <C label="búmm C">Sprengjuhljóð.</C>
+        <D label="búmm D">Sprengjuhljóð.</D>
+        <E label="búmm E">Sprengjuhljóð.</E>
+      </explode>
+      <musical>
+        <any label="tóna">Einhverjir tónar.</any>
+        <glock>
+          <any label="klukk">Einhver klukkuspilshljóð.</any>
+        </glock>
+        <glock01 label="C klukk">Klukkuspilstónn.</glock01>
+        <glock02 label="C# klukk">Klukkuspilstónn.</glock02>
+        <glock03 label="D klukk">Klukkuspilstónn.</glock03>
+        <glock04 label="D# klukk">Klukkuspilstónn.</glock04>
+        <glock05 label="E klukk">Klukkuspilstónn.</glock05>
+        <glock06 label="F klukk">Klukkuspilstónn.</glock06>
+        <glock07 label="F# klukk">Klukkuspilstónn.</glock07>
+        <glock08 label="G klukk">Klukkuspilstónn.</glock08>
+        <glock09 label="G# klukk">Klukkuspilstónn.</glock09>
+        <glock10 label="A klukk">Klukkuspilstónn.</glock10>
+        <glock11 label="A# klukk">Klukkuspilstónn.</glock11>
+        <glock12 label="B klukk">Klukkuspilstónn.</glock12>
+        <gong>
+          <any label="gong">Einhver gong hljóð.</any>
+        </gong>
+        <gong01 label="C gong">Gong tónn.</gong01>
+        <gong02 label="C# gong">Gong tónn.</gong02>
+        <gong03 label="D gong">Gong tónn.</gong03>
+        <gong04 label="D# gong">Gong tónn.</gong04>
+        <gong05 label="E gong">Gong tónn.</gong05>
+        <gong06 label="F gong">Gong tónn.</gong06>
+        <gong07 label="F# gong">Gong tónn.</gong07>
+        <gong08 label="G gong">Gong tónn.</gong08>
+        <gong09 label="G# gong">Gong tónn.</gong09>
+        <gong10 label="A gong">Gong tónn.</gong10>
+        <gong11 label="A# gong">Gong tónn.</gong11>
+        <gong12 label="B gong">Gong tónn.</gong12>
+        <saw>
+          <any label="sag">Einhver hljóð mynduð með sagartannabylgju.</any>
+        </saw>
+        <saw01 label="C sag">Tónn með sagartannabylgju.</saw01>
+        <saw02 label="C# sag">Tónn með sagartannabylgju.</saw02>
+        <saw03 label="D sag">Tónn með sagartannabylgju.</saw03>
+        <saw04 label="D# sag">Tónn með sagartannabylgju.</saw04>
+        <saw05 label="E sag">Tónn með sagartannabylgju.</saw05>
+        <saw06 label="F sag">Tónn með sagartannabylgju.</saw06>
+        <saw07 label="F# sag">Tónn með sagartannabylgju.</saw07>
+        <saw08 label="G sag">Tónn með sagartannabylgju.</saw08>
+        <saw09 label="G# sag">Tónn með sagartannabylgju.</saw09>
+        <saw10 label="A sag">Tónn með sagartannabylgju.</saw10>
+        <saw11 label="A# sag">Tónn með sagartannabylgju.</saw11>
+        <saw12 label="B sag">Tónn með sagartannabylgju.</saw12>
+        <sine>
+          <any label="sín">Einhver hljóð mynduð með sínusbylgju.</any>
+        </sine>
+        <sine01 label="C sín">Tónn með sínusbylgju.</sine01>
+        <sine02 label="C# sín">Tónn með sínusbylgju.</sine02>
+        <sine03 label="D sín">Tónn með sínusbylgju.</sine03>
+        <sine04 label="D# sín">Tónn með sínusbylgju.</sine04>
+        <sine05 label="E sín">Tónn með sínusbylgju.</sine05>
+        <sine06 label="F sín">Tónn með sínusbylgju.</sine06>
+        <sine07 label="F# sín">Tónn með sínusbylgju.</sine07>
+        <sine08 label="G sín">Tónn með sínusbylgju.</sine08>
+        <sine09 label="G# sín">Tónn með sínusbylgju.</sine09>
+        <sine10 label="A sín">Tónn með sínusbylgju.</sine10>
+        <sine11 label="A# sín">Tónn með sínusbylgju.</sine11>
+        <sine12 label="B sín">Tónn með sínusbylgju.</sine12>
+        <square>
+          <any label="fern">Einhver hljóð mynduð með ferningsbylgju.</any>
+        </square>
+        <square01 label="C fern">Tónn með ferningsbylgju.</square01>
+        <square02 label="C# fern">Tónn með ferningsbylgju.</square02>
+        <square03 label="D fern">Tónn með ferningsbylgju.</square03>
+        <square04 label="D# fern">Tónn með ferningsbylgju.</square04>
+        <square05 label="E fern">Tónn með ferningsbylgju.</square05>
+        <square06 label="F fern">Tónn með ferningsbylgju.</square06>
+        <square07 label="F# fern">Tónn með ferningsbylgju.</square07>
+        <square08 label="G fern">Tónn með ferningsbylgju.</square08>
+        <square09 label="G# fern">Tónn með ferningsbylgju.</square09>
+        <square10 label="A fern">Tónn með ferningsbylgju.</square10>
+        <square11 label="A# fern">Tónn með ferningsbylgju.</square11>
+        <square12 label="B fern">Tónn með ferningsbylgju.</square12>
+        <drums>
+          <any label="trommur">Einhver trommuhljóð.</any>
+        </drums>
+        <bassdrum label="bassi">Bassatromma.</bassdrum>
+        <hhclosed label="symb lok">Symball lokaður.</hhclosed>
+        <hhopen label="symb op">Symball opinn.</hhopen>
+        <shaker label="hrista">Hrista.</shaker>
+        <snare label="snerill">Sneriltromma.</snare>
+        <tomlow label="tom lág">Lágtóna tom tom.</tomlow>
+        <tommed label="tom mið">Miðtóna tom tom.</tommed>
+        <tomhi label="tom há">Hátóna tom tom.</tomhi>
+      </musical>
+      <arcade>
+        <any label="leikhljóð">Einhver tölvuleikjahljóð.</any>
+        <roboton label="róbót á">Hljóð þegar róbót er gerður virkur.</roboton>
+        <robotoff label="róbót af">Hljóð þegar róbót er gerður óvirkur.</robotoff>
+        <coinsound label="pening">Hljóð í peningum.</coinsound>
+        <gethealth label="heilsu+">Hljóð þegar heilsa batnar.</gethealth>
+        <losehealth label="heilsu-">Hljóð þegar heilsa vernsar.</losehealth>
+        <shoot label="skot">Skothljóð.</shoot>
+        <timer label="tíma">Hljóð þegar tími er talinn.</timer>
+        <win label="sigur">Sigurhljóð.</win>
+        <lose label="tap">Taphljóð.</lose>
+        <inkjet_fire label="blekskot">Hljóð þegar bleki er skotið.</inkjet_fire>
+        <inkjet_impact label="blek hittir">Hljóð þegar blek hittir.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="ýmsa">Einhver hljóð tengd atburðum.</any>
+        <countdown_beep label="niðurtalning">Píphljóð fyrir niðurtalningu.</countdown_beep>
+        <countdown_alarm label="aðvarandi niðurtalning">Ákaft píphljóð fyrir niðurtalningu.</countdown_alarm>
+        <epic_stinger label="epic stinger">Hljóð Epic stinger flaugar.</epic_stinger>
+        <epic_stinger_a label="epic stinger a">Hljóð Epic stinger flaugar.</epic_stinger_a>
+        <epic_stinger_b label="epic stinger b">Hljóð Epic stinger flaugar.</epic_stinger_b>
+        <firepoof label="blossa">Hljóð eldblossa.</firepoof>
+        <forcefieldup label="svið á">Hljóð þegar kraftsvið er sett á.</forcefieldup>
+        <forcefielddown label="svið af">Hljóð þegar kraftsvið er tekið af.</forcefielddown>
+        <hide label="fela">Hljóð þegar eitthvað felur sig.</hide>
+        <lockontarget label="í sigti">Hljóð þegar skotmark er læst í sigti.</lockontarget>
+        <losetarget label="úr sigti">Hljóð þegar skotmark er ekki lengur í sigti.</losetarget>
+        <positivecondition label="gott">Hljóð þegar eitthvað gott gerist.</positivecondition>
+        <negativecondition label="slæmt">Hljóð þegar eitthvað slæmt gerist.</negativecondition>
+        <points label="stig">Hljóð fyrir gefin stig.</points>
+        <pop label="smell">Hljóð þegar eitthvað opnast eða smellur.</pop>
+        <popout label="hvin">Hljóð þegar eitthvað skýst út.</popout>
+        <powerup label="aflauka">Hljóð þegar aflaukandi hlutur er tekinn upp.</powerup>
+        <servo label="servó">Hljóð frá servó rafmótor.</servo>
+        <watersplash label="skvett">Hljóð í vatni sem skvettist.</watersplash>
+        <waterdrop label="dropa">Hljóð í vatni sem drýpur.</waterdrop>
+        <tagbase label="viðkomu">Hljóð þegar komið er við í höfn.</tagbase>
+        <whistlehuman label="blístur">Blísturshljóð.</whistlehuman>
+        <whistlereferee label="flautu">Hljóð í dómaraflautu.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="virki">Hjóð sem er bætt við fyrir virkisvarnarleiki.</any>
+        <air_raid_siren label="loftvarnarsírena">Hljóð loftvarnarsírenu.</air_raid_siren>
+        <bomb_fall label="fallandi sprengja">Hljóð fallandi sprengju.</bomb_fall>
+        <stun_fire label="gúmmískot">Hljóð skots sem vankar eða rotar.</stun_fire>
+        <zapper_fire label="stuðskot">Hljóð skots með stuði.</zapper_fire>
+        <missile_fire label="flaugarskot">Hljóð þegar flaug er skotið.</missile_fire>
+        <shrinker_fire label="smækkunarskot">Hljóð skots sem smækkar markið.</shrinker_fire>
+        <clam_coin_spit label="peningi spýtt">Hið tignarlega hljóð þegar skel spýtir út peningi.</clam_coin_spit>
+        <enemy_converted label="óvini snúið">Hljóð þegar óvini er snúið til liðs.</enemy_converted>
+        <enemy_escape label="óvinur sleppur">Hljóð þegar óvinur sleppur.</enemy_escape>
+        <place_tower label="turn staðsettur">Hljóð þegar turn er staðsettur.</place_tower>
+        <star_collect label="stjarna tekin">Hljóð þegar stjarna er tekin.</star_collect>
+        <coin_collect label="peningur tekinn">Hljóð þegar peningur er tekinn.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="tónlist">Einhver tónlist úr þessum hópi.</any>
+      <omni>
+        <any label="Ýmis">Einhver tónlist úr þessum hópi.</any>
+      </omni>
+    </music>
+    <mu_action label="spenna">Spennuþrungin tónlist</mu_action>
+    <mu_ambientlight label="létt">Létt umhverfistónlist.</mu_ambientlight>
+    <mu_ambinetmodd label="stemming">Stemmingstónlist</mu_ambinetmodd>
+    <mu_brightdowntempo label="róleg">Róleg tónlist.</mu_brightdowntempo>
+    <mu_brightfunk label="fönk">Fönkí!</mu_brightfunk>
+    <mu_brightguitar label="gítar">Gítartónlist.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu stefið.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="Dulúðuga">Einhver tónlist úr þessum hópi.</any>
+      </mystery>
+    </music>
+    <mysterya label="Dul A">Dulúðug tónlist.</mysterya>
+    <mysteryb label="Dul B">Dulúðug tónlist.</mysteryb>
+    <mysteryc label="Dul C">Dulúðug tónlist.</mysteryc>
+    <music>
+      <driving>
+        <any label="taktfasta">Einhver tónlist úr þessum hópi.</any>
+      </driving>
+    </music>
+    <drivinga label="takt A">Hröð, taktföst tónlist.</drivinga>
+    <drivingb label="takt B">Hröð, taktföst tónlist.</drivingb>
+    <drivingc label="takt C">Hröð, taktföst tónlist.</drivingc>
+    <music>
+      <drama>
+        <any label="leikræna">Einhver tónlist úr þessum hópi.</any>
+      </drama>
+    </music>
+    <dramaa label="leik A">Leikræn tónlist.</dramaa>
+    <dramab label="leik B">Leikræn tónlist.</dramab>
+    <environ>
+      <any label="umhverfi">Einhver hljóð úr þessum hópi.</any>
+      <ambocean label="haf">Sjávarhljóð.</ambocean>
+      <ambforest label="skóg">Skógarhljóð.</ambforest>
+      <ambcity label="borg">Borgarhljóð.</ambcity>
+      <ambmeadow label="engi">Hljóð af engi.</ambmeadow>
+      <ambmars label="mars">Mars hljóð.</ambmars>
+      <arena>
+        <any label="leikvang">Einhver leikvangshljóð.</any>
+        <a label="vang A">Mikill mannfjöldi á leikvangi.</a>
+        <b label="vang B">Mikill mannfjöldi á leikvangi.</b>
+        <c label="vang C">Mikill mannfjöldi á leikvangi.</c>
+        <d label="vang D">Mikill mannfjöldi á leikvangi.</d>
+        <e label="vang E">Mikill mannfjöldi á leikvangi.</e>
+        <f label="vang F">Mikill mannfjöldi á leikvangi.</f>
+        <g label="vang G">Mikill mannfjöldi á leikvangi.</g>
+      </arena>
+    </environ>
+    <trackingnone label="lárétt">Eldflaugin mun fljúga beint og mun ekki hreyfast upp eða niður.</trackingnone>
+    <trackinghoming label="yfirborð">Eldflaugin mun fylgja yfirborðinu og reyna að fljúga yfir hæðir og veggi.</trackinghoming>
+    <constraint>
+      <leftright label="vinstri/hægri">Hreyfast aðeins til vinstri og hægri.</leftright>
+      <fwdback label="fram/aftur">Hreyfast aðeins áfram og afturábak.</fwdback>
+      <updown label="upp/niður" />
+      <northsouth label="N/S">Hreyfast aðeins norður og suður.</northsouth>
+      <eastwest label="A/V">Hreyfast aðeins austur og vestur.</eastwest>
+      <immobile label="kyrr">Ekki leyfa hreyfingu, jafnvel þó rekist sé á.</immobile>
+    </constraint>
+    <once label="1 sinni">Kóðinn eftir DO verður aðeins keyrður einu sinni í hvert sinn sem WHEN skilyrðið er virkt.</once>
+    <watertype label="gerð vatns">Velja gerð vatns.</watertype>
+  </modifier>
+  <actuator>
+    <nothing label="ekkert" />
+    <movement label="hreyfast">Ferðast um heiminn. Skoðaðu valkostina. Ólíkir hlutir hafa ólíka hreyfigetu.</movement>
+    <turn label="snúa">Breyta í hvaða átt er horft.</turn>
+    <eat label="borða">Innbyrða markhlutinn, sem verður að vera nálægt.</eat>
+    <say label="segja">Sýna textaboð, annað hvort í talblöðru eða glugga. Notaðu &lt;cr&gt; til að skipta línum.</say>
+    <open label="opna">Virkar mismunandi fyrir mismunandi hluti. Gerðu tilraunir!</open>
+    <close label="loka">Virkar mismunandi fyrir mismunandi hluti. Gerðu tilraunir!</close>
+    <kick label="sparka">Sparka í markhlutinn ef hann er nógu nálægur. Afl sparks er stillanlegt.</kick>
+    <make label="búa til">Búa til annan hlut. Getur búið til hluti sem eru merktir smíðanlegir.</make>
+    <launch label="varpa">Varpa markhlutnum á loft ef hann er nógu nálægur. Afl varps er stillanlegt.</launch>
+    <push label="ýta">Ýta markhlut í tiltekna átt ef hann er nógu nálægur. Aflið er stillanlegt.</push>
+    <pull label="toga">Toga markhlut í tiltekna átt ef hann er nógu nálægur. Aflið er stillanlegt.</pull>
+    <camouflage label="felulitur á">Setja felulit á markhlut svo erfitt sé að sjá hann.</camouflage>
+    <uncamouflage label="felulitur af">Taka felulit af markhlut svo hann sjáist.</uncamouflage>
+    <express label="sýna">Sýna viðmót. Sumt viðmót breytir andliti hlutarins en annað sést ofan við hlutinn.</express>
+    <color label="lita">Breyta eigin lit eða lit markhlutar.</color>
+    <glow label="glóa">Gefa frá sér geislavirka glóð. Hægt að velja lit.</glow>
+    <sound label="spila">Gefa frá sér hljóð! Úr mörgu að velja.</sound>
+    <stopsound label="þagna">Hætta að spila hljóð.</stopsound>
+    <jump label="stökkva">Mismunandi hlutir geta stokkið mismunandi hátt.</jump>
+    <watersurface label="koma úr kafi">Úr kafi aðgerðin lætur hluti sem eru í kafi koma upp á yfirborð vatnsins.</watersurface>
+    <waterdive label="kafa">Kafa aðgerðin lætur hluti sem geta kafað kafa niður á botn vatnsins.</waterdive>
+    <airrise label="hækka">Rísa aðgerðin lætur hluti sem geta flogið rísa upp í loftið.</airrise>
+    <airdrop label="lækka">Hníga aðgerðin lætur hluti sem geta flogið lækka flugið í átt til jarðar.</airdrop>
+    <switchtask label="fara á">Fara á annað blað. Aðeins reglur á völdu blaði eru notaðar. Blöð eru mjög gagnleg þegar breyta þarf hegðun.</switchtask>
+    <inlinetask label="innskot">Við keyrslu forrits verður allur kóði af annarri síðu settur inn hér. Þetta er handhægt fyrir kóða sem nýtist á fleiri en einni síðu þar sem þú getur skrifað hann einu sinni og skotið honum svo inn þar sem þú vilt nota hann.</inlinetask>
+    <nextlevel label="næsta borð">Hlaða næsta borði. Gagnlegt fyrir leiki með borð!</nextlevel>
+    <prevlevel label="fyrra borð">Hlaða fyrra borði. Gagnlegt fyrir leiki með borð!</prevlevel>
+    <waterraise label="hækka vatn">Hækka yfirborð vatns undir þessum hlut.</waterraise>
+    <waterlower label="lækka vatn">Lækka yfirborð vatns undir þessum hlut.</waterlower>
+    <setwater label="gerð vatns">Stillir gerð vatns undir þessum hlut.</setwater>
+    <rescale label="stærð">Breytir stærð hlutar hægt.</rescale>
+    <rescaleinstant label="stærð (samstundis)">Breytir stærð hlutar samstundis.</rescaleinstant>
+    <movementspeedmodify label="hraði hreyfingar">Setur hraðastuðul á hreyfingu hlutar fram á við.</movementspeedmodify>
+    <turningspeedmodify label="hraði snúnings">Setur hraðastuðul á snúning hlutar.</turningspeedmodify>
+    <worldlightingchange label="lýsing">Breytir lýsingu heims hægt.</worldlightingchange>
+    <worldlightingchangeinstant label="lýsing (samstundis)">Breytir lýsingu heims samstundis.</worldlightingchangeinstant>
+    <worldskychange label="himinn">Breytir himni heims hægt.</worldskychange>
+    <worldskychangeinstant label="himinn (samstundis)">Breytir himni heims samstundis.</worldskychangeinstant>
+    <shoot label="skjóta" />
+    <shoot2 label="skjóta">Skjóta kúluskotum eða flugskeytum.</shoot2>
+    <beam label="geisli">Beinir leysigeisla að Mars steini til að greina eiginleika steinsins.</beam>
+    <inspect label="skoða">Borar í Mars stein til að taka sýni fyrir frekari rannsókna.</inspect>
+    <scan label="skanna">Greinir tegund óþekktra steina á svæði í kringum jeppann.</scan>
+    <picture label="mynd">Tekur mynd eins og séð úr augum.</picture>
+    <damage label="skaða">Lækka heilsu - annaðhvort eigin heilsu eða heilsu markhlutarins.</damage>
+    <heal label="lækna">Bæta stigum við eigin heilsu eða heilsu markhlutar.
+        Læknar markhlut af skemmdum. Ef viðbótin "mig" er notuð batnar hlutnum sjálfum. Til eru viðbætur sem stjórna gerð og fjölda stiga sem læknað er um.</heal>
+    <zap label="vanka">Vanka annaðhvort hlutinn sjálfan eða markhlutinn í nokkrar sekúndur.</zap>
+    <pop label="rota">Gerir annaðhvort hlutinn sjálfan eða markhlutinn alveg óvirkan þar til einhver annar læknar þá.</pop>
+    <boom label="sprengja">Láta hlutinn sjálfan eða markhlutinn hverfa með sprengingu.</boom>
+    <vanish label="eyða">Láta hlutinn sjálfan eða markhlutinn hverfa hljóðlega.</vanish>
+    <grab label="grípa">Taka upp markhlutinn ef hann er nógu nálægur. Það er aðeins hægt að halda á einum í einu.</grab>
+    <drop label="sleppa">Sleppa því sem er haldið á.</drop>
+    <give label="gefa">Gefa markhlut það sem haldið er á. Ef markhluturinn getur ekki haldið því, mun það detta.</give>
+    <reset label="endurstilla">Endurstilla einhvern þátt leiksins eða hlut.</reset>
+    <restart label="byrja aftur">Endurstilla einhvern þátt leiksins eða hlut.</restart>
+    <gameover label="ljúka">Ljúka leiknum.</gameover>
+    <victory label="sigra">Ljúka leiknum og birta vinningsskilaboð. Ef litur er tiltekinn verður hann notaður.</victory>
+    <score label="+ skor">Bæta stigum við skor.</score>
+    <unscore label="- skor">Draga stig frá skori.</unscore>
+    <scoreset label="stilla skor">Stilla skor á tiltekið gildi.</scoreset>
+    <camera>
+      <followme label="elta">Myndavélin á að elta þennan hlut.</followme>
+      <ignoreme label="hunsa">Myndavélin sýnir þennan hlut ekkert sérstaklega.</ignoreme>
+      <firstperson label="úr augum">Myndavélin horfir út úr augum þessa hlutar.</firstperson>
+    </camera>
+  </actuator>
+  <root />
+  <group>
+    <colors label="litir" />
+    <pathcolors label="litir slóða" />
+    <game label="leikur" />
+    <more label="meira" />
+    <players label="spilarar" />
+    <playermods label="spilarar" />
+    <actions label="aðgerðir" />
+    <settings label="stillingar" />
+    <combat label="herja" />
+    <rover label="jeppi" />
+    <holding label="halda" />
+    <sounds label="hljóð" />
+    <event label="atburði">
+      <explode label="búmm" />
+      <silly label="grín" />
+      <musical label="tóna">
+        <glock label="klukk" />
+        <saw label="sag" />
+        <sine label="sín" />
+        <gong label="gong" />
+        <square label="fern" />
+        <drums label="trommur" />
+      </musical>
+      <arcade label="leikhljóð" />
+      <misc label="ýmsa" />
+      <tower label="virki" />
+    </event>
+    <environ label="umhverfi">
+      <forest label="skógar" />
+      <arena label="leikvang" />
+    </environ>
+    <music label="tónlist">
+      <omni label="ýmsa" />
+      <mystery label="dulúðuga" />
+      <driving label="taktfasta" />
+      <drama label="leikræna" />
+    </music>
+    <constraints label="mörk" />
+    <directions label="stefna" />
+    <filters>
+      <directions label="stefna" />
+      <touchbuttons label="hnappar" />
+      <touchGuiButtons label="hnappar" />
+      <gestures label="snertibendingar" />
+    </filters>
+    <expressions label="viðmót" />
+    <projectiles label="skeyti" />
+    <camera label="myndavél" />
+    <reset label="endurstilla" />
+    <options label="valkostir" />
+    <compare label="bera saman" />
+    <points label="stig" />
+    <time label="tími" />
+    <speed label="hraði" />
+    <strength label="afl" />
+    <angle label="á loft" />
+    <tracking label="fylgt" />
+    <bots label="bótar I" />
+    <bots2 label="bótar II" />
+    <objects label="hlutir" />
+    <tasks label="verk" />
+    <terrains label="gerðir" />
+    <waters label="gerðir" />
+    <setwater label="gerð vatns" />
+    <creatables label="smíðanlegt" />
+    <keyboard>
+      <letters label="stafir" />
+      <numbers label="tölur" />
+      <symbols label="tákn" />
+      <misc label="ýmsir" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>

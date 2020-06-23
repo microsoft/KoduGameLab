@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>Nesnelerin itileceği temel menzili kontrol eder. Aynı zamanda nesne boyutundan da etkilenir.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>Nesnelerin itilmesi için ne kadar kuvvet uygulanacağını kontrol eder. Güç Ayarları kısmından ayarlanır.</desc>
+  </helpText>
+  
+  <helpText id="LightRange">
+    <desc>Bu ışığın ne kadar uzağa parlayacağını ayarlar (sadece ışıklar için geçerlidir).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+Bu robotun hızının ince ayarını yap. 1.0 varsayılan değerdir.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+Bu robotun ivmesinin ince ayarını yap. 1.0 varsayılan değerdir.
+    </desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Bu robotun konumunu hiç bir yere hareket edemeyeceği şekilde kilitle. Fakat hala dönebilsin.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>Bu robotu yokedilemez hale getirir.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>Ayarlandığında bu robotun kafasının tepesinde ne kadar sağlığının kaldığını gösteren küçük bir çubuk görünür.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>Bu robotun başlangıçta ne kadar vuruş puanı olacağını ayarlamanı sağlar. Robot hasar gördükçe vuruş puanı aşağı, iyileştikçe de yukarı gidecek.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+Bir robot "Yaratılabilir" olarak işaretlendiğinde iki şekilde önemli bir hale gelir.
+ilk olarak, bu robotu klonladığında diğer tüm klonlar aynı beyni paylaşır - birine yapılan değişikler hepsine uygulanır.  Yaratılabilenler ve onların klonları arasındaki ilişkiyi noktalı çizgiler olarak görebilirsin (düzenlerken).
+İkincisi, şimdi diğer robotları bu robotu mevcut programıyla birlikte Yaratabilecekleri şekilde programlayabilirsin.  Bu sürekli düşman yaratmak isteyeceğin oyunlar için mükemmeldir.
+Yalnız bu durum dünyanın bütçesinin aşılmasına sebep olacaktır ve "Yarat" çalışmayı durduracaktır.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+Bu sayım oyun sırasında yaratılacak Yaratılabilenler sayısını sınırlar. Düzenleme sırasında oluşturduğun klonlar bu sayıya dahil değildir. Bu sayı sadece oyun sırasında başka robotlar tarafından yaratılan robotların sayısını kısıtlar.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+Bu robota göre kameranın nasıl davranacağını ayarlar.  Normalde kamera oyuncu tarafından kontrol edilen robotu takip edecektir.
+Bunu Her Zaman olarak ayarlarsan kamera her zaman bu robotu takip edecektir.  Bu ayarda birden fazla robot varsa kamera hepsini ekranda göstermeye çalışacaktır.
+Bu ayarı Asla'ya getirirsen kullanıcı tarafından kontrol edilse dahi robot kamera tarafından görmezlikten gelecektir.
+    </desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>Bu bir robotun araziye, duvarlara ve diğer robotlara çarptığında ne kadar zıplayacağını ayarlar.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>Bu bir robotun araziye, duvarlara ve diğer robotlara çarptığında ne kadar kayacağını ayarlar.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Bu robottan ateşlenen fişeğin ne kadar hasar oluşturacağını ayarlar.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+"Fişek yeniden yükleme zamanı" bir robot ateş ettikten ne kadar süre sonra tekrar ateş edebileceğini ayarlar. Bu saniye olarak ölçülür.
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Yok olmadan önce fişeklerin ne kadar uzağa gideceğini ayarlar.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Fişeklerin bu robottan ateşlendiğinde ne kadar hızlı hareket edeceğini ayarlar.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+Bir robottan ateşlenen fişeklerden kaç tanesinin aynı anda havada olabileceğini ayarlar.
+Bu sayıya erişildiğinde fişeklerin bazıları hedefe isabet etmeden ya da maksimum menziline ulaşmadan robot tekrar fişek ateşleyemez.
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Bu robottan ateşlenen füzeden hedefte yaratılan hasar miktarını ayarlar.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+Bir robotun ne sıklıkta füze ateşleyebileceğini ayarlar. 
+Saniye olarak ölçülür.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Yok olmadan önce füzelerin ne kadar uzağa gideceğini ayarlar.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Bu füzeden ateşlenen füzelerin ne kadar hızlı hareket edeceğini ayarlar.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+Bir robottan ateşlenen füzelerden kaç tanesinin aynı anda havada olabileceğini ayarlar.
+Bu sayıya erişildiğinde fişeklerin bazıları hedefe isabet etmeden ya da maksimum menziline ulaşmadan robot tekrar fişek ateşleyemez.
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Bu robottan ateşlenen füzelerin arkalarında duman çıkarıp çıkarmayacağını ayarlar. Dumansız füzeler bilgisayar tarafından daha hızlı işlenir.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Bu robot bir şeye çarptığında ya da hasar aldığında kalkan görsel efektinin görüntülenip görüntülenmeyeceğini ayarlar.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Bu robotun gösterilip gösterilmeyeceğini ayarlar. Diğer robotlar tarafından hala görülüp duyulabilir.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Bu robotun diğer robotlar tarafından duyulup, görülüp ve çarpılıp çarpılmadığını ayarlar. Hayalet robotlar başkalarını hala görüp duyabilirler fakat onlara çarpamazlar.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Bu karakterden gelen bütün sesleri devre dışı dırak. Programlanmış sesler oynamaya devam edecektir. Ne var ki diğer karakterler bu karakterin varlığını dinleyerek tespit edebilmeye devam edeceklerdir.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Herhangi bir su yüzeyinde yüz. Karakterlerin suya dalabilmesi için bu özelliği devre dışı bırak.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Diğer karakterlerin bu karakteri ne kadar uzaktan duyabileceklerini ayarlar. Kullanıcının duyduğu sesi değiştirmez.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Bu karakterin diğer karakterleri ne kadar uzaktan duyabileceğini ayarlar.  Kullanıcının duyduğu sesi değiştirmez.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>Eğer robot hayalet olmuşsa fakat hala ortama çarpabiliyorsa doğru.</desc>
+  </helpText>
+  
+  <helpText id="KickStrength">
+    <desc>Bu robotun nesnelere ne kadar güçlü vurabileceğini ayarlar. Daha güçlü bir vuruş nesnenin daha uzağa uçmasına yol açar.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Bir robotun bir nesneye tekme attıktan sonra ikinci bir nesneye ne kadar hızlı vurabileceğini ayarlar.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>Bir robotun yukarı (daha büyük) ya da aşağı (daha küçük) oranla. 1.0 oran sayısı normal boyuttur.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>Bir şey gördüğünde sanki hala görebiliyormuşsun gibi bir kaç saniye boyunca hatırlarsın.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Bu karakter için ışıldama efektinin ne kadar parlayacağını ayarlar. Parıldayan karakterler normalde diğer karakterleri aydınlatmazlar.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Bu nesnenin ışıldadığında diğerlerini aydınlatmasını sağla, ve efektin gücünü ayarla.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Bu robottan gelen parıldamanın kendini ne oranda aydınlattığını ayarla.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>Karakterler bir şeyin çevresinde gezindiğinde, daire çizdiğinde, ya da bir şeyden uzaklaştığında bu izlediği yolda herhangi bir engel olup olmadığını gösterir.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>Eğer bu robot görüp işitebiliyorsa hangi robotları görüp duyabileceğini gösterir.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Şu anda uygulanmamakta.</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>Dünyanın kenarları çevresinde görünmez bir engel oluşturur.  Bu robotların dünya kenarından düşmelerine mani olur.
+    
+Balon, Bulut, Jet, Işık, Ufo, Zeplin, Ufaklık ve Füze cam duvarın içinden geçebilir.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Bu dünyayı değiştirmiş kişilerin tarihçesini görüntüler.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Oyun çalışırken kameranın nasıl hareket edeceğini kontrol etmeni sağlar.
+    
+Sabit Pozisyon seçeneği oyun oynanırken kameranın hareket etmesine mani olur.  Üstten görünüm gerektiren arcade tarzı oyunlarda işe yarar. Geniş ekran monitörlerde görünüm farklı olacaktır.
+
+Sabit ofset seçeneği kamerayı takip ettiği nesneden sabit bir mesafede ve açıda tutar.  Bu bir imleç ya da robot olabilir.  Yandan görünümlü oyunlar için faydalıdır.
+
+Varsayılan "Serbest" seçeneğidir ve bir robot'un programı kameranın kendisini takip etmesini belirtmedikçe kameranın serbestçe dolaşmasını sağlar.  Sabit ya da ofset kamera seçeneğini kullanıyorsanız, &lt;X&gt; düğmesine basmanız kameranın pozisyonunu ayarlamınızı sağlayacaktır.
+    </desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Oyun başladığında kameranın nerede konumlanacağını denetler.  Kullanmak için oyun başladığındakamerayı istediğin yere hareket ettir ve Dünya Ayarlarını aç ve kutuyu tıkla.
+Daha sonra pozisyonu değiştirmek istersen,  &lt;x&gt; düğmesine basman kamerayı istediğin gibi hizalamana izin verecek bir moda geçmene izin veren bir moda geçmeni sağlayacaktır.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Kamera'nın kullanıcı tarafından kontrol edilen bir karakterin arkasında ne şiddette sallandığını kontrol eder. </desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Normalde ekranın sağ alt köşesinde beliren Pusula'yı gizlemeni sağlar. Pusula düzenleme sırasında sürekli gösterilir ve sadece oyunu başlattığında gizlenir.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Normalde ekranın sağ tarafında görüntülenen Kaynak Ölçeri (termometre) gizlemeni sağlar. Kaynak Ölçeri düzenleme sırasında sürekli gösterilir ve sadece oyunu başlattığında gizlenir.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+Normalde ekranın sağ tarafında görünen Kaynak Ölçer (termometre) tarafından ölçülen kaynak kısıtlamayı kapatmanı sağlar.  Bu seçenek kapalı olduğunda dünyana dilediğin kadar arazi ve nesne ekleyebilirsin.  
+UYARI: Bu sınır olmadan Kodu'nun çok yavaş çalışmasına sebep olabilirsin.  Sistemin bellek kapasitesini aşıp Kodu'nun çökmesine de sebep olabilirsin.
+  </desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>Dünyanda su olduğunda dalgaların yüksekliğini kontrol etmeni sağlar.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>Suyun ne miktarda görüntüyü bulanıklaştırdığını ayarlar.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Dünyan için bir arka plan renk grubu seç. Gökyüzü ve Işıklandırma ayarlarını birleştirerek oyunun için bir ruh hali oluştur.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Dünyan için bir ışık grubu seç.  Karanlık ışıklandırma ayarı seçersen ortam sadece oyunu başlattığında karanlık olacaktır.  Düzenleme sırasında dünyanı net görebilmen için daha parlak bir ışıklandırma kullanılacaktır.
+Oyunun için bir ruh hali oluşturmak için Gökyüzü ve Işık ayarlarını birleştir.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Oyunda ağaçların arasında esen en hafif rüzgarı denetler.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Oyunda ağaçların arasında esen en sert rüzgarı denetler.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Oyun nasıl başlatacağını kontrol et: "Hiçbir şey" oyunu efektsiz olarak başlatır.
+"Dünya Başllığı" dünyanın ismini 3 saniyeliğine gösterip sonra oynamaya başlar.
+"Dünya Tanımı" dünyanın ismini görüntüler ve oyuna başlamak için kullanıcının &lt;a&gt; düğmesine basmasını ister.  Bu oyunu kaydettiğinde yazdığın tanımı kulllanır.
+"Geri Sayım" oyun başlamadan önce 3-2-1 geri sayımını görüntüler.  Bu yarış oyunları için çok iyidir.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>Karakterler patikaları izlediğinde bu karakterlerin hangi istikamete doğru gittiğini gösterir. Hedefler çizgilerle gösterilir ve onlara doğru ilerleyen karakterle aynı renktedirler</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Robotlar ve diğer nesneler tarafından birbirine ve yere çarpmak için kullandıkları nesneleri görüntüler.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>Bir robot görüp işitebiliyorsa, hangi robotları görüp duyabildiğini görüntüler.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>Arazi düzenlemeleri için hız faktörü. Büyüdükçe hız artar.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Menüler ve düğmelerdeki gibi kullanıcı arabirim ses efektlerini kontrol eder.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Oyundakki efekterin ses ayarını kontrol eder. Patlamalar, çarpışmalar ve robotların yaptığı sesler bu ayara dahildir.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Oyunun için seçtiğin arka plan seslerini kontrol eder.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Bu renk için skorlandırmanın ne kadar belirgin olacağını kontrol eder.
+Kapalı: skor hiç gösterilmez.
+Sessiz: skor köşede gösterilir, fakat skor efektleri yoktur.
+Gürültülü: oyun sırasında skor animasyon olarak görüntülenecek.
+    </desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>Belli bir skorun SonrakiSeviye/ÖncekiSeviye eyleminde kalıcı olup olmayacağını ayarlar.
+Açık: skor kalıcı olacak ve yeni seviye yüklendiğinde aynı değerde kalacak
+Kapalı: skor yeni seviye yüklendiğinde sıfırlanacak
+    </desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>Ekranda sanal denetleyiciyi Göster/Gizle.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+      Kullanıcı arayüzü düğmelerinin nasıl görüntüleneceğini denetler.
+      Kapalı: düğme hiç gösterilmeyecek.
+      Etiket Yok: Düğme gösterilecek ve üzerinde hiç yazı olmayacak.
+      Etiketli: Düğmeyi tanımlamak için düğme yazıyla birlikte görüntülenecek.
+    </desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+      "Sonraki Seviye" karosu tarafından yüklenecek seviyeyi ayarlar. "Önceki Seviye" karosunu da etkinleştirerek oyuncunun gittiği seviyeden bu seviyeye dönmesini sağlar.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+      Bu nesnenin altındaki suyu yükseltir.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+      Bu nesnenin altındaki suyu alçaltır.
+    </desc>
+  </helpText>
+  
+  
+  <helpText id="SetWater">
+    <desc>
+      Bu nesnenin altındaki su türünü belirler.
+    </desc>
+  </helpText>
+
+  <!-- Help for USer Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>Araç ipuçlarını kapatmanı sağlar.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>İpuçlarını kapatmanı sağlar.  Sistem bir soruna neden olabilecek bir durum tespit ettiğinde ipuçları görüntülenir.
+Bir ipucu görüntülendiğinde, ipucunu devre dışı bırakma seçeneği de verilir.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>Normalde Oyunkolu Araç Menüsü aktif olduğunda, geri plan bulanıktır ve kamerayı ortalıkta hareket ettiremezsin.  Bu seçeneği kapalıya getirince kamera hala "canlı" kalacaktır.  Ne var ki dünyayla etkileşime geçmeden önce hala bir araç seçmelisin.
+Bunu kapatınca kamerayı sol çubuk kontrol etmeye başlar, bu durumda istediğin aracı seçmek için  ya DPadi ya da Tetikleri kullanmalısın.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>Bu daha önce görüntülenmelerini engellemek için koyduğun 'devredışı' bayraklarını kaldırır ve tekrar görüntülenmelerini sağlar.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Ekranın üst sol köşesinde görüntülenen yardım metni miktarını ayarlar.</desc>
+  </helpText>
+  
+  <helpText id ="InvertYAxis">
+    <desc>Çubuğu aşağı itmenin robotu aşağı doğru hareket ettirmesini sağla.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Çubuğu sola itmenin robotu sola doğru hareket ettirmesini sağla.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Çubuğu ileri itince kamerayı yukarı kaldır.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>Çubuğu sola itmenin kamerayı sağa çevirmesini sağla.</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>"aşırıTarama" deyimi resmin ekranın kenarlarından kesilme miktarını belirtir.  Bu miktar hem görüntü aygıtına hem de aygıta olan bağlantıya bağlıdır.  Kaydırıcı yardım görüntülerinin ekranın ortasına ne kadar yaklaşabileceğini ayarlamaya yarar.  Ekranına sığmıyorsa,  bu değeri yükselt.  Tüplü televizyonlarda en iyi %20 değeri çalışır.  Bilgisayar ekranlarında 0 veya % 5 ile çalışmak mümkün olabilir.  Deneme yanılmayla en iyi görüntüyü tespit et.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>Ayarlandığında, başka kullanıcılar senin indirme sırana dünyalar ekleyebilecekler.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>Ayarlandığında, başka oyunculardan indirdiğin dünyalar otomatik olarak paylaşıldı olarak işaretlenecek ve ilerideki paylaşım seanslarında indirilmeye uygun hale getirilecektir.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>Paylaşım seanslarında, "Favori" etiketiyle işaretlenmiş dünyaları otomatik olarak indir.</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>Görme ve duyma sensörlerince faydalanılan Yakın  filtresi tarafından kullanılan menzil. Metre olarak ölçülür. Referans açısından:  Bir arazi karosu yarım metredir.</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>Görme ve duyma sensörlerince faydalanılan Uzak filtresi tarafından kullanılan menzil. Metre olarak ölçülür. Referans açısından:  Bir arazi karosu yarım metredir.</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>Ayarlandığında, başlangıç sırasında Kodu yeni bir sürümün yayınlanıp yayınlanmadığını kontrol eder.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>Ayarlandığında, Kodu Microsoft'a Kodu'yu nasıl kullandığına dair bilgi gönderecektir. Bu bilgi Kodu'yu geliştirmemize yarar.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>Ayarlandığında, bir sonraki sefer Kodu başlatıldığında tanıtım videosu oynatılacak.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>Normalde, Kodu Topluluk web sitesi giriş bilgisi Kodu'dan çıktığında unutulacak.  Bu ayar açıldığında birden fazla seansta girişinin devam etmesini sağlayacağız.</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>This is an aid for people creating their own tutorials.  When turned on and running a tutorial level this will display debug information overlayed on the screen.</desc>
+  </helpText>
+
+</XmlHelpTextData>
+

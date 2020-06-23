@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>控制物件被推開的基本範圍。也會受到物件大小規模的影響。</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>控制推物件時要使用多少力量。使用力量修改器修改。</desc>
+  </helpText>
+  
+  <helpText id="LightRange">
+    <desc>設定此光源可照亮多遠的距離 (僅適用於光源)。</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>
+微調此機器人的速度。
+數值若為 1.0，即為預設速度。
+	</desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+微調此機器人的加速速度。
+數值若為 1.0，即為預設加速速度。
+	</desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>鎖定此機器人的位置，讓它無法朝向任何方向移動。但仍舊可以旋轉。</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>讓此機器人堅不可摧。</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>設定時，機器人頭上會出現一條小小的橫條，顯示機器人還有多少體力。</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>這能讓你控制機器人體力值的起始數字。當機器人受到傷害時，體力值數字會下降，接受治療後，提力值數字會上升。</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+當機器人被標示為「可創造」時，會有兩種特殊狀況。
+第一，如果你複製此機器人，則複製後的機器人會與原本的機器人共用相同的大腦 - 變更其一就會變更全部。在編輯時，你可以看到原本標記為「可創造」的機器人與它的複製人之間有虛線相連。
+第二，你現在可以編排其他機器人的程式，完整地創造一個機器人。如果你想在遊戲中持續創造敵人的話，這是個很好用的方法。
+請記住，這可能會讓你在不經意間用完這個世界的預算，屆時，創造就會自動停止。
+	</desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+對於「可創造」的事物，這個數量會限制在遊戲中可以創造的數量。你在編輯時散佈的複製人不會計入此數量中，這個數量只會限制在玩遊戲時，其他機器人使用「創造」所產生的複製人。
+	</desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+控制攝影機如何拍攝此機器人的行動。一般來說，攝影機會跟著由玩家控制的機器人。
+如果你將此設為「總是」，攝影機將會一直跟這此機器人。如果有一個以上的機器人開啟此設定，則攝影機會嘗試讓所有機器人都顯示於螢幕上。
+如果你將此設為「永不」，就算玩家控制機器人，攝影機也會忽略此機器人。
+	</desc>
+  </helpText>
+  <helpText id="HoldDistance">
+    <desc>這會控制「被抓住」的物件會被帶到多遠的位置。</desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>這會控制當機器人撞到地形、牆壁，或是其他機器人時的彈跳狀態。</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>這會控制當機器人撞到地形、牆壁，或是其他機器人時的滑動狀態。</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>控制此機器人所發射的星光彈會造成多大的傷害。.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+星光彈裝填時間會控制機器人發射星光彈後，下次可發射的時間。
+單位為秒。
+	</desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>控制星光彈在消失前可飛行的距離。</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>控制此機器人在行進間發射星光彈的速度。</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+控制此機器人同時可有多少星光彈在空中飛行。
+當發射至此數量後，在已發射的星光彈擊中物件或達到最大飛行距離前，機器人無法再次發射。
+	</desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>控制此機器人發射的火箭在擊中目標後，會對目標造成多少傷害點數。</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+控制機器人在發射兩枚火箭間需要等候多久。
+單位為秒。
+	</desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>控制火箭在消失前可飛行的距離。</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>控制此機器人在行進間發射火箭的速度。</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+控制此機器人同時可有多少火箭在空中飛行。
+當發射至此數量後，在已發射的火箭擊中物件或達到最大飛行距離前，機器人無法再次發射。
+	</desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>控制此機器人所發射的火箭是否會噴出煙霧。沒有煙霧的火箭速度較快。</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>控制此機器人擊中某物或受到傷害時，是否顯示遮蔽視覺效果。</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>控制是否完整顯示此機器人。其他機器人仍舊可以看見及聽到此機器人。</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>控制其他機器人是否可以看見、聽到，或是碰到此機器人。鬼機器人仍舊可以看見和聽到彼此，但無法觸碰。</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>停用此角色的所有內建音效。仍會播放已編排程式的音效。請注意，其它角色仍舊可以藉由聽覺偵測到此角色現身。</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>滑過任何水面。關閉此選項可讓角色飛入水中。</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>控制其它角色可在多遠的地方聽見此角色。這不會變更玩家聽到的實際音效。</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>控制此角色可聽見多遠距離的其它角色。這不會變更玩家聽到的實際音效。</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>設為「真」會讓變成鬼的機器人仍舊可以碰撞環境地形。</desc>
+  </helpText>
+  
+  <helpText id="KickStrength">
+    <desc>控制機器人踢物件的力道。用力踢會讓物件飛很遠。</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>控制機器人在踢了第一個物件後，隔多久才能再踢第二個物件。</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>讓機器人變大或縮小。1.0 是一般大小。</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>當你看到某物時，你可以記得它，彷彿某物仍在眼前的秒數。</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>影響此角色的光芒效果亮度。請注意，會發光的角色通常不會將光線投射到其它角色身上。</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>讓此物件可在發光時將光亮投射到其他物件上，並且設定光量的影響力有多大。</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>設定此機器人發光時照亮自己的強度。</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>當角色的程式編排為漫遊、繞圈圈，或是遠離某物時，這會顯示出阻擋其路徑的障礙。</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>如果此機器人使用視覺或聽覺，顯示此機器人可看到及聽到哪些機器人。</desc>
+  </helpText>
+  <helpText id="Debug:DrawCurrentPage">
+    <desc>在機器人上方顯示目前編排程式的頁面。</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>目前未實行。</desc>
+  </helpText>
+  
+  <!-- Help for World Edit Tweak Screen-->
+  
+  <helpText id="GlassWalls">
+    <desc>沿著你的世界邊緣創造隱形障礙。這可以預防機器人掉出世界邊緣。
+	
+熱氣球、雲、噴射機、光源、飛碟、飛船、鬼火，以及火箭可以穿過玻璃牆。</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>顯示變更此世界人員的歷程記錄。</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>在你的遊戲執行時，允許你控制攝影機移動。
+	
+「固定位置」選項可以在執行你的遊戲時，保持攝影機不動。這對於需要鳥瞰視角的遊戲很有幫助。請注意，在寬螢幕上顯示時，景象會有所不同。
+	
+「固定偏移」選項能讓攝影機與其追蹤的物件保持固定的距離和方向。這可能會是游標或機器人。非常適合橫向捲軸遊戲。
+	
+「自由」選項是預設值，可以讓攝影機自由拍攝，除非有機器人的程式要求攝影機以第一人稱視角拍攝，或追蹤該機器人。如果你使用固定位置或固定偏移的攝影機選項，按下 &lt;X&gt; 按鈕，可設定攝影機的位置。
+	</desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>控制你的遊戲開始時，攝影機的擺放位置。如要使用此選項，並且移動攝影機至遊戲開始時想要的擺放位置，請開啟世界設定，選取核取方塊。
+如果你稍後想要變更位置，可以按下 &lt;x&gt; 按鈕，這會進入讓你能自由擺放攝影機至想要位置的模式。</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>控制攝影機在使用者控制的角色後方擺動的程度。 </desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>讓你隱藏通常顯示於螢幕右下角的指南針。編輯時會出現指南針，只在執行你的遊戲時會隱藏起來。</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>讓你隱藏資源狀態 (測量儀)，這通常顯示在螢幕右側。編輯時會出現資源狀態，只在執行你的遊戲時會隱藏起來。</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>
+讓你關閉資源狀態 (測量儀) 所顯示的資源限制，這通常顯示在螢幕右側。關閉此選項可讓你隨心所欲地增加想要的地域和物件數量。
+警告：如果沒有此限制，你可能會讓 Kodu 的執行速度變得異常緩慢。你也可能會用盡你的系統記憶體，造成 Kodu 當機。
+	</desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>當你在世界中有水時，控制波浪的高度。</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>控制水所造成的景象扭曲強烈程度。</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>為你的世界選擇一組背景顏色。
+結合天空和光線設定，可以為你的遊戲增添不同氣氛。</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>為你的世界選擇一組光。如果你選擇黑暗光設定，那在你執行遊戲時，就只能看見一片黑。編輯時會使用較明亮的光線設定，讓你可以清楚看見你的世界。
+結合天空和光線設定，可以為你的遊戲增添不同氣氛。</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>在遊戲中，讓微風以最輕柔的方式吹過樹梢。</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>在遊戲中，讓微風以最猛烈的方式吹過樹梢。</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>控制在你玩遊戲時，要如何啟動：
+「無」：僅啟動遊戲，沒有任何效果。
+「世界標題」：顯示此世界的標題 3 秒，然後開始玩。
+「世界說明」：顯示世界的名稱，提示使用者按下 &lt;a&gt; 開始玩。這會使用你在儲存遊戲時提供的說明。
+「倒數」：在遊戲開始錢顯示 3-2-1 的倒數。這非常適合賽車遊戲。</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>當角色遵循著路徑行動時，這會顯示每個角色正朝著哪個導航點前進。目標終點會顯示有顏色的線框，這個線框的顏色會與正朝其前進的角色顏色相同。</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>顯示機器人和其他物件用於相互碰撞及碰撞地面的形狀。</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>如果機器人使用視覺或聽覺，顯示它們可看到及聽到哪些機器人。</desc>
+  </helpText>
+  <helpText id="Debug:ShowCurrentPage">
+    <desc>在編排程式的機器人上方顯示目前編排程式的頁面。</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>地域編輯的速度係數。數字越小就越慢，越大則越快。</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>控制使用者介面音效的音量，如選單和按鈕。</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>控制你的遊戲效果音音量。這包括爆炸、碰撞，以及機器人製造出的聲音。</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>控制你為遊戲所選擇的背景音樂音量。</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>控制如何凸顯此顏色的分數事件顯示狀態。
+關閉：不顯示分數。
+安靜：分數顯示於角落，但不會有任何分數效果。
+大聲：分數會以動畫方式從遊戲中的得分位置一路顯示至記分板上為止。
+	</desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>控制在下一階層/上一階層動作中，已獲得的分數是否會繼續保留。
+開啟：保留分數，在新階層載入時，數字會維持不變。
+關閉：載入新階層時，分數會重設為零。
+	</desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>顯示/隱藏螢幕虛擬控制器。</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+	  控制如何顯示 GUI 按鈕。
+	  關閉：不顯示按鈕。
+	  沒有標記：顯示按鈕，但不會伴隨文字。
+	  標記：顯示按鈕，同時顯示可識別按鈕的文字。
+	</desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+	  設定「下一階層」方塊要載入的階層。同時啟用「上一階層」方塊，可從該階層將玩家帶回目前的階層。
+	</desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+	  升高水面至此物件下方。
+	</desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+	  降低水面至此物件下方。
+	</desc>
+  </helpText>
+  
+  
+  <helpText id="SetWater">
+    <desc>
+	  在此物件下方設定水的類型。
+	</desc>
+  </helpText>
+  
+  <!-- Help for User Options Tweak Screen-->
+  
+  <helpText id ="ShowToolTips">
+    <desc>允許你關閉工具秘訣。</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>允許你關閉提示。當系統偵測到可能會造成問題的狀況時，就會顯示提示。
+顯示提示時，會有選項讓你可停用提示。</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>通常在遊戲手把工具選單開啟時，背景會變得模糊，你無法在此時移動攝影機。
+關閉此選項，就能讓攝影機保持「活動」狀態。不過，你仍然需要在與世界互動前先選取一項工具。關閉此選項也代表左搖桿現在用於控制攝影機，所以你必須使用方向鍵或發射鍵選取你要使用的工具。</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>這會清除任何你先前選擇停用的提示上之「停用」標示，這些提示會再度出現。</desc>
+  </helpText>
+
+  <helpText id ="ShowFramerate">
+    <desc>啟用目前的畫面播放速率 (FPS) 時，會顯示於螢幕左下角。</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>控制螢幕左上角顯示的說明文字量。</desc>
+  </helpText>
+
+  <helpText id ="Language">
+    <desc>控制使用語言。Kodu 的翻譯由我們的社群所完成。如果你想將 Kodu 翻譯成你的語言，請傳送電子郵件至 KoduSupport@microsoft.com，以便我們提供你更多資訊。</desc>
+  </helpText>
+
+  <helpText id ="InvertYAxis">
+    <desc>推動搖桿讓機器人向下移動。</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>向左推動搖桿讓機器人轉向右方。</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>向前推動搖桿讓攝影機抬頭。</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>向左推動搖桿讓攝影機轉向右方。</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>「溢出掃描」是指可依據顯示邊緣剪下的渲染圖像量。此數量根據顯示裝置及連線裝置而有所不同。滑桿能讓你控制說明顯示的位置與螢幕中心的距離。如果你的顯示螢幕會剪掉說明，請加大此數值。若你的電視為方型電視，通常 20% 會有最佳顯示狀態。電腦螢幕上適用 0 或 5%。實驗看看，找出最適合你的顯示方式。</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>若設定此選項，其他使用者將可增加世界至你的下載佇列。</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>若設定此選項，你從其他玩家處下載的世界會自動標示為已分享，可在未來的分享工作階段中下載。</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>在分享工作階段中，自動下載有「最愛」標籤的世界。</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>此範圍用於視野和聽覺感應器中的「附近」篩選器。單位是公尺。參考用：地域方塊的長度為半公尺。</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>此範圍用於視野和聽覺感應器中的「遠處」篩選器。單位是公尺。參考用：地域方塊的長度為半公尺。</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>若設定此選項，在啟動 Kodu 時會檢查是否已有更新的版本。</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>若設定此選項，Kodu 會傳送你使用 Kodu 方式的匿名資訊至 Microsoft。此資訊可協助我們改善 Kodu。</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>若設定此選項，下次啟動 Kodu 時，會播放介紹影片。</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>一般來說，在你退出 Kodu 時，我們會刪除你的 Kodu 社群網站登入資訊。如果你開啟此設定，我們會試著讓你持續地登入多個 Kodu 工作階段。</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>這能協助人們建立屬於自己的教學課程。開啟後，執行教學課程階層時，這會在螢幕上顯示偵錯資訊。</desc>
+  </helpText>
+
+</XmlHelpTextData>
+

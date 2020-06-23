@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><!-- Help for Object Edit Tweak Screen--><helpText id="PushRange">
+    <desc>Vezérli az alaptartományt, amelyben a tárgyakat eltolja. A tárgy méretezése is befolyásolja.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>Azt vezérli, mekkora erő szükséges a tárgyak eltolásához. Az erősség módosítói módosítják.</desc>
+  </helpText>
+  
+  <helpText id="LightRange">
+    <desc>Állítsd be milyen messzire ragyogjon a fény (csak fények esetén elérhető).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+    <desc>Végezd el a robot sebességének finomhangolását. Az 1,0 érték jelenti az alapértelmezett sebességet.</desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>Végezd el a robot gyorsulásának finomhangolását. Az 1,0 érték jelenti az alapértelmezett gyorsulást.</desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Zárold a robot helyzetét, így nem tud semerre mozdulni.  De forogni még tud.</desc>
+  </helpText>
+  <helpText id="Invulnerable">
+    <desc>Ez elpusztíthatatlanná teszi a robotot.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>Ha beállítod, a robot feje felett megjelenik egy kis sáv, amely a robot maradék életerejét mutatja.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>Ez lehetővé teszi, hogy ellenőrizd a robot kezdő életerő pontjainak számát.  Az életerő pontok száma csökken, ha a robot megsérül és növekszik, ha a robot meggyógyul.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>Ha a robot „Létrehozhatóvá” van nyilvánítva, akkor kétféle módon különlegessé válik. Először is, ha lemásolod a robotot, minden másolat egy agyon osztozik - ha az egyiken módosítasz valamit, az mindegyiknél változik.  A létrehozhatók és a másolataik közötti kapcsolatot pontozott vonallal láthatod (szerkesztéskor). Másodszor is, most már beprogramozhatsz más robotokat, hogy ezzel a programozással teljesen létrehozzák ezt a robotot.  Ez remek ügyességi játékok esetén, ahol folyamatosan szeretnél ellenségeket létrehozni. Ne feledd, így könnyen meghaladhatod a világ költségvetését, és ekkor a Létrehozás funkció nem fog működni.</desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>Létrehozhatók esetén ez azt jelenti, hogy korlátozza a létrehozható karakterek számát játék közben. Ez a szerkesztés közben létrehozott másolatokra nem vonatkozik, csak a játék közben Létrehozás funkcióval, a többi robotból létrehozott másolatok számát korlátozza.</desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>Irányítja a kamera tevékenységét a robotra vonatkozóan. Normál esetben a kamera a játékos által vezérelt robotot követi. Ha ezt Mindig opcióra állítod, akkor a kamera folyamatosan követi a robotot. Ha több robot esetén is ezt állítod be, akkor a kamera megpróbálja mindegyiket a képernyőn tartani. Ha ezt Soha opcióra állítod, a kamera figyelmen kívül hagyja ezt a robotot, még akkor is, ha a játékos éppen azt vezérli.</desc>
+  </helpText>
+  <helpText id="HoldDistance">
+    <desc>Ez vezérli, milyen messzire lehet elvinni a „tartott” tárgyat.</desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>Ez vezérli, mennyire pattan vissza a robot, ha nekimegy egy tereptárgynak, falnak vagy másik robotnak.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>Ez vezérli, mennyit csúszik a robot, ha nekimegy egy tereptárgynak, falnak vagy másik robotnak.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Ez vezérli mekkora kárt okoz a robotból kilőtt lövedék.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>A lövedék újratöltési ideje vezérli az időt, ami a következő lövedék kilövése előtt szükséges. Ez másodpercekben mérhető.</desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Azt vezérli, hogy milyen messzire repül a lövedék mielőtt eltűnne.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Azt vezérli, hogy milyen gyorsan repül a lövedék kilövés után.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>Azt vezérli, hogy a robot egyszerre hány lövedéket lő ki a levegőbe. Ha a robot már kilőtt ennyi lövedéket, addig nem lőhetsz újra, amíg a lövedék el nem talált valamit vagy el nem érte a maximális hatótávolságot.</desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Azt vezérli, hogy a robotból kilőtt rakéta, amelyik betalál a célba hány életerő pontot vesz el.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>Azt vezérli, hogy mennyi ideig kell várnia a robotnak a rakéták kilövése között. Ez másodpercekben mérhető.</desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Azt vezérli, hogy milyen messzire repül a rakéta mielőtt eltűnne.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Azt vezérli, hogy milyen gyorsan repül a rakéta kilövés után.</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>Azt vezérli, hogy a robot hány rakétát lő ki a levegőbe egyszerre. Ha a robot már kilőtt ennyi rakétát, addig nem lőhetsz újra, amíg a rakéta el nem talált valamit vagy el nem érte a maximális hatótávolságot.</desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Azt vezérli, hogy a robot által kilőtt rakéták bocsátanak-e ki füstöt. A füst nélküli rakéták gyorsabbak.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Azt vezérli, hogy a pajzs vizuális effektje megjelenik-e, ha a robot valamibe beleütközik vagy kárt okoz.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Azt vezérli, hogy a robot egyáltalán látszik-e. A többi robot még mindig látja és hallja.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Azt vezérli, hogy a robotot a többi robot látja-e, hallja-e és beleütközik-e. A szellem robotok még mindig hallják és látják a többieket, de nem tudnak beléjük ütközni.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Kapcsold ki a karakter összes beépített hangját. A programozott hangok ugyanúgy hallhatóak. Ne feledd, a többi karakter még képes észlelni a karakter jelenlétét, mert hallja.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Átsiklik bármely vízfelületen. Ezt kapcsold ki, hogy a karakterek lemerülhessenek a vízbe.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Azt vezérli, hogy a többi karakter milyen messziről hallja ezt a karaktert. Nem módosítja a hangot, amelyet a játékos hall.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Azt vezérli, hogy ez a karakter milyen messziről hallja a többi karaktert. Nem módosítja a hangot, amelyet a játékos hall.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>Igaz, hogy a robot szellemszerű, de képes összeütközni a környezeti tárgyakkal.</desc>
+  </helpText>
+  
+  <helpText id="KickStrength">
+    <desc>Azt vezérli, hogy a robot milyen erősen rúg bele a tárgyakba.  Erős rúgástól a tárgy messzebbre repül.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Azt vezérli, hogy milyen gyorsan tud a robot egy második tárgyat elrúgni az első tárgy elrúgása után.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc>Méretezd a robotot felfelé (nagyobbra) vagy lefelé (kisebbre). Az 1,0 érték a normál méret.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>Ha látsz valamit, arra néhány másodpercig még emlékszel, még akkor is, ha már nem látod.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Befolyásolja a karakter ragyogás effektjének fényességét. Ne feledd, hogy a ragyogó karakterek nem világítják meg a többi karaktert.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Állítsd be, hogy a tárgy ténylegesen bocsásson fényt a többire ragyogáskor és azt, milyen erős legyen ez a hatás.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Állítsd be, hogy a robot ragyogása milyen erősen világítsa meg saját magát.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>Ha karaktereket úgy programoztad, hogy vándoroljanak, körözzenek, vagy távolodjanak el valamitől, ez megmutatja az útjába kerülő akadályokat.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>Ha ez a robot a látást vagy a hallást használja, az megmutatja melyik robotokat látja és hallja ez a robot.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Jelenleg nincs végrehajtva.</desc>
+  </helpText><!-- Help for World Edit Tweak Screen--><helpText id="GlassWalls">
+    <desc>Létrehoz egy láthatatlan akadályt a világ pereme körül.  Így a robotok nem tudnak lezuhanni a világ peremén. A lufi, felhő, sugárhajtású repülő, a fény, a csészealj, a léghajó, a lidérc és a rakéta át tud menni az üvegfalon.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Megmutatja az embereket, akik módosították a világot.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Lehetővé teszi a kamera mozgásának vezérlését a játék közben. A rögzített pozíció opcióval rögzítheted a kamerát játék közben.  Hasznos ügyességi játékokhoz, amelyekhez felső nézet szükséges. Ne feledd, hogy szélesvásznú képernyőn a nézet eltérő lehet. A rögzített eltolás opció rögzített távolságon és irányban tartja a kamerát ahhoz a tárgyhoz képest, amelyet követ.  Ez lehet a kurzor vagy egy robot. Hasznos oldalsó görgetéses játékok esetén. A szabad opció alapértelmezett beállítás, lehetővé teszi a kamera szabad mozgását, kivéve ha a robot programozása a kamerát a karakter szemszögébe helyezi vagy követi azt.  Ha rögzített vagy eltolt kamerát használsz, az &lt;X&gt; gomb megnyomásával beállíthatod a kamera helyzetét.</desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Azt vezérli, hová van a kamera pozicionálva, amikor a játék elkezdődik.  A használathoz helyezd a kamerát oda, ahol szeretnéd, hogy a játék kezdetekor legyen, nyisd meg a Világ beállításait és jelöld be a négyzetet. Ha később szeretnéd a helyzetét megváltoztatni, nyomd meg az &lt;x&gt; gombot, így a rendszer egy olyan módba áll, amely lehetővé teszi, hogy a kívánt helyzetbe állítsd a kamerát.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Azt vezérli, milyen erősen ing a kamera, hogy a felhasználó által vezérelt karakter mögé kerüljön. </desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Lehetővé teszi az iránytű elrejtését, amely normál esetben a képernyő jobb alsó sarkában jelenik meg.  Az iránytű szerkesztés közben mindig látható és csak játék közben tűnik el.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Lehetővé teszi az erőforrásmérő (hőmérő) elrejtését, amely normál esetben a képernyő jobb oldalán látható.  Az erőforrásmérő szerkesztés közben mindig látható és csak játék közben tűnik el.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>Lehetővé teszi az erőforrás korlátozásának kikapcsolását, amelyet a képernyő jobb oldalán található erőforrásmérő (hőmérő) mutat.  Az opció kikapcsolásával annyi terepet és tárgyat adhatsz hozzá a világhoz, amennyit szeretnél. FIGYELEM:  A korlátozás nélkül lehetséges, hogy a Kodut csak rendkívül lassan tudod használni.  Lehetséges, hogy ez meghaladhatja a rendszer memóriáját és a Kodu összeomlásához vezethet.</desc>
+  </helpText>
+  <helpText id="WaveHeight">
+    <desc>Vezérli a hullámok magasságát, ha van víz a világodban.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>Azt vezérli, hogy a víz milyen erősen torzítja a képet.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Válassz háttérszín-készletet a világodhoz. Kombináld az ég és a világítás beállításait a világ hangulatának kialakításához.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Válassz fényeket a világodhoz.  Ha sötét világítási beállítást választasz, akkor sötét lesz játék közben.  Szerkesztés közben világosabb beállítási módot használ a rendszer, így tisztán láthatod a világodat. Kombináld az ég és a világítás beállításait a világ hangulatának kialakításához.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Azt vezérli, hogy a leglágyabb szél fújja fákat a játékban.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Azt vezérli, hogy a legerősebb szél fújja fákat a játékban.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Azt vezérli, hogyan kezdődjön a játék, amikor játszol: „Semmi” beállítás esetén a játék normálisan, effektek nélkül indul. „Világ címe” beállítás megjeleníti a világ nevét 3 másodpercre, majd elindítja a játékot. „Világ leírása” beállítás megjeleníti a világ nevét és javasolja a felhasználónak, hogy nyomja meg az &lt;a&gt; gombot a játék indításához.  Felhasználja azt a leírást, amelyet a játék mentésekor adsz meg. „Visszaszámlálás” beállítás 3-2-1 visszaszámlálást jelenít meg a játék indítása előtt.  Ez autóversenyes játékokhoz jó.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>Ha a karakterek követik az utat, ez mutatja melyik útpont felé halad a karakter. A célok vázkeretekként jelennek meg, és azzal a karakterrel megegyező színűek, amelyik feléjük halad.</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Megmutatja azokat az alakzatokat, amelyeket a robotok és egyéb tárgyak használnak az egymáshoz és a talajhoz ütközés esetén.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>Ha bármely robot a látást vagy a hallást használja, az megmutatja melyik robotokat látja és hallja.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>A terephez tartozó sebességtényezőt adja meg. A kisebb lassabb, a nagyobb gyorsabb.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Vezérli a felhasználói felület hangeffektjeinek hangerejét pl. a menüét és gombokét.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Vezérli az effektek hangerejét a játékban.  Ez tartalmazza a robbanások és ütközések hangját illetve a robotok által kiadott hangokat.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Vezérli a játékhoz kiválasztott háttérzene hangerejét.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Azt vezérli, hogy milyen feltűnő legyen a kijelző az adott színű pontozási esemény esetén. Ki: az eredmény nem jelenik meg a képernyőn. Csendes: az eredmény a képernyő sarkában megjelenik, de pontozási effektek nélkül. Hangos: eredmény események játékban való helyéről a eredménytáblára kerülnek.</desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>Azt vezérli, hogy a megadott eredmény állandó-e a KövetkezőSzint/ElőzőSzint műveletek esetén. Be: az eredmény állandó és ugyanaz az értéke az új szintek betöltésekor Ki: az eredmény visszaáll nullára az új szintek betöltésekor</desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>Megjeleníti/elrejti a képernyőn található virtuális vezérlőt.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>Azt vezérli, hogyan jelenjenek meg a grafikus felhasználói felület gombjai. Ki: a gomb nem jelenik meg a képernyőn. Nincs címke: A gomb megjelenik és nincs rajta szöveg. Címkézett: A gomb megjelenik némi szöveggel a jobb azonosítás érdekében.</desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>Beállítja a szintet, amelyet a „Következő szint” csempe tölt be.  Engedélyezi, hogy az „Előző szint” csempe erről a szintről visszavigye a játékost az aktuális szintre.</desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>A tárgy alatt megemeli a vízszintet.</desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>A tárgy alatt lecsökkenti a vízszintet.</desc>
+  </helpText>
+  
+  
+  <helpText id="SetWater">
+    <desc>Beállítja a víz típusát a tárgy alatt.</desc>
+  </helpText><!-- Help for User Options Tweak Screen--><helpText id ="ShowToolTips">
+    <desc>Lehetővé teszi az eszköz tippek kikapcsolását.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>Lehetővé teszi a tanácsok kikapcsolását.  A tanácsok akkor jelennek meg, ha a rendszer problémát okozó helyzet kialakulását érzékeli. A tanács megjelenésekor választhatod a tanács kikapcsolása opciót.</desc>
+  </helpText>
+
+  <helpText id="ModalToolMenu">
+    <desc>Normál esetben ha a Játékvezérlő eszköz menüje aktív, a háttér elmosódik és nem tudod körbeforgatni a kamerát.  Az opció kikapcsolásával a kamera „élő” marad.  De a világgal való kapcsolatfelvétel előtt ki kell választanod egy eszközt. Ennek kikapcsolása azt jelenti, hogy a bal kar most a kamera vezérlésére használható, így a kívánt eszközt a Dlap vagy a ravaszok segítségével kell kiválasztanod.</desc>
+  </helpText>
+
+  <helpText id ="RestoreDisabledHints">
+    <desc>Ez törli a „letiltott” jelölést a tanácsról, amelyet korábban letiltásra kiválasztottál, így azok újra láthatóvá válnak.</desc>
+  </helpText>
+
+  <helpText id ="ShowFramerate">
+    <desc>Az engedélyezett, aktuális képkockasebesség (FPS) megjelenik a képernyő bal alsó sarkában.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Vezérli a képernyő bal felső sarkában megjelenő súgó szövegének mennyiségét.</desc>
+  </helpText>
+
+  <helpText id ="Language">
+    <desc>Azt vezérli, hogy melyik nyelvet használja a rendszer.  A Kodu fordításokat közösségünk végzi.  Ha szeretnél segíteni, hogy a Kodu a nyelvedre is le legyen fordítva írj nekünk a KoduSupport@microsoft.com címre további információért.</desc>
+  </helpText>
+
+  <helpText id ="InvertYAxis">
+    <desc>Nyomd le a kart a robot lefelé mozgatásához.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Nyomd a kart balra a robot jobbra fordításához.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Nyomd a kart előre a kamera felfelé fordításához.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+    <desc>Nyomd a kart balra a kamera jobbra fordításához.</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>A „túlpásztázás” kifejezés a renderelt képmennyiségre utal, amely a kijelző szélein le van vágva.  Ez a mennyiség a kijelző eszköztől és az eszközzel való kapcsolattól függ.  A csúszkával beállíthatod, hogy a súgó a képernyő közepétől milyen messze jelenjen meg.  Ha le vannak vágva a képernyőről, állítsd az értéket nagyobbra.  Régi típusú televíziókon 20%-os beállítás a legjobb.  Számítógépes monitoron 0-5% közötti értékkel kell dolgoznod.  Tapasztald ki és használd azt, amelyik nálad jobban működik.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>Ha beállítod, más felhasználók is adhatnak hozzá világokat a letöltési sorodhoz.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>Ha beállítod, a más játékosoktól letöltött világok automatikusan megosztottként lesznek megjelölve, így elérhetővé válnak jövőbeli megosztási munkamenetek számára.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>Megosztási munkamenetekben a „Kedvenc” címkével ellátott világok automatikusan letöltésre kerülnek.</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>A közeli szűrő által használt tartományt a látás és hallás érzékelők is használják. A mértékegységek méterben vannak megadva. Referenciaként: Egy terepcsempe keresztben fél méter.</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>A távoli szűrő által használt tartományt a látás és hallás érzékelők is használják. A mértékegységek méterben vannak megadva. Referenciaként: Egy terepcsempe keresztben fél méter.</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>Ha beállítod, az indításkor Kodu ellenőrzi, hogy megjelent-e új verzió.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>Ha beállítod, a Kodu névtelen információkat küld a Microsoftnak a Kodu használatáról. Ez az információ segít nekünk a Kodu fejlesztésében.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>Ha beállítod, a Kodu következő indításakor a bemutatkozó videó lejátszásra kerül.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>Normális esetben a Kodu Közösség weboldalára való bejelentkezési adataidat a rendszer elfelejti, ha kilépsz a Koduból.  Ha beállítás be van kapcsolva, megpróbáljuk lehetővé tenni, hogy a bejelentkezésed több Kodu munkamenetben fennmaradjon.</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>Ez segít az embereknek saját oktatóanyagaik létrehozásában.  Ha be van kapcsolva és oktatási szinten fut, megjeleníti a hibakeresési információkat a képernyőn.</desc>
+  </helpText>
+
+</XmlHelpTextData>

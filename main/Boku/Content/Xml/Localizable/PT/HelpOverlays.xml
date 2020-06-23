@@ -1,0 +1,2178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlOverlayData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <overlay>
+    <id>MiniHub</id>
+    <a>Selecionar</a>
+    <back>Retomar</back>
+    <bottom>Premir &lt;start&gt; em qualquer altura para voltar aqui.</bottom>
+
+    <keyMouse>
+      [Enter] Selecionar
+    </keyMouse>
+    <keyMouseBottom>Premir [home] em qualquer altura para voltar aqui.</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditBase</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Edição com Rato</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditHome</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Menu Home</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPlay</id>
+
+    <keyMouse></keyMouse>
+    <keyMouseBottom>Jogar</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditCameraMove</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Arrasta Terreno
+      &lt;rightmouse&gt; Orbita a Câmara
+      &lt;middlemouse&gt; Zoom de Roda Scroll
+      [Tab] Encontrar Próxima Personagem
+
+    </keyMouse>
+    <keyMouseBottom>Move Câmara</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObject</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Adiciona/Seleciona objeto
+      &lt;rightmouse&gt; Opções
+
+      HelpLevelMid
+      [F3] Aciona fixar à grelha
+      [Tab] Encontra a próxima personagem
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Objeto: Adiciona ou Edita Personagens ou Objetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocus</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Arrasta Objeto
+      &lt;rightmouse&gt; Opções
+      [leftarrow][rightarrow] Altera a Cor
+
+      HelpLevelMid
+      [F3] Aciona Colar à Grelha
+      [Tab] Encontra a Próxima Personagem
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Objeto: Adiciona ou Edita Personagens ou Objetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditEditObjectFocusTree</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Arrasta Objeto
+      &lt;rightmouse&gt; Opções
+      [leftarrow][rightarrow] Altera a Cor
+      [uparrow][downarrow] Altera o Tipo de Árvore
+
+      HelpLevelMid
+      [F3] Aciona Colar à Grelha
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Objeto: Adiciona ou Edita Personagens ou Objetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPaths</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Arrasta Nodo ou Limite
+      &lt;rightmouse&gt; Opções
+      [Shift] Atua em todo o Trajeto
+
+      HelpLevelMid
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Trajetos: Adiciona ou Edita Trajetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusNode</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Arrasta Nodo
+      &lt;rightmouse&gt; Opções
+      [Shift] Atua em Todo o Trajeto
+      [leftarrow][rightarrow] Altera a Cor
+      [uparrow][downarrow] Altera o Estilo do Trajeto
+
+      HelpLevelMid
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Trajetos: Adiciona ou Edita Trajetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusEdge</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Arrasta Limite
+      &lt;rightmouse&gt; Opções
+      [Shift] Atua em todo o Trajeto
+      [leftarrow][rightarrow] Altera a Cor
+
+      HelpLevelMid
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Trajetos: Adiciona ou Edita Trajetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditPathsFocusPath</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Arrasta Trajeto
+      &lt;rightmouse&gt; Opções
+      [Shift] Atua em todo o Trajeto
+      [leftarrow][rightarrow] Altera a Cor
+
+      HelpLevelMid
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Trajetos: Adiciona ou Edita Trajetos</keyMouseBottom>
+  </overlay>
+
+
+  <overlay>
+    <id>MouseEditTerrainPaint</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Pinta e Adiciona Material
+      [Shift] +&lt;leftmouse&gt; Pinta Material
+      [Ctrl] +&lt;leftmouse&gt; Adiciona Material
+      &lt;rightmouse&gt; Apaga
+
+      [leftarrow][rightarrow] Altera o Tamanho do Pincel
+
+      HelpLevelMid
+      [Alt] Apanha Material do Terreno
+      [F3] Aciona Colar à Grelha
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+	  
+    </keyMouse>
+    <keyMouseBottom>Pincel de Terreno: Pinta, Adiciona e Apaga Terreno</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainPaintMagicBrush</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Pinta e Adiciona Material
+      [Shift] +&lt;leftmouse&gt; Pinta Material
+      [Ctrl] +&lt;leftmouse&gt; Adiciona Material
+      &lt;rightmouse&gt; Apaga
+
+      [leftarrow][rightarrow] Altera o Tamanho do Pincel
+      [uparrow] Estilo: Cúbico
+      [downarrow] Estilo: Suave
+
+      HelpLevelMid
+      [Alt] Apanha Material do terreno
+      [F3] Aciona Colar à Grelha
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Pincel de Terreno: Pinta, Adiciona e Apaga Terreno</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Eleva o Terreno
+      &lt;middlemouse&gt; Suaviza o Terreno
+      &lt;rightmouse&gt; Baixa o Terreno
+
+      [leftarrow][rightarrow] Altera o Tamanho do Pincel
+
+      HelpLevelMid
+      [F3] Aciona Colar à Grelha 
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Up/Down: Cria Montes e Vales</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainSmoothLevel</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Suavizar
+      &lt;middlemouse&gt; Suavizar Terreno
+      &lt;rightmouse&gt; Nivelar
+
+      [leftarrow][rightarrow] Altera o Tamanho do Pincel
+
+      HelpLevelMid
+      [F3] Aciona Colar à Grelha
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Aplanar: Faz com que o Terreno fique suave ou nivelado</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditTerrainSpikeyHilly</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Acidentar Terreno
+      &lt;middlemouse&gt; Suavizar Terreno
+      &lt;rightmouse&gt; Fazer Morros
+
+      [leftarrow][rightarrow] Alterar o Tamanho do Pincel
+
+      HelpLevelMid
+      [F3] Aciona Colar à Grelha
+      [Space] Move a Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Enrugar: Cria Terreno acidentado ou cria morros</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditWaterRaiseLower</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Aumentar Água
+      &lt;middlemouse&gt; Alterar a Cor da Água
+      &lt;rightmouse&gt; Baixar Água
+
+      HelpLevelMid
+      [F3] Acionar Colar à Grelha
+      [Space] Mover Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Água: Adiciona, Remove ou Matiza a Água</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditDeleteObjects</id>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Apagar
+      &lt;rightmouse&gt; Não há nada aqui, segue em frente.
+
+      [leftarrow][rightarrow] Alterar o tamanho do Pincel
+
+      HelpLevelMid
+      [F3] Acionar Colar à Grelha
+      [Space] Mover Câmara
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Ferramenta Apagar: Usar um pincel para apagar objetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>MouseEditWorldTweak</id>
+
+    <keyMouse>
+      Alterar as Definições do Mundo
+
+      HelpLevelMid
+      [Home] Menu Home
+      [Esc] Executar
+    </keyMouse>
+    <keyMouseBottom>Alterar as Definições do Mundo</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>MouseEditSlider</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Valor
+      [Esc] Aceitar
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenu</id>
+    <!-- Placeholder, should not be seen. -->
+    <back>Executar Jogo</back>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ferramenta de Seleção</a>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>ToolMenuRunSim</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Jogar Jogo</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Jogar</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      HelpLevelMid
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Jogar Jogo</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuHomeMenu</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Menu Home</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Menu Home</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      HelpLevelMid
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Jogar Jogo</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuObjectEdit</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ferramenta de Seleção</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Ferramenta de Objeto: Adiciona ou Edita Personagens ou Objetos</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Objeto: Adiciona ou Edita Personagens ou Objetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuDeleteObjects</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ferramenta de Seleção</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Ferramenta Apagar: Usar um Pincel para Apagar Objetos</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Ferramenta Apagar: Usar um Pincel para Apagar Objetos</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSmoothLevel</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ferramenta de Seleção</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Aplanar: Suaviza o Terreno e nivela-o</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Aplanar: Suaviza o Terreno e nivela-o</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainMaterial</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ferramenta Selecionar</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Pincel de Terreno: adiciona ou remove Terreno</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Pincel de Terreno: Pinta, Adiciona ou Apaga Terreno</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainSpikeyHilly</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ferramenta de Seleção</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Enrugar: Cria Terreno acidentado ou montanhoso</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Enrugar: Cria Terreno acidentado ou montanhoso</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainUpDown</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Select Tool</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Up/Down: Cria Montanhas e Vales</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Up/Down: Cria Montanhas e Vales</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuTerrainWater</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ferramenta de Seleção</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Ferramenta de Água: Adiciona, Remove ou Matiza a Água</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Ferramenta de Água: Adiciona, Remove ou Matiza Água</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>ToolMenuWorldSettings</id>
+    <back>Executar Jogo</back>
+    <start>Menu Home</start>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Ferramenta de Seleção</a>
+    <leftStick mid = "false">Mover Cursor</leftStick>
+    <rightStick mid = "false">Orbitar Câmara</rightStick>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+    <leftShoulder mid = "false">Zoom Out</leftShoulder>
+    <rightShoulder mid = "false">Zoom In</rightShoulder>
+    <bottom>Alterar Definições do Mundo</bottom>
+
+    <keyMouse>
+      [Esc] Executar
+      [Home] Menu Home
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+    </keyMouse>
+    <keyMouseBottom>Alterar Definições do Mundo</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>BrushPickerSquare</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Quadrado</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecinar Pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel Quadrado</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSquareLinear</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Quadrado Linear</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel quadrado linear</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRound</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel redondo rígido</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel redondo rígido</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRound</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar pincel</a>
+    <leftTrigger>Pincel anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Redondo Médio</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar Pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel Redondo Médio</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRound</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Seleccionar pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Redondo Suave</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel Redondo Suave</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerHardRoundLinear</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Redondo Linear</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar pincel
+      [Enter] Selecionar pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel Redondo Linear Rígido</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMediumRoundLinear</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próxim Pincel</rightTrigger>
+    <bottom>Pincel Redondo Linear Médio</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar Pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel Redondo Linear Médio</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerSoftRoundLinear</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Redondo Linear Suave</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar Pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel Redondo Linear Suave</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottled</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Malhado</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar Pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel malhado</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMottledLinear</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Malhado Linear</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar Pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel Malhado Linear</keyMouseBottom>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMagic</id>
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <b>Cancelar</b>
+    <a>Selecionar Pincel</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Pincel Mágico</bottom>
+
+    <keyMouse>
+      [Y ]Aceitar e Mudar para Selecionador de Material 
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar Pincel
+    </keyMouse>
+    <keyMouseBottom>Pincel Mágico</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>CameraSetMode</id>
+    <a>Aceitar</a>
+    <bottom>Move a câmara para a posição desejada, depois premir &lt;A&gt;</bottom>
+
+    <keyMouse>
+      [Enter] Aceitar
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+    </keyMouse>
+    <keyMouseBottom>Move a câmara para a posição desejada, depois premir [Enter]</keyMouseBottom>
+  </overlay>
+
+  <!--Object edit permutations-->
+  <overlay>
+    <!-- Nothing selected, nothing moused, something in the clipboard-->
+    <id>ObjectEdit</id>
+    <y></y>
+    <x></x>
+    <b>Menu Ferramentas</b>
+    <a>Adicionar</a>
+
+    <leftTrigger ghosted = "true">Cortar</leftTrigger>
+    <rightTrigger ghosted = "false">Colar</rightTrigger>
+
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Alt]+&lt;leftmouse&gt; Colar
+      [Space]+&lt;leftmouse&gt; Adicionar
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Nothing selected, nothing moused, nothing in the clipboard-->
+    <id>ObjectEditEmptyClipboard</id>
+    <y></y>
+    <x></x>
+    <b>Menu Ferramentas</b>
+    <a>Adicionar</a>
+
+    <leftTrigger ghosted = "true">Cortar</leftTrigger>
+    <rightTrigger ghosted = "true">Colar</rightTrigger>
+
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Space]+&lt;leftmouse&gt; Adicionar
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused.
+    Selected thing isn't programmable. This never happens any more, since everything except the cursor
+    and waypoints (handled elsewhere) is programmable.
+    -->
+    <id>ObjectEditSelected</id>
+    <y></y>
+    <x>Definições</x>
+    <a>Colocar Aqui</a>
+    <leftTrigger>Cortar</leftTrigger>
+    <rightTrigger>Clonar</rightTrigger>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <dpadVertical>Mover Cima/Baixo</dpadVertical>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something selected (picked up, red), nothing moused. Selected thing is a gameactor.-->
+    <id>ObjectEditSelectedProgrammable</id>
+    <y>Programa</y>
+    <x>Definições</x>
+    <a>Colocar Aqui</a>
+    <leftTrigger>Cortar</leftTrigger>
+    <rightTrigger>Clonar</rightTrigger>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <dpadVertical>Mover Cima/Baixo</dpadVertical>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <!-- Something cursored (not picked up, blue), nothing moused. Cursored thing is not a gameactor.
+    This isn't useful anymore, since everything is programmable except the cursor and
+    waypoints (handled elsewhere)
+    -->
+    <id>ObjectEditFocus</id>
+    <y></y>
+    <x>Definições</x>
+    <b>Menu Ferramentas</b>
+    <a>Apanhar</a>
+    <leftTrigger>Cortar</leftTrigger>
+    <rightTrigger>Clonar</rightTrigger>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <dpadVertical>Alterar Tamanho</dpadVertical>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <!-- GameActor cursored (not picked up, blue), nothing moused.-->
+    <id>ObjectEditFocusProgrammable</id>
+    <y>Programa</y>
+    <x>Definições</x>
+    <b>Menu Ferramentas</b>
+    <a>Apanhar</a>
+    <leftTrigger>Cortar</leftTrigger>
+    <rightTrigger>Clonar</rightTrigger>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <dpadVertical>Alterar Tamanho</dpadVertical>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <!--And one for the trees-->
+  <overlay>
+    <!--A Tree is cursored (not picked up), nothing highlighted.-->
+    <id>TreeEditFocusProgrammable</id>
+    <y>Programa</y>
+    <x>Definições</x>
+    <b>Menu Ferramentas</b>
+    <a>Apanhar</a>
+    <leftTrigger>Cortar</leftTrigger>
+    <rightTrigger>Clonar</rightTrigger>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <dpadVertical>Alterar Tipo</dpadVertical>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Programa
+      [X] Definições
+      [leftarrow][rightarrow] Alterar Cor
+      [uparrow][downarrow] Alterar Tamanho
+
+      &lt;leftmouse&gt; Arrastar
+      [Shift]+&lt;leftmouse&gt; Elevar/Baixar
+      [Shift]+&lt;rightmouse&gt; Rodar
+
+      [Space]+&lt;leftmouse&gt; Adicionar
+      [Alt]+&lt;leftmouse&gt; Clonar
+      [Ctrl]+&lt;leftmouse&gt; Cortar
+
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>TreeEditMouseOver</id>
+
+    <keyMouse>
+      [Y] Programa
+      [X] Definições
+      [leftarrow][rightarrow] Alterar Cor
+      [uparrow][downarrow] Alterar tamanho
+      [Tab] Alterar Tipo
+
+      &lt;leftmouse&gt; Arrastar
+      [Shift]+&lt;leftmouse&gt; Elevar/Baixar
+      [Shift]+&lt;rightmouse&gt; Rodar
+
+      [Space]+&lt;leftmouse&gt; Adicionar
+      [Alt]+&lt;leftmouse&gt; Clonar
+      [Ctrl]+&lt;leftmouse&gt; Cortar
+
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+  <!--End of the object edit permutations-->
+
+  <overlay>
+    <id>ObjectTweak</id>
+    <y></y>
+    <x></x>
+    <b>Menu Ferramentas</b>
+    <a></a>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocus</id>
+    <y></y>
+    <x></x>
+    <b>Menu Ferramentas</b>
+    <a>Definições de Afinação</a>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>ObjectTweakFocusProgrammable</id>
+    <y>Programa</y>
+    <x></x>
+    <b>Menu Ferramentas</b>
+    <a>Definições de Afinação</a>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>TextDisplay</id>
+    <a>Continuar</a>
+  </overlay>
+
+  <overlay>
+    <id>ScrollableTextDisplay</id>
+    <a>Continuar</a>
+    <leftStick>Rolar texto</leftStick>
+  </overlay>
+
+  <overlay>
+    <id>PieSelectorProgrammingNoSelection</id>
+    <b>Cancelar</b>
+    <leftStick>Selecionar Mosaico</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorProgramming</id>
+    <a>Adicionar Mosaico</a>
+    <b>Cancelar</b>
+    <y>Ajuda</y>
+    <leftStick>Selecionar Item</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItemNoSelection</id>
+    <b>Cancel</b>
+    <leftStick>Select Item</leftStick>
+  </overlay>
+  <overlay>
+    <id>PieSelectorAddItem</id>
+    <a>Adicionar Seleção</a>
+    <b>Cancelar</b>
+    <y>Ajuda</y>
+    <leftStick>Selecionar Item</leftStick>
+  </overlay>
+  <overlay>
+    <id>HelpCardProgramming</id>
+  </overlay>
+  <overlay>
+    <id>HelpCardAddItem</id>
+  </overlay>
+
+  <overlay>
+    <id>ToolBox</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>BasePicker</id>
+    <!-- Placeholder, should not be seen. -->
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>BrushPicker</id>
+    <y></y>
+    <x></x>
+
+    <b>Cancelar</b>
+    <a>Aceitar</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Escolher Pincel</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar Pincel
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>BrushPickerMaterial</id>
+    <!-- Placeholder, should not be seen. -->
+    <y>Aceitar e Mudar para Selecionador de Material</y>
+    <x></x>
+
+    <b>Cancelar</b>
+    <a>Aceitar</a>
+    <leftTrigger>Pincel Anterior</leftTrigger>
+    <rightTrigger>Próximo Pincel</rightTrigger>
+    <bottom>Escolher Pincel</bottom>
+
+    <keyMouse>
+      [Y] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Pincel
+      [Enter] Selecionar Pincel
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialPicker</id>
+    <y>Selecionar Material sob o Cursor</y>
+    <x>Aceitar e Mudar para Selecionador de Material</x>
+    <b>Cancelar</b>
+    <a>Aceitar</a>
+    <dpadUp>Estilo: Cúbico</dpadUp>
+    <dpadDown>Estilo: Suave</dpadDown>
+    <leftTrigger>Material Anterior</leftTrigger>
+    <rightTrigger>Próximo Material</rightTrigger>
+    <bottom>Escolher Material</bottom>
+
+    <keyMouse>
+      [X] Aceitar e Mudar para Selecionador de Material
+      [leftarrow][rightarrow] Alterar Material
+      [uparrow] Estilo: Cúbico
+      [downarrow] Estilo: Suave
+      [Enter] Selecionar Material
+      &lt;leftmouse&gt; Selecionar Material Sob o Cursor
+      [Alt] + &lt;leftmouse&gt;  Selecionar Material do Mundo
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>MaterialFilterPicker</id>
+    <y>Selecionar Material Sob Robô</y>
+    <x></x>
+    <b>Cancelar</b>
+    <a>Aceitar</a>
+    <leftTrigger>Material Anterior</leftTrigger>
+    <rightTrigger>Próximo Material</rightTrigger>
+    <bottom>Escolher Material</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Material
+      [Enter] Selecionar Material
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>WaterPicker</id>
+    <y>Selecionar Água com Cursor</y>
+    <x></x>
+    <leftTrigger>Água Anterior</leftTrigger>
+    <rightTrigger>Próxima Água</rightTrigger>
+
+    <b>Cancelar</b>
+    <a>Aceitar</a>
+    <bottom>Escolher Tipo de Água</bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Tipo de Água
+      [Enter] Selecionar Tipo de Água
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>HeightMapTool</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu de Ferramentas</b>
+    <a>Suave</a>
+    <leftTrigger>Baixar</leftTrigger>
+    <rightTrigger>Elevar</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Baixar
+      [Alt]+&lt;leftmouse&gt; Suavizar
+      [Space]+&lt;leftmouse&gt; Elevar
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu de Ferramentas
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolStart</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Ignorar</b>
+    <a>Suavizar</a>
+    <leftTrigger>Baixar Terreno</leftTrigger>
+    <rightTrigger>Elevar Terreno</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Baixar
+      [Alt]+&lt;leftmouse&gt; Suavizar
+      [Space]+&lt;leftmouse&gt; Elevar
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Saltar Linha
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>HeightMapToolGoing</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu Ferramentas</b>
+    <a>Suavizar</a>
+    <leftTrigger>Baixar Terreno</leftTrigger>
+    <rightTrigger>Elevar Terreno</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho do Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Baixar
+      [Alt]+&lt;leftmouse&gt; Suavizar
+      [Space]+&lt;leftmouse&gt; Elevar
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu de Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>AddTool</id>
+    <y>Selecionador de Material</y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu de Ferramentas</b>
+    <a>Mudar a Cor do Terreno</a>
+    <leftTrigger>Apagar Terreno</leftTrigger>
+    <rightTrigger>Adicionar Terreno</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Selecionador de Material
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Apagar Terreno
+      [Alt]+&lt;leftmouse&gt; Alterar a Cor do Terreno
+      [Space]+&lt;leftmouse&gt; Adicionar Terreno
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu de Ferramentas
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolMagicBrush</id>
+    <y>Selecionador de Material</y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu de Ferramentas</b>
+    <a>Alterar a Cor do Terreno</a>
+    <leftTrigger>Apagar Terreno</leftTrigger>
+    <rightTrigger ghosted = "true">Adicionar Terreno</rightTrigger>
+
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <dpadUp>Estilo: Cúbico</dpadUp>
+    <dpadDown>Estilo: Suave</dpadDown>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Selecionador de Material
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+      [uparrow] Estilo: Cúbico
+      [downarrow] Estilo: Suave
+
+      [Ctrl]+&lt;leftmouse&gt; Apagar Terreno
+      [Alt]+&lt;leftmouse&gt; Alterar Cor do Terreno
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+
+  </overlay>
+  <overlay>
+    <id>AddToolStart</id>
+    <y>Selecionador de Material</y>
+    <x>Selecionador de Pincel</x>
+    <b>Ignorar</b>
+    <a>Alterar material</a>
+    <leftTrigger>Apagar</leftTrigger>
+    <rightTrigger>Adicionar</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Selecionador de Material
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho do Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Apagar Terreno
+      [Alt]+&lt;leftmouse&gt; Alterar a Cor do Terreno
+      [Space]+&lt;leftmouse&gt; Adicionar Terreno
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Saltar Linha
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>AddToolGoing</id>
+    <y>Selecionador de Material</y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu de Ferramentas</b>
+    <a>Alterar Material</a>
+    <leftTrigger>Apagar</leftTrigger>
+    <rightTrigger>Adicionar</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Selecionador de Material
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho do Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Apagar Terreno
+      [Alt]+&lt;leftmouse&gt; Alterar a Cor do Terreno
+      [Space]+&lt;leftmouse&gt; Adicionar Terreno
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu de Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>NoiseTool</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu Ferramentas</b>
+    <a>Smuave</a>
+    <leftTrigger>Picado</leftTrigger>
+    <rightTrigger>Montanhoso</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador dde Pincel
+      [leftarrow][rightarrow] Tamanho do Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Montanhoso
+      [Alt]+&lt;leftmouse&gt; Suave
+      [Space]+&lt;leftmouse&gt; Picado
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolStart</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Ignorar</b>
+    <a>Suave</a>
+    <leftTrigger>Picado</leftTrigger>
+    <rightTrigger>Montanhosos</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Montanhoso 
+      [Alt]+&lt;leftmouse&gt; Suave
+      [Space]+&lt;leftmouse&gt; Picado
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Saltar Linha
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>NoiseToolGoing</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu Ferramentas</b>
+    <a>Suave</a>
+    <leftTrigger>Picado</leftTrigger>
+    <rightTrigger>Montanhoso</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho de Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Montanhoso
+      [Alt]+&lt;leftmouse&gt; Suave
+      [Space]+&lt;leftmouse&gt; Picado
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>LevelTool</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu Ferramentas</b>
+    <a></a>
+    <leftTrigger>Suave</leftTrigger>
+    <rightTrigger>Nível</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Alt]+&lt;leftmouse&gt; Suave
+      [Space]+&lt;leftmouse&gt; Nível
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>LevelToolStart</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu Ferramentas</b>
+    <a>Pavimenta Instantaneamente</a>
+    <leftTrigger>Suaviza</leftTrigger>
+    <rightTrigger>Pavimenta Devagar</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Suaviza
+      [Alt]+&lt;leftmouse&gt; Pavimenta Instantaneamente
+      [Space]+&lt;leftmouse&gt; Pavimenta Devagar
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Saltar Linha
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>LevelToolGoing</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Terminado</b>
+    <a>Pavimenta Instantaneamente</a>
+    <leftTrigger>Suaviza</leftTrigger>
+    <rightTrigger>Pavimenta Devagar</rightTrigger>
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Suaviza
+      [Alt]+&lt;leftmouse&gt; Pavimenta Instantaneamente
+      [Space]+&lt;leftmouse&gt; Pavimenta Devagar
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu de Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>WaterAdd</id>
+    <y>Escolher Tipo de Água</y>
+    <x></x>
+    <b>Menu Ferramentas</b>
+    <a>Definir Tipo de Água</a>
+    <leftTrigger>Reduzir Água</leftTrigger>
+    <rightTrigger>Elevar Água</rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal></dpadHorizontal>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [Y] Escolher Tipo de Água
+
+      [Ctrl]+&lt;leftmouse&gt; Baixar nível de Água
+      [Alt]+&lt;leftmouse&gt; Definir Tipo de Água
+      [Space]+&lt;leftmouse&gt; Aumentar nível Água
+
+      &lt;leftmouse&gt; Mover Cursor
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>DelObjTool</id>
+    <y></y>
+    <x>Selecionador de Pincel</x>
+    <b>Menu Ferramentas</b>
+    <leftTrigger>Apagar Objetos</leftTrigger>
+    <rightTrigger>Apagar Objetos</rightTrigger>
+    <rightTrigger></rightTrigger>
+
+    <dpadVertical></dpadVertical>
+    <dpadHorizontal>Tamanho do Pincel</dpadHorizontal>
+    <leftStick>Mover Pincel</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+
+    <keyMouse>
+      [X] Selecionador de Pincel
+      [leftarrow][rightarrow] Tamanho de Pincel
+
+      [Ctrl]+&lt;leftmouse&gt; Apagar
+      [Space]+&lt;leftmouse&gt; Apagar
+
+      &lt;leftmouse&gt; Mover Câmara
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointNode</id>
+    <y>Adicionar Mais Nodos</y>
+    <x>Selecionar todo o trajeto</x>
+    <b>Terminado</b>
+    <a>Escolher</a>
+    <dpadVertical>Alterar Tipo</dpadVertical>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftTrigger>Apagar Nodos</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdge</id>
+    <y>Mudar Direções</y>
+    <x>Selecionar todo o trajeto</x>
+    <b>Terminado</b>
+    <a>Escolher</a>
+    <dpadVertical>Escolher tipo</dpadVertical>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftTrigger>Apagar Limite</leftTrigger>
+    <rightTrigger>Separar Limite</rightTrigger>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPath</id>
+    <y>Mudar Direções</y>
+    <x>Selecionar Nodo/ Limite</x>
+    <b>Terminado</b>
+    <a>Escolher</a>
+    <dpadVertical>Alterar Tipo</dpadVertical>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftTrigger>Apagar trajeto</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveNode</id>
+    <y></y>
+    <x>Selecionar todo o trajeto</x>
+    <b>Terminado</b>
+    <a>Pousar</a>
+    <dpadVertical>Alterar Altura</dpadVertical>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftTrigger>Apagar Nodo</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMoveEdge</id>
+    <y>Alterar Direção</y>
+    <x>Escolher todo o trajeto</x>
+    <b>Terminado</b>
+    <a>Pousar</a>
+    <dpadVertical>Alterar Altura</dpadVertical>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftTrigger>Apagar Limite</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointMovePath</id>
+    <y>Alterar Direção</y>
+    <x>Selecionar Nodo/ Limite</x>
+    <b>Terminado</b>
+    <a>Pousar</a>
+    <dpadVertical>Alterar Altura</dpadVertical>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftTrigger>Apagar trajeto</leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointAddNode</id>
+    <y>Colocar Nodo e Terminar</y>
+    <x></x>
+    <b>Terminado</b>
+    <a>Colocar Nodo</a>
+    <dpadVertical>Alterar Tipo</dpadVertical>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Mover Cursor</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndAddNode</id>
+    <y></y>
+    <x></x>
+    <b>Terminado</b>
+    <a></a>
+    <dpadVertical>Alterar Tipo</dpadVertical>
+    <dpadHorizontal>Alterar Cor</dpadHorizontal>
+    <leftTrigger></leftTrigger>
+    <rightTrigger></rightTrigger>
+    <leftStick>Nova Posição</leftStick>
+    <rightStick>Orbitar Câmara</rightStick>
+    <leftShoulder>Zoom Out</leftShoulder>
+    <rightShoulder>Zoom In</rightShoulder>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>EditWayPointNodeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Cor
+      [Tab] Alterar Tipo
+
+      &lt;leftmouse&gt; Arrastar Nodo
+      [Shift]+&lt;leftmouse&gt; Levantar/Baixar Nodo
+      [X] Modo de trajeto Total
+
+      [Space]+&lt;leftmouse&gt; Adiciona Mais Nodos
+      [Ctrl]+&lt;leftmouse&gt; Apaga Nodos
+
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEdgeFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Cor
+      [Tab] Alterar Tipo
+
+      &lt;leftmouse&gt; Arrastar limite
+      [Shift]+&lt;leftmouse&gt; Elevar/Baixar Limite
+      [X] Modo de Trajeto Total
+
+      [Space]+&lt;leftmouse&gt; Separar Limite
+      [Ctrl]+&lt;leftmouse&gt; Apagar Limite
+
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointPathFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Cor
+      [Tab] Alterar Tipo
+
+      &lt;leftmouse&gt; Arrastar Trajeto
+      [Shift]+&lt;leftmouse&gt; Elevar/Baixar Trajeto
+      [X] Nodo/Modo de Limite
+
+      [Space]+&lt;leftmouse&gt; Adicionar mais Nodos
+      [Ctrl]+&lt;leftmouse&gt; Apagar Trajeto
+
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Menu Ferramentas
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>EditWayPointAddFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Cor
+      [Tab] Alterar Tipo
+
+      &lt;leftmouse&gt; Adicionar Nodo e Continuar
+      [Alt]+&lt;leftmouse&gt; Adicionar Nodo e Terminar
+
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Terminar Adicionar
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>EditWayPointEndFree</id>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Cor
+      [Tab] Alterar Tipo
+
+      &lt;leftmouse&gt; Terminar Adicionar
+
+      &lt;rightmouse&gt; Orbitar Câmara
+      [PgUp][PgDn] Zoom In/Out
+
+      [Esc] Terminar Adicionar
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulation</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Premir <![CDATA[<back>]]> para editar.</bottom>
+
+    <keyMouseBottom>Premir [Esc] para editar.</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>RunSimulationPreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom mid = "false">Premir <![CDATA[<a>]]> para continuar.</bottom>
+
+    <keyMouseBottom>Premir [Enter] para continuar.</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>PauseGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Resume</a>
+    <bottom>Jogo em pausa, premir <![CDATA[<a>]]> para retomar.</bottom>
+
+    <keyMouse>
+      [pause] Retomar
+    </keyMouse>
+
+    <keyMouseBottom>Jogo pausado, premir [pause] para retomar.</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>Programming</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom></bottom>
+  </overlay>
+
+  <overlay>
+    <id>PageHandleFullPasteBuffer</id>
+    <y>Imprimir Kode</y>
+    <x>Copiar Página</x>
+    <b>Fechar</b>
+    <a></a>
+    <leftTrigger>Cortar Página</leftTrigger>
+    <rightTrigger>Colar Página</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Mudar Página
+      [Delete] Cortar Página
+      [Insert] Colar Página
+      [Esc] Recuar
+      [Ctrl-P] Imprimir Kode
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>PageHandleEmptyPasteBuffer</id>
+    <y>Imprimir Kode</y>
+    <x>Copiar Página</x>
+    <b>Fechar</b>
+    <a></a>
+    <leftTrigger>Cortar Página</leftTrigger>
+    <rightTrigger ghosted = "true">Colar Página</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Mudar Página
+      [Delete] Cortar Página
+      [Esc] Recuar
+      [Ctrl-P] Imprimir Kode
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>RowHandleFullPasteBuffer</id>
+    <y>Imprimir Kode</y>
+    <x>Copiar Linha</x>
+    <b>Fechar</b>
+    <a>Mover linha</a>
+    <leftTrigger>Cortar Linha</leftTrigger>
+    <rightTrigger>Colar Linha</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Escolher linha
+      &lt;rightmouse&gt; Cortar Linha
+      [Enter] Escolher linha
+      [Tab] Próxima Página
+      [Shift][Tab] Página Anterior
+      [Delete] Cortar linha
+      [Insert] Colar Linha
+      [Esc] Recuar
+      [Ctrl-P] Imprimir Kode
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>RowHandleEmptyPasteBuffer</id>
+    <y>Imprimir Kode</y>
+    <x>Copiar linha</x>
+    <b>Fechar</b>
+    <a>Mover Linha</a>
+    <leftTrigger>Cortar Linha</leftTrigger>
+    <rightTrigger ghosted = "true">Colar Linha</rightTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Escolher Linha
+      &lt;rightmouse&gt; Cortar Linha
+      [Enter] Escolher Linha
+      [Tab] Próxima Página
+      [Shift][Tab] Página Anterior
+      [Delete] Cortar Linha
+      [Esc] Recuar
+      [Ctrl-P] Imprimir Kode
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>RowMove</id>
+    <y>Ajuda</y>
+    <x></x>
+    <b>Fechar</b>
+    <leftStick>Alterar Prioridade da Linha</leftStick>
+    <a>Colocar Linha Aqui</a>
+    <bottom></bottom>
+
+    <keyMouse>
+      [uparrow] Mover para cima
+      [downarrow] Mover para Baixo
+      [rightarrow] Avançar Bloco
+      [leftarrow] Recuar Bloco
+      [Enter] Colocar Aqui
+      [Ctrl-P] Imprimir Kode
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>Mosaico</id>
+    <y>Ajuda</y>
+    <x>Apagar Mosaico</x>
+    <b>Fechar</b>
+    <a>Alterar Mosaico</a>
+    <leftTrigger>Apagar Mosaico</leftTrigger>
+    <bottom></bottom>
+
+    <keyMouse>
+      &lt;leftmouse&gt; Adiciona/Altera Mosaico
+      &lt;rightmouse&gt; Apaga Mosaico
+      [Enter] Adiciona/Altera Mosaico
+      [Tab] Próxima Página
+      [Shift][Tab] Página Anterior
+      [Delete] Apagar Mosaico
+      [Esc] Voltar
+      [Ctrl-P] Imprimir Kode
+    </keyMouse>
+  </overlay>
+
+  <overlay>
+    <id>TopLevelPaletteEditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Editar Definições do Mundo</bottom>
+  </overlay>
+  <overlay>
+    <id>TopLevelPaletteEditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Editar Definições de Objeto</bottom>
+  </overlay>
+  <overlay>
+    <id>EditWorldParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Selecionar</a>
+    <bottom>Definições do Mundo</bottom>
+  </overlay>
+  <overlay>
+    <id>EditObjectParameters</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <bottom>Definições de Personagens</bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridCheckbox</id>
+    <y></y>
+    <x></x>
+    <b>Sair</b>
+    <a>Alterar</a>
+    <dpadVertical>Mudar Propriedade</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridSlider</id>
+    <y></y>
+    <x></x>
+    <b>air</b>
+    <a></a>
+    <dpadHorizontal>Esquerda/Direita para Alterar</dpadHorizontal>
+    <dpadVertical>Mudar Propriedade</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridPictureList</id>
+    <y></y>
+    <x></x>
+    <b>Sair</b>
+    <a></a>
+    <dpadHorizontal>Esquerda/ Direita para alterar</dpadHorizontal>
+    <dpadVertical>Mudar propriedade</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>UIGridTextList</id>
+    <y></y>
+    <x></x>
+    <b>Sair</b>
+    <a>Selecionar Próxima Opção</a>
+    <dpadVertical>Mudar Propriedade</dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGame</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a></a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom></bottom>
+  </overlay>
+  <overlay>
+    <id>PreGameDescription</id>
+    <y></y>
+    <x></x>
+    <b></b>
+    <a>Iniciar Jogo</a>
+    <dpadHorizontal></dpadHorizontal>
+    <dpadVertical></dpadVertical>
+    <bottom>Premir &lt;a&gt; para iniciar o Jogo</bottom>
+
+    <keyMouse>
+      [Enter] Iniciar Jogo
+    </keyMouse>
+    <keyMouseBottom>Premir [Enter] para Iniciar Jogo</keyMouseBottom>
+  </overlay>
+
+  <overlay>
+    <id>ModularMenu</id>
+    <a>Selecionar</a>
+    <leftStick>Alterar Seleção</leftStick>
+  </overlay>
+  <overlay>
+    <id>ModularPictureList</id>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Definições
+      [Esc] Recuar
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCameraMode</id>
+    <dpadHorizontal>Alterar Seleção</dpadHorizontal>
+
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Câmara
+      [X] Definir Câmara
+      [Esc] Recuar
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckbox</id>
+    <a>Alterar</a>
+    <keyMouse>
+      [Enter] Mudar
+      [Esc] Recuar
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularSlider</id>
+    <dpadHorizontal>Alterar Valor</dpadHorizontal>
+    <keyMouse>
+      [leftarrow][rightarrow] Alterar Valor
+      [Esc] Recuar
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularRadioBox</id>
+    <a>Alaterar</a>
+    <keyMouse>
+      [Enter] Alterar Seleção
+      [Esc] Recuar
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularCheckboxList</id>
+    <a>Alterar</a>
+    <b>Terminado</b>
+    <keyMouse>
+      [uparrow][downarrow] Selecionar Tag
+      [Enter] Activar Tag
+      [Esc] Recuar
+    </keyMouse>
+  </overlay>
+  <overlay>
+    <id>ModularButtonElement</id>
+    <a>Ver Alterar História</a>
+    <x>Apagar Alterar História</x>
+    <keyMouse>
+      [A] Ver Alterar História
+      [X] Apagar Alterar História
+      [Esc] Recuar
+    </keyMouse>
+  </overlay>
+
+</XmlOverlayData>

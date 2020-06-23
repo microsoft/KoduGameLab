@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Help for Object Edit Tweak Screen-->
+
+  <helpText id="PushRange">
+    <desc>Contrôle l'ordre dans lequel les objets seront repoussés. Affecté aussi par le changement de taille de l'objet.</desc>
+  </helpText>
+
+  <helpText id="PushStrength">
+    <desc>Contrôle combien de force il faut pour pousser l'objet. C'est modifié par les modificateurs de force.</desc>
+  </helpText>
+
+  <helpText id="LightRange">
+    <desc>Définir la portée de la brillance de la lumière (disponible uniquement pour les lumières).</desc>
+  </helpText>
+  <helpText id="SpeedMultiplier">
+  <desc>
+Définir précisément la vitesse du robot.
+La vitesse par défaut est 1.0.
+    </desc>
+  </helpText>
+  <helpText id="AccelerationMultiplier">
+    <desc>
+Définir précisément l'accélération du robot.
+La vitesse par défaut est 1.0.
+    </desc>
+  </helpText>
+  <helpText id="Helmet">
+    <desc>Ajoute un casque au personnage.</desc>
+  </helpText>
+  <helpText id="Immobile">
+    <desc>Bloque la position de ce robot de telle manière qu'il ne peut plus se déplacer dans aucune direction. Il peut toujours tourner.</desc>
+  </helpText>  
+  <helpText id="Invulnerable">
+    <desc>Rend ce robot indesctructible.</desc>
+  </helpText>
+  <helpText id="ShowHitPoints">
+    <desc>Si cette option est sélectionnée, une barre indiquant la vie restante du robot apparaîtra au-dessus de sa tête.</desc>
+  </helpText>
+  <helpText id="MaxHitPoints">
+    <desc>Vous permet de contrôler le nombre de points qu'a le robot au départ. Ce nombre diminuera lorsque le robot sera touché, et augmentera lorsqu'il sera soigné.</desc>
+  </helpText>
+  <helpText id="Creatable">
+    <desc>
+Quand un robot est marqué comme "constructible" il devient spécial en deux points.
+Premièrement, si vous clonez ce robot, ils partageront tous le même cerveau - les changements effectués sur l'un s'appliqueront à tous. Vous pouvez voir le lien entre les clones via des pointillés (en édition).
+Deuxièmement, vous pouvez programmer d'autres robots pour créer celui-ci via programmation. Cela est très intéressant pour les jeux d'arcade afin de créer perpétuellement des ennemis.
+Remarquez que cela peut rapidement provoquer la surcharge du monde, et empêcher la création d'autres objets.
+    </desc>
+  </helpText>
+  <helpText id="MaxCreated">
+    <desc>
+Pour les objets constructibles, ce nombre est le nombre d'objets maximum qui peuvent être créés durant une partie. Les clones créés durant l'édition ne sont pas comptés, ceci limite uniquement les objets créés par d'autres robots durant la partie.
+    </desc>
+  </helpText>
+  <helpText id="CameraFollowMode">
+    <desc>
+Contrôle la manière dont la caméra se comporte par rapport à son robot. Normalement, la caméra va suivre tout robot contrôlé par le joueur.
+Si vous indiquez "toujours", la caméra suivra toujours le robot. Si vous avez plusieurs robots avec ce paramètre, la caméra tentera de les garder tous à l'écran.
+Si vous indiquez "jamais", la caméra ignorera ce robot, y compris si le joueur le contrôle.
+    </desc>
+  </helpText>
+  <helpText id="HoldDistance">
+    <desc>Ceci contrôle à quelle distance un objet "tenu" est transporté.</desc>
+  </helpText>
+  <helpText id="Bounciness">
+    <desc>Contrôle comment le robot rebondit lors de la collision avec le terrain, les murs ou d'autres robots.</desc>
+  </helpText>
+  <helpText id="Friction">
+    <desc>Contrôle comment le robot glisse lors de la collision avec le terrain, les murs ou d'autres robots.</desc>
+  </helpText>
+
+  <helpText id="BlipDamage">
+    <desc>Contrôle les dégats que provoque un blip touchant le robot.</desc>
+  </helpText>
+  <helpText id="BlipReloadTime">
+    <desc>
+Contrôle le temps avant qu'un robot ne puisse tirer à nouveau.
+Ce temps est exprimé en secondes.
+    </desc>
+  </helpText>
+  <helpText id="BlipRange">
+    <desc>Contrôle quelle distance peuvent parcourir les blips avant de disparaître.</desc>
+  </helpText>
+  <helpText id="BlipSpeed">
+    <desc>Contrôle la vitesse des blips.</desc>
+  </helpText>
+  <helpText id="BlipsInAir">
+    <desc>
+Permet de limiter le nombre de blips dans les airs à la fois.
+Quand le robot atteint cette limite, il ne peut plus tirer tant qu'un blip n'a pas atteint une cible ou atteint la distance maximale.	
+    </desc>
+  </helpText>
+
+  <helpText id="MissileDamage">
+    <desc>Contrôle combien de points de vie sont perdus lorsque le missile atteint la cible.</desc>
+  </helpText>
+  <helpText id="MissileReloadTime">
+    <desc>
+Contrôle combien de temps doit attendre un robot entre deux tirs de missile.
+Ce temps est exprimé en secondes.
+    </desc>
+  </helpText>
+  <helpText id="MissileRange">
+    <desc>Contrôle quelle distance peuvent parcourir les missiles avant de disparaître.</desc>
+  </helpText>
+  <helpText id="MissileSpeed">
+    <desc>Contrôle la vitesse des missiles</desc>
+  </helpText>
+  <helpText id="MissilesInAir">
+    <desc>
+Permet de limiter le nombre de missiles que peut tirer un robot dans les airs à la fois.
+Quand le robot atteint cette limite, il ne peut plus tirer tant qu'un missile n'a pas atteint une cible ou atteint la distance maximale.	
+    </desc>
+  </helpText>
+  <helpText id="MissileSmoke">
+    <desc>Permet de déterminer si un missile émet de la fumée ou non. Les missiles sans fumées sont plus rapides à dessiner.</desc>
+  </helpText>
+
+  <helpText id="ShieldEffects">
+    <desc>Permet de déterminer si l'effet visuel du bouclier est affiché quand ce robot touche quelque chose ou est touché.</desc>
+  </helpText>
+
+  <helpText id="Invisible">
+    <desc>Permet de rendre invisible un robot. Un robot invisible peut toujours être vu et entendu par les autres robots.</desc>
+  </helpText>
+
+  <helpText id="Ignored">
+    <desc>Contrôle si un robot peut être vu, entendu et interagir avec les autres robots. Un robot fantôme peut toujours voir et entendre les autres robots.</desc>
+  </helpText>
+
+  <helpText id="Mute">
+    <desc>Désactive tous les sons par défaut de ce personnage. Les sons programmés seront toujours joués. Les autres personnages pourront toujours détecter la présence de ce personnage en écoutant.</desc>
+  </helpText>
+
+  <helpText id="StayAboveWater">
+    <desc>Permet de marcher sur la surface de l'eau. Désactiver cette option permet au personnage de plonger sous la surface.</desc>
+  </helpText>
+
+  <helpText id="Loudness">
+    <desc>Permet de contrôler à quelle distance les autres personnages peuvent entendre le personnage courant. Ne change pas le volume des sons.</desc>
+  </helpText>
+
+  <helpText id="Hearing">
+    <desc>Contrôle jusqu'à quelle distance ce personnage peut entendre les autres. Ne change pas le volume des sons.</desc>
+  </helpText>
+
+  <helpText id="Camouflaged">
+    <desc>Vrai si le robot est en fantôme mais toujours en collision possible avec l'environnement.</desc>
+  </helpText>
+
+  <helpText id="KickStrength">
+    <desc>Contrôle la puissance des coups du robot. Une plus grande puissance fera voler les objets plus loin.</desc>
+  </helpText>
+  <helpText id="KickRate">
+    <desc>Contrôle le temps que doit attendre le robot pour frapper un autre objet après en avoir frappé un premier.</desc>
+  </helpText>
+  <helpText id="ReScale">
+    <desc> Permet d'agrandir ou de rétrécir le robot. La taille par défaut est de 1.0.</desc>
+  </helpText>
+  <helpText id="MemoryLifetime">
+    <desc>Quand vous voyez quelque chose, vous vous en rappelez pendant quelques secondes même si vous pouvez toujours voir l'objet.</desc>
+  </helpText>
+  <helpText id="GlowStrength">
+    <desc>Affecte la brillance de ce personnage. Cette lumière n'est pas projetée sur les autres personnages.</desc>
+  </helpText>
+  <helpText id="GlowLightStrength">
+    <desc>Permet de projeter la lumière sur les autres objets quand il brille, et la puissance de cet effet.</desc>
+  </helpText>
+  <helpText id="GlowEmission">
+    <desc>Contrôle la puissante de la brillance de ce robot.</desc>
+  </helpText>
+
+  <helpText id="Debug:DisplayLineOfSight">
+    <desc>Quand les personnages sont programmés pour se promener, tourner ou s'éloigner d'un objet, affiche toutes les barrières qui obstruent son chemin.</desc>
+  </helpText>
+  <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
+    <desc>Si ce robot utilise la vision ou l'audition, affiche quels robots peuvent le voir et l'entendre.</desc>
+  </helpText>
+  <helpText id="Debug:DrawCurrentPage">
+    <desc>Montre la page de programmation actuelle du robot.</desc>
+  </helpText>
+  <helpText id="ShowSensors">
+    <desc>Non implémenté</desc>
+  </helpText>
+
+  <!-- Help for World Edit Tweak Screen-->
+
+  <helpText id="GlassWalls">
+    <desc>Créer une barrière invisible aux bords du monde. Cela permet d'éviter que les robots ne tombent dans le vide.
+    
+Le ballon, les nuages, le jet, les lumières, les soucoupes volantes, les Blimps et les missiles peuvent passer au travers.</desc>
+  </helpText>
+  <helpText id ="ChangeHistory">
+    <desc>Affiche l'historique des modifications de ce monde.</desc>
+  </helpText>
+  <helpText id="CameraMode">
+    <desc>Permet de contrôler comment la caméra se déplace durant une partie.
+    
+La position fixe empêche la caméra de se déplacer en cours de partie. Utile pour les jeux d'arcade nécessitant une vue d'ensemble. Cette vue sera différente sur les écrans larges.
+
+Le décalage fixe garde la caméra à une distance et une direction fixe par rapport à l'objet que suit cette caméra. Cela peut être un curseur ou un robot. 
+
+L'option libre, par défaut, permet à la caméra de se déplacer rapidement tant qu'un robot n'est pas programmé pour dire à la caméra de le suivre. Appuyer sur le bouton &lt;X&gt; vous permet de fixer la position de la caméra.
+    </desc>
+  </helpText>
+  <helpText id="StartingCameraPosition">
+    <desc>Permet de contrôler la position de départ de la caméra. Déplacer la caméra à la position souhaitée, ouvrez les paramètres du monde et cochez la case.
+Si vous voulez changer la position par la suite, vous pouvez appuyer sur la touche &lt;x&gt; ce qui vous permettra d'aligner la caméra comme vous le souhaitez.</desc>
+  </helpText>
+  <helpText id ="CameraSpringStrength">
+    <desc>Contrôle le balancement de la caméra suivant un personnage contrôlé par l'utilisateur.</desc>
+  </helpText>
+  <helpText id="ShowCompass">
+    <desc>Vous permet de cacher le compas apparaissant normalement dans le coin haut droit de l'écran. Le compas est toujours affiché en mode édition, et caché uniquement durant une partie.</desc>
+  </helpText>
+  <helpText id="ShowResourceMeter">
+    <desc>Vous permet de cacher le moniteur de ressources (thermomètre) qui apparaît dans le côté droit de l'écran. Ce moniteur est toujours affiché en mode édition, et caché uniquement durant une partie.</desc>
+  </helpText>
+  <helpText id="EnableResourceLimiting">
+    <desc>Vous permet de désactiver la limitation de ressources telle que montrée par le niveau de ressources (thermomètre), qui est situé sur la partie droite de votre écran. Avec cette option désactivée, vous pouvez ajouter autant de terrain et d'objets que vous le souhaitez. ATTENTION : Sans cette limitation, Kodu peut devenir extrêmement lent. Il se peut également que vous excédiez vos ressources système, et ainsi faire planter Kodu.</desc>
+  </helpText>  
+  <helpText id="WaveHeight">
+    <desc>Contrôle la hauteur des vagues quand votre monde contient de l'eau.</desc>
+  </helpText>
+  <helpText id="WaterStrength">
+    <desc>Contrôle la force de l'eau.</desc>
+  </helpText>
+  <helpText id="Sky">
+    <desc>Choisissez un ensemble de couleurs de fond pour votre monde.
+Combiner le ciel et les lumières vous aide à créer une ambiance dans votre jeu.</desc>
+  </helpText>
+  <helpText id="Lighting">
+    <desc>Choisissez un ensemble de lumières pour votre monde. Si vous choisissez un élairage sombre, celui-ci sera sombre uniquement dans une partie. Pendant l'édition, une lumière plus brillante est utilisée pour vous permettre de voir clairement le monde.
+Combiner le ciel et les lumières vous aide à créer une ambiance dans votre jeu.</desc>
+  </helpText>
+  <helpText id="MinBreeze">
+    <desc>Contrôle la brise minimale qui souffle au travers des arbres du monde.</desc>
+  </helpText>
+  <helpText id="MaxBreeze">
+    <desc>Contrôle la brise maximale qui souffle au travers des arbres du monde.</desc>
+  </helpText>
+  <helpText id="PreGame">
+    <desc>Contrôle ce qui est effectué au démarrage de votre jeu : 
+"Rien du tout" démarre simplement le jeu, sans effet.
+"Titre du monde" affiche le titre du monde pendant 3 secondes puis démarre le jeu.
+"Description du monde" affiche le nom du monde et demande à l'utilisateur d'appuyer sur la touche &lt;a&gt; pour démarrer la partie.
+"Compte à rebours" affiche un compte à rebours 3-2-1 avant de démarrer le jeu. Idéal pour des jeux de courses.</desc>
+  </helpText>
+  <helpText id="Debug:PathFollowing">
+    <desc>Quand des personnages suivent des chemins, cette option affiche vers quel point le personnage se dirige. Les cibles sont affichées en fil de fer et de la même couleur que le personnage qui se déplace vers eux.</desc>
+  </helpText>
+  <helpText id="Debug:DisplayCollisions">
+    <desc>Affiche les formes utilisées par les robots et les autres objets pour entrer en collision ou toucher le sol.</desc>
+  </helpText>
+  <helpText id="Debug:ShowLinesOfPerception">
+    <desc>Si un robot utilise la vision ou l'audition, affiche quels robots peuvent voir et entendre.</desc>
+  </helpText>
+  <helpText id="Debug:ShowCurrentPage">
+    <desc>Montre la page de programmation actuelle du robot programmé.</desc>
+  </helpText>
+  <helpText id="TerrainSpeed">
+    <desc>Facteur de vitesse pour l'édition des terrains. Petit c'est lent, grand c'est rapide.</desc>
+  </helpText>
+  <helpText id="UIVolume">
+    <desc>Contrôle le volume des effets sonores de l'interface, tels que les menus et les boutons.</desc>
+  </helpText>
+  <helpText id="EffectsVolume">
+    <desc>Contrôle le volume des effets dans votre jeu. Cela comprend explosions, collisions et les sons générés par les robots.</desc>
+  </helpText>
+  <helpText id="MusicVolume">
+    <desc>Contrôle le volume de la musique de fond que vous avez choisie pour votre jeu.</desc>
+  </helpText>
+  <helpText id="ScoreVisibility">
+    <desc>Contrôle la place prise par les évènements de scores.
+Off: le score ne sera pas du tout affiché
+Léger: le score sera affiché dans le coin, sans effets visuels.
+Important: les points seront animés de leur emplacement vers le tableau des scores.
+    </desc>
+  </helpText>
+
+  <helpText id="ScorePersistence">
+    <desc>
+      Contrôle si un score donné sera persistant pendant l'action Niveau Suivant/Niveau Précédent.
+      On: le score sera persistant et gardera le même score quand le nouveau niveau se charge
+      Off: le score sera remis à zéro quand le nouveau niveau se charge
+    </desc>
+  </helpText>
+
+  <helpText id ="ShowVirtualController">
+    <desc>Montre/Cache à l'écran le Contrôleur Virtuel.</desc>
+  </helpText>
+
+  <helpText id="GuiButtonVisibility">
+    <desc>
+      Contrôle comment les boutons GUI apparaîtront à l'écran.
+      Off: le bouton n'apparaîtra pas du tout.
+      Sans texte: le bouton apparaîtra mais sans texte.
+      Texte: le bouton apparaîtra avec un texte permettant de l'identifier.
+    </desc>
+  </helpText>
+
+  <helpText id="NextLevel">
+    <desc>
+      choisit le niveau qui sera chargé avec la mention "prochain Niveau".  Permet aussi au "Niveau Précédent" de ce niveau de renvoyer le joueur au niveau actuel.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterRaise">
+    <desc>
+      Augmente le niveau d'eau sous cet objet.
+    </desc>
+  </helpText>
+
+  <helpText id="WaterLower">
+    <desc>
+      Baisse le niveau d'eau sous cet objet.
+    </desc>
+  </helpText>
+
+
+  <helpText id="SetWater">
+    <desc>
+      Choisit le type d'eau sous cet objet.
+    </desc>
+  </helpText>
+
+  <!-- Help for USer Options Tweak Screen-->
+
+  <helpText id ="ShowToolTips">
+    <desc>Vous permet de désactiver les bulles d'aides.</desc>
+  </helpText>
+
+  <helpText id ="ShowHints">
+    <desc>Vous permet de désactiver les conseils. Les conseils sont affichés quand le système détecte une situation potentiellement problématique.
+Quand un conseil est affiché, vous avez la possibilité de désactiver ce conseil.</desc>
+  </helpText>
+  
+  <helpText id="ModalToolMenu">
+    <desc>
+      Normalement, quand la boîte d'outils manette est active, l'arrière-plan est flou et vous ne pouvez pas déplacer la caméra. En désactivant cette option, la caméra sera toujours active. Cependant, vous devrez toujours sélectionner un outil avant d'interagir avec le monde.
+      Désactiver cette option signifie également que le joystick gauche est utilisé pour contrôler la caméra. Vous devez donc utiliser le joystick droit ou les gachettes pour sélectionner l'outil que vous désirez.
+    </desc>
+  </helpText>
+  
+  <helpText id ="RestoreDisabledHints">
+    <desc>Réinitialise les conseils que vous aviez choisi d'ignorer afin qu'ils soient à nouveau visibles.</desc>
+  </helpText>
+
+  <helpText id ="HelpOverlayAmount">
+    <desc>Contrôle la quantité d'aide affichée dans le coin haut gauche de l'écran.</desc>
+  </helpText>
+
+  <helpText id ="Language">
+    <desc>Contrôle quel langage est utilisé.  Les traductions de Kodu sont faites par notre Communauté. Si vous désirez nous aider à traduire Kodu dans votre langue, envoyez un mail à KoduSupport@microsoft.com pour plus d'informations.</desc>
+  </helpText>
+
+  <helpText id ="InvertYAxis">
+    <desc>Permet de déplacer le robot vers le bas lorsque le joystick est pressé.</desc>
+  </helpText>
+
+  <helpText id ="InvertXAxis">
+    <desc>Permet de déplacer le robot vers la droite lors que le joystick est déplacé à gauche.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamY">
+    <desc>Permet de déplacer la caméra vers le haut quand le joystick est déplacé vers le bas.</desc>
+  </helpText>
+
+  <helpText id ="InvertCamX">
+  <desc>Permet de déplacer la caméra vers la droite quand le joystick est déplacé vers la gauche.</desc>
+  </helpText>
+  
+  <helpText id ="Overscan">
+    <desc>Le terme "surbalayage" correspond à la quantité d'image calculée qui est supprimée sur les bords de l'écran. Ce niveau dépend à la fois du périphérique d'affichage et de la connexion utilisée. La jauge vous permet de contrôler à quelle distance du centre les aides sont positionnées. Si elles sont coupées par votre affichage, augmentez la valeur. Sur les écrans cathodiques, une valeur de 20% est habituellement conseillée. Sur les écrans d'ordinateurs, vous devriez pouvoir sélectionner une valeur comprise entre 0 et 5%. Testez et choisissez la valeur qui vous va le mieux.</desc>
+  </helpText>
+
+  <helpText id="AcceptSentLevels">
+    <desc>Si sélectionné, les autres utilisateurs peuvent ajouter des mondes à votre file d'attente de téléchargements.</desc>
+  </helpText>
+
+  <helpText id="AutoReshareLevels">
+    <desc>Si sélectionné, les mondes que vous téléchargez seront automatiquements partagés, les rendant disponibles pour de futurs téléchargements.</desc>
+  </helpText>
+
+  <helpText id="AutoDownloadFavoriteLevels">
+    <desc>Dans une session de partage, télécharger automatiquement les mondes marqués en tant que "Favoris".</desc>
+  </helpText>
+
+  <helpText id="NearByDistance">
+    <desc>Distance utilisée par le filtre "proche de", utilisé par la vision et l'audition. Exprimé en mètres (une tuile est égale à 0,5 mètre).</desc>
+  </helpText>
+
+  <helpText id="FarAwayDistance">
+    <desc>Distance utilisée par le filtre "loin de", utilisé par la vision et l'audition. Exprimé en mètres (une tuile est égale à 0,5 mètre).</desc>
+  </helpText>
+
+  <helpText id="CheckForUpdates">
+    <desc>Si sélectionné, Kodu recherchera des mises à jour au lancement.</desc>
+  </helpText>
+
+  <helpText id="SendInstrumentation">
+    <desc>Si sélectionné, Kodu enverra des informations anonymes à Microsoft sur l'usage que vous faites de Kodu. Cela nous permettra d'améliorer le produit.</desc>    
+  </helpText>
+
+  <helpText id="ShowIntroVideo">
+    <desc>Si sélectionné, la prochaine fois que Kodu sera lancé, la vidéo d'introduction sera jouée.</desc>
+  </helpText>
+
+  <helpText id="PersistWebLogin">
+    <desc>Normalement, votre login du site web de la Communauté Kodu sera oublié lorsque vous quitterez Kodu. Si ce paramètre est sur ON, nous essaierons de permettre à votre login de persister pour d'autres sessions Kodu.</desc>
+  </helpText>
+
+  <helpText id="ShowTutorialDebug">
+    <desc>Ceci est une aide pour les gens créant leurs propres tutoriels. Quand c'est en marche et qu'un tutoriel est exécuté, cela affiche une information de débogage à l'écran.</desc>
+  </helpText>
+
+</XmlHelpTextData>
+

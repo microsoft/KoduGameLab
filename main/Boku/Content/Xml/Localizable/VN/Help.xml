@@ -1,0 +1,2970 @@
+<Help xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <programmingExamples>
+    <ExamplePage>
+      
+      <description>Khi nhìn thấy quả táo, hãy tiến đến nó</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi nhặt được trái táo, hãy ăn nó.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi nhìn thấy quả Táo màu tím, hãy tránh chúng</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.purple</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi bạn nghe thấy tiếng của một chú Kodu, hãy tiến về phía nó.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.ears</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi bạn có quả táo, hãy ăn nó.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.got</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi nhặt được quả táo màu đỏ, hãy ăn chúng</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>filter.red</upid>
+            <upid>actuator.eat</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi bạn đạt được 100 điểm, bạn sẽ thắng.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.scored</upid>
+            <upid>filter.100points</upid>
+            <upid>actuator.victory</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi bạn có 0 máu, trò chơi sẽ kết thúc.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.health</upid>
+            <upid>filter.000point</upid>
+            <upid>actuator.gameover</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi bị một Khinh khí cầu Bầu dục giữ, đổi màu bản thân thành màu đỏ</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.held</upid>
+            <upid>filter.windblimp</upid>
+            <upid>actuator.color</upid>
+            <upid>modifier.red</upid>
+            <upid>modifier.me</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi người chơi số 1 bấm nút A, bắn một quả tên lửa màu hồng thẳng lên trời</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.player1</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.shoot</upid>
+            <upid>modifier.pink</upid>
+            <upid>modifier.up</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi đứng ở một địa hình đặc biệt, hồi 10 điểm máu</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.terrain</upid>
+            <upid>filter.terrain</upid>
+            <upid>actuator.heal</upid>
+            <upid>modifier.010points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi không nhìn thấy Kodu nào nữa, kết thúc trò chơi</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countnone</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.gameover</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi thấy bất kì cái gì, tránh xa nó</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.anything</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi ở trên mặt nước, nhảy 1 lần. Chỉ có 1 số nhân vật có thể nhảy.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.water</upid>
+            <upid>filter.water</upid>
+            <upid>actuator.jump</upid>
+            <upid>modifier.once</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi thấy 1 Đệm Nảy giận dữ, hãy tránh xa nó</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.expressangry</upid>
+            <upid>filter.pushpad</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.avoidall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi thấy một quả Táo ở gần, hãy tiến đến nó</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.closeby</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.towardclosest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi nhìn thấy nhiều Mìn, hãy di chuyển ra xa!</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countmany</upid>
+            <upid>filter.mine</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.awayfromall</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Trong khoảng thời gian bất kỳ từ 0 đến 5 giây, bắn ra một hòn đá</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.random</upid>
+            <upid>filter.05seconds</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.objectrock</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Trong khoảng thời gian từ bất kỳ 5 đến 10 giây, hãy bắn một đồng xu.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.05seconds</upid>
+            <upid>filter.random</upid>
+            <upid>filter.05seconds</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.objectcoin</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Nếu điểm của tôi trên 20 điểm, tôi sẽ chiến thắng.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.scored</upid>
+            <upid>filter.scoreabove</upid>
+            <upid>filter.020points</upid>
+            <upid>actuator.victory</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi thấy một Kodu ở gần đó, hãy nói điều gì đó.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.closeby</upid>
+            <upid>actuator.say</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi không thấy gì, tỏ ra buồn rầu.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.countnone</upid>
+            <upid>actuator.express</upid>
+            <upid>modifier.expresssad</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi thấy Kodu, tỏ ra vui vẻ.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>actuator.express</upid>
+            <upid>modifier.expresshappy</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi thấy một đám mây, hãy quay quanh nó một cách nhanh chóng.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.cloud</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.circle</upid>
+            <upid>modifier.turnright</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi không thấy Kodu, phát sáng màu đỏ.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.countnone</upid>
+            <upid>actuator.glow</upid>
+            <upid>modifier.red</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Cứ 10 giây, tạo 1 viên đá</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.timer</upid>
+            <upid>filter.10seconds</upid>
+            <upid>actuator.make</upid>
+            <upid>modifier.objectrock</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Luôn luôn phát nhạc.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.sound</upid>
+            <upid>modifier.mu_ambinetmodd</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Luôn luôn đóng. Chỉ hoạt động cho một số nhân vật</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.close</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Luôn luôn mở. Chỉ hoạt động cho một số nhân vật.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.open</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi thấy một Kodu giận dữ, dừng chạy tiếng.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.eyes</upid>
+            <upid>filter.bokubot</upid>
+            <upid>filter.expressangry</upid>
+            <upid>actuator.stopsound</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi nhặt được một Ngôi Sao, chuyển sang trang 2</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.got</upid>
+            <upid>filter.star</upid>
+            <upid>actuator.switchtask</upid>
+            <upid>modifier.taskb</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi phát bắn của tôi trúng bất kỳ bot nào, làm choáng nó.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.anybot</upid>
+            <upid>actuator.zap</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi phát bắn của tôi trúng Đốm sáng, hãy hạ gục nó.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.wisp</upid>
+            <upid>actuator.pop</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi phát bắn của tôi trúng Mìn, hãy làm cho nó phát nổ.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.mine</upid>
+            <upid>actuator.boom</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi phát bắn của tôi trúng Mìn, hãy làm cho nó phát biến mất.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.sputnik</upid>
+            <upid>actuator.vanish</upid>
+            <upid>modifier.it</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi đụng phải một quả táo, nhặt lấy nó.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.fruit</upid>
+            <upid>actuator.grab</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi ở trên một địa hình nhất định, bỏ xuống những thứ tôi đang cầm.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.terrain</upid>
+            <upid>filter.terrain</upid>
+            <upid>actuator.drop</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi tôi va phải bất cứ ai, hãy cho nó bất cứ thứ gì tôi đang mang.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.anything</upid>
+            <upid>actuator.give</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi máu cuả tôi là 0, khởi động lại trò chơi.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.health</upid>
+            <upid>filter.000point</upid>
+            <upid>actuator.restart</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi đạn của tôi trúng vào một Tàu thuỷ, trừ 1 điểm.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.floatbot</upid>
+            <upid>actuator.unscore</upid>
+            <upid>modifier.001point</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi nhấn nút A, hãy để máy quay theo dõi tôi.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.camera.followme</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi nhấn nút B, hãy để máy quay bỏ theo dõi cho tôi.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.bbutton</upid>
+            <upid>actuator.camera.ignoreme</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      
+      <description>Khi nhấn nút X, hãy vào chế độ xem góc nhìn thứ nhất.</description>
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.xbutton</upid>
+            <upid>actuator.camera.firstperson</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi cần điều khiển bên trái được di chuyển, bay lên hoặc xuống.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.moveupdown</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi cần điều khiển bên trái được di chuyển, rẽ sang phải.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.moveleftright</upid>
+            <upid>modifier.turnright</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi tên lửa của tôi chạm vào Kodu màu vàng, Kodu mất 5 điểm máu.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.yellow</upid>
+            <upid>filter.boku</upid>
+            <upid>actuator.damage</upid>
+            <upid>modifier.it</upid>
+            <upid>modifier.005points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi cần điều khiển bên phải được di chuyển, di chuyển trên trục Bắc và Nam.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.rightstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.constraint.northsouth</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi cần điều khiển bên phải được di chuyển, di chuyển trên trục Đông và Tây.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.rightstick</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.constraint.eastwest</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi nhấn nút Y, di chuyển về phía Bắc.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.ybutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.north</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi nhấn nút B, di chuyển về phía Đông.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.bbutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.east</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi nhấn nút A, di chuyển về phía Nam.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.abutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.south</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi nhấn nút X, di chuyển về phía Tây.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.xbutton</upid>
+            <upid>actuator.movement</upid>
+            <upid>modifier.west</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi bấm phím lưng bên trái, di chuyển chậm về phía trước.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.lefttrigger_analog</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.forward</upid>
+            <upid>modifier.slowly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi bấm phím lưng bên phải, di chuyển nhanh về phía trước.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.righttrigger_analog</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.forward</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi tôi nghe âm thanh Đấu Trường, bắn một trái tim thật mạnh lên trời</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.ears</upid>
+            <upid>filter.environ.arena.any</upid>
+            <upid>actuator.launch</upid>
+            <upid>modifier.strongly</upid>
+            <upid>modifier.angle.high</upid>
+            <upid>modifier.objectheart</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi tên lửa của tôi bắn trúng Kodu màu xanh lá cây, hãy cộng 5 điểm vào điểm màu đỏ.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.missilehit</upid>
+            <upid>filter.green</upid>
+            <upid>filter.boku</upid>
+            <upid>actuator.score</upid>
+            <upid>modifier.red</upid>
+            <upid>modifier.005points</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Bắn tên lửa một lần.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>actuator.shoot</upid>
+            <upid>modifier.once</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Di chuyển nhanh chóng quanh thế giới.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>actuator.movement</upid>
+            <upid>selector.wander</upid>
+            <upid>modifier.quickly</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi tôi va vào đá, ghi 1 điểm cho đội màu xanh dương.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.bumpers</upid>
+            <upid>filter.rock</upid>
+            <upid>actuator.score</upid>
+            <upid>modifier.001point</upid>
+            <upid>modifier.blue</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Khi cần điều khiển bên trái di chuyển, di chuyển nhân vật của tôi.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.gamepad</upid>
+            <upid>filter.leftstick</upid>
+            <upid>actuator.movement</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+    <ExamplePage>
+      <description>Lang thang quanh bản đồ.</description>
+      
+      <reflexes>
+        <reflex>
+          <upids>
+            <upid>sensor.always</upid>
+            <upid>actuator.movement</upid>
+            <upid>selector.wander</upid>
+          </upids>
+        </reflex>
+      </reflexes>
+    </ExamplePage>
+  </programmingExamples>
+  <actorHelp>
+    <item>
+      <key>
+        <string>BokuBot</string>
+      </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Kodu hơi chậm và gặp khó khăn khi lên dốc.</description>
+          <upid>filter.boku</upid>
+          <programs>
+            <ExampleProgram>
+              <description>Tạo một Kodu tìm và ăn táo.</description>
+              
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một Kodu mà bạn có thể điều khiển. Cần điều khiển bên trái điều khiển chuyển động. Nút A khiến Kodu nhảy lên.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một Kodu theo các đường dẫn màu đỏ.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo ra một Kodu sử dụng trang lập trình để chuyển đổi giữa hai biểu hiện. Bấm phím A để đổi giữa việc phát sáng màu đỏ và phát sáng màu xanh dương.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>Phát sáng đỏ.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+                <ExamplePage>
+                  
+                  <description>Phát sáng xanh.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>Clam</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.clam</upid>
+          
+          <description>
+              Con Sò là nhân vật có thể mở và đóng nắp
+          </description>
+          <programs>
+            
+            <ExampleProgram>
+              
+              <description>Tạo một con sò có thể mở và đóng nắp.</description>
+              <tileUpid>actuator.open</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>Mở và đóng</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>Starfish</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.starfish</upid>
+          
+          <description>Sao biển sống trên cạn hoặc dưới nước.</description>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>LilypadSingle</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.lilypadsingle</upid>
+          <description>Nhảy vào Lá Sen rất vui.</description>
+          
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>LillyPad</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.lilypad</upid>
+          
+          <description>Một vài chiếc lá sen.</description>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>SeagrassSingle</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.seagrasssingle</upid>
+          
+          <description>Cỏ biển đung đưa trong nước hoặc trong gió.</description>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>Seagrass</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.seagrass</upid>
+          
+          <description>Một đám cỏ biển.</description>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>PipeStraight</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.pipeStraight</upid>
+          
+          <description>Một đoạn ống thẳng có thể liên kết với các ống khác.</description>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>PipeCorner</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.pipeCorner</upid>
+          <description>Một đoạn ống hình chữ L có thể liên kết với các ống khác.</description>
+          
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>PipeCross</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.pipeCross</upid>
+          <description>Một đoạn ống hình dấu cộng có thể liên kết với các ống khác.</description>
+          
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    
+    <item>
+      <key>
+        <string>InkJet</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <upid>filter.inkjet</upid>
+          
+          <description>Một đám mây đen mờ bạn có thể sử dụng để che khuất các thứ</description>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>TerraCannon</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Đại bác to và chậm nhưng rất mạnh</description>
+          <upid>filter.terracannon</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một đại bác có nhiệm vụ tìm và ăn táo.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một đại bác mà bạn có thể điều khiển. Cần bên trái điều khiển chuyển động. Bấm nút A để đại bác nhảy.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một Đại Bác đi theo những đường màu đỏ.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo ra một Đại Bác sử dụng lệnh Chuyển Trang Lập Trình để biển đổi giữa hai hành vi. Bấm phím A để biến đổi giữa việc phát sáng màu đỏ và màu xanh dương.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>Phát sáng đỏ.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+                <ExamplePage>
+                  
+                  <description>Phát sáng xanh.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>FlyFish</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Cá bay có thể lượn và quay nhanh - thiéch hợp cho các hành động cần tính linh hoạt
+          </description>
+          <upid>filter.flyfish</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một con cá bay tìm và ăn táo.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một cá bay mà bạn có thể điều khiển. Cần điều khiển bên trái điều khiển chuyển động.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một Cá Bay đi theo đường màu đỏ.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo ra một Cá Bay sử dụng lệnh Chuyển Trang Lập Trình để biển đổi giữa hai hành vi. Bấm phím A để biến đổi giữa việc phát sáng màu đỏ và màu xanh dương.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>Phát sáng màu đỏ</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+                <ExamplePage>
+                  
+                  <description>Phát sáng màu xanh</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Jet</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Máy bay phản lực thường bay dọc sát mặt đất, nhưng bạn có thể lập trình nó để Di chuyển lên và xuống.
+          </description>
+          <upid>filter.jet</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một máy bay phản lực tìm và ăn táo.
+              </description>
+              <tileUpid>filter.fruit</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.eat</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một máy bay phản lực mà bạn có thể điều khiển. Cần điều khiển bên trái điều khiển chuyển động.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một máy bay phản lực đi theo những con đường màu xanh lá cây.
+              </description>
+              <tileUpid>selector.followwaypoints</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.followwaypoints</upid>
+                        <upid>modifier.green</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo ra một Máy bay Phản lực sử dụng lệnh Chuyển Trang Lập Trình để biển đổi giữa hai hành vi. Bấm phím A để biến đổi giữa việc phát sáng màu đỏ và màu xanh dương.
+              </description>
+              <tileUpid>actuator.switchtask</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>Phát sáng màu đỏ.</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+                <ExamplePage>
+                  
+                  <description>Phát sáng màu xanh</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.glow</upid>
+                        <upid>modifier.blue</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>FloatBot</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Tàu thủy có thể nổi trên mặt nước, nhưng không thể di chuyển trên đất liền..
+          </description>
+          <upid>filter.floatbot</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Tạo chiếc tàu thủy và bạn có thể lái chúng.  Thanh bên trái điều khiển chuyển động.
+                    </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một con tàu đi xung quanh tạo ra các quả táo sau mỗi 10 giây.
+              </description>
+              <tileUpid>selector.wander</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <reflex>
+                        <upids>
+                          <upid>actuator.movement</upid>
+                          <upid>selector.wander</upid>
+                        </upids>
+                      </reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.10seconds</upid>
+                        <upid>actuator.make</upid>
+                        <upid>modifier.objectfruit</upid>
+                        <upid>modifier.red</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>FastBot</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Xe đua chạy nhanh, có thể leo đồi dốc, và có thể nhảy
+          </description>
+          <upid>filter.fastbot</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một chiếc Xe đua để người chơi điều khiển. Sử dụng cần điều khiển bên trái để di chuyển. Bấm nút A để Xe nhảy.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.jump</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>StickBoy</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Gậy không thể di chuyển nhưng có thể ẩn mình dưới lòng đất bằng cách đóng cửa. Không thể bị tấn công khi đang đóng.
+          </description>
+          <upid>filter.stick</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Tạo ra một nhân vật Gậy để người chơi điều khiển.  Bấm các nút Y và A để mở và đóng cửa của Gậy. Nút B bắn một tên lửa.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.shoot</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>SubBot</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Tàu ngầm hoạt động tốt nhất khi ở dưới mặt nước
+          </description>
+          <upid>filter.subbot</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một Tàu ngầm cho nguời chơi điều khiển. Sử dụng cần điều khiển bên trái để di chuyển. Bấm các nút Y và A để nổi và lặn
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.watersurface</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.waterdive</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Fan</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Quạt có thể được lập trình để đẩy các vật thể ra xa hoặc kéo chúng vào.
+          </description>
+          <upid>filter.fan</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>Tạo một Nguồn sáng tìm kiếm và đi theo sau đĩa bay</description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.saucer</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Octopus</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Bạch tuộc là một nhân vật trơn, yêu biển.</description>
+          <upid>filter.octopus</upid>
+          <programs>
+            
+            <ExampleProgram>
+              
+              <description>Tạo một con bạch tuộc có thể tự ngụy trang và trở lại bình thường.</description>
+              <tileUpid>actuator.camouflage</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>Trang 1</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.camouflage</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.uncamouflage</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>Tạo một con Bạch tuộc bắn mực</description>
+              <tileUpid>filter.inkjet</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>Tạo mực</description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.xbutton</upid>
+                        <upid>actuator.launch</upid>
+                        <upid>modifier.angle.low</upid>
+                        <upid>modifier.strongly</upid>
+                        <upid>modifier.objectinkjet</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Light</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Nguồn sáng di chuyển nhanh và có thể thắp sáng cả thế giới.
+          </description>
+          <upid>filter.light</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>Tạo Nguồn sáng tìm kiếm và theo sau đĩa bay</description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.saucer</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Wisp</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đốm sáng di chuyển nhanh để lại những vệt sáng phía sau.
+          </description>
+          <upid>filter.wisp</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>Tạo một đốm sáng đi tìm và bám theo các đốm sáng khác</description>
+              <tileUpid>selector.towardclosest</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.wisp</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Saucer</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đĩa bay là nhân vật nhanh nhất. Nó có thể thay đổi hướng ngay lập tức.
+          </description>
+          <upid>filter.saucer</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một đĩa bay lấy và di chuyển táo. Ví dụ này sử dụng nhiều trang lập trình.
+              </description>
+              <tileUpid>actuator.grab</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.scan</upid>
+                        <upid>filter.fruit</upid>
+                        <upid>actuator.grab</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.got</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskb</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.05seconds</upid>
+                        <upid>actuator.drop</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.got</upid>
+                        <upid>filter.countnone</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taskc</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.timer</upid>
+                        <upid>filter.05seconds</upid>
+                        <upid>actuator.switchtask</upid>
+                        <upid>modifier.taska</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              
+              <description>
+                Tạo một chiếc đĩa mà bạn có thể lái. Thanh bên trái di chuyển và cần điều khiển bên phải bắn.
+              </description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.rightstick</upid>
+                        <upid>actuator.shoot</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>WindBlimp</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Khinh khí cầu bay chầm chậm xung quanh
+          </description>
+          <upid>filter.windblimp</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>Tạo 1 khinh khí cầu để người chơi điều khiển. Thanh bên trái di chuyển nhân vật</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>BalloonBot</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Khinh khí cầu bay chầm chậm trong không trung và có thể quan sát mọi thứ. Nó có thể là một trọng tài cho các trò chơi.
+          </description>
+          <upid>filter.balloonbot</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>Tạo một Khinh khí cầu mà người chơi có thể điều khiển. Cần điều khiển bên trái dùng để di chuyển. Bấm nút Y và A để bay lên và xuống</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.airrise</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.airdrop</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Puck</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Vòng bay là một sự lựa chọn tuyệt vời cho các trò chơi nhanh vì nó bay xung quanh không có ma sát và có thể nảy mà không mất tốc độ.
+          </description>
+          <upid>filter.puck</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>PushPad</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Đệm Nảy rất to lớn và khỏe mạnh</description>
+          <upid>filter.pushpad</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Turtle</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Rùa có thể bay trong không trung và có thể ẩn trong lớp mai của nó bằng các hành động Mở và Đóng. Khi Rùa trốn trong mai, nó không thể bị tấn công.
+          </description>
+          <upid>filter.turtle</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <descript>
+                Tạo 1 chú rùa mà bạn có thể điểu khiển. Sử dụng cần điều khiển bên trái để di chuyển. Bấm nút A để rùa trốn trong mai và bấm Y để ra ngoài.
+              </descript>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.open</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.close</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>SwimFish</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Cá tốt nhất nên ở dưới nước. Ở trên cạn nó sẽ bị mắc kẹt đấy!
+          </description>
+          <upid>filter.swimfish</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Cloud</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đám mây đang tôn vinh thời tiết ở Redmond của chúng tôi
+          </description>
+          <upid>filter.cloud</upid>
+          <programs>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Mine</string>
+     </key>
+      <value>
+        <ActorHelp>
+            
+            <description>
+              Một quả Mìn có gai có thể lộ hoặc ẩn. Có thể sử dụng hành động "Mở"(open) để hiện gai và hành động "Đóng"(close) để giấu gai đi
+            </description>
+            <upid>filter.mine</upid>
+            <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Drum</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Khi các nhân vật khác nhảy lên trống, họ được phóng lên không trung.</description>
+          <upid>filter.drum</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Sputnik</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Vệ tinh là người bạn tuyệt với với đĩa bay.</description>
+          <upid>filter.sputnik</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>BigYucca1</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Cây cũng có thể được lập trình.</description>
+          <upid>filter.bigyucca1</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Yucca1</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Cây cũng có thể được lập trình.
+          </description>
+          <upid>filter.yucca1</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Yucca3</string>
+      </key>
+     <value>
+        <ActorHelp>
+          
+          <description>
+            Cây cũng có thể được lập trình.
+          </description>
+          <upid>filter.yucca3</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Yucca2</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Cây cũng có thể được lập trình.
+          </description>
+          <upid>filter.yucca2</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Fruit</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Táo có hương vị rất là tuyệt vời và bắn nó lung tung rất là vui</description>
+          <upid>filter.fruit</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>IceBerg</string>
+      </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Tảng băng có thể nổi trong nước</description>
+          <upid>filter.iceBerg</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Rock</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Đá có thể được lập trình giống như mọi thứ khác.</description>
+          <upid>filter.rock</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>RockLowValue</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đá núi lửa có thể được lập trình để phản ứng với các hành động chỉ Xe tự hành có thể thực hiện.
+          </description>
+          <upid>filter.rockLowValue</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>RockHighValue</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đá trầm tích có thể được lập trình để thực hiện với các hành động chỉ Xe tự hành có thể thực hiện.
+          </description>
+          <upid>filter.rockHighValue</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>RockLowValueUnknown</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đá bí ẩn khi được quét bởi Xe tự hành sẽ được lộ diện là 1 hòn đá núi lửa
+          </description>
+          <upid>filter.rockLowValueUnknown</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>RockHighValueUnknown</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đá bí ẩn khi được quét bởi Xe tự hành sẽ được lộ diện là một hòn đá trầm tích
+          </description>
+          <upid>filter.rockHighValueUnknown</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Star</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Các ngôi sao có thể được lập trình giống như mọi thứ khác.</description>
+          <upid>filter.star</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Coin</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Đồng xu là thứ "phải có" cho mọi trò chơi arcade cổ điển.</description>
+          <upid>filter.coin</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>SoccerBall</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Lập trình nó hoặc chỉ đá nó xung quanh. Dù gì, nó chỉ là một quả bóng.</description>
+          <upid>filter.soccerball</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Castle</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Lâu đài thì không thể di chuyển nhiều</description>
+          <upid>filter.castle</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>Tạo một lâu đài nổ khi có thứ gì đó va vào nó.</description>
+              <tileUpid>sensor.gamepad</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.anything</upid>
+                        <upid>actuator.boom</upid>
+                        <upid>modifier.me</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Heart</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Nó là thứ tuyệt vời để hồi lại sức khỏe của bạn</description>
+          <upid>filter.heart</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Bullet</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Nó là thứ để hồi lại băng đạn của bạn
+          </description>
+          <upid>filter.bullet</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Factory</string>
+     </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Nhà máy ACME tạo ra một mốc tuyệt vời cho bất kỳ trò chơi nào.
+          </description>
+          <upid>filter.factory</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Trạm nghỉ chân</string>
+      </key>
+      <value>
+        <ActorHelp>
+          <description>
+            Trạm nghỉ chân để tạo ra cột mốc trong mọi trò chơi.
+          </description>
+          <upid>filter.hut</upid>
+          <programs>
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>WayPoint</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đường dẫn rất linh hoạt. Bạn có thể sử dụng chúng để xác định Đường dẫn cho nhân vật đi theo. Thông thường Đường dẫn vô hình nhưng chúng có thể được thay đổi thành đường bộ hoặc tường bằng cách thay đổi Loại đường. Khi lập trình một nhân vật để theo một Đường dẫn, bạn có thể tùy ý cho nó biết màu của Đường dẫn cần phải đi theo. Màu của đường có thể được thay đổi giống như cách thay đổi màu của nhân vật. Trong Tùy chọn thế giới, bạn có thể chọn mục Gỡ lỗi Đường dẫn để hiển thị các Đường dẫn thường không nhìn thấy được trong khi chạy thế giới của bạn.
+          </description>
+          <upid>selector.followwaypoints</upid>
+          <programs>
+
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>PathGeneric</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Đường dẫn rất linh hoạt. Bạn có thể sử dụng chúng để xác định Đường dẫn cho nhân vật đi theo. Thông thường Đường dẫn vô hình. Khi lập trình một nhân vật để theo một Đường dẫn, bạn có thể tùy ý cho nó biết màu của Đường dẫn cần phải đi theo. Màu của đường có thể được thay đổi giống như cách thay đổi màu của nhân vật. Trong Tùy chọn thế giới, bạn có thể chọn mục Gỡ lỗi Đường dẫn để hiển thị các Đường dẫn thường không nhìn thấy được trong khi chạy thế giới của bạn.
+          </description>
+          <upid>filter.pathplain</upid>
+          <programs>
+
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>PathVeggie</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>Thảm thực vật cho phép bạn bố trí hoa trong thế giới của bạn.</description>
+          <upid>filter.pathflora</upid>
+          <programs>
+
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>PathRoad</string>
+     </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Những đường này cho phép bạn tạo đường trong thế giới trò chơi của bạn.
+          </description>
+          <upid>filter.pathroad</upid>
+          <programs>
+
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>PathWall</string>
+    </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+            Những đường này cho phép bạn tạo ra những bức tường trong thế giới trò chơi của bạn. Bằng cách nâng và hạ nút, bạn có thể kiểm soát các bức tường cao bao nhiêu.
+          </description>
+          <upid>filter.pathwall</upid>
+          <programs>
+
+            </programs>
+        </ActorHelp>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Rover</string>
+      </key>
+      <value>
+        <ActorHelp>
+          
+          <description>
+             Xe tự hành Sao Hoả có thể thực hiện các hành động đặc biệt (Chiếu tia, Quét, Kiểm tra, Chụp ảnh) trên các loại đá trên sao Hỏa.
+            </description>
+          <upid>filter.rover</upid>
+          <programs>
+            <ExampleProgram>
+              
+              <description>
+                Điều khiển các chuyển động cơ bản và gán nút cho 1 chiếc Xe tự hành.
+              </description>
+              <tileUpid>sensor.scanned</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.ybutton</upid>
+                        <upid>actuator.picture</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.bbutton</upid>
+                        <upid>actuator.beam</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.xbutton</upid>
+                        <upid>actuator.inspect</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.abutton</upid>
+                        <upid>actuator.scan</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.gamepad</upid>
+                        <upid>filter.leftstick</upid>
+                        <upid>actuator.movement</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+            <ExampleProgram>
+              <description>
+                Tạo một chiếc Xe tự hành tìm và quét những tảng đá bí ẩn.
+              </description>
+              <tileUpid>sensor.scanned</tileUpid>
+              <pages>
+                <ExamplePage>
+                  
+                  <description>
+                    Đây là mô tả trang. Không được sử dụng trong ActorHelp nhưng được sử dụng trong trợ giúp.
+                  </description>
+                  <reflexes>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.eyes</upid>
+                        <upid>filter.rockUnknown</upid>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.towardclosest</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>sensor.bumpers</upid>
+                        <upid>filter.rockUnknown</upid>
+                        <upid>actuator.scan</upid>
+                      </upids>
+                    </reflex>
+                    <reflex>
+                      <upids>
+                        <upid>actuator.movement</upid>
+                        <upid>selector.wander</upid>
+                      </upids>
+                    </reflex>
+                  </reflexes>
+                </ExamplePage>
+              </pages>
+            </ExampleProgram>
+          </programs>
+        </ActorHelp>
+      </value>
+    </item>
+  </actorHelp>
+</Help>

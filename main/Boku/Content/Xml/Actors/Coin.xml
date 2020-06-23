@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt></TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\White</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+				<string>BrassMetal</string>
+				<string>DarkGreyMatte</string>
+				<string>ShinyMetal</string>
+				<string>TreeBrown</string>
+				<string>RedBloom</string>
+				<string>BlackMatte</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+	<GlowPosition>
+		<Offset>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.6</Z>
+  </HealthBarOffset>
+
+  <DefaultEditHeight>0.3</DefaultEditHeight>
+  <MinHeight>0.3</MinHeight>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.25</CollisionRadius>
+	<HasCushion>false</HasCushion>
+
+	<Cost>1.666</Cost>
+  <CollisionSound>metalHard</CollisionSound>
+
+  <IsBot>false</IsBot>
+  <IsProp>true</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <StayAboveWater>false</StayAboveWater>
+  <CoefficientOfRestitution>0.6</CoefficientOfRestitution>
+  <Friction>0.9</Friction>
+  <Mass>0.1</Mass>
+  
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+  </Classification>
+
+  <Chassis Type="DynamicProp">
+    <SpinRate>1.0</SpinRate>
+    <Gravity>0.0</Gravity>
+  </Chassis>
+  
+</XmlGameActor>

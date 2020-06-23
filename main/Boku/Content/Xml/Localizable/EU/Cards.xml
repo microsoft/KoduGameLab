@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tiles>
+  <sensor>
+    <gamepad label="gamepad">Jokalariari baimentzen dio pertsonai bat kontrolatzea.  Zehaztu botoia, eragingailua, edo joystika, eta aukeran jokalaria.</gamepad>
+    <keyboard label="teklatua">Jokalariari baimentzen dio pertsonai bat kontrolatzea.  Zehaztu zein botoi.</keyboard>
+    <mouse label="arratoia">Arratoiaren sarrera bati erantzuten dio .</mouse>
+    <touch label="touch">Ukitzearen sarrera bati erantzuten dio .</touch>
+    <microbit label="BBC micro:bit">BBC mikro:bit sarrera bati erantzuten dio .</microbit>
+    <eyes label="ikusi">Objektu bat ikusten duenean erreakzionatzen du, mota edo kolore arabera . Muino eta haranak ikusmena blokeatu dezakete.</eyes>
+    <ears label="hear">Objektu bat entzuten duenean erreakzionatzen du, mota edo soinu arabera . Hormen bidez entzun daiteke.</ears>
+    <bumpers label="bump">Objketu batekin talka egitean erreakzionatzen du, mota, colore, etc. arabera.</bumpers>
+    <timer label="timer">Segundu zenbaki baten iraupenari erreakzionatzen du. Haunditu segunduen zenbakia iraupena luzatzeko.</timer>
+    <got label="got">Zerbait hartzean erreakzionatzen du mota, kolore, etc. arabera.</got>
+    <scored label="scored">Puntuazio aldaketetan erreakzionatzen du.</scored>
+    <health label="health">Osasun aldaketetan erreakzionatzen du.</health>
+    <missilehit label="shot hit">Jaurtiketa beste objektu bati iristean erreakzionatzen du.Hona puntuazioa mantentzeko, baina nahi dena egin daiteke. Adibidez bot bat jaurtitzean arrosa bihurtu.</missilehit>
+    <held label="held by">Beste objektu batez bilduta izatean erreakzionatzen du.</held>
+    <terrain label="lurrean">Lurzoru mota ezberdinei erreakzionatzen du.</terrain>
+    <water label="uretan">Ur mota ezberdinei erreakzionatzen du.</water>
+    <beamed label="beamed">Erreakzionatzen du Marte motatako haitz batek transmitituta izan denean.</beamed>
+    <inspected  label="ikertuta">Erreakzionatzen du Marte motatako haitz batek ikuskatuta izan denean.</inspected>
+    <scanned label="eskaneatuta">Erreakzionatzen du haitz ezezagun batek eskaneatu denean jakinarazteko.</scanned>
+    <endofpath  label="bidearen amaiera">Erreakzionatu bidearen azkenean ailegatzen denean.</endofpath>
+    <always label="beti">Zerbait egin denbora osoan. Aukerakoa.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Kodu zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonaia da.</boku>
+    <bokubot label="kodu">Kodu zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonaia da.</bokubot>
+    <anything label="edozer" />
+    <dead label="ezabatutako pertsonaia">Erreakzionatzen du ezabatutako pertsonaietara</dead>
+    <me label="ni">Bakarrik berrikusten du programa hau exekutatzen duen bot-ak</me>
+    <said label="said">Entzun beste pertsonai bati zehozer esateko. Idatzi nahi duzuna entzuteko. </said>
+    <countnone label="none">Erreakzionatzen du deskripzioa ez denean berdin ikusten ari den objektuari. Adibidez, ikusi - urdina- inork ez du erreakzionatuko ez badauka ezer urdina begi-bistan.</countnone>
+    <starfish label="urazpiko izarra">Erreakzionatzen du itsas izar bati.</starfish>
+    <clam label="txirla">Erreakzionatzen du txirla bati.</clam>
+    <seagrass label="itsasoko belarra">Erreakzionatzen du itsasoko belarrari.</seagrass>
+    <seagrasssingle label="itsasoko belarra">Erreakzionatzen du itsasoko belarrari.</seagrasssingle>
+    <lilypad label="nenufarrak">Erreakzionatzen du igebelarrari edo nenufar batera.</lilypad>
+    <lilypadsingle label="nenufarra">Erreakzionatzen du igebelarrari edo nenufar batera.</lilypadsingle>
+    <flyfish label="arrain hegalaria">Arrain Hegalaria zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonaia da.</flyfish>
+    <jet label="hegazkina">Zurrusta zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonaia da.</jet>
+    <light label="argia">Argia zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonaia da. Gauzak argitzen ditu ere. Baina lau izan ditzakezu soilik.</light>
+    <fan label="aizagailua">Erreakzionatzen du haizagailu batera.</fan>
+    <octopus label="olagarroa">Erreakzionatzen du olagarro batera.</octopus>
+    <fastbot label="motozikleta">Motozikleta zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonaia da.</fastbot>
+    <saucer label="platerra">Barkatu, ezin dizut gehiagorik esan.  Platerari buruzko informazioa pribatua da.</saucer>
+    <windblimp label="gidagarria">Gidatzaile zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonai hegalaria da.</windblimp>
+    <balloonbot label="puxika">Puxika zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonai flotatzailea da.</balloonbot>
+    <subbot label="urazpikoa">Itsaspeko zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonaia da.</subbot>
+    <terracannon label="kanoia">Kanoi zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonai da.</terracannon>
+    <puck label="diskoa">Disko zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonai da.</puck>
+    <wisp label="piltzara">Piltzar zure jokoari gehi diezaiokezun eta zeinen portaera programa daitekeen pertsonai da.</wisp>
+    <anybot label="edozein bot">Bila ezazu edozein bot-mota.</anybot>
+    <turtle label="dortoka">Erreakzionatzen du dortoka batera.</turtle>
+    <rover label="robota">Erreakzionatzen du robot batera.</rover>
+    <pushpad label="bultzatzeko-kuxina">Erreakzionatzen du bultzada-kuxin batera.</pushpad>
+    <sputnik label="satelitea">Erreakzionatzen du satelite batera.</sputnik>
+    <stick label="makila">Erreakzionatzen du makila batera.</stick>
+    <stickboy label="makila">Erreakzionatzen du makila batera.</stickboy>
+    <drum label="danborea">Erreakzionatzen du danbor batera.</drum>
+    <mine label="putzua">Erreakzionatzen du putzu batera.</mine>
+    <cloud label="hodeia">Erreakzionatzen du hodei batera.</cloud>
+    <swimfish label="arraina">Erreakzionatzen du arrain batera.</swimfish>
+    <floatbot label="itsasontzia">Erreakzionatzen du itsasontzi batera.</floatbot>
+    <factory label="fabrika">Erreakzionatzen du fabrika batera.</factory>
+    <hut label="etxola">Erreakzionatzen du etxola batera.</hut>
+    <castle label="gaztelua">Erreakzionatzen du gaztelu batera.</castle>
+    <fruit label="sagarra">Erreakzionatzen du sagar batera.</fruit>
+    <inkjet label="tinta-hodeia">Erreakzionatzen du tinta-hodei batera.</inkjet>
+    <iceberg label="izozmendia">Erreakzionatzen du izozmendi batera.</iceberg>
+    <rock label="arroka">Erreakzionatzen du haitz batera.</rock>
+    <rockLowValue label="Suzko haitza">Erreakzionatzen du haitz suzko bati.</rockLowValue>
+    <rockHighValue label="Sedimentarioa">Erreakzionatzen du haitz sedimentario bati.</rockHighValue>
+    <rockLowValueUnknown label="Arroka Ezezaguna">Ezezaguna eskanerretik pasatu arte dirudien suzko haitza, hedatzen da edo ikuskatzen da.</rockLowValueUnknown>
+    <rockHighValueUnknown label="Arroka Ezezaguna">Ezezaguna eskanerretik pasatu arte dirudien haitz sedimentarioa, hedatzen da edo ikuskatzen da.</rockHighValueUnknown>
+    <rockUnknown label="Arroka Ezezaguna">Erreakzionatzen du haitz ezezagun bati.</rockUnknown>
+    <tree label="zuhaitza">Erreakzionatzen du zuhaitz bati.</tree>
+    <pipe label="hodia">Erreakzionatzen du hodi bati.</pipe>
+    <pipeStraight label="hodi zuzena">Erreakzionatzen du hodi zuzen bati.</pipeStraight>
+    <pipeCross label="hodi gurutzatua">Erreakzionatzen du hodi gurutzatu bati.</pipeCross>
+    <pipeCorner label="izkinako hodia">Erreakzionatzen du hodi-izkina bati.</pipeCorner>
+    <underwater label="urazpikoa">Erreakzionatzen du upeko objektuei.</underwater>
+    <building label="eraikina">Erreakzionatzen du eraikin bati.</building>
+    <flower label="lorea" />
+    <gate label="gate" />
+    <cursor label="kutsorea">Erreakzionatzen du kurtsoreari.</cursor>
+    <star label="izarra">Erreakzionatzen du izar batera.</star>
+    <coin label="txanpona">Erreakzionatzen du txanpon batera.</coin>
+    <soccerball label="pilota">Erreakzionatzen du pilota batera.</soccerball>
+    <heart label="bihotza">Erreakzionatzen du bihotz batera.</heart>
+    <bullet label="misila">Erreakzionatzen du munizioari</bullet>
+    <Black label="black">Erreakzionatzen du beltz koloreko zerbaiti.</Black>
+    <Grey label="grey">Erreakzionatzen du gris koloreko zerbaiti.</Grey>
+    <white label="white">Erreakzionatzen du zuri koloreko zerbaiti.</white>
+    <red label="red">Erreakzionatzen du gorri koloreko zerbaiti.</red>
+    <orange label="orange">Erreakzionatzen du laranja koloreko zerbaiti.</orange>
+    <yellow label="yellow">Erreakzionatzen du hori koloreko zerbaiti.</yellow>
+    <green label="green">Erreakzionatzen du berde koloreko zerbaiti.</green>
+    <blue label="blue">Erreakzionatzen du urdin koloreko zerbaiti.</blue>
+    <purple label="purple">Erreakzionatzen du more koloreko zerbaiti.</purple>
+    <pink label="pink">Erreakzionatzen du arrosa koloreko zerbaiti.</pink>
+    <brown label="brown">Erreakzionatzen du marroi koloreko zerbaiti.</brown>
+    <PathBlack label="black path">Erreakzionatzen du bide beltz batera.</PathBlack>
+    <PathGrey label="grey path">Erreakzionatzen du bide gris batera.</PathGrey>
+    <PathWhite label="white path">Erreakzionatzen du bide zuri batera.</PathWhite>
+    <PathRed label="red path">Erreakzionatzen du bide gorri batera.</PathRed>
+    <PathOrange label="orange path">Erreakzionatzen du bide laranja batera.</PathOrange>
+    <PathYellow label="yellow path">Erreakzionatzen du bide hori batera.</PathYellow>
+    <PathGreen label="green path">Erreakzionatzen du bide berde batera.</PathGreen>
+    <PathBlue label="blue path">Erreakzionatzen du bide urdin batera.</PathBlue>
+    <PathPurple label="purple path">Erreakzionatzen du bide more batera.</PathPurple>
+    <PathPink label="pink path">Erreakzionatzen du bide arrosa batera.</PathPink>
+    <PathBrown label="brown path">Erreakzionatzen du bide marroi batera.</PathBrown>
+    <pathplain label="plain" />
+    <pathroad label="road" />
+    <pathwall label="wall" />
+    <pathflora label="flora" />
+    <yucca1 label="zuhaitza" />
+    <yucca2 label="zuhaitza" />
+    <yucca3 label="zuhaitza" />
+    <bigyucca1 label="zuhaitza" />
+    <expresshappy label="pozik">Erreakzionatzen du bot zoriontsu batera.</expresshappy>
+    <expresssad label="triste">Erreakzionatzen du bot triste batera.</expresssad>
+    <expressangry label="HASERRE">Erreakzionatzen du bot haserre batera.</expressangry>
+    <expresscrazy label="cRaZy">Erreakzionatzen du bot zoro batera.</expresscrazy>
+    <expresshearts label="bihotzak">Erreakzionatzen du bihotzak erakusten dituen bot batera.</expresshearts>
+    <expressflowers label="loreak">Erreakzionatzen du loreak erakusten dituen bot batera.</expressflowers>
+    <expressstars label="izarrak">Erreakzionatzen du izarrak erakusten dituen bot batera.</expressstars>
+    <expressswear label="swears">Erreakzionatzen du zin egiten duen bot batera.</expressswear>
+    <expressnormal label="normala">Erreakzionatzen du arrunt jokatzen ari den bot batera.</expressnormal>
+    <expressnone label="blank">Erreakzionatzen du arrunt jokatzen ari den bot batera.</expressnone>
+    <moving label="moving">Erreakzionatzen du bakarrik bot batek mugimenduan baldin badago.</moving>
+    <camouflage label="camouflage">Erreakzionatzen du bakarrik bot batek kamuflatuta baldin badago.</camouflage>
+    <closeby label="close by">Ondoan kausetatik|arrazoietatik izaera|pertsonaia bakarrik bere burua hurbil dauden objektuetan arreta jartzen die.  Far objects are ignored.</closeby>
+    <faraway label="oso hurrun">Erreakzionatzen du bakarrik urrutira dauden gauzetara.</faraway>
+
+    <infront label="in front">Erreakzionatzen du bakarrik aurrean dituen gauzetara.</infront>
+    <behind label="behind">Erreakzionatzen du bakarrik atzean dituen gauzetara.</behind>
+    <toleft label="to left">Erreakzionatzen du bakarrik ezkerrean dituen gauzetara.</toleft>
+    <toright label="to right">Erreakzionatzen du bakarrik eskuinean dituen gauzetara.</toright>
+    <over label="above">Erreakzionatzen du bakarrik gainean dituen gauzetara.</over>
+    <under label="below">Erreakzionatzen du bakarrik behean dituen gauzetara.</under>
+
+    <lineofsight label="line of sight">Lurrak eta paretek sentsorea blokeatzen dute.</lineofsight>
+    
+    <countfew label="few">Erreakzionatzen du bakarrik zerbaiten zenbait ikusten dituzunean.</countfew>
+    <countmany label="many">Erreakzionatzen du bakarrik zerbaiten asko ikusten dituzunean.</countmany>
+    <clustermany label="cluster">Erreakzionatzen du bakarrik zerbaiten asko taldekatuta ikusten dituzunean.</clustermany>
+    <countany label="any" />
+    <leftstick label="L stick">Erreakzionatzen du kontrolatzaile batengo ezkerreko stickera. Ona da mugitzeko.</leftstick>
+    <rightstick label="R stick">Erreakzionatzen du kontrolatzaile batengo eskuineko stickera. Ona da tiro egiteko.</rightstick>
+    <abutton label="A button">Erreakzionatzen du kontrolatzaile baten A botoiara.</abutton>
+    <bbutton label="B button">Erreakzionatzen du kontrolatzaile baten B botoiara.</bbutton>
+    <xbutton label="X button">Erreakzionatzen du kontrolatzaile baten X botoiara.</xbutton>
+    <ybutton label="Y button">Erreakzionatzen du kontrolatzaile baten Y botoiara.</ybutton>
+    <lefttrigger label="left trig">Erreakzionatzen du kontrolatzaile batengo ezkerreko katura.</lefttrigger>
+    <righttrigger label="right trig">Erreakzionatzen du kontrolatzaile batengo eskuineko katura.</righttrigger>
+    <lefttrigger_analog label="left trig">Erreakzionatzen du kontrolatzaile batengo ezkerreko katura.</lefttrigger_analog>
+    <righttrigger_analog label="right trig">Erreakzionatzen du kontrolatzaile batengo eskuineko katura.</righttrigger_analog>
+    <microbit label="BBC micro:bit">
+      <tilt label="tilt">Erreakzionatzen du BBC micro:bit sarrera okertzeko.</tilt>
+      <leftbutton label="A button">Erreakzionatzen du BBC micro:bit A botoia sakatzean. </leftbutton>
+      <rightbutton label="B button">Erreakzionatzen du BBC micro:bit B botoia sakatzean.</rightbutton>
+      <pin1 label="pin 0">BBC micro:bit pin 0 egoera irakurtzen du.</pin1>
+      <pin2 label="pin 1">BBC micro:bit pin 1 egoera irakurtzen du.</pin2>
+      <pin3 label="pin 2">BBC micro:bit pin 2 egoera irakurtzen du.</pin3>
+    </microbit>
+    <mouse>
+      <button>
+        <left label="ezkerra">Erreakzionatzen du saguaren ezkerreko botoiara</left>
+        <right label="eskuina">Erreakzionatzen du saguaren eskuineko botoiara</right>
+      </button>
+      <hover label="over">Erreakzionatzen du sagua objektu edo lurreko baten gainean dagoenean.</hover>
+      <move label="mugitu">Erreakzionatzen du saguaren mugimendura.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="touching">Erreakzionatzen du ukitze aktibo batera (ukipen-pantaila).</touching>
+        <tap label="tap">Erreakzionatzen du ukitze batera (ukipen-pantaila).</tap>
+        <rotate label="rotate">Erreakzionatzen du bira keinu batera (ukipen-pantaila)</rotate>
+        <swipe label="swipe">Erreakzionatzen du desplazamendu keinu batekin (ukipen-pantaila)</swipe>
+        <slide label="slide">Erreakzionatzen du desplazamendu keinu batera (ukipen-pantaila)</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="white">Erreakzionatzen du HUD-eko botoi ZURIra. (Visit world settings to change)</White>
+        <Black label="black">Erreakzionatzen du HUD-eko botoi BELTZAra. (Visit world settings to change)</Black>
+        <Grey label="grey">Erreakzionatzen du HUD-eko botoi GRISAra. (Visit world settings to change)</Grey>
+        <Red label="red">Erreakzionatzen du HUD-eko botoi GORRIra. (Visit world settings to change)</Red>
+        <Green label="green">Erreakzionatzen du HUD-eko botoi VERDEra. (Visit world settings to change)</Green>
+        <Blue label="blue">Erreakzionatzen du HUD-eko botoi URDINAra. (Visit world settings to change)</Blue>
+        <Orange label="orange">Erreakzionatzen du HUD-eko botoi LARANJAra. (Visit world settings to change)</Orange>
+        <Yellow label="yellow">Erreakzionatzen du HUD-eko botoi HORIra. (Visit world settings to change)</Yellow>
+        <Purple label="purple">Erreakzionatzen du HUD-eko botoi PURPURAra. (Visit world settings to change)</Purple>
+        <Pink label="pink">Erreakzionatzen du HUD-eko botoi ARROSAra. (Visit world settings to change)</Pink>
+        <Brown label="brown">Erreakzionatzen du HUD-eko botoi MARROIAra. (Visit world settings to change)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="X Button">Erreakzionatzen du pantailan X botoia ukitzean.</controllerButton_X>
+      <controllerButton_Y label="Y Button">Erreakzionatzen du pantailan Y botoia ukitzean.</controllerButton_Y>
+      <controllerButton_A label="A Button">Erreakzionatzen du pantailan A botoia ukitzean.</controllerButton_A>
+      <controllerButton_B label="B Button">Erreakzionatzen du pantailan B botoia ukitzean.</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="Arrows">Erreakzionatzen du teklatuko gezi tekletara.</ArrowKeys>
+    <WASDKeys label="WASD">Erreakzionatzen du teklatuko WASD tekletara.</WASDKeys>
+    <Akey label="A">Erreakzionatzen du teklatuko A teklara.</Akey>
+    <Bkey label="B">Erreakzionatzen du teklatuko B teklara.</Bkey>
+    <Ckey label="C">Erreakzionatzen du teklatuko C teklara.</Ckey>
+    <Dkey label="D">Erreakzionatzen du teklatuko D teklara.</Dkey>
+    <Ekey label="E">Erreakzionatzen du teklatuko E teklara.</Ekey>
+    <Fkey label="F">Erreakzionatzen du teklatuko F teklara.</Fkey>
+    <Gkey label="G">Erreakzionatzen du teklatuko G teklara.</Gkey>
+    <Hkey label="H">Erreakzionatzen du teklatuko H teklara.</Hkey>
+    <Ikey label="I">Erreakzionatzen du teklatuko I teklara.</Ikey>
+    <Jkey label="J">Erreakzionatzen du teklatuko J teklara.</Jkey>
+    <Kkey label="K">Erreakzionatzen du teklatuko K teklara.</Kkey>
+    <Lkey label="L">Erreakzionatzen du teklatuko L teklara.</Lkey>
+    <Mkey label="M">Erreakzionatzen du teklatuko M teklara.</Mkey>
+    <Nkey label="N">Erreakzionatzen du teklatuko N teklara.</Nkey>
+    <Okey label="O">Erreakzionatzen du teklatuko O teklara.</Okey>
+    <Pkey label="P">Erreakzionatzen du teklatuko P teklara.</Pkey>
+    <Qkey label="Q">Erreakzionatzen du teklatuko Q teklara.</Qkey>
+    <Rkey label="R">Erreakzionatzen du teklatuko R teklara.</Rkey>
+    <Skey label="S">Erreakzionatzen du teklatuko S teklara.</Skey>
+    <Tkey label="T">Erreakzionatzen du teklatuko T teklara.</Tkey>
+    <Ukey label="U">Erreakzionatzen du teklatuko U teklara.</Ukey>
+    <Vkey label="V">Erreakzionatzen du teklatuko V teklara.</Vkey>
+    <Wkey label="W">Erreakzionatzen du teklatuko W teklara.</Wkey>
+    <Xkey label="X">Erreakzionatzen du teklatuko X teklara.</Xkey>
+    <Ykey label="Y">Erreakzionatzen du teklatuko Y teklara.</Ykey>
+    <Zkey label="Z">Erreakzionatzen du teklatuko Z teklara.</Zkey>
+    <D0key label="0">Erreakzionatzen du teklatuko 0 teklara.</D0key>
+    <D1key label="1">Erreakzionatzen du teklatuko 1 teklara.</D1key>
+    <D2key label="2">Erreakzionatzen du teklatuko 2 teklara.</D2key>
+    <D3key label="3">Erreakzionatzen du teklatuko 3 teklara.</D3key>
+    <D4key label="4">Erreakzionatzen du teklatuko 4 teklara.</D4key>
+    <D5key label="5">Erreakzionatzen du teklatuko 5 teklara.</D5key>
+    <D6key label="6">Erreakzionatzen du teklatuko 6 teklara.</D6key>
+    <D7key label="7">Erreakzionatzen du teklatuko 7 teklara.</D7key>
+    <D8key label="8">Erreakzionatzen du teklatuko 8 teklara.</D8key>
+    <D9key label="9">Erreakzionatzen du teklatuko 9 teklara.</D9key>
+    <Spacekey label="Space">Erreakzionatzen du teklatuko espazioa teklara.</Spacekey>
+    <PageUpkey label="PageUp">Erreakzionatzen du teklatuko PageUp teklara.</PageUpkey>
+    <PageDownkey label="PageDown">Erreakzionatzen du teklatuko PageDown teklara.</PageDownkey>
+    <Endkey label="End">Erreakzionatzen du teklatuko Amaiera teklara.</Endkey>
+    <Leftkey label="Left">Erreakzionatzen du teklatuko Exkerra teklara..</Leftkey>
+    <Upkey label="Up">Erreakzionatzen du teklatuko Goian teklara.</Upkey>
+    <Rightkey label="Right">Erreakzionatzen du teklatuko Eskuina teklara.</Rightkey>
+    <Downkey label="Down">Erreakzionatzen du teklatuko Behean teklara.</Downkey>
+    <Insertkey label="Insert">Erreakzionatzen du teklatuko Insert teklara.</Insertkey>
+    <Deletekey label="Delete">Erreakzionatzen du teklatuko Delete teklara.</Deletekey>
+    <LeftWindowskey label="LeftWindows">Erreakzionatzen du teklatuko Left Windows teklara.</LeftWindowskey>
+    <RightWindowskey label="RightWindows">Erreakzionatzen du teklatuko Right Windows teklara.</RightWindowskey>
+    <Multiplykey label="*">Erreakzionatzen du teklatuko Biderkatzea teklara.</Multiplykey>
+    <Addkey label="+">Erreakzionatzen du teklatuko Gehitzea teklara.</Addkey>
+    <Subtractkey label="-">Erreakzionatzen du teklatuko Kentzea teklara.</Subtractkey>
+    <Decimalkey label=".">Erreakzionatzen du teklatuko Puntu Hamartarra teklara.</Decimalkey>
+    <Dividekey label="/">Erreakzionatzen du teklatuko Banatzea teklara.</Dividekey>
+    <LeftShiftkey label="LeftShift">Erreakzionatzen du teklatuko LeftShift teklara.</LeftShiftkey>
+    <RightShiftkey label="RightShift">Erreakzionatzen du teklatuko RightShift teklara.</RightShiftkey>
+    <LeftControlkey label="LeftControl">Erreakzionatzen du teklatuko LeftControl teklara.</LeftControlkey>
+    <RightControlkey label="RightControl">Erreakzionatzen du teklatuko RightControl teklara.</RightControlkey>
+    <LeftAltkey label="LeftAlt">Erreakzionatzen du teklatuko LeftAlt teklara.</LeftAltkey>
+    <RightAltkey label="RightAlt">Erreakzionatzen du teklatuko RightAlt teklara.</RightAltkey>
+    <OemSemicolonkey label=";">Erreakzionatzen du teklatuko Puntu eta Koma teklara.</OemSemicolonkey>
+    <OemPluskey label="+">Erreakzionatzen du teklatuko Plus teklara.</OemPluskey>
+    <OemCommakey label=",">Erreakzionatzen du teklatuko Koma teklara.</OemCommakey>
+    <OemMinuskey label="-">Erreakzionatzen du teklatuko Kentzea teklara.</OemMinuskey>
+    <OemPeriodkey label=".">Erreakzionatzen du teklatuko Puntu teklara.</OemPeriodkey>
+    <OemQuestionkey label="?">Erreakzionatzen du teklatuko Galdeketa teklara.</OemQuestionkey>
+    <OemTildekey label="~">Erreakzionatzen du teklatuko Tilde teklara.</OemTildekey>
+    <OemOpenBracketskey label="[">Erreakzionatzen du teklatuko OpenBrackets teklara.</OemOpenBracketskey>
+    <OemPipekey label="|">React to the Pipe key on the keyboard.</OemPipekey>
+    <OemCloseBracketskey label="]">React to the CloseBrackets key on the keyboard.</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">React to the Quotes key on the keyboard.</OemQuoteskey>
+    <OemBackslashkey label="\">React to the Backslash key on the keyboard.</OemBackslashkey>
+    <F1key label="F1">Erreakzionatzen du teklatuko F1 teklara.</F1key>
+    <F2key label="F2">Erreakzionatzen du teklatuko F2 teklara.</F2key>
+    <F3key label="F3">Erreakzionatzen du teklatuko F3 teklara.</F3key>
+    <F4key label="F4">Erreakzionatzen du teklatuko F4 teklara.</F4key>
+    <F5key label="F5">Erreakzionatzen du teklatuko F5 teklara.</F5key>
+    <F6key label="F6">Erreakzionatzen du teklatuko F6 teklara.</F6key>
+    <F7key label="F7">Erreakzionatzen du teklatuko F7 teklara.</F7key>
+    <F8key label="F8">Erreakzionatzen du teklatuko F8 teklara.</F8key>
+    <F9key label="F9">Erreakzionatzen du teklatuko F9 teklara.</F9key>
+    <F10key label="F10">Erreakzionatzen du teklatuko F10 teklara.</F10key>
+    <F11key label="F11">Erreakzionatzen du teklatuko F11 teklara.</F11key>
+    <F12key label="F12">Erreakzionatzen du teklatuko F12 teklara.</F12key>
+    <Shiftkey label="Shift">Erreakzionatzen du teklatuko Shift teklara.</Shiftkey>
+    <Controlkey label="Control">Erreakzionatzen du teklatuko edozein kontrol teklara.</Controlkey>
+    <Altkey label="Alt">Erreakzionatzen du teklatuko edozein Alt teklara.</Altkey>
+    <Windowskey label="Windows">Erreakzionatzen du teklatuko edozein Windows teklara.</Windowskey>
+    <player1 label="1 jokalaria">Erreakzionatzen du bakarrik 1go jokalariaren kontrolatzailera. Balio lehenetsia da edozein jokalariari erreakzionatzea.</player1>
+    <player2 label="2 jokalaria">Erreakzionatzen du bakarrik 2. jokalariaren kontrolatzailera. Balio lehenetsia da edozein jokalariari erreakzionatzea..</player2>
+    <player3 label="3 jokalaria">Erreakzionatzen du bakarrik 3. jokalariaren kontrolatzailera. Balio lehenetsia da edozein jokalariari erreakzionatzea.</player3>
+    <player4 label="4 jokalaria">Erreakzionatzen du bakarrik 4. jokalariaren kontrolatzailera. Balio lehenetsia da edozein jokalariari erreakzionatzea.</player4>
+    <terrain label="type">Erreakzionatzen du lurreko mota espezifiko batera.</terrain>
+    <water label="type">Erreakzionatzen du ur mota espezifiko batera.</water>
+    <quartersecond label="second">Segunduko 1/4. Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</quartersecond>
+    <_01second label="second">Segundu 1. Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</_01second>
+    <_02seconds label="seconds">2 segundu. Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</_02seconds>
+    <_03seconds label="seconds">3 segundu. Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</_03seconds>
+    <_04seconds label="seconds">4 segundu. beste batzuekin denbora luzeagoak gehi dadin.</_04seconds>
+    <_05seconds label="seconds">5 segundu. Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</_05seconds>
+    <_10seconds label="seconds">10 segundu. Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</_10seconds>
+    <_20seconds label="seconds">20 segundu.  Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</_20seconds>
+    <_30seconds label="seconds">30 segundu. Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</_30seconds>
+    <_60seconds label="seconds">60 segundu. Konbinatu beste batzuekin denbora luzeagoak gehi dadin.</_60seconds>
+    <_000point label="puntuak">0 puntu.</_000point>
+    <_001point label="point">Puntu 1. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_001point>
+    <_002point label="puntuak">2 puntu. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_002point>
+    <_003point label="puntuak">3 puntu. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_003point>
+    <_004point label="puntuak">4 puntu. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_004point>
+    <_005point label="puntuak">5 puntu. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_005point>
+    <_010point label="puntuak">10 puntu. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_010point>
+    <_020point label="puntuak">20 puntu. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_020point>
+    <_050point label="puntuak">50 puntu. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_050point>
+    <_100point label="puntuak">100 puntu. Konbinatu beste batzuekin kopuru handiagoak gehitzeko.</_100point>
+    <random label="random">Egin ezazu zenbaki-lauzak erabiliz ausazko zenbaki bat. Adibidez, - 5 Zorik artean 0 eta 5 zenbaki zori bat sortzen du.</random>
+    <scorebucket>
+      <color>
+        <white label="white">Puntuaia zuria egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</white>
+        <black label="black">Puntuaia beltza egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</black>
+        <grey label="grey">Puntuaia grisa egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</grey>
+        <red label="red">Puntuaia gorria egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</red>
+        <green label="green">Puntuaia berdea egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</green>
+        <blue label="blue">Puntuaia urdina egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</blue>
+        <orange label="orange">Puntuaia laranja egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</orange>
+        <yellow label="yellow">Puntuaia horia egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</yellow>
+        <purple label="purple">Puntuaia purpura egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</purple>
+        <pink label="pink">Puntuaia larrosa egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</pink>
+        <brown label="brown">Puntuaia marroia egiaztatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</brown>
+      </color>
+      <letter>
+        <a label="score A">Konprobatzen du 'A' puntuazioa, baldin eta ez badago markatzailean.</a>
+        <b label="score B">Konprobatzen du 'B' puntuazioa, baldin eta ez badago markatzailean.</b>
+        <c label="score C">Konprobatzen du 'C' puntuazioa, baldin eta ez badago markatzailean.</c>
+        <d label="score D">Konprobatzen du 'D' puntuazioa, baldin eta ez badago markatzailean.</d>
+        <e label="score E">Konprobatzen du 'E' puntuazioa, baldin eta ez badago markatzailean.</e>
+        <f label="score F">Konprobatzen du 'F' puntuazioa, baldin eta ez badago markatzailean.</f>
+        <g label="score G">Konprobatzen du 'G' puntuazioa, baldin eta ez badago markatzailean.</g>
+        <h label="score H">Konprobatzen du 'H' puntuazioa, baldin eta ez badago markatzailean.</h>
+        <i label="score I">Konprobatzen du 'I' puntuazioa, baldin eta ez badago markatzailean.</i>
+        <j label="score J">Konprobatzen du 'J' puntuazioa, baldin eta ez badago markatzailean.</j>
+        <k label="score K">Konprobatzen du 'K' puntuazioa, baldin eta ez badago markatzailean.</k>
+        <l label="score L">Konprobatzen du 'L' puntuazioa, baldin eta ez badago markatzailean.</l>
+        <m label="score M">Konprobatzen du 'M' puntuazioa, baldin eta ez badago markatzailean.</m>
+        <n label="score N">Konprobatzen du 'N' puntuazioa, baldin eta ez badago markatzailean.</n>
+        <o label="score O">Konprobatzen du 'O' puntuazioa, baldin eta ez badago markatzailean.</o>
+        <p label="score P">Konprobatzen du 'P' puntuazioa, baldin eta ez badago markatzailean.</p>
+        <q label="score Q">Konprobatzen du 'Q' puntuazioa, baldin eta ez badago markatzailean.</q>
+        <r label="score R">Konprobatzen du 'R' puntuazioa, baldin eta ez badago markatzailean.</r>
+        <s label="score S">Konprobatzen du 'S' puntuazioa, baldin eta ez badago markatzailean.</s>
+        <t label="score T">Konprobatzen du 'T' puntuazioa, baldin eta ez badago markatzailean.</t>
+        <u label="score U">Konprobatzen du 'U' puntuazioa, baldin eta ez badago markatzailean.</u>
+        <v label="score V">Konprobatzen du 'V' puntuazioa, baldin eta ez badago markatzailean.</v>
+        <w label="score W">Konprobatzen du 'W' puntuazioa, baldin eta ez badago markatzailean.</w>
+        <x label="score X">Konprobatzen du 'X' puntuazioa, baldin eta ez badago markatzailean.</x>
+        <y label="score Y">Konprobatzen du 'Y' puntuazioa, baldin eta ez badago markatzailean.</y>
+        <z label="score Z">Konprobatzen du 'Z' puntuazioa, baldin eta ez badago markatzailean.</z>
+      </letter>
+    </scorebucket>
+    <scoretrigger label="trigger" />
+    <timertrigger label="trigger" />
+    <scoreis label="is" />
+    <scoreequals label="equals">Puntuaia baldin eta zenbaki bati berdina bada erreakzionatzen du.</scoreequals>
+    <scorenotequals label="notequals">Puntuaia baldin eta zenbaki bati berdina ez bada erreakzionatzen du.</scorenotequals>
+    <scoreabove label="above">Puntuaia baldin eta zenbaki baino handiagoa bada erreakzionatzen du.</scoreabove>
+    <scorebelow label="below">Puntuaia baldin eta zenbaki baino txikiagoa bada erreakzionatzen du.</scorebelow>
+    <scoregteq label="&gt;=">Puntuaia baldin eta zenbaki bati berdina bada edo handiagoa bada erreakzionatzen du.</scoregteq>
+    <scorelteq label="&lt;=">Puntuaia baldin eta zenbaki bati berdina bada edo txikiagoa bada erreakzionatzen du.</scorelteq>
+    <healthis label="is" />
+    <healthabove label="above">Osasuna baldin eta zenbaki baino handiagoa bada erreakzionatzen du.</healthabove>
+    <healthbelow label="below">Osasuna baldin eta zenbaki baino txikiagoa bada erreakzionatzen du.</healthbelow>
+    <direction>
+      <up label="up">Erreakzionatu makila gorantz sakatuta badago.</up>
+      <right label="right">Erreakzionatu makila eskuinerantz sakatuta dagoenean.</right>
+      <down label="down">Erreakzionatu makila beherantz sakatuta dagoenean.</down>
+      <left label="left">Erreakzionatu makila ezkerretantz sakatuta dagoenean.</left>
+      <clockwise label="right">Erreakzionatzen du erlojuko orratzei dagokienez rotazio keinu batera.</clockwise>
+      <counterclockwise label="left">Rotazio keinu batek erlojuko orratzen aurkako zentzuan erreakzionatzen du.</counterclockwise>
+    </direction>
+    <not label="not">Erreakzionatzen du noiz baldintzak ez datorrenean bat.</not>
+  </filter>
+  <selector>
+    <closest label="nearest" />
+    <objectrelative label="relative" />
+    <towardclosest label="toward">Zu erreakzionatzen ari zaren denerantz mugitu.</towardclosest>
+    <awayfromall label="away">Zu erreakzionatzen ari zarenerantz urrundu.</awayfromall>
+    <avoidall label="avoid">Halako distantzia batek mantentzerakoan zu erreakzionatzen ari dena saihesten du.</avoidall>
+    <wander label="wander">Norabide aleatorioa ibiliz paseatzen du. Erabilgarria programako azken lerroa bezala pertsonaia mugitzen dela aktiboki ezer ez denean bilatzen ari.</wander>
+    <cruise label="straight">Mugi zaitez aurka ipintzen ari zaren edozein norabidetan.</cruise>
+    <circle label="circle" />
+    <spin label="turn">Biratu leku berdinean.</spin>
+    <forward label="forward" />
+    <hiddenturn label="turn" />
+    <escape label="turn away" />
+    <followwaypuntuak label="on path">Halako kolore bateko bide batean mugitzea. Lehenetsitako balioa edozein bidetan mugitzea da.</followwaypuntuak>
+    <moveupdown label="up/down">Mugitu goruntz eta beheruntz.</moveupdown>
+    <moveup label="up">Mugitu gorantz.</moveup>
+    <movedown label="down">Mugitu beheruntz.</movedown>
+    <moveleftright label="turn">Mugitu ezker edo eskuinera.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="player 1" />
+      <_2 label="player 2" />
+      <_3 label="player 3" />
+      <_4 label="player 4" />
+    </player>
+    <reset>
+      <world label="world">Jokoa indarberritzen du, markagailua izan ezik.</world>
+      <score label="score">Markagailua, edo kolorearen puntuazio indibiduala indarberritzen du.</score>
+      <expression label="express">Berrezarri itzazu pertsonaiaren espresioa.</expression>
+      <glow label="glow">Berrezarri itzazu pertsonaiaren distira.</glow>
+      <health label="health">Berrezarri itzazu pertsonaiaren bizitza.</health>
+    </reset>
+    <projectile>
+      <blip label="blip">Blip-ak suzko jaurtigai azkarrak dira - misilek baino pisu gutxiago.</blip>
+      <missile label="missile">Misilak handiak dira eta ez oso azkarrak, baina nahiko argiak dira haien helburura emateko!</missile>
+    </projectile>
+    <slowly label="slowly">Mugitu astiroago. Erabili momentu desberdinak oraindik astiroago mugitzeko.</slowly>
+    <quickly label="quickly">Mugitu azkarrago. Erabili momentu desberdinak oraindik azkarrago mugitzeko.</quickly>
+    <speednormally label="normally">Mugitu normal. Ahutazkoa.</speednormally>
+    <weakly label="weak">Egin hau normalean baino ahulago.</weakly>
+    <strongly label="strong">Egin hau normalean baino gogorrago.</strongly>
+    <strengthnormally label="normal">Egin hau indar normalean. Ahutazkoa.</strengthnormally>
+    <angle>
+      <low label="low">Egin hau normalean baino ahulagho.</low>
+      <high label="high">Egn hau normalean baino gogorrago.</high>
+    </angle>
+    <turnleft label="left" />
+    <turnright label="right" />
+    <turntoward label="toward" />
+    <turnforward label="forward">Mugimenduak aurpegiaren norabidea ez du zehaztu behar.</turnforward>
+    <pitchup label="up" />
+    <pitchdown label="down" />
+    <forward label="forward">Pertsonaiaren direkzioa kontrakoa da.</forward>
+    <north label="north" />
+    <east label="east" />
+    <south label="south" />
+    <west label="west" />
+    <up label="up" />
+    <down label="down" />
+    <distance>
+      <near label="close">Egin pertsonaiaren borobila estuagoa izatea.</near>
+      <far label="far">Egin pertsonaiaren borobila zabalagoa izatea.</far>
+    </distance>
+    <objecticeberg label="iceberg">Sortu izeberg bat.</objecticeberg>
+    <objectrock label="rock">Sortu arroka bat.</objectrock>
+    <objectrockLowValue label="rock">Sortu arroka ingenioso bat.</objectrockLowValue>
+    <objectrockHighValue label="rock">Sortu arroka sedimentario bat.</objectrockHighValue>
+    <objectfruit label="apple">Sortu sagar bat.</objectfruit>
+    <objectinkjet label="ink cloud">Sortu tintazko hodeia.</objectinkjet>
+    <objectstar label="star">Sortu izar bat.</objectstar>
+    <objectcoin label="coin">Sortu txanpon bat.</objectcoin>
+    <objectheart label="heart">Sortu bihotz bat.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="ball">Sortu futbol pilota.</objectsoccerball>
+    <objectbullet label="ammo">Sortu arma.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="page 1">Aldatu orri edo lerro 1ra.</taska>
+    <taskb label="page 2">Aldatu orri edo lerro 2ra.</taskb>
+    <taskc label="page 3">Aldatu orri edo lerro 3ra.</taskc>
+    <taskd label="page 4">Aldatu orri edo lerro 4ra.</taskd>
+    <taske label="page 5">Aldatu orri edo lerro 5ra.</taske>
+    <taskf label="page 6">Aldatu orri edo lerro 6ra.</taskf>
+    <taskg label="page 7">Aldatu orri edo lerro 7ra.</taskg>
+    <taskh label="page 8">Aldatu orri edo lerro 8ra.</taskh>
+    <taski label="page 9">Aldatu orri edo lerro 9ra.</taski>
+    <taskj label="page 10">Aldatu orri edo lerro 10ra.</taskj>
+    <taskk label="page 11">Aldatu orri edo lerro 11ra.</taskk>
+    <taskl label="page 12">Aldatu orri edo lerro 12ra.</taskl>
+    <expresshappy label="happy">Eragin alai.</expresshappy>
+    <expresssad label="sad">Eragin triste.</expresssad>
+    <expressangry label="ANGRY">Eragin haserre.</expressangry>
+    <expresscrazy label="CrAzY">Eragin txoro.</expresscrazy>
+    <expresshearts label="hearts">Erakutsi bihotzak.</expresshearts>
+    <expressflowers label="flowers">Erakutsi lorea.</expressflowers>
+    <expressstars label="stars">Erakutsi izarrak.</expressstars>
+    <expressswear label="swears">Erakutsi marrazki animatuen irainak.</expressswear>
+    <expressnone label="none">Eragin normal eta ez erakutsi ezer.</expressnone>
+    <_000point label="puntuak">0 puntuak.  You can specify a color too.</_000point>
+    <_001point label="point">1 point.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_001point>
+    <_002puntuak label="puntuak">2 puntu.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_002puntuak>
+    <_003puntuak label="puntuak">3 puntu.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_003puntuak>
+    <_004puntuak label="puntuak">4 puntu.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_004puntuak>
+    <_005puntuak label="puntuak">5 puntu.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_005puntuak>
+    <_010puntuak label="puntuak">10 puntu.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_010puntuak>
+    <_020puntuak label="puntuak">20 puntu.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_020puntuak>
+    <_050puntuak label="puntuak">50 puntu.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_050puntuak>
+    <_100puntuak label="puntuak">100 puntu.  Erabili bat baino gehiago zenbaki desberdinak gehitzeko. Kolore bat ipini ahal duzu ere.</_100puntuak>
+    <random label="random">Egin ausazko zenbaki bat. Adibidez, Ausazko-5-k 0 eta 5en arteko ausazko zenbaki bat sortzen du.</random>
+    <health label="health">Pertsonaiak dituen jotze-puntuak.</health>
+    <teama label="team A" />
+    <teamb label="team B" />
+    <payloadzap label="stun">Helburua geldiarazten du segundu batzuetan.</payloadzap>
+    <payloadpop label="knockout">Egin helburuak lo egitea beste batek sendatu arte.</payloadpop>
+    <payloadboom label="boom">Egin helburua explosio batekin desagertzea.</payloadboom>
+    <payloadvanish label="vanish">Eguin helburua isiltasunean deagertzea.</payloadvanish>
+    <black label="black" />
+    <grey label="grey" />
+    <white label="white" />
+    <red label="red" />
+    <orange label="orange" />
+    <yellow label="yellow" />
+    <green label="green" />
+    <blue label="blue" />
+    <purple label="purple" />
+    <pink label="pink" />
+    <brown label="brown" />
+    <glowoff label="off">Ipini 'off' egoeran edozein distira.</glowoff>
+    <colorrandom label="random">Aukeratu edozein kolore.</colorrandom>
+    <path>
+      <black label="black path" />
+      <grey label="grey path" />
+      <white label="white path" />
+      <red label="red path" />
+      <orange label="orange path" />
+      <yellow label="yellow path" />
+      <green label="green path" />
+      <blue label="blue path" />
+      <purple label="purple path" />
+      <pink label="pink path" />
+      <brown label="brown path" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="white">Puntuaia zuria aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</white>
+        <black label="black">Puntuaia beltza aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</black>
+        <grey label="grey">Puntuaia grisa aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</grey>
+        <red label="red">Puntuaia gorria aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</red>
+        <green label="green">Puntuaia berdea aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</green>
+        <blue label="blue">Puntuaia urdina aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</blue>
+        <orange label="orange">Puntuaia laranja aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</orange>
+        <yellow label="yellow">Puntuaia horia aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</yellow>
+        <purple label="purple">Puntuaia purpura aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</purple>
+        <pink label="pink">Puntuaia larrosa aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</pink>
+        <brown label="brown">Puntuaia marroia aldatu, omisiozko puntuaiaren mahaigainean erakutsita dagoena. (Ikusi munduaren doikuntzak aldatzeko.)</brown>
+      </color>
+      <letter>
+        <a label="score A">Aldatu 'A' puntuazioa, baldin eta ez badago markatzailean.</a>
+        <b label="score B">Aldatu 'B' puntuazioa, baldin eta ez badago markatzailean.</b>
+        <c label="score C">Aldatu 'C' puntuazioa, baldin eta ez badago markatzailean.</c>
+        <d label="score D">Aldatu 'D' puntuazioa, baldin eta ez badago markatzailean.</d>
+        <e label="score E">Aldatu 'E' puntuazioa, baldin eta ez badago markatzailean.</e>
+        <f label="score F">Aldatu 'F' puntuazioa, baldin eta ez badago markatzailean.</f>
+        <g label="score G">Aldatu 'G' puntuazioa, baldin eta ez badago markatzailean.</g>
+        <h label="score H">Aldatu 'H' puntuazioa, baldin eta ez badago markatzailean.</h>
+        <i label="score I">Aldatu 'I' puntuazioa, baldin eta ez badago markatzailean.</i>
+        <j label="score J">Aldatu 'J' puntuazioa, baldin eta ez badago markatzailean.</j>
+        <k label="score K">Aldatu 'K' puntuazioa, baldin eta ez badago markatzailean.</k>
+        <l label="score L">Aldatu 'L' puntuazioa, baldin eta ez badago markatzailean.</l>
+        <m label="score M">Aldatu 'M' puntuazioa, baldin eta ez badago markatzailean.</m>
+        <n label="score N">Aldatu 'N' puntuazioa, baldin eta ez badago markatzailean.</n>
+        <o label="score O">Aldatu 'O' puntuazioa, baldin eta ez badago markatzailean.</o>
+        <p label="score P">Aldatu 'P' puntuazioa, baldin eta ez badago markatzailean.</p>
+        <q label="score Q">Aldatu 'Q' puntuazioa, baldin eta ez badago markatzailean.</q>
+        <r label="score R">Aldatu 'R' puntuazioa, baldin eta ez badago markatzailean.</r>
+        <s label="score S">Aldatu 'S' puntuazioa, baldin eta ez badago markatzailean.</s>
+        <t label="score T">Aldatu 'T' puntuazioa, baldin eta ez badago markatzailean.</t>
+        <u label="score U">Aldatu 'U' puntuazioa, baldin eta ez badago markatzailean.</u>
+        <v label="score V">Aldatu 'V' puntuazioa, baldin eta ez badago markatzailean.</v>
+        <w label="score W">Aldatu 'W' puntuazioa, baldin eta ez badago markatzailean.</w>
+        <x label="score X">Aldatu 'X' puntuazioa, baldin eta ez badago markatzailean.</x>
+        <y label="score Y">Aldatu 'Y' puntuazioa, baldin eta ez badago markatzailean.</y>
+        <z label="score Z">Aldatu 'Z' puntuazioa, baldin eta ez badago markatzailean.</z>
+      </letter>
+    </scorebucket>
+    <me label="me">Aplikatu ekintza bot-ari programa hasten.</me>
+    <it label="it">Aplikatu ekintza objektu helburuari.</it>
+    <any label="any">Zarataren bat.</any>
+    <event>
+      <any label="event">Zarataren bat.</any>
+      <silly>
+        <any label="silly">Soinu tontoren bat.</any>
+        <bang label="bang">Marrazki bizidunetako 'bang' soinu bat.</bang>
+        <pow label="pow">Marrazki bizidunetako 'pow' soinu bat.</pow>
+      </silly>
+      <explode>
+        <any label="explode">Explosio zarata.</any>
+        <A label="boom A">Explosio zarata bat.</A>
+        <B label="boom B">Explosio zarata bat.</B>
+        <C label="boom C">Explosio zarata bat.</C>
+        <D label="boom D">Explosio zarata bat.</D>
+        <E label="boom E">Explosio zarata bat.</E>
+      </explode>
+      <musical>
+        <any label="musical">Zarata musikal bat.</any>
+        <glock>
+          <any label="glock">Edozein lira soinu bat.</any>
+        </glock>
+        <glock01 label="C glock">Lira soinu bat.</glock01>
+        <glock02 label="C# glock">Lira soinu bat.</glock02>
+        <glock03 label="D glock">Lira soinu bat.</glock03>
+        <glock04 label="D# glock">Lira soinu bat.</glock04>
+        <glock05 label="E glock">Lira soinu bat.</glock05>
+        <glock06 label="F glock">Lira soinu bat.</glock06>
+        <glock07 label="F# glock">Lira soinu bat.</glock07>
+        <glock08 label="G glock">Lira soinu bat.</glock08>
+        <glock09 label="G# glock">Lira soinu bat.</glock09>
+        <glock10 label="A glock">Lira soinu bat.</glock10>
+        <glock11 label="A# glock">Lira soinu bat.</glock11>
+        <glock12 label="B glock">Lira soinu bat.</glock12>
+        <gong>
+          <any label="gong">Edozein gong soinu.</any>
+        </gong>
+        <gong01 label="C gong">Gong soinu bat.</gong01>
+        <gong02 label="C# gong">Gong soinu bat.</gong02>
+        <gong03 label="D gong">Gong soinu bat.</gong03>
+        <gong04 label="D# gong">Gong soinu bat.</gong04>
+        <gong05 label="E gong">Gong soinu bat.</gong05>
+        <gong06 label="F gong">Gong soinu bat.</gong06>
+        <gong07 label="F# gong">Gong soinu bat.</gong07>
+        <gong08 label="G gong">Gong soinu bat.</gong08>
+        <gong09 label="G# gong">Gong soinu bat.</gong09>
+        <gong10 label="A gong">Gong soinu bat.</gong10>
+        <gong11 label="A# gong">Gong soinu bat.</gong11>
+        <gong12 label="B gong">Gong soinu bat.</gong12>
+        <saw>
+          <any label="saw">Edozein zerra-hortz uhin soinu bat.</any>
+        </saw>
+        <saw01 label="C saw">Zerra-hortz uhin soinu bat.</saw01>
+        <saw02 label="C# saw">Zerra-hortz uhin soinu bat.</saw02>
+        <saw03 label="D saw">Zerra-hortz uhin soinu bat.</saw03>
+        <saw04 label="D# saw">Zerra-hortz uhin soinu bat.</saw04>
+        <saw05 label="E saw">Zerra-hortz uhin soinu bat.</saw05>
+        <saw06 label="F saw">Zerra-hortz uhin soinu bat.</saw06>
+        <saw07 label="F# saw">Zerra-hortz uhin soinu bat.</saw07>
+        <saw08 label="G saw">Zerra-hortz uhin soinu bat.</saw08>
+        <saw09 label="G# saw">Zerra-hortz uhin soinu bat.</saw09>
+        <saw10 label="A saw">Zerra-hortz uhin soinu bat.</saw10>
+        <saw11 label="A# saw">Zerra-hortz uhin soinu bat.</saw11>
+        <saw12 label="B saw">Zerra-hortz uhin soinu bat.</saw12>
+        <sine>
+          <any label="sine">Edozein onda sinusodial soinua.</any>
+        </sine>
+        <sine01 label="C sine">Sinusodial onda tonoa.</sine01>
+        <sine02 label="C# sine">Sinusodial onda tonoa.</sine02>
+        <sine03 label="D sine">Sinusodial onda tonoa.</sine03>
+        <sine04 label="D# sine">Sinusodial onda tonoa.</sine04>
+        <sine05 label="E sine">Sinusodial onda tonoa.</sine05>
+        <sine06 label="F sine">Sinusodial onda tonoa.</sine06>
+        <sine07 label="F# sine">Sinusodial onda tonoa.</sine07>
+        <sine08 label="G sine">Sinusodial onda tonoa.</sine08>
+        <sine09 label="G# sine">Sinusodial onda tonoa.</sine09>
+        <sine10 label="A sine">Sinusodial onda tonoa.</sine10>
+        <sine11 label="A# sine">Sinusodial onda tonoa.</sine11>
+        <sine12 label="B sine">Sinusodial onda tonoa.</sine12>
+        <square>
+          <any label="square">Edozein onda karratuzko soinua.</any>
+        </square>
+        <square01 label="C square">Karratu onda tonoa.</square01>
+        <square02 label="C# square">Karratu onda tonoa.</square02>
+        <square03 label="D square">Karratu onda tonoa.</square03>
+        <square04 label="D# square">Karratu onda tonoa.</square04>
+        <square05 label="E square">Karratu onda tonoa.</square05>
+        <square06 label="F square">Karratu onda tonoa.</square06>
+        <square07 label="F# square">Karratu onda tonoa.</square07>
+        <square08 label="G square">Karratu onda tonoa.</square08>
+        <square09 label="G# square">Karratu onda tonoa.</square09>
+        <square10 label="A square">Karratu onda tonoa.</square10>
+        <square11 label="A# square">Karratu onda tonoa.</square11>
+        <square12 label="B square">Karratu onda tonoa.</square12>
+        <drums>
+          <any label="drums">Edozein danbor soinu.</any>
+        </drums>
+        <bassdrum label="bass">Danbor baxua.</bassdrum>
+        <hhclosed label="hh closed">Hi-hat cymbal closed.</hhclosed>
+        <hhopen label="hh open">Hi-hat cymbal open.</hhopen>
+        <shaker label="shaker">Shaker.</shaker>
+        <snare label="snare">Snare drum.</snare>
+        <tomlow label="tom low">Low pitched tom.</tomlow>
+        <tommed label="tom med">Medium pitched tom.</tommed>
+        <tomhi label="tom hi">High pitched tom.</tomhi>
+      </musical>
+      <arcade>
+        <any label="arcade">Arkade zarataren bat.</any>
+        <roboton label="robot on">Aktibatu robota.</roboton>
+        <robotoff label="robot off">Desaktibatu robota.</robotoff>
+        <coinsound label="coin">Txanpon baten zarata.</coinsound>
+        <gethealth label="health+">Osasuna irabaztearen soinua.</gethealth>
+        <losehealth label="health-">Osasuna galtzearen soinua.</losehealth>
+        <shoot label="shoot">Tiro baten soinua.</shoot>
+        <timer label="timer">Kontadorearen soinua.</timer>
+        <win label="win">Irabazizko soinua.</win>
+        <lose label="lose">Galtzeko soinua.</lose>
+        <inkjet_fire label="inkjet fire">Ink Jet fire sound.</inkjet_fire>
+        <inkjet_impact label="inkjet impact">Ink Jet impact sound.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="misc">Nahas-mahaseko edozein soinu.</any>
+        <countdown_beep label="countdown">Atzeranzko kontuko soinu bat.</countdown_beep>
+        <countdown_alarm label="alarm countdown">Presako alarmako atzeranzko kontua.</countdown_alarm>
+        <epic_stinger label="epic stinger">Ezten epikoko soinu bat.</epic_stinger>
+        <epic_stinger_a label="epic stinger a">Ezten epikoko soinu bat.</epic_stinger_a>
+        <epic_stinger_b label="epic stinger b">Ezten epikoko soinu bat.</epic_stinger_b>
+        <firepoof label="fire poof">Suaren aurkako soinua.</firepoof>
+        <forcefieldup label="shield +">Soinutik gora indar-zelaia.</forcefieldup>
+        <forcefielddown label="shield -">Soinuan behera indar-zelaia.</forcefielddown>
+        <hide label="hide">Izkutatu soinua.</hide>
+        <lockontarget label="lock on">Norako-soinua blokeatzea.</lockontarget>
+        <losetarget label="lock off">Galdu helburu-soinua.</losetarget>
+        <positivecondition label="good">Gertatutako zerbait on soinua.</positivecondition>
+        <negativecondition label="bad">Gertatutako zerbait txar soinua.</negativecondition>
+        <puntuak label="puntuak">Lortutako puntuen soinua.</puntuak>
+        <pop label="pop">Pop soinua.</pop>
+        <popout label="pop out">Pop out soinua (Atera soinua).</popout>
+        <powerup label="powerup">Pizte-soinua jasotzen du.</powerup>
+        <servo label="servo">Motore baten soinua.</servo>
+        <watersplash label="splash">Uraren salpikatzearen zarata.</watersplash>
+        <waterdrop label="drop">Uraren jauzieraren soinua.</waterdrop>
+        <tagbase label="tag base">Etiketako baseko soinua.</tagbase>
+        <whistlehuman label="whistle">Giza txistu-soinua.</whistlehuman>
+        <whistlereferee label="whistle">Epailearen txistuko soinua.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="tower">Dorreko defentsa jokorako gehitutako soinuak.</any>
+        <air_raid_siren label="air raid siren">Aireko eraso sirena-soinu bat.</air_raid_siren>
+        <bomb_fall label="bomb fall">Erortzen den bonbako soinu bat.</bomb_fall>
+        <stun_fire label="stun fire">Dorretxoa su-soinua harritzen du.</stun_fire>
+        <zapper_fire label="zapper fire">Dorretxo zapper-eko su-soinua.</zapper_fire>
+        <missile_fire label="missile fire">Dorretxo misileko su-soinua.</missile_fire>
+        <shrinker_fire label="shrinker fire">Dorretxo shrinker-eko su-soinua.</shrinker_fire>
+        <clam_coin_spit label="coin spit">Txirla baten soinu handia txanpon bat txistua botaz.</clam_coin_spit>
+        <enemy_converted label="enemy converted">Soinu bat etsai bat bihurtzen denerako.</enemy_converted>
+        <enemy_escape label="enemy escape">Soinu bat etsai batek ihes egiten duenerako.</enemy_escape>
+        <place_tower label="place tower">Soinu bat dorre bat ipintzen denerako.</place_tower>
+        <star_collect label="star collect">Soinu bat izar bat jasotzen denerako.</star_collect>
+        <coin_collect label="coin collect">Soinu bat txan pon bat jasotzen denerako.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="music">Musikaren bat talde honentzat.</any>
+      <omni>
+        <any label="Omni">Musikaren bat talde honentzat.</any>
+      </omni>
+    </music>
+    <mu_action label="action">Akzio(a)</mu_action>
+    <mu_ambientlight label="light">Giroko musika arina.</mu_ambientlight>
+    <mu_ambinetmodd label="mood">Umore-musika</mu_ambinetmodd>
+    <mu_brightdowntempo label="slo-mo">Distiratsu behe konpas-musika.</mu_brightdowntempo>
+    <mu_brightfunk label="funk">Funkaliscious!</mu_brightfunk>
+    <mu_brightguitar label="guitar">Brillozko gitarra musika.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu gaia.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="mystery">Musikaren bat talde honentzat.</any>
+      </mystery>
+    </music>
+    <mysterya label="myst A">Misteriozko musika.</mysterya>
+    <mysteryb label="myst B">Misteriozko musika.</mysteryb>
+    <mysteryc label="myst C">Misteriozko musika.</mysteryc>
+    <music>
+      <driving>
+        <any label="driving">Musikaren bat talde honentzat.</any>
+      </driving>
+    </music>
+    <drivinga label="fast A">Azkar, gidatzeko musika.</drivinga>
+    <drivingb label="fast B">Azkar, gidatzeko musika.</drivingb>
+    <drivingc label="fast C">Azkar, gidatzeko musika.</drivingc>
+    <music>
+      <drama>
+        <any label="drama">Musikaren bat talde honentzat.</any>
+      </drama>
+    </music>
+    <dramaa label="drama A">Musika dramatikoa.</dramaa>
+    <dramab label="drama B">Musika dramatikoa.</dramab>
+    <environ>
+      <any label="environ">Zaratarik talde honetatik.</any>
+      <ambocean label="ocean">Ozeanoaren zaratak.</ambocean>
+      <ambforest label="forest">Basoaren zaratak.</ambforest>
+      <ambcity label="city">Hiriaren zaratak.</ambcity>
+      <ambmeadow label="meadow">Belardiaren zaratak.</ambmeadow>
+      <ambmars label="mars">Marteko zaratak.</ambmars>
+      <arena>
+        <any label="arena">Arearen zarataren bat.</any>
+        <a label="arena A">Jendetza piloa.</a>
+        <b label="arena B">Jendetza piloa</b>
+        <c label="arena C">Jendetza piloa</c>
+        <d label="arena D">Jendetza piloa</d>
+        <e label="arena E">Jendetza piloa</e>
+        <f label="arena F">Jendetza piloa</f>
+        <g label="arena G">Jendetza piloa</g>
+      </arena>
+    </environ>
+    <trackingnone label="level">Misilak zuzen hegan egindu du eta ez da gorantz edo beherantz mugituko.</trackingnone>
+    <trackinghoming label="cruise">Misilak lurzoruari jarraituko dio eta mendixken eta harresien gainean hegan egiten saiatuko da.</trackinghoming>
+    <constraint>
+      <leftright label="left/right">Mugitu eskuin eta ezkerrera bakarrik.</leftright>
+      <fwdback label="fwd/back">Aurrera eta atzera egiten du soilik.</fwdback>
+      <updown label="up/down" />
+      <northsouth label="N/S">Iparrerantz eta hegorantz mugi dezan soilik.</northsouth>
+      <eastwest label="E/W">Ekialderantz eta mendebalerantz mugi dezan soilik.</eastwest>
+      <immobile label="freeze">Ez du mugimendua baimentzen, barne jotzen den noiz.</immobile>
+    </constraint>
+    <once label="once">The code after DO will only be run once each time the WHEN condition is activated.</once>
+    <watertype label="water type">Ezarri uraren mota.</watertype>
+    <microbit.pattern label="pattern">Pattern to display on BBC micro:bit display.</microbit.pattern>
+    <on label="on">Ezarri oraingo egoera 'on'-era.</on>
+    <off label="off">Ezarri oraingo egoera 'off'-era.</off>
+  </modifier>
+  <actuator>
+    <nothing label="nothing" />
+    
+    
+    <movement label="move">Munduaren inguruan bidaiatzea. Aukerak esploratzen ditu. Pertsonaia desberdinek mugimenduaren ahalmen desberdinak dituzte.</movement>
+    <turn label="turn">Bere aurpegiaren norabidea aldatzen du.</turn>
+    <eat label="eat">Kontsumi ezazu apuntatutako, zein hurbileko izan behar den, objektua.</eat>
+    <say label="say">Testu-mezu bat, globo batean edo elkarrizketan, erakustea. Erabil dezan &lt;cr&gt; lerrotan banatzeko.</say>
+    <open label="open">Era desberdinean funtzionatzen du pertsonaia desberdinentzat. Esperimentatu!</open>
+    <close label="close">Era desberdinean funtzionatzen du pertsonaia desberdinentzat. Esperimentatu!</close>
+    <kick label="kick">Ostikoz jo ezazu helburua, nahiko hurbil bada. Indarra alda dezake.</kick>
+    <make label="make">Egin ezazu beste objektu bat. Oinarrizko objektuak edo Creatable edozer nabaria sor ditzake.</make>
+    <launch label="launch">Ostikoz jo ezazu helburua, nahiko hurbil bada. Indarra alda dezake.</launch>
+    <push label="push">Bultza ezazu helburu bat nolabaiteko jarraibide batean nahiko hurbil badago. Indarrean alda daiteke.</push>
+    <pull label="pull">Tira ezazu helburu bat nolabaiteko jarraibide batean nahiko hurbil badago. Indarrean alda daiteke.</pull>
+    <camouflage label="camoufalge">Kamufla ezazu helburua, hura ikusi gogor eginez.</camouflage>
+    <uncamouflage label="uncamouflage">Ezkamufla ezazu helburua, hura ikusgai eginez.</uncamouflage>
+    <express label="adierazi">Zirrara adieraztea edo efektu berezia erakustea. Adierazpen batzuek pertsonaiaren aurpegia aldatzen dute, berriz, beste batzuk karakterearen gainetik erakusten dira .</express>
+    <color label="kolore">Zu beraren edo norako objektuaren kolorea aldatzea.</color>
+    <glow label="distira">Dirdira erradioaktiboa igortzen du. Kolorea alda dezake.</glow>
+    <sound label="soinua egin">Egin soinu bat! Erabakitzeko pilo bat dago.</sound>
+    <stopsound label="gelditu">Gelditu soinua egiteari.</stopsound>
+    <jump label="salto">Pertsonaia desberdinek altuera desberdinak salto egin ditzakete.</jump>
+    <watersurface label="azalera">Azal-ekintzak uraren azalera igotzea eragiten die urpeko pertsonaiei.</watersurface>
+    <waterdive label="urpean igeri egin">Urpean igeri egin ekintza uraren behealdera murgiltzea urpeko pertsonaiei eragiten die.</waterdive>
+    <airrise label="igo">Igo akzioak pertsonaia hegalariak zerura igo daitezela eragiten du.</airrise>
+    <airdrop label="jaitsi">Jaits akzioak pertsonaia hegalariek lurzorurantz hegan egin dezatela eragiten du</airdrop>
+    <switchtask label="aldatu">Orrialde desberdinari aldatzea. Gaurko orrialdeko erregelak ematen dira soilik. Orrialdeak oso erabilgarriak dira portaera aldatzeko.</switchtask>
+    <inlinetask label="lerroan">Exekuzio-denboran honek hemen beste orrialde baten programazio guztia sartuko du. Hau erabilgarria da hainbat orrialdetan, eta gero linean behin baldin eta behar badu idatz dezakeenez gero, desiratzen duen koderako.</inlinetask>
+    <nextlevel label="hurrengo maila">Karga ezazu hurrengo maila. Erabilgarria hainbat mailako jokoetarako!</nextlevel>
+    <prevlevel label="aurreko maila">Karga ezazu aurreko maila. Erabilgarria hainbat mailako jokoetarako!</prevlevel>
+    <waterraise label="ur-maila igo">Igo ezazu ur-maila objektu honen azpian.</waterraise>
+    <waterlower label="ur-maila jaitsi">Jaits ezazu ur-maila objektu honen azpian.</waterlower>
+    <setwater label="ur-tipoa ezarri">Ur-tipoa ezartzen du objektu honen azpian.</setwater>
+    <rescale label="eskala">Objektuaren tamaina eskala aldatzen du arazorik gabe.</rescale>
+    <rescaleinstant label="eskala (momentuan)">Objektuaren tamaina eskala ezartzen du bat-bateko eran.</rescaleinstant>
+    <holddistance label="itxaronaldiaren arteko distantzia">"Atxikitako" objektuen arteko distantzia aldatzen du leunki.</holddistance>
+    <holddistanceinstant label="itxaronaldiaren arteko distantzia (momentuan)">Bat-batean "atxikita" objektuen arteko distantzia aldatzen du.</holddistanceinstant>
+    <movementspeedmodify label="mugimendu-abiadura">Aurrerantz mugimendu abiadura biderkatzailea ezartzen du aktore honentzat.</movementspeedmodify>
+    <turningspeedmodify label="bira-abiadura">Norabide-abiadura biderkatzailea ezartzen du aktore honentzat.</turningspeedmodify>
+    <worldlightingchange label="lighting">Leun ezartzen du munduaren argitasuna.</worldlightingchange>
+    <worldlightingchangeinstant label="lighting">Momentuan ezartzen du munduaren argitasuna.</worldlightingchangeinstant>
+    <worldskychange label="sky">Leun ezartzen du munduko zerua.</worldskychange>
+    <worldskychangeinstant label="sky">Momentuan ezartzen du munduko zerua</worldskychangeinstant>
+    <shoot label="shoot" />
+    <shoot2 label="shoot">Jaurtiki blipak edo misilak.</shoot2>
+    <beam label="beam">Laser izpi bat botatzen du haitzaren oinarrizko ezaugarriak identifikatzeko Marteren haitzeko mota batean.</beam>
+    <inspect label="inspect">Marte arroka mota batean, ikasketa gehiagotarako ereduak bilduz, zulatzen du.</inspect>
+    <scan label="scan">Haitz ezezagunen tipoak erakusten ditu Rover-en inguruan sortutako area batean.</scan>
+    <picture label="picture">Argazki bat lehen pertsona-ikuspegian egiten du.</picture>
+    <damage label="damage">Ken iezaguzu neure buruari edo helburu pertsonaiari osasuna.</damage>
+    <heal label="heal">Gehi iezadazu niri edo norako pertsonaiari osasuna. Akzioa sendatu egiten du, pertsonaiak edo objektuak jasan dien minarengatik. Lehenetsitako balioa norako objektua senda dadila da; pertsonaia senda dezakete "nik" aldatzailea sartuz. Aldatzaileak erabil daitezke tipoa eta sendatze-puntu kantitatea zehazteko ere.</heal>
+    <zap label="zap">Zorabia gaitzazu edo neure burua edo zenbait segundotako helburu pertsonaia.</zap>
+    <pop label="pop">Eragiten du bot bat edo ni bera osasuna beste pertsona batek indarberritu arte guztiz gaitasungabetuta geratzen zara.</pop>
+    <boom label="boom">Egin ni edo helburua explosio batekin desagertzea.</boom>
+    <vanish label="Vanish">Egin ni edo helburua azkar desagertzea.</vanish>
+    <grab label="grab">Helburua jasotzen du nahiko hurbil badago. Gauza bat izan dezakezu batera soilik.</grab>
+    <drop label="drop">Bota eramaten ari zaren gauza guztiak.</drop>
+    <give label="give">Emaizkiozu pertsonai helburuari eramaten ari zaren gauza guztiak. Ezin baditu eraman, lurrera botako ditu.</give>
+    <reset label="reset">Erreseteatu jokuaren edo pertsonai baten aspektu bat.</reset>
+    <restart label="restart">Erreseteatu jokuaren edo pertsonai baten aspektu bat.</restart>
+    <gameover label="end">Bukatu jokoa.</gameover>
+    <victory label="win">Bukatu jokoa eta erakutsi irabazizko mezu bat. Kolore bat adierazten baduzu guk erakutsiko dizugu.</victory>
+    <score label="score">Gehitu puntuak puntuaziora.</score>
+    <unscore label="subtract">Ken itzazu puntuak emaitza batetik.</unscore>
+    <scoreset label="set score">Ezarri puntuazioa zenbaki honetara.</scoreset>
+   <camera>
+      <followme label="follow">Ikusketa puntuak pertsonai hau jarraitu beharko luke.</followme>
+      <ignoreme label="ignore">Ez arduratu pertsonai hau ikusten mantentzeaz.</ignoreme>
+      <firstperson label="1st person">Ikusi pertsonai honen begietatik.</firstperson>
+    </camera>
+    <microbit>
+      <say label="say">Mugi ezazu testua BBCeko micro:bit-etako erakusketan.</say>
+      <block label="block">BBC mikro guztiak kontrolatu:bit argiak.</block>
+      <sequential label="meter">Piztu BBC mikro:bit argiak zekuentzialki.</sequential>
+      <show label="show pattern">Erakuts ezazu argien kolpe errepikatu bat BBCeko micro:bit-etako LEDeko erakusketan..</show>
+      <setpin1 label="set pin 0">BBC mikroaren estatua:bit pin 0.</setpin1>
+      <setpin2 label="set pin 1">BBC mikroaren estatua:bit pin 1.</setpin2>
+      <setpin3 label="set pin 2">BBC mikroaren estatua:bit pin 2.</setpin3>
+    </microbit>
+  </actuator>
+  <root />
+  <group>
+    <colors label="colors" />
+    <pathcolors label="path colors" />
+    <game label="game" />
+    <more label="more" />
+    <players label="players" />
+    <playermods label="players" />
+    <actions label="actions" />
+    <settings label="settings" />
+    <combat label="combat" />
+    <rover label="rover" />
+    <holding label="holding" />
+    <sounds label="sounds" />
+    <event label="event">
+      <explode label="explode" />
+      <silly label="silly" />
+      <musical label="musical">
+        <glock label="glock" />
+        <saw label="saw" />
+        <sine label="sine" />
+        <gong label="gong" />
+        <square label="square" />
+        <drums label="drums" />
+      </musical>
+      <arcade label="arcade" />
+      <misc label="misc" />
+      <tower label="tower" />
+    </event>
+    <environ label="environ">
+      <forest label="forest" />
+      <arena label="arena" />
+    </environ>
+    <music label="music">
+      <omni label="new" />
+      <mystery label="mystery" />
+      <driving label="driving" />
+      <drama label="drama" />
+    </music>
+    <constraints label="limit" />
+    <directions label="direction" />
+    <filters>
+      <directions label="direction" />
+      <touchbuttons label="buttons" />
+      <touchGuiButtons label="Buttons" />
+      <gestures label="gestures" />
+    </filters>
+    <expressions label="express" />
+    <projectiles label="projectile" />
+    <camera label="view" />
+    <reset label="reset" />
+    <options label="options" />
+    <compare label="compare" />
+    <puntuak label="puntuak" />
+    <time label="time" />
+    <speed label="speed" />
+    <strength label="strength" />
+    <angle label="loft" />
+    <tracking label="tracking" />
+    <bots label="bots I" />
+    <bots2 label="bots II" />
+    <objects label="objects" />
+    <tasks label="task" />
+    <terrains label="types" />
+    <waters label="types" />
+    <setwater label="water type" />
+    <creatables label="creatables" />
+    <keyboard>
+      <letters label="letters" />
+      <numbers label="numbers" />
+      <symbols label="symbols" />
+      <misc label="misc" />
+    </keyboard>
+    <scorebucketmodifiers label="scores" />
+    <scorebucketfilters label="scores" />
+  </group>
+</Tiles>

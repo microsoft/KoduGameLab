@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt></TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\Character\TEX_DISC_DIRT</DirtMapName>
+			<SurfaceNames>
+				<string>ShinyMetal</string>
+				<string>BlackMatte</string>
+				<string>TintableGlowing</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+	<GlowPosition>
+		<Offset>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>1</Z>
+  </HealthBarOffset>
+
+  <DefaultEditHeight>2</DefaultEditHeight>
+  <MinHeight>0.1</MinHeight>
+  <EyeOffset>0.1</EyeOffset>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+	</CollisionCenter>
+	<CollisionRadius>1.0</CollisionRadius>
+	<HasCushion>true</HasCushion>
+
+	<Cost>1.666</Cost>
+  <CollisionSound>metalSoft</CollisionSound>
+
+  <IsBot>true</IsBot>
+  <IsProp>false</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>0.1</Mass> <!--Low mass...-->
+  <CoefficientOfRestitution>0.95</CoefficientOfRestitution>
+  <StayAboveWater>true</StayAboveWater>
+  <Friction>0.0</Friction>
+
+  <GrabRange>5.0</GrabRange>
+  <KickRange>2.0</KickRange>
+
+  <GlowEmitter>
+    <StartRadius>0.15</StartRadius>
+    <EndRadius>1.2</EndRadius>
+  </GlowEmitter>
+
+  <Domain>Air</Domain>
+  
+  <MoveSoundName>ch_Puck_Move</MoveSoundName>
+
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+    <AudioImpression>Noisy</AudioImpression>
+    <AudioVolume>Soft</AudioVolume>
+    <Emitter>None</Emitter>
+    <Expression>None</Expression>
+  </Classification>
+
+  <Chassis Type="Puck">
+    <MaxLinearAcceleration>30.0</MaxLinearAcceleration>
+    <MaxSpeed>20.0</MaxSpeed>
+    <RotationRate>2.0</RotationRate>
+    <HasFacingDirection>false</HasFacingDirection>
+    <Radius>1.1</Radius>
+  </Chassis>
+
+  <Feelers>
+    <Radius>1.1</Radius> <!--Chassis Radius-->
+    <!--For near left and right feelers:    
+    <Nose>1.1</Nose>
+    <Width>0.77782</Width> (Sqrt(2)/2)*ChassisRadius
+    -->
+  </Feelers>
+
+  <HoldingPosition>
+    <Z>0.5</Z>
+  </HoldingPosition>
+
+  <Sensors>
+    <Direction>
+      <X>1</X> <!--front-->
+    </Direction>
+    <Arc>6.2832</Arc> <!--360 degrees-->
+  </Sensors>
+  
+</XmlGameActor>

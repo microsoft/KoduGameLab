@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt></TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\White</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+	<GlowPosition>
+		<Offset>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0.35</Z>
+		</Offset>
+	</GlowPosition>
+
+  <HealthBarOffset>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0.25</Z>
+  </HealthBarOffset>
+
+  <DefaultEditHeight>0.15</DefaultEditHeight>
+  <MinHeight>0.15</MinHeight>
+
+  <CollisionCenter>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0.05</Z>
+	</CollisionCenter>
+	<CollisionRadius>0.25</CollisionRadius>
+	<HasCushion>false</HasCushion>
+
+	<Cost>1.333</Cost>
+  <CollisionSound>unknown</CollisionSound>
+
+  <IsBot>false</IsBot>
+  <IsProp>true</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>0.5</Mass>
+  <StayAboveWater>false</StayAboveWater>
+
+  <!--
+  For tumbling objects ignore the friction value and just
+  use the CoR on all components of the velocity.  For back
+  compat we now set the friction for tumbling objects to
+  0.0.  This way, previously saved levels with different
+  settings will still act as they used to.
+  -->
+  <CoefficientOfRestitution>0.8</CoefficientOfRestitution>
+  <Friction>0.0</Friction>
+  
+  <Classification>
+    <Color>Red</Color>
+    <Physicality>Collectable</Physicality>
+  </Classification>
+
+  <Chassis Type="DynamicProp">
+    <Density>0.7</Density>
+    <Tumbles>true</Tumbles>
+    <TumbleRadius>0.2</TumbleRadius>
+  </Chassis>
+  
+</XmlGameActor>

@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{9608004E-D1C1-4EA5-896A-75394E176D72}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Boku</RootNamespace>
+    <AssemblyName>Boku</AssemblyName>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaCrossPlatformGroupID>682d630b-44d4-4735-9f90-a0f63a42791a</XnaCrossPlatformGroupID>
+    <ApplicationIcon>256x.ico</ApplicationIcon>
+    <Thumbnail>
+    </Thumbnail>
+    <StartupObject>Boku.Program</StartupObject>
+    <XnaUpgrade>
+    </XnaUpgrade>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <XnaOutputType>Game</XnaOutputType>
+    <XnaProfile>HiDef</XnaProfile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>True</XnaCompressContent>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>True</XnaCompressContent>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Tests|Xbox 360' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Xbox 360\Tests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <XnaCompressContent>True</XnaCompressContent>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Installer|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Installer\</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360;EXTERNAL</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <XnaCompressContent>True</XnaCompressContent>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Signed_Installer|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Signed_Installer\</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360;EXTERNAL</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <XnaCompressContent>True</XnaCompressContent>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\BokuPreBoot\BokuSettings.cs">
+      <Link>BokuSettings.cs</Link>
+    </Compile>
+    <Compile Include="Analyses\ObjectAnalysis.cs" />
+    <Compile Include="Analyses\WriteToFile.cs" />
+    <Compile Include="Animatics\Animation.cs" />
+    <Compile Include="Animatics\AnimationInstance.cs" />
+    <Compile Include="Animatics\AnimationReader.cs" />
+    <Compile Include="Animatics\AnimationSet.cs" />
+    <Compile Include="Animatics\AnimatorList.cs" />
+    <Compile Include="Animatics\BaseController.cs" />
+    <Compile Include="Animatics\BlendController.cs" />
+    <Compile Include="Animatics\Bone.cs" />
+    <Compile Include="Animatics\BoneKeys.cs" />
+    <Compile Include="Animatics\SimpleController.cs" />
+    <Compile Include="Animatics\SkinData.cs" />
+    <Compile Include="Animatics\SkinDataReader.cs" />
+    <Compile Include="Audio\Audio.cs" />
+    <Compile Include="Audio\AudioCue.cs" />
+    <Compile Include="Audio\Foley.cs" />
+    <Compile Include="Audio\Group.cs" />
+    <Compile Include="Audio\Sound.cs" />
+    <Compile Include="Audio\Taxonomy.cs" />
+    <Compile Include="Audio\Voice.cs" />
+    <Compile Include="Base\ActorMemory.cs" />
+    <Compile Include="Base\ArbitraryComparable.cs" />
+    <Compile Include="Base\AsyncCallback.cs" />
+    <Compile Include="Base\AsyncResult.cs" />
+    <Compile Include="Base\BaseChassis.cs" />
+    <Compile Include="Base\BaseFilter.cs" />
+    <Compile Include="Base\Classification.Colors.cs" />
+    <Compile Include="Base\Classification.cs" />
+    <Compile Include="Base\GameActor.cs" />
+    <Compile Include="Base\GameObject.cs" />
+    <Compile Include="Base\GameThing.cs" />
+    <Compile Include="Base\GameTimer.cs" />
+    <Compile Include="Base\IBounding.cs" />
+    <Compile Include="Base\INeedsDeviceReset.cs" />
+    <Compile Include="Base\ITransform.cs" />
+    <Compile Include="Base\ModelHelper.cs" />
+    <Compile Include="Base\PartInfo.cs" />
+    <Compile Include="Base\RenderObject.cs" />
+    <Compile Include="Base\ScoreVisibility.cs" />
+    <Compile Include="Base\UpdateObject.cs" />
+    <Compile Include="BokuGame.cs" />
+    <Compile Include="BokuGame.Designer.cs">
+      <DependentUpon>BokuGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AABB.cs" />
+    <Compile Include="Common\AABB2D.cs" />
+    <Compile Include="Common\Actions.cs" />
+    <Compile Include="Common\ActorFactory.cs" />
+    <Compile Include="Common\ActorManager.cs" />
+    <Compile Include="Common\Billboard.cs" />
+    <Compile Include="Common\ButtonTextures.cs" />
+    <Compile Include="Common\Camera.cs" />
+    <Compile Include="Common\CameraInfo.cs" />
+    <Compile Include="Common\Censor.cs" />
+    <Compile Include="Common\ContentLoader.cs" />
+    <Compile Include="Common\FixedMovement.cs" />
+    <Compile Include="Common\Frustum.cs" />
+    <Compile Include="Common\GamePadInput.cs" />
+    <Compile Include="Common\Gesture\DoubleDragGestureRecognizer.cs" />
+    <Compile Include="Common\Gesture\DoubleTapGestureRecognizer.cs" />
+    <Compile Include="Common\Gesture\DragGestureRecognizer.cs" />
+    <Compile Include="Common\Gesture\GestureRecognizer.cs" />
+    <Compile Include="Common\Gesture\SwipeGestureRecognizer.cs" />
+    <Compile Include="Common\Gesture\TapGestureRecognizer.cs" />
+    <Compile Include="Common\Gesture\TouchGestureManager.cs" />
+    <Compile Include="Common\HealthBarManager.cs" />
+    <Compile Include="Common\HelpOverlay.cs" />
+    <Compile Include="Common\HintSystem\BaseHint.cs" />
+    <Compile Include="Common\HintSystem\FullResourceHint.cs" />
+    <Compile Include="Common\HintSystem\GamepadNoFilterHint.cs" />
+    <Compile Include="Common\HintSystem\Hints.cs" />
+    <Compile Include="Common\HintSystem\ModalHint.cs" />
+    <Compile Include="Common\HintSystem\NoControllerHint.cs" />
+    <Compile Include="Common\HintSystem\NoTerrainToRaiseHint.cs" />
+    <Compile Include="Common\HintSystem\QuietMainMenuHint.cs" />
+    <Compile Include="Common\HintSystem\ResourceMeterHint.cs" />
+    <Compile Include="Common\HintSystem\ScrollableModalHint.cs" />
+    <Compile Include="Common\HintSystem\SwitchNoTargetHint.cs" />
+    <Compile Include="Common\HintSystem\ToastManager.cs" />
+    <Compile Include="Common\HintSystem\WaterNoTerrainHint.cs" />
+    <Compile Include="Common\HintSystem\WaterTerrainHint.cs" />
+    <Compile Include="Common\Instrumentation.cs" />
+    <Compile Include="Common\KeyboardInput.cs" />
+    <Compile Include="Common\LevelBrowsers\AsyncThumbnail.cs" />
+    <Compile Include="Common\LevelBrowsers\CommunityLevelBrowser.cs" />
+    <Compile Include="Common\LevelBrowsers\ILevelBrowser.cs" />
+    <Compile Include="Common\LevelBrowsers\ILevelSetCursor.cs" />
+    <Compile Include="Common\LevelBrowsers\ILevelSetFilter.cs" />
+    <Compile Include="Common\LevelBrowsers\ILevelSetQuery.cs" />
+    <Compile Include="Common\LevelBrowsers\ILevelSetSorter.cs" />
+    <Compile Include="Common\LevelBrowsers\LevelMetadata.cs" />
+    <Compile Include="Common\LevelBrowsers\LevelSetCursor.cs" />
+    <Compile Include="Common\LevelBrowsers\LevelSetFilterAny.cs" />
+    <Compile Include="Common\LevelBrowsers\LevelSetFilterByGenre.cs" />
+    <Compile Include="Common\LevelBrowsers\LevelSetQuery.cs" />
+    <Compile Include="Common\LevelBrowsers\LevelSetSorterBasic.cs" />
+    <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.AbortAll.cs" />
+    <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.cs" />
+    <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.DelWorldData.cs" />
+    <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.GetPageOfLevels.cs" />
+    <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.ScrubTerrainFiles.cs" />
+    <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.Thumbnail.cs" />
+    <Compile Include="Common\LevelBrowsers\SharedLevelDatabase.cs" />
+    <Compile Include="Common\LevelBrowsers\SharingLevelBrowser.cs" />
+    <Compile Include="Common\LevelBrowsers\SharingLevelBrowser.Network.cs" />
+    <Compile Include="Common\LevelBrowsers\SharingPresence.cs" />
+    <Compile Include="Common\LevelPackage.cs" />
+    <Compile Include="Common\Localization\Localizer.cs" />
+    <Compile Include="Common\MetaButton.cs" />
+    <Compile Include="Common\ModularMessageDialogManager.cs" />
+    <Compile Include="Common\MouseInput.cs" />
+    <Compile Include="Common\Movement.cs" />
+    <Compile Include="Common\MyMath.cs" />
+    <Compile Include="Common\ParticleSystem\BaseEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\BaseSharedEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\BaseSpriteEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\BeamExplosionEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\BeamManager.cs" />
+    <Compile Include="Common\ParticleSystem\BeamSmokeEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\BleepManager.cs" />
+    <Compile Include="Common\ParticleSystem\DustEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\ExplosionEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\ExplosionManager.cs" />
+    <Compile Include="Common\ParticleSystem\FanEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\FlowerEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\GlowEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\HeartEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\InkEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\InspectEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\ParticleSystemManager.cs" />
+    <Compile Include="Common\ParticleSystem\PlasmaEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\RoverScanEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SharedDustEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SharedEmitterManager.cs" />
+    <Compile Include="Common\ParticleSystem\SharedSmokeEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SharedSmokeSource.cs" />
+    <Compile Include="Common\ParticleSystem\SharedSparkEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SharedSplashEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SmokeEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SmokeEmitter3D.cs" />
+    <Compile Include="Common\ParticleSystem\SparkEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\Sphere.cs" />
+    <Compile Include="Common\ParticleSystem\SplashEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\StarEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SteamEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SteamPuffEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\SwearEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\WaterParticleEmitter.cs" />
+    <Compile Include="Common\ParticleSystem\WreathEmitter.cs" />
+    <Compile Include="Common\PerfTimer.cs" />
+    <Compile Include="Common\PictureManager.cs" />
+    <Compile Include="Common\Gesture\RotationGestureRecognizer.cs" />
+    <Compile Include="Common\SaidStringManager.cs" />
+    <Compile Include="Common\ParticleSystem\ScanEmitter.cs" />
+    <Compile Include="Common\Scoreboard.cs" />
+    <Compile Include="Common\ShadowBlob.cs" />
+    <Compile Include="Common\Sharing\AsyncLiveOperation.cs" />
+    <Compile Include="Common\Sharing\AvailableSessionJoiner.cs" />
+    <Compile Include="Common\Sharing\FrameDelayedOperation.cs" />
+    <Compile Include="Common\Sharing\GamerServices.cs" />
+    <Compile Include="Common\Sharing\InitGamerServices.cs" />
+    <Compile Include="Common\Sharing\InvitedSessionJoiner.cs" />
+    <Compile Include="Common\Sharing\LiveManager.cs" />
+    <Compile Include="Common\Sharing\ProfileFetcher.cs" />
+    <Compile Include="Common\Sharing\SessionCreator.cs" />
+    <Compile Include="Common\Sharing\SessionFinder.cs" />
+    <Compile Include="Common\Sharing\SessionJoiner.cs" />
+    <Compile Include="Common\Sharing\SharingServers.cs" />
+    <Compile Include="Common\Sharing\SignIn.cs" />
+    <Compile Include="Common\Sharing\TimeDelayedOperation.cs" />
+    <Compile Include="Common\SKEvents.cs" />
+    <Compile Include="Common\SmoothCamera.cs" />
+    <Compile Include="Common\StaticActor.cs" />
+    <Compile Include="Common\Storage.cs" />
+    <Compile Include="Common\Storage4.cs" />
+    <Compile Include="Common\StorageGraphics.cs" />
+    <Compile Include="Common\Strings.cs" />
+    <Compile Include="Common\TextBlob.Bidi.cs" />
+    <Compile Include="Common\TextBlob.cs" />
+    <Compile Include="Common\TextBlob.Fat.cs" />
+    <Compile Include="Common\TextHelper.cs" />
+    <Compile Include="Common\ThoughtBalloonManager.cs" />
+    <Compile Include="Common\Time.cs" />
+    <Compile Include="Common\ToolTipManager.cs" />
+    <Compile Include="Common\TouchInput.cs" />
+    <Compile Include="Common\Triangle.cs" />
+    <Compile Include="Common\TutorialSystem\CompletionTest.cs" />
+    <Compile Include="Common\TutorialSystem\Crumb.cs" />
+    <Compile Include="Common\TutorialSystem\GameMode.cs" />
+    <Compile Include="Common\TutorialSystem\ModalDisplay.cs" />
+    <Compile Include="Common\TutorialSystem\Step.cs" />
+    <Compile Include="Common\TutorialSystem\TutorialManager.cs" />
+    <Compile Include="Common\TweakScreenHelp.cs" />
+    <Compile Include="Common\TwitchCurve.cs" />
+    <Compile Include="Common\TwitchManager.cs" />
+    <Compile Include="Common\UnityTouchEmulation.cs" />
+    <Compile Include="Common\Unicode.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Common\WinKeyboard.cs" />
+    <Compile Include="Common\XmlDataHelper.cs" />
+    <Compile Include="Common\Xml\XmlActorsList.cs" />
+    <Compile Include="Common\Xml\XmlGameActor.cs" />
+    <Compile Include="Common\Xml\XmlLevelData.cs" />
+    <Compile Include="Common\Xml\XmlLightData.cs" />
+    <Compile Include="Common\Xml\XmlNewsData.cs" />
+    <Compile Include="Common\Xml\XmlOptionsData.cs" />
+    <Compile Include="Common\Xml\XmlTerrainData.cs" />
+    <Compile Include="Common\Xml\XmlTerrainData2.cs" />
+    <Compile Include="Common\Xml\XmlTerrainMaterialData.cs" />
+    <Compile Include="Common\Xml\XmlWaterData.cs" />
+    <Compile Include="Common\Xml\XmlWorldData.cs" />
+    <Compile Include="Fx\Box4x4BlurFilter.cs" />
+    <Compile Include="Fx\CameraSpaceQuad.cs" />
+    <Compile Include="Fx\CopyFilter.cs" />
+    <Compile Include="Fx\DistortFilter.cs" />
+    <Compile Include="Fx\Distortion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\DistortionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\DOF_Filter.cs" />
+    <Compile Include="Fx\EditFilter.cs" />
+    <Compile Include="Fx\EffectCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\FirstPersonEffect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\FirstPersonEffectMgr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\FPEDistort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\FPEGlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\GaussianFilter.cs" />
+    <Compile Include="Fx\GlowLuz.cs" />
+    <Compile Include="Fx\LightRig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\Luz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\LuzMgr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\Ripple.cs" />
+    <Compile Include="Fx\ScreenSpace3PanelQuad.cs" />
+    <Compile Include="Fx\ScreenSpaceQuad.cs" />
+    <Compile Include="Fx\ShaderGlobals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\Shield.cs" />
+    <Compile Include="Fx\ShowBudget.cs" />
+    <Compile Include="Fx\SimpleMessage.cs" />
+    <Compile Include="Fx\SimpleTexturedQuad.cs" />
+    <Compile Include="Fx\Surface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fx\SurfaceDict.cs" />
+    <Compile Include="Fx\SurfaceSet.cs" />
+    <Compile Include="Fx\ThresholdFilter.cs" />
+    <Compile Include="GameListManager.cs" />
+    <Compile Include="Input\ButtonCommand.cs" />
+    <Compile Include="Input\ChatPadButtonCommand.cs" />
+    <Compile Include="Input\ChatPadCommand.cs" />
+    <Compile Include="Input\CommandMap.cs" />
+    <Compile Include="Input\GamePadButtonCommand.cs" />
+    <Compile Include="Input\GamePadStickCommand.cs" />
+    <Compile Include="Input\GamePadTriggerCommand.cs" />
+    <Compile Include="Input\InputCommand.cs" />
+    <Compile Include="Input\InputCommandStack.cs" />
+    <Compile Include="Input\InputConstraint.cs" />
+    <Compile Include="Input\KeyboardButtonCommand.cs" />
+    <Compile Include="Input\KeyboardCommand.cs" />
+    <Compile Include="Input\StickCommand.cs" />
+    <Compile Include="Input\TriggerCommand.cs" />
+    <Compile Include="Input\VirtualButton.cs" />
+    <Compile Include="Programming\Actuators.cs" />
+    <Compile Include="Programming\Arbitrators.cs" />
+    <Compile Include="Programming\Atom.cs" />
+    <Compile Include="Programming\BeamedSensor.cs" />
+    <Compile Include="Programming\CircleDistanceModifier.cs" />
+    <Compile Include="Programming\ClusterFilter.cs" />
+    <Compile Include="Programming\ConstraintModifier.cs" />
+    <Compile Include="Programming\CreatableModifier.cs" />
+    <Compile Include="Programming\DeadFilter.cs" />
+    <Compile Include="Programming\DirectionFilter.cs" />
+    <Compile Include="Programming\EndofPathSensor.cs" />
+    <Compile Include="Programming\GamePadTriggerFilter.cs" />
+    <Compile Include="Programming\GotObjectSensor.cs" />
+    <Compile Include="Programming\GUIButtonManager.cs" />
+    <Compile Include="Programming\HealthCompareFilter.cs" />
+    <Compile Include="Programming\HealthSensor.cs" />
+    <Compile Include="Programming\Help.cs" />
+    <Compile Include="Programming\InspectedSensor.cs" />
+    <Compile Include="Programming\KeyBoardKeyFilter.cs" />
+    <Compile Include="Programming\KeyBoardSensor.cs" />
+    <Compile Include="Programming\MeFilter.cs" />
+    <Compile Include="Programming\MouseFilter.cs" />
+    <Compile Include="Programming\MouseSensor.cs" />
+    <Compile Include="Programming\MoveDownSelector.cs" />
+    <Compile Include="Programming\MoveLeftRightSelector.cs" />
+    <Compile Include="Programming\MovementActuator.cs" />
+    <Compile Include="Programming\MoveUpDownSelector.cs" />
+    <Compile Include="Programming\MoveUpSelector.cs" />
+    <Compile Include="Programming\NotFilter.cs" />
+    <Compile Include="Programming\OnceModifier.cs" />
+    <Compile Include="Programming\PitchModifier.cs" />
+    <Compile Include="Programming\PlayerModifier.cs" />
+    <Compile Include="Programming\Print.cs" />
+    <Compile Include="Programming\ProjectileModifier.cs" />
+    <Compile Include="Programming\PronounModifier.cs" />
+    <Compile Include="Programming\RelativeFilter.cs" />
+    <Compile Include="Programming\ResetModifier.cs" />
+    <Compile Include="Programming\RotationFilter.cs" />
+    <Compile Include="Programming\SaidFilter.cs" />
+    <Compile Include="Programming\ScannedSensor.cs" />
+    <Compile Include="Programming\ScoreBucketFilter.cs" />
+    <Compile Include="Programming\ScoreBucketModifier.cs" />
+    <Compile Include="Programming\ScoreCompareFilter.cs" />
+    <Compile Include="Programming\SoundFilter.cs" />
+    <Compile Include="Programming\SoundModifier.cs" />
+    <Compile Include="Programming\AwayFromAllSelector.cs" />
+    <Compile Include="Programming\Brain.cs" />
+    <Compile Include="Programming\BumpSensor.cs" />
+    <Compile Include="Programming\CardSpace.cs" />
+    <Compile Include="Programming\CircleSelector.cs" />
+    <Compile Include="Programming\ClassificationFilter.cs" />
+    <Compile Include="Programming\ClosestSelector.cs" />
+    <Compile Include="Programming\colormodifier.cs" />
+    <Compile Include="Programming\CountFilter.cs" />
+    <Compile Include="Programming\DirectionModifier.cs" />
+    <Compile Include="Programming\DistanceFilter.cs" />
+    <Compile Include="Programming\EscapeSelector.cs" />
+    <Compile Include="Programming\ExpressModifier.cs" />
+    <Compile Include="Programming\Filters.cs" />
+    <Compile Include="Programming\FollowWaypointsSelector.cs" />
+    <Compile Include="Programming\GamePadButtonFilter.cs" />
+    <Compile Include="Programming\GamePadSensor.cs" />
+    <Compile Include="Programming\GamePadStickFilter.cs" />
+    <Compile Include="Programming\GameScoredSensor.cs" />
+    <Compile Include="Programming\givenobjectsensor.cs" />
+    <Compile Include="Programming\GlowColorModifier.cs" />
+    <Compile Include="Programming\heldsensor.cs" />
+    <Compile Include="Programming\holdingobjectsensor.cs" />
+    <Compile Include="Programming\MakeColorModifier.cs" />
+    <Compile Include="Programming\MakeObjectModifier.cs" />
+    <Compile Include="Programming\MemorySensor.cs" />
+    <Compile Include="Programming\MissileHitSensor.cs" />
+    <Compile Include="Programming\Modifiers.cs" />
+    <Compile Include="Programming\NullActuator.cs" />
+    <Compile Include="Programming\NullModifier.cs" />
+    <Compile Include="Programming\NullSelector.cs" />
+    <Compile Include="Programming\NullSensor.cs" />
+    <Compile Include="Programming\ObjectModifier.cs" />
+    <Compile Include="Programming\ObjectRelativeSelector.cs" />
+    <Compile Include="Programming\PayloadVerbModifier.cs" />
+    <Compile Include="Programming\PlayerFilter.cs" />
+    <Compile Include="Programming\ProgrammingElement.cs" />
+    <Compile Include="Programming\randomfilter.cs" />
+    <Compile Include="Programming\RandomModifier.cs" />
+    <Compile Include="Programming\Reflex.cs" />
+    <Compile Include="Programming\RocketColorModifier.cs" />
+    <Compile Include="Programming\ScoreFilter.cs" />
+    <Compile Include="Programming\ScoreModifier.cs" />
+    <Compile Include="Programming\ScoreTriggerFilter.cs" />
+    <Compile Include="Programming\Selector.cs" />
+    <Compile Include="Programming\Sensors.cs" />
+    <Compile Include="Programming\SightSensor.cs" />
+    <Compile Include="Programming\SoundSensor.cs" />
+    <Compile Include="Programming\SpeedModifier.cs" />
+    <Compile Include="Programming\SpinSelector.cs" />
+    <Compile Include="Programming\StallSensor.cs" />
+    <Compile Include="Programming\Task.cs" />
+    <Compile Include="Programming\TaskModifier.cs" />
+    <Compile Include="Programming\TeamFilter.cs" />
+    <Compile Include="Programming\TeamModifier.cs" />
+    <Compile Include="Programming\TerrainFilter.cs" />
+    <Compile Include="Programming\TerrainSensor.cs" />
+    <Compile Include="Programming\TimerFilter.cs" />
+    <Compile Include="Programming\TimerSensor.cs" />
+    <Compile Include="Programming\TimerTriggerFilter.cs" />
+    <Compile Include="Programming\TouchButtonFilter.cs" />
+    <Compile Include="Programming\TouchGestureFilter.cs" />
+    <Compile Include="Programming\GUIButtonFilter.cs" />
+    <Compile Include="Programming\TouchSensor.cs" />
+    <Compile Include="Programming\TouchVirtualController.cs" />
+    <Compile Include="Programming\TowardClosestSelector.cs" />
+    <Compile Include="Programming\TrackingModifier.cs" />
+    <Compile Include="Programming\TurnActuator.cs" />
+    <Compile Include="Programming\TurnModifier.cs" />
+    <Compile Include="Programming\TurnSelector.cs" />
+    <Compile Include="Programming\VerbActuator.cs" />
+    <Compile Include="Programming\WanderSelector.cs" />
+    <Compile Include="Programming\WaterFilter.cs" />
+    <Compile Include="Programming\WaterModifier.cs" />
+    <Compile Include="Programming\WaterSensor.cs" />
+    <Compile Include="Programming\WaypointColorModifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Scenes\AddItemHelpCard.cs" />
+    <Compile Include="Scenes\Editor.cs" />
+    <Compile Include="Scenes\HelpScreens.cs" />
+    <Compile Include="Scenes\InGame.cs" />
+    <Compile Include="Scenes\InGame\BasePicker.cs" />
+    <Compile Include="Scenes\InGame\BrushPicker.cs" />
+    <Compile Include="Scenes\InGame\EditObjectParameters.cs" />
+    <Compile Include="Scenes\InGame\EditWorldParameters.cs" />
+    <Compile Include="Scenes\InGame\Ghost.cs" />
+    <Compile Include="Scenes\InGame\InGameCreatables.cs" />
+    <Compile Include="Scenes\InGame\InGameEditBase.cs" />
+    <Compile Include="Scenes\InGame\InGameEditObject.cs" />
+    <Compile Include="Scenes\InGame\InGameEditObjectAddItem.cs" />
+    <Compile Include="Scenes\InGame\InGameEditObjectParameters.cs" />
+    <Compile Include="Scenes\InGame\InGameEditObjectWaypoint.cs" />
+    <Compile Include="Scenes\InGame\InGameEditWorldParameters.cs" />
+    <Compile Include="Scenes\InGame\InGameLoadSave.cs" />
+    <Compile Include="Scenes\InGame\InGameMouseEdit.cs" />
+    <Compile Include="Scenes\InGame\InGameRunSim.cs" />
+    <Compile Include="Scenes\InGame\InGameSelectNextLevel.cs" />
+    <Compile Include="Scenes\InGame\InGameToolBox.cs" />
+    <Compile Include="Scenes\InGame\InGameToolMenu.cs" />
+    <Compile Include="Scenes\InGame\InGameTouchEdit.cs" />
+    <Compile Include="Scenes\InGame\InGameTweakObject.cs" />
+    <Compile Include="Scenes\InGame\MaterialPicker.cs" />
+    <Compile Include="Scenes\InGame\MouseEdit.cs" />
+    <Compile Include="Scenes\InGame\MouseEditToolBox.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\BaseMouseEditTool.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\DeleteObjectsTool.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\EditObjectsTool.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\EditPathsTool.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\PaintTool.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\RaiseLowerTool.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\SmoothLevelTool.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\SpikeyHillyTool.cs" />
+    <Compile Include="Scenes\InGame\MouseEditTools\WaterTool.cs" />
+    <Compile Include="Scenes\InGame\MouseOver.cs" />
+    <Compile Include="Scenes\InGame\ToolBar.cs" />
+    <Compile Include="Scenes\InGame\ToolBox.cs" />
+    <Compile Include="Scenes\InGame\ToolMenu.cs" />
+    <Compile Include="Scenes\InGame\Tools\AddTool.cs" />
+    <Compile Include="Scenes\InGame\Tools\BaseTool.cs" />
+    <Compile Include="Scenes\InGame\Tools\DelObjTool.cs" />
+    <Compile Include="Scenes\InGame\Tools\HeightMapTool.cs" />
+    <Compile Include="Scenes\InGame\Tools\NoiseTool.cs" />
+    <Compile Include="Scenes\InGame\Tools\RoadLevelTool.cs" />
+    <Compile Include="Scenes\InGame\Tools\WaterAdd.cs" />
+    <Compile Include="Scenes\InGame\TouchEdit.cs" />
+    <Compile Include="Scenes\InGame\TouchEditToolBox.cs" />
+    <Compile Include="Scenes\InGame\UnDoStack.cs" />
+    <Compile Include="Scenes\InGame\WaterPicker.cs" />
+    <Compile Include="Scenes\LoadLevelMenu.cs" />
+    <Compile Include="Scenes\MainMenu.cs" />
+    <Compile Include="Scenes\MiniHub.cs" />
+    <Compile Include="Scenes\OptionsMenu.cs" />
+    <Compile Include="Scenes\PreGame\PreGameBase.cs" />
+    <Compile Include="Scenes\PreGame\PreGameDesc.cs" />
+    <Compile Include="Scenes\PreGame\PreGameRacing.cs" />
+    <Compile Include="Scenes\PreGame\PreGameRacingWithDesc.cs" />
+    <Compile Include="Scenes\PreGame\PreGameTitle.cs" />
+    <Compile Include="Scenes\ProgrammingHelpCard.cs" />
+    <Compile Include="Scenes\ProgressScreen.cs" />
+    <Compile Include="Scenes\SaveLevelDialog.cs" />
+    <Compile Include="Scenes\ScrollableTextDisplay.cs" />
+    <Compile Include="Scenes\ShareHub.cs" />
+    <Compile Include="Scenes\TagPicker.cs" />
+    <Compile Include="Scenes\TextDisplay.cs" />
+    <Compile Include="Scenes\TextEditor.cs" />
+    <Compile Include="Scenes\VideoOutput.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SimWorld\ActorMenuItem.cs" />
+    <Compile Include="SimWorld\BokuGreeter.cs" />
+    <Compile Include="SimWorld\BotFace.cs" />
+    <Compile Include="SimWorld\Chassis\BoatChassis.cs" />
+    <Compile Include="SimWorld\Chassis\CursorChassis.cs" />
+    <Compile Include="SimWorld\Chassis\CycleChassis.cs" />
+    <Compile Include="SimWorld\Chassis\DynamicPropChassis.cs" />
+    <Compile Include="SimWorld\Chassis\FloatInAirChassis.cs" />
+    <Compile Include="SimWorld\Chassis\HoverChassis.cs" />
+    <Compile Include="SimWorld\Chassis\HoverSwimChassis.cs" />
+    <Compile Include="SimWorld\Chassis\MissileChassis.cs" />
+    <Compile Include="SimWorld\Chassis\PipeChassis.cs" />
+    <Compile Include="SimWorld\Chassis\PuckChassis.cs" />
+    <Compile Include="SimWorld\Chassis\RoverChassis.cs" />
+    <Compile Include="SimWorld\Chassis\SaucerChassis.cs" />
+    <Compile Include="SimWorld\Chassis\SitAndSpinChassis.cs" />
+    <Compile Include="SimWorld\Chassis\StaticPropChassis.cs" />
+    <Compile Include="SimWorld\Chassis\SwimChassis.cs" />
+    <Compile Include="SimWorld\Chassis\VehicleChassis.cs" />
+    <Compile Include="SimWorld\Collision\CollSys.cs" />
+    <Compile Include="SimWorld\Collision\Compound.cs" />
+    <Compile Include="SimWorld\Collision\Cylinder.cs" />
+    <Compile Include="SimWorld\Collision\Ellipsoid.cs" />
+    <Compile Include="SimWorld\Collision\Mover.cs" />
+    <Compile Include="SimWorld\Collision\Primitive.cs" />
+    <Compile Include="SimWorld\Collision\Rectangle.cs" />
+    <Compile Include="SimWorld\Collision\Slab.cs" />
+    <Compile Include="SimWorld\ColorPalette.cs" />
+    <Compile Include="SimWorld\Compass.cs" />
+    <Compile Include="SimWorld\CruiseMissile.cs" />
+    <Compile Include="SimWorld\Cursor3D.cs" />
+    <Compile Include="SimWorld\CursorThing.cs" />
+    <Compile Include="SimWorld\Drum.cs" />
+    <Compile Include="SimWorld\Face.cs" />
+    <Compile Include="SimWorld\Fan.cs" />
+    <Compile Include="SimWorld\FBXModel.cs" />
+    <Compile Include="SimWorld\FBXRenderObj.cs" />
+    <Compile Include="SimWorld\FloatBot.cs" />
+    <Compile Include="SimWorld\InkJet.cs" />
+    <Compile Include="SimWorld\Light.cs" />
+    <Compile Include="SimWorld\MenuItem.cs" />
+    <Compile Include="SimWorld\MenuItemGameThing.cs" />
+    <Compile Include="SimWorld\ModelAnim.cs" />
+    <Compile Include="SimWorld\OneFace.cs" />
+    <Compile Include="SimWorld\Path\CastleGen.cs" />
+    <Compile Include="SimWorld\Path\Edge.cs" />
+    <Compile Include="SimWorld\Path\HiWallGen.cs" />
+    <Compile Include="SimWorld\Path\HiWallGen2.cs" />
+    <Compile Include="SimWorld\Path\HiWayChina.cs" />
+    <Compile Include="SimWorld\Path\HiWayGen.cs" />
+    <Compile Include="SimWorld\Path\HiWayWide.cs" />
+    <Compile Include="SimWorld\Path\Intersection.cs" />
+    <Compile Include="SimWorld\Path\Node.cs" />
+    <Compile Include="SimWorld\Path\Path.cs" />
+    <Compile Include="SimWorld\Path\RailFenceWay.cs" />
+    <Compile Include="SimWorld\Path\Road.cs" />
+    <Compile Include="SimWorld\Path\RoadFBXRenderObj.cs" />
+    <Compile Include="SimWorld\Path\RoadGenerator.cs" />
+    <Compile Include="SimWorld\Path\RoadMultiRenderObj.cs" />
+    <Compile Include="SimWorld\Path\RoadStdRenderObj.cs" />
+    <Compile Include="SimWorld\Path\RoundWallGen.cs" />
+    <Compile Include="SimWorld\Path\RoundWallGen2.cs" />
+    <Compile Include="SimWorld\Path\Section.cs" />
+    <Compile Include="SimWorld\Path\VeggieGen.cs" />
+    <Compile Include="SimWorld\Path\VeggieGen2.cs" />
+    <Compile Include="SimWorld\Path\VeggieGen2_B.cs" />
+    <Compile Include="SimWorld\Path\VeggieGen2_C.cs" />
+    <Compile Include="SimWorld\Path\VeggieGen2_D.cs" />
+    <Compile Include="SimWorld\Path\VeggieGen_C.cs" />
+    <Compile Include="SimWorld\Path\WayPoint.cs" />
+    <Compile Include="SimWorld\Path\WayPointMenuItem.cs" />
+    <Compile Include="SimWorld\RoverGreeter.cs" />
+    <Compile Include="SimWorld\SharedIdle.cs" />
+    <Compile Include="SimWorld\SkyBox.cs" />
+    <Compile Include="SimWorld\SwimFish.cs" />
+    <Compile Include="SimWorld\TerraCannon.cs" />
+    <Compile Include="SimWorld\Terra\BatchCache.cs" />
+    <Compile Include="SimWorld\Terra\Brush2DManager.cs" />
+    <Compile Include="SimWorld\Terra\ColorMap.cs" />
+    <Compile Include="SimWorld\Terra\ColorMapNeighbors.cs" />
+    <Compile Include="SimWorld\Terra\HeightMap.cs" />
+    <Compile Include="SimWorld\Terra\HeightMapNeighbors.cs" />
+    <Compile Include="SimWorld\Terra\Stepper.cs" />
+    <Compile Include="SimWorld\Terra\Terrain.cs" />
+    <Compile Include="SimWorld\Terra\TerrainMaterial.cs" />
+    <Compile Include="SimWorld\Terra\Tile.cs" />
+    <Compile Include="SimWorld\Terra\Tile.Renderable.cs" />
+    <Compile Include="SimWorld\Terra\Tile.Renderable.FlatTerrainOptimizer_FD.cs" />
+    <Compile Include="SimWorld\Terra\VirtualMap.cs" />
+    <Compile Include="SimWorld\Terra\Water.cs" />
+    <Compile Include="SimWorld\Terra\WaterEffect.cs" />
+    <Compile Include="SimWorld\Terra\WaterMap.cs" />
+    <Compile Include="SimWorld\Terra\WaterTile.cs" />
+    <Compile Include="SimWorld\ThoughtBalloon.cs" />
+    <Compile Include="SimWorld\TwoFace.cs" />
+    <Compile Include="SimWorld\VictoryOverlay.cs" />
+    <Compile Include="SimWorld\WideFace.cs" />
+    <Compile Include="SimWorld\WindBlimp.cs" />
+    <Compile Include="SimWorld\Wisp.cs" />
+    <Compile Include="SiteOptions.cs" />
+    <Compile Include="StudioK\LoginDialog.cs" />
+    <Compile Include="StudioK\LoginDialog.designer.cs">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TileProcessor\UIMeshData.cs" />
+    <Compile Include="TitleScreen\TitleScreen.cs" />
+    <Compile Include="TitleScreen\TitleScreenMode.cs" />
+    <Compile Include="Ui2d\AuxMenuUIGrid.cs" />
+    <Compile Include="Ui2d\Base9Grid.cs" />
+    <Compile Include="Ui2d\BrushPickerUIGrid.cs" />
+    <Compile Include="Ui2d\Button.cs" />
+    <Compile Include="Ui2d\ItemScroller.cs" />
+    <Compile Include="Ui2d\LoadLevelMenuUIGrid.cs" />
+    <Compile Include="Ui2d\LoadLevelPopup.cs" />
+    <Compile Include="Ui2d\LoadLevelSendToPopup.cs" />
+    <Compile Include="Ui2d\MessageBox.cs" />
+    <Compile Include="Ui2d\MessageBoxElement.cs" />
+    <Compile Include="Ui2d\MessageDialog.cs" />
+    <Compile Include="Ui2d\ModularCheckboxList.cs" />
+    <Compile Include="Ui2d\ModularMenu.cs" />
+    <Compile Include="Ui2d\ModularMessageDialog.cs" />
+    <Compile Include="Ui2d\MouseMenu.cs" />
+    <Compile Include="Ui2d\ScrollContainer.cs" />
+    <Compile Include="Ui2d\Shared.cs" />
+    <Compile Include="Ui2d\TextDialog.cs" />
+    <Compile Include="Ui2d\TextLine.cs" />
+    <Compile Include="Ui2d\ToolMenuUIGrid.cs" />
+    <Compile Include="Ui2d\UIGrid.cs" />
+    <Compile Include="Ui2d\UIGrid2DBrushElement.cs" />
+    <Compile Include="Ui2d\UIGrid2DCheckBoxElement.cs" />
+    <Compile Include="Ui2d\UIGrid2DDualTextureElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ui2d\UIGrid2DExampleElement.cs" />
+    <Compile Include="Ui2d\UIGrid2DFloatingTextElement.cs" />
+    <Compile Include="Ui2d\UIGrid2DProgrammedBotElement.cs" />
+    <Compile Include="Ui2d\UIGrid2DTextElement.cs" />
+    <Compile Include="Ui2d\UIGrid2DTextElement2.cs" />
+    <Compile Include="Ui2d\UIGrid2DTextureElement.cs" />
+    <Compile Include="Ui2d\UIGrid2DToolElement.cs" />
+    <Compile Include="Ui2d\UIGridBaseSliderElement.cs" />
+    <Compile Include="Ui2d\UIGridCheckboxElement.cs" />
+    <Compile Include="Ui2d\UIGridElement.cs" />
+    <Compile Include="Ui2d\UIGridFloatSliderElement.cs" />
+    <Compile Include="Ui2d\UIGridIntegerSliderElement.cs" />
+    <Compile Include="Ui2d\UIGridLevelElement.cs" />
+    <Compile Include="Ui2d\UIGridMaterialElement.cs" />
+    <Compile Include="Ui2d\UIGridModularButtonElement.cs" />
+    <Compile Include="Ui2d\UIGridModularCameraModeElement.cs" />
+    <Compile Include="Ui2d\UIGridModularCheckboxElement.cs" />
+    <Compile Include="Ui2d\UIGridModularFloatSliderElement.cs" />
+    <Compile Include="Ui2d\UIGridModularHelpSquare.cs" />
+    <Compile Include="Ui2d\UIGridModularIntegerSliderElement.cs" />
+    <Compile Include="Ui2d\UIGridModularNextLevelElement.cs" />
+    <Compile Include="Ui2d\UIGridModularOKSquare.cs" />
+    <Compile Include="Ui2d\UIGridModularPictureListElement.cs" />
+    <Compile Include="Ui2d\UIGridModularRadioBoxElement.cs" />
+    <Compile Include="Ui2d\UIGridModularTextElement.cs" />
+    <Compile Include="Ui2d\UIGridPictureListElement.cs" />
+    <Compile Include="Ui2d\UIGridShareHubElements.cs" />
+    <Compile Include="Ui2d\UIGridTextListElement.cs" />
+    <Compile Include="Ui2d\UIGridWaterElement.cs" />
+    <Compile Include="Ui2d\UIGrindBaseModularSliderElement.cs" />
+    <Compile Include="UI\Control.cs" />
+    <Compile Include="UI\ControlCollection.cs" />
+    <Compile Include="UI\Fugly.cs" />
+    <Compile Include="UI\notpieselector.cs" />
+    <Compile Include="UI\pieselector.cs" />
+    <Compile Include="UI\ReflexBlock.cs" />
+    <Compile Include="UI\ReflexCard.cs" />
+    <Compile Include="UI\ReflexHandle.cs" />
+    <Compile Include="UI\ReflexPanel.cs" />
+    <Compile Include="UI\RenderObjects.cs" />
+    <Compile Include="UI\SelectorLayout.cs" />
+    <Compile Include="UI\UiCursor.cs" />
+    <Compile Include="UI\uiselector.cs" />
+    <Compile Include="UI\UIShim.cs" />
+    <Compile Include="Web\BrowserForm.cs" />
+    <Compile Include="Web\BrowserForm.designer.cs">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Challenge.cs" />
+    <Compile Include="Web\Community.cs" />
+    <Compile Include="Web\Trans\GetKoduWebUser.cs" />
+    <Compile Include="Web\WebAuth.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="256x.ico" />
+    <Content Include="GameThumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content\Content.contentproj">
+      <Project>18ec8d91-2c21-46a6-a367-ddbf98073d4f</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=1c9e259686f921e0, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.XML">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=1c9e259686f921e0, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BokuShared\XboxBokuShared.csproj">
+      <Project>{0E25312B-7720-4F24-BA0C-1B0F94AF0451}</Project>
+      <Name>XboxBokuShared</Name>
+    </ProjectReference>
+    <ProjectReference Include="Content\BokuContent.contentproj">
+      <Project>{18EC8D91-2C21-46A6-A367-DDBF98073D4F}</Project>
+      <Name>BokuContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StudioK\LoginDialog.resx">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\BrowserForm.resx">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" Condition="" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

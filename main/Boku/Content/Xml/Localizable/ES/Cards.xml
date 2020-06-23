@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tiles>
+  <sensor>
+    <gamepad label="controlador">Permite a un jugador controlar a un personaje. Especifica botón, disparador, o joystick y opcionalmente jugador.</gamepad>
+    <keyboard label="teclado">Permite a un jugador controlar a un personaje. Especifica cual tecla.</keyboard>
+    <mouse label="ratón">Responde a una entrada del ratón.</mouse>
+    <touch label="tocar">Responde a una entrada touch.</touch>
+    <microbit label="BBC micro:bit">Responde a una entrada BBC micro:bit.</microbit>
+    <eyes label="mira">Reacciona cuando mira un objeto, dependiendo del tipo o color. Colinas y valles pueden bloquear la vista si utilizas un filtro de linea-de-visión.</eyes>
+    <ears label="escucha">Reacciona cuando escucha un objeto, dependiendo del tipo o sonido. Escuchar funciona a través de las paredes.</ears>
+    <bumpers label="choca">Reacciona cuando se choca contra otro objeto, dependiendo del tipo, color, etc.</bumpers>
+    <timer label="temporizador">Reacciona a un número de segundos que pasan. Añade números para hacer los tiempos más largos.</timer>
+    <got label="recoge">Reacciona a recoger algo según el tipo, color, etc..</got>
+    <scored label="puntos">Reacciona a cambios en el puntaje.</scored>
+    <health label="salud">Reacciona a cambios en la salud.</health>
+    <missilehit label="disparo">Reacciona cuando el disparo alcanza otro objeto. Bueno para mantener el puntaje, pero se puede hacer lo que quiera - cómo volver los bots rosados al dispararlos.</missilehit>
+    <held label="recogido por">Reacciona a ser recogido por otro objeto.</held>
+    <terrain label="en tierra">Reacciona a diferentes tipos de suelo. </terrain>
+    <water label="en agua">Reacciona a diferentes tipos de agua.</water>
+    <path label="en ruta">Reacciona cuando está en una ruta o una cerca.</path>
+    <beamed label="irradiada">Reacciona cuando una roca de Marte ha sido irradiada.</beamed>
+    <inspected  label="inspeccionada">Reacciona cuando una roca de Marte ha sido inspeccionada.</inspected>
+    <scanned label="escaneada">Reacciona cuando una roca desconocida ha sido escaneada para revelarla.</scanned>
+    <endofpath  label="fin de ruta">Reacciona cuando has llegado al final de la ruta</endofpath>
+    <endofpathnonmover  label="fin de ruta">Reacciona cuando otro personaje ha llegado al final de la ruta</endofpathnonmover>
+    <always label="siempre">Hace algo todo el tiempo. Opcional.</always>
+  </sensor>
+  <filter>
+    <nothing />
+    <named label="">Reacciona a cualquier personaje llamado</named>
+
+    <boku label="kodu">Kodu es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</boku>
+    <bokubot label="kodu">Kodu es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</bokubot>
+    <anything label="cualquiera" />
+    <dead label="noqueado">Reacciona a personajes noqueados.</dead>
+    <squashed label="aplastado">Reacciona a personajes aplastados.</squashed>
+    <me label="mí">Solo chequea el bot ejecutando este programa.</me>
+    <said label="dijo">Escucha a otro personaje decir algo.  Escribe lo que deseas escuchar.</said>
+    <countnone label="ninguno">Reacciona cuando no puedas ver nada que coincida con la descripción. Por ejemplo, ver - azul - ninguno reaccionará cuando nada azul esté a la vista.</countnone>
+    <starfish label="estrella">Reacciona a una estrella de mar.</starfish>
+    <clam label="almeja">Reacciona a una almeja.</clam>
+    <seagrass label="algas">Reacciona a un grupo de algas.</seagrass>
+    <seagrasssingle label="alga">Reacciona a una alga.</seagrasssingle>
+    <lilypad label="nenúfar">Reacciona a nenúfar.</lilypad>
+    <lilypadsingle label="nenúfar">Reacciona a nenúfar.</lilypadsingle>
+    <flyfish label="pez volador">Pez Volador es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</flyfish>
+    <jet label="jet">Jet es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</jet>
+    <light label="luz">La Luz es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado. También ilumina las cosas. Pero puedes tener solamente cuatro.</light>
+    <fan label="ventilador">Reacciona a un ventilador.</fan>
+    <octopus label="pulpo">Reacciona a un pulpo.</octopus>
+    <fastbot label="ciclo">Ciclo es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</fastbot>
+    <saucer label="platillo">Lo siento, no puedo decirte nada más.  La información sobre el platillo es clasificada.</saucer>
+    <windblimp label="zepelín">Zepelín es un personaje volador que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</windblimp>
+    <balloonbot label="globo">Globo es un personaje flotante que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</balloonbot>
+    <subbot label="sub">Sub es un personaje submarino que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</subbot>
+    <terracannon label="cañón">Cañón es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</terracannon>
+    <puck label="puck">Puck es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</puck>
+    <wisp label="wisp">Wisp es un personaje que puedes añadir a tu juego y cuyo comportamiento puede ser programado.</wisp>
+    <anybot label="bot">Busca cualquier tipo de bot.</anybot>
+    <turtle label="tortuga">Reacciona a una tortuga.</turtle>
+    <rover label="rover">Reacciona a un rover.</rover>
+    <pushpad label="pushpad">Reacciona a un pushpad.</pushpad>
+    <sputnik label="sputnik">Reacciona a un sputnik.</sputnik>
+    <stick label="stick">Reacciona a un stick.</stick>
+    <stickboy label="stick">Reacciona a un stick.</stickboy>
+    <drum label="drum">Reacciona a un drum.</drum>
+    <mine label="mina">Reacciona a una mina.</mine>
+    <missile label="misil">Reacciona a un misil.</missile>
+    <cloud label="nube">Reacciona a una nube.</cloud>
+    <swimfish label="pez">Reacciona a un pez.</swimfish>
+    <floatbot label="barco">Reacciona a un barco.</floatbot>
+    <factory label="fábrica">Reacciona a una fábrica.</factory>
+    <hut label="cabaña">Reacciona a una cabaña.</hut>
+    <castle label="castillo">Reacciona a un castillo.</castle>
+    <fruit label="manzana">Reacciona a una manzana.</fruit>
+    <inkjet label="tinta">Reacciona a una tinta.</inkjet>
+    <iceberg label="iceberg">Reacciona a un iceberg.</iceberg>
+    <rock label="roca">Reacciona a una roca.</rock>
+    <rockLowValue label="Ígnea">Reacciona a una roca ígnea.</rockLowValue>
+    <rockHighValue label="Sedimento">Reacciona a una roca sedimentaria.</rockHighValue>
+    <rockLowValueUnknown label="Roca Desconocida">Una roca ígnea que se muestra como desconocida hasta que es escaneada, radiada o inspeccionada.</rockLowValueUnknown>
+    <rockHighValueUnknown label="Roca Desconocida">Una roca sedimentaria que se muestra como desconocida hasta que es escaneada, radiada o inspeccionada.</rockHighValueUnknown>
+    <rockUnknown label="Roca Desconocida">Reacciona a una roca desconocida.</rockUnknown>
+    <tree label="árbol">Reacciona a un árbol.</tree>
+    <pipe label="tubo">Reacciona a un tubo.</pipe>
+    <pipeStraight label="tubo recto">Reacciona a un tubo recto.</pipeStraight>
+    <pipeCross label="tubo cruz">Reacciona a un tubo en cruz.</pipeCross>
+    <pipeCorner label="tubo esquina">Reacciona a un tubo de esquina.</pipeCorner>
+    <underwater label="bajo el agua">Reacciona a objetos marinos.</underwater>
+    <building label="edificio">Reacciona a un edificio.</building>
+    <flower label="flor" />
+    <gate label="puerta" />
+    <cursor label="cursor">Reacciona al cursor.</cursor>
+    <star label="estrella">Reacciona a una estrella.</star>
+    <coin label="moneda">Reacciona a una moneda.</coin>
+    <soccerball label="balón">Reacciona a un balón.</soccerball>
+    <heart label="corazón">Reacciona a un corazón.</heart>
+    <bullet label="munición">Reacciona a municiones.</bullet>
+    <Black label="negro">Reacciona a algo negro.</Black>
+    <Grey label="gris">Reacciona a algo gris.</Grey>
+    <white label="blanco">Reacciona a algo blanco.</white>
+    <red label="rojo">Reacciona a algo rojo.</red>
+    <orange label="naranja">Reacciona a algo naranja.</orange>
+    <yellow label="amarillo">Reacciona a algo amarillo.</yellow>
+    <green label="verde">Reacciona a algo verde.</green>
+    <blue label="azul">Reacciona a algo azul.</blue>
+    <purple label="púrpura">Reacciona a algo púrpura.</purple>
+    <pink label="rosado">Reacciona a algo rosado.</pink>
+    <brown label="marrón">Reacciona a algo marrón.</brown>
+    <PathBlack label="ruta negra">Reacciona a una ruta negra.</PathBlack>
+    <PathGrey label="ruta gris">Reacciona a una ruta gris.</PathGrey>
+    <PathWhite label="ruta blanca">Reacciona a una ruta blanca.</PathWhite>
+    <PathRed label="ruta roja">Reacciona a una ruta roja.</PathRed>
+    <PathOrange label="ruta naranja">Reacciona a una ruta naranja.</PathOrange>
+    <PathYellow label="ruta amarilla">Reacciona a una ruta amarilla.</PathYellow>
+    <PathGreen label="ruta verde">Reacciona a una ruta verde.</PathGreen>
+    <PathBlue label="ruta azul">Reacciona a una ruta azul.</PathBlue>
+    <PathPurple label="ruta púrpura">Reacciona a una ruta púrpura.</PathPurple>
+    <PathPink label="ruta rosada">Reacciona a una ruta rosada.</PathPink>
+    <PathBrown label="ruta marrón">Reacciona a una ruta marrón.</PathBrown>
+    <pathplain label="planicie" />
+    <pathroad label="ruta" />
+    <pathwall label="pared" />
+    <pathflora label="flora" />
+    <yucca1 label="árbol" />
+    <yucca2 label="árbol" />
+    <yucca3 label="árbol" />
+    <bigyucca1 label="árbol" />
+    <expresshappy label="feliz">Reacciona a un bot feliz.</expresshappy>
+    <expresssad label="triste">Reacciona a un bot triste.</expresssad>
+    <expressangry label="ENOJADO">Reacciona a un bot enojado.</expressangry>
+    <expresscrazy label="LoCo">Reacciona a un bot loco.</expresscrazy>
+    <expresshearts label="corazones">Reacciona a un bot que muestra corazones.</expresshearts>
+    <expressflowers label="flores">Reacciona a un bot que muestra flores.</expressflowers>
+    <expressstars label="estrellas">Reacciona a un bot que muestra estrellas.</expressstars>
+    <expressswear label="insultos">Reacciona a un bot que insulta.</expressswear>
+    <expressnormal label="normal">Reacciona a un bot que actúa normal.</expressnormal>
+    <expressnone label="vacío">Reacciona a un bot que actúa normal.</expressnone>
+    <moving label="moviéndose">Reacciona a un bot solo si está moviéndose.</moving>
+    <camouflage label="camuflaje">Reacciona a un bot solo si tiene camuflaje.</camouflage>
+    <closeby label="cerca de">Cerca De causa que el personaje preste atención a objetos solo si están cerca de él.  Objetos lejanos son ignorados.</closeby>
+    <faraway label="lejos de">Reacciona solo a objetos que están lejos.</faraway>
+
+    <infront label="en frente">Reacciona solo a cosas que están frente al bot.</infront>
+    <behind label="detrás">Reacciona solo a cosas que están detrás al bot.</behind>
+    <toleft label="a la izq.">Reacciona solo a cosas que están a la izquierda del bot.</toleft>
+    <toright label="a la derecha">Reacciona solo a cosas que están a la derecha del bot.</toright>
+    <over label="sobre">Reacciona solo a cosas que están más arriba que el bot.</over>
+    <under label="debajo">Reacciona solo a cosas que están más abajo que el bot.</under>
+
+    <lineofsight label="línea de visión">Terreno y paredes bloquean el sensor.</lineofsight>
+    
+    <countfew label="pocos">Reacciona solo cuando ve pocas cantidades de algo.</countfew>
+    <countmany label="muchos">Reacciona solo cuando ve muchas cantidades de algo.</countmany>
+    <clustermany label="racimo">Reacciona solo cuando ve muchas cantidades de algo que están agrupados muy juntos.</clustermany>
+    <countany label="cualquiera" />
+    <leftstick label="Palanca L">Reacciona a la palanca izquierda del controlador. Bueno para moverse.</leftstick>
+    <rightstick label="Palanca R">Reacciona a la palanca derecha del controlador. Bueno para disparar.</rightstick>
+    <abutton label="botón A">Reacciona al botón A del controlador.</abutton>
+    <bbutton label="botón B">Reacciona al botón B del controlador.</bbutton>
+    <xbutton label="botón X">Reacciona al botón X del controlador.</xbutton>
+    <ybutton label="botón Y">Reacciona al botón Y del controlador.</ybutton>
+    <lefttrigger label="disp izq">Reacciona al disparador izquierdo del controlador.</lefttrigger>
+    <righttrigger label="disp derecho">Reacciona al disparador derecho del controlador.</righttrigger>
+    <lefttrigger_analog label="disp izq">Reacciona al disparador izquierdo del controlador.</lefttrigger_analog>
+    <righttrigger_analog label="disp derecho">Reacciona al disparador derecho del controlador.</righttrigger_analog>
+    <strongly label="fuerte">Detecta una señal o valor fuerte.</strongly>
+    <weakly label="débil">Detecta una señal o valor débil.</weakly>
+    <microbit label="BBC micro:bit">
+      <tilt label="inclinación">Reacciona a la inclinación del BBC micro:bit.</tilt>
+      <leftbutton label="botón A">Reacciona a presionar el botón A del BBC micro:bit.</leftbutton>
+      <rightbutton label="botón B">Reacciona a presionar el botón B BBC micro:bit.</rightbutton>
+      <pin1 label="pin 0">Leer el estado del pin 0 del BBC micro:bit.</pin1>
+      <pin2 label="pin 1">Leer el estado del pin 1 del BBC micro:bit.</pin2>
+      <pin3 label="pin 2">Leer el estado del pin 2 del BBC micro:bit.</pin3>
+      <shake label="sacudir">Detecta cuando el micro:bit es sacudido.</shake>
+    </microbit>
+    <mouse>
+      <button>
+        <left label="izquierdo">Reacciona al botón izquierdo del ratón.</left>
+        <right label="derecho">Reacciona al botón derecho del ratón.</right>
+      </button>
+      <hover label="sobre">Reacciona cuando el ratón se encuentra sobre un terreno u objeto</hover>
+      <move label="movimiento">Reacciona al movimiento del ratón.</move>
+    </mouse>
+    <touch>
+      <gesture>
+        <touching label="tocar">Reacciona cuando se toca la pantalla (touch screen).</touching>
+        <tap label="tap">Reacciona a un tap (touch screen).</tap>
+        <rotate label="rotar">Reacciona al gesto de rotación (touch screen).</rotate>
+        <swipe label="swipe">Reacciona al gesto de swipe (touch screen).</swipe>
+        <slide label="deslizar">Reacciona al gesto de deslizar (touch screen).</slide>
+      </gesture>
+
+      <guiButton>
+        <White label="blanco">Reacciona al botón BLANCO del HUD. (Visita la configuración del mundo para cambiarlo)</White>
+        <Black label="negro">Reacciona al botón NEGRO del HUD. (Visita la configuración del mundo para cambiarlo)</Black>
+        <Grey label="gris">Reacciona al botón GRIS del HUD. (Visita la configuración del mundo para cambiarlo)</Grey>
+        <Red label="rojo">Reacciona al botón ROJO del HUD. (Visita la configuración del mundo para cambiarlo)</Red>
+        <Green label="verde">Reacciona al botón VERDE del HUD. (Visita la configuración del mundo para cambiarlo)</Green>
+        <Blue label="azul">Reacciona al botón AZUL del HUD. (Visita la configuración del mundo para cambiarlo)</Blue>
+        <Orange label="naranja">Reacciona al NARANJA BLANCO del HUD. (Visita la configuración del mundo para cambiarlo)</Orange>
+        <Yellow label="amarillo">Reacciona al AMARILLO BLANCO del HUD. (Visita la configuración del mundo para cambiarlo)</Yellow>
+        <Purple label="púrpura">Reacciona al botón PURPURA del HUD. (Visita la configuración del mundo para cambiarlo)</Purple>
+        <Pink label="rosado">Reacciona al botón ROSADO del HUD. (Visita la configuración del mundo para cambiarlo)</Pink>
+        <Brown label="marrón">Reacciona al botón MARRON del HUD. (Visita la configuración del mundo para cambiarlo)</Brown>
+      </guiButton>
+      
+      <!-- Virtual Controller -->
+      <controllerButton_X label="Botón X">Reacciona al botón en pantalla X.</controllerButton_X>
+      <controllerButton_Y label="Botón Y">Reacciona al botón en pantalla Y.</controllerButton_Y>
+      <controllerButton_A label="Botón A">Reacciona al botón en pantalla A.</controllerButton_A>
+      <controllerButton_B label="Botón B">Reacciona al botón en pantalla B.</controllerButton_B>
+
+    </touch>
+    
+    <ArrowKeys label="Flechas">Reacciona a las teclas de flecha del teclado.</ArrowKeys>
+    <WASDKeys label="WASD">Reacciona a las teclas WASD del teclado.</WASDKeys>
+    <Akey label="A">Reacciona a la tecla A del teclado.</Akey>
+    <Bkey label="B">Reacciona a la tecla B del teclado.</Bkey>
+    <Ckey label="C">Reacciona a la tecla C del teclado.</Ckey>
+    <Dkey label="D">Reacciona a la tecla D del teclado.</Dkey>
+    <Ekey label="E">Reacciona a la tecla E del teclado.</Ekey>
+    <Fkey label="F">Reacciona a la tecla F del teclado.</Fkey>
+    <Gkey label="G">Reacciona a la tecla G del teclado.</Gkey>
+    <Hkey label="H">Reacciona a la tecla H del teclado.</Hkey>
+    <Ikey label="I">Reacciona a la tecla I del teclado.</Ikey>
+    <Jkey label="J">Reacciona a la tecla J del teclado.</Jkey>
+    <Kkey label="K">Reacciona a la tecla K del teclado.</Kkey>
+    <Lkey label="L">Reacciona a la tecla L del teclado.</Lkey>
+    <Mkey label="M">Reacciona a la tecla M del teclado.</Mkey>
+    <Nkey label="N">Reacciona a la tecla N del teclado.</Nkey>
+    <Okey label="O">Reacciona a la tecla O del teclado.</Okey>
+    <Pkey label="P">Reacciona a la tecla P del teclado.</Pkey>
+    <Qkey label="Q">Reacciona a la tecla Q del teclado.</Qkey>
+    <Rkey label="R">Reacciona a la tecla R del teclado.</Rkey>
+    <Skey label="S">Reacciona a la tecla S del teclado.</Skey>
+    <Tkey label="T">Reacciona a la tecla T del teclado.</Tkey>
+    <Ukey label="U">Reacciona a la tecla U del teclado.</Ukey>
+    <Vkey label="V">Reacciona a la tecla V del teclado.</Vkey>
+    <Wkey label="W">Reacciona a la tecla W del teclado.</Wkey>
+    <Xkey label="X">Reacciona a la tecla X del teclado.</Xkey>
+    <Ykey label="Y">Reacciona a la tecla Y del teclado.</Ykey>
+    <Zkey label="Z">Reacciona a la tecla Z del teclado.</Zkey>
+    <D0key label="0">Reacciona a la tecla 0 del teclado.</D0key>
+    <D1key label="1">Reacciona a la tecla 1 del teclado.</D1key>
+    <D2key label="2">Reacciona a la tecla 2 del teclado.</D2key>
+    <D3key label="3">Reacciona a la tecla 3 del teclado.</D3key>
+    <D4key label="4">Reacciona a la tecla 4 del teclado.</D4key>
+    <D5key label="5">Reacciona a la tecla 5 del teclado.</D5key>
+    <D6key label="6">Reacciona a la tecla 6 del teclado.</D6key>
+    <D7key label="7">Reacciona a la tecla 7 del teclado.</D7key>
+    <D8key label="8">Reacciona a la tecla 8 del teclado.</D8key>
+    <D9key label="9">Reacciona a la tecla 9 del teclado.</D9key>
+    <Spacekey label="Espacio">Reacciona a la tecla Espacio del teclado.</Spacekey>
+    <PageUpkey label="RePág">Reacciona a la tecla RePág del teclado.</PageUpkey>
+    <PageDownkey label="AvPág">Reacciona a la tecla AvPág del teclado.</PageDownkey>
+    <Endkey label="Fin">Reacciona a la tecla Fin del teclado.</Endkey>
+    <Leftkey label="Izquierda">Reacciona a la tecla Izquierda del teclado.</Leftkey>
+    <Upkey label="Arriba">Reacciona a la tecla Arriba del teclado.</Upkey>
+    <Rightkey label="Derecha">Reacciona a la tecla Derecha del teclado.</Rightkey>
+    <Downkey label="Abajo">Reacciona a la tecla Abajo del teclado.</Downkey>
+    <Insertkey label="Insertar">Reacciona a la tecla Insert del teclado.</Insertkey>
+    <Deletekey label="Supr">Reacciona a la tecla Supr del teclado.</Deletekey>
+    <LeftWindowskey label="Windows Izq">Reacciona a la tecla Windows Izquierda del teclado.</LeftWindowskey>
+    <RightWindowskey label="Windows Der">Reacciona a la tecla Windows Derecha del teclado.</RightWindowskey>
+    <Multiplykey label="*">Reacciona a la tecla Multiplicar del teclado.</Multiplykey>
+    <Addkey label="+">Reacciona a la tecla Sumar del teclado.</Addkey>
+    <Subtractkey label="-">Reacciona a la tecla Substraer del teclado.</Subtractkey>
+    <Decimalkey label=".">Reacciona a la tecla Decimal del teclado.</Decimalkey>
+    <Dividekey label="/">Reacciona a la tecla Dividir del teclado.</Dividekey>
+    <LeftShiftkey label="Mayús Izq">Reacciona a la tecla Mayús Izquierda del teclado.</LeftShiftkey>
+    <RightShiftkey label="Mayús Der">Reacciona a la tecla Mayús Derecha del teclado.</RightShiftkey>
+    <LeftControlkey label="Ctrl Izq">Reacciona a la tecla Ctrl Izquierda del teclado.</LeftControlkey>
+    <RightControlkey label="Ctrl Der">Reacciona a la tecla Ctrl Derecha del teclado.</RightControlkey>
+    <LeftAltkey label="Alt Izq">Reacciona a la tecla Alt Izquierda del teclado.</LeftAltkey>
+    <RightAltkey label="Alt Der">Reacciona a la tecla Alt Derecha del teclado.</RightAltkey>
+    <OemSemicolonkey label=";">Reacciona a la tecla Punto y Coma del teclado.</OemSemicolonkey>
+    <OemPluskey label="+">Reacciona a la tecla Más del teclado.</OemPluskey>
+    <OemCommakey label=",">Reacciona a la tecla Coma del teclado.</OemCommakey>
+    <OemMinuskey label="-">Reacciona a la tecla Menos del teclado.</OemMinuskey>
+    <OemPeriodkey label=".">Reacciona a la tecla Punto del teclado.</OemPeriodkey>
+    <OemQuestionkey label="?">Reacciona a la tecla Interrogación del teclado.</OemQuestionkey>
+    <OemTildekey label="~">Reacciona a la tecla Tilde del teclado.</OemTildekey>
+    <OemOpenBracketskey label="[">Reacciona a la tecla Abrir Corchetes del teclado.</OemOpenBracketskey>
+    <OemPipekey label="|">Reacciona a la tecla Barra Vertical del teclado.</OemPipekey>
+    <OemCloseBracketskey label="]">Reacciona a la tecla Cerrar Corchetes del teclado.</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">Reacciona a la tecla Comillas del teclado.</OemQuoteskey>
+    <OemBackslashkey label="\">Reacciona a la tecla Barra Invertida (BackSlash) del teclado.</OemBackslashkey>
+    <F1key label="F1">Reacciona a la tecla F1 del teclado.</F1key>
+    <F2key label="F2">Reacciona a la tecla F2 del teclado.</F2key>
+    <F3key label="F3">Reacciona a la tecla F3 del teclado.</F3key>
+    <F4key label="F4">Reacciona a la tecla F4 del teclado.</F4key>
+    <F5key label="F5">Reacciona a la tecla F5 del teclado.</F5key>
+    <F6key label="F6">Reacciona a la tecla F6 del teclado.</F6key>
+    <F7key label="F7">Reacciona a la tecla F7 del teclado.</F7key>
+    <F8key label="F8">Reacciona a la tecla F8 del teclado.</F8key>
+    <F9key label="F9">Reacciona a la tecla F9 del teclado.</F9key>
+    <F10key label="F10">Reacciona a la tecla F10 del teclado.</F10key>
+    <F11key label="F11">Reacciona a la tecla F11 del teclado.</F11key>
+    <F12key label="F12">Reacciona a la tecla F12 del teclado.</F12key>
+    <Shiftkey label="Mayús">Reacciona a cualquier tecla Mayús del teclado.</Shiftkey>
+    <Controlkey label="Ctrl">Reacciona a cualquier tecla Ctrl del teclado.</Controlkey>
+    <Altkey label="Alt">Reacciona a cualquier tecla Alt del teclado.</Altkey>
+    <Windowskey label="Windows">Reacciona a cualquier tecla Windows del teclado.</Windowskey>
+    <player1 label="jugador 1">Reacciona solo al Jugador 1 del controlador. Por defecto reacciona a cualquiera.</player1>
+    <player2 label="jugador 2">Reacciona solo al Jugador 2 del controlador. Por defecto reacciona a cualquiera.</player2>
+    <player3 label="jugador 3">Reacciona solo al Jugador 3 del controlador. Por defecto reacciona a cualquiera.</player3>
+    <player4 label="jugador 4">Reacciona solo al Jugador 4 del controlador. Por defecto reacciona a cualquiera.</player4>
+    <terrain label="tipo">Reacciona a un tipo específico de terreno.</terrain>
+    <water label="tipo">Reacciona a un tipo específico de agua.</water>
+    <eighthsecond label="segundos">1/8 de segundo.  Combina con otros para sumar tiempos más largos.</eighthsecond>
+    <quartersecond label="segundos">1/4 de segundo.  Combina con otros para sumar tiempos más largos.</quartersecond>
+    <_01second label="segundos">1 segundos.  Combina con otros para sumar tiempos más largos.</_01second>
+    <_02seconds label="segundos">2 segundos.  Combina con otros para sumar tiempos más largos.</_02seconds>
+    <_03seconds label="segundos">3 segundos.  Combina con otros para sumar tiempos más largos.</_03seconds>
+    <_04seconds label="segundos">4 segundos.  Combina con otros para sumar tiempos más largos.</_04seconds>
+    <_05seconds label="segundos">5 segundos.  Combina con otros para sumar tiempos más largos.</_05seconds>
+    <_10seconds label="segundos">10 segundos.  Combina con otros para sumar tiempos más largos.</_10seconds>
+    <_20seconds label="segundos">20 segundos.  Combina con otros para sumar tiempos más largos.</_20seconds>
+    <_30seconds label="segundos">30 segundos.  Combina con otros para sumar tiempos más largos.</_30seconds>
+    <_60seconds label="segundos">60 segundos.  Combina con otros para sumar tiempos más largos.</_60seconds>
+    <_000point label="puntos">0 puntos.</_000point>
+    <_001point label="puntos">1 puntos.  Combina con otros para sumar cantidades más largas.</_001point>
+    <_002points label="puntos">2 puntos.  Combina con otros para sumar cantidades más largas.</_002points>
+    <_003points label="puntos">3 puntos.  Combina con otros para sumar cantidades más largas.</_003points>
+    <_004points label="puntos">4 puntos.  Combina con otros para sumar cantidades más largas.</_004points>
+    <_005points label="puntos">5 puntos.  Combina con otros para sumar cantidades más largas.</_005points>
+    <_010points label="puntos">10 puntos.  Combina con otros para sumar cantidades más largas.</_010points>
+    <_020points label="puntos">20 puntos.  Combina con otros para sumar cantidades más largas.</_020points>
+    <_050points label="puntos">50 puntos.  Combina con otros para sumar cantidades más largas.</_050points>
+    <_100points label="puntos">100 puntos.  Combina con otros para sumar cantidades más largas.</_100points>
+    <random label="aleatorio">Crea un número aleatorio utilizando mosaicos numéricos. Por ejemplo, Aleatorio - 5 crea un número aleatorio entre 0 y 5.</random>
+    <percent label="porcentaje">Toma el porcentaje de otro número.  Por ejemplo 50 % Rojo te dará la mitad del puntaje actual rojo.</percent>
+    <scorebucket>
+      <color>
+        <white label="blanco">Prueba puntajes blancos, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</white>
+        <black label="negro">Prueba puntajes negros, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</black>
+        <grey label="gris">Prueba puntajes grises, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</grey>
+        <red label="rojo">Prueba puntajes rojos, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</red>
+        <green label="verde">Prueba puntajes verdes, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</green>
+        <blue label="azul">Prueba puntajes azules, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</blue>
+        <orange label="naranja">Prueba puntajes naranjas, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</orange>
+        <yellow label="amarillo">Prueba puntajes amarillos, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</yellow>
+        <purple label="púrpura">Prueba puntajes púrpuras, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</purple>
+        <pink label="rosado">Prueba puntajes rosados, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</pink>
+        <brown label="marrón">Prueba puntajes marrones, estos se muestran en el tablero por defecto. Visita la configuración del mundo para cambiarlo</brown>
+      </color>
+      <letter>
+        <a label="puntaje A">El puntaje 'A', que es compartido por todos los personajes del mundo.</a>
+        <b label="puntaje B">El puntaje 'B', que es compartido por todos los personajes del mundo.</b>
+        <c label="puntaje C">El puntaje 'C', que es compartido por todos los personajes del mundo.</c>
+        <d label="puntaje D">El puntaje 'D', que es compartido por todos los personajes del mundo.</d>
+        <e label="puntaje E">El puntaje 'E', que es compartido por todos los personajes del mundo.</e>
+        <f label="puntaje F">El puntaje 'F', que es compartido por todos los personajes del mundo.</f>
+        <g label="puntaje G">El puntaje 'G', que es compartido por todos los personajes del mundo.</g>
+        <h label="puntaje H">El puntaje 'H', que es compartido por todos los personajes del mundo.</h>
+        <i label="puntaje I">El puntaje 'I', que es compartido por todos los personajes del mundo.</i>
+        <j label="puntaje J">El puntaje 'J', que es compartido por todos los personajes del mundo.</j>
+        <k label="puntaje K">El puntaje 'K', que es compartido por todos los personajes del mundo.</k>
+        <l label="puntaje L">El puntaje 'L', que es compartido por todos los personajes del mundo.</l>
+        <m label="puntaje M">El puntaje 'M', que es compartido por todos los personajes del mundo.</m>
+        <n label="puntaje N">El puntaje 'N', que es compartido por todos los personajes del mundo.</n>
+        <o label="puntaje O">El puntaje 'O', que es compartido por todos los personajes del mundo.</o>
+        <p label="puntaje P">El puntaje 'P', que es compartido por todos los personajes del mundo.</p>
+        <q label="puntaje Q">El puntaje 'Q', que es compartido por todos los personajes del mundo.</q>
+        <r label="puntaje R">El puntaje 'R', que es compartido por todos los personajes del mundo.</r>
+        <s label="puntaje S">El puntaje 'S', que es compartido por todos los personajes del mundo.</s>
+        <t label="puntaje T">El puntaje 'T', que es compartido por todos los personajes del mundo.</t>
+        <u label="puntaje U">El puntaje 'U', que es compartido por todos los personajes del mundo.</u>
+        <v label="puntaje V">El puntaje 'V', que es compartido por todos los personajes del mundo.</v>
+        <w label="puntaje W">El puntaje 'W', que es compartido por todos los personajes del mundo.</w>
+        <x label="puntaje X">El puntaje 'X', que es compartido por todos los personajes del mundo.</x>
+        <y label="puntaje Y">El puntaje 'Y', que es compartido por todos los personajes del mundo.</y>
+        <z label="puntaje Z">El puntaje 'Z', que es compartido por todos los personajes del mundo.</z>
+      </letter>
+      <local>
+        <a label="puntaje a">El puntaje 'a', que es privado para este personaje.</a>
+        <b label="puntaje b">El puntaje 'b', que es privado para este personaje.</b>
+        <c label="puntaje c">El puntaje 'c', que es privado para este personaje.</c>
+        <d label="puntaje d">El puntaje 'd', que es privado para este personaje.</d>
+        <e label="puntaje e">El puntaje 'e', que es privado para este personaje.</e>
+        <f label="puntaje f">El puntaje 'f', que es privado para este personaje.</f>
+        <g label="puntaje g">El puntaje 'g', que es privado para este personaje.</g>
+        <h label="puntaje h">El puntaje 'h', que es privado para este personaje.</h>
+        <i label="puntaje i">El puntaje 'i', que es privado para este personaje.</i>
+        <j label="puntaje j">El puntaje 'j', que es privado para este personaje.</j>
+        <k label="puntaje k">El puntaje 'k', que es privado para este personaje.</k>
+        <l label="puntaje l">El puntaje 'l', que es privado para este personaje.</l>
+        <m label="puntaje m">El puntaje 'm', que es privado para este personaje.</m>
+        <n label="puntaje n">El puntaje 'n', que es privado para este personaje.</n>
+        <o label="puntaje o">El puntaje 'o', que es privado para este personaje.</o>
+        <p label="puntaje p">El puntaje 'p', que es privado para este personaje.</p>
+        <q label="puntaje q">El puntaje 'q', que es privado para este personaje.</q>
+        <r label="puntaje r">El puntaje 'r', que es privado para este personaje.</r>
+        <s label="puntaje s">El puntaje 's', que es privado para este personaje.</s>
+        <t label="puntaje t">El puntaje 't', que es privado para este personaje.</t>
+        <u label="puntaje u">El puntaje 'u', que es privado para este personaje.</u>
+        <v label="puntaje v">El puntaje 'v', que es privado para este personaje.</v>
+        <w label="puntaje w">El puntaje 'w', que es privado para este personaje.</w>
+        <x label="puntaje x">El puntaje 'x', que es privado para este personaje.</x>
+        <y label="puntaje y">El puntaje 'y', que es privado para este personaje.</y>
+        <z label="puntaje z">El puntaje 'z', que es privado para este personaje.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="disparador" />
+    <timertrigger label="disparador" />
+    <scoreis label="es" />
+    <scoreequals label="igual">Reacciona cuando el puntaje es igual a cierto número.</scoreequals>
+    <scorenotequals label="diferente">Reacciona cuando el puntaje no es igual a cierto número.</scorenotequals>
+    <scoreabove label="sobre">Reacciona cuando el puntaje sube por encima de cierto número.</scoreabove>
+    <scorebelow label="debajo">Reacciona cuando el puntaje está por debajo de cierto número.</scorebelow>
+    <scoregteq label="&gt;=">Reacciona cuando el puntaje es igual o sube por encima de cierto número.</scoregteq>
+    <scorelteq label="&lt;=">Reacciona cuando el puntaje es igual o está por debajo de cierto número.</scorelteq>
+    <health label="salud">Número de putos de salud que tiene este personaje.</health>
+    <healthis label="es" />
+    <healthabove label="sobre">Reacciona cuando la salud sube por encima de cierto número.</healthabove>
+    <healthbelow label="debajo">Reacciona cuando la salud está por debajo de cierto número.</healthbelow>
+    <maxhealth label="max salud">Puntos de Salud máxima que un personaje puede tener.</maxhealth>
+
+    <settings>
+      <maxhealth label="max salud">Puntos de Salud máxima que un personaje puede tener.</maxhealth>
+      <blipdamage label="daño de blip">Daño hecho por blips.</blipdamage>
+      <missiledamage label="daño de misil">Daño hecho por misiles.</missiledamage>
+    </settings>
+
+    <direction>
+      <up label="arriba">Reacciona al una palanca de juego empujada hacia arriba.</up>
+      <right label="derecha">Reacciona al una palanca de juego empujada hacia la derecha.</right>
+      <down label="abajo">Reacciona al una palanca de juego empujada hacia abajo.</down>
+      <left label="izquierda">Reacciona al una palanca de juego empujada hacia la izquierda.</left>
+      <clockwise label="derecha">Reacciona a un gesto de rotación en sentido del reloj.</clockwise>
+      <counterclockwise label="izquierda">Reacciona a un gesto de rotación en sentido en contra el reloj.</counterclockwise>
+    </direction>
+    <not label="no">Reacciona cuando la condición no coincide.</not>
+  </filter>
+
+  <selector>
+    <closest label="cercano" />
+    <objectrelative label="relativo" />
+    <towardclosest label="hacia">Mover hacia aquello a lo que estoy reaccionando.</towardclosest>
+    <awayfromall label="lejos de">Mover lejos de aquello a lo que estoy reaccionando.</awayfromall>
+    <avoidall label="evitar">Evitar aquello a lo que estoy reaccionando manteniendo cierta distancia.</avoidall>
+    <wander label="deambular">Deambular tomando una dirección aleatoria. Útil como la última línea de un programa de tal manera que el personaje se mueva cuando no está activamente haciendo algo.</wander>
+    <cruise label="recto">Mover en la dirección que estás apuntando actualmente.</cruise>
+    <circle label="círculo" />
+    <spin label="girar">Girar en el mismo sitio.</spin>
+    <forward label="adelante" />
+    <hiddenturn label="girar" />
+    <escape label="rechazar" />
+    <followwaypoints label="en ruta">Moverse en una ruta de cierto color. Por defecto se mueve en cualquier ruta.</followwaypoints>
+    <moveupdown label="arriba/abajo">Mover hacia arriba y abajo.</moveupdown>
+    <moveup label="arriba">Mover hacia arriba.</moveup>
+    <movedown label="abajo">Mover hacia abajo.</movedown>
+    <moveleftright label="girar">Mover hacia la izquierda y derecha.</moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="jugador 1" />
+      <_2 label="jugador 2" />
+      <_3 label="jugador 3" />
+      <_4 label="jugador 4" />
+    </player>
+    <reset>
+      <world label="mundo">Reinicia el juego, excepto el tablero de puntos.</world>
+      <score label="puntaje">Reinicia el tablero de puntos, o un puntaje individual del color proveído.</score>
+      <expression label="expresar">Reinicia la expresión del personaje.</expression>
+      <glow label="brillo">Reinicia el brillo del personaje.</glow>
+      <health label="salud">Reinicia la salud del personaje.</health>
+    </reset>
+    <projectile>
+      <blip label="blip">Los Blips son proyectiles de disparo rápido - más livianos que los misiles.</blip>
+      <missile label="misil">Los misiles son grandes pero no muy rápidos, pero son lo suficientemente inteligentes como para seguir a su objetivo!</missile>
+    </projectile>
+    <slowly label="lento">Moverse más lento. Utilizalo varias veces para moverte aún más lento.</slowly>
+    <quickly label="rápido">Moverse más rápido. Utilizalo varias veces para moverte aún más rápido.</quickly>
+    <speednormally label="normal">Moverse normalmente. Opcional.</speednormally>
+    <weakly label="débil">Hacer esto de forma más débil que lo usual.</weakly>
+    <strongly label="fuerte">Hacer esto de forma más fuerte que lo usual.</strongly>
+    <strengthnormally label="normal">Hacer esto con fuerza normal. Opcional.</strengthnormally>
+    <angle>
+      <low label="bajo">Hacer esto de forma más débil que lo usual.</low>
+      <high label="alto">Hacer esto de forma más fuerte que lo usual.</high>
+    </angle>
+    <turnleft label="izquierda" />
+    <turnright label="derecha" />
+    <turntoward label="hacia" />
+    <turnforward label="adelante">Indica que el movimiento no debe determina la dirección.</turnforward>
+    <pitchup label="arriba" />
+    <pitchdown label="abajo" />
+    <forward label="adelante">La dirección a la cual apunta el personaje.</forward>
+    <north label="norte" />
+    <east label="este" />
+    <south label="sur" />
+    <west label="oeste" />
+    <up label="arriba" />
+    <down label="abajo" />
+    <distance>
+      <near label="cerca">Hacer que el personaje rodee el objetivo más de cerca.</near>
+      <far label="lejos">Hacer que el personaje rodee el objetivo haciendo círculo más grande.</far>
+    </distance>
+    <objecticeberg label="iceberg">Crear un iceberg.</objecticeberg>
+    <objectrock label="roca">Crear una roca.</objectrock>
+    <objectrockLowValue label="roca">Crear una roca ígnea.</objectrockLowValue>
+    <objectrockHighValue label="roca">Crear una roca sedimentaria.</objectrockHighValue>
+    <objectfruit label="manzana">Crear una manzana.</objectfruit>
+    <objectinkjet label="tinta">Crear una nube de tinta.</objectinkjet>
+    <objectstar label="estrella">Crear una estrella.</objectstar>
+    <objectcoin label="moneda">Crear una moneda.</objectcoin>
+    <objectheart label="corazón">Crear un corazón.</objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="balón">Crear un balón.</objectsoccerball>
+    <objectbullet label="munición">Crear munición.</objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="página 1">Cambiar a o poner en-línea la página 1.</taska>
+    <taskb label="página 2">Cambiar a o poner en-línea la página 2.</taskb>
+    <taskc label="página 3">Cambiar a o poner en-línea la página 3.</taskc>
+    <taskd label="página 4">Cambiar a o poner en-línea la página 4.</taskd>
+    <taske label="página 5">Cambiar a o poner en-línea la página 5.</taske>
+    <taskf label="página 6">Cambiar a o poner en-línea la página 6.</taskf>
+    <taskg label="página 7">Cambiar a o poner en-línea la página 7.</taskg>
+    <taskh label="página 8">Cambiar a o poner en-línea la página 8.</taskh>
+    <taski label="página 9">Cambiar a o poner en-línea la página 9.</taski>
+    <taskj label="página 10">Cambiar a o poner en-línea la página 10.</taskj>
+    <taskk label="página 11">Cambiar a o poner en-línea la página 11.</taskk>
+    <taskl label="página 12">Cambiar a o poner en-línea la página 12.</taskl>
+    <expresshappy label="feliz">Actuar feliz.</expresshappy>
+    <expresssad label="triste">Actuar triste.</expresssad>
+    <expressangry label="ENOJADO">Actuar enojado.</expressangry>
+    <expresscrazy label="LoCo">Actuar como un loco.</expresscrazy>
+    <expresshearts label="corazones">Mostrar corazones.</expresshearts>
+    <expressflowers label="flores">Mostrar flores.</expressflowers>
+    <expressstars label="estrellas">Mostrar estrellas.</expressstars>
+    <expressswear label="insultar">Mostrar insultos caricaturescos.</expressswear>
+    <expressnone label="ninguno">Actuar normal y parar de mostrar cosas.</expressnone>
+    <_000point label="puntos">0 puntos.  Puedes especificar un color también.</_000point>
+    <_001point label="puntos">1 punto.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_001point>
+    <_002points label="puntos">2 puntos.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_002points>
+    <_003points label="puntos">3 puntos.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_003points>
+    <_004points label="puntos">4 puntos.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_004points>
+    <_005points label="puntos">5 puntos.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_005points>
+    <_010points label="puntos">10 puntos.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_010points>
+    <_020points label="puntos">20 puntos.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_020points>
+    <_050points label="puntos">50 puntos.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_050points>
+    <_100points label="puntos">100 puntos.  Utiliza varios para añadir diferentes números. Puedes especificar un color también.</_100points>
+    <random label="aleatorio">Hacer un número aleatorio utilizando mosaicos de número. Por ejemplo, Aleatorio - 5 crea un número aleatorio entre 0 y 5.</random>
+    <percent label="porcentaje">Toma un porcentaje de otro número.  Por ejemplo 50 % Rojo te dará la mitad del puntaje actual rojo.</percent>
+    <health label="salud">El número de puntos de golpe que tiene el personaje.</health>
+    <maxhealth label="salud max">El número máximo de puntos de golpe que puede tener el personaje.</maxhealth>
+    <teama label="equipo A" />
+    <teamb label="equipo B" />
+    <payloadzap label="aturdir">Aturde al objetivo por algunos segundos.</payloadzap>
+    <payloadpop label="noquear">Pone e dormir al objetivo hasta que alguien más reinicie su salud.</payloadpop>
+    <payloadsquash label="aplastar">Aplastar al objetivo.</payloadsquash>
+    <payloadboom label="explotar">Hacer que el objetivo desaparezca en una explosión.</payloadboom>
+    <payloadvanish label="desvanecer">Hacer que el objetivo desaparezca silenciosamente.</payloadvanish>
+    <black label="negro" />
+    <grey label="gris" />
+    <white label="blanco" />
+    <red label="rojo" />
+    <orange label="naranja" />
+    <yellow label="amarillo" />
+    <green label="verde" />
+    <blue label="azul" />
+    <purple label="púrpura" />
+    <pink label="rosado" />
+    <brown label="marrón" />
+    <glowoff label="apagar">Apagar cualquier brillo.</glowoff>
+    <colorrandom label="aleatorio">Escoger un color aleatorio.</colorrandom>
+    <path>
+      <black label="ruta negra" />
+      <grey label="ruta gris" />
+      <white label="ruta blanca" />
+      <red label="red ruta roja" />
+      <orange label="ruta naranja" />
+      <yellow label="ruta amarilla" />
+      <green label="ruta verde" />
+      <blue label="ruta azul" />
+      <purple label="ruta púrpura" />
+      <pink label="ruta rosada" />
+      <brown label="ruta marrón" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="blanco">Cambia el puntaje blanco, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</white>
+        <black label="negro">Cambia el puntaje negro, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</black>
+        <grey label="gris">Cambia el puntaje gris, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</grey>
+        <red label="rojo">Cambia el puntaje rojo, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</red>
+        <green label="verde">Cambia el puntaje verde, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</green>
+        <blue label="azul">Cambia el puntaje azul, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</blue>
+        <orange label="naranja">Cambia el puntaje naranja, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</orange>
+        <yellow label="amarillo">Cambia el puntaje amarillo, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</yellow>
+        <purple label="púrpura">Cambia el puntaje púrpura, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</purple>
+        <pink label="rosado">Cambia el puntaje rosado, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</pink>
+        <brown label="marrón">Cambia el puntaje marrón, estos se muestran tablero por defecto. Visita la configuración del mundo para cambiarlo.</brown>
+      </color>
+      <letter>
+        <a label="puntaje A">Modifica el puntaje 'A', que es compartido por todos los personajes del mundo.</a>
+        <b label="puntaje B">Modifica el puntaje 'B', que es compartido por todos los personajes del mundo.</b>
+        <c label="puntaje C">Modifica el puntaje 'C', que es compartido por todos los personajes del mundo.</c>
+        <d label="puntaje D">Modifica el puntaje 'D', que es compartido por todos los personajes del mundo.</d>
+        <e label="puntaje E">Modifica el puntaje 'E', que es compartido por todos los personajes del mundo.</e>
+        <f label="puntaje F">Modifica el puntaje 'F', que es compartido por todos los personajes del mundo.</f>
+        <g label="puntaje G">Modifica el puntaje 'G', que es compartido por todos los personajes del mundo.</g>
+        <h label="puntaje H">Modifica el puntaje 'H', que es compartido por todos los personajes del mundo.</h>
+        <i label="puntaje I">Modifica el puntaje 'I', que es compartido por todos los personajes del mundo.</i>
+        <j label="puntaje J">Modifica el puntaje 'J', que es compartido por todos los personajes del mundo.</j>
+        <k label="puntaje K">Modifica el puntaje 'K', que es compartido por todos los personajes del mundo.</k>
+        <l label="puntaje L">Modifica el puntaje 'L', que es compartido por todos los personajes del mundo.</l>
+        <m label="puntaje M">Modifica el puntaje 'M', que es compartido por todos los personajes del mundo.</m>
+        <n label="puntaje N">Modifica el puntaje 'N', que es compartido por todos los personajes del mundo.</n>
+        <o label="puntaje O">Modifica el puntaje 'O', que es compartido por todos los personajes del mundo.</o>
+        <p label="puntaje P">Modifica el puntaje 'P', que es compartido por todos los personajes del mundo.</p>
+        <q label="puntaje Q">Modifica el puntaje 'Q', que es compartido por todos los personajes del mundo.</q>
+        <r label="puntaje R">Modifica el puntaje 'R', que es compartido por todos los personajes del mundo.</r>
+        <s label="puntaje S">Modifica el puntaje 'S', que es compartido por todos los personajes del mundo.</s>
+        <t label="puntaje T">Modifica el puntaje 'T', que es compartido por todos los personajes del mundo.</t>
+        <u label="puntaje U">Modifica el puntaje 'U', que es compartido por todos los personajes del mundo.</u>
+        <v label="puntaje V">Modifica el puntaje 'V', que es compartido por todos los personajes del mundo.</v>
+        <w label="puntaje W">Modifica el puntaje 'W', que es compartido por todos los personajes del mundo.</w>
+        <x label="puntaje X">Modifica el puntaje 'X', que es compartido por todos los personajes del mundo.</x>
+        <y label="puntaje Y">Modifica el puntaje 'Y', que es compartido por todos los personajes del mundo.</y>
+        <z label="puntaje Z">Modifica el puntaje 'Z', que es compartido por todos los personajes del mundo.</z>
+      </letter>
+      <local>
+        <a label="puntaje a">El puntaje 'a', que es privado para este personaje.</a>
+        <b label="puntaje b">El puntaje 'b', que es privado para este personaje.</b>
+        <c label="puntaje c">El puntaje 'c', que es privado para este personaje.</c>
+        <d label="puntaje d">El puntaje 'd', que es privado para este personaje.</d>
+        <e label="puntaje e">El puntaje 'e', que es privado para este personaje.</e>
+        <f label="puntaje f">El puntaje 'f', que es privado para este personaje.</f>
+        <g label="puntaje g">El puntaje 'g', que es privado para este personaje.</g>
+        <h label="puntaje h">El puntaje 'h', que es privado para este personaje.</h>
+        <i label="puntaje i">El puntaje 'i', que es privado para este personaje.</i>
+        <j label="puntaje j">El puntaje 'j', que es privado para este personaje.</j>
+        <k label="puntaje k">El puntaje 'k', que es privado para este personaje.</k>
+        <l label="puntaje l">El puntaje 'l', que es privado para este personaje.</l>
+        <m label="puntaje m">El puntaje 'm', que es privado para este personaje.</m>
+        <n label="puntaje n">El puntaje 'n', que es privado para este personaje.</n>
+        <o label="puntaje o">El puntaje 'o', que es privado para este personaje.</o>
+        <p label="puntaje p">El puntaje 'p', que es privado para este personaje.</p>
+        <q label="puntaje q">El puntaje 'q', que es privado para este personaje.</q>
+        <r label="puntaje r">El puntaje 'r', que es privado para este personaje.</r>
+        <s label="puntaje s">El puntaje 's', que es privado para este personaje.</s>
+        <t label="puntaje t">El puntaje 't', que es privado para este personaje.</t>
+        <u label="puntaje u">El puntaje 'u', que es privado para este personaje.</u>
+        <v label="puntaje v">El puntaje 'v', que es privado para este personaje.</v>
+        <w label="puntaje w">El puntaje 'w', que es privado para este personaje.</w>
+        <x label="puntaje x">El puntaje 'x', que es privado para este personaje.</x>
+        <y label="puntaje y">El puntaje 'y', que es privado para este personaje.</y>
+        <z label="puntaje z">El puntaje 'z', que es privado para este personaje.</z>
+      </local>
+    </scorebucket>
+    <me label="mí">Aplicar la acción al bot ejecutando el programa.</me>
+    <it label="esto">Aplicar la acción al objeto objetivo.</it>
+    <any label="cualquiera">Cualquier sonido.</any>
+
+    <settings>
+      <maxhealth label="salud max">Máximos puntos de salud que el personaje puede tener.</maxhealth>
+      <blipdamage label="daño de blip">Daño hecho por los blips.</blipdamage>
+      <missiledamage label="daño de misil">Daño hecho por los misiles.</missiledamage>
+    </settings>
+
+    <event>
+      <any label="evento">Cualquier sonido.</any>
+      <silly>
+        <any label="bobo">Cualquier sonido bobo.</any>
+        <bang label="bang">Un sonido caricaturesco de 'bang'.</bang>
+        <pow label="pow">Un sonido caricaturesco de 'pow'.</pow>
+      </silly>
+      <explode>
+        <any label="explotar">Un sonido de explosión.</any>
+        <A label="boom A">Un sonido de explosión.</A>
+        <B label="boom B">Un sonido de explosión.</B>
+        <C label="boom C">Un sonido de explosión.</C>
+        <D label="boom D">Un sonido de explosión.</D>
+        <E label="boom E">Un sonido de explosión.</E>
+      </explode>
+      <musical>
+        <any label="musical">Cualquier sonido musical.</any>
+        <glock>
+          <any label="glock">Cualquier sonido de Glockenspiel.</any>
+        </glock>
+        <glock01 label="C glock">Un tono de Glockenspiel.</glock01>
+        <glock02 label="C# glock">Un tono de Glockenspiel.</glock02>
+        <glock03 label="D glock">Un tono de Glockenspiel.</glock03>
+        <glock04 label="D# glock">Un tono de Glockenspiel.</glock04>
+        <glock05 label="E glock">Un tono de Glockenspiel.</glock05>
+        <glock06 label="F glock">Un tono de Glockenspiel.</glock06>
+        <glock07 label="F# glock">Un tono de Glockenspiel.</glock07>
+        <glock08 label="G glock">Un tono de Glockenspiel.</glock08>
+        <glock09 label="G# glock">Un tono de Glockenspiel.</glock09>
+        <glock10 label="A glock">Un tono de Glockenspiel.</glock10>
+        <glock11 label="A# glock">Un tono de Glockenspiel.</glock11>
+        <glock12 label="B glock">Un tono de Glockenspiel.</glock12>
+        <gong>
+          <any label="gong">Un sonido de gong.</any>
+        </gong>
+        <gong01 label="C gong">Un tono de gong.</gong01>
+        <gong02 label="C# gong">Un tono de gong.</gong02>
+        <gong03 label="D gong">Un tono de gong.</gong03>
+        <gong04 label="D# gong">Un tono de gong.</gong04>
+        <gong05 label="E gong">Un tono de gong.</gong05>
+        <gong06 label="F gong">Un tono de gong.</gong06>
+        <gong07 label="F# gong">Un tono de gong.</gong07>
+        <gong08 label="G gong">Un tono de gong.</gong08>
+        <gong09 label="G# gong">Un tono de gong.</gong09>
+        <gong10 label="A gong">Un tono de gong.</gong10>
+        <gong11 label="A# gong">Un tono de gong.</gong11>
+        <gong12 label="B gong">Un tono de gong.</gong12>
+        <saw>
+          <any label="sierra">Cualquier sonido de onda de sierra.</any>
+        </saw>
+        <saw01 label="C sierra">Un tono de onda de sierra.</saw01>
+        <saw02 label="C# sierra">Un tono de onda de sierra.</saw02>
+        <saw03 label="D sierra">Un tono de onda de sierra.</saw03>
+        <saw04 label="D# sierra">Un tono de onda de sierra.</saw04>
+        <saw05 label="E sierra">Un tono de onda de sierra.</saw05>
+        <saw06 label="F sierra">Un tono de onda de sierra.</saw06>
+        <saw07 label="F# sierra">Un tono de onda de sierra.</saw07>
+        <saw08 label="G sierra">Un tono de onda de sierra.</saw08>
+        <saw09 label="G# sierra">Un tono de onda de sierra.</saw09>
+        <saw10 label="A sierra">Un tono de onda de sierra.</saw10>
+        <saw11 label="A# sierra">Un tono de onda de sierra.</saw11>
+        <saw12 label="B sierra">Un tono de onda de sierra.</saw12>
+        <sine>
+          <any label="sinusoide">Cualquier sonido de onda sinusoidal.</any>
+        </sine>
+        <sine01 label="C sinusoide">Un tono de onda sinusoidal.</sine01>
+        <sine02 label="C# sinusoide">Un tono de onda sinusoidal.</sine02>
+        <sine03 label="D sinusoide">Un tono de onda sinusoidal.</sine03>
+        <sine04 label="D# sinusoide">Un tono de onda sinusoidal.</sine04>
+        <sine05 label="E sinusoide">Un tono de onda sinusoidal.</sine05>
+        <sine06 label="F sinusoide">Un tono de onda sinusoidal.</sine06>
+        <sine07 label="F# sinusoide">Un tono de onda sinusoidal.</sine07>
+        <sine08 label="G sinusoide">Un tono de onda sinusoidal.</sine08>
+        <sine09 label="G# sinusoide">Un tono de onda sinusoidal.</sine09>
+        <sine10 label="A sinusoide">Un tono de onda sinusoidal.</sine10>
+        <sine11 label="A# sinusoide">Un tono de onda sinusoidal.</sine11>
+        <sine12 label="B sinusoide">Un tono de onda sinusoidal.</sine12>
+        <square>
+          <any label="cuadrada">Cualquier sonido de onda cuadrada.</any>
+        </square>
+        <square01 label="C cuadrada">Un tono de onda cuadrada.</square01>
+        <square02 label="C# cuadrada">Un tono de onda cuadrada.</square02>
+        <square03 label="D cuadrada">Un tono de onda cuadrada.</square03>
+        <square04 label="D# cuadrada">Un tono de onda cuadrada.</square04>
+        <square05 label="E cuadrada">Un tono de onda cuadrada.</square05>
+        <square06 label="F cuadrada">Un tono de onda cuadrada.</square06>
+        <square07 label="F# cuadrada">Un tono de onda cuadrada.</square07>
+        <square08 label="G cuadrada">Un tono de onda cuadrada.</square08>
+        <square09 label="G# cuadrada">Un tono de onda cuadrada.</square09>
+        <square10 label="A cuadrada">Un tono de onda cuadrada.</square10>
+        <square11 label="A# cuadrada">Un tono de onda cuadrada.</square11>
+        <square12 label="B cuadrada">Un tono de onda cuadrada.</square12>
+        <drums>
+          <any label="tambores">Cualquier sonido de tambor.</any>
+        </drums>
+        <bassdrum label="bombo">Bombo.</bassdrum>
+        <hhclosed label="hh cerrado">Platillo Hi-hat cerrado.</hhclosed>
+        <hhopen label="hh abierto">Platillo Hi-hat abierto.</hhopen>
+        <shaker label="Sacudidor">Sacudidor.</shaker>
+        <snare label="redoblante">Redoblante.</snare>
+        <tomlow label="tom bajo">Tom de tono bajo.</tomlow>
+        <tommed label="tom med">Tom de tono medio.</tommed>
+        <tomhi label="tom alto">Tom de tono alto.</tomhi>
+      </musical>
+      <arcade>
+        <any label="arcade">Sonido de arcade.</any>
+        <roboton label="robot encendido">Activar robot.</roboton>
+        <robotoff label="robot apagado">Desactivar robot.</robotoff>
+        <coinsound label="moneda">Sonido de moneda.</coinsound>
+        <gethealth label="salud+">Sonido de ganar vida.</gethealth>
+        <losehealth label="salud-">Sonido de perder vida.</losehealth>
+        <shoot label="disparo">Sonido de disparo.</shoot>
+        <timer label="temporizador">Sonido de temporizador.</timer>
+        <win label="ganar">Sonido de ganar.</win>
+        <lose label="perder">Sonido de perder.</lose>
+        <inkjet_fire label="disparo de inkjet">Sonido de disparo de Ink Jet.</inkjet_fire>
+        <inkjet_impact label="impacto de inkjet">Sonido de impacto de Ink Jet.</inkjet_impact>
+      </arcade>
+      <misc>
+        <any label="misc">Cualquier sonido miscelaneo.</any>
+        <countdown_beep label="conteo">Un sonido de conteo regresivo.</countdown_beep>
+        <countdown_alarm label="conteo alarma">Un sonido urgente de conteo regresivo.</countdown_alarm>
+        <epic_stinger label="aguijón épico">Un sonido de aguijón épico.</epic_stinger>
+        <epic_stinger_a label="aguijón épico a">Un sonido de aguijón épico.</epic_stinger_a>
+        <epic_stinger_b label="aguijón épico b">Un sonido de aguijón épico.</epic_stinger_b>
+        <firepoof label="ignición">Sonido de ignición.</firepoof>
+        <forcefieldup label="escudo +">Sonido de escudo de fuerza aumentado.</forcefieldup>
+        <forcefielddown label="escudo -">Sonido de escudo de fuerza disminuido.</forcefielddown>
+        <hide label="esconder">Sonido de esconderse.</hide>
+        <lockontarget label="bloquear">Sonido de bloquear objetivo.</lockontarget>
+        <losetarget label="desbloquear">Sonido de perder objetivo.</losetarget>
+        <positivecondition label="bueno">Sonido de que algo bueno pasó.</positivecondition>
+        <negativecondition label="malo">Sonido de que algo malo pasó.</negativecondition>
+        <points label="puntos">Sonido de puntos ganados.</points>
+        <pop label="pop">Sonido de pop.</pop>
+        <popout label="escapar">Sonido pop de que algo se escapó.</popout>
+        <powerup label="encender">Sonido de encendido.</powerup>
+        <servo label="servo">Sonido de servo.</servo>
+        <watersplash label="salpicar">Sonido de salpicaduras de agua.</watersplash>
+        <waterdrop label="gota">Sonido de gota de agua.</waterdrop>
+        <tagbase label="tag base">Sonido de tag base.</tagbase>
+        <whistlehuman label="silbido">Sonido de silbido humano.</whistlehuman>
+        <whistlereferee label="silbido">Sonido de silbido de árbitro.</whistlereferee>
+      </misc>
+      <tower>
+        <any label="torre">Sonidos añadidos para juego de tower defense.</any>
+        <air_raid_siren label="ataque aéreo">Un sonido de sirena de ataque aéreo.</air_raid_siren>
+        <bomb_fall label="bomba cayendo">Un sonido de bomba cayendo.</bomb_fall>
+        <stun_fire label="disparo aturdir">Sonido de disparo de torreta de aturdir.</stun_fire>
+        <zapper_fire label="disparo zapper">Sonido de disparo de torreta zapper.</zapper_fire>
+        <missile_fire label="fuego de misil">Sonido de disparo de torreta de misiles.</missile_fire>
+        <shrinker_fire label="disparo encogedor">Sonido de disparo de torreta encogedora.</shrinker_fire>
+        <clam_coin_spit label="escupir moneda">El sonido majestuoso de una almeja escupiendo una moneda.</clam_coin_spit>
+        <enemy_converted label="enemigo convertido">Un sonido para cuando un enemigo es convertido.</enemy_converted>
+        <enemy_escape label="escape enemigo">Un sonido para cuando un enemigo escapa.</enemy_escape>
+        <place_tower label="ubicar torre">Un sonido para cuando una torre es ubicada.</place_tower>
+        <star_collect label="tomar estrella">Un sonido para cuando una estrella ha sido recolectada.</star_collect>
+        <coin_collect label="tomar moneda">Un sonido para cuando una moneda ha sido recolectada.</coin_collect>
+      </tower>
+    </event>
+    <music>
+      <any label="musical">Cualquier música de este grupo.</any>
+      <omni>
+        <any label="Omni">Cualquier música de este grupo.</any>
+      </omni>
+    </music>
+    <mu_action label="acción">Acción</mu_action>
+    <mu_ambientlight label="ligera">Música ambiental ligera.</mu_ambientlight>
+    <mu_ambinetmodd label="ambiental">Música ambiental</mu_ambinetmodd>
+    <mu_brightdowntempo label="slo-mo">Música brillante downtempo.</mu_brightdowntempo>
+    <mu_brightfunk label="funk">Funkalicioso!</mu_brightfunk>
+    <mu_brightguitar label="guitarra">Música brillante de guitarra.</mu_brightguitar>
+    <mu_kodu label="kodu">Tema de Kodu.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="misterio">Cualquier música de este grupo.</any>
+      </mystery>
+    </music>
+    <mysterya label="mist A">Música misteriosa.</mysterya>
+    <mysteryb label="mist B">Música misteriosa.</mysteryb>
+    <mysteryc label="mist C">Música misteriosa.</mysteryc>
+    <music>
+      <driving>
+        <any label="conducir">Cualquier música de este grupo.</any>
+      </driving>
+    </music>
+    <drivinga label="rápido A">Música de conducción rápida.</drivinga>
+    <drivingb label="rápido B">Música de conducción rápida.</drivingb>
+    <drivingc label="rápido C">Música de conducción rápida.</drivingc>
+    <music>
+      <drama>
+        <any label="drama">Cualquier música de este grupo.</any>
+      </drama>
+    </music>
+    <dramaa label="drama A">Música dramática.</dramaa>
+    <dramab label="drama B">Música dramática.</dramab>
+    <environ>
+      <any label="ambiental">Cualquier sonido de este grupo.</any>
+      <ambocean label="océano">Sonidos de océano.</ambocean>
+      <ambforest label="bosque">Sonidos de bosque.</ambforest>
+      <ambcity label="ciudad">Sonidos de ciudad.</ambcity>
+      <ambmeadow label="prado">Sonidos de prado.</ambmeadow>
+      <ambmars label="marte">Sonidos de Marte.</ambmars>
+      <arena>
+        <any label="arena">Cualquiera de los sonidos de arena.</any>
+        <a label="arena A">Una gran multitud.</a>
+        <b label="arena B">Una gran multitud.</b>
+        <c label="arena C">Una gran multitud.</c>
+        <d label="arena D">Una gran multitud.</d>
+        <e label="arena E">Una gran multitud.</e>
+        <f label="arena F">Una gran multitud.</f>
+        <g label="arena G">Una gran multitud.</g>
+      </arena>
+    </environ>
+    <trackingnone label="nivel">El misil volará directo y no se moverá ni arriba ni abajo.</trackingnone>
+    <trackinghoming label="crucero">El misil seguirá el terreno y tratará de volar sobre colinas y paredes.</trackinghoming>
+    <constraint>
+      <leftright label="izq/der">Mover izquierda y derecha solamente.</leftright>
+      <fwdback label="adelante/atrás">Mover adelante y atrás solamente.</fwdback>
+      <updown label="arriba/abajo" />
+      <northsouth label="N/S">Mover norte y sur solamente.</northsouth>
+      <eastwest label="E/O">Mover este y oeste solamente.</eastwest>
+      <immobile label="congelar">No permitir movimiento, incluso si es empujado.</immobile>
+    </constraint>
+    <once label="una vez">El código en HAGA será ejecutado una sola vez cuando la condición CUANDO sea activada.</once>
+    <watertype label="tipo de agua">Fijar el tipo de agua.</watertype>
+    <on label="encendido">Fijar el estado actual a 'encendido'.</on>
+    <off label="apagado">Fijar el estado actual a 'apagado'.</off>
+    <microbit>
+      <pattern label="patrón">El patrón LED a mostrar en la pantalla de BBC micro:bit.</pattern>
+    </microbit>
+    <frequencyunits>
+      <khz label="kHz">El valor es una frecuencia en kilohertzios.</khz>
+    </frequencyunits>
+  </modifier>
+  <actuator>
+    <nothing label="nada" />
+    <movement label="mover">Viaja a través del mundo. Explora las opciones. Diferentes personajes tienen habilidades de movimiento diferentes.</movement>
+    <turn label="girar">Cambia la dirección a la que apuntas.</turn>
+    <eat label="comer">Consumir el objeto objetivo, que debe estar cerca.</eat>
+    <say label="decir">Mostrar un mensaje de texto, ya sea en un globo o un diálogo. Utiliza &lt;cr&gt; para dividirlo en líneas.</say>
+    <open label="abrir">Funciona diferente en diferentes personajes. Experimenta!</open>
+    <close label="cerrar">Funciona diferente en diferentes personajes. Experimenta!</close>
+    <kick label="patear">Patear al objetivo, si esta lo suficientemente cerca. Su fuerza puede variar.</kick>
+    <make label="crear">Crear otro objeto. Puede crear objetos básicos o cualquier cosa marcada como Creable.</make>
+    <launch label="lanzar">Patear al objetivo, si esta lo suficientemente cerca. Su fuerza puede variar.</launch>
+    <push label="empujar">Empujar el objetivo en cierta dirección, si está lo suficientemente cerca. Su fuerza puede variar.</push>
+    <pull label="halar">Halar al objetivo en cierta dirección, si está lo suficientemente cerca. Su fuerza puede variar.</pull>
+    <camouflage label="camuflar">Camuflar el objetivo, haciéndolo difícil de ver.</camouflage>
+    <uncamouflage label="no camuflar">Quitar camuflaje del objetivo, haciéndolo visible.</uncamouflage>
+    <express label="expresar">Expresar una emoción o mostrar un efecto especial.  Algunas expresiones cambian el rostro del personaje mientras que otras son mostradas encima del mismo.</express>
+    <color label="color">Cambiar el color de ti mismo o de el objeto objetivo.</color>
+    <glow label="brillo">Emitir un brillo radioactivo. Puedes cambiar el color.</glow>
+    <sound label="sonar">Hacer un sonido! Muchísimos de donde escoger.</sound>
+    <stopsound label="silencio">Detener sonido.</stopsound>
+    <jump label="salta">Diferentes personajes pueden saltar a diferentes alturas.</jump>
+    <watersurface label="superficie">La acción de Superficie causa que los personajes acuáticos suban a la superficie del agua.</watersurface>
+    <waterdive label="sumergir">La acción de Sumergir causa que los personajes acuáticos se sumerjan al fondo del agua.</waterdive>
+    <airrise label="subir">La acción de Subir causa que los personajes voladores suban al cielo.</airrise>
+    <airdrop label="bajar">La acción de Bajar causa que los personajes voladores bajen hacia el suelo.</airdrop>
+    <switchtask label="cambiar">Cambiar a una página diferente. Solo las reglas en la página actual son aplicadas. Las páginas son realmente útiles para cambiar el comportamiento.</switchtask>
+    <inlinetask label="en línea">En tiempo de ejecución esto incluirá toda la programación de otra página aquí.  Esto es útil para kódigo que deseas esté en varias páginas ya que puedes escribirlo una sola vez, y luego ponerlo en línea cuando lo necesites.</inlinetask>
+    <nextlevel label="siguiente nivel">Cargar el siguiente nivel. Útil para juegos multi-nivel!</nextlevel>
+    <prevlevel label="anterior nivel">Cargar el nivel anterior. Útil para juegos multi-nivel!</prevlevel>
+    <waterraise label="subir agua">Subir el nivel del agua que está debajo de este objeto.</waterraise>
+    <waterlower label="bajar agua">Bajar el nivel del agua que está debajo de este objeto.</waterlower>
+    <setwater label="fijar agua">Fijar el nivel del agua que está debajo de este objeto.</setwater>
+    <rescale label="escalar">Cambia el tamaño del objeto suavemente.</rescale>
+    <rescaleinstant label="escalar (instante)">Cambia el tamaño del objeto suavemente.</rescaleinstant>
+    <holddistance label="sostener a">Cambia la distancia de objetos "sostenidos" instantáneamente.</holddistance>
+    <holddistanceinstant label="sostener a (instante)">Cambia la distancia de objetos "sostenidos" instantáneamente.</holddistanceinstant>
+    <maxhitpoints label="salud max">Cambia la salud máxima del personaje.</maxhitpoints>
+    <movementspeedmodify label="vel movimiento">Fija la velocidad de movimiento hacia adelante para este actor.</movementspeedmodify>
+    <turningspeedmodify label="vel giro">Fija el multiplicador de velocidad de giro para este actor.</turningspeedmodify>
+    <worldlightingchange label="iluminación">Fija suavemente la iluminación del mundo.</worldlightingchange>
+    <worldlightingchangeinstant label="iluminación (instante)">Fija instantáneamente la iluminación del mundo.</worldlightingchangeinstant>
+    <worldskychange label="cielo">Fija suavemente el cielo del mundo.</worldskychange>
+    <worldskychangeinstant label="cielo (instante)">Fija instantáneamente el cielo del mundo.</worldskychangeinstant>
+    <blipdamage label="daño del blip">Fija el daño hecho por blips.</blipdamage>
+    <missiledamage label="daño del misil">Fija el daño hecho por misiles.</missiledamage>
+    <blipreloadtime label="tiempo recarga blip">Fija el tiempo entre blips cuando dispara</blipreloadtime>
+    <bliprange label="rango blip">Fija el rango de los blips.</bliprange>
+    <missilereloadtime label="tiempo recarga misil">Fija el tiempo entre misiles cuando dispara</missilereloadtime>
+    <missilerange label="rango misil">Fija el rango de los misiles.</missilerange>
+    <closebyrange label="cercanía">Fija la distancia de cercanía.</closebyrange>
+    <farawayrange label="lejanía">Fija la distancia de lejanía.</farawayrange>
+    <hearingrange label="audición">Fija el rango de audición del objeto.</hearingrange>
+    <shoot label="disparar" />
+    <shoot2 label="disparar">Dispara blips o misiles.</shoot2>
+    <beam label="rayo">Dispara un rayo láser a rocas de Marte para identificar las características básicas de la roca.</beam>
+    <inspect label="inspeccionar">Taladra rocas de Marte, Drills into a Mars rock type, recolectando muestras para su estudio.</inspect>
+    <scan label="escanear">Revela el tipo de roca de rocas desconocidas en el área alrededor de Rover.</scan>
+    <picture label="foto">Toma fotos de vista en primera persona.</picture>
+    <damage label="dañar">Reduce la salud de mi personaje o del personaje objetivo.</damage>
+    <heal label="curar">Añade la salud de mi personaje o del personaje objetivo.
+        La acción Curar causa que el personaje o el personaje objetivo se rcuperen del daño. La acción por defecto es curar al personaje objetivo; el peronaje actual puede ser curado incluyendo el modificador "mí". Modificadores pueden ser utilizados para determinar el tipo y cantidad de puntos a curar.</heal>
+    <zap label="aturdir">Aturdir ya sea a mi mismo o un personaje objetivo por algunos segundos.</zap>
+    <pop label="noquear">Causa que un bot o yo mismo se vean completamente inutilizados hasta que la salud sea reiniciada por alguien más.</pop>
+    <squash label="aplastar">Causa que un bot o yo mismo queden aplastados.</squash>
+    <boom label="bum">Hacer que yo mismo o el objetivo desaparezcan en una explosión.</boom>
+    <vanish label="desvanecer">Hacer que yo mismo o el objetivo desaparezcan silenciosamente.</vanish>
+    <grab label="sostener">Sostener al objetivo si está lo suficientemente cerca. Puedes sostener una sola cosa a la vez.</grab>
+    <drop label="soltar">Soltar cualquier cosa que estés sosteniendo.</drop>
+    <give label="dar">Dar cualquier cosa que estés sosteniendo al personaje objetivo. Si el objetivo no puede sostenerlo, se caerá.</give>
+    <reset label="reiniciar">Reiniciar un aspecto del juego o personaje.</reset>
+    <restart label="reiniciar">Reiniciar un aspecto del juego o personaje.</restart>
+    <gameover label="finalizar">Finalizar el juego.</gameover>
+    <victory label="ganar">Finalizar el juego y mostrar un mensaje de que has ganado. Si has especificado un color lo mostraremos.</victory>
+    <score label="puntaje">Añadir puntaje.</score>
+    <unscore label="restar">Restar puntaje.</unscore>
+    <scoreset label="fijar puntaje">Fijar puntaje a un valor especifico.</scoreset>
+    <camera>
+      <followme label="seguir">El punto de vista debería seguir al personaje.</followme>
+      <ignoreme label="ignorar">No te preocupes por mantener este personaje visible.</ignoreme>
+      <firstperson label="1ra persona">Ver a través de los ojos de este personaje.</firstperson>
+    </camera>
+    <microbit>
+      <say label="decir">Desplazar texto en la pantalla de micro:bit.</say>
+      <block label="bloquear">Controlar todas las luces de micro:bit.</block>
+      <sequential label="medidor">Encender las luces de micro:bit secuencialmente.</sequential>
+      <show label="mostrar patrón">Mostrar un patrón en la pantalla de micro:bit.</show>
+      <setpin1 label="fijar pin 0">Fijar la salida digital de el pin.</setpin1>
+      <setpin2 label="fijar pin 1">Fijar la salida digital de el pin.</setpin2>
+      <setpin3 label="fijar pin 2">Fijar la salida digital de el pin.</setpin3>
+      <setpwmfrequency>
+        <pin1 label="PWM 0 frecuencia">Activa un una señal modulada por ancho de pulso, y fija la frecuencia (en segundos), con un modificador opcional de kHz.</pin1>
+        <pin2 label="PWM 1 frecuencia">Activa un una señal modulada por ancho de pulso, y fija la frecuencia (en segundos), con un modificador opcional de kHz.</pin2>
+        <pin3 label="PWM 2 frecuencia">Activa un una señal modulada por ancho de pulso, y fija la frecuencia (en segundos), con un modificador opcional de kHz.</pin3>
+      </setpwmfrequency>
+      <setpwmdutycycle>
+        <pin1 label="PWM 0 duty cycle">Activa un una señal modulada por ancho de pulso, y fija que tanto la señal se mantiene en estado "encendido" (porcentaje).</pin1>
+        <pin2 label="PWM 1 duty cycle">Activa un una señal modulada por ancho de pulso, y fija que tanto la señal se mantiene en estado "encendido" (porcentaje).</pin2>
+        <pin3 label="PWM 2 duty cycle">Activa un una señal modulada por ancho de pulso, y fija que tanto la señal se mantiene en estado "encendido" (porcentaje).</pin3>
+      </setpwmdutycycle>
+    </microbit>
+  </actuator>
+  <root />
+  <group>
+    <colors label="colores" />
+    <pathcolors label="colores ruta" />
+    <game label="juego" />
+    <more label="más" />
+    <players label="jugadores" />
+    <playermods label="jugadores" />
+    <actions label="acciones" />
+    <settings label="configuración" />
+    <combat label="combate" />
+    <rover label="rover" />
+    <holding label="sosteniendo" />
+    <sounds label="sonidos" />
+    <event label="eventos">
+      <explode label="explotar" />
+      <silly label="bobo" />
+      <musical label="musical">
+        <glock label="glock" />
+        <saw label="sierra" />
+        <sine label="sinusoide" />
+        <gong label="gong" />
+        <square label="cuadrada" />
+        <drums label="tambores" />
+      </musical>
+      <arcade label="arcade" />
+      <misc label="misc" />
+      <tower label="torre" />
+    </event>
+    <environ label="ambiental">
+      <forest label="bosque" />
+      <arena label="arena" />
+    </environ>
+    <music label="musical">
+      <omni label="nuevo" />
+      <mystery label="misterio" />
+      <driving label="conducción" />
+      <drama label="drama" />
+    </music>
+    <constraints label="límite" />
+    <directions label="dirección" />
+    <filters>
+      <directions label="dirección" />
+      <touchbuttons label="botones" />
+      <touchGuiButtons label="Botones" />
+      <gestures label="gestos" />
+    </filters>
+    <expressions label="expresión" />
+    <projectiles label="proyectil" />
+    <camera label="vista" />
+    <reset label="reiniciar" />
+    <options label="opciones" />
+    <compare label="comparar" />
+    <points label="puntos" />
+    <time label="tiempo" />
+    <speed label="velocidad" />
+    <strength label="fuerza" />
+    <angle label="ángulo" />
+    <tracking label="rastreo" />
+    <bots label="bots I" />
+    <bots2 label="bots II" />
+    <objects label="objetos" />
+    <tasks label="tareas" />
+    <terrains label="tipos" />
+    <waters label="tipos" />
+    <setwater label="tipos de agua" />
+    <creatables label="creables" />
+    <named label="nombre-usuario" />
+    <keyboard>
+      <letters label="letras" />
+      <numbers label="números" />
+      <symbols label="símbolos" />
+      <misc label="misc" />
+    </keyboard>
+    
+    <scorebucketmodifiers label="puntajes de mundo" />
+    <scorebucketmodifiers.local label="puntajes privados" />
+    <scorefilters label="puntajes"></scorefilters>
+    <scorebucketfilters label="puntajes de mundo" />
+    <scorebucketfilters.local label="puntajes privados" />
+    <settingsfilters label="configuración" />
+    <settingsmodifiers label="configuración" />
+
+    <microbit>
+      <actions>
+        <gpio label="micro:bit I/O"/>
+      </actions>
+    </microbit>
+  </group>
+
+</Tiles>

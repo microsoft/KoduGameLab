@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XmlGameActor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<SurfaceSets>
+		<SurfaceSet>
+			<Name>BASE</Name>
+			<TechniqueExt>WithWind</TechniqueExt>
+			<BumpDetailName>Textures\Terrain\GroundTextures\Blue128x128</BumpDetailName>
+			<DirtMapName>Textures\Character\TEX_FLOWER_D_DIRT</DirtMapName>
+			<SurfaceNames>
+				<string>TintablePlastic</string>
+				<string>BlueLightMatte</string>
+				<string>YellowMatte</string>
+			</SurfaceNames>
+		</SurfaceSet>
+	</SurfaceSets>
+
+  <Model>
+    <TechniqueExt>WithWind</TechniqueExt>
+  </Model>
+
+  <DefaultEditHeight>0.5</DefaultEditHeight>
+
+  <CollisionRadius>0.2</CollisionRadius>
+  <CollisionSound>unknown</CollisionSound>
+  
+  <IsBot>false</IsBot>
+  <IsProp>true</IsProp>
+  <IsBuilding>false</IsBuilding>
+
+  <Mass>0.1</Mass>
+  <CoefficientOfRestitution>0.1</CoefficientOfRestitution>
+  
+  <Classification>
+    <Color>White</Color>
+    <Physicality>Collectable</Physicality>
+  </Classification>
+
+  <SharedIdle>
+    <ActiveAnimationName>wind</ActiveAnimationName>
+  </SharedIdle>
+
+  <Chassis Type="DynamicProp"/>
+  
+</XmlGameActor>
