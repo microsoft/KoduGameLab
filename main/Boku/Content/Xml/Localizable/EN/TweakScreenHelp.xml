@@ -289,9 +289,13 @@ Loud: score events will animate from their location in the game to the scoreboar
 
   <helpText id="ScorePersistence">
     <desc>Controls whether a given score will be persisted during a NextLevel/PreviousLevel action.
-On: the score will be persisted and will maintain the same value when the new level loads
-Off: the score will be reset to zero when the new level loads
+On: the score will be persisted and will maintain the same value when the new level loads.
+Off: the score will be reset to zero when the new level loads.
     </desc>
+  </helpText>
+
+  <helpText id="ScoreName">
+    <desc>This name will show up on screen next to the score when running the game.</desc>
   </helpText>
 
   <helpText id ="ShowVirtualController">
@@ -304,6 +308,13 @@ Off: the score will be reset to zero when the new level loads
       Off: the button won’t be displayed at all.
       No Label: The button will be displayed and will have no text on it.
       Labeled: The button will be displayed along with some text to better identify the button.
+    </desc>
+  </helpText>
+
+  <helpText id="GuiButton">
+    <desc>
+      GUI buttons are displayed on the screen only if they are referenced in a character's programming.  So, if you use one in your programming, it will automatically show up on the screen when your game is run.
+      The label is optional but is recommended since it can help the player of your game understand the controls.
     </desc>
   </helpText>
 

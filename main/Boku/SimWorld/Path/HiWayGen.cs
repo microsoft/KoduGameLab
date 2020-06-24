@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.SimWorld.Terra;
 
@@ -36,18 +38,10 @@ namespace Boku.SimWorld.Path
         protected float maxHeight = 0.0f;
         protected float minHeight = 0.0f;
 
-        protected Texture2D diffTex0 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\alum_plt");
-        protected Texture2D diffTex1 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\RIVROCK1");
-        protected Texture2D normTex0 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\alum_plt_norm");
-        protected Texture2D normTex1 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\RIVROCK1_norm");
+        protected Texture2D diffTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\alum_plt");
+        protected Texture2D diffTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\RIVROCK1");
+        protected Texture2D normTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\alum_plt_norm");
+        protected Texture2D normTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\RIVROCK1_norm");
 
         protected Vector4 uvXfm = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
 
@@ -796,27 +790,19 @@ namespace Boku.SimWorld.Path
         {
             if (diffTex0 == null)
             {
-                diffTex0 = BokuGame.Load<Texture2D>(
-                                    BokuGame.Settings.MediaPath
-                                    + @"Textures\Terrain\GroundTextures\alum_plt");
+                diffTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\alum_plt");
             }
             if (diffTex1 == null)
             {
-                diffTex1 = BokuGame.Load<Texture2D>(
-                                    BokuGame.Settings.MediaPath
-                                    + @"Textures\Terrain\GroundTextures\RIVROCK1");
+                diffTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\RIVROCK1");
             }
             if (normTex0 == null)
             {
-                normTex0 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\alum_plt_norm");
+                normTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\alum_plt_norm");
             }
             if (normTex1 == null)
             {
-                normTex1 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\RIVROCK1_norm");
+                normTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\RIVROCK1_norm");
             }
 
             base.LoadContent(immediate);
@@ -827,10 +813,10 @@ namespace Boku.SimWorld.Path
         /// </summary>
         public override void UnloadContent()
         {
-            BokuGame.Release(ref diffTex0);
-            BokuGame.Release(ref diffTex1);
-            BokuGame.Release(ref normTex0);
-            BokuGame.Release(ref normTex1);
+            DeviceResetX.Release(ref diffTex0);
+            DeviceResetX.Release(ref diffTex1);
+            DeviceResetX.Release(ref normTex0);
+            DeviceResetX.Release(ref normTex1);
             base.UnloadContent();
         }
 

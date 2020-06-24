@@ -17,6 +17,8 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku;
 using Boku.Fx;
 using Boku.Common;
@@ -1380,7 +1382,7 @@ namespace Boku.Base
         /// <summary>
         /// Is this actor's brain registered for updates?
         /// 
-        /// TODO (****) remove this.  Do we really need this or
+        /// TODO (scoy) remove this.  Do we really need this or
         /// is it just redundant information that could get out
         /// of sync?
         /// </summary>
@@ -1511,7 +1513,7 @@ namespace Boku.Base
 
                     // If this actor is a creatable, we need to re-register it with
                     // CardSpace in order to get the name right on modifier tiles.
-                    if (CreatableId != Guid.Empty && Creatable)
+                    if (CreatableId != Guid.Empty)
                     {
                         InGame.inGame.RegisterCreatable(this);
                     }
@@ -1841,7 +1843,7 @@ namespace Boku.Base
         /// </summary>
          
 
-        /// TODO (****) From here down this looks like it's all Rover
+        /// TODO (scoy) From here down this looks like it's all Rover
         /// specific.  If so, why is it here?  Would it be better in
 
         protected float scanRange;
@@ -3839,47 +3841,47 @@ namespace Boku.Base
         /// some other deranged behavior.
         /// </summary>
         /// <param name="other"></param>
-        /// <param name="hitInfo"></param>
+        /// <param name="MouseTouchHitInfo"></param>
         /// <returns></returns>
-        protected virtual bool SpecialBounce(GameActor other, ref HitInfo hitInfo)
+        protected virtual bool SpecialBounce(GameActor other, ref MouseTouchHitInfo MouseTouchHitInfo)
         {
             return false;
         }
 
-        public virtual void ApplyCollisions(ref HitInfo hitInfo)
+        public virtual void ApplyCollisions(ref MouseTouchHitInfo MouseTouchHitInfo)
         {
             if (Chassis.FixedPosition)
                 return;
 
             if (SRO.DisplayCollisions)
             {
-                AddLine(hitInfo);
+                AddLine(MouseTouchHitInfo);
             }
             if (ActorHoldingThis != null)
             {
                 GameActor actorHolding = ActorHoldingThis as GameActor;
-                if (actorHolding != null && actorHolding != hitInfo.Other)
+                if (actorHolding != null && actorHolding != MouseTouchHitInfo.Other)
                 {
-                    actorHolding.ApplyCollisions(ref hitInfo);
+                    actorHolding.ApplyCollisions(ref MouseTouchHitInfo);
                 }
                 return;
             }
 
-            GameActor actor = hitInfo.Other;
+            GameActor actor = MouseTouchHitInfo.Other;
             Debug.Assert(actor != null, "Received a null other from collision system");
             if ((actor.ThingBeingHeldByThisActor != this)   // It's not holding us.
                 && (ThingBeingHeldByThisActor != actor))    // We're not holding it.
             {
-                if (!hitInfo.Handled)
+                if (!MouseTouchHitInfo.Handled)
                 {
                     Vector3 delta = actor.Movement.Position - Movement.Position;
                     AddTouched(actor, delta, delta.Length());
 
                     // Seagrass is a special case.  We want actors to be able to swim through it without getting blocked
                     // but we still want bumps to be detectable.  So, after adding the touch, exit before bouncing.
-                    // TODO (****) Need to add this as a setting in a generic way for all actors.  Should be able to
+                    // TODO (scoy) Need to add this as a setting in a generic way for all actors.  Should be able to
                     // independently turn off physical collisions and bump detection.
-                    if (actor.Classification.name == "seagrass" || (hitInfo.OtherMover != null && hitInfo.OtherMover.Owner.Classification.name == "seagrass"))
+                    if (actor.Classification.name == "seagrass" || (MouseTouchHitInfo.OtherMover != null && MouseTouchHitInfo.OtherMover.Owner.Classification.name == "seagrass"))
                     {
                         return;
                     }
@@ -3893,15 +3895,15 @@ namespace Boku.Base
                     return;
                 }
 
-                if (!SpecialBounce(actor, ref hitInfo) && !actor.SpecialBounce(this, ref hitInfo))
+                if (!SpecialBounce(actor, ref MouseTouchHitInfo) && !actor.SpecialBounce(this, ref MouseTouchHitInfo))
                 {
                     if (!actor.Chassis.FixedPosition)
                     {
                         // Do a normal collision.
                         // Move them apart so they're no longer colliding.
-                        if (!hitInfo.Handled)
+                        if (!MouseTouchHitInfo.Handled)
                         {
-                            Vector3 normal = PerturbNormal(hitInfo.Normal);
+                            Vector3 normal = PerturbNormal(MouseTouchHitInfo.Normal);
                             CollisionBounce(this, actor, normal);
                             actor.Chassis.Moving = true;
                         }
@@ -3911,7 +3913,7 @@ namespace Boku.Base
                         // Do a "soft" collision.
 
                         // Reflect velocity vector to simulate bounce.
-                        Vector3 normal = PerturbNormal(hitInfo.Normal);
+                        Vector3 normal = PerturbNormal(MouseTouchHitInfo.Normal);
                         float velDotNorm = Vector3.Dot(Movement.Velocity, normal);
                         if (velDotNorm <= 0)
                         {
@@ -3942,28 +3944,28 @@ namespace Boku.Base
                     Chassis.Gravity = BaseChassis.kGravity;
                 }
 
-                // TODO (****) Encapsulate this in some "collision effect" manager so we 
+                // TODO (scoy) Encapsulate this in some "collision effect" manager so we 
                 // can have different sounds/visuals for different types of collisions.
                 // For now, just don't do effects for prop/prop collisions.
                 if (Chassis as DynamicPropChassis == null && actor.Chassis as DynamicPropChassis == null)
                 {
-                    ExplosionManager.CreateSpark(hitInfo.Contact, 2, 0.02f, 1.0f);
+                    ExplosionManager.CreateSpark(MouseTouchHitInfo.Contact, 2, 0.02f, 1.0f);
 
-                    if (!hitInfo.Touching)
+                    if (!MouseTouchHitInfo.Touching)
                     {
                         // Collision sound.
-                        Audio.Foley.PlayCollision(actor, hitInfo.Other);
+                        Audio.Foley.PlayCollision(actor, MouseTouchHitInfo.Other);
                     }
                 }
                 // No shield or sparks for apples or rocks.
                 if (ShieldEffects && Chassis as DynamicPropChassis == null)
-                    Shield.AddImpact(this, hitInfo.Contact, WorldCollisionRadius, new Vector3(0.01f, 0.1f, 0.1f));
+                    Shield.AddImpact(this, MouseTouchHitInfo.Contact, WorldCollisionRadius, new Vector3(0.01f, 0.1f, 0.1f));
                 if (actor.ShieldEffects && actor.Chassis as DynamicPropChassis == null)
-                    Shield.AddImpact(actor, hitInfo.Contact, actor.WorldCollisionRadius, new Vector3(0.01f, 0.1f, 0.1f));
+                    Shield.AddImpact(actor, MouseTouchHitInfo.Contact, actor.WorldCollisionRadius, new Vector3(0.01f, 0.1f, 0.1f));
 
                 Chassis.Moving = true;
 
-                hitInfo.Handled = true;
+                MouseTouchHitInfo.Handled = true;
             }
         }
 
@@ -4002,7 +4004,7 @@ namespace Boku.Base
         /// Compute the right amount to dampen a tangent velocity for the input time interval
         /// and friction parameter.
         /// 
-        /// TODO (****) This is totally useless if it doesn't even document the range
+        /// TODO (scoy) This is totally useless if it doesn't even document the range
         /// of values and which end of the range aligns with slick vs sticky.
         /// </summary>
         /// <param name="friction"></param>
@@ -4241,12 +4243,12 @@ namespace Boku.Base
         /// <param name="hitsIn"></param>
         /// <param name="hitsOut"></param>
         /// <param name="excluded"></param>
-        private void ClearExcluded(List<HitInfo> hitsIn, List<HitInfo> hitsOut, List<GameThing> excluded)
+        private void ClearExcluded(List<MouseTouchHitInfo> hitsIn, List<MouseTouchHitInfo> hitsOut, List<GameThing> excluded)
         {
             hitsOut.Clear();
 
             if (hitsIn.Count > 1)
-                hitsIn.Sort(_CompareHitInfo);
+                hitsIn.Sort(_CompareMouseTouchHitInfo);
             if (excluded.Count > 1)
                 excluded.Sort(_CompareThing);
 
@@ -4298,7 +4300,7 @@ namespace Boku.Base
         /// False if no blockage, and blockInfo remains untouched.
         /// </summary>
         /// <param name="actor"></param>
-        /// <param name="hitInfo"></param>
+        /// <param name="MouseTouchHitInfo"></param>
         /// <returns></returns>
         public bool Blocked(GameActor actor, ref BlockedInfo blockInfo)
         {
@@ -4321,11 +4323,11 @@ namespace Boku.Base
         /// <summary>
         /// Internal for avoiding GC, don't use.
         /// </summary>
-        private static List<HitInfo> _scratchPreHits = new List<HitInfo>();
+        private static List<MouseTouchHitInfo> _scratchPreHits = new List<MouseTouchHitInfo>();
         /// <summary>
         /// Internal for avoiding GC, don't use.
         /// </summary>
-        private static List<HitInfo> _scratchPostHits = new List<HitInfo>();
+        private static List<MouseTouchHitInfo> _scratchPostHits = new List<MouseTouchHitInfo>();
         /// <summary>
         /// Internal for avoiding GC, don't use.
         /// </summary>
@@ -4349,9 +4351,9 @@ namespace Boku.Base
         /// <summary>
         /// Internal for sorting hits by the actor within.
         /// </summary>
-        private class CompareHitInfo : IComparer<HitInfo>
+        private class CompareMouseTouchHitInfo : IComparer<MouseTouchHitInfo>
         {
-            public int Compare(HitInfo lhs, HitInfo rhs)
+            public int Compare(MouseTouchHitInfo lhs, MouseTouchHitInfo rhs)
             {
                 if (lhs.Other.UniqueNum < rhs.Other.UniqueNum)
                     return -1;
@@ -4368,7 +4370,7 @@ namespace Boku.Base
         /// <summary>
         /// Internal comparator for avoiding GC.
         /// </summary>
-        private static CompareHitInfo _CompareHitInfo = new CompareHitInfo();
+        private static CompareMouseTouchHitInfo _CompareMouseTouchHitInfo = new CompareMouseTouchHitInfo();
 
         protected void AddEmitter(BaseEmitter em, string boneName, Vector3 offset)
         {
@@ -4593,7 +4595,7 @@ namespace Boku.Base
             //Debug.Print("starting " + uniqueNum.ToString());
 
 #if NETFX_CORE
-            // TODO (****) Restore this when MG does audio.
+            // TODO (scoy) Restore this when MG does audio.
             return;
 #else
 
@@ -4715,7 +4717,7 @@ namespace Boku.Base
         }
 
 
-        // TODO (****) Try and move more of this into the AnimationSet class.
+        // TODO (scoy) Try and move more of this into the AnimationSet class.
 
         /// <summary>
         /// The animation system was designed to self-update, but we update 
@@ -5444,7 +5446,7 @@ namespace Boku.Base
                 TwitchManager.Set<float> set = delegate(float value, Object param) { HoldDistance = value; };
                 TwitchManager.CreateTwitch<float>(HoldDistance, LocalParameters._holdDistance, set, twitchTime, TwitchCurve.Shape.EaseInOut);
 
-                // TODO (****) Is this needed?
+                // TODO (scoy) Is this needed?
                 // Keep it moving until we finish
                 if (this.Chassis != null)
                 {
@@ -6070,7 +6072,7 @@ namespace Boku.Base
         {
             //
             // Always ignore direct object and use own way of finding pushable actors
-            // TODO (****) Why?  Is this because we want fans to push everything in range
+            // TODO (scoy) Why?  Is this because we want fans to push everything in range
             // without being able to discriminate and only push blue Kodus?
 
             List<GameActor> pushThings = new List<GameActor>();
@@ -6319,7 +6321,7 @@ namespace Boku.Base
                 /// is about to have PostCollisionTestUpdate called on it. That can
                 /// cause problems, so we'll make up for it here.
                 prop.Movement.SetPreviousPositionVelocity();
-                // TODO (****) Why are we call PreCollisionTestUpdate() on this newly
+                // TODO (scoy) Why are we call PreCollisionTestUpdate() on this newly
                 // created actor when Refresh hasn't even brouth it into the game yet?
                 prop.Chassis.PreCollisionTestUpdate(propActor);
 
@@ -7654,7 +7656,7 @@ namespace Boku.Base
                 }
             }
 
-            // TODO (****) Is this right? What about < 0?
+            // TODO (scoy) Is this right? What about < 0?
             if (HitPoints == 0)
             {
                 ExecuteVerb(killVerb, null, null, quiet);
@@ -7666,7 +7668,7 @@ namespace Boku.Base
                 PlayDamageEffect(-amount, hitPos);
             }
 
-            // TODO (****) Is this enough?  Or should we assert hitpoints <= 0
+            // TODO (scoy) Is this enough?  Or should we assert hitpoints <= 0
             died = PendingState == State.Inactive;
 
             return true;
@@ -7966,7 +7968,7 @@ namespace Boku.Base
 
                 SensorTarget target = SensorTargetSpares.Alloc();
                 // We don't need a direction and range so just set the target.
-                // TODO (****) This kind of imples that this should be refactored.
+                // TODO (scoy) This kind of imples that this should be refactored.
                 target.Init(targetHit, direction: Vector3.Zero, range: 0.0f);
                 target.Tag = param;
 
@@ -7974,7 +7976,7 @@ namespace Boku.Base
                 // So, adding to this missileHitSet is at best useless and may be very
                 // wrong if the actor has already been recycled.  We can test for the 
                 // inactive case but there's still the odd case of being recycled.
-                // TODO (****) Maybe missile hit stuff should be in the missile rather
+                // TODO (scoy) Maybe missile hit stuff should be in the missile rather
                 // than the launcher?  Will this fix the problem?
                 if (CurrentState != State.Inactive)
                 {
@@ -8251,12 +8253,12 @@ namespace Boku.Base
         private void DisplayLines(Camera camera)
         {
 #if TEST_BLOCKED
-            HitInfo hitInfo = new HitInfo();
+            MouseTouchHitInfo MouseTouchHitInfo = new MouseTouchHitInfo();
             Vector3 at = WorldCollisionCenter + Movement.LocalMatrix.Right * 20.0f;
-            if (Blocked(at, ref hitInfo))
+            if (Blocked(at, ref MouseTouchHitInfo))
             {
-                AddLine(WorldCollisionCenter, hitInfo.Contact, new Vector4(1.0f, 0.0f, 0.0f, 1.0f));
-                AddLine(hitInfo.Contact, hitInfo.Contact + hitInfo.Normal, new Vector4(1.0f, 1.0f, 0.0f, 1.0f));
+                AddLine(WorldCollisionCenter, MouseTouchHitInfo.Contact, new Vector4(1.0f, 0.0f, 0.0f, 1.0f));
+                AddLine(MouseTouchHitInfo.Contact, MouseTouchHitInfo.Contact + MouseTouchHitInfo.Normal, new Vector4(1.0f, 1.0f, 0.0f, 1.0f));
             }
             else
             {
@@ -8292,18 +8294,18 @@ namespace Boku.Base
             TestLine line = new TestLine(src, dst, color);
             testLines.Add(line);
         }
-        private void AddLine(SimWorld.Collision.HitInfo hitInfo)
+        private void AddLine(SimWorld.Collision.MouseTouchHitInfo MouseTouchHitInfo)
         {
-            if (hitInfo.Touching)
+            if (MouseTouchHitInfo.Touching)
             {
-                AddLine(hitInfo.Contact,
-                    hitInfo.Contact + hitInfo.Normal * 2.0f,
+                AddLine(MouseTouchHitInfo.Contact,
+                    MouseTouchHitInfo.Contact + MouseTouchHitInfo.Normal * 2.0f,
                     new Vector4(1.0f, 0.5f, 0.5f, 1.0f));
             }
             else
             {
-                AddLine(hitInfo.Contact,
-                    hitInfo.Contact + hitInfo.Normal * 2.0f,
+                AddLine(MouseTouchHitInfo.Contact,
+                    MouseTouchHitInfo.Contact + MouseTouchHitInfo.Normal * 2.0f,
                     new Vector4(1.0f, 0.0f, 0.0f, 1.0f));
             }
         }
@@ -8590,9 +8592,9 @@ namespace Boku.Base
                     classColor.W = 0.4f;
                     Utils.DrawSolidSphere(camera, center, CollisionRadius, classColor);
 #else
-                    BokuGame.bokuGame.GraphicsDevice.RasterizerState = UI2D.Shared.RasterStateWireframe;
+                    KoiLibrary.GraphicsDevice.RasterizerState = SharedX.RasterStateWireframe;
                     Utils.DrawSolidEllipsoid(camera, center, CollisionRadius * SquashScale, classColor);
-                    BokuGame.bokuGame.GraphicsDevice.RasterizerState = RasterizerState.CullCounterClockwise;
+                    KoiLibrary.GraphicsDevice.RasterizerState = RasterizerState.CullCounterClockwise;
 #endif
                 }
             }
@@ -8720,6 +8722,37 @@ namespace Boku.Base
                 //}
             }
         }
+        public static void TestScoy(Camera camera)
+        {
+            Vector3 src = new Vector3(-24.3606f, 44.23367f, 4.215578f);
+            Vector3 dst = new Vector3(-24.36319f, 44.23535f, 4.216258f);
+
+            Vector2 minMax = new Vector2(-1.0f, 3.793968f);
+            Vector4 maxStep = new Vector4(
+                Single.MaxValue,
+                Single.MinValue,
+                -1.0f,
+                -1.0f);
+
+            Terrain.HitBlock hitBlock = new Terrain.HitBlock();
+            if (Terrain.Blocked(src, dst, minMax, maxStep, ref hitBlock, 0.0f))
+            {
+                Vector4 color = new Vector4(1.0f, 0.25f, 0.25f, 1.0f);
+                Utils.DrawLine(camera,
+                    src,
+                    hitBlock.Position,
+                    color);
+                color.Y = 1.0f;
+                Utils.DrawLine(camera,
+                    hitBlock.Position,
+                    hitBlock.Position + hitBlock.Normal,
+                    color);
+            }
+            Utils.DrawLine(camera,
+                src,
+                dst,
+                new Vector4(0.25f, 1.0f, 0.25f, 1.0f));
+        }
 
         public override void DebugDisplay(Camera camera)
         {
@@ -8731,6 +8764,7 @@ namespace Boku.Base
             bool doBlock = false;
             if (doBlock)
                 TestBlock(camera);
+            //TestScoy(camera);
 
             DisplayCollisions(camera);
 

@@ -100,7 +100,7 @@ namespace Boku.Common.Xml
         /// <summary>
         /// This contains a list of IDs for hints that the user has disabled.
         /// Any hint not appearing on this list is assumed to be enabled.
-        /// TODO (****)  Should add an option to the OptionsMenu to clear
+        /// TODO (scoy)  Should add an option to the OptionsMenu to clear
         /// this list effectively reseting the disabled state for all hints.
         /// </summary>
         public List<string> disabledHintIDs = new List<string>();
@@ -121,7 +121,7 @@ namespace Boku.Common.Xml
 
         private static XmlOptionsData _instance = null;
         
-        #endregion
+        #endregion 
 
         #region Accessors
 
@@ -707,7 +707,6 @@ namespace Boku.Common.Xml
                         XmlSerializer serializer = new XmlSerializer(typeof(XmlOptionsData));
                         xmlData = serializer.Deserialize(stream) as XmlOptionsData;
                     }
-
                 }
             }
             catch (Exception e)

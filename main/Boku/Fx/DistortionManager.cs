@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Programming;
@@ -218,7 +220,7 @@ namespace Boku.Fx
 
             // We've set the BlendFunc to Max in the effect, manually set it back
             // to add here, because that's what everyone else assumes it to be.
-            BokuGame.bokuGame.GraphicsDevice.BlendState = BlendState.NonPremultiplied;
+            KoiLibrary.GraphicsDevice.BlendState = BlendState.NonPremultiplied;
 
             for (int i = 0; i < lies.Count; ++i)
             {
@@ -288,7 +290,7 @@ namespace Boku.Fx
             // proportionally smaller to fit the current rendertarget.
             if (BokuGame.ScreenPosition.Y > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 Viewport vp = device.Viewport;
 
                 vp.Y = (int)(vp.Height * BokuGame.ScreenPosition.Y / (BokuGame.ScreenPosition.Y + BokuGame.ScreenSize.Y));
@@ -309,7 +311,7 @@ namespace Boku.Fx
 
             // We've set the BlendFunc to Max in the effect, set it back
             // to default.
-            BokuGame.bokuGame.GraphicsDevice.BlendState = BlendState.AlphaBlend;
+            KoiLibrary.GraphicsDevice.BlendState = BlendState.AlphaBlend;
 
             FirstPersonEffectMgr.Render(camera);
 
@@ -323,12 +325,12 @@ namespace Boku.Fx
             {
                 if (bump == null)
                 {
-                    bump = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\DistortionWake");
+                    bump = KoiLibrary.LoadTexture2D(@"Textures\DistortionWake");
                 }
 
                 if (partyEffect == null)
                 {
-                    partyEffect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Particle2D");
+                    partyEffect = KoiLibrary.LoadEffect(@"Shaders\Particle2D");
                     effectCache.Load(PartyEffect, "");
                 }
 
@@ -354,8 +356,8 @@ namespace Boku.Fx
 
         public static void UnloadContent()
         {
-            BokuGame.Release(ref bump);
-            BokuGame.Release(ref partyEffect);
+            DeviceResetX.Release(ref bump);
+            DeviceResetX.Release(ref partyEffect);
             
             effectCache.UnLoad();
 

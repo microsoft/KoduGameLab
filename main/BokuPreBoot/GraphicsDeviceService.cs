@@ -64,7 +64,7 @@ namespace BokuPreBoot
             parameters.DepthStencilFormat = DepthFormat.Depth24;
             parameters.DeviceWindowHandle = windowHandle;
 
-            // TODO (****)  Note we're hardcoding Reach here.  Is this a problem???
+            // TODO (scoy)  Note we're hardcoding Reach here.  Is this a problem???
             //graphicsDevice = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.Reach, parameters);
         }
 

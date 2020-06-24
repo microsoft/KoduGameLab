@@ -11,6 +11,8 @@ using System.Xml.Serialization;
 
 using Microsoft.Xna.Framework;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Common.ParticleSystem;
 using Boku.SimWorld;
@@ -505,7 +507,7 @@ namespace Boku.Base
         }
 
 
-        // TODO (****) Are the following variables even needed or are they duplicates
+        // TODO (scoy) Are the following variables even needed or are they duplicates
         // of values stored elsewhere.  If they are duplicates we should remove these
         // and ensure that everything is normalized to only look in a single place.
 
@@ -1030,7 +1032,7 @@ namespace Boku.Base
                             }
                         }
 
-                        // TODO (****) This code which looks like it's checking for feelers getting embedded
+                        // TODO (scoy) This code which looks like it's checking for feelers getting embedded
                         // in the terrain is actually where we do all (?) of the bouncing off the terrain.
                         // Is this really what we want?
                         // Part of the problem is that the feelers are better poisitioned for side to side 
@@ -1700,7 +1702,7 @@ namespace Boku.Base
 
             // Loop over targets, far to near and adjust direction we want to
             // go to avoid them.
-            // TODO (****) For future tweak, may want to consider the distance
+            // TODO (scoy) For future tweak, may want to consider the distance
             // to the avoid target and attenuate the effect of targets which
             // are futher away.
             for (int i = desiredMovement.AvoidTargets.Count - 1; i >= 0; --i)
@@ -1750,7 +1752,7 @@ namespace Boku.Base
         /// <summary>
         /// Return the angle normalized to the range -pi..pi
         /// 
-        /// TODO (****) Should probably be in MathHelper.
+        /// TODO (scoy) Should probably be in MathHelper.
         /// </summary>
         /// <param name="angle"></param>
         /// <returns></returns>

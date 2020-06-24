@@ -76,7 +76,7 @@ namespace BokuPipeline
                     /// things like the diffuse color from the Material. With the new
                     /// model material, it's not an issue, but until they are converted
                     /// we have to take the bad with the good.
-                    /// TODO - *** 
+                    /// TODO - MAFINCH 
                     if (nullMats)
                     {
                         part.Material = null;

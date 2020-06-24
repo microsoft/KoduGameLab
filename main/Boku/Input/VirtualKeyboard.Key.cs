@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -26,7 +30,7 @@ namespace Boku.Input
 
             KeySet parent = null;
 
-            UI2D.Shared.GetFont Font = null;
+            GetFont Font = null;
             string label = "";                  // What is printed on this key, if anything.
             public string value = "";           // What character(s) is sent when this key is pressed.
             public Keys keyValue = Keys.None;   // If set, ignore value and use this.
@@ -83,7 +87,7 @@ namespace Boku.Input
             /// <param name="Font"></param>
             /// <param name="keyCapColor"></param>
             /// <param name="value"></param>
-            public Key(KeySet parent, Vector2 position, Vector2 size, string label, UI2D.Shared.GetFont Font, Color labelColor, Color keyCapColor, string value)
+            public Key(KeySet parent, Vector2 position, Vector2 size, string label, GetFont Font, Color labelColor, Color keyCapColor, string value)
             {
                 this.parent = parent;
                 this.position = position;
@@ -125,7 +129,7 @@ namespace Boku.Input
             /// <param name="Font"></param>
             /// <param name="keyCapColor"></param>
             /// <param name="value"></param>
-            public Key(KeySet parent, Vector2 position, Vector2 size, string label, UI2D.Shared.GetFont Font, Color labelColor, Color keyCapColor, Texture2D texture, string value)
+            public Key(KeySet parent, Vector2 position, Vector2 size, string label, GetFont Font, Color labelColor, Color keyCapColor, Texture2D texture, string value)
             {
                 this.parent = parent;
                 this.position = position;
@@ -149,7 +153,7 @@ namespace Boku.Input
             /// <param name="Font"></param>
             /// <param name="keyCapColor"></param>
             /// <param name="value"></param>
-            public Key(KeySet parent, Vector2 position, Vector2 size, string label, UI2D.Shared.GetFont Font, Color labelColor, Color keyCapColor, Keys value)
+            public Key(KeySet parent, Vector2 position, Vector2 size, string label, GetFont Font, Color labelColor, Color keyCapColor, Keys value)
             {
                 this.parent = parent;
                 this.position = position;
@@ -192,7 +196,7 @@ namespace Boku.Input
             /// <param name="Font"></param>
             /// <param name="keyCapColor"></param>
             /// <param name="OnKey"></param>
-            public Key(KeySet parent, Vector2 position, Vector2 size, string label, UI2D.Shared.GetFont Font, Color labelColor, Color keyCapColor, OnKeyDelegate OnKey)
+            public Key(KeySet parent, Vector2 position, Vector2 size, string label, GetFont Font, Color labelColor, Color keyCapColor, OnKeyDelegate OnKey)
             {
                 this.parent = parent;
                 this.position = position;
@@ -235,7 +239,7 @@ namespace Boku.Input
             /// <param name="Font"></param>
             /// <param name="keyCapColor"></param>
             /// <param name="OnKey"></param>
-            public Key(KeySet parent, Vector2 position, Vector2 size, string label, UI2D.Shared.GetFont Font, Color labelColor, Color keyCapColor, Texture2D texture, OnKeyDelegate OnKey)
+            public Key(KeySet parent, Vector2 position, Vector2 size, string label, GetFont Font, Color labelColor, Color keyCapColor, Texture2D texture, OnKeyDelegate OnKey)
             {
                 this.parent = parent;
                 this.position = position;
@@ -294,12 +298,12 @@ namespace Boku.Input
             {
                 if (blob == null)
                 {
-                    blob = new TextBlob(UI2D.Shared.GetGameFont30Bold, "foo", 1000);
+                    blob = new TextBlob(SharedX.GetGameFont30Bold, "foo", 1000);
                 }
 
                 // NOTE: Assumes Begin has already been called on batch
                 // and End will be called elsewhere.
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 bool invertColors = false;
                 if (pressed && OnKey == null)
@@ -341,7 +345,7 @@ namespace Boku.Input
                     // Clamp to int to get better looking glyphs.
                     pos.X = (int)pos.X;
                     pos.Y = (int)pos.Y;
-                    blob.RenderWithButtons(pos, invertColors ? keyCapColor : labelColor);
+                    blob.RenderText(null, pos, invertColors ? keyCapColor : labelColor);
                 }
 
             }   // end of Render()

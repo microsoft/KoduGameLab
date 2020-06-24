@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Gesture;
@@ -121,8 +124,8 @@ namespace Boku.Programming
             isInitialized = true;
 
             //Thumb-stick textures.
-            ThumbStickTop_Texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualController\ThumbStick_Light");
-            ThumbStickBottom_Texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualController\ThumbStick_Dark");
+            ThumbStickTop_Texture = KoiLibrary.LoadTexture2D(@"Textures\VirtualController\ThumbStick_Light");
+            ThumbStickBottom_Texture = KoiLibrary.LoadTexture2D(@"Textures\VirtualController\ThumbStick_Dark");
 
 
             for (int i = 0; i < kNumButtons; i++)
@@ -131,30 +134,26 @@ namespace Boku.Programming
             }
 
             //Buttons
-            buttonTextures[(int)TouchButtonType.Button_A] = BokuGame.Load<Texture2D>(
-                BokuGame.Settings.MediaPath + @"Textures\VirtualController\Button_A");
+            buttonTextures[(int)TouchButtonType.Button_A] = KoiLibrary.LoadTexture2D(@"Textures\VirtualController\Button_A");
 
-            buttonTextures[(int)TouchButtonType.Button_B] = BokuGame.Load<Texture2D>(
-                BokuGame.Settings.MediaPath + @"Textures\VirtualController\Button_B");
+            buttonTextures[(int)TouchButtonType.Button_B] = KoiLibrary.LoadTexture2D(@"Textures\VirtualController\Button_B");
 
-            buttonTextures[(int)TouchButtonType.Button_X] = BokuGame.Load<Texture2D>(
-                BokuGame.Settings.MediaPath + @"Textures\VirtualController\Button_X");
+            buttonTextures[(int)TouchButtonType.Button_X] = KoiLibrary.LoadTexture2D(@"Textures\VirtualController\Button_X");
 
-            buttonTextures[(int)TouchButtonType.Button_Y] = BokuGame.Load<Texture2D>(
-                BokuGame.Settings.MediaPath + @"Textures\VirtualController\Button_Y");
+            buttonTextures[(int)TouchButtonType.Button_Y] = KoiLibrary.LoadTexture2D(@"Textures\VirtualController\Button_Y");
 
 
 //             //DPad
-//             buttonTextures[(int)TouchButtonType.DPad_L] = BokuGame.Load<Texture2D>(
+//             buttonTextures[(int)TouchButtonType.DPad_L] = KoiLibrary.LoadTexture2D(
 //                 BokuGame.Settings.MediaPath + @"Textures\Programming\TouchButton_ControllerDPad_L");
 // 
-//             buttonTextures[(int)TouchButtonType.DPad_R] = BokuGame.Load<Texture2D>(
+//             buttonTextures[(int)TouchButtonType.DPad_R] = KoiLibrary.LoadTexture2D(
 //                 BokuGame.Settings.MediaPath + @"Textures\Programming\TouchButton_ControllerDPad_R");
 // 
-//             buttonTextures[(int)TouchButtonType.DPad_U] = BokuGame.Load<Texture2D>(
+//             buttonTextures[(int)TouchButtonType.DPad_U] = KoiLibrary.LoadTexture2D(
 //                 BokuGame.Settings.MediaPath + @"Textures\Programming\TouchButton_ControllerDPad_U");
 // 
-//             buttonTextures[(int)TouchButtonType.DPad_D] = BokuGame.Load<Texture2D>(
+//             buttonTextures[(int)TouchButtonType.DPad_D] = KoiLibrary.LoadTexture2D(
 //                 BokuGame.Settings.MediaPath + @"Textures\Programming\TouchButton_ControllerDPad_D");
         }
 
@@ -163,7 +162,7 @@ namespace Boku.Programming
             isInitialized = false;
             for (int i = 0; i < kNumButtons; i++)
             {
-                BokuGame.Release(ref buttonTextures[i]);
+                DeviceResetX.Release(ref buttonTextures[i]);
             }
         }
 
@@ -195,7 +194,7 @@ namespace Boku.Programming
         {
             // Handles touch input and keeping button state
             bool bCanUpdate = InGame.ShowVirtualController && InGame.UpdateMode.RunSim == InGame.inGame.CurrentUpdateMode;
-            bCanUpdate = bCanUpdate && GamePadInput.InputMode.Touch == GamePadInput.ActiveMode;
+            bCanUpdate = bCanUpdate && KoiLibrary.LastTouchedDeviceIsTouch;
 
             
             TouchContact[] touches = TouchInput.Touches;
@@ -339,12 +338,12 @@ namespace Boku.Programming
             }
 
             //Calculate scale based on Screen Resolution every frame.
-            float scaleX = Math.Min((float)BokuGame.bokuGame.GraphicsDevice.Viewport.Width / 1024.0f, 1.0f);
-            float scaleY = Math.Min((float)BokuGame.bokuGame.GraphicsDevice.Viewport.Height / 576.0f, 1.0f);
+            float scaleX = Math.Min((float)KoiLibrary.GraphicsDevice.Viewport.Width / 1024.0f, 1.0f);
+            float scaleY = Math.Min((float)KoiLibrary.GraphicsDevice.Viewport.Height / 576.0f, 1.0f);
 
             ControllerScale = Math.Min(scaleX, scaleY);
 
-            LeftStickCenterPos.Y = (float)BokuGame.bokuGame.GraphicsDevice.Viewport.Height;
+            LeftStickCenterPos.Y = (float)KoiLibrary.GraphicsDevice.Viewport.Height;
             LeftStickCenterPos.Y -= (kButtonVertOffsetToScreenEdge + (kThumbStickOuterDiameterPx * ControllerScale * 0.5f));
             LeftStickCenterPos.X = kButtonHorizOffsetToScreenEdge + (kThumbStickOuterDiameterPx * ControllerScale * 0.5f);
 
@@ -356,7 +355,7 @@ namespace Boku.Programming
             Vector2 buttonSize = defaultButtonSize * ControllerScale;
 
             //Position the button crosses
-            float yPosButtonCross = BokuGame.bokuGame.GraphicsDevice.Viewport.Height;// 600 * ControllerScale;
+            float yPosButtonCross = KoiLibrary.GraphicsDevice.Viewport.Height;// 600 * ControllerScale;
             yPosButtonCross -= (kButtonVertOffsetToScreenEdge + crossCenterOffset.Y + (buttonSize.Y * 1.5f));
 
             //---------------------
@@ -374,7 +373,7 @@ namespace Boku.Programming
 
             //---------------------
             //Draw Buttons A,X,B,Y
-            float xPosButtonCross = BokuGame.bokuGame.GraphicsDevice.Viewport.Width;
+            float xPosButtonCross = KoiLibrary.GraphicsDevice.Viewport.Width;
             xPosButtonCross -= (kButtonHorizOffsetToScreenEdge + crossCenterOffset.Y + (buttonSize.Y * 1.5f));
 
             List<TouchButtonType> controllerButtonIdList = new List<TouchButtonType>(){ 

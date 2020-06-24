@@ -9,6 +9,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Programming;
 using Boku.Fx;
@@ -163,7 +165,7 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
@@ -176,11 +178,11 @@ namespace Boku.UI2D
             // Load the overlay texture.
             if (backSelectedTexture == null)
             {
-                backSelectedTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\GreenSquare");
+                backSelectedTexture = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\GreenSquare");
             }
             if (backUnselectedTexture == null)
             {
-                backUnselectedTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\GreySquare");
+                backUnselectedTexture = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\GreySquare");
             }
 
         }   // end of UIGrid2DDualTextureElement LoadContent()
@@ -193,9 +195,9 @@ namespace Boku.UI2D
         {
             base.UnloadContent();
 
-            BokuGame.Release(ref foreTexture);
-            BokuGame.Release(ref backSelectedTexture);
-            BokuGame.Release(ref backUnselectedTexture);
+            DeviceResetX.Release(ref foreTexture);
+            DeviceResetX.Release(ref backSelectedTexture);
+            DeviceResetX.Release(ref backUnselectedTexture);
 
         }   // end of UIGrid2DDualTextureElement UnloadContent()
 

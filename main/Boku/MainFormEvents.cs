@@ -38,7 +38,7 @@ namespace Boku
             vp.Width = (int)BokuGame.ScreenSize.X;
             vp.Height = (int)BokuGame.ScreenSize.Y;
             vp.MaxDepth = 1.0f;
-            BokuGame.bokuGame.GraphicsDevice.Viewport = vp;
+            KoiLibrary.GraphicsDevice.Viewport = vp;
             */
         }
 

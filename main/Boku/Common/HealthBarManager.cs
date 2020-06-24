@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common.Xml;
@@ -215,7 +217,7 @@ namespace Boku.Common
         {
             if (actors.Count > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 Vector3 forward = Vector3.Normalize(new Vector3(camera.ViewDir.X, camera.ViewDir.Y, 0));
 
@@ -318,7 +320,7 @@ namespace Boku.Common
 
         private static void RenderHealthBar(GameActor actor, Camera camera, Vector3 forward)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             /*
             Matrix world = Matrix.CreateConstrainedBillboard(
@@ -344,7 +346,7 @@ namespace Boku.Common
             Parameter(EffectParams.LifePct).SetValue(lifePct);
 
             device.SetVertexBuffer(vertexBuf);
-            device.Indices = UI2D.Shared.QuadIndexBuff;
+            device.Indices = SharedX.QuadIndexBuff;
 
             Effect.CurrentTechnique.Passes[0].Apply();
 
@@ -370,17 +372,17 @@ namespace Boku.Common
         {
             if (backTexture == null)
             {
-                backTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HealthBarBack");
+                backTexture = KoiLibrary.LoadTexture2D(@"Textures\HealthBarBack");
             }
 
             if (lifeTexture == null)
             {
-                lifeTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HealthBarLife");
+                lifeTexture = KoiLibrary.LoadTexture2D(@"Textures\HealthBarLife");
             }
 
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\HealthBar");
+                effect = KoiLibrary.LoadEffect(@"Shaders\HealthBar");
                 ShaderGlobals.RegisterEffect("HealthBar", effect);
             }
         }
@@ -408,10 +410,10 @@ namespace Boku.Common
 
         public static void UnloadContent()
         {
-            BokuGame.Release(ref vertexBuf);
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref lifeTexture);
-            BokuGame.Release(ref backTexture);
+            DeviceResetX.Release(ref vertexBuf);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref lifeTexture);
+            DeviceResetX.Release(ref backTexture);
         }
 
         /// <summary>

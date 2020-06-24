@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Programming;
@@ -162,10 +166,10 @@ namespace Boku.Programming
         public string sayString                                                     // Text associated with 'say' verb.
         {
             get { return _sayString; }
-            set { _sayString = value; TextHelper.SplitMessage(value, 10000, UI2D.Shared.GetGameFont20, true, _sayStrings); }
+            set { _sayString = value; TextHelper.SplitMessage(value, 10000, SharedX.GetGameFont20, true, _sayStrings); }
         }    
         public int sayMode = 1;                                                     // Display mode.  0==fullscreen, 1==thought balloon sequential, 2==thought balloon random
-        public UI2D.UIGridElement.Justification sayJustification = Boku.UI2D.UIGridElement.Justification.Left;
+        public TextHelper.Justification sayJustification = TextHelper.Justification.Left;
         [XmlIgnore]
         public int sayLine = 0;                                                     // For sequential display of multi-line thought balloon text.  Also used by random to   
                                                                                     // not show the same line twice in a row.
@@ -189,7 +193,7 @@ namespace Boku.Programming
             set 
             { 
                 _saidString = value; 
-                TextHelper.SplitMessage(value, 10000, UI2D.Shared.GetGameFont20, true, _saidStrings); 
+                TextHelper.SplitMessage(value, 10000, SharedX.GetGameFont20, true, _saidStrings); 
                 for(int i=0; i<_saidStrings.Count; i++)
                 {
                     _saidStrings[i] = _saidStrings[i].Trim();
@@ -197,7 +201,7 @@ namespace Boku.Programming
             }
         }
         public int saidMode = 1;                                                    // Trigger on text said at beginning (0) or end (1) of thought balloon life time.
-        public UI2D.UIGridElement.Justification saidJustification = Boku.UI2D.UIGridElement.Justification.Left;
+        public TextHelper.Justification saidJustification = TextHelper.Justification.Left;
 
 
         /// <summary>
@@ -1034,7 +1038,7 @@ namespace Boku.Programming
             set { data.sayMode = value; }
         }
 
-        public UI2D.UIGridElement.Justification SayJustification
+        public TextHelper.Justification SayJustification
         {
             get { return data.sayJustification; }
             set { data.sayJustification = value; }
@@ -1052,7 +1056,7 @@ namespace Boku.Programming
             set { data.saidMode = value; }
         }
 
-        public UI2D.UIGridElement.Justification SaidJustification
+        public TextHelper.Justification SaidJustification
         {
             get { return data.saidJustification; }
             set { data.saidJustification = value; }
@@ -1357,7 +1361,7 @@ namespace Boku.Programming
                 {
                     // If we're inlining, we need to verify that the page # we're pasting is valid.
                     // If it's not, just skip over it.
-                    // TODO (****) With this here, is the test in ReflexCard redundant?
+                    // TODO (scoy) With this here, is the test in ReflexCard redundant?
                     if (data.actuatorUpid == "actuator.inlinetask")
                     {
                         Brain brain = Task.Brain;
@@ -1571,8 +1575,8 @@ namespace Boku.Programming
             // to prevent clicks from carrying over between tasks.
             if (Sensor is MouseSensor)
             {
-                MouseInput.Left.IgnoreUntilReleased = true;
-                MouseInput.Right.IgnoreUntilReleased = true;
+                LowLevelMouseInput.Left.IgnoreUntilReleased = true;
+                LowLevelMouseInput.Right.IgnoreUntilReleased = true;
             }
 
             // Check if we have a "me", "dead", "squashed", or "missile" filters.
@@ -2268,7 +2272,7 @@ namespace Boku.Programming
                     }
                 }
 
-                // Do similar thing for DO side.  If default red score is being used, explicitely put it in.
+                // Do similar thing for DO side.  If default red score is being used, explicitly put it in.
                 if (data.actuatorUpid == "actuator.score" || data.actuatorUpid == "actuator.unscore" || data.actuatorUpid == "actuator.scoreset")
                 {
                     // Find scorebucket or settings modifier, if any.
@@ -2759,7 +2763,7 @@ namespace Boku.Programming
         }
 
         /// <summary>
-        /// TODO (****) What I _think_ this is supposed to do is to take the exisiting heading
+        /// TODO (scoy) What I _think_ this is supposed to do is to take the exisiting heading
         /// and modify it based on any modifier tiles (Quckly, Slowly, etc.)
         /// Basically this will just scale the length of heading.
         /// This also appear to be where contraints to the motion should be applied but I

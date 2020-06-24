@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -131,7 +133,7 @@ namespace Boku.Audio
             played = false;
             this.thing = thing;
             this.spatial = (thing != null);
-            BokuGame.Release(ref this.cue);
+            DeviceResetX.Release(ref this.cue);
             this.cue = cue;
         }
 
@@ -147,7 +149,7 @@ namespace Boku.Audio
             this.thing = null;
             this.spatial = true;
             this.position = position;
-            BokuGame.Release(ref this.cue);
+            DeviceResetX.Release(ref this.cue);
             this.cue = cue;
         }
 
@@ -164,7 +166,7 @@ namespace Boku.Audio
             OnComplete = null;
             thing = null;
             spatial = false;
-            BokuGame.Release(ref cue);
+            DeviceResetX.Release(ref cue);
             cue = null;
         }
 

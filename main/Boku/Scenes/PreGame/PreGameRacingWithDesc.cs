@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.SimWorld.Terra;
@@ -84,20 +88,20 @@ namespace Boku
                             GamePadInput.IgnoreUntilReleased(Buttons.A);
                         }
 
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                        if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                         {
                             // Check if user click on bottom text.
-                            if (MouseInput.Left.WasPressed && HelpOverlay.MouseHitBottomText(MouseInput.Position))
+                            if (LowLevelMouseInput.Left.WasPressed && HelpOverlay.MouseHitBottomText(LowLevelMouseInput.Position))
                             {
                                 showingDescription = false;
                                 startTime = Time.WallClockTotalSeconds;
                                 HelpOverlay.Pop();
 
-                                MouseInput.Left.ClearAllWasPressedState();
+                                LowLevelMouseInput.Left.ClearAllWasPressedState();
                             }
                         }
 
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                        if (KoiLibrary.LastTouchedDeviceIsTouch)
                         {
                             // Check if user click on bottom text.
                             if (TouchGestureManager.Get().TapGesture.WasTapped() &&
@@ -129,7 +133,7 @@ namespace Boku
                         }
 
                         // Check if user click on bottom text.
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                        if (KoiLibrary.LastTouchedDeviceIsTouch)
                         {
                             // Check if user click on bottom text.
                             if (TouchGestureManager.Get().TapGesture.WasTapped() &&
@@ -139,10 +143,10 @@ namespace Boku
                                 Active = false;
                             }
                         }
-                        else if (MouseInput.Left.WasPressed && HelpOverlay.MouseHitBottomText(MouseInput.Position))
+                        else if (LowLevelMouseInput.Left.WasPressed && HelpOverlay.MouseHitBottomText(LowLevelMouseInput.Position))
                         {
                             Active = false;
-                            MouseInput.Left.ClearAllWasPressedState();
+                            LowLevelMouseInput.Left.ClearAllWasPressedState();
                         }
                     }
                 }
@@ -157,13 +161,13 @@ namespace Boku
                     Vector2 pos = Vector2.Zero;
                     pos.X = BokuGame.bokuGame.GraphicsDevice.Viewport.Width / 4.0f;
                     pos.Y = BokuGame.bokuGame.GraphicsDevice.Viewport.Height / 2.0f - blob.NumLines / 2.0f * blob.Font().LineSpacing;
-                    blob.RenderWithButtons(pos, Color.White, outlineColor: Color.Black, outlineWidth: 1.5f, maxLines: 20);
+                    blob.RenderText(null, pos, Color.White, outlineColor: Color.Black, outlineWidth: 1.5f, maxLines: 20);
                 }
                 else
                 {
                     ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
 
-                    Vector2 center = 0.5f * new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
+                    Vector2 center = 0.5f * new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height);
                     Vector2 size = new Vector2(256.0f);
 
                     // Pick the right number texture to show.
@@ -202,17 +206,17 @@ namespace Boku
                 //Time.Paused = true;
                 Time.ClockRatio = 0.0001f;
 
-                texture1 = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Count1");
-                texture2 = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Count2");
-                texture3 = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Count3");
+                texture1 = KoiLibrary.LoadTexture2D(@"Textures\Count1");
+                texture2 = KoiLibrary.LoadTexture2D(@"Textures\Count2");
+                texture3 = KoiLibrary.LoadTexture2D(@"Textures\Count3");
 
                 base.Activate();
 
                 showingDescription = true;
                 HelpOverlay.Push(@"PreGameDescription");
 
-                UI2D.Shared.GetFont Font = BokuGame.bokuGame.GraphicsDevice.Viewport.Height < 720 ? UI2D.Shared.GetGameFont18Bold : UI2D.Shared.GetGameFont24Bold;
-                blob = new TextBlob(Font, Terrain.Current.XmlWorldData.name + "\n\n" + Terrain.Current.XmlWorldData.description, (int)(BokuGame.bokuGame.GraphicsDevice.Viewport.Width / 2));
+                GetFont Font = KoiLibrary.GraphicsDevice.Viewport.Height < 720 ? KoiX.SharedX.GetGameFont18Bold : KoiX.SharedX.GetGameFont24Bold;
+                blob = new TextBlob(Font, Terrain.Current.XmlWorldData.name + "\n\n" + Terrain.Current.XmlWorldData.description, (int)(KoiLibrary.GraphicsDevice.Viewport.Width / 2));
                 blob.Justification = Terrain.Current.XmlWorldData.descJustification;
 
             }   // end of PreGameRacingWithDesc Activate()

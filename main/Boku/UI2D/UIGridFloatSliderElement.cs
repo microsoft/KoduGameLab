@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Fx;
 
@@ -100,7 +103,7 @@ namespace Boku.UI2D
         /// <summary>
         /// Long form c'tor for use with no drop shadow.
         /// </summary>
-        public UIGridFloatSliderElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, string label, Shared.GetFont font, Justification justify, Color textColor)
+        public UIGridFloatSliderElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, String label, GetFont font, TextHelper.Justification justify, Color textColor)
             : base(width, height, edgeSize, normalMapName, baseColor, label, font, justify, textColor)
         {
         }
@@ -108,7 +111,7 @@ namespace Boku.UI2D
         /// <summary>
         /// Long for c'tor for use with a drop shadow.
         /// </summary>
-        public UIGridFloatSliderElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, string label, Shared.GetFont font, Justification justify, Color textColor, Color dropShadowColor, bool invertDropShadow)
+        public UIGridFloatSliderElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, String label, GetFont font, TextHelper.Justification justify, Color textColor, Color dropShadowColor, bool invertDropShadow)
             : base(width, height, edgeSize, normalMapName, baseColor, label, font, justify, textColor, dropShadowColor, invertDropShadow)
         {
         }

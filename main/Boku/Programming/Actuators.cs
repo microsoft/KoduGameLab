@@ -9,6 +9,7 @@ using System.Xml.Serialization;
 
 using Microsoft.Xna.Framework;
 
+using KoiX;
 
 using Boku.Base;
 using Boku.Common;

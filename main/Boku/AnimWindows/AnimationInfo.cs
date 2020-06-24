@@ -261,7 +261,7 @@ namespace Xclna.Xna.Animation
         public void Add(string key, AnimationInfo value)
         {
             list.Add(new KeyValuePair<string, AnimationInfo>(key, value));
-            // TODSO (****) Will this do the right sort?  Is a sort really needed?
+            // TODSO (scoy) Will this do the right sort?  Is a sort really needed?
             list.Sort();
         }
 

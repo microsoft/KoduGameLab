@@ -12,6 +12,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Xml;
@@ -77,9 +81,9 @@ namespace Boku
             {
                 this.parent = parent;
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-                descBlob = new TextBlob(UI2D.Shared.GetGameFont24, "replace me", 700);
+                descBlob = new TextBlob(KoiX.SharedX.GetGameFont24, "replace me", 700);
                 descBlob.LineSpacingAdjustment = -5;
 
                 // We're rendering the camera specific parts into a 1024x768 rendertarget and
@@ -130,7 +134,7 @@ namespace Boku
                 examplesBlob.dropShadowColor = Color.Black;
                 examplesBlob.useDropShadow = false;
                 examplesBlob.invertDropShadow = false;
-                examplesBlob.justify = UIGridElement.Justification.Left;
+                examplesBlob.justify = TextHelper.Justification.Left;
                 examplesBlob.normalMapName = @"QuarterRound4NormalMap";
                 examplesBlob.ignorePowerOf2 = true;
                 examplesBlob.greyFlatShader = true;
@@ -343,7 +347,7 @@ namespace Boku
                 Help.RankAndSortProgrammingExamples(actor, reflexData, selected);
                 List<ExamplePage> exampleList = Help.ProgrammingExamples;
 
-                examplesBlob.Font = UI2D.Shared.GetGameFont20;
+                examplesBlob.Font = KoiX.SharedX.GetGameFont20;
 
                 UIGrid2DExampleElement te = null;
                 int index = 0;
@@ -432,7 +436,7 @@ namespace Boku
                 parent.touched = false;
 
                 // TouchInupt
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch && TouchInput.TouchCount > 0)
+                if (KoiLibrary.LastTouchedDeviceIsTouch && TouchInput.TouchCount > 0)
                 {
                     parent.touched = true;
 
@@ -444,7 +448,7 @@ namespace Boku
                     {
                         UIGrid2DDualTextureElement e = shared.tilesGrid.Get(i, 0) as UIGrid2DDualTextureElement;
                         Matrix mat = e.InvWorldMatrix;
-                        Vector2 hitUV = MouseInput.GetHitUV(shared.camera, ref mat, e.Width, e.Height, true);
+                        Vector2 hitUV = LowLevelMouseInput.GetHitUV(shared.camera, ref mat, e.Width, e.Height, true);
                         if (hitUV.X > 0 && hitUV.X < 1 && hitUV.Y > 0 && hitUV.Y < 1)
                         {
                             if (TouchInput.WasTouched)
@@ -537,7 +541,7 @@ namespace Boku
 
                 }
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 // MouseInput
                 {
                     // Check if user clicked on any of the tiles across the top of the page.
@@ -545,14 +549,14 @@ namespace Boku
                     {
                         UIGrid2DDualTextureElement e = shared.tilesGrid.Get(i, 0) as UIGrid2DDualTextureElement;
                         Matrix mat = e.InvWorldMatrix;
-                        Vector2 hitUV = MouseInput.GetHitUV(shared.camera, ref mat, e.Width, e.Height, true);
+                        Vector2 hitUV = LowLevelMouseInput.GetHitUV(shared.camera, ref mat, e.Width, e.Height, true);
                         if (hitUV.X > 0 && hitUV.X < 1 && hitUV.Y > 0 && hitUV.Y < 1)
                         {
-                            if (MouseInput.Left.WasPressed)
+                            if (LowLevelMouseInput.Left.WasPressed)
                             {
                                 MouseInput.ClickedOnObject = shared.tilesGrid.SelectionElement;
                             }
-                            if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == shared.tilesGrid.SelectionElement)
+                            if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == shared.tilesGrid.SelectionElement)
                             {
                                 int steps = i - shared.tilesGrid.SelectionIndex.X;
                                 while (steps != 0)
@@ -573,7 +577,7 @@ namespace Boku
                     }
 
 
-                    Vector2 mouseHit = MouseInput.GetAspectRatioAdjustedPosition(shared.camera, true);
+                    Vector2 mouseHit = LowLevelMouseInput.GetAspectRatioAdjustedPosition(shared.camera, true);
 
                     // InsertExample
                     if (shared.insertBox.LeftPressed(mouseHit))
@@ -605,7 +609,7 @@ namespace Boku
                     }
 
                     // Scroll Examples via mouse wheel
-                    int scroll = MouseInput.ScrollWheel - MouseInput.PrevScrollWheel;
+                    int scroll = LowLevelMouseInput.DeltaScrollWheel;
                     if (scroll > 0)
                     {
                         shared.examplesGrid.MoveUp();
@@ -640,7 +644,7 @@ namespace Boku
                     }
 
                     // If the user clicked outside of the help region, assume he wants to exit.
-                    if (MouseInput.Left.WasPressed && !shared.overallBox.Contains(mouseHit))
+                    if (LowLevelMouseInput.Left.WasPressed && !shared.overallBox.Contains(mouseHit))
                     {
                         parent.Deactivate();
                     }
@@ -732,7 +736,7 @@ namespace Boku
                             }
                             else
                             {
-                                // TODO (****) what description should we have for an empty reflex?  Maybe something talking about 'when' and 'do'?
+                                // TODO (scoy) what description should we have for an empty reflex?  Maybe something talking about 'when' and 'do'?
                                 shared.descBlob.RawText = CardSpace.Cards.GetHelpDescription(@"huh?");
                             }
                             shared.descOffset = 0;
@@ -834,7 +838,7 @@ namespace Boku
             public Texture2D rightStickTexture = null;
             public Texture2D leftStickTexture = null;
 
-            public UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont20;
+            public GetFont Font = SharedX.GetGameFont20;
 
             private DepthStencilState depthStencilWrite;
             private DepthStencilState depthStencilRead;
@@ -861,10 +865,10 @@ namespace Boku
 
             public override void Render(Camera camera)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-                RenderTarget2D rtFull = UI2D.Shared.RenderTargetDepthStencil1280_720;   // Rendertarget we render whole display into.
-                RenderTarget2D rt1k = UI2D.Shared.RenderTargetDepthStencil1024_768;
+                RenderTarget2D rtFull = SharedX.RenderTargetDepthStencil1280_720;   // Rendertarget we render whole display into.
+                RenderTarget2D rt1k = SharedX.RenderTargetDepthStencil1024_768;
 
                 Vector2 screenSize = BokuGame.ScreenSize;
                 Vector2 rtSize = new Vector2(rtFull.Width, rtFull.Height);
@@ -884,7 +888,7 @@ namespace Boku
                 InGame.Clear(Color.Transparent);
 
                 // Set up params for rendering UI with this camera.
-                Fx.ShaderGlobals.SetCamera(shared.camera1k);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(shared.camera1k);
 
 
 
@@ -903,7 +907,7 @@ namespace Boku
                 // Clear area where text will go.
                 ssquad.Render(Vector4.Zero, new Vector2(132, 175), new Vector2(760, 110), "SolidColorNoAlpha");
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 SpriteFont font = Font();
 
                 // Description.
@@ -932,7 +936,7 @@ namespace Boku
 
                 device.DepthStencilState = depthStencilRead;
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 shared.descBlob.RawText = "Now is the time\nfor all good men\nto come to the aid\nof their country.\nNow is the time\nfor all good men\nto come to the aid\nof their country.";
 
@@ -978,7 +982,7 @@ namespace Boku
                 InGame.SetRenderTarget(rtFull);
 
                 // Set up params for rendering UI with this camera.
-                Fx.ShaderGlobals.SetCamera(shared.camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(shared.camera);
 
                 InGame.Clear(Color.Transparent);
 
@@ -999,7 +1003,7 @@ namespace Boku
                 // Description text.
                 //
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 // Description.
                 if (shared.descBlob != null)
@@ -1013,22 +1017,22 @@ namespace Boku
                     {
                         pos.Y += 0.5f * shared.descBlob.TotalSpacing;
                     }
-                    shared.descBlob.RenderWithButtons(pos, greyTextColor, startLine: shared.topLine, maxLines: 3);
+                    shared.descBlob.RenderText(null, pos, greyTextColor, startLine: shared.topLine, maxLines: 3);
                 }
 
                 //
                 // Add labels.
                 //
                 {
-                    device.BlendState = UI2D.Shared.BlendStateColorWriteRGB;
+                    device.BlendState = SharedX.BlendStateColorWriteRGB;
 
                     batch.Begin();
 
-                    Font = UI2D.Shared.GetGameFont24Bold;
+                    Font = SharedX.GetGameFont24Bold;
                     TextHelper.DrawString(Font, Strings.Localize("helpCard.examples"), new Vector2(280, 300) + shadowOffset, shadowTextColor);
                     TextHelper.DrawString(Font, Strings.Localize("helpCard.examples"), new Vector2(280, 300), greyTextColor);
 
-                    Font = UI2D.Shared.GetGameFont24;
+                    Font = SharedX.GetGameFont24;
                     Vector2 strSize = Font().MeasureString(Strings.Localize("helpCard.insert"));
                     // Pixel align.
                     strSize.X = (int)(strSize.X + 1);
@@ -1128,7 +1132,7 @@ namespace Boku
             {
                 if (tex == null)
                 {
-                    tex = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + path);
+                    tex = KoiLibrary.LoadTexture2D(path);
                 }
             }   // end of LoadTexture()
 
@@ -1140,25 +1144,25 @@ namespace Boku
             {
                 if (backgroundTexture == null)
                 {
-                    backgroundTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\ProgrammingBackground");
+                    backgroundTexture = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\ProgrammingBackground");
                 }
 
                 if (rightStickTexture == null)
                 {
-                    rightStickTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\RightStick");
+                    rightStickTexture = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\RightStick");
                 }
                 if (leftStickTexture == null)
                 {
-                    leftStickTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\LeftStick");
+                    leftStickTexture = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\LeftStick");
                 }
 
             }   // end of InitDeviceResources()
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref backgroundTexture);
-                BokuGame.Release(ref rightStickTexture);
-                BokuGame.Release(ref leftStickTexture);
+                DeviceResetX.Release(ref backgroundTexture);
+                DeviceResetX.Release(ref rightStickTexture);
+                DeviceResetX.Release(ref leftStickTexture);
 
             }   // end of ProgrammingHelpCard RenderObj UnloadContent()
 

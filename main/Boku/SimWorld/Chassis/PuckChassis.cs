@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld;

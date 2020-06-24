@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI;
@@ -41,7 +44,7 @@ namespace Boku.UI
         /// </summary>
         public class PieRecipeItem
         {
-            public UI2D.Shared.GetFont font = null; // Optional Font (Label) display
+            public GetFont font = null; // Optional Font (Label) display
             public string label;                    // Optional text display (Font required)
             public Texture2D texture = null;        // Optional Icon display
             public Object menuItem = null;
@@ -51,7 +54,7 @@ namespace Boku.UI
             {
                 this.subList = new List<PieRecipeItem>();
             }
-            public PieRecipeItem(Object item, Texture2D texture, List<PieRecipeItem>  subList, UI2D.Shared.GetFont font, string label)
+            public PieRecipeItem(Object item, Texture2D texture, List<PieRecipeItem>  subList, GetFont font, string label)
             {
                 this.menuItem =item;
                 this.texture = texture;
@@ -73,7 +76,7 @@ namespace Boku.UI
             public RenderPieSlice(float innerRadius, float outerRadius, float arcLength, PieSelector.SliceType sliceType)
                 : base(innerRadius, outerRadius, arcLength, sliceType)
             {
-                CreateGeometry(BokuGame.bokuGame.GraphicsDevice);
+                CreateGeometry(KoiLibrary.GraphicsDevice);
             }
 
             // ITransform
@@ -165,7 +168,7 @@ namespace Boku.UI
             public PieDisk subDisk = null;
             public PieSelector.SliceType sliceType;
             private Texture2D texture;
-            public UI2D.Shared.GetFont font;
+            public GetFont font;
             public string label;
             public TextBlob textBlob = null;
             private Object menuItem = null;
@@ -177,7 +180,7 @@ namespace Boku.UI
             public float IconSize
             {
                 get {
-                    if (BokuGame.bokuGame.GraphicsDevice.Viewport.Height < 1024)
+                    if (KoiLibrary.GraphicsDevice.Viewport.Height < 1024)
                         return 64;
                     else
                         return DEFAULT_TILE_SIZE;
@@ -206,7 +209,7 @@ namespace Boku.UI
                 set { texture = value; }
             }
 
-            public UI2D.Shared.GetFont SliceFont
+            public GetFont SliceFont
             {
                 get { return font; }
                 set { font = value; }
@@ -233,7 +236,7 @@ namespace Boku.UI
 
             // constructor
             // @params: item icon, optional text
-            public PieMenuSlice(Object menuItem, Texture2D iconTexture, UI2D.Shared.GetFont font, string displayText)
+            public PieMenuSlice(Object menuItem, Texture2D iconTexture, GetFont font, string displayText)
             {
                 int textWidth = 80;
                 Debug.Assert(iconTexture != null || font != null);
@@ -322,7 +325,7 @@ namespace Boku.UI
                 get { return screenPosition; }
                 set
                 {
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
                     Vector2 screenCenter = new Vector2(device.Viewport.Width / 2, device.Viewport.Height / 2);
                     Vector2 centeroffset = value - screenCenter;
 
@@ -334,7 +337,7 @@ namespace Boku.UI
             {
                 get {
 
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
                     Vector2 screenCenter = new Vector2(device.Viewport.Width / 2, device.Viewport.Height / 2);
                     return screenPosition -screenCenter;
                 }
@@ -662,7 +665,7 @@ namespace Boku.UI
                 Matrix invWorld = Matrix.Invert(worldMatrix);
                 // user clicked on me?
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 // Center on screen and just high enough to clear bottom help overlay text.
                 Vector2 screenSize = new Vector2(device.Viewport.Width, device.Viewport.Height);
                 
@@ -793,7 +796,7 @@ namespace Boku.UI
                         effect = Editor.Effect;
                         if (effect == null)
                         {
-                            Editor.Effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI");
+                            Editor.Effect = KoiLibrary.LoadEffect(@"Shaders\UI");
                             effect = Editor.Effect;
                             ShaderGlobals.RegisterEffect("UI", effect);
                         }
@@ -871,7 +874,7 @@ namespace Boku.UI
             return elementFound;
         }
         // Add a simple slice to the main pie
-        public void AddSlice(Object menuItem, Texture2D iconTexture, UI2D.Shared.GetFont font, string displaytext)
+        public void AddSlice(Object menuItem, Texture2D iconTexture, GetFont font, string displaytext)
         {
             PieMenuSlice slice = new PieMenuSlice(menuItem, iconTexture, font, displaytext);            
             this.rootDisk.AddSlice(slice);
@@ -931,8 +934,8 @@ namespace Boku.UI
             ///  render entire pie
             if (Active)
             {
-                ShaderGlobals.SetValues(effect);
-                ShaderGlobals.SetCamera(effect, camera);
+                BokuGame.bokuGame.shaderGlobals.SetValues(effect);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(effect, camera);
 
                 RenderDisk(rootDisk);
             }
@@ -984,7 +987,7 @@ namespace Boku.UI
                     alphaLevel -= (CurrentDiskNo - depth) / 10.0f;
             }
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;    
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;    
             Matrix viewMatrix = camera.ViewMatrix;
             Matrix projMatrix = camera.ProjectionMatrix;
             Matrix worldMatrix = pieSlice.mySlice.localTransform.Matrix;

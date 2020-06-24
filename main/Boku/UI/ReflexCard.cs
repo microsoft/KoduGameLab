@@ -11,6 +11,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI;
@@ -51,7 +55,7 @@ namespace Boku.UI
         protected const int indexNullCard = -1;
         private const int kMaxMicrobitSayLength = 45;//Max chars. TODO. Increase when we fix long text clipping bug.
 
-        public class UpdateObjEditCards : UpdateControl
+        public class UpdateObjEditCards : UpdateObject
         {
             private ReflexCard parent = null;
             public List<UpdateObject> updateList = null; // Children's update list.
@@ -255,7 +259,7 @@ namespace Boku.UI
                     if (Actions.Select.WasPressed)
                     {
                         Actions.Select.ClearAllWasPressedState();
-                        // TODO (****) Roll the frame delay into the above call?
+                        // TODO (scoy) Roll the frame delay into the above call?
                         GamePadInput.ClearAllWasPressedState(3);
 
                         ActivatePieSelector();
@@ -449,22 +453,6 @@ namespace Boku.UI
 
             }   // end of ActivatePieSelector()
 
-            public override void AddCommands(CommandMap map)
-            {
-                commandMap.Add(map);
-            }
-            public override void RemoveCommands(CommandMap map)
-            {
-                commandMap.Remove(map);
-            }
-            public override void AddCommandsToControl(IControl control)
-            {
-                control.AddCommands(this.commandMap);
-            }
-            public override void RemoveCommandsFromControl(IControl control)
-            {
-                control.RemoveCommands(this.commandMap);
-            }
             public override void Activate()
             {
                 CommandStack.Push(commandMap);
@@ -498,8 +486,8 @@ namespace Boku.UI
         // this is coded to support multiple update objects
         // even though its not really used.  It is being left in place
         // for future use rather than removing it
-        public UpdateControl updateObj; // active update object
-        protected UpdateControl updateObjPending;
+        public UpdateObject updateObj; // active update object
+        protected UpdateObject updateObjPending;
         public UpdateObjEditCards updateObjEditCards;
 
         private enum States
@@ -1689,19 +1677,6 @@ namespace Boku.UI
         {
             ReflexPanel parentPanel = this.parent as ReflexPanel;
             parentPanel.InsertReflex();
-        }
-
-        // IControl
-        void IControl.AddCommands(CommandMap map)
-        {
-            // only add them to the normal state object
-            updateObjEditCards.AddCommands(map);
-        }
-
-        void IControl.RemoveCommands(CommandMap map)
-        {
-            // only add them to the normal state object
-            updateObjEditCards.RemoveCommands(map);
         }
 
         bool IControl.Hot

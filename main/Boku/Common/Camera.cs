@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.SimWorld.Terra;
 
 namespace Boku.Common
@@ -325,7 +327,7 @@ namespace Boku.Common
         /// <returns></returns>
         public Vector2 PixelsToCameraSpaceScreenCoords(Vector2 pixels)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Viewport vp = device.Viewport;
 
             Vector3 pos = new Vector3(pixels.X, pixels.Y, 0);
@@ -680,7 +682,7 @@ namespace Boku.Common
 
             if (shadowMask == null)
             {
-                shadowMask = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\shadowmask");
+                shadowMask = KoiLibrary.LoadTexture2D(@"Textures\shadowmask");
             }
         }
 
@@ -727,12 +729,12 @@ namespace Boku.Common
         /// <param name="name"></param>
         public void LoadShadowMask(string name)
         {
-            shadowMask = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + name);
+            shadowMask = KoiLibrary.LoadTexture2D(name);
         }
 
         public void ReleaseShadowMask()
         {
-            BokuGame.Release(ref shadowMask);
+            DeviceResetX.Release(ref shadowMask);
         }
 
         #endregion

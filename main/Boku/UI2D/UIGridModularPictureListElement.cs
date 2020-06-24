@@ -11,6 +11,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Common;
 using Boku.Fx;
@@ -82,7 +86,7 @@ namespace Boku.UI2D
         private Color dropShadowColor;
         private bool useDropShadow = false;
         private bool invertDropShadow = false;  // Puts the drop shadow above the regular letter instead of below.
-        private Justification justify = Justification.Left;
+        private TextHelper.Justification justify = TextHelper.Justification.Left;
 
         #region Accessors
 
@@ -273,8 +277,8 @@ namespace Boku.UI2D
         public override void Update(ref Matrix parentMatrix)
         {
             // Do we need to render the gradients?
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-            RenderTarget2D rt = UI2D.Shared.RenderTarget64_64;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
+            RenderTarget2D rt = SharedX.RenderTarget64_64;
             for (int i = 0; i < pics.Count; i++)
             {
                 if (pics[i].texture == null)
@@ -298,7 +302,7 @@ namespace Boku.UI2D
                     else
                     {
                         // Load the texture image.
-                        pics[i].texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\" + pics[i].picName);
+                        pics[i].texture = KoiLibrary.LoadTexture2D(@"Textures\" + pics[i].picName);
                     }
                     dirty = true;
                 }
@@ -348,13 +352,13 @@ namespace Boku.UI2D
             {
                 int hit = (int)(hitUV.X * 9.0f);
 
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
                     // Ignore reselecting the current selection.
                     hitIndex = hit == 4 ? -1 : hit;
                 }
 
-                if (MouseInput.Left.WasReleased)
+                if (LowLevelMouseInput.Left.WasReleased)
                 {
                     if (hit == hitIndex)
                     {
@@ -567,8 +571,8 @@ namespace Boku.UI2D
 
                 // Disable writing to alpha channel.
                 // This prevents transparent fringing around the text.
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-                device.BlendState = UI2D.Shared.BlendStateColorWriteRGB;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
+                device.BlendState = SharedX.BlendStateColorWriteRGB;
 
                 // Render the label and value text into the texture.
                 string title = label + " : " + pics[CurIndex].label;
@@ -577,7 +581,7 @@ namespace Boku.UI2D
                 position.Y = (int)((64 - Font().LineSpacing) / 2.0f);
                 int textWidth = (int)(Font().MeasureString(title).X);
 
-                justify = Justification.Center;
+                justify = TextHelper.Justification.Center;
                 position.X = TextHelper.CalcJustificationOffset(margin, w, textWidth, justify);
 
                 Color labelColor = new Color(127, 127, 127);
@@ -585,7 +589,7 @@ namespace Boku.UI2D
                 Color shadowColor = new Color(0, 0, 0, 20);
                 Vector2 shadowOffset = new Vector2(0, 6);
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
 
                 // Title.
@@ -610,36 +614,36 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the normal map texture.
             if (normalMapName != null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\" + normalMapName);
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\" + normalMapName);
             }
 
             // Load the check textures.
             if (white == null)
             {
-                white = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\SliderWhite");
+                white = KoiLibrary.LoadTexture2D(@"Textures\GridElements\SliderWhite");
             }
             if (black == null)
             {
-                black = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\RadioBoxBlack");
+                black = KoiLibrary.LoadTexture2D(@"Textures\GridElements\RadioBoxBlack");
             }
             if (middleBlack == null)
             {
-                middleBlack = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\MiddleBlack");
+                middleBlack = KoiLibrary.LoadTexture2D(@"Textures\GridElements\MiddleBlack");
             }
             if (arrow == null)
             {
-                arrow = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\LeftArrowLit");
+                arrow = KoiLibrary.LoadTexture2D(@"Textures\GridElements\LeftArrowLit");
             }
             if (indicatorLit == null)
             {
-                indicatorLit = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\IndicatorLit");
+                indicatorLit = KoiLibrary.LoadTexture2D(@"Textures\GridElements\IndicatorLit");
             }
 
         }   // end of UIGridModularPictureListElement LoadContent()
@@ -665,13 +669,13 @@ namespace Boku.UI2D
 
             ReleaseRenderTargets();
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
-            BokuGame.Release(ref white);
-            BokuGame.Release(ref black);
-            BokuGame.Release(ref middleBlack);
-            BokuGame.Release(ref arrow);
-            BokuGame.Release(ref indicatorLit);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
+            DeviceResetX.Release(ref white);
+            DeviceResetX.Release(ref black);
+            DeviceResetX.Release(ref middleBlack);
+            DeviceResetX.Release(ref arrow);
+            DeviceResetX.Release(ref indicatorLit);
 
             BokuGame.Unload(geometry);
             geometry = null;
@@ -680,7 +684,7 @@ namespace Boku.UI2D
             for (int i = 0; i < pics.Count; i++)
             {
                 Picture pic = pics[i];
-                BokuGame.Release(ref pic.texture);
+                DeviceResetX.Release(ref pic.texture);
             }
 
         }   // end of UIGridModularPictureListElement UnloadContent()
@@ -699,7 +703,7 @@ namespace Boku.UI2D
         {
             // Create the diffuse texture.
             diffuse = new RenderTarget2D(device, w, h, false, SurfaceFormat.Color, DepthFormat.None);
-            InGame.GetRT("UIGridModularPictureListElement", diffuse);
+            SharedX.GetRT("UIGridModularPictureListElement", diffuse);
 
             // Refresh the texture.
             dirty = true;
@@ -709,8 +713,8 @@ namespace Boku.UI2D
 
         private void ReleaseRenderTargets()
         {
-            InGame.RelRT("UIGridModularPictureListElement", diffuse);
-            BokuGame.Release(ref diffuse);
+            SharedX.RelRT("UIGridModularPictureListElement", diffuse);
+            DeviceResetX.Release(ref diffuse);
         }
 
     }   // end of class UIGridModularPictureListElement

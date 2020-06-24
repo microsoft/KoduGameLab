@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -62,27 +65,24 @@ namespace Boku.Scenes.InGame.Tools
             {
                 CheckSelectCursor(false);
 
-                if (!PickerXInUse && !PickerYInUse)
+                if (DebouncePending)
+                    return;
+
+                GamePadInput pad = GamePadInput.GetGamePad0();
+                if (RightRate < kSmallRate)
                 {
-                    if (DebouncePending)
-                        return;
-
-                    GamePadInput pad = GamePadInput.GetGamePad0();
-                    if (RightRate < kSmallRate)
-                    {
-                        /// Reseed everytime they switch modes.
-                        Terrain.Reseed();
-                    }
-
-                    UpdateRates();
-
-                    ProcessTriggers(
-                        Terrain.EditMode.Hill,
-                        Terrain.EditMode.Smooth,
-                        Terrain.EditMode.Roughen);
-
-                    SelectOverlay();
+                    /// Reseed everytime they switch modes.
+                    Terrain.Reseed();
                 }
+
+                UpdateRates();
+
+                ProcessTriggers(
+                    Terrain.EditMode.Hill,
+                    Terrain.EditMode.Smooth,
+                    Terrain.EditMode.Roughen);
+
+                SelectOverlay();
             }
 
             base.Update();
@@ -100,11 +100,6 @@ namespace Boku.Scenes.InGame.Tools
             Boku.InGame.inGame.Cursor3D.Hidden = true;
 
             Terrain.Reseed();
-
-            PickerX = brushPicker;      // Assign X button to brush picker and activate.
-            brushPicker.BrushSet = Brush2DManager.BrushType.All 
-                | Brush2DManager.BrushType.StretchedAll
-                | Brush2DManager.BrushType.Selection;
 
         }   // end of NoiseTool OnActivate()
 

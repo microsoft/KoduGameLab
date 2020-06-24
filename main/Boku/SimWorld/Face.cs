@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -511,11 +513,11 @@ namespace Boku.SimWorld
         {
             if (faceEyesPupils == null)
             {
-                faceEyesPupils = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + pupilsName);
+                faceEyesPupils = KoiLibrary.LoadTexture2D(pupilsName);
             }
             if (faceEyesPupilsCross == null)
             {
-                faceEyesPupilsCross = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + pupilsCrossName);
+                faceEyesPupilsCross = KoiLibrary.LoadTexture2D(pupilsCrossName);
             }
         }
 
@@ -657,12 +659,12 @@ namespace Boku.SimWorld
                 if (pupilSizeLeft != pupilSizeLeftTarget)
                 {
                     TwitchManager.Set<float> set = delegate(float val, Object param) { pupilSizeLeft = val; };
-                    TwitchManager.CreateTwitch<float>(pupilSizeLeft, pupilSizeLeftTarget, set, 0.2f, TwitchCurve.Shape.EaseInOut, null, null, true);
+                    TwitchManager.CreateTwitch<float>(pupilSizeLeft, pupilSizeLeftTarget, set, 0.2f, TwitchCurve.Shape.EaseInOut, useGameTime: true);
                 }
                 if (pupilSizeRight != pupilSizeRightTarget)
                 {
                     TwitchManager.Set<float> set = delegate(float val, Object param) { pupilSizeRight = val; };
-                    TwitchManager.CreateTwitch<float>(pupilSizeRight, pupilSizeRightTarget, set, 0.2f, TwitchCurve.Shape.EaseInOut, null, null, true);
+                    TwitchManager.CreateTwitch<float>(pupilSizeRight, pupilSizeRightTarget, set, 0.2f, TwitchCurve.Shape.EaseInOut, useGameTime: true);
                 }
             }
         }   // end of Face SetState()

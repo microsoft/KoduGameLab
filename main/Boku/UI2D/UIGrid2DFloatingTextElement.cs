@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 
 namespace Boku.UI2D
@@ -45,7 +48,7 @@ namespace Boku.UI2D
                 if (selected != value)
                 {
                     selected = value;
-                    // TODO (****) twitch to change text color?
+                    // TODO (scoy) twitch to change text color?
                 }
             }
         }
@@ -100,7 +103,7 @@ namespace Boku.UI2D
 
         public override void Render(Camera camera)
         {
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
             batch.Begin();
 
             // Calc position in pixel coords.

@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld;
@@ -210,7 +212,7 @@ namespace Boku.SimWorld.Chassis
                     position.Z = floor + MinHeight;     // Move back to above ground.
                     velocity.Z = Math.Max(velocity.Z, 0.1f);
 
-                    // TODO (****) Bump sound and dust cloud?
+                    // TODO (scoy) Bump sound and dust cloud?
                 }
                 else
                 */

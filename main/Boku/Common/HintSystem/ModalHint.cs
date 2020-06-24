@@ -12,6 +12,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Managers;
+using KoiX.Text;
 
 using Boku.Base;
 using Boku.Common;
@@ -85,9 +89,9 @@ namespace Boku
 
         #region Accessors
 
-        private UI2D.Shared.GetFont Font
+        private GetFont Font
         {
-            get { return UI2D.Shared.GetGameFont20; }
+            get { return SharedX.GetGameFont20; }
         }
 
         public bool Active
@@ -141,7 +145,7 @@ namespace Boku
                         Actions.ToolMenu.ClearAllWasPressedState();
 
                         Deactivate();
-                        InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.ToolMenu;
+                        SceneManager.SwitchToScene("EditWorldScene");
                     }
                 }
 
@@ -178,8 +182,7 @@ namespace Boku
                     camera = new PerspectiveUICamera();
                     camera.Resolution = new Point(1280, 720);
                 }
-
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     for (int i = 0; i < TouchInput.TouchCount; i++)
                     {
@@ -193,12 +196,12 @@ namespace Boku
                         HandleTouchInput(touch, touchHit);
                     }
                 }
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                else if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
-                    Vector2 hit = MouseInput.PositionVec;
+                    Vector2 hit = LowLevelMouseInput.PositionVec;
                     if (useRtCoords)
                     {
-                        hit = MouseInput.GetMouseInRtCoords();
+                        hit = LowLevelMouseInput.GetMouseInRtCoords();
                     }
                     HandleMouseInput(hit);
                 }
@@ -335,7 +338,7 @@ namespace Boku
         {
             if (Active)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 InGame.SetViewportToScreen();
 
                 ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
@@ -379,18 +382,18 @@ namespace Boku
                 //
 
                 // Disable write to alpha.
-                device.BlendState = UI2D.Shared.BlendStateColorWriteRGB;
+                device.BlendState = SharedX.BlendStateColorWriteRGB;
 
                 Vector2 pos = renderPosition;
                 int blankLines = maxLines - blob.NumLines;
                 pos.Y += blankLines / 2.0f * Font().LineSpacing;
-                blob.RenderWithButtons(pos + textPosition, greyTextColor);
+                blob.RenderText(null, pos + textPosition, greyTextColor);
 
                 //
                 // Add button icons with labels.
                 //
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
 
                 Vector2 min;    // Used to capture info for mouse hit boxes.
@@ -448,13 +451,13 @@ namespace Boku
         {
             if (backgroundTexture == null)
             {
-                backgroundTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\TextEditor\SmallTextDisplayBackground");
+                backgroundTexture = KoiLibrary.LoadTexture2D(@"Textures\TextEditor\SmallTextDisplayBackground");
             }
         }   // end of ModalHint InitDeviceResources()
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref backgroundTexture);
+            DeviceResetX.Release(ref backgroundTexture);
         }   // end of ModalHint UnloadContent()
 
         /// <summary>
@@ -485,6 +488,8 @@ namespace Boku
 
                 // Get the current scene thumbnail.  If we're using this from the main menu (options)
                 // then use the title screen image instead.
+                Debug.Assert(false);
+                /*
                 if (InGame.inGame.State == InGame.States.Inactive)
                 {
                     thumbnail = BokuGame.bokuGame.mainMenu.BackgroundTexture;
@@ -493,6 +498,7 @@ namespace Boku
                 {
                     thumbnail = InGame.inGame.SmallThumbNail;
                 }
+                */
 
                 // Tell InGame we're using the thumbnail so no need to do full render.
                 prevRenderWorldAsThumbnail = InGame.inGame.RenderWorldAsThumbnail;
@@ -507,7 +513,7 @@ namespace Boku
 
                 // Get text string.
                 blob = new TextBlob(Font, curHint.ModalText, textWidth);
-                blob.Justification = UIGridElement.Justification.Center;
+                blob.Justification = TextHelper.Justification.Center;
             }
         }   // end of Activate
 

@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.ParticleSystem;
@@ -339,7 +341,7 @@ namespace Boku
             // Strangley, this can end up null somehow if the missile gets squashed.
             // On reset, this will throw if no protected.  Not exactly sure what is
             // setting launcher to null though.
-            // TODO (****) figure out and fix.  (or just refactor all off the missile stuff)
+            // TODO (scoy) figure out and fix.  (or just refactor all off the missile stuff)
             if (Launcher != null)
             {
                 --Launcher.NumMissilesInAir;

@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Fx;
 
@@ -31,7 +34,7 @@ namespace Boku.UI2D
         private Vector4 textColor = Vector4.One;    // The color we're rendering with.
         private Color selectedTextColor;
         private Color unselectedTextColor;
-        private Justification justify = Justification.Center;
+        private TextHelper.Justification justify = TextHelper.Justification.Center;
 
         private RenderTarget2D rt = null;       // Pre-render the button contents here.
 
@@ -145,11 +148,11 @@ namespace Boku.UI2D
 
         private void RefreshRT()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             Vector2 textSize = Font().MeasureString(label);
 
-            RenderTarget2D textRT = UI2D.Shared.RenderTarget512_302;
+            RenderTarget2D textRT = SharedX.RenderTarget512_302;
 
             // If label is too wide for button, render it to an extra RT and shrink it down.
             int margin = 4;
@@ -197,12 +200,12 @@ namespace Boku.UI2D
 
             if (tile == null)
             {
-                tile = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\BlackTextTile");
+                tile = KoiLibrary.LoadTexture2D(@"Textures\GridElements\BlackTextTile");
             }
 
             if (rt == null)
             {
-                rt = new RenderTarget2D(BokuGame.bokuGame.GraphicsDevice, w, h);
+                rt = new RenderTarget2D(KoiLibrary.GraphicsDevice, w, h);
             }
         }   // end of UIGridModularTextElement LoadContent()
 
@@ -215,8 +218,8 @@ namespace Boku.UI2D
         {
             base.UnloadContent();
 
-            BokuGame.Release(ref tile);
-            BokuGame.Release(ref rt);
+            DeviceResetX.Release(ref tile);
+            DeviceResetX.Release(ref rt);
         }   // end of UIGridModularTextElement UnloadContent()
 
         /// <summary>
@@ -228,11 +231,11 @@ namespace Boku.UI2D
             // If there's a problem with the rendertarget, get rid of it.
             if (rt == null || rt.IsDisposed || rt.GraphicsDevice.IsDisposed)
             {
-                BokuGame.Release(ref rt);
+                DeviceResetX.Release(ref rt);
             }
 
             LoadContent(true);
-            InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+            InitDeviceResources(KoiLibrary.GraphicsDevice);
         }
 
     }   // end of class UIGridModularTextElement

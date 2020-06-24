@@ -13,7 +13,10 @@ using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
+
 using Microsoft.Xna.Framework.Graphics.PackedVector;
 using Microsoft.Xna.Framework.Input;
 
@@ -385,7 +388,7 @@ namespace Boku.SimWorld.Terra
                 {
                     return vNumSides_FD > 0 || vNumTop_FD > 0 || vNum_FA > 0;
 
-                    // TODO (****) Rethink this so that it actually works.
+                    // TODO (scoy) Rethink this so that it actually works.
                     // Once optimization is done, should be the following.  But this also gets called before then so we can't change it.
                     //return vBuffTop_FDNumVertices > 0 || vBuffSides_FDNumVertices > 0 || vBuff_FANumVertices > 0;
                 }
@@ -992,7 +995,7 @@ namespace Boku.SimWorld.Terra
             /// </summary>
             public void SetAndOptimizeBuffers()
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 // When allocating a buffer, allocate it the size needed plus the cushion size.
                 // This will help minimize churning by preventing lots of small changes.
@@ -1011,7 +1014,7 @@ namespace Boku.SimWorld.Terra
                     if (vBuff_FA == null || vBuff_FASize < vBuff_FANumVertices)
                     {
                         // Release old buffer.
-                        BokuGame.Release(ref vBuff_FA);
+                        DeviceResetX.Release(ref vBuff_FA);
 
                         // Calc new size and allocate.
                         vBuff_FASize = vBuff_FANumVertices + kCushion;
@@ -1030,7 +1033,7 @@ namespace Boku.SimWorld.Terra
                     if (iBuff_FA == null || iBuff_FASize < iBuff_FANumIndices)
                     {
                         // Release old buffer.
-                        BokuGame.Release(ref iBuff_FA);
+                        DeviceResetX.Release(ref iBuff_FA);
 
                         // Calc new size and allocate.
                         iBuff_FASize = iBuff_FANumIndices + kCushion;
@@ -1078,7 +1081,7 @@ namespace Boku.SimWorld.Terra
                         if (normalsVBuff == null || normalsVBuffSize < normalsVBuffNumVertices)
                         {
                             // Release old buffer.
-                            BokuGame.Release(ref normalsVBuff);
+                            DeviceResetX.Release(ref normalsVBuff);
 
                             // Calc new size and allocate.
                             normalsVBuffSize = normalsVBuffNumVertices + kCushion;
@@ -1107,7 +1110,7 @@ namespace Boku.SimWorld.Terra
                         if (vBuffTop_FD == null || vBuffTop_FDSize < optimizedVertsTop.Length)
                         {
                             // Free any existing vertex buffer.
-                            BokuGame.Release(ref vBuffTop_FD);
+                            DeviceResetX.Release(ref vBuffTop_FD);
 
                             // Get new length and allocate new buffer.
                             vBuffTop_FDSize = vBuffTop_FDNumVertices + kCushion;
@@ -1117,7 +1120,7 @@ namespace Boku.SimWorld.Terra
                         if (vBuffSides_FD == null || vBuffSides_FDSize < vNumSides_FD)
                         {
                             // Free any existing vertex buffer.
-                            BokuGame.Release(ref vBuffSides_FD);
+                            DeviceResetX.Release(ref vBuffSides_FD);
 
                             // Get new length and allocate new buffer.
                             vBuffSides_FDSize = vBuffSides_FDNumVertices + kCushion;
@@ -1140,15 +1143,15 @@ namespace Boku.SimWorld.Terra
             /// </summary>
             public void Dispose()
             {
-                BokuGame.Release(ref vBuffTop_FD);
-                BokuGame.Release(ref vBuffSides_FD);
+                DeviceResetX.Release(ref vBuffTop_FD);
+                DeviceResetX.Release(ref vBuffSides_FD);
                 vBuffTop_FDNumVertices = 0;
                 vBuffSides_FDNumVertices = 0;
                 vBuffTop_FDSize = 0;
                 vBuffSides_FDSize = 0;
 
-                BokuGame.Release(ref vBuff_FA);
-                BokuGame.Release(ref iBuff_FA);
+                DeviceResetX.Release(ref vBuff_FA);
+                DeviceResetX.Release(ref iBuff_FA);
                 vBuff_FANumVertices = 0;
                 iBuff_FANumIndices = 0;
                 vBuff_FASize = 0;
@@ -1156,7 +1159,7 @@ namespace Boku.SimWorld.Terra
 
                 #region Debug_DrawNormalsWithF8: Dispose VertexBuffer
 #if Debug_DrawNormalsWithF8
-                BokuGame.Release(ref normalsVBuff);
+                DeviceResetX.Release(ref normalsVBuff);
                 normalsVBuffNumVertices = 0;
                 normalsVBuffSize = 0;
 #endif

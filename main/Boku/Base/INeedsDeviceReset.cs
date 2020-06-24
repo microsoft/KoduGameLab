@@ -60,7 +60,7 @@ namespace Boku.Base
         /// To release an asset or device state, call:
         /// 
         ///     // Or you could just set it to null.
-        ///     BokuGame.Release(ref asset);
+        ///     DeviceResetX.Release(ref asset);
         /// 
         /// </summary>
         void UnloadContent();

@@ -9,6 +9,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Xml;
@@ -186,10 +190,10 @@ namespace Boku
 
             /// <summary>
             /// Store the current top of the stack again, presumably
-            /// because the name changed.  This makers sure that the
+            /// because the name changed.  This makes sure that the
             /// autosave is up to date.
             /// 
-            /// TODO (****) Right now this is only used after saving the level
+            /// TODO (scoy) Right now this is only used after saving the level
             /// to update the level's name, description, and ???.  Should we
             /// just be able to update those directly?
             /// </summary>
@@ -321,26 +325,25 @@ namespace Boku
             public static void Render()
             {
                 // In mouse mode, don't render undo/redo icons if pickers are active.
-                bool mouseEdit = inGame.CurrentUpdateMode == UpdateMode.MouseEdit
-                                && !InGame.inGame.touchEditUpdateObj.PickersActive;
+                bool mouseEdit = inGame.CurrentUpdateMode == UpdateMode.MouseEdit;
 
                 if ((inGame.CurrentUpdateMode == UpdateMode.ToolMenu || mouseEdit)
                     && HaveAnything)
                 {
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                     // Calc position for undo/redo text.
                     int x = 0;
                     int y = (int)(BokuGame.ScreenSize.Y * 0.66f);
                     int buttonSize = 40;
 
-                    UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont18Bold;
-                    SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                    GetFont Font = KoiX.SharedX.GetGameFont18Bold;
+                    SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                     // Handle small screens.
                     if (BokuGame.ScreenSize.Y < 720)
                     {
-                        Font = UI2D.Shared.GetGameFont15_75;
+                        Font = KoiX.SharedX.GetGameFont15_75;
                         buttonSize = (int)(buttonSize * 0.8f);
                     }
 
@@ -348,7 +351,7 @@ namespace Boku
                     {
                         ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
 
-                        Texture2D texture = GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad ? ButtonTextures.YButton : ButtonTextures.Redo;
+                        Texture2D texture = KoiLibrary.LastTouchedDeviceIsGamepad ? ButtonTextures.YButton : ButtonTextures.Redo;
                         quad.Render(texture,
                             Vector4.One,
                             new Vector2(x, y),
@@ -365,7 +368,7 @@ namespace Boku
                     if (HaveUnDo)
                     {
                         ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
-                        Texture2D texture = GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad ? ButtonTextures.XButton : ButtonTextures.Undo;
+                        Texture2D texture = KoiLibrary.LastTouchedDeviceIsGamepad ? ButtonTextures.XButton : ButtonTextures.Undo;
                         quad.Render(texture,
                             Vector4.One,
                             new Vector2(x, y + buttonSize - 12),

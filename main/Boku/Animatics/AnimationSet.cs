@@ -19,6 +19,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld;
@@ -1500,7 +1502,7 @@ namespace Boku.Animatics
         {
 #if ANIMATION_DEBUG
             {
-                // Figure out which bot we're focussed on.
+                // Figure out which bot we're focused on.
                 GameActor actor = null;
                 if (CameraInfo.MergedFollowList.Count > 0)
                 {
@@ -1569,7 +1571,7 @@ namespace Boku.Animatics
                                     if (Time.Paused)
                                     {
                                         // Align active animation with frame boundaries.
-                                        // TODO (****) fill this in.
+                                        // TODO (scoy) fill this in.
                                         if (anims.OneShotAnimationActive)
                                         {
                                             for (int i = 0; i < anims.AllOneShotControllers.Count; i++)
@@ -1699,13 +1701,13 @@ namespace Boku.Animatics
 
                 if (animMode)
                 {
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-                    batch = UI2D.Shared.SpriteBatch;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
+                    batch = KoiLibrary.SpriteBatch;
 
                     // Load resources if needed.
                     if (font == null)
                     {
-                        font = BokuGame.Load<SpriteFont>(BokuGame.Settings.MediaPath + @"Fonts\AnimDebug");
+                        font = KoiLibrary.LoadSpriteFont(@"Fonts\AnimDebug");
                     }
 
                     if (!Time.Paused)

@@ -6,6 +6,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Fx;
 using Boku.Common;
 
@@ -78,7 +80,7 @@ namespace Boku.SimWorld.Terra
         {
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Water");
+                effect = KoiLibrary.LoadEffect(@"Shaders\Water");
                 ShaderGlobals.RegisterEffect("Water", effect);
 
                 effectCache.Load(effect);
@@ -89,7 +91,7 @@ namespace Boku.SimWorld.Terra
                 {
                     bumpMapFilename = @"Textures\Terrain\WaterNormalMap";
                 }
-                bumpMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + bumpMapFilename);
+                bumpMap = KoiLibrary.LoadTexture2D(bumpMapFilename);
             }
 
             SetupToNeighbors();
@@ -103,13 +105,13 @@ namespace Boku.SimWorld.Terra
         {
             if (effect != null)
             {
-                BokuGame.Release(ref effect);
+                DeviceResetX.Release(ref effect);
 
                 effectCache.UnLoad();
             }
             if (bumpMap != null)
             {
-                BokuGame.Release(ref bumpMap);
+                DeviceResetX.Release(ref bumpMap);
             }
         }
 

@@ -4,8 +4,9 @@ using System.Diagnostics;
 
 using Microsoft.Xna.Framework;
 
-using Boku.Common;
+using KoiX;
 
+using Boku.Common;
 using Boku.Animatics;
 
 namespace Boku.SimWorld

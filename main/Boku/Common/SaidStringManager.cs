@@ -14,6 +14,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 
 namespace Boku.Common

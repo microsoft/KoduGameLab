@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -67,7 +69,7 @@ namespace Boku.SimWorld
 
         public void Render(Camera camera, bool effects)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             MoveTo();
 
@@ -161,7 +163,7 @@ namespace Boku.SimWorld
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\SkyBox");
+                effect = KoiLibrary.LoadEffect(@"Shaders\SkyBox");
                 ShaderGlobals.RegisterEffect("SkyBox", effect);
             }
 

@@ -23,7 +23,7 @@ namespace BokuSetupTool
                     return (nResult == 1);
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 throw (new Exception("Error checking out " + filename));
             }

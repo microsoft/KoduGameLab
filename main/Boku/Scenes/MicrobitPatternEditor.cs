@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
 
 using Boku.Base;
 using Boku.Common;
@@ -93,7 +96,7 @@ namespace Boku
             blob.width = 512.0f / 96.0f;        // 5.33333
             blob.height = blob.width / 5.0f;    // 1.06667
             blob.edgeSize = 0.06f;
-            blob.Font = UI2D.Shared.GetGameFont24Bold;
+            blob.Font = SharedX.GetGameFont24Bold;
             blob.textColor = Color.White;
             blob.dropShadowColor = Color.Black;
             blob.useDropShadow = true;
@@ -101,7 +104,7 @@ namespace Boku
             blob.unselectedColor = new Color(new Vector3(4, 100, 90) / 255.0f);
             blob.selectedColor = new Color(new Vector3(5, 180, 160) / 255.0f);
             blob.normalMapName = @"Slant0Smoothed5NormalMap";
-            blob.justify = UIGridModularCheckboxElement.Justification.Left;
+            blob.justify = TextHelper.Justification.Left;
 
             brightnessSlider = new UIGridModularIntegerSliderElement(blob, Strings.Localize("microbitPatternEditor.brightness"));
             brightnessSlider.Position = new Vector3(1.06667f, 1.01f, 0);
@@ -145,15 +148,15 @@ namespace Boku
             // Buttons
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.BButton; };
-                cancelButton = new Button(Strings.Localize("saveLevelDialog.cancel"), labelColor, getTexture, UI2D.Shared.GetGameFont20);
+                cancelButton = new Button(Strings.Localize("saveLevelDialog.cancel"), labelColor, getTexture, SharedX.GetGameFont20);
             }
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.AButton; };
-                saveButton = new Button(Strings.Localize("saveLevelDialog.save"), labelColor, getTexture, UI2D.Shared.GetGameFont20);
+                saveButton = new Button(Strings.Localize("saveLevelDialog.save"), labelColor, getTexture, SharedX.GetGameFont20);
             }
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.YButton; };
-                toggleLEDButton = new Button(Strings.Localize("microbitPatternEditor.toggleLED"), labelColor, getTexture, UI2D.Shared.GetGameFont20);
+                toggleLEDButton = new Button(Strings.Localize("microbitPatternEditor.toggleLED"), labelColor, getTexture, SharedX.GetGameFont20);
             }
 
         }   // end of c'tor
@@ -283,21 +286,21 @@ namespace Boku
                 ledGrid.Update(ref matrix);
                 bar.Update(ref matrix);
 
-                switch(GamePadInput.ActiveMode)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
-                    case GamePadInput.InputMode.GamePad:
-                        HandleGamePad();
-                        break;
-                    case GamePadInput.InputMode.Touch:
-                        HandleTouch();
-                        break;
-                    case GamePadInput.InputMode.KeyboardMouse:
-                        HandleMouse();
-                        break;
+                    HandleMouse();
+                }
+                else if (KoiLibrary.LastTouchedDeviceIsGamepad)
+                {
+                    HandleGamePad();
+                }
+                else if (KoiLibrary.LastTouchedDeviceIsTouch)
+                {
+                    HandleTouch();
                 }
 
                 // Adjust alpha value for stick icons if needed.
-                float targetAlpha = GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad ? 1.0f : 0.0f;
+                float targetAlpha = KoiLibrary.LastTouchedDeviceIsGamepad ? 1.0f : 0.0f;
                 if (targetAlpha != _stickAlpha)
                 {
                     _stickAlpha = targetAlpha;
@@ -481,7 +484,7 @@ namespace Boku
         private void HandleMouse()
         {
             // Mouse input
-            Vector2 hit = MouseInput.PositionVec;
+            Vector2 hit = LowLevelMouseInput.PositionVec;
 
             // Cancel
             if (cancelButton.Box.LeftPressed(hit))
@@ -513,7 +516,7 @@ namespace Boku
             Vector2 cameraHit = -camera.PixelsToCameraSpaceScreenCoords(hit);
 
             // Handle clicks on ledGrid.  Hit boxes are in camera coords.
-            if (MouseInput.Left.WasPressed)
+            if (LowLevelMouseInput.Left.WasPressed)
             {
                 for (int i = 0; i < ledGrid.ledHitBoxes.Length; i++)
                 {
@@ -527,7 +530,7 @@ namespace Boku
             }
 
             // Handle clicks on sliders.
-            if (MouseInput.Left.IsPressed)
+            if (LowLevelMouseInput.Left.IsPressed)
             {
                 // Brightness Slider
                 Vector2 position = new Vector2(brightnessSlider.Position.X, brightnessSlider.Position.Y);
@@ -566,14 +569,14 @@ namespace Boku
         {
             if (active)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 Vector2 screenSize = BokuGame.ScreenSize;
 
                 InGame.SetViewportToScreen();
 
                 // Render dialog using local camera.
-                Fx.ShaderGlobals.SetCamera(camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
                 device.Clear(ClearOptions.DepthBuffer | ClearOptions.Target, new Color(20, 20, 20), 1.0f, 0);
 
@@ -648,12 +651,12 @@ namespace Boku
 
             if (leftStickTexture == null)
             {
-                leftStickTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\LeftStick");
+                leftStickTexture = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\LeftStick");
             }
 
             if (rightStickTexture == null)
             {
-                rightStickTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\RightStick");
+                rightStickTexture = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\RightStick");
             }
 
 
@@ -674,8 +677,8 @@ namespace Boku
             ledGrid.UnloadContent();
             bar.UnloadContent();
 
-            BokuGame.Release(ref leftStickTexture);
-            BokuGame.Release(ref rightStickTexture);
+            DeviceResetX.Release(ref leftStickTexture);
+            DeviceResetX.Release(ref rightStickTexture);
         }
 
         public void DeviceReset(GraphicsDevice device)

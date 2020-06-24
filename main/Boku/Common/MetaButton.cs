@@ -7,6 +7,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+using KoiX.Input;
 
 namespace Boku.Common
 {
@@ -52,17 +54,17 @@ namespace Boku.Common
                 {
                     for (int i = 0; i < keys.Count; i++)
                     {
-                        if (keys[i] < (Keys)256 && !KeyboardInput.CtrlIsPressed && !KeyboardInput.ShiftIsPressed && !KeyboardInput.AltIsPressed)
+                        if (keys[i] < (Keys)256 && !KeyboardInputX.CtrlIsPressed && !KeyboardInputX.ShiftIsPressed && !KeyboardInputX.AltIsPressed)
                         {
-                            result |= KeyboardInput.WasPressed(keys[i]);
+                            result |= KeyboardInputX.WasPressed(keys[i]);
                         }
                         else if ((keys[i] & Ctrl) != Keys.None)
                         {
-                            result |= KeyboardInput.WasCtrlPressed(keys[i]);
+                            result |= KeyboardInputX.WasCtrlPressed(keys[i]);
                         }
                         else if ((keys[i] & Shift) != Keys.None)
                         {
-                            result |= KeyboardInput.WasShiftPressed(keys[i]);
+                            result |= KeyboardInputX.WasShiftPressed(keys[i]);
                         }
                     }
                 }
@@ -95,15 +97,15 @@ namespace Boku.Common
                     {
                         if (keys[i] < (Keys)256)
                         {
-                            result |= KeyboardInput.IsPressed(keys[i]);
+                            result |= KeyboardInputX.IsPressed(keys[i]);
                         }
                         else if ((keys[i] & Ctrl) != Keys.None)
                         {
-                            result |= KeyboardInput.IsCtrlPressed(keys[i]);
+                            result |= KeyboardInputX.IsCtrlPressed(keys[i]);
                         }
                         else if ((keys[i] & Shift) != Keys.None)
                         {
-                            result |= KeyboardInput.IsShiftPressed(keys[i]);
+                            result |= KeyboardInputX.IsShiftPressed(keys[i]);
                         }
                     }
                 }
@@ -136,15 +138,15 @@ namespace Boku.Common
                     {
                         if (keys[i] < (Keys)256)
                         {
-                            result |= KeyboardInput.WasPressedOrRepeat(keys[i]);
+                            result |= KeyboardInputX.WasPressedOrRepeat(keys[i]);
                         }
                         else if ((keys[i] & Ctrl) != Keys.None)
                         {
-                            result |= KeyboardInput.WasCtrlPressedOrRepeat(keys[i]);
+                            result |= KeyboardInputX.WasCtrlPressedOrRepeat(keys[i]);
                         }
                         else if ((keys[i] & Shift) != Keys.None)
                         {
-                            result |= KeyboardInput.WasShiftPressedOrRepeat(keys[i]);
+                            result |= KeyboardInputX.WasShiftPressedOrRepeat(keys[i]);
                         }
                     }
                 }
@@ -177,15 +179,15 @@ namespace Boku.Common
                     {
                         if (keys[i] < (Keys)256)
                         {
-                            result |= KeyboardInput.WasRepeatPressed(keys[i]);
+                            result |= KeyboardInputX.WasRepeatPressed(keys[i]);
                         }
                         else if ((keys[i] & Ctrl) != Keys.None)
                         {
-                            result |= KeyboardInput.WasCtrlRepeatPressed(keys[i]);
+                            result |= KeyboardInputX.WasCtrlRepeatPressed(keys[i]);
                         }
                         else if ((keys[i] & Shift) != Keys.None)
                         {
-                            result |= KeyboardInput.WasShiftRepeatPressed(keys[i]);
+                            result |= KeyboardInputX.WasShiftRepeatPressed(keys[i]);
                         }
                     }
                 }
@@ -276,7 +278,7 @@ namespace Boku.Common
 
             for (int i = 0; i < keys.Count; i++)
             {
-                KeyboardInput.ClearAllWasPressedState(keys[i]);
+                KeyboardInputX.ClearAllWasPressedState(keys[i]);
             }
         }   // end of ClearAllWasPressedState()
 
@@ -299,7 +301,7 @@ namespace Boku.Common
             }
             for (int i = 0; i < keys.Count; ++i)
             {
-                KeyboardInput.IgnoreUntilReleased(keys[i]);
+                KeyboardInputX.IgnoreUntilReleased(keys[i]);
             }
         }
 

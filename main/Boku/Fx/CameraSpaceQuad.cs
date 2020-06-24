@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -136,7 +138,7 @@ namespace Boku.Fx
         /// <param name="technique">Technique to render with.</param>
         public void Render(Camera camera, Texture2D texture, Vector4 diffuseColor, float alpha, Vector2 position, Vector2 size, string technique)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             SetUvToPos(position, size);
 
@@ -161,7 +163,7 @@ namespace Boku.Fx
 
         public void RenderStencil(Camera camera, Vector4 color, Vector2 position, Vector2 size)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             SetUvToPos(position, size);
 
@@ -187,7 +189,7 @@ namespace Boku.Fx
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\CameraSpaceQuad");
+                effect = KoiLibrary.LoadEffect(@"Shaders\CameraSpaceQuad");
             }
         }   // end of CameraSpaceQuad LoadContent()
 
@@ -197,7 +199,7 @@ namespace Boku.Fx
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref effect);
         }   // end of CameraSpaceQuad UnloadContent()
 
         public void DeviceReset(GraphicsDevice device)

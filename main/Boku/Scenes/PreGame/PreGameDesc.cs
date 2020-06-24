@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.SimWorld.Terra;
@@ -77,9 +81,9 @@ namespace Boku
                     }
 
                     // Exit pre-game mode.
-                    if (KeyboardInput.WasPressed(Keys.Escape))
+                    if (KeyboardInputX.WasPressed(Keys.Escape))
                     {
-                        KeyboardInput.ClearAllWasPressedState(Keys.Escape);
+                        KeyboardInputX.ClearAllWasPressedState(Keys.Escape);
                         Active = false;
                     }
 
@@ -101,10 +105,10 @@ namespace Boku
                     }
 
                     // Check if user click on bottom text.
-                    if (MouseInput.Left.WasPressed && HelpOverlay.MouseHitBottomText(MouseInput.Position))
+                    if (LowLevelMouseInput.Left.WasPressed && HelpOverlay.MouseHitBottomText(LowLevelMouseInput.Position))
                     {
                         Active = false;
-                        MouseInput.Left.ClearAllWasPressedState();
+                        LowLevelMouseInput.Left.ClearAllWasPressedState();
                     }
                 }
             }   // end of PreGameDesc Update()
@@ -117,7 +121,7 @@ namespace Boku
                     switch(logo)
                     {
                         case "n23" :
-                            logoTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\NASA_JPL");
+                            logoTexture = KoiLibrary.LoadTexture2D(@"Textures\NASA_JPL");
                             break;
                         default :
                             logoTexture = null;
@@ -126,8 +130,8 @@ namespace Boku
                 }
 
                 Vector2 pos = Vector2.Zero;
-                pos.X = BokuGame.bokuGame.GraphicsDevice.Viewport.Width / 4.0f;
-                pos.Y = BokuGame.bokuGame.GraphicsDevice.Viewport.Height / 2.0f - blob.NumLines / 2.0f * blob.Font().LineSpacing;
+                pos.X = KoiLibrary.GraphicsDevice.Viewport.Width / 4.0f;
+                pos.Y = KoiLibrary.GraphicsDevice.Viewport.Height / 2.0f - blob.NumLines / 2.0f * blob.Font().LineSpacing;
 
                 if (logoTexture != null)
                 {
@@ -135,14 +139,14 @@ namespace Boku
 
                     ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
                     // Position logo in upper right corner.
-                    Vector2 logoPos = new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width * 0.98f - logoSize.X, BokuGame.bokuGame.GraphicsDevice.Viewport.Width * 0.02f);
+                    Vector2 logoPos = new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width * 0.98f - logoSize.X, KoiLibrary.GraphicsDevice.Viewport.Width * 0.02f);
                     // Force to be pixel aligned.
                     logoPos.X = (int)logoPos.X;
                     logoPos.Y = (int)logoPos.Y;
                     ssquad.Render(logoTexture, logoPos, logoSize, "TexturedRegularAlpha");
                 }
 
-                blob.RenderWithButtons(pos, Color.White, outlineColor: Color.Black, outlineWidth: 1.5f, maxLines: 20);
+                blob.RenderText(null, pos, Color.White, outlineColor: Color.Black, outlineWidth: 1.5f, maxLines: 20);
 
             }   // end of PreGameDesc Render()
 
@@ -163,8 +167,8 @@ namespace Boku
 
                 HelpOverlay.Push(@"PreGameDescription");
 
-                UI2D.Shared.GetFont Font = BokuGame.bokuGame.GraphicsDevice.Viewport.Height < 720 ? UI2D.Shared.GetGameFont18Bold : UI2D.Shared.GetGameFont24Bold;
-                blob = new TextBlob(Font, Terrain.Current.XmlWorldData.name +"\n\n" + Terrain.Current.XmlWorldData.description, (int)(BokuGame.bokuGame.GraphicsDevice.Viewport.Width / 2));
+                GetFont Font = KoiLibrary.GraphicsDevice.Viewport.Height < 720 ? KoiX.SharedX.GetGameFont18Bold : KoiX.SharedX.GetGameFont24Bold;
+                blob = new TextBlob(Font, Terrain.Current.XmlWorldData.name +"\n\n" + Terrain.Current.XmlWorldData.description, (int)(KoiLibrary.GraphicsDevice.Viewport.Width / 2));
                 blob.Justification = Terrain.Current.XmlWorldData.descJustification;
             
             }   // end of PreGameDesc Activate()

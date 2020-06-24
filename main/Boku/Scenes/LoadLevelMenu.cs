@@ -30,6 +30,10 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Net;
 #endif
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Managers;
+using KoiX.Text;
 
 using Boku.Base;
 using Boku.Common;
@@ -255,10 +259,10 @@ namespace Boku
                 UIGridElement.ParamBlob blob = new UIGridElement.ParamBlob();
                 blob.width = 1.5f;
                 blob.height = 0.5f;
-                blob.Font = UI2D.Shared.GetGameFont20;
+                blob.Font = KoiX.SharedX.GetGameFont20;
                 blob.unselectedTextColor = Color.White;
                 blob.selectedTextColor = new Color(12, 255, 0);
-                blob.justify = UIGridModularCheckboxElement.Justification.Center;
+                blob.justify = TextHelper.Justification.Center;
 
                 UIGridModularTextElement e = null;
                 int index = 0;
@@ -405,7 +409,7 @@ namespace Boku
 
                 blob.textColor = new Color(30, 30, 30);
                 blob.dropShadowColor = Color.Black;
-                blob.Font = UI2D.Shared.GetGameFont20;
+                blob.Font = SharedX.GetGameFont20;
                 blob.selectedColor = Color.White;
                 blob.unselectedColor = new Color(30, 30, 30);
 
@@ -710,7 +714,7 @@ namespace Boku
                 savePicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
                 savePicker.FileTypeChoices.Add("Kodu Game Lab World", new List<string>() { ".Kodu2" });
                 savePicker.DefaultFileExtension = ".Kodu2";
-                // TODO (****) where do we get/generate this?
+                // TODO (scoy) where do we get/generate this?
 
                 // Set the default filename.
                 string folderName = Utils.FolderNameFromFlags(level.Genres);
@@ -794,7 +798,7 @@ namespace Boku
 
             private void Callback_ExportSelectedLevel(AsyncOperation op)
             {
-                LevelMetadata level = op.Param as LevelMetadata;
+                LevelMetadata level = op.Param0 as LevelMetadata;
 
                 //Note: this code path didn't offer the user a chance to set the file name?  preserving this behaviour for now...
                 string fileNameWithoutExtension = GenerateDefaultFileName(level, false);
@@ -953,7 +957,7 @@ namespace Boku
                 }
                 else
                 {
-                    // TODO (****) I hate having [Package] prepended to the file names.  Why bother?
+                    // TODO (scoy) I hate having [Package] prepended to the file names.  Why bother?
                     string packageName = Strings.Localize("loadLevelMenu.exportPackageString") + level.Name;
                     fileName = LevelPackage.CreateExportFilenameWithoutExtension(packageName, level.Creator);
                 }
@@ -1062,18 +1066,15 @@ namespace Boku
             {
                 InGame.EndMessage(parent.blockingOpMessage.Render, null);
 
-                string fullPath = op.Param as string;
+                string fullPath = op.Param0 as string;
 
                 if (BokuGame.bokuGame.inGame.LoadLevelAndRun(fullPath, keepPersistentScores: false, newWorld: false, andRun: false))
                 {
                     parent.Deactivate();
                     InGame.inGame.Activate();
-                    InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.ToolMenu;
                 }
-                else
-                {
-                    InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.ToolMenu;
-                }
+
+                SceneManager.SwitchToScene("EditWorldScene");
 
                 // If we were loading from an unproven string, our asynchronous attempt is now done,
                 // whether we succeeded or failed.
@@ -1085,7 +1086,7 @@ namespace Boku
             {
                 InGame.EndMessage(parent.blockingOpMessage.Render, null);
 
-                string fullPath = op.Param as string;
+                string fullPath = op.Param0 as string;
 
                 if (BokuGame.bokuGame.inGame.LoadLevelAndRun(fullPath, keepPersistentScores: false, newWorld: false, andRun: true))
                 {
@@ -1093,7 +1094,7 @@ namespace Boku
                 }
                 else
                 {
-                    InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.RunSim;
+                    SceneManager.SwitchToScene("RunSimScene");
                 }
 
                 // If we were loading from an unproven string, our asynchronous attempt is now done,
@@ -1106,7 +1107,7 @@ namespace Boku
             {
                 InGame.EndMessage(parent.blockingOpMessage.Render, null);
 
-                string fullPath = op.Param as string;
+                string fullPath = op.Param0 as string;
 
                 if (BokuGame.bokuGame.inGame.LoadLevelAndRun(fullPath, keepPersistentScores: true, newWorld: false, andRun: true))
                 {
@@ -1114,7 +1115,7 @@ namespace Boku
                 }
                 else
                 {
-                    InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.RunSim;
+                    SceneManager.SwitchToScene("RunSimScene");
                 }
 
                 // If we were loading from an unproven string, our asynchronous attempt is now done,
@@ -1136,7 +1137,7 @@ namespace Boku
 #if !NETFX_CORE
                         // Only display message on fullscreen.  On windowed we 
                         // use the SaveDialog instead.
-                        // TODO (****) *** Aren't we always windowed now?
+                        // TODO (scoy) *** Aren't we always windowed now?
                         //if (Boku.BokuGame.Graphics.IsFullScreen)
                         {
                             if (parent.shared.CurWorld.LinkedFromLevel != null || parent.shared.CurWorld.LinkedToLevel != null)
@@ -1745,7 +1746,7 @@ namespace Boku
                 // We need to do this ever frame instead of just at activation 
                 // time since deactivation of the previous scene and activation 
                 // of this scene don't always happen in that order.
-                AuthUI.ShowStatusDialog();
+                AuthUI.ShowStatusDialog(DialogManagerX.CurrentFocusDialogCamera);
 
                 shared.dialogCamera.Resolution = new Point((int)BokuGame.ScreenSize.X, (int)BokuGame.ScreenSize.Y);
                 shared.dialogCamera.Update();
@@ -1792,7 +1793,7 @@ namespace Boku
                 HandleTouchInput();
 
                 // Note that no input goes to the levelGrid while the popup (or the sort list) is active.
-                // TODO (****) Should this be rethought to send input to those items first instead of 
+                // TODO (scoy) Should this be rethought to send input to those items first instead of 
                 // updating the main list first?
                 if (shared.levelGrid != null && shared.popup.Active == false && shared.sortList.Active == false && parent.pendingState != States.Inactive)
                 {
@@ -1858,15 +1859,15 @@ namespace Boku
                                     continue;
 
                                 Matrix mat = Matrix.Invert(e.WorldMatrix);
-                                Vector2 hitUV = MouseInput.GetHitUV(shared.camera, ref mat, e.Size.X, e.Size.Y, true);
+                                Vector2 hitUV = LowLevelMouseInput.GetHitUV(shared.camera, ref mat, e.Size.X, e.Size.Y, true);
 
                                 if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
                                 {
-                                    if (MouseInput.Left.WasPressed)
+                                    if (LowLevelMouseInput.Left.WasPressed)
                                     {
                                         MouseInput.ClickedOnObject = e;
                                     }
-                                    if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
+                                    if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
                                     {
                                         // We hit an element, so bring it into focus.
                                         shared.bucketsGrid.SelectionIndex = new Point(i, 0);
@@ -1876,7 +1877,7 @@ namespace Boku
 
                             // Click on arrows at end, inc/dec focus.
                             {
-                                Vector2 hit = MouseInput.GetMouseInRtCoords();
+                                Vector2 hit = LowLevelMouseInput.GetMouseInRtCoords();
 
                                 if (shared.leftBumperBox.LeftPressed(hit))
                                 {
@@ -2004,7 +2005,7 @@ namespace Boku
 
             public void HandleMouseInput()
             {
-                if (GamePadInput.ActiveMode != GamePadInput.InputMode.KeyboardMouse)
+                if (!KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     //Defocus search box if not in KeyboardMouse mode
                     if (shared.textLineEditor.Active)
@@ -2017,11 +2018,11 @@ namespace Boku
                     return;
                 }
 
-                Vector2 hit = MouseInput.GetMouseInRtCoords();
+                Vector2 hit = LowLevelMouseInput.GetMouseInRtCoords();
 
                 //Focus or defocus search box
                 shared.fullScreenHitBox.Set(Vector2.Zero,BokuGame.ScreenSize);
-                if (MouseInput.Left.WasPressed && shared.searchBox.Contains(hit))
+                if (LowLevelMouseInput.Left.WasPressed && shared.searchBox.Contains(hit))
                 {
                     //make sure popups are deactived
                     shared.sortList.Deactivate();
@@ -2046,7 +2047,7 @@ namespace Boku
                 else if (shared.textLineEditor.Active)
                 {
                     //Deactivate if click outside search box
-                    if (MouseInput.Left.WasPressed && shared.fullScreenHitBox.Contains(hit))
+                    if (LowLevelMouseInput.Left.WasPressed && shared.fullScreenHitBox.Contains(hit))
                     {
                         shared.textLineEditor.Deactivate();
                         shared.levelGrid.IgnoreInput = false;
@@ -2066,15 +2067,15 @@ namespace Boku
                     if (e != null)
                     {
                         Matrix invWorld = Matrix.Invert(e.WorldMatrix);
-                        Vector2 hitUV = MouseInput.GetHitUV(shared.camera, ref invWorld, e.Size.X, e.Size.Y, true);
+                        Vector2 hitUV = LowLevelMouseInput.GetHitUV(shared.camera, ref invWorld, e.Size.X, e.Size.Y, true);
 
                         if (hitUV.X > 0 && hitUV.X < 1 && hitUV.Y > 0 && hitUV.Y < 1)
                         {
-                            if (MouseInput.Left.WasPressed)
+                            if (LowLevelMouseInput.Left.WasPressed)
                             {
                                 MouseInput.ClickedOnObject = e;
                             }
-                            if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
+                            if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
                             {
                                 if (!shared.levelGrid.NoValidLevels)
                                 {
@@ -2098,15 +2099,15 @@ namespace Boku
                                 if (e != null)
                                 {
                                     invWorld = Matrix.Invert(e.WorldMatrix);
-                                    hitUV = MouseInput.GetHitUV(shared.camera, ref invWorld, e.Size.X, e.Size.Y, true);
+                                    hitUV = LowLevelMouseInput.GetHitUV(shared.camera, ref invWorld, e.Size.X, e.Size.Y, true);
 
                                     if (hitUV.X > 0 && hitUV.X < 1 && hitUV.Y > 0 && hitUV.Y < 1)
                                     {
-                                        if (MouseInput.Left.WasPressed)
+                                        if (LowLevelMouseInput.Left.WasPressed)
                                         {
                                             MouseInput.ClickedOnObject = e;
                                         }
-                                        if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
+                                        if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
                                         {
                                             int steps = shared.levelGrid.SelectionIndex.X - i;
                                             while (steps > 0)
@@ -2129,15 +2130,15 @@ namespace Boku
                                 if (e != null)
                                 {
                                     invWorld = Matrix.Invert(e.WorldMatrix);
-                                    hitUV = MouseInput.GetHitUV(shared.camera, ref invWorld, e.Size.X, e.Size.Y, true);
+                                    hitUV = LowLevelMouseInput.GetHitUV(shared.camera, ref invWorld, e.Size.X, e.Size.Y, true);
 
                                     if (hitUV.X > 0 && hitUV.X < 1 && hitUV.Y > 0 && hitUV.Y < 1)
                                     {
-                                        if (MouseInput.Left.WasPressed)
+                                        if (LowLevelMouseInput.Left.WasPressed)
                                         {
                                             MouseInput.ClickedOnObject = e;
                                         }
-                                        if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
+                                        if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
                                         {
                                             int steps = i - shared.levelGrid.SelectionIndex.X;
                                             while (steps > 0)
@@ -2154,11 +2155,11 @@ namespace Boku
                         }   // end of check over non-focus tiles
 
                         // Check for edges of screen.
-                        if (MouseInput.AtWindowLeft())
+                        if (LowLevelMouseInput.AtWindowLeft())
                         {
                             shared.levelGrid.MoveLeft();
                         }
-                        if (MouseInput.AtWindowRight())
+                        if (LowLevelMouseInput.AtWindowRight())
                         {
                             shared.levelGrid.MoveRight();
                         }
@@ -2202,14 +2203,14 @@ namespace Boku
                         }
 
                         Matrix mat = Matrix.Invert(e.WorldMatrix);
-                        Vector2 hitUV = MouseInput.GetHitUV(shared.camera, ref mat, e.Size.X, e.Size.Y, true);
+                        Vector2 hitUV = LowLevelMouseInput.GetHitUV(shared.camera, ref mat, e.Size.X, e.Size.Y, true);
                         if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
                         {
-                            if (MouseInput.Left.WasPressed)
+                            if (LowLevelMouseInput.Left.WasPressed)
                             {
                                 MouseInput.ClickedOnObject = e;
                             }
-                            if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
+                            if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == e)
                             {
                                 // We hit an element, so bring it into focus.
                                 shared.bucketsGrid.SelectionIndex = new Point(i, 0);
@@ -2304,9 +2305,9 @@ namespace Boku
                 }
 
                 // Finally, see if user clicked on exit text at bottom of screen.
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
-                    Point mousePos = new Point(MouseInput.Position.X - (int)BokuGame.ScreenPosition.X, MouseInput.Position.Y - (int)BokuGame.ScreenPosition.Y);
+                    Point mousePos = new Point(LowLevelMouseInput.Position.X - (int)BokuGame.ScreenPosition.X, LowLevelMouseInput.Position.Y - (int)BokuGame.ScreenPosition.Y);
                     if (HelpOverlay.MouseHitBottomText(mousePos))
                     {
                         parent.ReturnToPreviousMenu();
@@ -2439,7 +2440,7 @@ namespace Boku
                         //make sure popups are deactived
                         shared.sortList.Deactivate();
                         shared.popup.Active = false;
-                        KeyboardInput.ShowOnScreenKeyboard();
+                        KeyboardInputX.ShowOnScreenKeyboard();
                         TextLineEditor.OnEditDone callback = delegate(bool canceled, string newText)
                         {
                             if (!canceled && shared.levelFilter.SearchString != newText)
@@ -2448,7 +2449,7 @@ namespace Boku
                                 shared.levelFilter.SearchString = newText;
                                 shared.mainBrowser.Reset();
                             }
-                            //KeyboardInput
+                            //KeyboardInputX
                             shared.textLineEditor.Deactivate();
                             shared.levelGrid.IgnoreInput = false;
                             shared.levelGrid.Active = true;
@@ -2574,7 +2575,7 @@ namespace Boku
                 {
                     Vector2 hit = TouchGestureManager.Get().TapGesture.Position;
 
-                    hit = MouseInput.AdjustHitPosition(hit, shared.camera, true, false);
+                    hit = LowLevelMouseInput.AdjustHitPosition(hit, shared.camera, true, false);
 
                     if (shared.likesBox.Contains(hit))
                     {
@@ -2759,7 +2760,7 @@ namespace Boku
                 else
                 {
                     level.DownloadState = LevelMetadata.DownloadStates.Failed;
-                    // TODO (****) Give an error.
+                    // TODO (scoy) Give an error.
                 }
             }   // end of GetWorldDataCallback()
 
@@ -2812,9 +2813,9 @@ namespace Boku
             public bool auxMenusActive = false;         // Used to trigger changes in the shadow under the lists.
             public float auxMenuShadowAlpha = 0.0f;     // Shadow oapcity used when sort or show only list is active.
 
-            public UI2D.Shared.GetFont FontSmall = UI2D.Shared.GetGameFont15_75;
-            public UI2D.Shared.GetFont FontLarge = UI2D.Shared.GetGameFont20;
-            public TextBlob blob = new TextBlob(UI2D.Shared.GetGameFont15_75, "", 500);
+            public GetFont FontSmall = KoiX.SharedX.GetGameFont15_75;
+            public GetFont FontLarge = KoiX.SharedX.GetGameFont20;
+            public TextBlob blob = new TextBlob(KoiX.SharedX.GetGameFont15_75, "", 500);
 
             private UIGridLevelElement prevFocusElement = null;     // Used to detect when the focus element changes so we can start fading in the A button.
             private float AButtonAlpha = 1.0f;
@@ -2839,9 +2840,9 @@ namespace Boku
                 // Ensure the help overlay texture is up to date.
                 HelpOverlay.RefreshTexture();
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-                RenderTarget2D rt = UI2D.Shared.RenderTargetDepthStencil1280_720;
+                RenderTarget2D rt = SharedX.RenderTargetDepthStencil1280_720;
 
                 Vector2 screenSize = BokuGame.ScreenSize;
                 Vector2 rtSize = new Vector2(rt.Width, rt.Height);
@@ -2858,7 +2859,7 @@ namespace Boku
                 device.Clear(Color.Transparent);
 
                 // Set up params for rendering UI with this camera.
-                Fx.ShaderGlobals.SetCamera(shared.camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(shared.camera);
 
                 ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
 
@@ -2891,7 +2892,7 @@ namespace Boku
                 Color blueText = new Color(12, 150, 209);
 
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 Vector2 pos = Vector2.Zero;
 
@@ -2908,7 +2909,7 @@ namespace Boku
                 pos.X = 185 + 600 - 64 - FontLarge().MeasureString(yText).X;
                 Vector2 min = pos;
                 // Render button if in key/mouse mode.
-                bool km = GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse;
+                bool km = KoiLibrary.LastTouchedDeviceIsKeyboardMouse;
                 Vector2 buttonSize = new Vector2(52.0f, 52.0f);
                 if (km)
                 {
@@ -2929,7 +2930,7 @@ namespace Boku
                 //
 
                 // Browser screen title.
-                UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont30Bold;
+                GetFont Font = SharedX.GetGameFont30Bold;
                 Vector2 position = new Vector2(192, 0);
                 TextHelper.DrawString(Font, title, position, new Color(255, 255, 255, 200));
 
@@ -3037,7 +3038,7 @@ namespace Boku
                         {
                             quad.Render(downloadsTexture, buttonPos + new Vector2(4, 4), iconSize, "TexturedRegularAlpha");
                             blob.RawText = numString;
-                            blob.RenderWithButtons(buttonPos + new Vector2(22, 3), Color.White);
+                            blob.RenderText(null, buttonPos + new Vector2(22, 3), Color.White);
                         }
                         buttonPos.X += buttonSize.X + 8.0f;
 
@@ -3070,7 +3071,7 @@ namespace Boku
                     if (tags != null)
                     {
                         blob.RawText = Strings.Localize("loadLevelMenu.tags") + ": " + tags;
-                        blob.RenderWithButtons(pos, darkTextColor);
+                        blob.RenderText(null, pos, darkTextColor);
                         pos.Y += FontLarge().LineSpacing * blob.NumLines;
                     }
 
@@ -3149,7 +3150,7 @@ namespace Boku
                     // Description.
                     if (info.UIDescBlob != null)
                     {
-                        info.UIDescBlob.RenderWithButtons(pos, darkTextColor, maxLines: maxDescLines);
+                        info.UIDescBlob.RenderText(null, pos, darkTextColor, maxLines: maxDescLines);
                     }
                 }
 
@@ -3158,11 +3159,11 @@ namespace Boku
                 if (shared.showPagingMessage)
                 {
                     string message = "Fetching...";
-                    Font = UI2D.Shared.GetGameFont24;
+                    Font = SharedX.GetGameFont24;
                     int textWidth = (int)Font().MeasureString(message).X;
-                    int screenWidth = BokuGame.bokuGame.GraphicsDevice.Viewport.Width;
+                    int screenWidth = KoiLibrary.GraphicsDevice.Viewport.Width;
                     int textX = (screenWidth - textWidth) / 2;
-                    int textY = BokuGame.bokuGame.GraphicsDevice.Viewport.TitleSafeArea.Top;
+                    int textY = KoiLibrary.GraphicsDevice.Viewport.TitleSafeArea.Top;
                     TextHelper.DrawString(Font, message, new Vector2(textX, textY), lightTextColor);
                 }
 
@@ -3209,7 +3210,7 @@ namespace Boku
                 // Render the buckets grid.
                 if (shared.bucketsGrid != null)
                 {
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                    if (KoiLibrary.LastTouchedDeviceIsGamepad)
                     {
                         quad.Render(leftBumper, shared.leftBumperPosition, new Vector2(96, 96), "TexturedRegularAlpha");
                         quad.Render(rightBumper, shared.rightBumperPosition, new Vector2(96, 96), "TexturedRegularAlpha");
@@ -3265,7 +3266,7 @@ namespace Boku
                     {
                         shared.SetUpPopup(false);
 
-                        if (shared.popup.NumItems > 0 && GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                        if (shared.popup.NumItems > 0 && KoiLibrary.LastTouchedDeviceIsGamepad)
                         {
                             quad.Render(ButtonTextures.AButton, new Vector4(1, 1, 1, AButtonAlpha), pos + new Vector2(4, 4), new Vector2(52, 52), "TexturedRegularAlpha");
                             //pos.X += 64;
@@ -3276,7 +3277,7 @@ namespace Boku
                 }
 
                 // Render the scroll arrows if in mouse mode.
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     pos = new Vector2(xOffset + 22, 260);
                     Vector2 size = new Vector2(arrowLeft.Width, arrowLeft.Height);
@@ -3307,7 +3308,7 @@ namespace Boku
                     {
                         e.Render(shared.camera);
 
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                        if (KoiLibrary.LastTouchedDeviceIsGamepad)
                         {
                             // If the popup is active, render <B> Back under it.
                             batch.Begin();
@@ -3441,7 +3442,7 @@ namespace Boku
             {
                 if (tex == null)
                 {
-                    tex = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + path);
+                    tex = KoiLibrary.LoadTexture2D(path);
                 }
             }   // end of LoadTexture()
 
@@ -3480,24 +3481,24 @@ namespace Boku
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref localBackground);
-                BokuGame.Release(ref communityBackground);
-                BokuGame.Release(ref sharingBackground);
+                DeviceResetX.Release(ref localBackground);
+                DeviceResetX.Release(ref communityBackground);
+                DeviceResetX.Release(ref sharingBackground);
 
-                BokuGame.Release(ref whiteTile);
-                BokuGame.Release(ref blackTile);
-                BokuGame.Release(ref blueTile);
-                BokuGame.Release(ref blueTileWide);
-                BokuGame.Release(ref blueTileWide2);
-                BokuGame.Release(ref smileyTexture);
-                BokuGame.Release(ref commentTexture);
-                BokuGame.Release(ref downloadsTexture);
-                BokuGame.Release(ref auxMenuShadow);
-                BokuGame.Release(ref leftBumper);
-                BokuGame.Release(ref rightBumper);
-                BokuGame.Release(ref corner);
-                BokuGame.Release(ref arrowLeft);
-                BokuGame.Release(ref arrowRight);
+                DeviceResetX.Release(ref whiteTile);
+                DeviceResetX.Release(ref blackTile);
+                DeviceResetX.Release(ref blueTile);
+                DeviceResetX.Release(ref blueTileWide);
+                DeviceResetX.Release(ref blueTileWide2);
+                DeviceResetX.Release(ref smileyTexture);
+                DeviceResetX.Release(ref commentTexture);
+                DeviceResetX.Release(ref downloadsTexture);
+                DeviceResetX.Release(ref auxMenuShadow);
+                DeviceResetX.Release(ref leftBumper);
+                DeviceResetX.Release(ref rightBumper);
+                DeviceResetX.Release(ref corner);
+                DeviceResetX.Release(ref arrowLeft);
+                DeviceResetX.Release(ref arrowRight);
             }   // end of LoadLevelMenu RenderObj UnloadContent()
 
             /// <summary>
@@ -3718,7 +3719,7 @@ namespace Boku
             packet.UserId = 0;
             if (0 == Web.Community.Async_PostLike(packet, Callback_PostLikeByWorldId, null))
             {
-                // TODO: Handle Error
+                // TODO(Scoy_Socl): Handle Error
             }
         }   // end of LikeLevel()
 
@@ -3745,7 +3746,7 @@ namespace Boku
             packet.WorldId = shared.CurWorld.WorldId;
             if (0 == Web.Community.Async_PostLikeByWorldId(packet, Callback_PostLikeByWorldId, null))
             {
-                // TODO: Handle Error
+                // TODO(Scoy_Socl): Handle Error
             }
         }   // end of LikeLevelByWorldId()
 
@@ -4023,7 +4024,7 @@ namespace Boku
                     // tell the user that a new version is available.
                     if (!LevelPackage.ImportAllLevels(null))
                     {
-                        GamePadInput.CreateNewerVersionDialog();
+                        //GamePadInput.CreateNewerVersionDialog();
                     }
 
                     shared.remoteBrowser = null;
@@ -4089,7 +4090,7 @@ namespace Boku
                 pendingState = States.Active;
                 BokuGame.objectListDirty = true;
 
-                AuthUI.ShowStatusDialog();
+                AuthUI.ShowStatusDialog(DialogManagerX.CurrentFocusDialogCamera);
             }
         }
 
@@ -4109,7 +4110,7 @@ namespace Boku
                 // tell the user that a new version is available.
                 if (!LevelPackage.ImportAllLevels(null))
                 {
-                    GamePadInput.CreateNewerVersionDialog();
+                    //GamePadInput.CreateNewerVersionDialog();
                 }
 
                 shared.mainBrowser = new LocalLevelBrowser();
@@ -4399,7 +4400,7 @@ namespace Boku
             switch (whichMenu)
             {
                 case ReturnTo.MainMenu:
-                    MainMenu.Instance.Activate();
+                    SceneManager.SwitchToScene("MainMenuScene");
                     break;
 
                 case ReturnTo.MiniHub:
@@ -4407,10 +4408,11 @@ namespace Boku
                     break;
 
                 case ReturnTo.EditWorldParameters:
-                    InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.EditWorldParameters;
+                    SceneManager.SwitchToScene("WorldSettingsMenuScene");
                     break;
 
                 case ReturnTo.Editor:
+                    SceneManager.SwitchToScene("EditWorldScene");
                     break;
             }
         }
@@ -4426,19 +4428,18 @@ namespace Boku
 
         public void InitDeviceResources(GraphicsDevice device)
         {
-            // TODO (****) *** How does this get scaled if window changes size???
+            // TODO (scoy) *** How does this get scaled if window changes size???
             Point deviceSize = new Point(device.Viewport.Width, device.Viewport.Height);
 
             blockingOpMessage = new SimpleMessage();
             blockingOpMessage.Center = new Point(deviceSize.X / 2, deviceSize.Y / 2);
 
-            Texture2D messageTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                + @"Textures\Terrain\WaitPicture");
+            Texture2D messageTexture = KoiLibrary.LoadTexture2D(@"Textures\Terrain\WaitPicture");
             blockingOpMessage.AddTexture(messageTexture);
             blockingOpMessage.Size = new Point(deviceSize.Y / 3, deviceSize.Y / 3);
 
             blockingOpMessage.Text = "Text Unset";
-            blockingOpMessage.Font = UI2D.Shared.GetGameFont18Bold;
+            blockingOpMessage.Font = SharedX.GetGameFont18Bold;
             blockingOpMessage.TextCenter = new Point(
                 blockingOpMessage.Center.X,
                 blockingOpMessage.Center.Y + blockingOpMessage.Size.Y / 2);

@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Common;
 using Boku.Fx;
@@ -73,15 +76,15 @@ namespace Boku.UI2D
         {
             if (texture == null)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-                RenderTarget2D rt = UI2D.Shared.RenderTarget128_128;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
+                RenderTarget2D rt = SharedX.RenderTarget128_128;
                 InGame.SetRenderTarget(rt);
 
                 InGame.Clear(Color.Transparent);
 
                 // Background.
                 ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
-                Texture2D background = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\BlackSquare");
+                Texture2D background = KoiLibrary.LoadTexture2D(@"Textures\GridElements\BlackSquare");
                 quad.Render(background, Vector2.Zero, new Vector2(rt.Width, rt.Height), "TexturedRegularAlpha");
 
                 // Y button
@@ -90,8 +93,8 @@ namespace Boku.UI2D
 
                 // Text.
                 Color color = Color.Yellow;
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
-                UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont24Bold;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
+                GetFont Font = SharedX.GetGameFont24Bold;
                 Vector2 position = new Vector2(0, 120 - Font().LineSpacing);
                 position.X = 64 - 0.5f * Font().MeasureString(Strings.Localize("editObjectParams.back")).X;
                 batch.Begin();

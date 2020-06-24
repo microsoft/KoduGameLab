@@ -111,7 +111,7 @@ namespace Boku.UI
                     }
                 }
                 // add other supported classes here otherwise they get
-                // tossed out and ingored
+                // tossed out and ignored
             }
         }
 

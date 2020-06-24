@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
 
 using Boku.Base;
 using Boku.Common;
@@ -66,7 +69,7 @@ namespace Boku
         private Color shadowColor = new Color(0, 0, 0, 10);
         private Vector2 shadowOffset = new Vector2(0, 6);
 
-        private RenderTarget2D diffuse = null;  // We're grabbig this from UI2D.Shared.  Is this going to be a problem???
+        private RenderTarget2D diffuse = null;  // We're grabbig this from Shared.  Is this going to be a problem???
                                                 // TODO Try testing multiple simultanious dialog boxes.
         private Texture2D background = null;
 
@@ -135,7 +138,7 @@ namespace Boku
                 if (labelA != null)
                 {
                     GetTexture getTexture = delegate() { return ButtonTextures.AButton; };
-                    aButton = new Button(labelA, Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                    aButton = new Button(labelA, Color.White, getTexture, SharedX.GetGameFont20);
                 }
                 else
                 {
@@ -153,7 +156,7 @@ namespace Boku
                 if (labelB != null)
                 {
                     GetTexture getTexture = delegate() { return ButtonTextures.BButton; };
-                    bButton = new Button(labelB, Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                    bButton = new Button(labelB, Color.White, getTexture, SharedX.GetGameFont20);
                 }
                 else
                 {
@@ -172,7 +175,7 @@ namespace Boku
                 if (labelX != null)
                 {
                     GetTexture getTexture = delegate() { return ButtonTextures.XButton; };
-                    xButton = new Button(labelX, Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                    xButton = new Button(labelX, Color.White, getTexture, SharedX.GetGameFont20);
                 }
                 else
                 {
@@ -191,7 +194,7 @@ namespace Boku
                 if (labelY != null)
                 {
                     GetTexture getTexture = delegate() { return ButtonTextures.YButton; };
-                    yButton = new Button(labelY, Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                    yButton = new Button(labelY, Color.White, getTexture, SharedX.GetGameFont20);
                 }
                 else
                 {
@@ -247,22 +250,22 @@ namespace Boku
             if (labelA != null)
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.AButton; };
-                aButton = new Button(labelA, Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                aButton = new Button(labelA, Color.White, getTexture, SharedX.GetGameFont20);
             }
             if (labelB != null)
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.BButton; };
-                bButton = new Button(labelB, Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                bButton = new Button(labelB, Color.White, getTexture, SharedX.GetGameFont20);
             }
             if (labelX != null)
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.XButton; };
-                xButton = new Button(labelX, Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                xButton = new Button(labelX, Color.White, getTexture, SharedX.GetGameFont20);
             }
             if (labelY != null)
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.YButton; };
-                yButton = new Button(labelY, Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                yButton = new Button(labelY, Color.White, getTexture, SharedX.GetGameFont20);
             }
         }   // end of c'tor
 
@@ -270,19 +273,19 @@ namespace Boku
         {
             int maxWidth = width - 2 * margin;
             
-            textBlob = new TextBlob(UI2D.Shared.GetGameFont30Bold, text, maxWidth);
-            textBlob.Justification = UIGridElement.Justification.Center;
+            textBlob = new TextBlob(SharedX.GetGameFont30Bold, text, maxWidth);
+            textBlob.Justification = TextHelper.Justification.Center;
 
             // If this big a font is too many lines, use a smaller one.
             if (textBlob.NumLines > 3)
             {
-                textBlob.Font = UI2D.Shared.GetGameFont24;
+                textBlob.Font = SharedX.GetGameFont24;
             }
 
             // Still too big?
             if (textBlob.NumLines > 4)
             {
-                textBlob.Font = UI2D.Shared.GetGameFont20;
+                textBlob.Font = SharedX.GetGameFont20;
             }
 
             shadowOffset.Y = textBlob.TotalSpacing / 8;
@@ -302,7 +305,7 @@ namespace Boku
 
                 // We rely on this render target to get fully running. Refuse
                 // to activate until it's available.
-                if (UI2D.Shared.RenderTarget512_302 != null)
+                if (SharedX.RenderTarget512_302 != null)
                 {
                     // If we're still dirty, someone is trying to activate us before the system
                     // is loaded enough to support us. So refuse to activate until we have everything
@@ -388,7 +391,7 @@ namespace Boku
                     }
                     Vector2 hit;
 
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    if (KoiLibrary.LastTouchedDeviceIsTouch)
                     {
                         for (int i = 0; i < TouchInput.TouchCount; i++)
                         {
@@ -396,7 +399,7 @@ namespace Boku
                             hit = touch.position;
                             if(camera != null)
                             {
-                                hit = MouseInput.AdjustHitPosition(hit, camera, false, false);
+                                hit = LowLevelMouseInput.AdjustHitPosition(hit, camera, false, false);
                             }
                             hit = hit - pos;
                            
@@ -406,7 +409,7 @@ namespace Boku
                     else
                     {
                         // Since the dialog is screenspace we can use the mouse position directly.
-                        hit = MouseInput.PositionVec;
+                        hit = LowLevelMouseInput.PositionVec;
                         if (useRtCoords)
                         {
                             hit = ScreenWarp.ScreenToRT(hit);
@@ -589,19 +592,19 @@ namespace Boku
             dirty = true;
             if (dirty)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 LoadContent(true);
 
-                diffuse = UI2D.Shared.RenderTarget512_302;
+                diffuse = SharedX.RenderTarget512_302;
                 if (diffuse == null)
                 {
                     // Not ready yet, remain dirty.
                     return;
                 }
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
-                UI2D.Shared.GetFont Font20 = UI2D.Shared.GetGameFont20;
-                UI2D.Shared.GetFont Font24 = UI2D.Shared.GetGameFont24;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
+                GetFont Font20 = SharedX.GetGameFont20;
+                GetFont Font24 = SharedX.GetGameFont24;
 
                 InGame.SetRenderTarget(diffuse);
                 InGame.Clear(Color.Transparent);
@@ -620,8 +623,8 @@ namespace Boku
                 // Offset based on number of lines.
                 pos.Y -= (int)(textBlob.TotalSpacing * (textBlob.NumLines - 1) / 2.0f);
 
-                textBlob.RenderWithButtons(pos + shadowOffset, shadowColor);
-                textBlob.RenderWithButtons(pos, textColor);
+                textBlob.RenderText(null, pos + shadowOffset, shadowColor);
+                textBlob.RenderText(null, pos, textColor);
 
                 //
                 // Render any active buttons and the text that goes with them.
@@ -699,7 +702,7 @@ namespace Boku
             // Load the textures.
             if (background == null)
             {
-                background = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MessageBox\MessageBoxBackground");
+                background = KoiLibrary.LoadTexture2D(@"Textures\MessageBox\MessageBoxBackground");
             }
 
         }   // end of ModularMessageDialog LoadContent();
@@ -711,7 +714,7 @@ namespace Boku
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref background);
+            DeviceResetX.Release(ref background);
         }
 
         /// <summary>

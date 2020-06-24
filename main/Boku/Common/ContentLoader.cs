@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 
 namespace Boku.Common
@@ -73,7 +75,7 @@ namespace Boku.Common
             if (immediate)
             {
                 item.LoadContent(immediate);
-                item.InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+                item.InitDeviceResources(KoiLibrary.GraphicsDevice);
                 BokuGame.Loaded(item);
             }
             else
@@ -108,7 +110,7 @@ namespace Boku.Common
                     if (item != null)
                     {
                         // Perform the init
-                        item.InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+                        item.InitDeviceResources(KoiLibrary.GraphicsDevice);
                         BokuGame.Loaded(item);
                     }
 

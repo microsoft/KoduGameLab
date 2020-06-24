@@ -37,17 +37,7 @@ namespace Boku
         /// </summary>
         protected class ToolBoxUpdateObj : BaseEditUpdateObj
         {
-            #region Accessor
-
-            /// <summary>
-            /// Tells the toolbox which is the currently active tool.
-            /// </summary>
-            public UpdateMode CurrentMode
-            {
-                get { return shared.ToolBox.CurrentMode; }
-                set { shared.ToolBox.CurrentMode = value; }
-            }
-            
+            #region Accessors
             #endregion
 
             // c'tor
@@ -65,22 +55,19 @@ namespace Boku
             {
                 base.Update();
 
-                // No need to check for input focus or anything.  If
-                // we're active then the ToolBox object has focus.
-
-                shared.ToolBox.Update();
-
                 // If the ToolBox is no longer active we're done.
+                /*
                 if (!shared.ToolBox.Active)
                 {
                     return;
                 }
+                */
 
                 // Do the common bits of the Update().
                 // The actual input focus is in the currently active tool so
                 // temporarily push ourselves onto the command stack so we
                 // can still steal camera control input.
-                // TODO (****) Move this up above the tool update to remove a frame of lag?  Will this cause other problems?
+                // TODO (scoy) Move this up above the tool update to remove a frame of lag?  Will this cause other problems?
                 CommandStack.Push(commandMap);
 
                 // No need to lock the zoom any more since we're using the trigger buttons for grid selection.
@@ -99,9 +86,6 @@ namespace Boku
                 base.Activate();
 
                 parent.cursor3D.Deactivate();
-                shared.ToolBox.Activate();
-
-           //     timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameToolBox);
 
             }   // end of ToolBoxUpdateObj Activate()
 
@@ -109,10 +93,6 @@ namespace Boku
             {
                 base.Deactivate();
 
-                // Probably overkill.
-                shared.ToolBox.Deactivate();
-
-            //    Instrumentation.StopTimer(timerInstrument);
             }
 
         }   // end of class ToolBoxUpdateObj

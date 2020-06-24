@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Localization;

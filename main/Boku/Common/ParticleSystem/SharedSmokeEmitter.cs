@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 
@@ -83,7 +85,7 @@ namespace Boku.Common.ParticleSystem
 
         #region Members
 
-        private Effect effect = null;        // TODO (****) Make this private.
+        private Effect effect = null;        // TODO (scoy) Make this private.
 
         private DynamicVertexBuffer vbuf = null;
         private int stride = 96;
@@ -247,7 +249,7 @@ namespace Boku.Common.ParticleSystem
         /// </summary>
         public override void PreRender(Camera camera)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             if (InGame.inGame.renderEffects == InGame.RenderEffect.DistortionPass)
             {
@@ -309,7 +311,7 @@ namespace Boku.Common.ParticleSystem
         {
             if (numActiveParticles > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 device.SetVertexBuffer(vbuf);
 
                 Render(effect);
@@ -324,13 +326,13 @@ namespace Boku.Common.ParticleSystem
         {
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\SharedParticle2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\SharedParticle2D");
             }
 
             if (texture == null)
             {
                 
-                texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\" + TextureName);
+                texture = KoiLibrary.LoadTexture2D(@"Textures\" + TextureName);
             }
 
             base.LoadContent(immediate);
@@ -348,9 +350,9 @@ namespace Boku.Common.ParticleSystem
 
         public override void UnloadContent()
         {
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref vbuf);
-            BokuGame.Release(ref texture);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref vbuf);
+            DeviceResetX.Release(ref texture);
 
             firstParticle = 0;
             numActiveParticles = 0;

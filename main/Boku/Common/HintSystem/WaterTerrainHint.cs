@@ -13,6 +13,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.UI.Dialogs;
+using KoiX.Input;
+using KoiX.Scenes;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -38,22 +43,21 @@ namespace Boku.Common.HintSystem
 
             bool editingWater = false;
 
-            if(GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+            if (KoiLibrary.LastTouchedDeviceIsGamepad)
             {
                 // GamePad mode.
-                if(InGame.inGame.CurrentUpdateMode == InGame.UpdateMode.TerrainWater)
+                if (InGame.inGame.CurrentUpdateMode == InGame.UpdateMode.TerrainWater)
                 {
-                    
+
                     editingWater = true;
                 }
             }
             else
             {
                 // MouseEdit mode.
-                if(InGame.inGame.CurrentUpdateMode == InGame.UpdateMode.MouseEdit)
+                if (InGame.inGame.CurrentUpdateMode == InGame.UpdateMode.MouseEdit)
                 {
-                    if(InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == InGame.BaseEditUpdateObj.ToolMode.WaterRaiseLower &&
-                        InGame.inGame.mouseEditUpdateObj.ToolBar.RevertMode == InGame.BaseEditUpdateObj.ToolMode.WaterRaiseLower)
+                    if (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.Water)
                     {
                         editingWater = true;
                     }

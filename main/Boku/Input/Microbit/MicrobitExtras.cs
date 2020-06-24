@@ -66,7 +66,7 @@ namespace Boku.Input
 #if !NETFX_CORE
         public static Microbit GetMicrobitOrNull(GamePadSensor.PlayerId playerId)
         {
-            // TODO @*******: Decide how to handle the PlayerId.All case, for now use player one.
+            // TODO @eanders: Decide how to handle the PlayerId.All case, for now use player one.
             if (playerId == GamePadSensor.PlayerId.All)
             {
                 playerId = GamePadSensor.PlayerId.One;

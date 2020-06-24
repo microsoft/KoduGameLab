@@ -1,8 +1,9 @@
-﻿// Uncomment this to allow AutoSave to write through to disk.  This is useful for debugging
-// since it allows Resume to work from the main menu.
-#define AutoSaveToDisk
-
+﻿
+// Uncomment to get debug spew on camera saves and resets.
 //#define CAMERA_DEBUG
+
+// Uncomment to get debug spew on saves and loads.
+#define DEBUG_SAVE_LOAD
 
 using System;
 using System.Collections;
@@ -21,6 +22,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
 
 using Boku.Base;
 using Boku.SimWorld;
@@ -59,6 +62,11 @@ namespace Boku
                                                             // but not yet saved for real.
 
         private static int inreset = 0;
+
+        static string[] NewWorlds = new string[] { @"03a1b038-fd3f-492f-b18c-2a197fe68701",
+                                                    @"71b3660d-f472-49b2-90c3-2de1758e1f64",
+                                                    @"be4ca04b-a3cc-4f76-ba7a-84eb917bcf92" }; 
+
         #endregion
 
         #region Accessors
@@ -173,7 +181,7 @@ namespace Boku
             {
                 // Done.  If this was caused by the SaveChanges dialog popping up then
                 // we need to return to wherever the user was trying to go in the 
-                // first place.  If this was caused by the user explicitely saving
+                // first place.  If this was caused by the user explicitly saving
                 // then we should return to running.
 
                 Deactivate();
@@ -392,6 +400,9 @@ namespace Boku
             //
             // Update xmlWorldData.
             //
+#if DEBUG_SAVE_LOAD
+            Debug.Print("Autosaving");
+#endif
 
             // Save the creatableIds
             xmlWorldData.creatableIds.Clear();
@@ -441,7 +452,7 @@ namespace Boku
             //
             // xmlLevelData needs to be refreshed.
             //
-            // TODO (****)  The whole interaction between autosave and linked levels needs
+            // TODO (scoy)  The whole interaction between autosave and linked levels needs
             //              to be rethought.  If anything is dirty it should be flagged and
             //              the user warned on run, not later when trying to switch levels.
             //              Even more useful would be to treat linked levels as a single
@@ -485,7 +496,6 @@ namespace Boku
             // created filename.
             CreateNewTerrainFiles(xmlWorldData, name, false);
 
-#if AutoSaveToDisk
             {
                 // Get the new filenames.
                 string worldFilename = BokuGame.MyWorldsPath + name + @".Xml";
@@ -508,8 +518,7 @@ namespace Boku
 
             /// Don't flush file changes to storage hardware for just an autosave. 
             /// We'll continue flushing on internal build, so resume will still
-            /// work after breaking in the debugger etc. ***.
-#endif
+            /// work after breaking in the debugger etc. mafinch.
 
             IsLevelDirty = false;
             AutoSaved = true;
@@ -522,8 +531,17 @@ namespace Boku
         /// Saves the level to disk.
         /// </summary>
         /// <param name="newName">The user has changed the name of the level.</param>
-        public void SaveLevel(bool newName, bool preserveLinks)
+        public void SaveLevel(
+#if DEBUG
+            // This forces us to use named arguments for _all_ arguements.
+            int _ = 0,
+#endif
+            bool newName = false, bool preserveLinks = false)
         {
+#if DEBUG_SAVE_LOAD
+            Debug.Print("SaveLevel");
+#endif
+
             LevelMetadata oldLevelData = null;
 
             if (XmlDataHelper.CheckWorldExistsByGenre(xmlWorldData.id, (Genres)xmlWorldData.genres))
@@ -544,17 +562,14 @@ namespace Boku
             }
 
             // If we're saving the EmptyWorld we should generate a new guid.
-            string curWorldFileName = xmlWorldData.id.ToString() + ".Xml";
-            if (curWorldFileName == MiniHub.emptyWorldFileName)
+            string curWorldFileName = xmlWorldData.id.ToString() + ".Xml";            
+            if (curWorldFileName.StartsWith(NewWorlds[0]) || curWorldFileName.StartsWith(NewWorlds[1]) || curWorldFileName.StartsWith(NewWorlds[2]))
             {
                 xmlWorldData.id = Guid.NewGuid();
             }
 
-            //if genres hasn't been populated yet, populate it with MyWorlds flag at least
-            if (xmlWorldData.genres == 0)
-            {
-                xmlWorldData.genres |= (int)Genres.MyWorlds;
-            }
+            // Always add MyWorlds flag.
+            xmlWorldData.genres |= (int)Genres.MyWorlds;
 
             //we're saving a non-local world, deep copy in both directions
             if ((xmlWorldData.genres & (int)Genres.BuiltInWorlds) != 0 ||
@@ -695,6 +710,10 @@ namespace Boku
         /// <param name="newName">The user has changed the name of the level.</param>
         private void SaveLevel(XmlWorldData worldData, XmlLevelData levelData, Texture2D thumbnail, bool newName)
         {
+#if DEBUG_SAVE_LOAD
+            Debug.Print("SaveLevel2");
+#endif
+
             // If we have a new name then we need a new id.  Also if the level
             // we're saving is a BuiltInWorld, give it a new ID so we don't
             // overwrite the built in one.
@@ -967,6 +986,10 @@ namespace Boku
         /// <returns>true on success</returns>
         public bool LoadAutoSave(string name, bool andRun, bool initUndoStack)
         {
+#if DEBUG_SAVE_LOAD
+            Debug.Print("LoadAutoSave");
+#endif
+
             string fullPath = BokuGame.Settings.MediaPath + BokuGame.MyWorldsPath + name + @".Xml";
 
             bool result;
@@ -984,7 +1007,7 @@ namespace Boku
 
         /// <summary>
         /// Load the given level.  Despite the name, the 'AndRun' part is controlled by a parameter.
-        /// TODO(****) Should clean up this naming.
+        /// TODO(scoy) Should clean up this naming.
         /// </summary>
         /// <param name="levelFullPath"></param>
         /// <param name="keepPersistentScores">Used when loading linked levels to preserve persistent scores.</param>
@@ -994,6 +1017,10 @@ namespace Boku
         /// <returns>True on successful loading, false otherwise.</returns>
         public bool LoadLevelAndRun(string levelFullPath, bool keepPersistentScores, bool newWorld, bool andRun = true, bool initUndoStack = true)
         {
+#if DEBUG_SAVE_LOAD
+            Debug.Print("LoadLevelAndRun");
+#endif
+
             // These will get reloaded for this level.  This clears 
             // up any NamedFilters from the previous level.
             NamedFilter.UnregisterAllNamedFiltersInCardSpace();
@@ -1049,6 +1076,10 @@ namespace Boku
         /// <param name="keepPersistentScores">This is true when the ResetSim call is for loading a linked level during run.</param>
         public void ResetSim(bool preserveScores, bool removeCreatablesFromScene, bool keepPersistentScores)
         {
+#if DEBUG_SAVE_LOAD
+            Debug.Print("ResetSim");
+#endif
+
             // Since preserveScores happens while executing a Reset action and keepPersistentScores 
             // happens while linking levels we should never see both true at the same time.
             Debug.Assert(!(preserveScores && keepPersistentScores), "Both should never be true.");
@@ -1111,7 +1142,7 @@ namespace Boku
             }
 
             // Load the terrain, but only if we need to.
-            // TODO (****) Does this EVER not blow away the terrain?
+            // TODO (scoy) Does this EVER not blow away the terrain?
             if (terrain == null || terrain.XmlWorldData != xmlWorldData)
             {
                 // Blow away and garbage-collect the old terrain

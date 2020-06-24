@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Audio;
@@ -126,7 +128,7 @@ namespace Boku.UI2D
             blob.edgeSize = 0.2f;
             blob.selectedColor = Color.Black;
             blob.unselectedColor = Color.Black;
-            blob.Font = UI2D.Shared.GetGameFont15_75;
+            blob.Font = SharedX.GetGameFont15_75;
             blob.textColor = Color.White;
             blob.dropShadowColor = Color.Transparent;
             blob.useDropShadow = true;

@@ -6,6 +6,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.SimWorld.Terra;
 
@@ -97,27 +99,19 @@ namespace Boku.SimWorld.Path
         {
             if (diffTex0 == null)
             {
-                diffTex0 = BokuGame.Load<Texture2D>(
-                                    BokuGame.Settings.MediaPath
-                             + @"Textures\Terrain\GroundTextures\FREESAMPLES_38");
+                diffTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\FREESAMPLES_38");
             }
             if (diffTex1 == null)
             {
-                diffTex1 = BokuGame.Load<Texture2D>(
-                                    BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\Concrete03");
+                diffTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\Concrete03");
             }
             if (normTex0 == null)
             {
-                normTex0 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\FREESAMPLES_38_norm");
+                normTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\FREESAMPLES_38_norm");
             }
             if (normTex1 == null)
             {
-                normTex1 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\Blue128x128");
+                normTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\Blue128x128");
             }
 
             base.LoadContent(immediate);

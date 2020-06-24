@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.UI.Dialogs;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI2D;
@@ -20,45 +23,51 @@ namespace Boku.SimWorld.Terra
     /// </summary>
     public class Brush2DManager
     {
-        public enum BrushType
+        public enum BrushShape
         {
-            None = 0x0000,
-            Soft = 0x0001,    
-            Binary = 0x0002,
-            All = Soft | Binary,
-
-            StretchedSoft = 0x0010,
-            StretchedBinary = 0x0020,
-            StretchedAll = StretchedSoft | StretchedBinary,
-
-            Selection = 0x100,
+            Square,
+            Round,
+            MediumRound,
+            SoftRound,
+            LinearSquare,
+            LinearRound,
+            Magic
         }
+
 
         public class Brush2D
         {
             #region Members
 
-            int index;                  // Index into the manager's array for this brush.
-                                        // This index may be different than the index for the current set.
-            BrushType type;             // Type of brush.
+            string id;                  // Name used for this brush, matches ids used in BrushTypeDialog. 
+            BrushShape shape;           // Shape of brush.
             string textureName;         // Resource name for this brush's texture.
             Texture2D texture;          // Texture2D for this brush.
             string tileTextureName;     // Texture2D used in brush picker.
             string helpOverlay;         // Help overlay associated with this brush.
             float[,] data;              // Raw data for the texture for CPU side manipulation.  Converted to float at load time.
+            bool isLinear;              // Is this one of the linear brushes?
 
             #endregion
 
             #region Accessors
 
-            public BrushType Type
+            public string Id
             {
-                get { return type; }
+                get { return id; }
             }
 
-            public int Index
+            /// <summary>
+            /// Shape of the current brush.
+            /// </summary>
+            public BrushShape Shape
             {
-                get { return index; }
+                get { return shape; }
+            }
+
+            public bool IsLinear
+            {
+                get { return isLinear; }
             }
 
             public Texture2D Texture
@@ -119,13 +128,15 @@ namespace Boku.SimWorld.Terra
 
             #region Public
 
-            public Brush2D(int index, BrushType type, string textureName, string tileTextureName, string helpOverlay)
+            public Brush2D(string id, BrushShape shape, string textureName, string tileTextureName, string helpOverlay)
             {
-                this.index = index;
-                this.type = type;
+                this.id = id;
+                this.shape = shape;
                 this.textureName = textureName;
                 this.tileTextureName = tileTextureName;
                 this.helpOverlay = helpOverlay;
+
+                isLinear = (shape == BrushShape.LinearRound) || (shape == BrushShape.LinearSquare);
             }   // end of Brush2D c'tor
 
             /// <summary>
@@ -175,7 +186,9 @@ namespace Boku.SimWorld.Terra
 
         }   // end of struct Brush2D
 
-        private static List<Brush2D> brushList = null;
+        static List<Brush2D> brushList = null;
+
+        static Dictionary<EditModeTools, BrushShape> toolBrushDict;    // Pairing of current brush for each tool.
 
         #region Accessors
         /// <summary>
@@ -195,62 +208,77 @@ namespace Boku.SimWorld.Terra
         {
             brushList = new List<Brush2D>();
 
-            int curIndex = 0;
+            brushList.Add(new Brush2D("square", BrushShape.Square, @"Terrain\SquareBrush", @"Terrain\Square", @"BrushPickerSquare"));
+            brushList.Add(new Brush2D("round", BrushShape.Round, @"Terrain\HardBrush", @"Terrain\Round", @"BrushPickerHardRound"));
+            brushList.Add(new Brush2D("mediumRound", BrushShape.MediumRound, @"Terrain\MidBrush", @"Terrain\MediumRound", @"BrushPickerMediumRound"));
+            brushList.Add(new Brush2D("softRound", BrushShape.SoftRound, @"Terrain\SoftBrush", @"Terrain\SoftRound", @"BrushPickerSoftRound"));
+            brushList.Add(new Brush2D("linearSquare", BrushShape.LinearSquare, @"Terrain\SquareBrush", @"Terrain\LinearSquare", @"BrushPickerSquareLinear"));
+            brushList.Add(new Brush2D("linearRound", BrushShape.LinearRound, @"Terrain\HardBrush", @"Terrain\LinearRound", @"BrushPickerHardRoundLinear"));
+            brushList.Add(new Brush2D("magic", BrushShape.Magic, @"Terrain\SelectBrush", @"Terrain\Magic", @"BrushPickerMagic"));
 
-            brushList.Add(new Brush2D(curIndex++, BrushType.Binary, @"Terrain\SquareBrush", @"Terrain\Square", @"BrushPickerSquare"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.Binary, @"Terrain\HardBrush", @"Terrain\Round", @"BrushPickerHardRound"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.Soft, @"Terrain\MidBrush", @"Terrain\MediumRound", @"BrushPickerMediumRound"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.Soft, @"Terrain\SoftBrush", @"Terrain\SoftRound", @"BrushPickerSoftRound"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.Soft, @"Terrain\MottledBrush", @"Terrain\Mottled", @"BrushPickerMottled"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.StretchedBinary, @"Terrain\SquareBrush", @"Terrain\SquareLinear", @"BrushPickerSquareLinear"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.StretchedBinary, @"Terrain\HardBrush", @"Terrain\HardRoundLinear", @"BrushPickerHardRoundLinear"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.StretchedSoft, @"Terrain\MidBrush", @"Terrain\MediumRoundLinear", @"BrushPickerMediumRoundLinear"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.StretchedSoft, @"Terrain\SoftBrush", @"Terrain\SoftRoundLinear", @"BrushPickerSoftRoundLinear"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.StretchedSoft, @"Terrain\MottledBrush", @"Terrain\MottledLinear", @"BrushPickerMottledLinear"));
-            brushList.Add(new Brush2D(curIndex++, BrushType.Selection, @"Terrain\SelectBrush", @"Terrain\Magic", @"BrushPickerMagic"));
+            toolBrushDict = new Dictionary<EditModeTools, BrushShape>();
 
         }   // end of Brush2DManager c'tor
 
         /// <summary>
-        /// Returns the brush associated with the given index.
+        /// Sets the current brush to be used for the given tool.
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
-        public static Brush2D GetBrush(int index)
+        /// <param name="tool"></param>
+        /// <param name="brush"></param>
+        public static void SetBrushOnTool(EditModeTools tool, BrushShape brush)
         {
-            return index >= 0 ? brushList[index] : null;
-        }   // end of Brush2DManager GetBrush()
+            toolBrushDict[tool] = brush;
+        }   // end of SetBrushOnTool()
 
         /// <summary>
-        /// Returns an array of indices for all the brushes matching the given type.
+        /// Returns the current brush for the given tool.
         /// </summary>
-        /// <param name="type">Type to filter on.</param>
+        /// <param name="tool"></param>
         /// <returns></returns>
-        public static int[] GetBrushSet(BrushType type)
+        public static BrushShape GetBrushForTool(EditModeTools tool)
         {
-            // Count number of brushes in this set.
-            int count = 0;
-            foreach (Brush2D brush in brushList)
+            BrushShape result = BrushShape.Round;   // Default.
+            BrushShape brush;
+            if (toolBrushDict.TryGetValue(tool, out brush))
             {
-                if ((brush.Type & type) != 0)
-                {
-                    count++;
-                }
+                result = brush;
             }
 
-            // Create and return array of indices for the brushes of this type.
-            int[] result = new int[count];
-            count = 0;
-            foreach (Brush2D brush in brushList)
+            return result;
+        }   // end of GetBrushForTool()
+
+        /// <summary>
+        /// Returns brush with matching shape.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static Brush2D GetBrush(BrushShape shape)
+        {
+            Brush2D result = null;
+
+            foreach (Brush2D b in brushList)
             {
-                if ((brush.Type & type) != 0)
+                if (b.Shape == shape)
                 {
-                    result[count++] = brush.Index;
+                    result = b;
+                    break;
                 }
             }
 
             return result;
-        }   // end of Brush2DManager GetBrushSet()
+        }   // end of GetBrush()
+
+        /// <summary>
+        /// Returns the brush associated with the currently active tool.
+        /// </summary>
+        /// <returns></returns>
+        public static Brush2D GetActiveBrush()
+        {
+            EditModeTools tool = ToolBarDialog.CurTool;
+            BrushShape brushShape = GetBrushForTool(tool);
+            Brush2D brush = GetBrush(brushShape);
+            return brush;
+        }   // end GetActiveBrush()
 
         public static void LoadContent(bool immediate)
         {

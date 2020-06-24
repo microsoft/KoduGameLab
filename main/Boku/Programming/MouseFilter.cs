@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Input;
@@ -60,13 +63,13 @@ namespace Boku.Programming
                 switch (type)
                 {
                     case MouseFilterType.LeftButton:
-                        bool l = MouseInput.Left.IsPressed;
-                        wasPressed = MouseInput.Left.WasPressed;
+                        bool l = LowLevelMouseInput.Left.IsPressed;
+                        wasPressed = LowLevelMouseInput.Left.WasPressed;
                         return l;
 
                     case MouseFilterType.RightButton:
-                        bool r = MouseInput.Right.IsPressed;
-                        wasPressed = MouseInput.Right.WasPressed;
+                        bool r = LowLevelMouseInput.Right.IsPressed;
+                        wasPressed = LowLevelMouseInput.Right.WasPressed;
                         return r;
 
                     case MouseFilterType.Hover:
@@ -141,13 +144,13 @@ namespace Boku.Programming
                     // or what mouse is over.
 
                     // Get change in mouse position.
-                    Vector2 pos = new Vector2(MouseInput.Position.X, MouseInput.Position.Y);
+                    Vector2 pos = new Vector2(LowLevelMouseInput.Position.X, LowLevelMouseInput.Position.Y);
 
                     // Rescale and clamp into [-1,1] range.
 
                     // Scale to 0,1 range
-                    pos.X /= BokuGame.bokuGame.GraphicsDevice.Viewport.Width;
-                    pos.Y /= BokuGame.bokuGame.GraphicsDevice.Viewport.Height;
+                    pos.X /= KoiLibrary.GraphicsDevice.Viewport.Width;
+                    pos.Y /= KoiLibrary.GraphicsDevice.Viewport.Height;
 
                     // Transform from 0,1 to -1,1
                     pos.X = pos.X * 2.0f - 1.0f;
@@ -164,21 +167,21 @@ namespace Boku.Programming
                 {
                     bool meFilter = reflex.Data.FilterExists("filter.me");
 
-                    if (MouseEdit.HitInfo.ActorHit != null)
+                    if (MouseEdit.MouseTouchHitInfo.ActorHit != null)
                     {
                         // If this reflex uses the movement actuator then totally ignore clicks on self.  This
                         // allows us to still use clicks on self to change state w/o overwriting movement target.
-                        if (!(reflex.IsMovement && MouseEdit.HitInfo.ActorHit == reflex.Task.GameActor))
+                        if (!(reflex.IsMovement && MouseEdit.MouseTouchHitInfo.ActorHit == reflex.Task.GameActor))
                         {
                             // At this point we need to peek at the filters and look for a MeFilter.  We just use
                             // this to decide what to put into the MousePosition and MouseActor fields.  The real
                             // filtering will be done in the sensor.
-                            if (!meFilter || MouseEdit.HitInfo.ActorHit == reflex.Task.GameActor)
+                            if (!meFilter || MouseEdit.MouseTouchHitInfo.ActorHit == reflex.Task.GameActor)
                             {
-                                reflex.MousePosition = MouseEdit.HitInfo.ActorPosition;
-                                reflex.MouseActor = MouseEdit.HitInfo.ActorHit;
+                                reflex.MousePosition = MouseEdit.MouseTouchHitInfo.ActorPosition;
+                                reflex.MouseActor = MouseEdit.MouseTouchHitInfo.ActorHit;
 
-                                param = new Vector2(MouseEdit.HitInfo.ActorPosition.X, MouseEdit.HitInfo.ActorPosition.Y);
+                                param = new Vector2(MouseEdit.MouseTouchHitInfo.ActorPosition.X, MouseEdit.MouseTouchHitInfo.ActorPosition.Y);
                             }
                         }
                     }
@@ -186,10 +189,10 @@ namespace Boku.Programming
                     {
                         if (!meFilter)
                         {
-                            reflex.MousePosition = MouseEdit.HitInfo.TerrainPosition;
+                            reflex.MousePosition = MouseEdit.MouseTouchHitInfo.TerrainPosition;
                             reflex.MouseActor = null;
 
-                            param = new Vector2(MouseEdit.HitInfo.TerrainPosition.X, MouseEdit.HitInfo.TerrainPosition.Y);
+                            param = new Vector2(MouseEdit.MouseTouchHitInfo.TerrainPosition.X, MouseEdit.MouseTouchHitInfo.TerrainPosition.Y);
                         }
                     }
                 }

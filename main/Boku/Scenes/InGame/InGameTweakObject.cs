@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.SimWorld;
@@ -273,7 +276,7 @@ namespace Boku
 
             }   // end of CheckForEditFocusObject()
 
-            // TODO (****) this is identical to the one in InGameEditObject.  Should figure out how to share.
+            // TODO (scoy) this is identical to the one in InGameEditObject.  Should figure out how to share.
             /// <summary>
             /// Handles any changes to the ColorPalette and,
             /// if needed the color of the in focus object.
@@ -336,7 +339,7 @@ namespace Boku
 
 
             //
-            // TODO (****) These are (mostly) identical to the one in InGameEditObject.  Should figure out how to share.
+            // TODO (scoy) These are (mostly) identical to the one in InGameEditObject.  Should figure out how to share.
             //
 
             protected void UpdateAura()

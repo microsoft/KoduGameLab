@@ -10,6 +10,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Common;
 using Boku.Fx;
@@ -57,7 +61,7 @@ namespace Boku.UI2D
         private Vector4 specularColor = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
         private float specularPower = 8.0f;
 
-        private Justification justify = Justification.Left;
+        private TextHelper.Justification justify = TextHelper.Justification.Left;
 
         AABB2D mainHitBox = null;
         AABB2D clearHitBox = null;
@@ -244,11 +248,11 @@ namespace Boku.UI2D
 
         public override void HandleMouseInput(Vector2 hitUV)
         {
-            if (MouseInput.Left.WasPressed)
+            if (LowLevelMouseInput.Left.WasPressed)
             {
                 MouseInput.ClickedOnObject = this;
             }
-            if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == this)
+            if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == this)
             {
                 //if the click was in the clear hit box, clear it out - otherwise, assume selection
                 if (clearHitBox.Contains(hitUV))
@@ -354,8 +358,8 @@ namespace Boku.UI2D
 
                 // Disable writing to alpha channel.
                 // This prevents transparent fringing around the text.
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-                device.BlendState = UI2D.Shared.BlendStateColorWriteRGB;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
+                device.BlendState = SharedX.BlendStateColorWriteRGB;
 
                 // Render the label text into the texture.
                 int margin = 16;
@@ -384,10 +388,10 @@ namespace Boku.UI2D
                 // prepare the label position
                 int labelWidth = (int)(Font().MeasureString(label).X);
                 Vector2 labelPosition = Vector2.Zero;
-                labelPosition.X = TextHelper.CalcJustificationOffset(0, w, labelWidth, Justification.Center);
+                labelPosition.X = TextHelper.CalcJustificationOffset(0, w, labelWidth, TextHelper.Justification.Center);
                 labelPosition.Y = (int)((64 - Font().LineSpacing) / 2.0f);
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
                 //render the main label
                 TextHelper.DrawString(Font, label, labelPosition + shadowOffset, shadowColor);
@@ -395,7 +399,7 @@ namespace Boku.UI2D
                 batch.End();
 
                 //render the world name
-                blob.RenderWithButtons(position, fontColor, shadowColor, shadowOffset, maxLines: 3);
+                blob.RenderText(null, position, fontColor, shadowColor, shadowOffset, maxLines: 3);
 
                 //only render X button if we have a level
                 if (nextLevel != null)
@@ -444,35 +448,35 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the normal map texture.
             if (normalMapName != null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\" + normalMapName);
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\" + normalMapName);
             }
 
             // Load the background textures.
             if (nextLevelWhite == null)
             {
-                nextLevelWhite = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\SliderWhite");
+                nextLevelWhite = KoiLibrary.LoadTexture2D(@"Textures\GridElements\SliderWhite");
             }
 
             if (nextLevelMiddleBlack == null)
             {
-                nextLevelMiddleBlack = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\MiddleBlack");
+                nextLevelMiddleBlack = KoiLibrary.LoadTexture2D(@"Textures\GridElements\MiddleBlack");
             }
             
             if (nextLevelBlack == null)
             {
-                nextLevelBlack = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\RadioBoxBlack");
+                nextLevelBlack = KoiLibrary.LoadTexture2D(@"Textures\GridElements\RadioBoxBlack");
             }
 
             if (nextLevelNone == null)
             {
-                nextLevelNone = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\NoNextLevel");
+                nextLevelNone = KoiLibrary.LoadTexture2D(@"Textures\GridElements\NoNextLevel");
             }
 
         }   // end of UIGridModularCheckboxElement LoadContent()
@@ -501,12 +505,12 @@ namespace Boku.UI2D
 
             ReleaseRenderTargets();
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
-            BokuGame.Release(ref nextLevelWhite);
-            BokuGame.Release(ref nextLevelMiddleBlack);
-            BokuGame.Release(ref nextLevelBlack);
-            BokuGame.Release(ref nextLevelNone);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
+            DeviceResetX.Release(ref nextLevelWhite);
+            DeviceResetX.Release(ref nextLevelMiddleBlack);
+            DeviceResetX.Release(ref nextLevelBlack);
+            DeviceResetX.Release(ref nextLevelNone);
 
             BokuGame.Unload(geometry);
             geometry = null;
@@ -535,7 +539,7 @@ namespace Boku.UI2D
                 SurfaceFormat.Color,
                 DepthFormat.None);
 
-            InGame.GetRT("UIGridModularNextLevelElement", diffuse);
+            SharedX.GetRT("UIGridModularNextLevelElement", diffuse);
 
             // Refresh the texture.
             dirty = true;
@@ -544,8 +548,8 @@ namespace Boku.UI2D
 
         private void ReleaseRenderTargets()
         {
-            InGame.RelRT("UIGridModularCheckboxElement", diffuse);
-            BokuGame.Release(ref diffuse);
+            SharedX.RelRT("UIGridModularCheckboxElement", diffuse);
+            DeviceResetX.Release(ref diffuse);
         }
 
     }   // end of class UIGridModularCheckboxElement

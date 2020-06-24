@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.ParticleSystem;
@@ -77,7 +79,7 @@ namespace Boku.Fx
                     ShaderGlobals.FixExplicitBloom(bloom);
 
 
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                     Sphere sphere = Sphere.GetInstance();
 
@@ -342,14 +344,14 @@ namespace Boku.Fx
         {
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Shield");
+                effect = KoiLibrary.LoadEffect(@"Shaders\Shield");
                 ShaderGlobals.RegisterEffect("Shield", effect);
                 effectCache.Load(effect, "");
             }
 
             if (crossTexture == null)
             {
-                crossTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Ring");
+                crossTexture = KoiLibrary.LoadTexture2D(@"Textures\Ring");
             }
         }
 
@@ -361,7 +363,7 @@ namespace Boku.Fx
                 effect = null;
             }
 
-            BokuGame.Release(ref crossTexture);
+            DeviceResetX.Release(ref crossTexture);
         }
         #endregion Internal
     };

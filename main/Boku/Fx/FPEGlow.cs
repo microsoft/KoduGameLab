@@ -8,6 +8,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -122,12 +124,12 @@ namespace Boku.Fx
             {
                 if (mask == null)
                 {
-                    mask = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\FPEMask");
+                    mask = KoiLibrary.LoadTexture2D(@"Textures\FPEMask");
                 }
 
                 if (effect == null)
                 {
-                    effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\FPEGlow");
+                    effect = KoiLibrary.LoadEffect(@"Shaders\FPEGlow");
                     effectCache.Load(Effect, "");
                 }
 
@@ -144,8 +146,8 @@ namespace Boku.Fx
             /// </summary>
             public override void UnloadContent()
             {
-                BokuGame.Release(ref mask);
-                BokuGame.Release(ref effect);
+                DeviceResetX.Release(ref mask);
+                DeviceResetX.Release(ref effect);
 
                 effectCache.UnLoad();
 

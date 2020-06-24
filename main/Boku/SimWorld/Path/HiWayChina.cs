@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.SimWorld.Terra;
 
@@ -45,27 +47,19 @@ namespace Boku.SimWorld.Path
         {
             if (diffTex0 == null)
             {
-                diffTex0 = BokuGame.Load<Texture2D>(
-                                    BokuGame.Settings.MediaPath
-                            + @"Textures\Terrain\GroundTextures\StuccoWhite");
+                diffTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\StuccoWhite");
             }
             if (diffTex1 == null)
             {
-                diffTex1 = BokuGame.Load<Texture2D>(
-                                    BokuGame.Settings.MediaPath
-                            + @"Textures\White");
+                diffTex1 = KoiLibrary.LoadTexture2D(@"Textures\White");
             }
             if (normTex0 == null)
             {
-                normTex0 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\DistortionWake");
+                normTex0 = KoiLibrary.LoadTexture2D(@"Textures\DistortionWake");
             }
             if (normTex1 == null)
             {
-                normTex1 = BokuGame.Load<Texture2D>(
-                            BokuGame.Settings.MediaPath
-                            + @"Textures\EggDetail1");
+                normTex1 = KoiLibrary.LoadTexture2D(@"Textures\EggDetail1");
             }
 
             base.LoadContent(immediate);
@@ -73,10 +67,10 @@ namespace Boku.SimWorld.Path
 
         public override void UnloadContent()
         {
-            BokuGame.Release(ref diffTex0);
-            BokuGame.Release(ref diffTex1);
-            BokuGame.Release(ref normTex0);
-            BokuGame.Release(ref normTex1);
+            DeviceResetX.Release(ref diffTex0);
+            DeviceResetX.Release(ref diffTex1);
+            DeviceResetX.Release(ref normTex0);
+            DeviceResetX.Release(ref normTex1);
             base.UnloadContent();
         }
 

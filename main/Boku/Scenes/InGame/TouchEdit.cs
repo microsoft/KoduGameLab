@@ -12,6 +12,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Scenes;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -28,209 +32,35 @@ namespace Boku
     /// </summary>
     public class TouchEdit
     {
-        #region Child Classes
-        /// <summary>
-        /// Overblown struct for holding the global information on what objects the touch
-        /// is over.
-        /// </summary>
-        public class TouchHitInfo
-        {
-            #region Members
-            /// <summary>
-            /// Actor under touch.
-            /// </summary>
-            private GameActor actorHit = null;
-            /// <summary>
-            /// LOS ray hit on actorHit's collision bounds.
-            /// </summary>
-            private Vector3 actorPosition = Vector3.Zero;
-
-            private Vector3 lastTouchEditPos = Vector3.Zero;
-
-            /// <summary>
-            /// Position of hit with terrain.
-            /// </summary>
-            private Vector3 terrainPosition = Vector3.Zero;
-            /// <summary>
-            /// Whether terrain is under touch.
-            /// </summary>
-            private bool terrainHit = false;
-            /// <summary>
-            /// True if no terrain under touch, but ray hits zero plane.
-            /// </summary>
-            private bool zeroPlaneHit = false;
-
-            /// <summary>
-            /// The material on the terrain where the touch LOS hits. Undefined if !terrainHit.
-            /// </summary>
-            private ushort terrainMaterial = 0;
-
-            /// <summary>
-            /// If we're dragging around this bot via it's anchor this
-            /// will be the vertical offset from the anchor to the bot.
-            /// </summary>
-            private float verticalOffset = 0.0f;
-
-            #endregion Members
-
-            #region Accessors
-
-            /// <summary>
-            /// Is there an unoccluded actor under the touch?
-            /// </summary>
-            public bool HaveActor
-            {
-                get { return actorHit != null; }
-            }
-
-            /// <summary>
-            /// Return any unoccluded actor under the touch. Must be
-            /// closer than any other other actor under touch, and closer than terrain.
-            /// </summary>
-            public GameActor ActorHit
-            {
-                get { return actorHit; }
-                internal set { actorHit = value; }
-            }
-
-            /// <summary>
-            /// Where the touch LOS ray hits the ActorHit's collision hull. For
-            /// mobile bots, that's a sphere, for other bots (e.g. factory) it's 
-            /// a set of collision primitives. Undefined if !HaveActor.
-            /// </summary>
-            public Vector3 ActorPosition
-            {
-                get 
-                {
-                    Vector3 pos = actorPosition;
-
-                    /*
-                    // Not needed here.  Want to snap the actor's position, not the position of the ray intersect.
-                    if (InGame.inGame.SnapToGrid)
-                    {
-                        // Snap the Actor's position to the center of a terrain cube.
-                        pos = InGame.inGame.SnapPosition(pos);
-                    }
-                    */
-
-                    return pos;
-                }
-                internal set { actorPosition = value; }
-            }
-
-            public Vector3 LastTouchEditPos
-            {
-                get { return lastTouchEditPos; }
-                set { lastTouchEditPos = value; }
-
-            }
-
-            /// <summary>
-            /// Whether current mouse LOS ray hits the terrain
-            /// </summary>
-            public bool TerrainHit
-            {
-                get { return terrainHit; }
-                internal set { terrainHit = value; }
-            }
-
-            /// <summary>
-            /// True if current mouse LOS hits no terrain, but does cross the 
-            /// zero height plane.
-            /// </summary>
-            public bool ZeroPlaneHit
-            {
-                get { return zeroPlaneHit; }
-                internal set { zeroPlaneHit = value; }
-            }
-
-            /// <summary>
-            /// Where the ray hits terrain (or zero plane, check flags).
-            /// </summary>
-            public Vector3 TerrainPosition
-            {
-                get 
-                {
-                    Vector3 pos = terrainPosition;
-
-                    if (InGame.inGame.SnapToGrid)
-                    {
-                        // Snap the position of the hit to the center of the terrain cube.
-                        pos = InGame.SnapPosition(pos);
-                    }
-
-                    return pos; 
-                }
-                internal set { terrainPosition = value; }
-            }
-
-            /// <summary>
-            /// What terrain material is under the mouse. Undefined if !TerrainHit.
-            /// </summary>
-            public ushort TerrainMaterial
-            {
-                get { return terrainMaterial; }
-                internal set { terrainMaterial = value; }
-            }
-
-            /// <summary>
-            /// If we're dragging around this bot via it's anchor this
-            /// will be the vertical offset from the anchor to the bot.
-            /// </summary>
-            public float VerticalOffset
-            {
-                get { return verticalOffset; }
-                set { verticalOffset = value; }
-            }
-
-            #endregion Accessors
-
-            #region Public
-            #endregion Public
-
-            #region Internal
-            /// <summary>
-            /// Reset before doing another test.
-            /// </summary>
-            internal void Clear()
-            {
-                actorHit = null;
-                actorPosition = Vector3.Zero;
-                terrainHit = false;
-                terrainPosition = Vector3.Zero;
-            }
-            #endregion Internal
-        };
-
-        #endregion Child Classes
-
         #region Members
-        private InGame owner = null;
+
+        InGame owner = null;
 
         Vector4 pixelToNDC;
         Vector4 ndcToPixel;
         Vector2 cursorOffset;
         Vector2 resolution;
 
-        private GameActor quasiSelected = null;
-        private bool quasiSelectionActive = false; //whether or not the user is actively touching the selection actor (but not dragging)
-        private Distortion quasiHighlight = null;
+        GameActor quasiSelected = null;
+        bool quasiSelectionActive = false; //whether or not the user is actively touching the selection actor (but not dragging)
+        Distortion quasiHighlight = null;
 
 
-        private float moveTime = 0.0f;
-        private Vector2 moveFrom = Vector2.Zero;
-        private Vector2 moveTo = Vector2.Zero;
+        float moveTime = 0.0f;
+        Vector2 moveFrom = Vector2.Zero;
+        Vector2 moveTo = Vector2.Zero;
 
-        private GameActor dragObject = null;
-        private Distortion dragHighlight = null;
+        GameActor dragObject = null;
+        Distortion dragHighlight = null;
 
-        private static float kMoveTotalTime = 0.15f;
-        private static float kMaxRayCast = 500.0f;
+        static float kMoveTotalTime = 0.15f;
+        static float kMaxRayCast = 500.0f;
 
         //how much to scale up collision radius for ray checks when in touch mode
-        private static float kTouchCollisionScale = 1.75f;
+        static float kTouchCollisionScale = 1.75f;
 
-        private static TouchHitInfo touchHitInfo = new TouchHitInfo();
+        static HitInfo touchMouseTouchHitInfo = new HitInfo();
+
         #endregion Members
 
         #region Accessors
@@ -239,9 +69,9 @@ namespace Boku
         /// This frame's cached info on what the mouse is over. Pretty much read only,
         /// maintained internally.
         /// </summary>
-        public static TouchHitInfo HitInfo
+        public static HitInfo MouseTouchHitInfo
         {
-            get { return touchHitInfo; }
+            get { return touchMouseTouchHitInfo; }
         }
 
         public GameActor HighLit
@@ -270,7 +100,7 @@ namespace Boku
         /// <summary>
         /// Are we currently dragging an object?
         /// </summary>
-        private bool DraggingObject
+        bool DraggingObject
         {
             get { return dragHighlight != null; }
         }
@@ -297,7 +127,7 @@ namespace Boku
         public string UpdateHelpOverlay()
         {
             string helpID = null;
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+            if (KoiLibrary.LastTouchedDeviceIsTouch)
             {
                 if (quasiSelected == null)
                 {
@@ -357,13 +187,6 @@ namespace Boku
         /// <param name="camera"></param>
         public void DoZoom(SmoothCamera camera)
         {
-            // Don't zoom if the AddItem pie menu or pickers are active.
-            if (InGame.inGame.editObjectUpdateObj.newItemSelectorShim.State == Boku.UI.UIShim.States.Active
-                || InGame.inGame.touchEditUpdateObj.PickersActive)
-            {
-                return;
-            }
-
             PinchGestureRecognizer pinchRecognizer = TouchGestureManager.Get().GetActiveGesture(TouchGestureType.Pinch, TouchGestureType.DoubleDrag ) as PinchGestureRecognizer;
             if ( null != pinchRecognizer && pinchRecognizer.IsPinching )
             {
@@ -483,12 +306,12 @@ namespace Boku
             if (TouchGestureManager.Get().TapGesture.WasValidEditObjectTap ||
                 TouchGestureManager.Get().DoubleTapGesture.WasRecognized ||
                 TouchGestureManager.Get().TouchHoldGesture.WasRecognized ||
-                (TouchGestureManager.Get().DragGesture.WasActivated && touchHitInfo.HaveActor))
+                (TouchGestureManager.Get().DragGesture.WasActivated && touchMouseTouchHitInfo.HaveActor))
             {
                 //only allow editing highlight for non-UI touches or if we're "un-touching" the actor
-                if (Boku.InGame.inGame.TouchEdit.HasNonUITouch() || touchHitInfo.ActorHit == null)
+                if (Boku.InGame.inGame.TouchEdit.HasNonUITouch() || touchMouseTouchHitInfo.ActorHit == null)
                 {
-                    ChangeQuasi(touchHitInfo.ActorHit, false);        
+                    ChangeQuasi(touchMouseTouchHitInfo.ActorHit, false);        
                 }
             }
             else if (TouchInput.TouchCount==1 && TouchInput.InitialActorHit != null)
@@ -520,7 +343,7 @@ namespace Boku
         /// <param name="camera"></param>
         public static void Update(Camera camera)
         {            
-            touchHitInfo.Clear();
+            touchMouseTouchHitInfo.Clear();
 
             TouchContact touchInput = TouchInput.GetOldestTouch();
             if (touchInput == null)
@@ -536,12 +359,12 @@ namespace Boku
             if (InGame.inGame.touchEditUpdateObj.ToolBox.EditObjectsToolInstance.DraggingObject)
             {
                 // Nothing to do here.  If we're dragging an object with the mouse then by definition
-                // it is under the mouse pointer and needs to stay there.  So, don't clear mouseHitInfo
+                // it is under the mouse pointer and needs to stay there.  So, don't clear mouseMouseTouchHitInfo
                 // or even bother testing the other objects.
             }
             else
             {
-                touchHitInfo.Clear();
+                touchMouseTouchHitInfo.Clear();
 
                 // The collision system ignores creatables and ghosts so we have to work with them here.
                 // Since we now also want to work with anchors we completely skip the above collision system
@@ -568,23 +391,23 @@ namespace Boku
                         if (radius < collisionRadius)
                         {
                             float distToCreatable = (nearestPoint - src).Length();
-                            touchHitInfo.VerticalOffset = 0.0f;
+                            touchMouseTouchHitInfo.VerticalOffset = 0.0f;
 
-                            if (touchHitInfo.ActorHit == null)
+                            if (touchMouseTouchHitInfo.ActorHit == null)
                             {
                                 // No previous hit, so just fill in the result.
-                                touchHitInfo.ActorHit = ga;
-                                touchHitInfo.ActorPosition = src + ray * distToCreatable;
+                                touchMouseTouchHitInfo.ActorHit = ga;
+                                touchMouseTouchHitInfo.ActorPosition = src + ray * distToCreatable;
                             }
                             else
                             {
                                 // Compare dist with existing hit.
-                                float distToExisting = (touchHitInfo.ActorPosition - src).Length();
+                                float distToExisting = (touchMouseTouchHitInfo.ActorPosition - src).Length();
                                 if (distToCreatable < distToExisting)
                                 {
                                     // New one is closer, so replace previous.
-                                    touchHitInfo.ActorHit = ga;
-                                    touchHitInfo.ActorPosition = src + ray * distToCreatable;
+                                    touchMouseTouchHitInfo.ActorHit = ga;
+                                    touchMouseTouchHitInfo.ActorPosition = src + ray * distToCreatable;
                                 }
                             }
                         }
@@ -596,18 +419,18 @@ namespace Boku
             Vector3 hitPoint = dst;
             if (Terrain.LOSCheckTerrainAndPath(src, dst, ref hitPoint))
             {
-                touchHitInfo.TerrainHit = hitPoint.Z > Terrain.Current.MinHeight * 0.5f;
-                touchHitInfo.TerrainPosition = hitPoint;
-                touchHitInfo.TerrainMaterial = Terrain.GetMaterialType(new Vector2(hitPoint.X, hitPoint.Y));
+                touchMouseTouchHitInfo.TerrainHit = hitPoint.Z > Terrain.Current.MinHeight * 0.5f;
+                touchMouseTouchHitInfo.TerrainPosition = hitPoint;
+                touchMouseTouchHitInfo.TerrainMaterial = Terrain.GetMaterialType(new Vector2(hitPoint.X, hitPoint.Y));
 
                 /// If we have an actor detected under the cursor, see if it was
                 /// occluded by terrain.
-                if (touchHitInfo.HaveActor)
+                if (touchMouseTouchHitInfo.HaveActor)
                 {
-                    if (Vector3.DistanceSquared(src, touchHitInfo.TerrainPosition)
-                        < Vector3.DistanceSquared(src, touchHitInfo.ActorPosition))
+                    if (Vector3.DistanceSquared(src, touchMouseTouchHitInfo.TerrainPosition)
+                        < Vector3.DistanceSquared(src, touchMouseTouchHitInfo.ActorPosition))
                     {
-                        touchHitInfo.ActorHit = null;
+                        touchMouseTouchHitInfo.ActorHit = null;
                     }
                 }
             }
@@ -616,22 +439,22 @@ namespace Boku
                 //Debug.Assert(src.Z > 0, "Assuming camera is always above zero plane.");
                 if (ray.Z < 0)
                 {
-                    touchHitInfo.TerrainPosition = FindAtHeight(camera, TouchInput.GetAsPoint(TouchInput.GetTouchContactByIndex(0).position), 0);
-                    if (Vector3.DistanceSquared(touchHitInfo.TerrainPosition, src)
+                    touchMouseTouchHitInfo.TerrainPosition = FindAtHeight(camera, TouchInput.GetAsPoint(TouchInput.GetTouchContactByIndex(0).position), 0);
+                    if (Vector3.DistanceSquared(touchMouseTouchHitInfo.TerrainPosition, src)
                         <= kMaxRayCast * kMaxRayCast)
                     {
-                        touchHitInfo.ZeroPlaneHit = true;
+                        touchMouseTouchHitInfo.ZeroPlaneHit = true;
                     }
                 }
             }
-            if (touchHitInfo.HaveActor && (InGame.WayPointEdit.TouchOverDistance < float.MaxValue))
+            if (touchMouseTouchHitInfo.HaveActor && (InGame.WayPointEdit.TouchOverDistance < float.MaxValue))
             {
                 float wayDist = InGame.WayPointEdit.TouchOverDistance;
-                float actorDistSq = Vector3.DistanceSquared(src, touchHitInfo.ActorPosition);
+                float actorDistSq = Vector3.DistanceSquared(src, touchMouseTouchHitInfo.ActorPosition);
 
                 if (actorDistSq > wayDist * wayDist)
                 {
-                    touchHitInfo.ActorHit = null;
+                    touchMouseTouchHitInfo.ActorHit = null;
                 }
             }
 
@@ -676,18 +499,18 @@ namespace Boku
             {
                 hit = FindHit(camera, TouchInput.GetAsPoint(editingTouch.position));
 
-                if (HitInfo.LastTouchEditPos != hit)
+                if (MouseTouchHitInfo.LastTouchEditPos != hit)
                 {
-                    HitInfo.LastTouchEditPos = hit;
+                    MouseTouchHitInfo.LastTouchEditPos = hit;
                 }
                 
                 return new Vector2(hit.X, hit.Y);
             }
             
-            return new Vector2(HitInfo.LastTouchEditPos.X, HitInfo.LastTouchEditPos.Y);
+            return new Vector2(MouseTouchHitInfo.LastTouchEditPos.X, MouseTouchHitInfo.LastTouchEditPos.Y);
         }
 
-        private TouchContact FindNonUITouch()
+        TouchContact FindNonUITouch()
         {
             TouchContact editingTouch = null;
             TouchContact secondaryTouch = null;
@@ -728,8 +551,8 @@ namespace Boku
         /// <returns></returns>
         public static bool TriggerSample()
         {
-            return !HitInfo.HaveActor
-                && HitInfo.TerrainHit
+            return !MouseTouchHitInfo.HaveActor
+                && MouseTouchHitInfo.TerrainHit
                 && TouchInput.WasTouched;
         }
         #endregion Public
@@ -738,23 +561,23 @@ namespace Boku
         /// <summary>
         /// Internal scratch list for LOS hits. Don't use this except within single function.
         /// </summary>
-        private static List<HitInfo> _scratchHits = new List<HitInfo>();
+        static List<MouseTouchHitInfo> _scratchHits = new List<MouseTouchHitInfo>();
 
         /// <summary>
         /// See if we've clicked something that should become selected.
         /// </summary>
         /// <param name="camera"></param>
-        private void CheckReCenter(Camera camera)
+        void CheckReCenter(Camera camera)
         {
             /// Double tap gesture.
             DoubleTapGestureRecognizer dblTapGesture = TouchGestureManager.Get().DoubleTapGesture;
 
             if (dblTapGesture.WasRecognized && 
-                (HitInfo.TerrainHit || HitInfo.ZeroPlaneHit) &&
+                (MouseTouchHitInfo.TerrainHit || MouseTouchHitInfo.ZeroPlaneHit) &&
                 !GUIButtonManager.IsOverUIButton( dblTapGesture.Position ) &&
-                (null == InGame.inGame.touchEditUpdateObj || null == InGame.inGame.touchEditUpdateObj.ToolBar || InGame.inGame.touchEditUpdateObj.ToolBar.CurrentMode != InGame.BaseEditUpdateObj.ToolMode.EditObject) )
+                (null == InGame.inGame.touchEditUpdateObj || null == InGame.inGame.touchEditUpdateObj.ToolBar || EditWorldScene.CurrentToolMode != EditWorldScene.ToolMode.EditObject) )
             {
-                ReCenter(HitInfo.TerrainPosition);
+                ReCenter(MouseTouchHitInfo.TerrainPosition);
             }
         }
 
@@ -762,7 +585,7 @@ namespace Boku
         /// Begin recentering to the new position.
         /// </summary>
         /// <param name="pos"></param>
-        private void ReCenter(Vector2 pos)
+        void ReCenter(Vector2 pos)
         {
             moveTo = pos;
             moveFrom = owner.Cursor3D.Position2d;
@@ -773,7 +596,7 @@ namespace Boku
         /// ReCenter the world to the new position.
         /// </summary>
         /// <param name="pos"></param>
-        private void ReCenter(Vector3 pos)
+        void ReCenter(Vector3 pos)
         {
             ReCenter(new Vector2(pos.X, pos.Y));
         }
@@ -782,7 +605,7 @@ namespace Boku
         /// Is the touch position currently moving?
         /// </summary>
         /// <returns></returns>
-        private bool TouchMoving()
+        bool TouchMoving()
         {
             return ( TouchInput.WasMoved );
         }
@@ -790,7 +613,7 @@ namespace Boku
         /// <summary>
         /// Drag or release object based on mouse left click.
         /// </summary>
-        private void CheckDragObject()
+        void CheckDragObject()
         {
             if (TouchGestureManager.Get().DragGesture.IsDragging)
             {
@@ -818,7 +641,7 @@ namespace Boku
         /// <summary>
         /// Terminate the visual drag effect.
         /// </summary>
-        private void EndDrag()
+        void EndDrag()
         {
             dragObject = null;
             if (dragHighlight != null)
@@ -834,7 +657,7 @@ namespace Boku
         /// </summary>
         /// <param name="move"></param>
         /// <returns></returns>
-        private Vector2 CheckMoveTo(Vector2 move)
+        Vector2 CheckMoveTo(Vector2 move)
         {
             if (moveTime > 0)
             {
@@ -853,7 +676,7 @@ namespace Boku
         /// Kill the highlight for the quasi selected object (yellow) if
         /// we're no longer moused over it.
         /// </summary>
-        private void CheckQuasi(bool forceKill)
+        void CheckQuasi(bool forceKill)
         {
             if (quasiSelected == null || forceKill)
             {
@@ -878,7 +701,7 @@ namespace Boku
         /// <summary>
         /// Generate the touch over visual highlight.
         /// </summary>
-        private void MakeQuasiHighlight()
+        void MakeQuasiHighlight()
         {
             if ((quasiSelected != null))
             {
@@ -903,7 +726,7 @@ namespace Boku
         /// Create a yellow highlight for the mouse-over'd object.
         /// </summary>
         /// <param name="actor"></param>
-        private void ChangeQuasi(GameActor actor, bool activeTouch)
+        void ChangeQuasi(GameActor actor, bool activeTouch)
         {
             if (!DraggingObject)
             {
@@ -920,7 +743,7 @@ namespace Boku
         /// <summary>
         /// Kill the touch-over highlight (yellow).
         /// </summary>
-        private void EndQuasi()
+        void EndQuasi()
         {
             if (quasiHighlight != null)
             {
@@ -933,7 +756,7 @@ namespace Boku
         /// Decide whether user is controlling yaw or pitch.
         /// </summary>
         /// <returns></returns>
-        private bool CheckOrbitMode()
+        bool CheckOrbitMode()
         {
 #if MF_PITCH_OR_YAW
             if (TouchInput.TouchCount == 2) //PV: to fingers down, start the orbit process
@@ -999,7 +822,7 @@ namespace Boku
         /// </summary>
         /// <param name="pos"></param>
         /// <returns></returns>
-        private Vector2 DeadZone(Point pos)
+        Vector2 DeadZone(Point pos)
         {
             Vector2 ndc = PixelToNDC(pos);
             ndc -= cursorOffset;
@@ -1013,6 +836,14 @@ namespace Boku
 
         public void AddPitchYawByDrag(SmoothCamera camera)
         {
+            if(LowLevelKeyboardInput.IsPressed(Keys.S))
+            {
+            }
+
+            if (LowLevelTouchInput.WasTouched)
+            {
+            }
+
             //don't allow switching from multi touch to single touch drag
             if (TouchInput.IsTouched && TouchInput.TouchCount == 1 && !TouchInput.WasMultiTouch)
             {
@@ -1089,7 +920,7 @@ namespace Boku
                 }
             }
         }
-        private int twitchCount = 0;
+        int twitchCount = 0;
 
         protected void rotTwitchComplete(Object param)
         {
@@ -1106,7 +937,7 @@ namespace Boku
         /// <param name="touch0"></param>
         /// <param name="touch1"></param>
         /// <returns>false if less than two fingers are touching</returns>
-        private bool GetTouchContact(ref TouchContact touch0, ref TouchContact touch1)
+        bool GetTouchContact(ref TouchContact touch0, ref TouchContact touch1)
         {
             for (int i = 0; i < TouchInput.TouchCount; i++)
             {
@@ -1134,7 +965,7 @@ namespace Boku
         /// <summary>
         /// Helper function to return the distance between the two touch fingers
         /// </summary>
-        private bool GetTouchDistance(ref Vector2 distance, ref Vector2 touchPos0, ref Vector2 touchPos1)
+        bool GetTouchDistance(ref Vector2 distance, ref Vector2 touchPos0, ref Vector2 touchPos1)
         {
             TouchContact touch0 = null;
             TouchContact touch1 = null;
@@ -1166,7 +997,7 @@ namespace Boku
         /// Determines if two touch fingers are moving in the same direction
         /// </summary>
         /// <returns>true moving in the same direction </returns>
-        private bool TouchMovingInSameDirection()
+        bool TouchMovingInSameDirection()
         {
             TouchContact touch0 = null;
             TouchContact touch1 = null;
@@ -1195,7 +1026,7 @@ namespace Boku
         /// Determine if two fingers are moving apart
         /// </summary>
         /// <returns></returns>
-        private bool TouchMovingOppositeDirection()
+        bool TouchMovingOppositeDirection()
         {
             TouchContact touch0 = null;
             TouchContact touch1 = null;
@@ -1267,7 +1098,7 @@ namespace Boku
         /// <param name="granularityX"></param>
         /// <param name="granularityY"></param>
         /// <returns></returns>
-        private Vector2 GetTouchInGridResolution(Vector2 touchPosition, float xGranularity, float yGranularity)
+        Vector2 GetTouchInGridResolution(Vector2 touchPosition, float xGranularity, float yGranularity)
         {
             //float xCameraInc = camera.Resolution.X / resolutionX;
             float xOffset = (float)Math.Floor(touchPosition.X / xGranularity) * xGranularity;
@@ -1283,7 +1114,7 @@ namespace Boku
         /// Move the dragged object from the new mouse position.
         /// </summary>
         /// <param name="camera"></param>
-        private void DragObject(Camera camera)
+        void DragObject(Camera camera)
         {
             Debug.Assert(TouchInput.IsTouched, "Touch data missing!");
             if (TouchInput.TouchCount != 1) //PV: only only drag when you touch with one finger
@@ -1323,7 +1154,7 @@ namespace Boku
         /// <param name="camera"></param>
         /// <param name="position"></param>
         /// <returns></returns>
-        private Vector2 Drag(Camera camera, Vector2 position)
+        Vector2 Drag(Camera camera, Vector2 position)
         {
             //two ways to drag: one finger drag (any direction), two finger drag (horizontal only)
             
@@ -1356,17 +1187,17 @@ namespace Boku
         }
 
 
-        private List<Vector2Object> previousDeltas = new List<Vector2Object>(); //Vector2.Zero;
-        private Vector2 previousDelta = Vector2.Zero;
+        List<Vector2Object> previousDeltas = new List<Vector2Object>(); //Vector2.Zero;
+        Vector2 previousDelta = Vector2.Zero;
 
-        private Vector2 lastTouchVelocity = Vector2.Zero;
-        private Vector2 lastTouchPosition = Vector2.Zero;
-        private Vector2 lastTouchStartPosition = Vector2.Zero;
+        Vector2 lastTouchVelocity = Vector2.Zero;
+        Vector2 lastTouchPosition = Vector2.Zero;
+        Vector2 lastTouchStartPosition = Vector2.Zero;
 
-        private Vector2 previousPosition = Vector2.Zero;
-        private Vector2 currentPosition = Vector2.Zero;
-        private List<Vector2> listPositions = new List<Vector2>();
-        private List<float> listPositionTimes = new List<float>();
+        Vector2 previousPosition = Vector2.Zero;
+        Vector2 currentPosition = Vector2.Zero;
+        List<Vector2> listPositions = new List<Vector2>();
+        List<float> listPositionTimes = new List<float>();
         
 
         /// <summary>
@@ -1401,7 +1232,7 @@ namespace Boku
             vectorObj.theVector2 = val;
         }
 
-        private Vector2 ComputeDeltaPosition(Camera camera, Vector2 previousPosition, Vector2 currentPosition)
+        Vector2 ComputeDeltaPosition(Camera camera, Vector2 previousPosition, Vector2 currentPosition)
         {
             Vector3 prevPos = FindHit(camera, TouchInput.GetAsPoint(previousPosition)/*, true*/); //PV - clamp the ray height
             Vector3 pos = FindAtHeight(camera, TouchInput.GetAsPoint(currentPosition), prevPos.Z);
@@ -1422,7 +1253,7 @@ namespace Boku
             return del;
         }
 
-        private void UpdateTwitches(ref Vector2 position)
+        void UpdateTwitches(ref Vector2 position)
         {
             int i = 0;
             for (i = 0; i < previousDeltas.Count; i++) // Vector2Object delta in previousDeltas)
@@ -1522,7 +1353,7 @@ namespace Boku
         /// </summary>
         /// <param name="ray"></param>
         /// <returns></returns>
-        private static Vector3 LimitRay(Vector3 ray)
+        static Vector3 LimitRay(Vector3 ray)
         {
             Vector2 ray2d = new Vector2(ray.X, ray.Y);
             float len = ray2d.Length();
@@ -1536,7 +1367,7 @@ namespace Boku
             return ray;
         }
 
-        private static Vector3 LimitRay3D(Vector3 ray)
+        static Vector3 LimitRay3D(Vector3 ray)
         {
             float len = ray.Length();
             if (len > kMaxRayCast)
@@ -1581,7 +1412,7 @@ namespace Boku
         /// <param name="camera"></param>
         /// <param name="touchInput"></param>
         /// <returns></returns>
-        private static Vector3 FindRay(Camera camera, Point touchInput)
+        static Vector3 FindRay(Camera camera, Point touchInput)
         {
             Vector3 ray = camera.ScreenToWorldCoords(
                 new Vector2(touchInput.X, touchInput.Y));
@@ -1593,7 +1424,7 @@ namespace Boku
         /// Test whether the user is currently touching the screen to control the camera.
         /// Will return false if the user is using the mouse for something else, like editing.
         /// </summary>
-        private bool AffectingOrbit
+        bool AffectingOrbit
         {
             get
             {
@@ -1606,13 +1437,13 @@ namespace Boku
                 return
                     TouchInput.Right.IsPressed
 
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftControl)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightAlt)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftControl)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightAlt)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)
                     
                     && !disableRightOrbit;
             }
@@ -1623,19 +1454,19 @@ namespace Boku
         /// Test whether the user is currently using touch to drag the world.
         /// Will return false if the user is using the mouse for something else, like editing.
         /// </summary>
-        private bool AffectingDrag
+        bool AffectingDrag
         {
             get
             {
                 return TouchInput.IsTouched;
                     /*
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftControl)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightAlt)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftControl)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightAlt)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)
                     */
                     //&& !disableLeftDrag;
             }
@@ -1648,7 +1479,7 @@ namespace Boku
         /// </summary>
         /// <param name="x"></param>
         /// <returns></returns>
-        private float Smooth(float x)
+        float Smooth(float x)
         {
             x = MathHelper.Clamp(x, 0.0f, 1.0f);
             return 3.0f * x * x - 2.0f * x * x * x;
@@ -1660,7 +1491,7 @@ namespace Boku
         /// <param name="lo"></param>
         /// <param name="hi"></param>
         /// <returns></returns>
-        private float Smooth(float x, float lo, float hi)
+        float Smooth(float x, float lo, float hi)
         {
             x -= lo;
             x /= hi - lo;
@@ -1671,7 +1502,7 @@ namespace Boku
         /// Cache away anything useful about the camera.
         /// </summary>
         /// <param name="camera"></param>
-        private void CacheTransforms(SmoothCamera camera)
+        void CacheTransforms(SmoothCamera camera)
         {
             resolution = new Vector2(camera.Resolution.X, camera.Resolution.Y);
 
@@ -1697,7 +1528,7 @@ namespace Boku
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        private Vector2 PixelToNDC(Point p)
+        Vector2 PixelToNDC(Point p)
         {
             return new Vector2(p.X * pixelToNDC.X + pixelToNDC.Z, -p.Y * pixelToNDC.Y - pixelToNDC.W);
         }
@@ -1707,7 +1538,7 @@ namespace Boku
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        private Vector2 PixelToNDC(Vector2 p)
+        Vector2 PixelToNDC(Vector2 p)
         {
             return new Vector2(p.X * pixelToNDC.X + pixelToNDC.Z, -p.Y * pixelToNDC.Y - pixelToNDC.W);
         }
@@ -1717,7 +1548,7 @@ namespace Boku
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        private Vector2 NDCToPixel(Vector2 p)
+        Vector2 NDCToPixel(Vector2 p)
         {
             return new Vector2(p.X * ndcToPixel.X + ndcToPixel.Z, -p.Y * ndcToPixel.Y + ndcToPixel.W);
         }
@@ -1733,7 +1564,7 @@ namespace Boku
         /// <param name="plane"></param>
         /// <param name="hitDistance"></param>
         /// <returns></returns>
-        static private bool PlaneIntersection(Vector3 srcPos, Vector3 ray, Plane plane, ref float hitDistance)
+        static bool PlaneIntersection(Vector3 srcPos, Vector3 ray, Plane plane, ref float hitDistance)
         {
             Ray ray1 = new Ray(srcPos, ray);
 

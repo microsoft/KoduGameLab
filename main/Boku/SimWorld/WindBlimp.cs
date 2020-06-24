@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.ParticleSystem;
@@ -68,7 +70,7 @@ namespace Boku
             /// All animators in the stack should have the same set of animations.
             AnimationInstance animator = _animators.Sample;
 
-            // TODO (****)  Do we need this check???
+            // TODO (scoy)  Do we need this check???
             if (animator.HasAnimation("full_running"))
             {
                 // Add individual animations to blend controller.

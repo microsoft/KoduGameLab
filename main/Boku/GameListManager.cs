@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Input;
 
@@ -23,7 +26,7 @@ namespace Boku
     /// </summary>
     public class GameListManager
     {
-        // TODO (****) Try and change these to be more type specific.
+        // TODO (scoy) Try and change these to be more type specific.
         public List<object> objectList = null;
         public List<UpdateObject> updateList = null;
         public List<RenderObject> renderList = null;
@@ -75,9 +78,9 @@ namespace Boku
             // Lazy allocation
             if (blob == null)
             {
-                blob = new TextBlob(UI2D.Shared.GetGameFont20, Strings.Localize("mainMenu.paused"), 300);
-                blob.Justification = UI2D.UIGridElement.Justification.Center;
-                deadKoduTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\SleepyKodu");
+                blob = new TextBlob(SharedX.GetGameFont20, Strings.Localize("mainMenu.paused"), 300);
+                blob.Justification = TextHelper.Justification.Center;
+                deadKoduTexture = KoiLibrary.LoadTexture2D(@"Textures\SleepyKodu");
             }
 
 #if !NETFX_CORE
@@ -123,13 +126,13 @@ namespace Boku
             else
             {
                 // Game paused since in strange snapped mode
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 InGame.Clear(Color.Black);
 
                 // Center Kodu.
                 Vector2 size = new Vector2(deadKoduTexture.Width, deadKoduTexture.Height);
                 Vector2 pos = (BokuGame.ScreenSize - size) * 0.5f;
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
                 batch.Draw(deadKoduTexture, pos, Color.White);
                 batch.End();

@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -42,9 +45,6 @@ namespace Boku.Scenes.InGame.MouseEditTools
             MiddleAudioEnd = delegate() { };
             LeftAudioEnd = delegate() { Foley.StopLowerWater(); };
 
-            // We don't want to see any brush rendered for this tool.
-            prevBrushIndex = -1;
-
         }   // end of c'tor
 
         public static BaseMouseEditTool GetInstance()
@@ -56,46 +56,34 @@ namespace Boku.Scenes.InGame.MouseEditTools
             return instance;
         }   // end of GetInstance()
 
-        public override void Update(Camera camera)
+        public override void Update()
         {
             if (Active)
             {
                 CheckSelectCursor(false);
 
-                if (!PickerXInUse && !PickerYInUse)
-                {
-                    if (DebouncePending)
-                        return;
+                SetEditModes(Terrain.EditMode.WaterRaise, Terrain.EditMode.WaterChange, Terrain.EditMode.WaterLower);
 
-                    ProcessTriggers(
-                        Terrain.EditMode.WaterRaise,
-                        Terrain.EditMode.WaterChange,
-                        Terrain.EditMode.WaterLower);
-
-                    SelectOverlay();
-                }
+                SelectOverlay();
             }
 
-            base.Update(camera);
+            base.Update();
         }   // end of Update()
         #endregion Public
 
         #region Internal
 
-        protected override void ProcessPoint(
-            Terrain.EditMode rightMode,
-            Terrain.EditMode aButton,
-            Terrain.EditMode leftMode)
+        protected override void ProcessPoint()
         {
             bool saveRestore = false;
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+            if (KoiLibrary.LastTouchedDeviceIsTouch)
             {
                 saveRestore = TouchInput.TouchCount > 0 && Boku.InGame.inGame.TouchEdit.HasNonUITouch();
             }
             else
             {
-                saveRestore = MouseInput.Right.IsPressed || MouseInput.Left.IsPressed;
+                saveRestore = LowLevelMouseInput.Right.IsPressed || LowLevelMouseInput.Left.IsPressed;
             }
 
             int wasType = Water.CurrentType;
@@ -107,30 +95,34 @@ namespace Boku.Scenes.InGame.MouseEditTools
                     Water.CurrentType = waterType;
                 }
             }
-            base.ProcessPoint(rightMode, aButton, leftMode);
+            base.ProcessPoint();
 
             Water.CurrentType = wasType;
-        }
+        }   // end of ProcessPoint()
 
         private object timerInstrument = null;
 
-        public override void OnActivate()
+        protected override void OnActivate()
         {
             timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameWaterTool);
 
             base.OnActivate();
 
-            PickerY = waterPicker;
+            inGame.Cursor3D.Rep = Cursor3D.Visual.Pointy;
+            inGame.Cursor3D.Hidden = false;
 
             inGame.ShowCursor();
 
         }   // end of OnActivate()
 
-        public override void OnDeactivate()
+        protected override void OnDeactivate()
         {
             inGame.HideCursor();
 
             base.OnDeactivate();
+
+            inGame.Cursor3D.Rep = Cursor3D.Visual.Edit;
+            inGame.Cursor3D.Hidden = true;
 
             Instrumentation.StopTimer(timerInstrument);
 

@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
+using KoiX;
+
 namespace Boku.Common.Gesture
 {
     public class DoubleDragGestureRecognizer : GestureRecognizer

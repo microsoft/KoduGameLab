@@ -11,6 +11,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -54,7 +58,7 @@ namespace Boku.UI
                         Actions.Select.ClearAllWasPressedState();
                         pad.IgnoreLeftStickUntilZero();
 
-                        // TODO (****) Get rid of the args...
+                        // TODO (scoy) Get rid of the args...
                         parent.OnSelect(null, null);
                     }
 
@@ -62,7 +66,7 @@ namespace Boku.UI
                     {
                         Actions.Cancel.ClearAllWasPressedState();
 
-                        // TODO (****) Get rid of the args...
+                        // TODO (scoy) Get rid of the args...
                         parent.OnCancel(null, null);
                     }
 
@@ -147,7 +151,7 @@ namespace Boku.UI
                         ITransform item = parent.ObjectSelectedItem as ITransform;
                         if (item != null)
                         {
-                            Vector2 viewport = new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
+                            Vector2 viewport = new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height);
 
                             UiCamera camera = InGame.inGame.Editor.Camera;
                             Vector3 offset = new Vector3(0.5f, -0.5f, 0.0f);
@@ -208,7 +212,7 @@ namespace Boku.UI
                         }
                     }
 
-                    // TODO (****) Fold args into function...
+                    // TODO (scoy) Fold args into function...
                     parent.UpdateSelection(null, new StickEventArgs(pad.LeftStick));
 
                     // Clear out any other button presses.  This normally shouldn't be needed
@@ -324,7 +328,7 @@ namespace Boku.UI
                     {
                         ReCenter(camera);
 
-                        //BokuGame.bokuGame.GraphicsDevice.RasterizerState = UI2D.Shared.RasterStateWireframe;
+                        //KoiLibrary.GraphicsDevice.RasterizerState = Shared.RasterStateWireframe;
                         for (int iObject = 0; iObject < renderList.Count; iObject++)
                         {
                             RenderObject obj = renderList[iObject] as RenderObject;
@@ -410,7 +414,7 @@ namespace Boku.UI
                 this.innerRadius = innerRadius;
                 this.outerRadius = outerRadius;
                 this.arcLength = arcLength;
-                CreateGeometry(BokuGame.bokuGame.GraphicsDevice);
+                CreateGeometry(KoiLibrary.GraphicsDevice);
             }
 
             protected void CreateGeometry(GraphicsDevice device)
@@ -681,8 +685,8 @@ namespace Boku.UI
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref this.indexBuffer);
-                BokuGame.Release(ref this.vertexBuffer);
+                DeviceResetX.Release(ref this.indexBuffer);
+                DeviceResetX.Release(ref this.vertexBuffer);
             }
 
             /// <summary>
@@ -737,7 +741,7 @@ namespace Boku.UI
 
             public override void Render(Camera camera)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 Matrix viewMatrix = camera.ViewMatrix;
                 Matrix projMatrix = camera.ProjectionMatrix;
@@ -795,7 +799,7 @@ namespace Boku.UI
                     effect = Editor.Effect;
                     if (effect == null)
                     {
-                        Editor.Effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI");
+                        Editor.Effect = KoiLibrary.LoadEffect(@"Shaders\UI");
                         effect = Editor.Effect;
                         ShaderGlobals.RegisterEffect("UI", effect);
                     }
@@ -804,7 +808,7 @@ namespace Boku.UI
                 // Load the texture.
                 if (texture == null)
                 {
-                    texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Cursor3D");
+                    texture = KoiLibrary.LoadTexture2D(@"Textures\Cursor3D");
                 }
             }
 
@@ -814,8 +818,8 @@ namespace Boku.UI
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref effect);
-                BokuGame.Release(ref texture);
+                DeviceResetX.Release(ref effect);
+                DeviceResetX.Release(ref texture);
             }
 
             /// <summary>
@@ -1111,7 +1115,7 @@ namespace Boku.UI
             // Handle keyboard input.  This is seperate from the meta-buttons since with
             // the gamepad we use absolute positioning whereas with the keyboard we have
             // to use relative positioning.
-            if (KeyboardInput.WasPressedOrRepeat(Keys.Left))
+            if (KeyboardInputX.WasPressedOrRepeat(Keys.Left))
             {
                 if (IndexSelectedItem == -1)
                 {
@@ -1121,9 +1125,9 @@ namespace Boku.UI
                 {
                     IndexSelectedItem = (IndexSelectedItem - 1 + items.Count) % items.Count;
                 }
-                KeyboardInput.ClearAllWasPressedState(Keys.Left);
+                KeyboardInputX.ClearAllWasPressedState(Keys.Left);
             }
-            else if (KeyboardInput.WasPressedOrRepeat(Keys.Right))
+            else if (KeyboardInputX.WasPressedOrRepeat(Keys.Right))
             {
                 if (IndexSelectedItem == -1)
                 {
@@ -1133,9 +1137,9 @@ namespace Boku.UI
                 {
                     IndexSelectedItem = (IndexSelectedItem + 1) % items.Count;
                 }
-                KeyboardInput.ClearAllWasPressedState(Keys.Right);
+                KeyboardInputX.ClearAllWasPressedState(Keys.Right);
             } 
-            else if (KeyboardInput.WasPressedOrRepeat(Keys.Down))
+            else if (KeyboardInputX.WasPressedOrRepeat(Keys.Down))
             {
                 if (IndexSelectedItem == -1)
                 {
@@ -1145,9 +1149,9 @@ namespace Boku.UI
                 {
                     IndexSelectedItem = (IndexSelectedItem - 1 + items.Count) % items.Count;
                 }
-                KeyboardInput.ClearAllWasPressedState(Keys.Down);
+                KeyboardInputX.ClearAllWasPressedState(Keys.Down);
             }
-            else if (KeyboardInput.WasPressedOrRepeat(Keys.Up))
+            else if (KeyboardInputX.WasPressedOrRepeat(Keys.Up))
             {
                 if (IndexSelectedItem == -1)
                 {
@@ -1157,7 +1161,7 @@ namespace Boku.UI
                 {
                     IndexSelectedItem = (IndexSelectedItem + 1) % items.Count;
                 }
-                KeyboardInput.ClearAllWasPressedState(Keys.Up);
+                KeyboardInputX.ClearAllWasPressedState(Keys.Up);
             }
 
 
@@ -1170,7 +1174,7 @@ namespace Boku.UI
                 if(camera == null)
                     camera = InGame.inGame.Editor.Camera;
                 Vector2 hitUV = Vector2.Zero;
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     /// Guessed size ONLY
                     //width = 5;
@@ -1190,7 +1194,7 @@ namespace Boku.UI
                 }
                 else
                 {
-                    hitUV = MouseInput.GetHitOrtho(camera, ref invWorld, false);
+                    hitUV = LowLevelMouseInput.GetHitOrtho(camera, ref invWorld, false);
                 }
 
                 float mag = hitUV.Length();
@@ -1199,7 +1203,7 @@ namespace Boku.UI
                 if (mag > radiusAtItems - 1.2f && mag < radiusAtItems + 1.0f)
                 {
 
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    if (KoiLibrary.LastTouchedDeviceIsTouch)
                     {
                         args.position = hitUV;
                         mouseMoving = true;
@@ -1211,30 +1215,30 @@ namespace Boku.UI
                     }
                     else
                     // If moving, fake left stick input and let that code deal with it.
-                    if (MouseInput.Position != MouseInput.PrevPosition)
+                    if (LowLevelMouseInput.DeltaPosition != Point.Zero)
                     {
                         args.position = hitUV;
                         mouseMoving = true;
                     }
 
-                    if (MouseInput.Left.WasPressed)
+                    if (LowLevelMouseInput.Left.WasPressed)
                     {
                         MouseInput.ClickedOnObject = SelectedItem;
                     }
-                    if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == SelectedItem)
+                    if (LowLevelMouseInput.Left.WasReleased && MouseInput.FrameDelayedClickedOnObject == SelectedItem && SelectedItem != null)
                     {
-                        MouseInput.Left.ClearAllWasPressedState();
+                        LowLevelMouseInput.Left.ClearAllWasPressedState();
                         OnSelect(null, null);
                     }
                 }
                 else if (mag > radiusAtItems - 1.2f)
                 {
                     // We're outside of the pie menu.  If the user clicks here, close.
-                    if (MouseInput.Left.WasPressed)
+                    if (LowLevelMouseInput.Left.WasPressed)
                     {
                         OnCancel(null, null);
                     }
-                    else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    else if (KoiLibrary.LastTouchedDeviceIsTouch)
                     {
                         if ( TouchInput.WasReleased )
                         {
@@ -1244,7 +1248,7 @@ namespace Boku.UI
                 }
 
                 // Also treat right click as exit.
-                if (MouseInput.Right.WasPressed)
+                if (LowLevelMouseInput.Right.WasPressed)
                 {
                     OnCancel(null, null);
                 }
@@ -1328,7 +1332,7 @@ namespace Boku.UI
                     {
                         IndexSelectedItem = (IndexSelectedItem - 1 + items.Count) % items.Count;
                     }
-                    else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch) 
+                    else if (KoiLibrary.LastTouchedDeviceIsTouch) 
                     {
                         // no change in selection
                         if (TouchInput.WasReleased)

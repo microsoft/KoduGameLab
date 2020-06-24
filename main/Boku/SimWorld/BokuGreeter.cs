@@ -68,11 +68,11 @@ namespace Boku.SimWorld
         /// </summary>
         public override void Render(Camera camera, ref Matrix rootToWorld, List<List<PartInfo>> listPartsReplacement)
         {
-            ShaderGlobals.PushEnvMap(BokuGreeter.EnvMap);
+            BokuGame.bokuGame.shaderGlobals.PushEnvMap(BokuGreeter.EnvMap);
 
             base.Render(camera, ref rootToWorld, listPartsReplacement);
 
-            ShaderGlobals.PopEnvMap();
+            BokuGame.bokuGame.shaderGlobals.PopEnvMap();
         }
 
     }   // end of class BokuGreeterModel

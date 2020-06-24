@@ -11,6 +11,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Managers;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Common.ParticleSystem;
 using Boku.Programming;
@@ -764,7 +769,7 @@ namespace Boku.Base
 
         protected virtual void Register()
         {
-            // TODO (****) We should only be registering objects that are currently moving.
+            // TODO (scoy) We should only be registering objects that are currently moving.
             // Non-moving objects don't need their chassis ticked every frame. 
             InGame.inGame.RegisterChassis(this);
         }
@@ -1129,7 +1134,7 @@ namespace Boku.Base
                     ModularMessageDialog.ButtonHandler handlerB = delegate(ModularMessageDialog dialog)
                     {
                         //they cancelled out, return to edit mode
-                        InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.ToolMenu;
+                        SceneManager.SwitchToScene("EditWorldScene");
 
                         //close the dialog
                         dialog.Deactivate();
@@ -1169,12 +1174,12 @@ namespace Boku.Base
         ///     created or destroyed during the run.  After the save we
         ///     can then load and run the linked level.
         ///     
-        /// TODO (****) Currently, on failure this leave the game in
+        /// TODO (scoy) Currently, on failure this leave the game in
         /// RunSim mode but all GameThings have been paused so we're 
         /// kind of stuck.  It's not a huge problem but it's also not
         /// very clean.  A return to edit mode might be better.
         /// 
-        /// TODO (****) This really doens't seem like it should be a 
+        /// TODO (scoy) This really doens't seem like it should be a 
         /// method on GameThing.  Think about refactoring it.
         /// </summary>
         /// <returns></returns>
@@ -1184,11 +1189,6 @@ namespace Boku.Base
 
             //pause game things so we don't get infinite dialogs while we process this
             InGame.inGame.PauseAllGameThings();
-
-            //Kill all say dialog
-            InGame.inGame.shared.smallTextDisplay.Deactivate();
-            InGame.inGame.shared.scrollableTextDisplay.Deactivate();
-
 
             GamePadInput.ClearAllWasPressedState();
             GamePadInput.IgnoreAllUntilReleased();
@@ -1238,7 +1238,7 @@ namespace Boku.Base
                     ModularMessageDialog.ButtonHandler handlerB = delegate(ModularMessageDialog dialog)
                     {
                         //they cancelled out, return to edit mode
-                        InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.ToolMenu;
+                        SceneManager.SwitchToScene("EditWorldScene");
 
                         //close the dialog
                         dialog.Deactivate();
@@ -1308,7 +1308,6 @@ namespace Boku.Base
 
                 Vector2 terrainPosition = new Vector2(movement.Position.X, movement.Position.Y);
                 InGame.inGame.Terrain.RenderToHeightMap(
-                    -1,
                     terrainPosition,
                     5.0f,
                     Terrain.EditMode.WaterRaise,
@@ -1328,7 +1327,6 @@ namespace Boku.Base
 
                 Vector2 terrainPosition = new Vector2(movement.Position.X, movement.Position.Y);
                 InGame.inGame.Terrain.RenderToHeightMap(
-                    -1,
                     terrainPosition,
                     5.0f,
                     Terrain.EditMode.WaterLower,
@@ -1741,27 +1739,21 @@ namespace Boku.Base
 
             string text = effector.Reflex.Data.sayString;
             int mode = effector.Reflex.Data.sayMode;
-            UI2D.UIGridElement.Justification justification = effector.Reflex.Data.sayJustification;
+            TextHelper.Justification justification = effector.Reflex.Data.sayJustification;
 
             Debug.Assert((text != null), "Improper parameter?");
             if (text != null)
             {
                 if (mode == 0)
                 {
-                    // If one of the text displays is already active then we're displaying
-                    // something else in fullscreen mode.  So, return false and hopefully
-                    // the progamming will get back to us later.
-                    if (InGame.inGame.shared.smallTextDisplay.Active || InGame.inGame.shared.scrollableTextDisplay.Active)
-                    {
-                        return false;
-                    }
-
                     // Since we're going into a modal dialog, clear the input state
                     // for buttons A & B otherwise we'll just exit right back out.
                     GamePadInput pad = GamePadInput.GetGamePad0();
                     pad.ButtonA.ClearAllWasPressedState();
                     pad.ButtonB.ClearAllWasPressedState();
 
+                    Debug.Assert(false);
+                    /*
                     // Give the text to the small display first,  if it
                     // indicates that it is overflowing then give the
                     // message to the scrollable version instead.
@@ -1771,6 +1763,7 @@ namespace Boku.Base
                         InGame.inGame.shared.smallTextDisplay.Deactivate();
                         InGame.inGame.shared.scrollableTextDisplay.Activate(this as GameActor, text, justification, useBackgroundThumbnail: true, useRtCoords: false);
                     }
+                    */
                 }
                 else
                 {
@@ -2068,7 +2061,7 @@ namespace Boku.Base
 
                     if (!quiet)
                     {
-                        // TODO (****) Need to find a cool squash sound.
+                        // TODO (scoy) Need to find a cool squash sound.
                         Foley.PlayPop(this);
                     }
                 }

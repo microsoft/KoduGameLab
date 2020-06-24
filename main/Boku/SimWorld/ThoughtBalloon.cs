@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Xml;
@@ -162,8 +165,8 @@ namespace Boku
         {
             text = null;    // Force to not recycle.
 
-            BokuGame.Release(ref contentTexture);
-            BokuGame.Release(ref vbuf);
+            DeviceResetX.Release(ref contentTexture);
+            DeviceResetX.Release(ref vbuf);
 
         }   // end of ThoughtBalloon UnloadContent()
 
@@ -201,7 +204,7 @@ namespace Boku
 
         public void RefreshTexture()
         {
-            RenderTarget2D rt = UI2D.Shared.RenderTarget256_256;
+            RenderTarget2D rt = SharedX.RenderTarget256_256;
 
             //
             // Render the frame and text to the rendertarget.
@@ -216,15 +219,15 @@ namespace Boku
             ssquad.Render(ThoughtBalloonManager.FrameTexture, Vector2.Zero, new Vector2(rt.Width, rt.Height), "TexturedRegularAlpha");
 
             int width = 238;
-            TextBlob blob = new TextBlob(UI2D.Shared.GetGameFont30Bold, text, width);
-            blob.Justification = Boku.UI2D.UIGridElement.Justification.Center;
+            TextBlob blob = new TextBlob(SharedX.GetGameFont30Bold, text, width);
+            blob.Justification = TextHelper.Justification.Center;
 
             if (blob.NumLines > 3)
             {
-                blob.Font = UI2D.Shared.GetGameFont24Bold;
+                blob.Font = SharedX.GetGameFont24Bold;
                 if (blob.NumLines > 3)
                 {
-                    blob.Font = UI2D.Shared.GetGameFont24Bold;
+                    blob.Font = SharedX.GetGameFont24Bold;
                 }
             }
 
@@ -235,7 +238,7 @@ namespace Boku
             int lineSpacing = blob.Font().LineSpacing;
             int numLines = Math.Min(4, blob.NumLines);
             Vector2 pos = new Vector2(margin, middle - (numLines * 0.5f) * lineSpacing);
-            blob.RenderWithButtons(pos, Color.Black, maxLines: numLines);
+            blob.RenderText(null, pos, Color.Black, maxLines: numLines);
 
             InGame.RestoreRenderTarget();
 
@@ -297,7 +300,7 @@ namespace Boku
 
         public void Render(Camera camera)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             if (thinker.FirstPerson)
             {
@@ -332,7 +335,7 @@ namespace Boku
                     effect.Parameters["BorderColor"].SetValue(color);
 
                     device.SetVertexBuffer(vbuf);
-                    device.Indices = UI2D.Shared.QuadIndexBuff;
+                    device.Indices = SharedX.QuadIndexBuff;
 
                     // Render all passes.
                     for (int i = 0; i < effect.CurrentTechnique.Passes.Count; i++)

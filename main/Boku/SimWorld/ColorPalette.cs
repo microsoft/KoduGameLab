@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI2D;
@@ -242,7 +244,7 @@ namespace Boku.SimWorld
             CalcPositions(camera);
 
             // Set up params for rendering UI with this camera.
-            Fx.ShaderGlobals.SetCamera(camera);
+            BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
             for (int i = 0; i < numEntries; i++)
             {
@@ -350,7 +352,7 @@ namespace Boku.SimWorld
         {
             if (shadowMask == null)
             {
-                shadowMask = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Terrain\TexturePaletteMask");
+                shadowMask = KoiLibrary.LoadTexture2D(@"Textures\Terrain\TexturePaletteMask");
             }
 
             for (int i = 0; i < numEntries; i++)
@@ -365,7 +367,7 @@ namespace Boku.SimWorld
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref shadowMask);
+            DeviceResetX.Release(ref shadowMask);
 
             for (int i = 0; i < numEntries; i++)
             {

@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI;
@@ -30,7 +33,7 @@ namespace Boku.UI
         /// </summary>
         public static ReflexBlock reflexBlock = new ReflexBlock();
 
-        protected class UpdateObjMoveReflex : UpdateControl
+        protected class UpdateObjMoveReflex : UpdateObject
         {
             private ReflexHandle parent;
 
@@ -97,25 +100,9 @@ namespace Boku.UI
                 CommandStack.Pop(commandMap);
                 HelpOverlay.Pop();
             }
-            public override void AddCommands(CommandMap map)
-            {
-                commandMap.Add(map);
-            }
-            public override void RemoveCommands(CommandMap map)
-            {
-                commandMap.Remove(map);
-            }
-            public override void AddCommandsToControl(IControl control)
-            {
-                control.AddCommands(this.commandMap);
-            }
-            public override void RemoveCommandsFromControl(IControl control)
-            {
-                control.RemoveCommands(this.commandMap);
-            }
         }
 
-        protected class UpdateObjEditReflex : UpdateControl
+        protected class UpdateObjEditReflex : UpdateObject
         {
             private ReflexHandle parent;
 
@@ -206,30 +193,14 @@ namespace Boku.UI
                 CommandStack.Pop(commandMap);
             }
 
-            public override void AddCommands(CommandMap map)
-            {
-                commandMap.Add(map);
-            }
-            public override void RemoveCommands(CommandMap map)
-            {
-                commandMap.Remove(map);
-            }
-            public override void AddCommandsToControl(IControl control)
-            {
-                control.AddCommands(this.commandMap);
-            }
-            public override void RemoveCommandsFromControl(IControl control)
-            {
-                control.RemoveCommands(this.commandMap);
-            }
         }
 
         private Object parent;
 
         public ControlRenderObj renderObj;
 
-        protected UpdateControl updateObj; // active update object
-        protected UpdateControl updateObjPending;
+        protected UpdateObject updateObj; // active update object
+        protected UpdateObject updateObjPending;
 
         protected UpdateObjMoveReflex updateObjMoveReflex;
         protected UpdateObjEditReflex updateObjEditReflex;
@@ -612,17 +583,6 @@ namespace Boku.UI
                 BokuGame.objectListDirty = true;
             }
         }
-        // IControl
-        void IControl.AddCommands(CommandMap map)
-        {
-            // only add them to the normal state object
-            updateObjEditReflex.AddCommands(map);
-        }
-        void IControl.RemoveCommands(CommandMap map)
-        {
-            // only add them to the normal state object
-            updateObjEditReflex.RemoveCommands(map);
-        }
 
         bool IControl.Hot
         {
@@ -755,26 +715,26 @@ namespace Boku.UI
             Texture2D texture;
             const int textureSize = 64;
 
-            RenderTarget2D rt = UI2D.Shared.RenderTarget64_64;
+            RenderTarget2D rt = SharedX.RenderTarget64_64;
 
             InGame.SetRenderTarget(rt);
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             InGame.Clear(Color.Transparent);
 
             // Draw line number
             string text = lineNumber.ToString();
             // Center line number horizontally on rt.
-            Vector2 pos = new Vector2((rt.Width - UI2D.Shared.GetGameFontLineNumbers().MeasureString(text).X) / 2.0f, 0.0f);
+            Vector2 pos = new Vector2((rt.Width - SharedX.GetGameFontLineNumbers().MeasureString(text).X) / 2.0f, 0.0f);
 
             batch.Begin();
-            batch.DrawString(UI2D.Shared.GetGameFontLineNumbers(), text, pos, Color.Black);
+            batch.DrawString(SharedX.GetGameFontLineNumbers(), text, pos, Color.Black);
             batch.End();
 
             InGame.RestoreRenderTarget();
 
             // Copy rendertarget result into texture.
-            texture = new Texture2D(BokuGame.bokuGame.GraphicsDevice, textureSize, textureSize, false, SurfaceFormat.Color);
+            texture = new Texture2D(KoiLibrary.GraphicsDevice, textureSize, textureSize, false, SurfaceFormat.Color);
             int[] data = new int[textureSize * textureSize];
             rt.GetData<int>(data);
             texture.SetData<int>(data);

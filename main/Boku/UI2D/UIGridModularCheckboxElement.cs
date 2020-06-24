@@ -9,6 +9,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Common;
 using Boku.Fx;
@@ -64,7 +68,7 @@ namespace Boku.UI2D
         private Color dropShadowColor;
         private bool useDropShadow = false;
         private bool invertDropShadow = false;  // Puts the drop shadow above the regular letter instead of below.
-        private Justification justify = Justification.Left;
+        private TextHelper.Justification justify = TextHelper.Justification.Left;
 
         #region Accessors
         /// <summary>
@@ -268,12 +272,12 @@ namespace Boku.UI2D
             //check x button first
             if (xButtonBox.Contains(hitUV))
             {
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
                     MouseInput.ClickedOnObject = xButtonBox;
                 }
 
-                if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == xButtonBox)
+                if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == xButtonBox)
                 {
                     if (onXButton != null)
                     {
@@ -287,11 +291,11 @@ namespace Boku.UI2D
                 float maxU = height / width;
                 if (hitUV.X < maxU)
                 {
-                    if (MouseInput.Left.WasPressed)
+                    if (LowLevelMouseInput.Left.WasPressed)
                     {
                         MouseInput.ClickedOnObject = this;
                     }
-                    if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == this)
+                    if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == this)
                     {
                         ToggleState();
                     }
@@ -389,8 +393,8 @@ namespace Boku.UI2D
 
                 // Disable writing to alpha channel.
                 // This prevents transparent fringing around the text.
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-                device.BlendState = UI2D.Shared.BlendStateColorWriteRGB;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
+                device.BlendState = SharedX.BlendStateColorWriteRGB;
 
                 // Render the label text into the texture.
                 int margin = 16;
@@ -413,7 +417,7 @@ namespace Boku.UI2D
                 Color shadowColor = new Color(0, 0, 0, 20);
                 Vector2 shadowOffset = new Vector2(0, 6);
 
-                blob.RenderWithButtons(position, fontColor, shadowColor, shadowOffset, maxLines: 3);
+                blob.RenderText(null, position, fontColor, shadowColor, shadowOffset, maxLines: 3);
 
                 // Render help button.
                 /*
@@ -458,7 +462,7 @@ namespace Boku.UI2D
                     min.Y = position.Y / h;
 
                     position.X -= 10 + (int)Font().MeasureString(Strings.Localize("editWorldParams.setCamera")).X;
-                    SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                    SpriteBatch batch = KoiLibrary.SpriteBatch;
                     batch.Begin();
                     TextHelper.DrawString(Font, Strings.Localize("editWorldParams.setCamera"), position + shadowOffset, shadowColor);
                     TextHelper.DrawString(Font, Strings.Localize("editWorldParams.setCamera"), position, fontColor);
@@ -485,28 +489,28 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the normal map texture.
             if (normalMapName != null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\" + normalMapName);
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\" + normalMapName);
             }
 
             // Load the check textures.
             if (checkboxWhite == null)
             {
-                checkboxWhite = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\CheckboxWhite");
+                checkboxWhite = KoiLibrary.LoadTexture2D(@"Textures\GridElements\CheckboxWhite");
             }
             if (checkOn == null)
             {
-                checkOn = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\CheckboxOn");
+                checkOn = KoiLibrary.LoadTexture2D(@"Textures\GridElements\CheckboxOn");
             }
             if (checkOff == null)
             {
-                checkOff = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\CheckboxOff");
+                checkOff = KoiLibrary.LoadTexture2D(@"Textures\GridElements\CheckboxOff");
             }
 
         }   // end of UIGridModularCheckboxElement LoadContent()
@@ -527,11 +531,11 @@ namespace Boku.UI2D
 
             ReleaseRenderTargets();
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
-            BokuGame.Release(ref checkboxWhite);
-            BokuGame.Release(ref checkOn);
-            BokuGame.Release(ref checkOff);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
+            DeviceResetX.Release(ref checkboxWhite);
+            DeviceResetX.Release(ref checkOn);
+            DeviceResetX.Release(ref checkOff);
 
             BokuGame.Unload(geometry);
             geometry = null;
@@ -555,7 +559,7 @@ namespace Boku.UI2D
 
             // Create the diffuse texture.
             diffuse = new RenderTarget2D(device, w, h, false, SurfaceFormat.Color, DepthFormat.None);
-            InGame.GetRT("UIGridModularCheckboxElement", diffuse);
+            SharedX.GetRT("UIGridModularCheckboxElement", diffuse);
 
             // Refresh the texture.
             dirty = true;
@@ -564,8 +568,8 @@ namespace Boku.UI2D
 
         private void ReleaseRenderTargets()
         {
-            InGame.RelRT("UIGridModularCheckboxElement", diffuse);
-            BokuGame.Release(ref diffuse);
+            SharedX.RelRT("UIGridModularCheckboxElement", diffuse);
+            DeviceResetX.Release(ref diffuse);
         }
 
     }   // end of class UIGridModularCheckboxElement

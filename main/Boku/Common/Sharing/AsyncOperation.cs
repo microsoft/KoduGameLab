@@ -22,7 +22,8 @@ namespace Boku.Common.Sharing
     {
         AsyncOperations op;
         AsyncOpCallback callback;
-        object param;
+        object param0;
+        object param1;
         object pwner;
         bool active;
         bool started;
@@ -43,7 +44,12 @@ namespace Boku.Common.Sharing
         /// <summary>
         /// The callback parameter specified in the constructor.
         /// </summary>
-        public object Param { get { return param; } }
+        public object Param0 { get { return param0; } }
+
+        /// <summary>
+        /// Another callback parameter specified in the constructor.
+        /// </summary>
+        public object Param1 { get { return param1; } }
 
         /// <summary>
         /// The object that started this operation.
@@ -90,11 +96,12 @@ namespace Boku.Common.Sharing
         public object Tag { get; set; }
 
 
-        public AsyncOperation(AsyncOperations op, AsyncOpCallback callback, object param, object pwner)
+        public AsyncOperation(AsyncOperations op, AsyncOpCallback callback, object param0 = null, object param1 = null, object pwner = null)
         {
             this.op = op;
             this.callback = callback;
-            this.param = param;
+            this.param0 = param0;
+            this.param1 = param1;
             this.pwner = pwner;
 
             RequiresSignIn = true;

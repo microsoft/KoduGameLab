@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Fx;
 
@@ -47,7 +50,7 @@ namespace Boku.UI2D
         private Color dropShadowColor;
         private bool useDropShadow = false;
         private bool invertDropShadow = false;  // Puts the drop shadow above the regular letter instead of below.
-        private Justification justify = Justification.Center;
+        private TextHelper.Justification justify = TextHelper.Justification.Center;
 
         #region Accessors
         public override bool Selected
@@ -173,7 +176,7 @@ namespace Boku.UI2D
         /// <param name="label"></param>
         /// <param name="justify"></param>
         /// <param name="textColor"></param>
-        public UIGrid2DTextElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, string label, UI2D.Shared.GetFont Font, Justification justify, Color textColor)
+        public UIGrid2DTextElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, string label, GetFont Font, TextHelper.Justification justify, Color textColor)
         {
             this.width = width;
             this.height = height;
@@ -203,7 +206,7 @@ namespace Boku.UI2D
         /// <param name="textColor"></param>
         /// <param name="dropShadowColor"></param>
         /// <param name="invertDropShadow"></param>
-        public UIGrid2DTextElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, string label, UI2D.Shared.GetFont Font, Justification justify, Color textColor, Color dropShadowColor, bool invertDropShadow)
+        public UIGrid2DTextElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, string label, GetFont Font, TextHelper.Justification justify, Color textColor, Color dropShadowColor, bool invertDropShadow)
         {
             this.width = width;
             this.height = height;
@@ -275,14 +278,14 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the normal map texture.
             if (normalMapName != null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\" + normalMapName);
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\" + normalMapName);
             }
         }   // end of UIGrid2DTextElement LoadContent()
 
@@ -318,8 +321,8 @@ namespace Boku.UI2D
 
             ReleaseRenderTargets();
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
 
             BokuGame.Unload(geometry);
             geometry = null;
@@ -337,8 +340,8 @@ namespace Boku.UI2D
 
         private void ReleaseRenderTargets()
         {
-            InGame.RelRT("UIGrid2DTextElement", diffuse);
-            BokuGame.Release(ref diffuse);
+            SharedX.RelRT("UIGrid2DTextElement", diffuse);
+            DeviceResetX.Release(ref diffuse);
         }
 
         private void CreateRenderTargets(GraphicsDevice device)
@@ -358,7 +361,7 @@ namespace Boku.UI2D
 
             // Create the diffuse texture.  Leave it null if we have no text to render.
             diffuse = new RenderTarget2D(device, w, h, false, SurfaceFormat.Color, DepthFormat.None, 1, RenderTargetUsage.PlatformContents);
-            InGame.GetRT("UIGrid2DTextElement", diffuse);
+            SharedX.GetRT("UIGrid2DTextElement", diffuse);
 
             InGame.SetRenderTarget(diffuse);
             InGame.Clear(Color.Transparent);
@@ -373,7 +376,7 @@ namespace Boku.UI2D
 
                 x = TextHelper.CalcJustificationOffset(margin, originalWidth, textWidth, justify);
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
                 TextHelper.DrawStringWithShadow(Font, batch, x, y, label, textColor, dropShadowColor, invertDropShadow);
                 batch.End();

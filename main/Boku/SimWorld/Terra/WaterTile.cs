@@ -1,5 +1,4 @@
 
-#region USING
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,8 +7,10 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
-#endregion USING
+
 
 namespace Boku.SimWorld.Terra
 {
@@ -190,7 +191,7 @@ namespace Boku.SimWorld.Terra
                 public void Dispose()
                 {
                     Terrain.TotalCost -= NumVerts * Terrain.CostPerVertex;
-                    BokuGame.Release(ref vbuf);
+                    DeviceResetX.Release(ref vbuf);
                     NumVerts = 0;
                 }
 
@@ -242,7 +243,7 @@ namespace Boku.SimWorld.Terra
                         float waterLevel = water.BaseHeight;
                         if ((vbuf != null) && (vbuf.VertexCount < coreVerts.Count * 4))
                         {
-                            BokuGame.Release(ref vbuf);
+                            DeviceResetX.Release(ref vbuf);
                         }
                         if (coreVerts.Count > 0)
                         {
@@ -257,7 +258,7 @@ namespace Boku.SimWorld.Terra
                             }
                             Debug.Assert(NumVerts == coreVerts.Count * 4);
 
-                            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                             if (vbuf == null)
                             {
@@ -614,7 +615,7 @@ namespace Boku.SimWorld.Terra
             {
                 Renderable.UnloadContent();
 
-                BokuGame.Release(ref ibuff);
+                DeviceResetX.Release(ref ibuff);
             }
 
             /// <summary>
@@ -639,7 +640,7 @@ namespace Boku.SimWorld.Terra
                     int numQuads = VirtualMap.PixPerMap * VirtualMap.PixPerMap;
                     int numTris = numQuads * 2;
                     int numIndices = numTris * 3;
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
                     ibuff = new IndexBuffer(device, typeof(UInt16), numIndices, BufferUsage.WriteOnly);
 
                     UInt16[] localIdx = new UInt16[numIndices];

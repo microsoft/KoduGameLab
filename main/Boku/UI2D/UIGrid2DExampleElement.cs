@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Fx;
 using Boku.Programming;
@@ -112,7 +115,7 @@ namespace Boku.UI2D
             this.Font = blob.Font;
             this.textColor = blob.textColor;
 
-            descBlob = new TextBlob(UI2D.Shared.GetGameFont24, example.description.Trim(), 650);
+            descBlob = new TextBlob(SharedX.GetGameFont24, example.description.Trim(), 650);
             descBlob.Justification = blob.justify;
 
             height = 1.1f + descBlob.NumLines * descBlob.TotalSpacing / 96.0f;
@@ -172,14 +175,14 @@ namespace Boku.UI2D
             }
 
             // And the description.
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-            //device.BlendState = UI2D.Shared.BlendStateColorWriteRGB;
+            //device.BlendState = Shared.BlendStateColorWriteRGB;
 
             pos.Y -= size.Y / 2.0f;
             Point pixelCoord = camera.WorldToScreenCoords(new Vector3(pos.X, pos.Y, 0.0f));
             pos = new Vector2(pixelCoord.X, pixelCoord.Y);
-            descBlob.RenderWithButtons(pos, textColor);
+            descBlob.RenderText(null, pos, textColor);
 
             //device.BlendState = BlendState.AlphaBlend;
 
@@ -195,11 +198,11 @@ namespace Boku.UI2D
             // Load the normal map texture.
             if (selectedBackground == null)
             {
-                selectedBackground = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\GreenSquare");
+                selectedBackground = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\GreenSquare");
             }
             if (unselectedBackground == null)
             {
-                unselectedBackground = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\GreySquare");
+                unselectedBackground = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\GreySquare");
             }
 
             if (tiles == null)
@@ -257,8 +260,8 @@ namespace Boku.UI2D
         {
             base.UnloadContent();
 
-            BokuGame.Release(ref selectedBackground);
-            BokuGame.Release(ref unselectedBackground);
+            DeviceResetX.Release(ref selectedBackground);
+            DeviceResetX.Release(ref unselectedBackground);
 
             for(int i=0; i<tiles.Count; i++)
             {

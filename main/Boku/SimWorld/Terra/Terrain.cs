@@ -24,6 +24,9 @@ using Microsoft.Xna.Framework.Graphics.PackedVector;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -312,9 +315,9 @@ namespace Boku.SimWorld.Terra
                                                                 typeof(EffectParams_FA)
                                                             },
                                                            new Type[] { typeof(EffectTechs) });
-                    effectColor = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Terrain_FD_Color");
+                    effectColor = KoiLibrary.LoadEffect(@"Shaders\Terrain_FD_Color");
                     ShaderGlobals.RegisterEffect("Terrain_FD_Color", effectColor);
-                    effectEdit = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Terrain_FD_Edit");
+                    effectEdit = KoiLibrary.LoadEffect(@"Shaders\Terrain_FD_Edit");
                     ShaderGlobals.RegisterEffect("Terrain_FD_Edit", effectEdit);
                     break;
                 default:
@@ -328,8 +331,8 @@ namespace Boku.SimWorld.Terra
         }
         private static void UnLoadEffect()
         {
-            BokuGame.Release(ref effectColor);
-            BokuGame.Release(ref effectEdit);
+            DeviceResetX.Release(ref effectColor);
+            DeviceResetX.Release(ref effectEdit);
 
             if (null != effectCacheColor)
             {
@@ -782,7 +785,7 @@ namespace Boku.SimWorld.Terra
             Init(xmlWorldData);
 
             // Finish the initialization with a call to LoadContent.  For most objects we
-            // don't have to do this explicitely but since the terrain object is not yet created
+            // don't have to do this explicitly but since the terrain object is not yet created
             // when the first round of calls to LoadGraphicsObject goes through we do it this way.
             BokuGame.Load(this);
         }   // end of Terrain c'tor
@@ -859,8 +862,6 @@ namespace Boku.SimWorld.Terra
         public static ushort UISlotToMatIndex(int uiSlot)
         {
             ushort matIdx = (ushort)uiSlotToMatIdx[uiSlot];
-            if (MaterialPicker.FabricMode)
-                matIdx = TerrainMaterial.GetFabric(matIdx);
 
             return matIdx;
         }
@@ -1402,7 +1403,7 @@ namespace Boku.SimWorld.Terra
             }
 
 
-            // TODO (****) No clue why we limit the height here.  In what case is this the right
+            // TODO (scoy) No clue why we limit the height here.  In what case is this the right
             // thing to do?
             // Commented this out since it was messing with setting the initial InsideGlassWalls value.
             // That code looks for a height of 0.
@@ -1969,27 +1970,18 @@ namespace Boku.SimWorld.Terra
         /// Renders the terrain displaying the edit brush.
         /// </summary>
         public void RenderEditMode(
-            Camera camera,
-            Texture2D shadowTexture,
-            Vector2 brushPosition,
-            Vector2 brushStart,
-            float brushRadius,
-            int brushIndex)
+                                    Camera camera,
+                                    Texture2D shadowTexture,
+                                    Vector2 brushPosition,
+                                    Vector2 brushStart,
+                                    float brushRadius)
         {
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(brushIndex);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
             Debug.Assert(brush != null, "Shouldn't be entering RenderEditMode without a valid brush");
 
-            if ((brush.Type & Brush2DManager.BrushType.StretchedAll) == 0)
+            if (!brush.IsLinear)
             {
                 brushStart = brushPosition;
-            }
-
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
-            {
-                if (!MouseInput.Left.IsPressed)
-                {
-                    brushStart = brushPosition;
-                }
             }
 
             ParameterEdit(EffectParams.EditBrushTexture).SetValue(brush.Texture);
@@ -2005,7 +1997,7 @@ namespace Boku.SimWorld.Terra
             Vector2 scaleOff = new Vector2(0.5f / (brushRadius * 0.5f), 0.5f);
             ParameterEdit(EffectParams.EditBrushScaleOff).SetValue(scaleOff);
 
-            bool editMode = (brush.Type & Brush2DManager.BrushType.Selection) == 0;
+            bool editMode = brush.Shape != Brush2DManager.BrushShape.Magic;
 
             if (editMode)
             {
@@ -2071,7 +2063,7 @@ namespace Boku.SimWorld.Terra
             Matrix worldViewProjMatrix = worldMatrix * viewMatrix * projMatrix;
             ParameterEdit(EffectParams.WorldViewProjMatrix).SetValue(worldViewProjMatrix);
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             foreach (EffectPass pass in effectEdit.CurrentTechnique.Passes)
             {
@@ -2170,11 +2162,11 @@ namespace Boku.SimWorld.Terra
 
             var originalEditModeFlag = editMode;
 
-            var device = BokuGame.bokuGame.GraphicsDevice;
+            var device = KoiLibrary.GraphicsDevice;
 
             //Render wireframe?
             if (RenderWire)
-                device.RasterizerState = UI2D.Shared.RasterStateWireframe;
+                device.RasterizerState = SharedX.RasterStateWireframe;
 
             //Set shadow params
             ParameterColor(EffectParams.ShadowTexture).SetValue(InGame.inGame.ShadowCamera.ShadowTexture);
@@ -2398,7 +2390,7 @@ namespace Boku.SimWorld.Terra
 
                         #region Debug_ToggleTopFaceWithF6: Skip Top for FewerDrawsRM
 #if Debug_ToggleTopFaceWithF6
-                        if (!KeyboardInput.IsPressed(Keys.F6))
+                        if (!KeyboardInputX.IsPressed(Keys.F6))
 #endif
                         #endregion
                         {
@@ -2410,7 +2402,7 @@ namespace Boku.SimWorld.Terra
 
                         #region Debug_ToggleSideFacesWithF7: Skip sides for FewerDrawsRM
 #if Debug_ToggleSideFacesWithF7
-                        if (!KeyboardInput.IsPressed(Keys.F7))
+                        if (!KeyboardInputX.IsPressed(Keys.F7))
 #endif
                         #endregion
                         {
@@ -2607,7 +2599,7 @@ namespace Boku.SimWorld.Terra
 
         public void RenderWater(Camera camera, bool effects)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             WaterParticleEmitter.Render(camera);
 
@@ -2623,12 +2615,11 @@ namespace Boku.SimWorld.Terra
             return tilePos + tile.Min;
         }
         public void RenderToHeightMap(
-            int editBrushIndex,
-            Vector2 editBrushStart,
-            Vector2 editBrushEnd,
-            float editBrushRadius,
-            EditMode editMode,
-            float editSpeed)
+                                        Vector2 editBrushStart,
+                                        Vector2 editBrushEnd,
+                                        float editBrushRadius,
+                                        EditMode editMode,
+                                        float editSpeed)
         {
             if (editMode == EditMode.Noop)
                 return;
@@ -2677,7 +2668,6 @@ namespace Boku.SimWorld.Terra
             }
             RenderToHeightMap(
                 VirtualMap,
-                editBrushIndex,
                 editBrushStart,
                 editBrushEnd,
                 editBrushRadius,
@@ -2700,11 +2690,10 @@ namespace Boku.SimWorld.Terra
         }
 
         public void RenderToHeightMap(
-            int editBrushIndex,
-            Vector2 editBrushPosition,
-            float editBrushRadius,
-            EditMode editMode,
-            float editSpeed)
+                                        Vector2 editBrushPosition,
+                                        float editBrushRadius,
+                                        EditMode editMode,
+                                        float editSpeed)
         {
             if (editMode == EditMode.Noop)
                 return;
@@ -2743,7 +2732,6 @@ namespace Boku.SimWorld.Terra
             }
             RenderToHeightMap(
                 VirtualMap,
-                editBrushIndex,
                 editBrushPosition,
                 editBrushRadius,
                 editMode,
@@ -2761,9 +2749,8 @@ namespace Boku.SimWorld.Terra
         }
 
         public bool PositionSelected(Vector3 position,
-            int editBrushIndex,
-            Vector2 editBrushPosition,
-            float editBrushRadius)
+                                    Vector2 editBrushPosition,
+                                    float editBrushRadius)
         {
             Vector2 worldPoint = new Vector2(position.X, position.Y);
 
@@ -2778,7 +2765,7 @@ namespace Boku.SimWorld.Terra
                 0.5f - editBrushPosition.X * w2bScale.X,
                 0.5f - editBrushPosition.Y * w2bScale.Y);
 
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(editBrushIndex);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
 
             Vector2 brushPoint = worldPoint * w2bScale + w2bOffset;
             float brushPointSample;
@@ -2799,13 +2786,12 @@ namespace Boku.SimWorld.Terra
         }
 
         public bool PositionSelected(Vector3 position,
-            int editBrushIndex,
-            Vector2 editBrushStart,
-            Vector2 editBrushEnd,
-            float editBrushRadius)
+                                    Vector2 editBrushStart,
+                                    Vector2 editBrushEnd,
+                                    float editBrushRadius)
         {
             // Get brush info.
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(editBrushIndex);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
             if (brush == null)
             {
                 return false;
@@ -2885,17 +2871,15 @@ namespace Boku.SimWorld.Terra
         /// <summary>
         /// Renders into the current heightmap
         /// </summary>
-        /// <param name="editBrushIndex">The brush we're rendering with.</param>
         /// <param name="editBrushPosition">Position of the brush.</param>
         /// <param name="editBrushRadius">Radius of the brush.</param>
         /// <param name="editMode">Mode:  up, down, smooth, rough</param>
         private void RenderToHeightMap(
-            VirtualMap map,
-            int editBrushIndex,
-            Vector2 editBrushPosition,
-            float editBrushRadius,
-            EditMode editMode,
-            float editSpeed)
+                                        VirtualMap map,
+                                        Vector2 editBrushPosition,
+                                        float editBrushRadius,
+                                        EditMode editMode,
+                                        float editSpeed)
         {
             /// Tools that operate on the single brush position go here.
             switch (editMode)
@@ -3006,7 +2990,7 @@ namespace Boku.SimWorld.Terra
 
 
             // Get brush info.
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(editBrushIndex);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
 
             // Transform brush position to lower left of brush from center.
             Vector2 editBrushSWCorner = editBrushPosition - 0.5f * new Vector2(editBrushRadius);
@@ -3075,8 +3059,8 @@ namespace Boku.SimWorld.Terra
             LevelHeight = brushCenterHeight;
 
             bool snap = InGame.inGame.SnapToGrid;
-            bool click = MouseInput.Left.WasPressed
-                || MouseInput.Right.WasPressed
+            bool click = LowLevelMouseInput.Left.WasPressed
+                || LowLevelMouseInput.Right.WasPressed
                 || GamePadInput.GetGamePad0().LeftTriggerButton.WasPressed
                 || GamePadInput.GetGamePad0().RightTriggerButton.WasPressed;
 
@@ -3780,8 +3764,8 @@ namespace Boku.SimWorld.Terra
             }
 
             bool snap = InGame.inGame.SnapToGrid;
-            bool click = MouseInput.Left.WasPressed 
-                || MouseInput.Right.WasPressed 
+            bool click = LowLevelMouseInput.Left.WasPressed 
+                || LowLevelMouseInput.Right.WasPressed 
                 || GamePadInput.GetGamePad0().LeftTriggerButton.WasPressed
                 || GamePadInput.GetGamePad0().RightTriggerButton.WasPressed;
 
@@ -3885,19 +3869,18 @@ namespace Boku.SimWorld.Terra
             }
         }
         private void RenderToHeightMap(
-            VirtualMap map,
-            int editBrushIndex,
-            Vector2 editBrushStart,
-            Vector2 editBrushEnd,
-            float editBrushRadius,
-            EditMode editMode,
-            float editSpeed)
+                                        VirtualMap map,
+                                        Vector2 editBrushStart,
+                                        Vector2 editBrushEnd,
+                                        float editBrushRadius,
+                                        EditMode editMode,
+                                        float editSpeed)
         {
             if (editMode == EditMode.Noop)
                 return;
 
             // Get brush info.
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(editBrushIndex);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
             if (brush == null)
             {
                 return;
@@ -4273,7 +4256,7 @@ namespace Boku.SimWorld.Terra
                     PerspectiveUICamera camera = new PerspectiveUICamera();
 
                     // Set up params for rendering UI with this camera.
-                    ShaderGlobals.SetCamera(camera);
+                    BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
                     TerrainMaterial[] materials = TerrainMaterial.Materials;
 
@@ -4311,7 +4294,7 @@ namespace Boku.SimWorld.Terra
             {
                 if (shadowMask == null)
                 {
-                    shadowMask = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Terrain\TexturePaletteMask");
+                    shadowMask = KoiLibrary.LoadTexture2D(@"Textures\Terrain\TexturePaletteMask");
                 }
 
                 for (int i = 0; i < 4; i++)
@@ -4326,7 +4309,7 @@ namespace Boku.SimWorld.Terra
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref shadowMask);
+                DeviceResetX.Release(ref shadowMask);
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -4431,9 +4414,7 @@ namespace Boku.SimWorld.Terra
 
         protected Texture2D LoadGroundTexture(string filename)
         {
-            return BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                + @"Textures\Terrain\GroundTextures\"
-                + filename);
+            return KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\" + filename);
         }
 
         public static void RebuildAll()
@@ -4500,33 +4481,25 @@ namespace Boku.SimWorld.Terra
         {
             if (busyMessage == null)
             {
-                // TODO (****) *** How does this get scaled if window changes size???
+                // TODO (scoy) *** How does this get scaled if window changes size???
                 Point deviceSize = new Point(device.Viewport.Width, device.Viewport.Height);
                 busyMessage = new SimpleMessage();
                 busyMessage.Center = new Point(deviceSize.X / 2, deviceSize.Y / 6);
 
-                busyMessage.AddTexture(BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                    + @"Textures\Terrain\busyframe_01"));
-                busyMessage.AddTexture(BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                    + @"Textures\Terrain\busyframe_02"));
-                busyMessage.AddTexture(BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                    + @"Textures\Terrain\busyframe_03"));
-                busyMessage.AddTexture(BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                    + @"Textures\Terrain\busyframe_04"));
-                busyMessage.AddTexture(BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                    + @"Textures\Terrain\busyframe_05"));
-                busyMessage.AddTexture(BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                    + @"Textures\Terrain\busyframe_06"));
-                busyMessage.AddTexture(BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                    + @"Textures\Terrain\busyframe_07"));
-                busyMessage.AddTexture(BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath
-                    + @"Textures\Terrain\busyframe_08"));
+                busyMessage.AddTexture(KoiLibrary.LoadTexture2D(@"Textures\Terrain\busyframe_01"));
+                busyMessage.AddTexture(KoiLibrary.LoadTexture2D(@"Textures\Terrain\busyframe_02"));
+                busyMessage.AddTexture(KoiLibrary.LoadTexture2D(@"Textures\Terrain\busyframe_03"));
+                busyMessage.AddTexture(KoiLibrary.LoadTexture2D(@"Textures\Terrain\busyframe_04"));
+                busyMessage.AddTexture(KoiLibrary.LoadTexture2D(@"Textures\Terrain\busyframe_05"));
+                busyMessage.AddTexture(KoiLibrary.LoadTexture2D(@"Textures\Terrain\busyframe_06"));
+                busyMessage.AddTexture(KoiLibrary.LoadTexture2D(@"Textures\Terrain\busyframe_07"));
+                busyMessage.AddTexture(KoiLibrary.LoadTexture2D(@"Textures\Terrain\busyframe_08"));
 
                 Texture2D messageTexture = busyMessage.Texture;
                 busyMessage.Size = new Point(messageTexture.Width, messageTexture.Height);
 
                 busyMessage.Text = "Text Unset";
-                busyMessage.Font = UI2D.Shared.GetGameFont18Bold;
+                busyMessage.Font = SharedX.GetGameFont18Bold;
                 busyMessage.TextCenter = new Point(
                     busyMessage.Center.X,
                     busyMessage.Center.Y + busyMessage.Size.Y / 2);

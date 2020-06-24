@@ -8,6 +8,8 @@ using System.ComponentModel;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+using KoiX.Input;
 
 using Boku.Input;
 using Boku.Web;
@@ -595,6 +597,11 @@ namespace Boku.Common
         /// <returns></returns>
         public static bool IsPressed(Keys key)
         {
+            if (keys[0] == null)
+            {
+                Init();
+            }
+
             return keys[(int)key].IsPressed;
         }   // end of IsPressed()
 
@@ -635,6 +642,12 @@ namespace Boku.Common
         /// <returns></returns>
         public static bool WasPressed(Keys key)
         {
+            // TODO (scoy) I'm not sure if this is needed but it seems
+            // to prevent issues when the rest of the UI is not working right.
+            if (keys == null || keys[0] == null)
+            {
+                Init();
+            }
             return keys[(int)key].WasPressed;
         }   // end of WasPressed()
 
@@ -762,9 +775,12 @@ namespace Boku.Common
         /// </summary>
         public static void ClearAllWasPressedState()
         {
-            for (int i = 0; i < kNumKeys; ++i)
+            if (keysInitialized)
             {
-                keys[i].ClearAllWasPressedState();
+                for (int i = 0; i < kNumKeys; ++i)
+                {
+                    keys[i].ClearAllWasPressedState();
+                }
             }
         } // end of ClearAllWasPressedState()
 
@@ -775,16 +791,19 @@ namespace Boku.Common
         public static void IgnoreUntilReleased(Keys key)
         {
             keys[(int)key & 0xff].IgnoreUntilReleased = true;
-        } // end of IngoreUntilReleased()
+        } // end of IgnoreUntilReleased()
 
         /// <summary>
         /// Ignore pressed state for all keys until they've been released.
         /// </summary>
         public static void IgnoreAllUntilReleased()
         {
-            for (int i = 0; i < kNumKeys; ++i)
+            if (keysInitialized)
             {
-                keys[i].IgnoreUntilReleased = true;
+                for (int i = 0; i < kNumKeys; ++i)
+                {
+                    keys[i].IgnoreUntilReleased = true;
+                }
             }
         }
 

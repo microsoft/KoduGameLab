@@ -19,6 +19,10 @@ using System.Xml;
 using System.Xml.Serialization;
 #endif // MF_HOSE_TESTS
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Managers;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Xml;
@@ -193,7 +197,7 @@ namespace Boku
                 if (pad.Back.WasPressed)
                 {
                     Deactivate();
-                    InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.RunSim;
+                    SceneManager.SwitchToScene("RunSimScene");
                     return;
                 }
 
@@ -390,7 +394,7 @@ namespace Boku
             if (active)
             {
                 // Render menu using local camera.
-                Fx.ShaderGlobals.SetCamera(camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
                 // Darken the background to emphasize to the user that they need to pick a tool.
                 ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
@@ -406,8 +410,8 @@ namespace Boku
                 position.Y += grid.WorldMatrix.Translation.Y;
                 position.Y -= 0.14f;    // No clue.  Nedd to figure this out.
                 Vector2 size = 2.0f * new Vector2(e.Size.X, e.Size.Y);
-                float alpha = 1.0f;
-                csquad.Render(camera, BasePicker.reticuleTexture, alpha, position, size, @"AdditiveBlend");
+                //float alpha = 1.0f;
+                //csquad.Render(camera, BasePicker.reticuleTexture, alpha, position, size, @"AdditiveBlend");
 
                 // Don't bother with trigger icons if we're modal.
                 if (!XmlOptionsData.ModalToolMenu)
@@ -462,7 +466,7 @@ namespace Boku
             Deactivate();
 
             // Transition to RunSim.
-            InGame.inGame.CurrentUpdateMode = InGame.UpdateMode.RunSim;
+            SceneManager.SwitchToScene("RunSimScene");
 
         }   // end of OnCancel()
 
@@ -526,7 +530,7 @@ namespace Boku
 
             if (dropShadowTexture == null)
             {
-                dropShadowTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\ToolMEnu\DropShadow");
+                dropShadowTexture = KoiLibrary.LoadTexture2D(@"Textures\ToolMEnu\DropShadow");
             }
 
         }   // end of ToolMenu LoadContent()
@@ -541,7 +545,7 @@ namespace Boku
         {
             BokuGame.Unload(grid);
 
-            BokuGame.Release(ref dropShadowTexture);
+            DeviceResetX.Release(ref dropShadowTexture);
 
         }   // end of ToolMenu UnloadContent()
 

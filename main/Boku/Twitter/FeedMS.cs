@@ -19,9 +19,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
-//using Boku.Common.Gesture;
 using Boku.Fx;
 using Boku.UI2D;
 
@@ -33,9 +35,9 @@ namespace Boku
         private static Color hoverColor = Color.YellowGreen;
         private static Color clickColor = Color.Orange;
         private static Color bodyTextColor = new Color(0.2f, 0.2f, 0.2f, 1.0f);
-        private Shared.GetFont titleFont = UI2D.Shared.GetGameFont15_75;
-        private Shared.GetFont dateFont = UI2D.Shared.GetGameFont10;
-        private Shared.GetFont bodyFont = UI2D.Shared.GetGameFont10;
+        private GetFont titleFont = SharedX.GetGameFont15_75;
+        private GetFont dateFont = SharedX.GetGameFont10;
+        private GetFont bodyFont = SharedX.GetGameFont10;
 
         private List<Hyperlink> hyperlinkList = new List<Hyperlink>();
         private TextBlob textBlob  = null;
@@ -104,7 +106,7 @@ namespace Boku
                 string result = rgx.Replace(value, replacement);
 
                 textBlob = new TextBlob(bodyFont, result, 150);
-                textBlob.Justification = UIGridElement.Justification.Left;
+                textBlob.Justification = TextHelper.Justification.Left;
             }
             get
             {
@@ -122,7 +124,7 @@ namespace Boku
 
 
 
-        public FeedMs(Vector2 size, TextBlob tBlob, Shared.GetFont titleFont, Shared.GetFont dateFont, Shared.GetFont bodyFont)
+        public FeedMs(Vector2 size, TextBlob tBlob, GetFont titleFont, GetFont dateFont, GetFont bodyFont)
           : base(size)
         {
             this.titleFont = titleFont;
@@ -142,11 +144,11 @@ namespace Boku
                 size.Y += dateBlob.TotalSpacing + dateFont().LineSpacing;
             base.Height = size.Y;
 
-            titleBlob.Justification = UIGridElement.Justification.Left;
-            dateBlob.Justification = UIGridElement.Justification.Left;
+            titleBlob.Justification = TextHelper.Justification.Left;
+            dateBlob.Justification = TextHelper.Justification.Left;
         }
 
-        public FeedMs(Vector2 size, string text, Shared.GetFont tFont, Shared.GetFont dFont, Shared.GetFont bFont)
+        public FeedMs(Vector2 size, string text, GetFont tFont, GetFont dFont, GetFont bFont)
           : base(size)
         {
 
@@ -224,20 +226,20 @@ namespace Boku
             // the news item is rendered.
             Vector2 drawOffset = Vector2.Zero;
 
-            dateBlob.RenderWithButtons(
+            dateBlob.RenderText(null, 
                drawPos,
                Color.Black,
                maxLines: 1);
             drawOffset.Y += GetDateHeightOffset();
 
-            titleBlob.RenderWithButtons(
+            titleBlob.RenderText(null, 
                 drawPos + drawOffset,
                 Color.Black,
                 maxLines: 1);
             drawOffset.Y += GetTitleHeightOffset();
 
             // Draw the body of the news item.
-            textBlob.RenderWithButtons(drawPos + drawOffset, bodyTextColor);
+            textBlob.RenderText(null, drawPos + drawOffset, bodyTextColor);
             drawOffset.Y += textBlob.NumLines * textBlob.TotalSpacing;
 
             // Draw any attatched hyperlinks.

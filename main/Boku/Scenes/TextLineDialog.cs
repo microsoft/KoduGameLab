@@ -7,6 +7,10 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Gesture;
@@ -129,12 +133,12 @@ namespace Boku
 
         public void HandleMouseInput()
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.KeyboardMouse)
+            if (!KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
             {
                 return;
             }
 
-            Vector2 hit = MouseInput.GetMouseInRtCoords();
+            Vector2 hit = LowLevelMouseInput.GetMouseInRtCoords();
 
             // Cancel
             if (cancelButton.Box.LeftPressed(hit))
@@ -204,7 +208,7 @@ namespace Boku
                 }
                 if (textBox.Contains(touchHit))
                 {
-                    KeyboardInput.ShowOnScreenKeyboard();
+                    KeyboardInputX.ShowOnScreenKeyboard();
                 }
             }
 
@@ -214,19 +218,19 @@ namespace Boku
 
         public void LoadContent(bool immediate)
         {
-            whiteTile=BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\WhiteTile");
-            whiteTop = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\WhiteTop");
-            whiteBottom = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\WhiteBottom");
-            blackHighlight = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\BlackHighlight");
+            whiteTile=KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\WhiteTile");
+            whiteTop = KoiLibrary.LoadTexture2D(@"Textures\GridElements\WhiteTop");
+            whiteBottom = KoiLibrary.LoadTexture2D(@"Textures\GridElements\WhiteBottom");
+            blackHighlight = KoiLibrary.LoadTexture2D(@"Textures\GridElements\BlackHighlight");
 
             {
                 GetTexture getTexture = delegate { return ButtonTextures.BButton; };
                 cancelButton = new Button(Strings.Localize("textDialog.cancel"), Color.White, getTexture,
-                    UI2D.Shared.GetGameFont20);
+                    SharedX.GetGameFont20);
             }
             {
                 GetTexture getTexture = delegate { return ButtonTextures.AButton; };
-                okButton = new Button(Strings.Localize("textDialog.ok"), Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                okButton = new Button(Strings.Localize("textDialog.ok"), Color.White, getTexture, SharedX.GetGameFont20);
             }
 
             BokuGame.Load(textLineEditor, immediate);
@@ -240,17 +244,17 @@ namespace Boku
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref blackHighlight);
-            BokuGame.Release(ref whiteBottom);
-            BokuGame.Release(ref whiteTop);
-            BokuGame.Release(ref whiteTile);
+            DeviceResetX.Release(ref blackHighlight);
+            DeviceResetX.Release(ref whiteBottom);
+            DeviceResetX.Release(ref whiteTop);
+            DeviceResetX.Release(ref whiteTile);
 
             BokuGame.Unload(textLineEditor);
         }   // end of UnloadContent()
 
         public void Render()
         {
-            RenderTarget2D rt = Shared.RenderTargetDepthStencil1280_720;
+            RenderTarget2D rt = SharedX.RenderTargetDepthStencil1280_720;
             ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
             // Copy the rendered scene to the backbuffer.
             quad.Render(rt, ScreenWarp.RenderPosition, ScreenWarp.RenderSize, @"TexturedRegularAlpha");
@@ -258,7 +262,7 @@ namespace Boku
 
         public void PreRender()
         {
-            RenderTarget2D rt = Shared.RenderTargetDepthStencil1280_720;
+            RenderTarget2D rt = SharedX.RenderTargetDepthStencil1280_720;
 
             Vector2 rtSize = new Vector2(rt.Width, rt.Height);
             ScreenWarp.FitRtToScreen(rtSize);
@@ -268,11 +272,11 @@ namespace Boku
             InGame.Clear(Color.Transparent);
 
             // Set up params for rendering UI with this camera.
-            ShaderGlobals.SetCamera(camera);
+            BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
             ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
 
-            SpriteBatch batch = Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             var center = new Vector2(640, 360);
             var dialogMin = center - new Vector2(dialogWidth / 2, dialogHeight / 2);
@@ -310,7 +314,7 @@ namespace Boku
             batch.Begin();
 
             //Dialog title.
-            TextHelper.DrawString(Shared.GetGameFont20, title, dialogMin + new Vector2(10, 10 + 5), Color.White);
+            TextHelper.DrawString(SharedX.GetGameFont20, title, dialogMin + new Vector2(10, 10 + 5), Color.White);
 
             //Ok and Cancel buttons
             var buttonSize = cancelButton.GetSize();

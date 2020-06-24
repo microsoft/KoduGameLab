@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.ParticleSystem;
@@ -157,7 +159,7 @@ namespace Boku.SimWorld.Chassis
                     // Are we in the water?
                     if (position.Z < waterAlt)
                     {
-                        // TODO (****) This could be made better by also having
+                        // TODO (scoy) This could be made better by also having
                         // the density control how deep an object floats.
 
                         // Should we sink or float?

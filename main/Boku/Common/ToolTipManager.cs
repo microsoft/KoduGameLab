@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common.Xml;
@@ -113,9 +117,9 @@ namespace Boku.Common
                 }
             }
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+            if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
             {
-                Vector2 cur = new Vector2(MouseInput.Position.X, MouseInput.Position.Y);
+                Vector2 cur = new Vector2(LowLevelMouseInput.Position.X, LowLevelMouseInput.Position.Y);
                 float dist = (cur - mousePos).Length();
 
                 if (dist > mouseRadius)
@@ -218,7 +222,7 @@ namespace Boku.Common
                 if (desc != null)
                 {
                     desc = desc.Trim();
-                    blob = new TextBlob(UI2D.Shared.GetGameFont24, desc, 512 - margin * 2);
+                    blob = new TextBlob(SharedX.GetGameFont24, desc, 512 - margin * 2);
                 }
                 else
                 {
@@ -231,7 +235,7 @@ namespace Boku.Common
                 dirty = true;
 
                 // Grab mouse position so we know if it moved.
-                mousePos = new Vector2(MouseInput.Position.X, MouseInput.Position.Y);
+                mousePos = new Vector2(LowLevelMouseInput.Position.X, LowLevelMouseInput.Position.Y);
             }
 
         }   // end of ShowTip()
@@ -261,15 +265,15 @@ namespace Boku.Common
         {
             bool lores = BokuGame.ScreenSize.Y <= 480;
 
-            UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont24Bold;
+            GetFont Font = SharedX.GetGameFont24Bold;
             if (lores)
             {
-                Font = UI2D.Shared.GetGameFont30Bold;
+                Font = SharedX.GetGameFont30Bold;
             }
             blob.Font = Font;
 
             ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
-            RenderTarget2D rt = UI2D.Shared.RenderTarget512_302;
+            RenderTarget2D rt = SharedX.RenderTarget512_302;
 
             InGame.SetRenderTarget(rt);
 
@@ -278,7 +282,7 @@ namespace Boku.Common
             ssquad.Render(background, Vector2.Zero, new Vector2(512, 302), "TexturedRegularAlpha");
 
             // Tile name.
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
             Vector2 pos = new Vector2(margin, margin);
             /*
             batch.Begin();
@@ -289,9 +293,9 @@ namespace Boku.Common
             blob.RawText = curTip;
             if (blob.HasRtoL)
             {
-                blob.Justification = Boku.UI2D.UIGridElement.Justification.Right;
+                blob.Justification = TextHelper.Justification.Right;
             }
-            blob.RenderWithButtons(pos, Color.Yellow);
+            blob.RenderText(null, pos, Color.Yellow);
             blob.RawText = desc;        // Restore
 
             // We need to special case groups since they don't have any data.  For groups 
@@ -299,9 +303,9 @@ namespace Boku.Common
             if (curTip == Strings.Localize("toolTips.group"))
             {
                 blob = new TextBlob(Font, Strings.Localize("toolTips.groupDesc"), 512 - margin * 2);
-                blob.Justification = Boku.UI2D.UIGridElement.Justification.Center;
+                blob.Justification = TextHelper.Justification.Center;
                 pos = new Vector2(0, (302 - Font().LineSpacing) / 2);
-                blob.RenderWithButtons(pos, Color.White);
+                blob.RenderText(null, pos, Color.White);
             }
             else
             {
@@ -328,10 +332,10 @@ namespace Boku.Common
                     // Right justify if RtoL
                     if (blob.HasRtoL)
                     {
-                        blob.Justification = Boku.UI2D.UIGridElement.Justification.Right;
+                        blob.Justification = TextHelper.Justification.Right;
                     }
 
-                    blob.RenderWithButtons(pos, Color.White, maxLines: maxLines);
+                    blob.RenderText(null, pos, Color.White, maxLines: maxLines);
                 }
 
                 // Buttons @ bottom
@@ -409,7 +413,7 @@ namespace Boku.Common
             // Load the background texture.
             if (background == null)
             {
-                background = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\ToolTip");
+                background = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\ToolTip");
             }
 
         }   // end of LoadContent()
@@ -426,8 +430,8 @@ namespace Boku.Common
 
         public static void UnloadContent()
         {
-            BokuGame.Release(ref texture);
-            BokuGame.Release(ref background);
+            DeviceResetX.Release(ref texture);
+            DeviceResetX.Release(ref background);
         }   // end of UnloadContent()
 
         /// <summary>

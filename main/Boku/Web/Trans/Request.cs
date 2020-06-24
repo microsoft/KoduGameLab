@@ -116,7 +116,7 @@ namespace Boku.Web.Trans
             return string.Empty;
         }
 
-        // TODO *******, ****: There's probably a better place for this to live.
+        // TODO eanders, scoy: There's probably a better place for this to live.
         public static string GetUserName()
         {
             return BokuShared.Auth.CreatorName;

@@ -1,9 +1,12 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
-using Microsoft.Xna.Framework;
 using System.Diagnostics;
+using System.Text;
+
+using Microsoft.Xna.Framework;
+
+using KoiX;
 
 using Boku.Base;
 using Boku.Common;

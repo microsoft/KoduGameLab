@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -22,52 +25,45 @@ using Boku.SimWorld;
 using Boku.SimWorld.Terra;
 using Boku.Scenes;
 using Boku.Scenes.InGame;
+using KoiX.Managers;
 
 namespace Boku.Scenes.InGame.MouseEditTools
 {
     /// <summary>
     /// Base class for tools which fit into the terrain editing toolbox.
+    /// Used for keyboard/mouse and touch.  Not used for gamepad.
     /// </summary>
-    public abstract class BaseMouseEditTool
+    public abstract class BaseMouseEditTool : InputEventHandler
     {
         #region Members
 
         // This is the ID of the help overlay associated with the tool.  Add the text strings for the 
         // help overlay in HelpOverlay.Xml.
-        private string helpOverlayID = null;
-        private string helpOverlayMagicBrushID = null;
-        private string helpOverlayStartID = null;
-        private string helpOverlayGoingID = null;
+        string helpOverlayID = null;
+        string helpOverlayMagicBrushID = null;
+        string helpOverlayStartID = null;
+        string helpOverlayGoingID = null;
 
-        private bool active = false;
-        private bool starting = true;   // Set to true when tool is activated.  Used to debounce buttons.
-
-        protected int prevBrushIndex = 0;   // Let the tools that care about brushes remember what they were using.
-
-        protected BasePicker pickerX = null;    // Picker associated with X key.
-        protected BasePicker pickerY = null;    // Picker associated with Y key.
+        bool active = false;
 
         // Helpful references.
         protected Boku.InGame inGame = null;
         protected Boku.InGame.Shared shared = null;
-        protected MaterialPicker materialPicker = null;
-        protected WaterPicker waterPicker = null;
-        protected BrushPicker brushPicker = null;
 
-        private float terrainSpeed = 1.0f;
+        float terrainSpeed = 1.0f;
 
-        private bool inStretchMode = false;
-        private Vector2 endPos = Vector2.Zero;
+        bool usingLinearBrush = false;
+        Vector2 endPos = Vector2.Zero;
 
-        private bool isInAction = false;
+        protected bool isInAction = false;
 
-        protected enum Phase
-        {
-            Open,
-            Ready,
-            Going
-        };
-        private Phase stretchPhase = Phase.Open;
+        // Current edit modes as set by the current tool.
+        protected Terrain.EditMode leftMode = Terrain.EditMode.Noop;
+        protected Terrain.EditMode middleMode = Terrain.EditMode.Noop;
+        protected Terrain.EditMode rightMode = Terrain.EditMode.Noop;
+        Terrain.EditMode activeMode = Terrain.EditMode.Noop;
+
+        bool linearBrushPainting = false;
 
         protected delegate void AudioFeedback();
 
@@ -82,16 +78,12 @@ namespace Boku.Scenes.InGame.MouseEditTools
 
         #region Accessors
 
-        protected bool InStretchMode
+        protected bool UsingLinearBrush
         {
-            get { return inStretchMode; }
-            private set { inStretchMode = value; }
+            get { return usingLinearBrush; }
+            set { usingLinearBrush = value; }
         }
-        protected Phase StretchPhase
-        {
-            get { return stretchPhase; }
-            set { stretchPhase = value; }
-        }
+
         public bool Active
         {
             get { return active; }
@@ -113,6 +105,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 }
             }
         }
+
         /// <summary>
         /// The string used to identify which help overlay 
         /// to activate while this tool is active.
@@ -122,6 +115,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
             get { return helpOverlayID; }
             set { helpOverlayID = value; }
         }
+
         /// <summary>
         /// The string used to identify which help overlay 
         /// to activate while this tool is active and the
@@ -132,6 +126,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
             get { return helpOverlayMagicBrushID; }
             set { helpOverlayMagicBrushID = value; }
         }
+
         /// <summary>
         /// Which overlay to use prompting user to begin a stretch cursor operation.
         /// </summary>
@@ -140,6 +135,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
             get { return helpOverlayStartID; }
             set { helpOverlayStartID = value; }
         }
+
         /// <summary>
         /// Which overlay to use during a stretch cursor operation.
         /// </summary>
@@ -147,83 +143,6 @@ namespace Boku.Scenes.InGame.MouseEditTools
         {
             get { return helpOverlayGoingID; }
             set { helpOverlayGoingID = value; }
-        }
-
-        /// <summary>
-        /// Are we still waiting for the buttons/triggers to be released?
-        /// </summary>
-        public bool DebouncePending
-        {
-            get
-            {
-                if (starting)
-                {
-                    if (!Actions.PickerX.IsPressed
-                        && !Actions.PickerY.IsPressed
-                        && !Actions.Select.IsPressed
-                        && !Actions.PickerLeft.IsPressed
-                        && !Actions.PickerRight.IsPressed)
-                    {
-                        starting = false;
-                    }
-                }
-
-                return starting;
-            }
-        }
-        /// <summary>
-        /// Put the tool into a state which forces debouncing.
-        /// </summary>
-        public bool Starting
-        {
-            get { return starting; }
-            set { starting = value; }
-        }
-
-        /// <summary>
-        /// Set and activate the picker associated with key X.
-        /// </summary>
-        protected BasePicker PickerX
-        {
-            get { return pickerX; }
-            set
-            {
-                pickerX = value;
-                if (pickerX != null)
-                {
-                    pickerX.Active = true;
-                }
-            }
-        }
-        /// <summary>
-        /// Set and activate the picker associated with key Y.
-        /// </summary>
-        protected BasePicker PickerY
-        {
-            get { return pickerY; }
-            set
-            {
-                pickerY = value;
-                if (pickerY != null)
-                {
-                    pickerY.Active = true;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Is the picker assigned to the X key in use.
-        /// </summary>
-        protected bool PickerXInUse
-        {
-            get { return pickerX != null && pickerX.Active && !pickerX.Hidden; }
-        }
-        /// <summary>
-        /// Is the picker assigned to the Y key in use.
-        /// </summary>
-        protected bool PickerYInUse
-        {
-            get { return pickerY != null && pickerY.Active && !pickerY.Hidden; }
         }
 
         /// <summary>
@@ -242,81 +161,26 @@ namespace Boku.Scenes.InGame.MouseEditTools
         /// <summary>
         /// Common update code, expected to be overridden but base Update called as well.
         /// </summary>
-        public virtual void Update(Camera camera)
+        public virtual void Update()
         {
             // Only update if active and the toolbox isn't changing.
             if (Active)
             {
                 NotifyTerrainActivity();
 
-                CheckStretchMode();
+                CheckLinearBrush();
 
-                // Switch to Mini-Hub?
-                if (!PickerXInUse && !PickerYInUse && Actions.MiniHub.WasPressed)
+                if (!linearBrushPainting)
                 {
-                    /// The InGameEditBase will handle backing us out. Just don't do anything.
-                    return;
+                    shared.editBrushStart = shared.editBrushPosition;
                 }
 
-                // When a picker is being used currentTouchAction gets set to the invalid state NUMBER_OF_Buttons but
-                // when the picker stops being used currentTouchAction doesn't get restored to its previous value.  The
-                // result is that the user must tap the paint button again before any input works.  So, this hack tries
-                // to keep track of the good state in previousGoodTouchAction and restores that if the pickers are both
-                // closed and the state is bad.
-                // If neither picker is in use, either restore currentTouchAction to a useful state or save its current state.
-                if ((pickerX == null || pickerX.Hidden) && (pickerY == null || pickerY.Hidden))
-                {
-                    // Do we have an invalid state?
-                    if (shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.NUMBER_OF_Buttons)
-                    {
-                        // Invalid state, restore previous good state.
-                        shared.currentTouchAction = shared.previousGoodTouchAction;
-                    }
-                    else
-                    {
-                        // Valid state, save it to restore later.
-                        shared.previousGoodTouchAction = shared.currentTouchAction;
-                    }
-                }
-
-                // Use X and Y to bring up associated pickers.  If another is already
-                // being used, accept the current state and switch to the new one.
-                if ((Actions.PickerX.WasPressed) && pickerX != null)
-                {
-                    Actions.PickerX.ClearAllWasPressedState();
-
-                    // First check if the other picker is already in use.
-                    if (PickerYInUse)
-                    {
-                        PickerY.SelectCurrentChoice();
-                        PickerY.Hidden = true;
-                    }
-
-                    PickerX.Hidden = false;
-                }
-                if ((Actions.PickerY.WasPressed) && pickerY != null && pickerY.Hidden)
-                {
-                    Actions.PickerY.ClearAllWasPressedState();
-
-                    // First check if the other picker is already in use.
-                    if (PickerXInUse)
-                    {
-                        PickerX.SelectCurrentChoice();
-                        PickerX.Hidden = true;
-                    }
-
-                    PickerY.Hidden = false;
-                }
-            }
-
-            if (Active)
-            {
-                if (shared.ToolBox.PickersActive)
+                // Force end of action if modal dialog is activated.
+                if (DialogManagerX.ModalDialogIsActive)
                 {
                     inGame.Terrain.EndSelection();
                 }
             }
-            shared.editBrushSizeActive = !inGame.mouseEditUpdateObj.ToolBox.PickersActive;
 
         }   // end of BaseMouseEditTool Update()
 
@@ -324,22 +188,19 @@ namespace Boku.Scenes.InGame.MouseEditTools
         /// Override this to provide a place to initialize 
         /// anything that needs to be done on a per-use basis.
         /// </summary>
-        public virtual void OnActivate()
+        protected virtual void OnActivate()
         {
             // Get references.  We can't do this in the
             // c'tor since not all of these exist yet.
             inGame = Boku.InGame.inGame;
             shared = inGame.shared;
 
-            materialPicker = inGame.mouseEditUpdateObj.ToolBox.MaterialPicker;
-            waterPicker = inGame.mouseEditUpdateObj.ToolBox.WaterPicker;
-            brushPicker = inGame.mouseEditUpdateObj.ToolBox.BrushPicker;
+            linearBrushPainting = false;
 
-            starting = true;
-            StretchPhase = Phase.Open;
-
-            shared.editBrushIndex = prevBrushIndex;
             shared.editBrushStart = shared.editBrushPosition;
+
+            // Allow brush sizing.
+            shared.editBrushSizeActive = true;
 
             //HelpOverlay.Push(helpOverlayID);
             inGame.Cursor3D.Rep = Cursor3D.Visual.Pointy;
@@ -348,28 +209,16 @@ namespace Boku.Scenes.InGame.MouseEditTools
             terrainSpeed = Common.Xml.XmlOptionsData.TerrainSpeed; // just cache this.
 
             isInAction = false;
+
+            RegisterForInputEvents();
         }
 
         /// <summary>
         /// Override this to provide a place to clean up
         /// anything that needs it on a per-use basis.
         /// </summary>
-        public virtual void OnDeactivate()
+        protected virtual void OnDeactivate()
         {
-            prevBrushIndex = shared.editBrushIndex;
-
-            // Deactivate any pickers.
-            if (PickerX != null)
-            {
-                PickerX.Active = false;
-                PickerX = null;
-            }
-            if (PickerY != null)
-            {
-                PickerY.Active = false;
-                PickerY = null;
-            }
-
             inGame.ShowCursor();
             inGame.Cursor3D.Rep = Cursor3D.Visual.Edit;
             inGame.Cursor3D.DiffuseColor = new Vector4(0.5f, 0.9f, 0.8f, 0.3f);
@@ -390,13 +239,317 @@ namespace Boku.Scenes.InGame.MouseEditTools
             Foley.StopRaiseWater();
 
             isInAction = false;
+
+            UnregisterForInputEvents();
         }
 
         #endregion Public
 
+        #region InputEventHandler
+
+        public override void RegisterForInputEvents()
+        {
+            KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseLeftDown);
+            KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseMiddleDown);
+            KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseRightDown);
+            KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.Keyboard);
+            KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.GamePad);
+            KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.Tap);
+            KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.OnePointDrag);
+            KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.TwoPointDrag);
+
+            base.RegisterForInputEvents();
+        }   // end of RegisterForInputEvents()
+
+        public override bool ProcessMouseLeftDownEvent(MouseInput input)
+        {
+            Debug.Assert(Active);
+
+            if (KoiLibrary.InputEventManager.MouseFocusObject == null)
+            {
+                // Claim mouse focus as ours.
+                KoiLibrary.InputEventManager.MouseFocusObject = this;
+
+                // Register to get position and left up events.
+                // Note, we are using MousePosition rather than MouseMove ehre because we want this to 
+                // work properly with the terrain raise and lower type tools.
+                KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MousePosition);
+                KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseLeftUp);
+
+                activeMode = leftMode;
+                if (activeMode != Terrain.EditMode.Noop)
+                {
+                    LeftAudioStart();
+                }
+                isInAction = true;
+
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+                bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+
+                if (isMagicBrush)
+                {
+                    ProcessSelection();
+                }
+                else if (UsingLinearBrush)
+                {
+                    ProcessLinearBrushStart();
+                }
+                else
+                {
+                    ProcessPoint();
+                }
+
+                return true;
+            }
+
+            return base.ProcessMouseLeftDownEvent(input);
+        }   // end of ProcessMouseLeftDownEvent()
+
+        public override bool ProcessMousePositionEvent(MouseInput input)
+        {
+            Debug.Assert(Active);
+            
+            if (KoiLibrary.InputEventManager.MouseFocusObject == this)
+            {
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+                bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+
+                if (isMagicBrush)
+                {
+                    ProcessSelection();
+                }
+                else if (UsingLinearBrush)
+                {
+                    ProcessLinearBrushMove();
+                }
+                else
+                {
+                    ProcessPoint();
+                }
+
+                return true;
+            }
+            
+
+            return base.ProcessMousePositionEvent(input);
+        }   // end of ProcessMousePositionEvent()
+
+        public override bool ProcessMouseLeftUpEvent(MouseInput input)
+        {
+            Debug.Assert(Active);
+
+            if (KoiLibrary.InputEventManager.MouseFocusObject == this)
+            {
+                // Release mouse focus.
+                if (KoiLibrary.InputEventManager.MouseFocusObject == this)
+                {
+                    KoiLibrary.InputEventManager.MouseFocusObject = null;
+                }
+
+                // Stop getting move and up events.
+                KoiLibrary.InputEventManager.UnregisterForEvent(this, InputEventManager.Event.MousePosition);
+                KoiLibrary.InputEventManager.UnregisterForEvent(this, InputEventManager.Event.MouseLeftUp);
+
+                // Clear these even if the action fails.
+                if (LeftAudioEnd != null)
+                {
+                    LeftAudioEnd();
+                }
+                isInAction = false;
+
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+                bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+
+                if (isMagicBrush)
+                {
+                    ProcessSelection();
+                }
+                else if (UsingLinearBrush)
+                {
+                    ProcessLinearBrushRelease();
+                }
+                else
+                {
+                    ProcessPoint();
+                }
+
+                return true;
+            }
+            return false;
+        }   // end of ProcessMouseLeftUpEvent()
+
+        public override bool ProcessMouseMiddleDownEvent(MouseInput input)
+        {
+            Debug.Assert(Active);
+
+            if (KoiLibrary.InputEventManager.MouseFocusObject == null)
+            {
+                // Claim mouse focus as ours.
+                KoiLibrary.InputEventManager.MouseFocusObject = this;
+
+                // Register to get move and Middle up events.
+                KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MousePosition);
+                KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseMiddleUp);
+
+                activeMode = middleMode;
+                MiddleAudioStart();
+                isInAction = true;
+
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+                bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+
+                if (isMagicBrush)
+                {
+                    ProcessSelection();
+                }
+                else if (UsingLinearBrush)
+                {
+                    ProcessLinearBrushStart();
+                }
+                else
+                {
+                    ProcessPoint();
+                }
+
+                return true;
+            }
+
+            return base.ProcessMouseMiddleDownEvent(input);
+        }   // end of ProcessMouseMiddleDownEvent()
+
+        public override bool ProcessMouseMiddleUpEvent(MouseInput input)
+        {
+            Debug.Assert(Active);
+
+            if (KoiLibrary.InputEventManager.MouseFocusObject == this)
+            {
+                // Release mouse focus.
+                if (KoiLibrary.InputEventManager.MouseFocusObject == this)
+                {
+                    KoiLibrary.InputEventManager.MouseFocusObject = null;
+                }
+
+                // Stop getting move and up events.
+                KoiLibrary.InputEventManager.UnregisterForEvent(this, InputEventManager.Event.MousePosition);
+                KoiLibrary.InputEventManager.UnregisterForEvent(this, InputEventManager.Event.MouseMiddleUp);
+
+                // Clear these even if the action fails.
+                MiddleAudioEnd();
+                isInAction = false;
+
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+                bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+
+                if (isMagicBrush)
+                {
+                    ProcessSelection();
+                }
+                else if (UsingLinearBrush)
+                {
+                    ProcessLinearBrushRelease();
+                }
+                else
+                {
+                    ProcessPoint();
+                }
+
+                return true;
+            }
+            return false;
+        }   // end of ProcessMouseMiddleUpEvent()
+
+        public override bool ProcessMouseRightDownEvent(MouseInput input)
+        {
+            Debug.Assert(Active);
+
+            if (KoiLibrary.InputEventManager.MouseFocusObject == null)
+            {
+                // Claim mouse focus as ours.
+                KoiLibrary.InputEventManager.MouseFocusObject = this;
+
+                // Register to get move and Right up events.
+                KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MousePosition);
+                KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseRightUp);
+
+                activeMode = rightMode;
+                RightAudioStart();
+                isInAction = true;
+
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+                bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+
+                if (isMagicBrush)
+                {
+                    ProcessSelection();
+                }
+                else if (UsingLinearBrush)
+                {
+                    ProcessLinearBrushStart();
+                }
+                else
+                {
+                    ProcessPoint();
+                }
+
+                return true;
+            }
+
+            return base.ProcessMouseRightDownEvent(input);
+        }   // end of ProcessMouseRightDownEvent()
+
+        public override bool ProcessMouseRightUpEvent(MouseInput input)
+        {
+            Debug.Assert(Active);
+
+            if (KoiLibrary.InputEventManager.MouseFocusObject == this)
+            {
+                // Release mouse focus.
+                if (KoiLibrary.InputEventManager.MouseFocusObject == this)
+                {
+                    KoiLibrary.InputEventManager.MouseFocusObject = null;
+                }
+
+                // Stop getting move and up events.
+                KoiLibrary.InputEventManager.UnregisterForEvent(this, InputEventManager.Event.MousePosition);
+                KoiLibrary.InputEventManager.UnregisterForEvent(this, InputEventManager.Event.MouseRightUp);
+
+                // Clear these even if the action fails.
+                RightAudioEnd();
+                isInAction = false;
+
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+                bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+
+                if (isMagicBrush)
+                {
+                    ProcessSelection();
+                }
+                else if (UsingLinearBrush)
+                {
+                    ProcessLinearBrushRelease();
+                }
+                else
+                {
+                    ProcessPoint();
+                }
+
+                return true;
+            }
+            return false;
+        }   // end of ProcessMouseRightUpEvent()
+
+        #endregion InputEventHandler
+
         #region Internal
 
-        private void NotifyTerrainActivity()
+        /// <summary>
+        /// TODO (socy) Currently does nothing.  Could be useful if
+        /// we don't want the perf hit for recalculating water while
+        /// editing, but we need to see if it's needed first.  So,
+        /// leave this here as a reminder.  Remove when we're sure
+        /// we don't need it.
+        /// </summary>
+        void NotifyTerrainActivity()
         {
             VirtualMap.SuppressWaterUpdate = false;
 
@@ -409,28 +562,21 @@ namespace Boku.Scenes.InGame.MouseEditTools
             */
         }
 
-        private void CheckStretchMode()
+        void CheckLinearBrush()
         {
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(shared.editBrushIndex);
-            if ((brush != null)
-                &&
-                ((brush.Type & Brush2DManager.BrushType.StretchedAll) != 0))
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+            if (brush != null && brush.IsLinear)
             {
                 /// We're in stretch now. Is that new?
-                if (!InStretchMode)
+                if (!UsingLinearBrush)
                 {
-                    StretchPhase = Phase.Open;
-                    InStretchMode = true;
+                    linearBrushPainting = false;
+                    UsingLinearBrush = true;
                 }
-                //if (PickerXInUse || PickerYInUse)
-                //{
-                //    shared.editBrushStart = shared.editBrushPosition;
-                //    StretchPhase = Phase.Open;
-                //}
             }
             else
             {
-                InStretchMode = false;
+                UsingLinearBrush = false;
             }
         }
         /// <summary>
@@ -448,10 +594,8 @@ namespace Boku.Scenes.InGame.MouseEditTools
             // which needs slightly different help for magic
             // brush mode.
 
-            Brush2DManager.Brush2D brush
-                = Brush2DManager.GetBrush(shared.editBrushIndex);
-
-            if (HelpOverlayMagicBrushID != null && brush.Type == Brush2DManager.BrushType.Selection)
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+            if (HelpOverlayMagicBrushID != null && brush.Shape == Brush2DManager.BrushShape.Magic)
             {
                 SetOverlay(HelpOverlayMagicBrushID);
             }
@@ -472,431 +616,216 @@ namespace Boku.Scenes.InGame.MouseEditTools
         /// <returns></returns>
         protected virtual void CheckSelectCursor(bool alwaysShowCursor)
         {
-            /// The new pointy cursor seems always helpful, even if slightly
-            /// redundant with the brush.
+            // The new pointy cursor seems always helpful, even if slightly
+            // redundant with the brush.
             inGame.ShowCursor();
 
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(shared.editBrushIndex);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
             if (brush == null)
             {
-                //inGame.ShowCursor();
                 return;
             }
 
-            bool isSelection = (brush.Type & Brush2DManager.BrushType.Selection) != 0;
-            bool isStretch = (brush.Type & Brush2DManager.BrushType.StretchedAll) != 0;
+            bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+            bool isLinearBrush = brush.IsLinear;
 
-            //in touch mode, make sure we don't have the selection on unless the touch is active
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+            // In touch mode, make sure we don't have the selection on unless the touch is active.
+            if (KoiLibrary.LastTouchedDeviceIsTouch)
             {
                 if (TouchInput.TouchCount != 1 || TouchInput.WasMultiTouch || !Boku.InGame.inGame.TouchEdit.HasNonUITouch())
                 {
-                    isSelection = false;
+                    isMagicBrush = false;
                 }
             }
 
-            if (isSelection)
+            if (isMagicBrush)
             {
-                //inGame.ShowCursor();
                 inGame.Terrain.MakeSelection(shared.editBrushPosition);
             }
             else
             {
                 inGame.Terrain.EndSelection();
-                //if (!alwaysShowCursor)
-                //    inGame.HideCursor();
             }
         }
 
         /// <summary>
-        /// Pass off commands as appropriate to the right handlers, depending on
-        /// the current game pad and brush states.
+        /// Called by the individual tools to set the current edit modes.
+        /// Still need to figure out how to get the inputs from ToolBarDialog
+        /// into here.  Or should this become part of ToolBarDialog?
         /// </summary>
-        /// <param name="rightMode"></param>
-        /// <param name="aButton"></param>
-        /// <param name="leftMode"></param>
-        protected void ProcessTriggers(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
-            Terrain.EditMode right)
+        /// <param name="left"></param>
+        /// <param name="middle"></param>
+        /// <param name="right"></param>
+        protected void SetEditModes(Terrain.EditMode left,
+                                    Terrain.EditMode middle,
+                                    Terrain.EditMode right)
         {
-            /// If any of the toolbox pickers are active, disable our selves.
-            if (shared.ToolBox.PickersActive || Boku.InGame.inGame.mouseEditUpdateObj.ToolBox.PickersActive)
-            {
-                return;
-            }
+            leftMode = left;
+            middleMode = middle;
+            rightMode = right;
+        }   // end of SetEditModes()
 
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(shared.editBrushIndex);
-            bool isSelection = (brush != null) && ((brush.Type & Brush2DManager.BrushType.Selection) != 0);
 
-            // Size timer is used for changing selection brush size. Required for both mouse and touch
-            sizeTimer += Time.WallClockFrameSeconds;
+        void ProcessLinearBrushStart()
+        {
+            Debug.Assert(linearBrushPainting == false);
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
-            {
-                if (isSelection)
-                {
-                    ProcessTouchSelection(left, middle, right);
-                }
-                else
-                {
-                    ProcessTouch(left, middle, right);
-                }
-            }
+            // Capture starting position.
+            shared.editBrushStart = shared.editBrushPosition;
 
-            else if(GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
-            {
-                if (isSelection)
-                {
-                    ProcessSelection(left,middle,right);
-                }
-                else if (InStretchMode)
-                {
-                    ProcessStretched(left,middle,right);
-                }
-                else
-                {
-                    ProcessPoint(left,middle,right);
-                }
-            }
-        }
+            linearBrushPainting = true;
+
+        }   // end of ProcessLinearBrushStart()
+        
+        void ProcessLinearBrushMove()
+        {
+            Debug.Assert(linearBrushPainting == true);
+
+            // Nothing to see here.  Move aloing.
+
+        }   // end of ProcessLinearBrushMove()
+
+        void ProcessLinearBrushRelease()
+        {
+            Debug.Assert(linearBrushPainting == true);
+
+            linearBrushPainting = false;
+
+            // Apply the brush to the terrain.
+            ProcessLinearBrush();
+        }   // end of ProcessLinearBrushRelease()
 
         public const float kSmallRate = 0.1f;
         public const float kSmallMove = 0.1f;
         public const float kSmallMoveSq = kSmallMove * kSmallMove;
 
-        protected virtual void ProcessStretchedOpen()
-        {
-            if (StretchPhase == Phase.Open)
-            {
-                shared.editBrushStart = shared.editBrushPosition;
-                StretchPhase = Phase.Ready;
-            }
-        }
-        protected virtual void ProcessStretchedReady()
-        {
-            if (StretchPhase == Phase.Ready)
-            {
-                endPos = shared.editBrushPosition;
-
-                if (MouseInput.Left.IsPressed || MouseInput.Right.IsPressed)
-                {
-                    BeginStretchGoing();
-                    StretchPhase = Phase.Going;
-                }
-                ProcessBButton();
-            }
-        }
-        protected virtual void ProcessStretchedGoing(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
-            Terrain.EditMode right)
-        {
-            if (StretchPhase == Phase.Going)
-            {
-                float distSq = Vector2.DistanceSquared(endPos, shared.editBrushPosition);
-                bool gamePadMoved = distSq > kSmallMoveSq;
-                bool mouseMoved = MouseInput.PrevPosition != MouseInput.Position;
-                bool moved = GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse
-                    ? mouseMoved
-                    : gamePadMoved;
-                if (moved
-                    && !MouseInput.Left.IsPressed
-                    && !MouseInput.Right.IsPressed)
-                {
-                    StretchPhase = Phase.Ready;
-                    shared.editBrushStart = shared.editBrushPosition;
-                    RightAudioEnd();
-                    MiddleAudioEnd();
-                    LeftAudioEnd();
-                }
-                else
-                {
-                    if (MouseInput.Left.WasReleased)
-                    {
-                        float editSpeed = 1.0f;
-                        inGame.Terrain.RenderToHeightMap(
-                            shared.editBrushIndex,
-                            shared.editBrushStart,
-                            shared.editBrushPosition,
-                            shared.editBrushRadius,
-                            left,
-                            editSpeed * editSpeed * terrainSpeed);
-
-                        LeftAudioStart();
-                    }
-                    else
-                    {
-                        LeftAudioEnd();
-                    }
-
-                    if (MouseInput.Middle.WasReleased)
-                    {
-                        float editSpeed = 1.0f;
-                        inGame.Terrain.RenderToHeightMap(
-                            shared.editBrushIndex,
-                            shared.editBrushStart,
-                            shared.editBrushPosition,
-                            shared.editBrushRadius,
-                            middle,
-                            editSpeed * editSpeed * terrainSpeed);
-
-                        MiddleAudioStart();
-                    }
-                    else
-                    {
-                        MiddleAudioEnd();
-                    }
-
-
-                    if (MouseInput.Right.WasReleased)
-                    {
-                        float editSpeed = 1.0f;
-                        inGame.Terrain.RenderToHeightMap(
-                            shared.editBrushIndex,
-                            shared.editBrushStart,
-                            shared.editBrushPosition,
-                            shared.editBrushRadius,
-                            right,
-                            editSpeed * editSpeed * terrainSpeed);
-
-                        RightAudioStart();
-                    }
-                    else
-                    {
-                        RightAudioEnd();
-                    }
-                    shared.heightMapModified = true;
-                    Boku.InGame.IsLevelDirty = true;
-                }
-                ProcessBButton();
-            }
-        }
-        protected virtual void ProcessBButton()
-        {
-            float distSq = Vector2.DistanceSquared(shared.editBrushStart, shared.editBrushPosition);
-
-            GamePadInput pad = GamePadInput.GetGamePad0();
-            if (Actions.Cancel.IsPressed)
-            {
-                StretchPhase = Phase.Open;
-                Actions.Cancel.IgnoreUntilReleased();
-            }
-            if (MouseInput.Left.WasPressed
-                && !MouseInput.Middle.IsPressed
-                && !MouseInput.Right.IsPressed)
-            {
-                StretchPhase = Phase.Open;
-            }
-        }
-        protected virtual void BeginStretchGoing()
-        {
-            inGame.Terrain.LevelStart = Terrain.GetTerrainHeightFlat(shared.editBrushStart);
-            inGame.Terrain.LevelHeight = Terrain.GetTerrainHeightFlat(shared.editBrushPosition);
-        }
         /// <summary>
-        /// Apply commands in stretched brush mode.
+        /// We've moved the brush and released the button.  Now apply the result.
         /// </summary>
-        /// <param name="rightMode"></param>
-        /// <param name="aButton"></param>
-        /// <param name="leftMode"></param>
-        protected virtual void ProcessStretched(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
-            Terrain.EditMode right)
+        void ProcessLinearBrush()
         {
-            ProcessStretchedOpen();
-            ProcessStretchedReady();
-            ProcessStretchedGoing(left, middle, right);
-        }
+            float distSq = Vector2.DistanceSquared(endPos, shared.editBrushPosition);
+            bool gamePadMoved = distSq > kSmallMoveSq;
+            bool mouseMoved = LowLevelMouseInput.DeltaPosition != Point.Zero;
 
-        private float sizeTimer = 0.0f;
-        private void CheckResizeSelection()
+            float editSpeed = 1.0f;
+            inGame.Terrain.RenderToHeightMap(
+                shared.editBrushStart,
+                shared.editBrushPosition,
+                shared.editBrushRadius,
+                activeMode,
+                editSpeed * editSpeed * terrainSpeed);
+
+            shared.heightMapModified = true;
+            Boku.InGame.IsLevelDirty = true;
+
+        }   // end of ProcessLinearBrush()
+
+        double sizeTime = 0;
+        void CheckResizeSelection()
         {
             GamePadInput pad = GamePadInput.GetGamePad0();
             const float kMinResizeTime = 0.25f;
-            if (sizeTimer >= kMinResizeTime)
+
+            if (sizeTime >= Time.WallClockTotalSeconds)
             {
                 if (Actions.BrushLarger.WasPressedOrRepeat)
                 {
                     inGame.Terrain.ExpandSelection();
-                    sizeTimer = 0.0f;
                 }
 
                 if (Actions.BrushSmaller.WasPressedOrRepeat)
                 {
                     inGame.Terrain.ShrinkSelection();
-                    sizeTimer = 0.0f;
                 }
+
+                sizeTime = Time.WallClockTotalSeconds + kMinResizeTime;
             }
-        }
+        }   // end of CheckResizeSelection()
+
+
         /// <summary>
-        /// Apply commands in material select mode.
+        /// Pass off commands as appropriate to the right handlers, depending on
+        /// the current game pad and brush states.
+        /// 
+        /// This is called by the individual tool's Update function after it has done
+        /// any tool specific processing.
         /// </summary>
         /// <param name="rightMode"></param>
         /// <param name="aButton"></param>
         /// <param name="leftMode"></param>
-        protected virtual void ProcessSelection(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
+        protected void ProcessTriggers(
+            Terrain.EditMode leftMode,
+            Terrain.EditMode middleMode,
             Terrain.EditMode right)
+        {
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+            bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+
+            // Size timer is used for changing selection brush size. Required for both mouse and touch.
+            sizeTime += Time.WallClockFrameSeconds;
+
+            if (KoiLibrary.LastTouchedDeviceIsTouch)
+            {
+                if (isMagicBrush)
+                {
+                    ProcessTouchSelection();
+                }
+                else
+                {
+                    ProcessTouch();
+                }
+            }
+
+            else if(KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
+            {
+                if (isMagicBrush)
+                {
+                    ProcessSelection();
+                }
+                else if (UsingLinearBrush)
+                {
+                    //ProcessStretched();
+                }
+                else
+                {
+                    ProcessPoint();
+                }
+            }
+        }   // end of ProcessTriggers()
+
+
+        /// <summary>
+        /// Apply commands in material select mode.
+        /// </summary>
+        protected virtual void ProcessSelection()
         {
             isInAction = false;
 
             CheckResizeSelection();
-            if (MouseInput.Left.IsPressed)
-            {
-                float rate = 1.0f;
-                inGame.Terrain.RenderToSelection(left, rate * rate * terrainSpeed);
-                shared.heightMapModified = true;
-                Boku.InGame.IsLevelDirty = true;
-
-                LeftAudioStart();
-                isInAction = true;
-            }
-            else
-            {
-                LeftAudioEnd();
-            }
-
-            if (MouseInput.Middle.IsPressed)
-            {
-                float rate = 1.0f;
-                inGame.Terrain.RenderToSelection(middle, rate * rate * terrainSpeed);
-                shared.heightMapModified = true;
-                Boku.InGame.IsLevelDirty = true;
-
-                MiddleAudioStart();
-                isInAction = true;
-            }
-            else
-            {
-                MiddleAudioEnd();
-            }
-
-            if (MouseInput.Right.IsPressed)
-            {
-                float rate = 1.0f;
-                inGame.Terrain.RenderToSelection(right, rate * rate * terrainSpeed);
-                shared.heightMapModified = true;
-                Boku.InGame.IsLevelDirty = true;
-
-                RightAudioStart();
-                isInAction = true;
-            }
-            else
-            {
-                RightAudioEnd();
-            }
-
-            if (Actions.MaterialFabric.WasPressed)
-            {
-                Actions.MaterialFabric.ClearAllWasPressedState();
-
-                inGame.Terrain.SetSelectionToFabric();
-
-                shared.heightMapModified = true;
-                Boku.InGame.IsLevelDirty = true;
-            }
-            if (Actions.MaterialCubic.WasPressed)
-            {
-                Actions.MaterialCubic.ClearAllWasPressedState();
-
-                inGame.Terrain.SetSelectionToCubic();
-
-                shared.heightMapModified = true;
-                Boku.InGame.IsLevelDirty = true;
-            }
-        }
+            inGame.Terrain.RenderToSelection(activeMode, terrainSpeed);
+            shared.heightMapModified = true;
+            Boku.InGame.IsLevelDirty = true;
+        }   // end of PorcessSelection()
         
         public bool oldInAction=false;
 
         /// <summary>
         /// Apply commands to single brush region.
         /// </summary>
-        /// <param name="rightMode"></param>
-        /// <param name="aButton"></param>
-        /// <param name="leftMode"></param>
-        protected virtual void ProcessPoint(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
-            Terrain.EditMode right)
+        protected virtual void ProcessPoint()
         {
             float rate = 0.5f;
-
             isInAction = false;
 
-            if (MouseInput.Left.IsPressed)
-            {
-                inGame.Terrain.RenderToHeightMap(
-                    shared.editBrushIndex,
-                    shared.editBrushPosition,
-                    shared.editBrushRadius,
-                    left,
-                    rate * rate * terrainSpeed);
-                shared.heightMapModified = true;
-                Boku.InGame.IsLevelDirty = true;
-
-                LeftAudioStart();
-                isInAction = true;
-            }
-            else
-            {
-                LeftAudioEnd();
-            }
-
-            // Smooth
-            if (MouseInput.Middle.IsPressed)
-            {
-                inGame.Terrain.RenderToHeightMap(
-                    shared.editBrushIndex,
-                    shared.editBrushPosition,
-                    shared.editBrushRadius,
-                    middle,
-                    rate * rate * terrainSpeed);
-                shared.heightMapModified = true;
-                Boku.InGame.IsLevelDirty = true;
-
-                MiddleAudioStart();
-                isInAction = true;
-            }
-            else
-            {
-                MiddleAudioEnd();
-            }
-
-            // Down
-            if (MouseInput.Right.IsPressed)
-            {
-                inGame.Terrain.RenderToHeightMap(
-                    shared.editBrushIndex,
-                    shared.editBrushPosition,
-                    shared.editBrushRadius,
-                    right,
-                    rate * rate * terrainSpeed);
-                shared.heightMapModified = true;
-                Boku.InGame.IsLevelDirty = true;
-
-                RightAudioStart();
-                isInAction = true;
-            }
-            else
-            {
-                RightAudioEnd();
-            }
-
-            if(oldInAction !=isInAction)
-            {
-#if !NETFX_CORE
-                Console.WriteLine(this.ToString() + ":" + 
-                    ":" + MouseInput.Left.IsPressed.ToString() +
-                    ":" + MouseInput.Middle.IsPressed.ToString() +
-                    ":" + MouseInput.Right.IsPressed.ToString()
-                    );
-#endif
-                oldInAction=isInAction;
-            }
-        }
+            inGame.Terrain.RenderToHeightMap(
+                shared.editBrushPosition,
+                shared.editBrushRadius,
+                activeMode,
+                rate * rate * terrainSpeed);
+            shared.heightMapModified = true;
+            Boku.InGame.IsLevelDirty = true;
+        }   // end of ProcessPoint()
 		
         /// <summary>
         /// Apply commands in material select mode.
@@ -904,10 +833,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
         /// <param name="rightMode"></param>
         /// <param name="aButton"></param>
         /// <param name="leftMode"></param>
-        protected virtual void ProcessTouchSelection(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
-            Terrain.EditMode right)
+        protected virtual void ProcessTouchSelection()
         {
             isInAction = false;
 
@@ -918,9 +844,9 @@ namespace Boku.Scenes.InGame.MouseEditTools
                      (shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.baBrushLess))
                 {
                     const float kMinResizeTime = 0.3f;
-                    if (sizeTimer >= kMinResizeTime)
+                    if (sizeTime >= kMinResizeTime)
                     {
-                        sizeTimer = 0.0f;
+                        sizeTime = 0.0f;
                         if (shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.baBrushMore)
                         {
                             inGame.Terrain.ExpandSelection();
@@ -943,7 +869,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
 #endif
 
                     float rate = 1.0f;
-                    inGame.Terrain.RenderToSelection(left, rate * rate * terrainSpeed);
+                    inGame.Terrain.RenderToSelection(leftMode, rate * rate * terrainSpeed);
                     shared.heightMapModified = true;
                     Boku.InGame.IsLevelDirty = true;
 
@@ -959,7 +885,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 if (shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.baSmooth)
                 {
                     float rate = 1.0f;
-                    inGame.Terrain.RenderToSelection(middle, rate * rate * terrainSpeed);
+                    inGame.Terrain.RenderToSelection(middleMode, rate * rate * terrainSpeed);
                     shared.heightMapModified = true;
                     Boku.InGame.IsLevelDirty = true;
 
@@ -977,7 +903,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
                     (shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.baHilly))
                 {
                     float rate = 1.0f;
-                    inGame.Terrain.RenderToSelection(right, rate * rate * terrainSpeed);
+                    inGame.Terrain.RenderToSelection(rightMode, rate * rate * terrainSpeed);
                     shared.heightMapModified = true;
                     Boku.InGame.IsLevelDirty = true;
 
@@ -1000,10 +926,7 @@ namespace Boku.Scenes.InGame.MouseEditTools
         /// <summary>
         /// Apply commands to single brush region.
         /// </summary>
-        protected virtual void ProcessTouch(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
-            Terrain.EditMode right)
+        protected virtual void ProcessTouch()
         {
             float rate = 0.5f;
 
@@ -1018,10 +941,9 @@ namespace Boku.Scenes.InGame.MouseEditTools
                     shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.baWaterRaise )
                 {
                     inGame.Terrain.RenderToHeightMap(
-                        shared.editBrushIndex,
                         shared.editBrushPosition,
                         shared.editBrushRadius,
-                        left,
+                        leftMode,
                         rate * rate * terrainSpeed);
                     shared.heightMapModified = true;
                     Boku.InGame.IsLevelDirty = true;
@@ -1038,10 +960,9 @@ namespace Boku.Scenes.InGame.MouseEditTools
                     shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.baDelete)
                 {
                     inGame.Terrain.RenderToHeightMap(
-                        shared.editBrushIndex,
                         shared.editBrushPosition,
                         shared.editBrushRadius,
-                        right,
+                        rightMode,
                         rate * rate * terrainSpeed);
                     shared.heightMapModified = true;
                     Boku.InGame.IsLevelDirty = true;
@@ -1059,10 +980,9 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 if (shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.baSmooth )
                 {
                     inGame.Terrain.RenderToHeightMap(
-                        shared.editBrushIndex,
                         shared.editBrushPosition,
                         shared.editBrushRadius,
-                        middle,
+                        middleMode,
                         rate * rate * terrainSpeed);
                     shared.heightMapModified = true;
                     Boku.InGame.IsLevelDirty = true;
@@ -1081,10 +1001,9 @@ namespace Boku.Scenes.InGame.MouseEditTools
                     shared.currentTouchAction == ToolBar.TouchControls.BrushActionIDs.baHilly )
                 {
                     inGame.Terrain.RenderToHeightMap(
-                        shared.editBrushIndex,
                         shared.editBrushPosition,
                         shared.editBrushRadius,
-                        right,
+                        rightMode,
                         rate * rate * terrainSpeed);
                     shared.heightMapModified = true;
                     Boku.InGame.IsLevelDirty = true;

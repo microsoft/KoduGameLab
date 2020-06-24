@@ -11,6 +11,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -28,7 +32,7 @@ namespace Boku.UI2D
         public static Color unselectedTextColor = new Color(200, 200, 200);
         public static Color selectedTextColor = new Color(20, 20, 20);
 
-        public static UI2D.Shared.GetFont ItemFont = UI2D.Shared.GetGameFont24;
+        public static GetFont ItemFont = SharedX.GetGameFont24;
         public static int additionalLineSpacing = 8;
 
         public class PopupItem
@@ -167,7 +171,7 @@ namespace Boku.UI2D
                     {
                         //clear out any previous mouse input - this prevents false positive double clicks caused by the second click coming shortly after 
                         //entering the level browser
-                        MouseInput.Left.ClearAllWasPressedState();
+                        LowLevelMouseInput.Left.ClearAllWasPressedState();
 
                         curIndex = 0;   // Always start at the top.
 
@@ -249,7 +253,7 @@ namespace Boku.UI2D
             itemList = new List<PopupItem>();
 
             blob = new TextBlob(ItemFont, "foo", 500);
-            blob.Justification = UIGridElement.Justification.Right;
+            blob.Justification = TextHelper.Justification.Right;
         }
 
         /// <summary>
@@ -287,11 +291,11 @@ namespace Boku.UI2D
                 bool mouseUp = false;
                 bool mouseSelect = false;
                 bool touchSelect = false;
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 // MouseInput
                 {
                     // Did user double click?  If so, treat as a shortcut to play.
-                    if (MouseInput.Left.WasDoubleClicked)
+                    if (LowLevelMouseInput.Left.WasDoubleClicked)
                     {
                         // This works because we _know_ Play is the first one in the list.
                         // Not exactly a great solution.
@@ -299,7 +303,7 @@ namespace Boku.UI2D
                         mouseSelect = true;
                     }
 
-                    Vector2 hit = MouseInput.GetMouseInRtCoords();
+                    Vector2 hit = LowLevelMouseInput.GetMouseInRtCoords();
                     if (!mouseSelect)
                     {
                         if (itemList[CurIndex].hitBox.LeftPressed(hit))
@@ -309,7 +313,7 @@ namespace Boku.UI2D
                     }
 
                     // If mouse is over menu and moving, choose item under mouse as selection.
-                    if (!mouseSelect && MouseInput.Position != MouseInput.PrevPosition)
+                    if (!mouseSelect && LowLevelMouseInput.DeltaPosition != Point.Zero)
                     {
                         for (int i = 0; i < itemList.Count; i++)
                         {
@@ -321,7 +325,7 @@ namespace Boku.UI2D
                         }
                     }
 
-                    int scroll = MouseInput.ScrollWheel - MouseInput.PrevScrollWheel;
+                    int scroll = LowLevelMouseInput.DeltaScrollWheel;
                     if (scroll > 0)
                     {
                         mouseUp = true;
@@ -332,14 +336,14 @@ namespace Boku.UI2D
                     }
 
                     // If user clicks off of the popup, treat as Back.
-                    if (MouseInput.Left.WasPressed && MouseInput.ClickedOnObject == null)
+                    if (LowLevelMouseInput.Left.WasPressed && MouseInput.ClickedOnObject == null)
                     {
                         Active = false;
                         return;
                     }
 
                 }   // end of mouse input.
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                else if (KoiLibrary.LastTouchedDeviceIsTouch)
                 // TouchInput
                 {
                     TouchContact touch = TouchInput.GetOldestTouch();
@@ -482,23 +486,23 @@ namespace Boku.UI2D
                     int spacing = blob.TotalSpacing;
                     if (lineWidth > 180)
                     {
-                        blob.Font = UI2D.Shared.GetGameFont20;
+                        blob.Font = SharedX.GetGameFont20;
                         lineWidth = blob.GetLineWidth(0);
                         if (lineWidth > 180)
                         {
-                            blob.Font = UI2D.Shared.GetGameFont18Bold;
+                            blob.Font = SharedX.GetGameFont18Bold;
                             lineWidth = blob.GetLineWidth(0);
                             if (lineWidth > 180)
                             {
-                                blob.Font = UI2D.Shared.GetGameFont15_75;
+                                blob.Font = SharedX.GetGameFont15_75;
                             }
                         }
                     }
                     int down = (int)((spacing - blob.TotalSpacing) / 2.0f);
-                    blob.RenderWithButtons(textPos + new Vector2(0, down), textColor);
+                    blob.RenderText(null, textPos + new Vector2(0, down), textColor);
                     
                     // Restore larger font.
-                    blob.Font = UI2D.Shared.GetGameFont24;
+                    blob.Font = SharedX.GetGameFont24;
 
                     pos.Y += ItemFont().LineSpacing + additionalSpacing;
                 }
@@ -551,11 +555,11 @@ namespace Boku.UI2D
             // Load the textures.
             if (frame == null)
             {
-                frame = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\PopupFrame");
+                frame = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\PopupFrame");
             }
             if (greenBar == null)
             {
-                greenBar = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\GreenBar");
+                greenBar = KoiLibrary.LoadTexture2D(@"Textures\GridElements\GreenBar");
             }
         }
 
@@ -565,8 +569,8 @@ namespace Boku.UI2D
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref frame);
-            BokuGame.Release(ref greenBar);
+            DeviceResetX.Release(ref frame);
+            DeviceResetX.Release(ref greenBar);
         }   // end of LoadLevelPopup UnloadContent()
 
         /// <summary>

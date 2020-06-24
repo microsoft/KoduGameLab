@@ -4,6 +4,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.ParticleSystem;
@@ -103,7 +105,7 @@ namespace Boku.SimWorld.Chassis
                     bounce = CollideWithGround(movement, ref height);
                     
                     // Create a dust puff when bouncing off dry ground.
-                    // TODO (****) This doesn't seem to actually do anything.  As far as I can
+                    // TODO (scoy) This doesn't seem to actually do anything.  As far as I can
                     // tell the CreateDustPuff() call is never called by anything else so it may
                     // not work at all.  May be worth looking into if you're bored some time.
                     /*

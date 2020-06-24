@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Fx;
 using Boku.Programming;
@@ -51,7 +54,7 @@ namespace Boku.UI2D
         private Color dropShadowColor;
         private bool useDropShadow = false;
         private bool invertDropShadow = false;  // Puts the drop shadow above the regular letter instead of below.
-        private Justification justify = Justification.Left;
+        private TextHelper.Justification justify = TextHelper.Justification.Left;
         private bool altShader = false;
         private bool ignorePowerOf2 = false;
 
@@ -247,7 +250,7 @@ namespace Boku.UI2D
             if (textBlob.NumLines == 2)
                 pos.Y += 0.5f * textBlob.Font().LineSpacing;
 
-            textBlob.RenderWithButtons(pos, textColor, maxLines: 3);
+            textBlob.RenderText(null, pos, textColor, maxLines: 3);
 
         }   // end of UIGrid2DProgrammedBotElement Render()
 
@@ -263,7 +266,7 @@ namespace Boku.UI2D
         {
             // Before we can decide on a size, we need to know how many lines of text we need.
             int labelLineWidth = 530;
-            textBlob = new TextBlob(UI2D.Shared.GetGameFont24, actorHelp.programs[exampleIndex].description.Trim(), labelLineWidth);
+            textBlob = new TextBlob(SharedX.GetGameFont24, actorHelp.programs[exampleIndex].description.Trim(), labelLineWidth);
 
             const int dpi = 96;
             int w = (int)(dpi * width);

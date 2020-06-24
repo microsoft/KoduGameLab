@@ -1,22 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XmlHelpTextData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
   <!-- Help for Object Edit Tweak Screen-->
-  
-  <helpText id="PushRange">
-    <desc>Controla el rango base in el cuál los objetos serán empujados. También afectado por la escala del objeto.</desc>
-  </helpText>
-
-  <helpText id="PushStrength">
-    <desc>Controla cuanta fuerza se necesita para empujar objetos. Es modificada por modificadores de fuerza.</desc>
-  </helpText>
-
-  <helpText id="Rename">
-    <desc>Renombrar este personaje.</desc>
-  </helpText>
-
   <helpText id="LightRange">
-    <desc>Fijar que tan lejos brilla esta Luz (solamente disponible para luces).</desc>
+    <desc>Poner que tan lejos brilla esta Luz (solamente disponible para luces).</desc>
   </helpText>
   <helpText id="SpeedMultiplier">
     <desc>
@@ -27,20 +13,16 @@ Un valor de 1.0 igualará la velocidad por omisión.
   <helpText id="AccelerationMultiplier">
     <desc>
 Afinar la aceleración de éste bot.
-Un valor de 1.0 igualará la aceleración por omisión.
-</desc>
-  </helpText>
-  <helpText id="Helmet">
-    <desc>Añadir un casco a este personaje.</desc>
+Un valor de 1.0 igualará la aceleración por omisión.    </desc>
   </helpText>
   <helpText id="Immobile">
-    <desc>Bloquea la posición de éste bot, para que no pueda moverse en ninguna dirección. Aún puede rotar.</desc>
+    <desc>Asegura la posición de éste bot, para que no pueda moverse en ninguna dirección. Aún puede rotar.</desc>
   </helpText>
   <helpText id="Invulnerable">
     <desc>Hace este bot indestructible.</desc>
   </helpText>
   <helpText id="ShowHitPoints">
-    <desc>Cuando se activa, una pequeña barra aparece sobre la cabeza de éste bot, indicando cuánta salud le queda.</desc>
+    <desc>Cuando se pone, una pequeña barra aparece sobre la cabeza de éste bot, indicando cuánta salud le queda.</desc>
   </helpText>
   <helpText id="MaxHitPoints">
     <desc>Permite controlar el número inicial de puntos que tiene el bot. El número de puntos bajará cuando el bot esté dañado y subirá cuando sea sanado.</desc>
@@ -55,7 +37,7 @@ Nota que esto puede hacer fácil sobrepasar el presupuesto del mundo, momento en
   </helpText>
   <helpText id="MaxCreated">
     <desc>
-Para los creables, esta cuenta limita el número que puede ser creado durante el tiempo de juego. Los clones que propagas cuando estás editando no cuentan, esto solo limita el número que puede ser generado por otros bots, con Crear, mientras juegas.
+Para los creables, esta cuenta limita el número que puede ser creado durante el tiempo de juego. Los clones que propagas cuando estás editando no cuentan, esto solo limita el número que puede ser generado por otros bots, con Crear, mientras jugando.
     </desc>
   </helpText>
   <helpText id="CameraFollowMode">
@@ -65,23 +47,18 @@ Si pones esto en Siempre, la cámara siempre seguirá este bot. Si tienes más d
 Si pones la condición en Nunca, la cámara ignorará a este bot, aun cuando esté controlado por un usuario.
     </desc>
   </helpText>
-  <helpText id="HoldDistance">
-    <desc>Esto controla que tan lejos un objeto es "sostenido" cuando se lo carga.</desc>
-  </helpText>
   <helpText id="Bounciness">
     <desc>Controla que tanto rebota un bot cuando colisiona con el terreno, paredes u otros bots.</desc>
   </helpText>
   <helpText id="Friction">
     <desc>Controla cuándo se desliza un bot cuando colisiona con el terreno, paredes u otros bots.</desc>
   </helpText>
-  
   <helpText id="BlipDamage">
     <desc>Controla cuánto daño causa un blip disparado por éste bot.</desc>
   </helpText>
   <helpText id="BlipReloadTime">
     <desc>
-El tiempo de recarga del blip controla cuánto tiempo pasa para que el bot pueda disparar de nuevo un blip.
-Se mide en segundos.
+El tiempo de recarga del blip controla cuánto tiempo pasa para que el bot pueda disparar de nuevo un blip. Se mide en segundos.
     </desc>
   </helpText>
   <helpText id="BlipRange">
@@ -96,13 +73,12 @@ Controla cuántos blips puede tener éste bot en el aire al mismo tiempo.
 Una vez el bot ha disparado este número, no puede disparar de nuevo hasta que algunos blips le hayan pegado a algo o hayan alcanzado su máximo rango.
     </desc>
   </helpText>
-  
   <helpText id="MissileDamage">
     <desc>Controla con cuántos Puntos un misil disparado desde éste bot daña un objetivo cuándo lo golpea.</desc>
   </helpText>
   <helpText id="MissileReloadTime">
     <desc>
-Controla que tanto tiene que esperar un bot para disparar de nuevo otro misil.
+Controla a qué distancia tiene que esperar un bot cuando está disparando misiles.
 Se mide en segundos.
     </desc>
   </helpText>
@@ -119,41 +95,29 @@ Una vez el bot ha disparado este número, no puede disparar de nuevo hasta que a
     </desc>
   </helpText>
   <helpText id="MissileSmoke">
-    <desc>Controla si los misiles disparados por éste bot emiten humo. Los misiles sin humo son más rápidos de renderizar.</desc>
+    <desc>Controla si los misiles disparados por éste bot emiten humo. Los misiles sin humo son más rápidos de crear.</desc>
   </helpText>
-  
   <helpText id="ShieldEffects">
-    <desc>Controla si el efecto visual de escudo se muestra cuando éste bot es golpeado por algo o recibe daño.</desc>
+    <desc>Controla si el efecto visual de escudo se muestra cuando éste bot le pega a algo o hace daño.</desc>
   </helpText>
-  
   <helpText id="Invisible">
-    <desc>Controla si éste bot se muestra en absoluto. Aún puede ser visto y escuchado por otros bots.</desc>
+    <desc>Controla si éste bot se muestra completamente. Aun así puede ser visto y escuchado por otros bots.</desc>
   </helpText>
-  
   <helpText id="Ignored">
     <desc>Controla si éste bot puede ser visto, escuchado o chocado por otros bots. Los bot fantasma pueden ver y escuchar a otros bots, pero no los pueden chocar.</desc>
   </helpText>
-  
   <helpText id="Mute">
     <desc>Deshabilita todos los sonidos que vienen con éste personaje. Los sonidos programados seguirán sonando. Note que otros personajes podrán aún detectar la presencia de éste personaje, al escucharlo.</desc>
   </helpText>
-  
   <helpText id="StayAboveWater">
     <desc>Se desliza sobre la superficie de cualquier agua. Apágalo para permitir al personaje volar hacia abajo y dentro del agua.</desc>
   </helpText>
-  
   <helpText id="Loudness">
     <desc>Controla qué tan lejos otros personajes pueden escuchar a éste personaje. No cambia el sonido que el jugador escucha.</desc>
   </helpText>
-  
   <helpText id="Hearing">
     <desc>Controla qué tan lejos éste personaje puede escuchar a otros personajes. No cambia el sonido que el jugador escucha.</desc>
   </helpText>
-
-  <helpText id="Camouflaged">
-    <desc>Verdadero si el bot es Fantasma pero todavía puede colisionar con el entorno.</desc>
-  </helpText>
-  
   <helpText id="KickStrength">
     <desc>Controla con cuánta fuerza este bot patea los objetos. Una patada fuerte puede ocasionar que el objete vuele lejos.</desc>
   </helpText>
@@ -164,40 +128,34 @@ Una vez el bot ha disparado este número, no puede disparar de nuevo hasta que a
     <desc>Hace el bot más grande o más pequeño. Una escala de 1.0 es el tamaño normal.</desc>
   </helpText>
   <helpText id="MemoryLifetime">
-    <desc>Cuando ves algo, lo recuerdas por unos pocos segundos como si aún pudieras verlo.</desc>
+    <desc>Cuando ves algo, lo recuerdas por unos pocos segundos en tanto lo sigas viendo.</desc>
   </helpText>
   <helpText id="GlowStrength">
-    <desc>Afecta cuán brillante es el efecto de brillo para éste personaje. Nota que los personajes brillantes normalmente no alumbran a otros personajes.</desc>
+    <desc>Afecta cuán brillante es el efecto de brillo para éste personaje. Nota que los personajes brillantes normalmente no le dan luz a otros personajes.</desc>
   </helpText>
   <helpText id="GlowLightStrength">
-    <desc>Hace que éste objeto alumbre a otros cuando brilla, y establece cuán fuerte es el efecto.</desc>
+    <desc>Hace que éste objeto le dé luz a otros, mientras brilla, y dice cuán fuerte el efecto es.</desc>
   </helpText>
   <helpText id="GlowEmission">
     <desc>Pone cuán fuerte el brillo de éste bot lo ilumina a él mismo.</desc>
   </helpText>
-  
   <helpText id="Debug:DisplayLineOfSight">
-    <desc>Cuando los personajes son programados para deambular, circular o moverse lejos de algo, esto muestra las barreras que están obstruyendo su ruta.</desc>
+    <desc>Cuando los personajes son programados para pasar, circular o moverse lejos de algo, esto muestra las barreras que están obstruyendo sus rutas.</desc>
   </helpText>
   <helpText id="Debug:DrawLinesShowingWhatISeeAndHear">
     <desc>Si éste bot está usando su visión o escucha, muestra cuáles bots puede ver u oír.</desc>
   </helpText>
-  <helpText id="Debug:DrawCurrentPage">
-    <desc>Muestra la página de programación actual sobre el bot.</desc>
-  </helpText>
   <helpText id="ShowSensors">
-    <desc>Actualmente no implementado.</desc>
+    <desc>Actualmente no desarrollado.</desc>
   </helpText>
-  
   <!-- Help for World Edit Tweak Screen-->
-  
   <helpText id="GlassWalls">
-    <desc>Crea una barrera invisible alrededor de los bordes de tu mundo. Esto previene a los bots de caer del borde del mundo.
+    <desc>Crea una barrera invisible alrededor de los bordes de tu mundo. Esto previene a los bots de caer en el borde del mundo.
     
 Globo, Nube, Jet, Luz, Platillo, Zepelín, Wisp y Misil pueden ir a través del muro de vidrio.</desc>
   </helpText>
   <helpText id="ChangeHistory">
-    <desc>Muestra una historia de las personas que han cambiado este mundo.</desc>
+    <desc>Muestra una historia a las personas que han cambiado su mundo.</desc>
   </helpText>
   <helpText id="CameraMode">
     <desc>Te permite controlar cómo la cámara se mueve cuando tu juego está corriendo.
@@ -220,11 +178,11 @@ Si luego quieres cambiar la posición, puede presionar &lt;x&gt; lo que la pondr
     <desc>Te permite esconder la brújula que normalmente aparece en la esquina izquierda abajo de la pantalla. La brújula siempre se muestra durante la edición y solo se esconde cuando estás jugando el juego.</desc>
   </helpText>
   <helpText id="ShowResourceMeter">
-    <desc>Te permite esconder el medido de recursos (termómetro) el cual normalmente aparece en el lado derecho de la pantalla. El medidor de recursos se muestra siempre durante la edición y solo se esconde cuando estás jugando el juego.</desc>
+    <desc>Te permite esconder el medido de recursos (termómetro) el cual normalmente aparece en el lado derecho de la pantalla. El medidor de recursos se muestra siempre la edición y solo se esconde cuando estás jugando el juego.</desc>
   </helpText>
   <helpText id="EnableResourceLimiting">
     <desc>
-Te permite apagar el límite de recursos que se muestra por el medidor de recursos (termómetro), el cual normalmente aparece a la derecha de la pantalla. Con esta opción puedes adicionar tantos terrenos y objetos al mundo cómo quieras.  
+Te permite apagar el límite de recursos que se muestra por el medidor de recusos (termómetro), el cual normalmente aparece a la derecha de la pantalla. Con esta opción puedes adicionar tanto terrenos y objetos al mundo cómo quieras.  
 ADVERTENCIA: Sin este límite podrías hacer que Kodu corra extremadamente lento. También podrías exceder la memoria del sistema, haciendo que Kodu falle.
   </desc>
   </helpText>
@@ -239,20 +197,20 @@ ADVERTENCIA: Sin este límite podrías hacer que Kodu corra extremadamente lento
 Combina la configuración de Cielo y la Iluminación para ayudarte a crear un estado de ánimo para tu juego.</desc>
   </helpText>
   <helpText id="Lighting">
-    <desc>Escoge un conjunto de luces para tu mundo. Si escoges una instalación de iluminación oscura, sólo estará oscuro cuando juegues el juego. Durante la edición una instalación de iluminación brillante será usada, para que puedas ver tu mundo.
+    <desc>Escoge un conjunto de luces para tu mundo. Si escoges una instalación de iluminación oscura, entonces solo estará oscuro cuando juegues el juego. Durante la edición una instalación de iluminación brillante será usada, para que puedas ver tu mundo.
 Combina la configuración de Cielo y la Iluminación para ayudarte a crear un estado de ánimo para tu juego.</desc>
   </helpText>
   <helpText id="MinBreeze">
-    <desc>Controla que tan suave la brisa sopla a través de los árboles en el juego.</desc>
+    <desc>Controla lo más suave que la brisa sopla a través de los árboles en el juego.</desc>
   </helpText>
   <helpText id="MaxBreeze">
-    <desc>Controla que tan fuerte la brisa sopla a través de los árboles en el juego.</desc>
+    <desc>Controla lo más fuerte que la brisa sopla a través de los árboles en el juego.</desc>
   </helpText>
   <helpText id="PreGame">
     <desc>Controla cómo tu juego empieza cuando lo juegas:
 "Nada" inicial el juego normal, sin efecto.
 "Título del Mundo" muestra el nombre del mundo por 3 segundo y después empieza a jugar.
-"Descripción del Mundo" muestra el nombre del mundo y pide al usuario presionar &lt;a&gt; para empezar a jugar. Utiliza la descripción que das cuando guardas el juego.
+"Descripción del Mundo" muestra el nombre del mundo y pide al usuario presionar &lt;a&gt; para empezar a jugar. Se usa la descripción que das cuando grabas el juego.
 "Cuenta Regresiva" muestra una cuenta regresiva 3-2-1 antes de que empiece el juego. Es perfecta para juegos de carreras.</desc>
   </helpText>
   <helpText id="Debug:PathFollowing">
@@ -263,9 +221,6 @@ Combina la configuración de Cielo y la Iluminación para ayudarte a crear un es
   </helpText>
   <helpText id="Debug:ShowLinesOfPerception">
     <desc>Si alguno de los bots está usando visión y escucha, muestra cuáles bots pueden ver y escuchar.</desc>
-  </helpText>
-  <helpText id="Debug:ShowCurrentPage">
-    <desc>Muestra la página de programación actual para bots programados.</desc>
   </helpText>
   <helpText id="TerrainSpeed">
     <desc>Factor de velocidad para editar terrenos. Más pequeño es más despacio, más grande es más rápido.</desc>
@@ -286,141 +241,61 @@ Silencioso: El Puntaje será mostrado en la esquina pero no habrá efectos de pu
 Fuerte: Los eventos de puntaje se animarán desde su localización en el juego hasta el tablero de puntaje.
     </desc>
   </helpText>
-
-  <helpText id="ScorePersistence">
-    <desc>Controla si un puntaje persistirá entre acciones SiguienteNivel/AnteriorNivel.
-Encendido: el puntaje persistirá y se mantendrá su valor cuando el siguiente nivel sea cargado
-Apagado: el puntaje será reiniciado a cero cuando el siguiente nivel sea cargado
-    </desc>
-  </helpText>
-
-  <helpText id ="ShowVirtualController">
-    <desc>Muestra/Esconde el controlador de pantalla virtual.</desc>
-  </helpText>
-
-  <helpText id="GuiButtonVisibility">
-    <desc>
-      Controla como se mostrarán los botones GUI.
-      Apagado: los botones no se mostrarán en absoluto.
-      Sin Etiqueta: El botón se mostrará pero no tendrá texto en él.
-      Etiquetado: El botón se mostrará con un poco de texto para identificar mejor el botón.
-    </desc>
-  </helpText>
-
-  <helpText id="NextLevel">
-    <desc>
-      Fija el nivel que será cargado por el mosaico "Siguiente Nivel".  También habilita el mosaico "Anterior Nivel" desde ese nivel para retornar al jugador al nivel actual.
-    </desc>
-  </helpText>
-
-  <helpText id="WaterRaise">
-    <desc>
-      Sube el nivel del agua que se encuentra debajo de este personaje.
-    </desc>
-  </helpText>
-
-  <helpText id="WaterLower">
-    <desc>
-      Baja el nivel del agua que se encuentra debajo de este personaje.
-    </desc>
-  </helpText>
-  
-  
-  <helpText id="SetWater">
-    <desc>
-      Fija el tipo de agua que se encuentra debajo de este personaje.
-    </desc>
-  </helpText>
-
   <!-- Help for USer Options Tweak Screen-->
-  
   <helpText id="ShowToolTips">
     <desc>Te permite apagar Mostrar Información sobre Herramientas.</desc>
   </helpText>
-  
   <helpText id="ShowHints">
     <desc>Te permite apagar las sugerencias. Las sugerencias se muestran cada vez que el sistema detecta una situación que podría causar un problema.
 Cuando se muestra una sugerencia, te dan la opción de deshabilitarlas.</desc>
   </helpText>
-  
   <helpText id="ModalToolMenu">
     <desc>Normalmente cuando el Menú de Herramientas del Gamepad está activo, el fondo es borroso y no puedes mover la cámara. Apagando ésta opción, la cámara aún estará "viva". Sin embargo, aún deberás seleccionar una herramienta antes de interactuar con el mundo.
-Apagar esto también significa que el joystick izquierdo ahora es usado para controlar la cámara, así que debes usar el DPad o los disparadores para seleccionar la herramienta que quieres.</desc>
+Apaga esto también significa que el joystick izquierdo ahora es usado para controlar la cámera, así que debes usar el DPad o los gatiloso para seleccionar la herramienta que quieres.</desc>
   </helpText>
-  
   <helpText id="RestoreDisabledHints">
-    <desc>Limpia la bandera de 'deshabilitado' de las sugerencias que previamente hayas escogido deshabilitar, así que aparecerán de nuevo.</desc>
+    <desc>Limpia la bandera de 'deshabilitado' sobre las sugerencias que previamente hayas escogido deshabilitar, así que aparecerán de nuevo.</desc>
   </helpText>
-  
-  <helpText id ="ShowFramerate">
-    <desc>Cuando está habilitado muestra los cuadros por segundo (FPS) en la esquina inferior izquierda de la pantalla.</desc>
-  </helpText>
-
   <helpText id="HelpOverlayAmount">
     <desc>Controla la cantidad de texto de ayuda que se muestra en la esquina superior izquierda de la pantalla.</desc>
   </helpText>
-  
-  <helpText id ="Language">
-    <desc>Controla que idioma es usado.  Las traducciones de Kodu's son hechas por nuestra comunidad.  Si quieres ayudar a traducir Kodu a tu idioma por favor envía un email a KoduSupport@microsoft.com para más información.</desc>
-  </helpText>
-  
   <helpText id="InvertYAxis">
     <desc>Hace que presionar el joystick mueva el bot hacia abajo.</desc>
   </helpText>
-  
   <helpText id="InvertXAxis">
     <desc>Hace que presionar el joystick a la izquierda gire el bot hacia la derecha.</desc>
   </helpText>
-  
   <helpText id="InvertCamY">
     <desc>Hace que presionar el joystick hacia adelante lanza la cámara hacia arriba.</desc>
   </helpText>
-  
   <helpText id="InvertCamX">
     <desc>Hace que presionar el joystick hacia la izquierda rote la cámara hacia la derecha.</desc>
   </helpText>
-  
   <helpText id="Overscan">
     <desc>El término "sobre-explorar" se refiere a la cantidad de imagen generada que es cortada en los bordes de la pantalla. Esta cantidad depende tanto de la pantalla del dispositivo, como de la conexión al dispositivo. El deslizador te permite controlar que tan lejos dentro del centro de la pantalla se posicionan las ayudas. Si son cortadas en la pantalla, haz éste valor más grande. En televisores de tubo usualmente 20% trabaja bien. En monitores de computador debes poder trabajar con 0 ó 5%. Experimenta y usa la que mejor se acomode contigo.</desc>
   </helpText>
-  
   <helpText id="AcceptSentLevels">
-    <desc>Si se activa, otros usuarios podrán adicionar mundos a tu cola de descarga.</desc>
+    <desc>Si se pone, otros usuarios podrán adicionar mundos a tu cola de descarga.</desc>
   </helpText>
-  
   <helpText id="AutoReshareLevels">
     <desc>Si se pone, los mundos que descargues de otros jugadores automáticamente se marcarán cómo compartidos, haciéndolos disponibles para descargas en futuras sesiones de compartir.</desc>
   </helpText>
-  
   <helpText id="AutoDownloadFavoriteLevels">
     <desc>En sesiones de compartir, automáticamente descarga los mundos marcados con la etiqueta "Favorito".</desc>
   </helpText>
-  
   <helpText id="NearByDistance">
-    <desc>El rango usado por el filtro Cercanía, usado por los sensores de vista y audición. Las unidades están en metros. Para referencia: un mosaico de terreno tiene medio metro.</desc>
+    <desc>El rango usado por el filtro Cercanía, usado por los sensores de vista y audición. Las unidades son metros. Para referencia: un mosaico de terreno tiene medio metro.</desc>
   </helpText>
-  
   <helpText id="FarAwayDistance">
-    <desc>El rango usado por el filtro Lejanía, usado por los sensores de vista y audición. Las unidades están en metros. Para referencia: un mosaico de terreno tiene medio metro.</desc>
+    <desc>El rango usado por el filtro Lejanía, usado por los sensores de vista y audición. Las unidades son metros. Para referencia: un mosaico de terreno tiene medio metro.</desc>
   </helpText>
-  
   <helpText id="CheckForUpdates">
-    <desc>Si está activado, al iniciarse Kodu se chequeará si se ha liberado una versión más nueva.</desc>
+    <desc>Si está puesto, al iniciarse Kodu se chequeará si se ha liberado una versión más nueva.</desc>
   </helpText>
-  
   <helpText id="SendInstrumentation">
-    <desc>Si está activado, Kodu enviará información anónima a Microsoft sobre cómo usas Kodu. Esta información nos ayudará a mejorar Kodu.</desc>
+    <desc>Si está puesto, Kodu enviará información anónima a Microsoft sobre cómo usas Kodu. Esta información nos ayudará a mejorar Kodu.</desc>
   </helpText>
-  
   <helpText id="ShowIntroVideo">
-    <desc>Si está activado, la próxima vez que inicies Kodu, se mostrará el video de introducción.</desc>
-  </helpText>
-
-  <helpText id="PersistWebLogin">
-    <desc>Normalmente, la información de ingreso a tu página de comunidad de Kodu será olvidada cuando salgas de Kodu.  Si esta activado intentaremos persistir tu información de ingreso a través de múltiples sesiones de Kodu.</desc>
-  </helpText>
-
-  <helpText id="ShowTutorialDebug">
-    <desc>Esta es una ayuda para gente que crea sus propios tutoriales.  Cuando está activado y ejecutando un nivel de tutorial, mostrará información de depuración superpuesta encima de la pantalla.</desc>
+    <desc>Si está puesto, la próxima vez que inicies Kodu, se mostrará el video de introducción.</desc>
   </helpText>
 </XmlHelpTextData>

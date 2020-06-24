@@ -14,6 +14,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -85,9 +89,9 @@ namespace Boku.Common.TutorialSystem
 
         #region Accessors
 
-        private UI2D.Shared.GetFont Font
+        private GetFont Font
         {
-            get { return UI2D.Shared.GetGameFont20; }
+            get { return SharedX.GetGameFont20; }
         }
 
         public bool Active
@@ -119,15 +123,15 @@ namespace Boku.Common.TutorialSystem
 
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.AButton; };
-                continueButton = new Button(Strings.Localize("tutorial.continue"), Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                continueButton = new Button(Strings.Localize("tutorial.continue"), Color.White, getTexture, SharedX.GetGameFont20);
             }
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.BButton; };
-                backButton = new Button(Strings.Localize("tutorial.back"), Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                backButton = new Button(Strings.Localize("tutorial.back"), Color.White, getTexture, SharedX.GetGameFont20);
             }
             {
                 GetTexture getTexture = delegate() { return ButtonTextures.XButton; };
-                exitTutorialButton = new Button(Strings.Localize("tutorial.exitTutorial"), Color.White, getTexture, UI2D.Shared.GetGameFont20);
+                exitTutorialButton = new Button(Strings.Localize("tutorial.exitTutorial"), Color.White, getTexture, SharedX.GetGameFont20);
             }
 
 
@@ -185,32 +189,32 @@ namespace Boku.Common.TutorialSystem
                 }
 
                 // Change text?
-                switch(GamePadInput.ActiveMode)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
-                    case GamePadInput.InputMode.KeyboardMouse:
-                        if (blob.RawText != mouseText)
-                        {
-                            blob.RawText = mouseText;
-                        }
-                        break;
-                    case GamePadInput.InputMode.GamePad:
-                        if (blob.RawText != gamepadText)
-                        {
-                            blob.RawText = gamepadText;
-                        }
-                        break;
-                    case GamePadInput.InputMode.Touch:
-                        if (blob.RawText != touchText)
-                        {
-                            blob.RawText = touchText;
-                        }
-                        break;
+                    if (blob.RawText != mouseText)
+                    {
+                        blob.RawText = mouseText;
+                    }
+                }
+                else if (KoiLibrary.LastTouchedDeviceIsGamepad)
+                {
+                    if (blob.RawText != gamepadText)
+                    {
+                        blob.RawText = gamepadText;
+                    }
+                }
+                else if (KoiLibrary.LastTouchedDeviceIsTouch)
+                {
+                    if (blob.RawText != touchText)
+                    {
+                        blob.RawText = touchText;
+                    }
                 }
 
                 // Scroll text???
                 if (blob.NumLines != 0)
                 {
-                    int scroll = MouseInput.ScrollWheel - MouseInput.PrevScrollWheel;
+                    int scroll = LowLevelMouseInput.DeltaScrollWheel;
 
                     if (Actions.Up.WasPressedOrRepeat || scroll > 0)
                     {
@@ -241,7 +245,7 @@ namespace Boku.Common.TutorialSystem
                 PreRender();
 
                 Vector2 hit;
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     TouchContact touch = TouchInput.GetOldestTouch();
                     if (touch != null)
@@ -261,10 +265,10 @@ namespace Boku.Common.TutorialSystem
                         exitTutorialButton.ClearState();
                     }
                 }
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                else if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     // Consider adjusting modal dialog size to take overscan into account BUT NOT tutorial mode.
-                    hit = MouseInput.PositionVec;
+                    hit = LowLevelMouseInput.PositionVec;
 
                     // Adjust for position and scaling of final rendering.
                     hit -= renderPosition;
@@ -368,9 +372,9 @@ namespace Boku.Common.TutorialSystem
 
         private void PreRender()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-            RenderTarget2D rt1k = UI2D.Shared.RenderTarget1024_768;
+            RenderTarget2D rt1k = SharedX.RenderTarget1024_768;
 
             CameraSpaceQuad csquad = CameraSpaceQuad.GetInstance();
             ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
@@ -385,7 +389,7 @@ namespace Boku.Common.TutorialSystem
             InGame.Clear(Color.Transparent);
 
             // Set up params for rendering UI with this camera.
-            Fx.ShaderGlobals.SetCamera(camera);
+            BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
             //
             // Text.
@@ -400,7 +404,7 @@ namespace Boku.Common.TutorialSystem
 
             Vector2 pos;
             pos = new Vector2(textMargin, textTop + textOffset + centering);
-            blob.RenderWithButtons(pos, darkTextColor);
+            blob.RenderText(null, pos, darkTextColor);
 
             InGame.RestoreRenderTarget();
 
@@ -410,10 +414,10 @@ namespace Boku.Common.TutorialSystem
         {
             if (Active)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-                RenderTarget2D rtFull = UI2D.Shared.RenderTargetDepthStencil1024_768;   // Rendertarget we render whole display into.
-                RenderTarget2D rt1k = UI2D.Shared.RenderTarget1024_768;
+                RenderTarget2D rtFull = SharedX.RenderTargetDepthStencil1024_768;   // Rendertarget we render whole display into.
+                RenderTarget2D rt1k = SharedX.RenderTarget1024_768;
 
                 Vector2 rtSize = new Vector2(rtFull.Width, rtFull.Height);
 
@@ -432,7 +436,7 @@ namespace Boku.Common.TutorialSystem
                 InGame.Clear(Color.Transparent);
 
                 // Set up params for rendering UI with this camera.
-                Fx.ShaderGlobals.SetCamera(camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
                 Vector2 pos;
 
@@ -465,7 +469,7 @@ namespace Boku.Common.TutorialSystem
                 pos = new Vector2(rtSize.X / 2.0f, rtSize.Y / 2.0f + backgroundSize.Y * 0.28f);
                 pos.X -= totalWidth / 2.0f;
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
 
                 continueButton.Render(pos);
@@ -597,19 +601,19 @@ namespace Boku.Common.TutorialSystem
         {
             if (backgroundTexture == null)
             {
-                backgroundTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\TextEditor\TextDisplayBackground");
+                backgroundTexture = KoiLibrary.LoadTexture2D(@"Textures\TextEditor\TextDisplayBackground");
             }
 
             if (leftStick == null)
             {
-                leftStick = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\LeftStick");
+                leftStick = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\LeftStick");
             }
         }   // end of ScrollableTextDisplay InitDeviceResources()
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref backgroundTexture);
-            BokuGame.Release(ref leftStick);
+            DeviceResetX.Release(ref backgroundTexture);
+            DeviceResetX.Release(ref leftStick);
         }   // end of ScrollableTextDisplay UnloadContent()
 
         /// <summary>
@@ -645,9 +649,9 @@ namespace Boku.Common.TutorialSystem
 
                 // Get the current scene thumbnail.  If we're using this from the main menu (options)
                 // then use the title screen image instead.
-                if (InGame.inGame.State == InGame.States.Inactive)
+                if (InGame.inGame.State == InGame.States.Inactive && false)
                 {
-                    thumbnail = BokuGame.bokuGame.mainMenu.BackgroundTexture;
+                    //thumbnail = BokuGame.bokuGame.mainMenu.BackgroundTexture;
                 }
                 else
                 {
@@ -665,7 +669,7 @@ namespace Boku.Common.TutorialSystem
                 HelpOverlay.Push(@"ScrollableTextDisplay");
 
                 // Get text string.
-                blob = new TextBlob(UI2D.Shared.GetGameFont20, mouseText, textWidth);
+                blob = new TextBlob(SharedX.GetGameFont20, mouseText, textWidth);
                 blob.LineSpacingAdjustment = 6; // Taller lines to make programming tiles fit better.
 
                 topLine = 0;

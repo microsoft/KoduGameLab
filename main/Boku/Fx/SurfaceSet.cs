@@ -227,7 +227,7 @@ namespace Boku.Fx
             Parameter(EffectParams.Bump_Tile1_Int1_Unused2).SetValue(
                 Bump_Tile1_Int1_Unused2_Scratch);
 
-            // TODO (****) Why is this null???
+            // TODO (scoy) Why is this null???
             if (Parameter(EffectParams.BumpDetail) != null)
             {
                 Parameter(EffectParams.BumpDetail).SetValue(BumpDetail);
@@ -239,17 +239,17 @@ namespace Boku.Fx
                 dmap = whiteMap;
             }
 #if TOGGLE_DIRTMAP_HACK
-            if (KeyboardInput.IsPressed(Keys.LeftShift))
+            if (KeyboardInputX.IsPressed(Keys.LeftShift))
             {
                 dmap = whiteMap;
             }
-            else if (KeyboardInput.IsPressed(Keys.LeftControl))
+            else if (KeyboardInputX.IsPressed(Keys.LeftControl))
             {
                 dmap = checkerMap;
             }
 #endif // TOGGLE_DIRTMAP_HACK
 
-            // TODO (****) Why is this ever null?
+            // TODO (scoy) Why is this ever null?
             if (Parameter(EffectParams.DirtMap) != null)
             {
                 Parameter(EffectParams.DirtMap).SetValue(dmap);

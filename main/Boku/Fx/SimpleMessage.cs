@@ -5,6 +5,9 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 
 namespace Boku.Fx
@@ -17,7 +20,7 @@ namespace Boku.Fx
         private List<Texture2D> textures = new List<Texture2D>();
         private double frequency = 1.0f;
         private string text = "";
-        private UI2D.Shared.GetFont font = null;
+        private GetFont font = null;
         private Point textCenter = new Point(0, 0);
         #endregion Members
 
@@ -95,7 +98,7 @@ namespace Boku.Fx
         /// <summary>
         /// Font to use for the text.
         /// </summary>
-        public UI2D.Shared.GetFont Font
+        public GetFont Font
         {
             get { return font; }
             set { font = value; }
@@ -139,7 +142,7 @@ namespace Boku.Fx
 
             if (!string.IsNullOrEmpty(Text))
             {
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 Vector2 stringSize = Font().MeasureString(TextHelper.FilterInvalidCharacters(text));
                 Point textPos = new Point(

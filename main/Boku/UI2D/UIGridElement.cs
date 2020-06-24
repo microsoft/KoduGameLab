@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -40,7 +43,7 @@ namespace Boku.UI2D
             public bool greyFlatShader = false;         // Uses a "float grey" value to lerp between being fully colored and greey scale.
                                                         // Doesn't do any lighting.  Uses the normal map's alpha for a mask and ignores the rest.
 
-            public UI2D.Shared.GetFont Font = null;     // Delegate which will return the font to use for this UI element.  This font returned
+            public GetFont Font = null;     // Delegate which will return the font to use for this UI element.  This font returned
                                                         // by this should not be held onto since a device reset may change it.
 
             public Color textColor;
@@ -49,20 +52,13 @@ namespace Boku.UI2D
             public Color dropShadowColor;
             public bool useDropShadow = false;
             public bool invertDropShadow = false;   // Puts the drop shadow above the regular letter instead of below.
-            public Justification justify = Justification.Center;
+            public TextHelper.Justification justify = TextHelper.Justification.Center;
             public bool ignorePowerOf2 = false;     // Don't do any fixup to cards that require power of 2 textures.
 
             public string normalMapName = null;
 
             public string elementName = null;
         }   // end of class ParamBlob
-
-        public enum Justification
-        {
-            Left,
-            Right,
-            Center,
-        }
 
         #region Members
 
@@ -90,7 +86,7 @@ namespace Boku.UI2D
 
         protected bool dirty = true;        // Does this element need to be refreshed.
 
-        protected UI2D.Shared.GetFont Font = null;  // Delegate which will return the font to use for this UI element.  This font returned
+        protected GetFont Font = null;  // Delegate which will return the font to use for this UI element.  This font returned
                                                     // by this should not be held onto since a device reset may change it.
 
         protected Object tag = null;        // User defined object ref.

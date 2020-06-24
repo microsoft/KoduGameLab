@@ -7,6 +7,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 namespace Boku.Common.ParticleSystem
 {
     class WreathEmitter : BaseSpriteEmitter
@@ -190,7 +192,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (wreathTexture == null)
             {
-                wreathTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/Daisy01");
+                wreathTexture = KoiLibrary.LoadTexture2D(@"Textures/Daisy01");
             }
         }   // end of WreathEmitter LoadContent()
 

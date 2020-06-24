@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -56,14 +59,19 @@ namespace Boku.Scenes.InGame.MouseEditTools
 
         Terrain.EditMode editMode = Terrain.EditMode.AddAtCenter;
 
+        /// <summary>
+        /// Do the modifications needed to handle sampling terrain materials (with Alt key).
+        /// Also sets up the correct editMode.
+        /// </summary>
         public void HandleMouseInput()
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.KeyboardMouse)
+            if (!KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
             {
                 return;
             }
+
             // In eyedropper mode, show the pointy cursor.
-            if (KeyboardInput.AltIsPressed)
+            if (KeyboardInputX.AltIsPressed)
             {
                 inGame.Cursor3D.Rep = Cursor3D.Visual.Pointy;
                 inGame.Cursor3D.Hidden = false;
@@ -73,17 +81,17 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 inGame.Cursor3D.Hidden = true;
             }
 
-            if (KeyboardInput.AltIsPressed)
+            if (KeyboardInputX.AltIsPressed)
             {
+                // Prevent terrain from being painted when Alt is being used to select material.
+                editMode = Terrain.EditMode.Noop;
+
                 // Sample the current terrain.
                 if (MouseEdit.TriggerSample())
                 {
-                    MouseInput.Left.IgnoreUntilReleased = true;
+                    LowLevelMouseInput.Left.IgnoreUntilReleased = true;
                     
-                    // Prevent terrain from being painted when Alt is being used to select material.
-                    editMode = Terrain.EditMode.Noop;
-
-                    Vector3 p = MouseEdit.HitInfo.TerrainPosition;
+                    Vector3 p = MouseEdit.MouseTouchHitInfo.TerrainPosition;
                     Vector2 pos = new Vector2(p.X, p.Y);
 
                     ushort matIdx = Terrain.GetMaterialType(pos);
@@ -94,34 +102,26 @@ namespace Boku.Scenes.InGame.MouseEditTools
                     }
                 }
             } 
-            else if (!PickerXInUse && !PickerYInUse)
+            else
             {
-                if (DebouncePending)
-                    return;
-
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                // Set the mode based on whether or not 
+                // option keys are pressed.
+                editMode = Terrain.EditMode.PaintAndAddMaterial;
+                if (KeyboardInputX.ShiftIsPressed)
                 {
-                    // Set the mode based on whether or not 
-                    // option keys are pressed.
-                    if (MouseInput.Left.WasPressed)
-                    {
-                        editMode = Terrain.EditMode.PaintAndAddMaterial;
-                        if (KeyboardInput.ShiftIsPressed)
-                        {
-                            editMode = Terrain.EditMode.PaintMaterial;
-                        }
-                        else if (KeyboardInput.CtrlIsPressed)
-                        {
-                            editMode = Terrain.EditMode.AddAtCenter;
-                        }
-                    }
+                    editMode = Terrain.EditMode.PaintMaterial;
+                }
+                else if (KeyboardInputX.CtrlIsPressed)
+                {
+                    editMode = Terrain.EditMode.AddAtCenter;
                 }
             }
-        }
+        }   // end of HandleMouseInput()
 
+        /*
         public void HandleTouchInput()
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch)
+            if (!KoiLibrary.LastTouchedDeviceIsTouch)
             {
                 return;
             }
@@ -136,37 +136,37 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 }
             }
         }
+        */
 
-        public override void Update(Camera camera)
+        public override void Update()
         {
             if (Active)
             {
                 CheckSelectCursor(false);
 
                 HandleMouseInput();
-                HandleTouchInput();
 
-                ProcessTriggers(
-                    editMode,
-                    Terrain.EditMode.AddAtCenter,
-                    Terrain.EditMode.Delete);
+                SetEditModes(editMode, Terrain.EditMode.AddAtCenter, Terrain.EditMode.Delete);
 
                 SelectOverlay();
             }
 
-            base.Update(camera);
+            base.Update();
         }   // end of Update()
+
         #endregion Public
 
+        #region InputEventHandler
+        #endregion
+
         #region Internal
+
         private object timerInstrument = null;
 
-        public override void OnActivate()
+        protected override void OnActivate()
         {
             timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGamePaintTool);
             base.OnActivate();
-
-            PickerX = brushPicker;      // Assign X button to brush picker and activate.
 
             // If the location of the cursor is not over any terrain then
             // don't allow the magic brush as the default.
@@ -175,19 +175,10 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 // By not including the magic brush in the brush set we
                 // force the picker to change the current brush to one
                 // of the standard brushes if not already.
-                brushPicker.BrushSet = Brush2DManager.BrushType.Binary
-                    | Brush2DManager.BrushType.StretchedBinary;
             }
-
-            brushPicker.BrushSet = Brush2DManager.BrushType.Binary
-                | Brush2DManager.BrushType.StretchedBinary
-                | Brush2DManager.BrushType.Selection;
-            brushPicker.UseAltOverlay = true;
-
-            PickerY = materialPicker;   // Assign Y button to material picker and activate.
         }   // end of OnActivate()
 
-        public override void OnDeactivate()
+        protected override void OnDeactivate()
         {
             base.OnDeactivate();
 

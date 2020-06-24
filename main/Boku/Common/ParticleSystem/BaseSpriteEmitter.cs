@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Fx;
 
 namespace Boku.Common.ParticleSystem
@@ -91,7 +93,7 @@ namespace Boku.Common.ParticleSystem
                 new VertexElement(0, VertexElementFormat.Vector3, VertexElementUsage.Position, 0),              // position
                 new VertexElement(12, VertexElementFormat.Vector3, VertexElementUsage.TextureCoordinate, 0),    // texture UVs
                 new VertexElement(24, VertexElementFormat.Vector3, VertexElementUsage.TextureCoordinate, 1),    // rotation, radius, alpha
-                // size == 36 (oops - ***)
+                // size == 36 (oops - maf)
             };
 
             public Vertex(Vector3 pos, Vector3 tex, float rotation, float radius, float alpha)
@@ -526,7 +528,7 @@ namespace Boku.Common.ParticleSystem
                 // We're getting rendered, set up the shared vertex buffer to suit us.
                 UpdateVerts();
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
 
                 // Get the effect we need.

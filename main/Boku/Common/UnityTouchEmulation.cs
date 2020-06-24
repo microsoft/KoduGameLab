@@ -8,6 +8,8 @@ using Microsoft.Xna.Framework;
     using System.Windows.Forms;
 #endif
 
+using KoiX;
+
 namespace Boku.Common
 {
 #if !NETFX_CORE
@@ -484,7 +486,7 @@ namespace Boku.Common
                 // Set position with offset for Tutorial mode.
                 currentTouchThisFrame.position = eventTouch.position - BokuGame.ScreenPosition;
 
-                // HACK (****)  The touch position seems to be off.  Offset it here to be more accurate.
+                // HACK (scoy)  The touch position seems to be off.  Offset it here to be more accurate.
                 // Need to really figure out why.
                 currentTouchThisFrame.position += new Vector2(18, 18);
 

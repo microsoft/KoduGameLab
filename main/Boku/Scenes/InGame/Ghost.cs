@@ -8,6 +8,9 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -251,7 +254,7 @@ namespace Boku
         /// in the least, they are just scratch space during update.
         /// </summary>
         private List<Ghost> _scratchGhosts = new List<Ghost>();
-        private static List<HitInfo> _scratchLOS = new List<HitInfo>();
+        private static List<MouseTouchHitInfo> _scratchLOS = new List<MouseTouchHitInfo>();
         private static List<GameActor> _scratchActors = new List<GameActor>();
         private static List<GameActor> _scratchToAdd = new List<GameActor>();
         private static List<GameActor> _scratchExclude = new List<GameActor>();
@@ -300,11 +303,11 @@ namespace Boku
                     float glow = ghostList[i].Glow;
 
                     ShaderGlobals.FixExplicitBloom(glow);
-                    ShaderGlobals.FixBloomColor(new Vector4(opacity, opacity, opacity, 1.0f));
+                    BokuGame.bokuGame.shaderGlobals.FixBloomColor(new Vector4(opacity, opacity, opacity, 1.0f));
                     ghostList[i].Actor.RenderObject.Render(camera);
                 }
                 ShaderGlobals.ReleaseExplicitBloom();
-                ShaderGlobals.ReleaseBloomColor();
+                BokuGame.bokuGame.shaderGlobals.ReleaseBloomColor();
 
                 renderEffects = was;
             }
@@ -323,7 +326,7 @@ namespace Boku
             CheckInvisible(currentTime);
 
             // Ignore LOS checks for ghosting if in KeyMouse mode.
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.KeyboardMouse)
+            if (!KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
             {
 
                 /// Do LOS check and find everything intersecting sphere around
@@ -399,7 +402,7 @@ namespace Boku
                 camRadius,
                 _scratchLOS))
             {
-                ActorsFromHitInfo(_scratchLOS, _scratchActors);
+                ActorsFromMouseTouchHitInfo(_scratchLOS, _scratchActors);
             }
             _scratchLOS.Clear();
 
@@ -570,17 +573,17 @@ namespace Boku
                 radius,
                 _scratchLOS))
             {
-                ActorsFromHitInfo(_scratchLOS, _scratchActors);
+                ActorsFromMouseTouchHitInfo(_scratchLOS, _scratchActors);
             }
             _scratchLOS.Clear();
         }
 
         /// <summary>
-        /// Pull eligible actors from the hitInfo list and put them in dst.
+        /// Pull eligible actors from the MouseTouchHitInfo list and put them in dst.
         /// </summary>
         /// <param name="src"></param>
         /// <param name="dst"></param>
-        private void ActorsFromHitInfo(List<HitInfo> src, List<GameActor> dst)
+        private void ActorsFromMouseTouchHitInfo(List<MouseTouchHitInfo> src, List<GameActor> dst)
         {
             /// Don't worry about duplicates, we'll prune them later.
             for (int i = 0; i < src.Count; ++i)

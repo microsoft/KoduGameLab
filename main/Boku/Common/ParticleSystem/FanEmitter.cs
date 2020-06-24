@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 
 namespace Boku.Common.ParticleSystem
@@ -80,7 +82,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (FanEmitter.texture == null)
             {
-                FanEmitter.texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/FanBlow");
+                FanEmitter.texture = KoiLibrary.LoadTexture2D(@"Textures/FanBlow");
             }
         }   // end of ExplosionEmitter LoadContent()
 

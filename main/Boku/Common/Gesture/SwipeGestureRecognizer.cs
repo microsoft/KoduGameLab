@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
+using KoiX;
+
 using Boku.Programming;
 using System.Diagnostics;
 

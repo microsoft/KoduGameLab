@@ -6,6 +6,9 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 

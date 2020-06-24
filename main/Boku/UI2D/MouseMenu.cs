@@ -11,6 +11,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -33,7 +37,7 @@ namespace Boku.UI2D
         public static Color unselectedBackgroundColor = new Color(255, 255, 255, 220);
         public static Color selectedBackgroundColor = new Color(245, 255, 100, 240);
 
-        public static UI2D.Shared.GetFont ItemFont = UI2D.Shared.GetGameFont24;
+        public static GetFont ItemFont = SharedX.GetGameFont24;
         private int chosenIndex = -1;
 
         public class MenuItem
@@ -458,11 +462,11 @@ namespace Boku.UI2D
                         return;
                     }
 
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    if (KoiLibrary.LastTouchedDeviceIsTouch)
                     {
                         UpdateTouchInput();
                     }
-                    else if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                    else if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                     {
                         UpdateMouseInput();                   
                     }
@@ -541,7 +545,7 @@ namespace Boku.UI2D
 
         private void UpdateMouseInput()
         {
-            Vector2 mouseHit = new Vector2(MouseInput.Position.X, MouseInput.Position.Y);
+            Vector2 mouseHit = new Vector2(LowLevelMouseInput.Position.X, LowLevelMouseInput.Position.Y);
 
             // HitTest mouse vs elements.  Set selected state.
             curIndex = -1;
@@ -558,7 +562,7 @@ namespace Boku.UI2D
                 }
             }
 
-            if (MouseInput.Left.WasReleased || MouseInput.Right.WasReleased)
+            if (LowLevelMouseInput.Left.WasReleased || LowLevelMouseInput.Right.WasReleased)
             {
                 // If released while over an item, then select that item.
                 if (curIndex != -1)
@@ -681,7 +685,7 @@ namespace Boku.UI2D
         {
             if (Active)
             {
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
 
                 for (int i = 0; i < itemList.Count; i++)
@@ -758,7 +762,7 @@ namespace Boku.UI2D
             if(active)
             {
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     if (TouchInput.TouchCount == 1 && TouchInput.GetOldestTouch().TouchedObject == null)
                     {
@@ -777,7 +781,7 @@ namespace Boku.UI2D
             // Load the textures.
             if (roundedSquare == null)
             {
-                roundedSquare = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\RoundedSquare");
+                roundedSquare = KoiLibrary.LoadTexture2D(@"Textures\UI2D\RoundedSquare");
             }
         }   // end of LoadContent()
 
@@ -787,7 +791,7 @@ namespace Boku.UI2D
 
         public static void UnloadContent()
         {
-            BokuGame.Release(ref roundedSquare);
+            DeviceResetX.Release(ref roundedSquare);
         }   // end of MouseMenu UnloadContent()
 
         /// <summary>

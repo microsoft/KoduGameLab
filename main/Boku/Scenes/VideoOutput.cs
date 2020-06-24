@@ -16,6 +16,7 @@ using Microsoft.Xna.Framework.Storage;
     using Microsoft.Xna.Framework.Net;
 #endif
 
+using KoiX;
 
 using Boku.Audio;
 using Boku.Base;
@@ -331,11 +332,11 @@ namespace Boku
                 }
 
                 ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 HelpOverlay.RefreshTexture();
 
-                RenderTarget2D rt = UI2D.Shared.RenderTarget1024_768;
+                RenderTarget2D rt = SharedX.RenderTarget1024_768;
 
                 Vector2 screenSize = new Vector2(device.Viewport.Width, device.Viewport.Height);
                 Vector2 rtSize = new Vector2(rt.Width, rt.Height);
@@ -593,7 +594,7 @@ namespace Boku
 
                 // Allocate the memory buffers we need.
                 shared.data = new byte[blockW * blockH];
-                shared.texture = new Texture2D(BokuGame.bokuGame.GraphicsDevice, 640, 480);
+                shared.texture = new Texture2D(KoiLibrary.GraphicsDevice, 640, 480);
                 shared.colors = new Color[shared.texture.Width * shared.texture.Height];
 
                 // Do stack handling here.  If we do it in the update object we have no
@@ -615,7 +616,7 @@ namespace Boku
 
                 // Release the memeory buffer.
                 shared.data = null;
-                BokuGame.Release(ref shared.texture);
+                DeviceResetX.Release(ref shared.texture);
                 shared.colors = null;
 
                 // Do stack handling here.  If we do it in the update object we have no

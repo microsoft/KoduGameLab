@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.SimWorld.Path;
@@ -267,7 +269,7 @@ namespace Boku.Common.Xml
         {
             WayPoint.ClearPaths();
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             // Copy local data to sim classes.
 
@@ -315,7 +317,7 @@ namespace Boku.Common.Xml
                     if (dstActor != null)
                     {
                         // Init InsideGlassWalls.
-                        // TODO (****) Right now we're doing this by checking the height of the terrain.
+                        // TODO (scoy) Right now we're doing this by checking the height of the terrain.
                         // We should also be able to do this by checking the material index BUT it appears
                         // that when we erase terrain we only set the height to 0 without resetting the material.
                         // I think...

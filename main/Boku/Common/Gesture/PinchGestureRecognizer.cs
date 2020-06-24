@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
+
+using KoiX;
+
 using Boku.Common;
 
 namespace Boku.Common.Gesture

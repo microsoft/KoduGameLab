@@ -63,20 +63,17 @@ namespace Boku.Scenes.InGame.Tools
             {
                 CheckSelectCursor(false);
 
-                if (!PickerXInUse && !PickerYInUse)
-                {
-                    if (DebouncePending)
-                        return;
+                if (DebouncePending)
+                    return;
 
-                    UpdateRates();
+                UpdateRates();
 
-                    ProcessTriggers(
-                        Terrain.EditMode.Raise,
-                        Terrain.EditMode.Smooth,
-                        Terrain.EditMode.Lower);
+                ProcessTriggers(
+                    Terrain.EditMode.Raise,
+                    Terrain.EditMode.Smooth,
+                    Terrain.EditMode.Lower);
 
-                    SelectOverlay();
-                }
+                SelectOverlay();
             }
 
             base.Update();
@@ -93,11 +90,6 @@ namespace Boku.Scenes.InGame.Tools
             base.OnActivate();
 
             Boku.InGame.inGame.Cursor3D.Hidden = true;
-
-            PickerX = brushPicker;      // Assign X button to brush picker and activate.
-            brushPicker.BrushSet = Brush2DManager.BrushType.All 
-                | Brush2DManager.BrushType.StretchedAll
-                | Brush2DManager.BrushType.Selection;
 
         }   // end of HeightMapTool OnActivate()
 

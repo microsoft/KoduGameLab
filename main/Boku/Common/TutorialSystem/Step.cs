@@ -14,6 +14,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -131,16 +134,15 @@ namespace Boku.Common.TutorialSystem
         {
             get
             {
-                switch(GamePadInput.ActiveMode)
-                {
-                    case GamePadInput.InputMode.KeyboardMouse:
-                        return TargetModeMouse;
-                    case GamePadInput.InputMode.Touch:
-                        return TargetModeTouch;
-                    case GamePadInput.InputMode.GamePad:
-                    default:
-                        return TargetModeGamepad;
-                }
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
+                    return TargetModeMouse;
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
+                    return TargetModeTouch;
+                if (KoiLibrary.LastTouchedDeviceIsGamepad)
+                    return TargetModeGamepad;
+    
+                // Default?
+                return TargetModeGamepad;
             }
         }
 

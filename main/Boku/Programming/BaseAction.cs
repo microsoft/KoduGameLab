@@ -26,7 +26,7 @@ namespace Boku.Programming
         {
             None,
 
-            // TODO (****) Why is this really here?  The only place these are used is for the MoveLeftRightSelector
+            // TODO (scoy) Why is this really here?  The only place these are used is for the MoveLeftRightSelector
             // and in that case they are both always used.
 
             // Then building the bot heading, scale this vector to match the largest vector component in the set.

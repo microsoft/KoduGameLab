@@ -13,6 +13,9 @@ using System.IO.Ports;
 using Microsoft.Win32.SafeHandles;
 #endif
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Common;
 using Boku.Common.Xml;
 using Boku.Programming;

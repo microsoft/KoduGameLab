@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 
 namespace Boku.Fx
@@ -92,7 +94,7 @@ namespace Boku.Fx
 
             // Transform position and size to homogeneous coordinates.
             // NOTE homogeneous coords need to use Viewport size instead of ScreenSize.
-            Vector2 viewport = new Vector2((float)BokuGame.bokuGame.GraphicsDevice.Viewport.Width, (float)BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
+            Vector2 viewport = new Vector2((float)KoiLibrary.GraphicsDevice.Viewport.Width, (float)KoiLibrary.GraphicsDevice.Viewport.Height);
 
             position = 2.0f * position / viewport - new Vector2(1.0f, 1.0f);
             size = size * 2.0f / viewport;
@@ -120,7 +122,7 @@ namespace Boku.Fx
         /// <param name="size">Size in pixels for the quad.</param>
         public void RenderWithShadowMask(Texture2D diffuse, Texture2D shadowMask, Vector2 position, Vector2 size)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             UpdateVertices(position, size);
 
@@ -148,7 +150,7 @@ namespace Boku.Fx
         /// <param name="size">Size in pixels for the quad.</param>
         public void RenderWithShadowMask(Vector4 diffuseColor, Texture2D shadowMask, Vector2 position, Vector2 size)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             UpdateVertices(position, size);
 
@@ -188,7 +190,7 @@ namespace Boku.Fx
         /// <param name="technique">Technique to render with.</param>
         public void Render(Texture2D texture, Vector4 diffuseColor, Vector2 position, Vector2 size, string technique)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             UpdateVertices(position, size);
 
@@ -235,7 +237,7 @@ namespace Boku.Fx
         /// <param name="technique">Technique to render with.</param>
         public void RenderWithMask(Texture2D texture, Texture2D mask, Vector4 diffuseColor, Vector2 position, Vector2 size, string technique)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             UpdateVertices(position, size);
 
@@ -268,7 +270,7 @@ namespace Boku.Fx
         /// <param name="size">Size in pixels.</param>
         public void Render(Vector4 diffuseColor, Vector2 position, Vector2 size)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             UpdateVertices(position, size);
 
@@ -297,7 +299,7 @@ namespace Boku.Fx
         /// <param name="gradient"></param>
         public void RenderGradient(Vector4[] gradient)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             Vector2 position = Vector2.Zero;
             Vector2 size = new Vector2(device.Viewport.Width, device.Viewport.Height);
@@ -334,7 +336,7 @@ namespace Boku.Fx
         /// <param name="size"></param>
         public void RenderStencil(Vector4 diffuseColor, Vector2 position, Vector2 size)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             UpdateVertices(position, size);
 
@@ -369,7 +371,7 @@ namespace Boku.Fx
         /// <param name="size"></param>
         public void RenderSplitTexture(Texture2D leftTexture, Texture2D rightTexture, float t, Vector2 position, Vector2 size)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             UpdateVertices(position, size);
 
@@ -399,7 +401,7 @@ namespace Boku.Fx
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\ScreenSpaceQuad");
+                effect = KoiLibrary.LoadEffect(@"Shaders\ScreenSpaceQuad");
             }
         }   // end of ScreenSpace3PanelQuad LoadContent()
 
@@ -409,7 +411,7 @@ namespace Boku.Fx
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref effect);
         }   // end of ScreenSpace3PanelQuad UnloadContent()
 
         /// <summary>

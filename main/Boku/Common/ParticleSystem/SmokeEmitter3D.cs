@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 namespace Boku.Common.ParticleSystem
 {
     // Emits a Smoke as a series of expanding, concentric shells which fade as they grow.

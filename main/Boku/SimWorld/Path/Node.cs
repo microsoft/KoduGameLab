@@ -8,6 +8,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -455,7 +457,7 @@ namespace Boku.SimWorld.Path
                 if (isTarget)
                 {
                     renderColor = targetColor;
-                    BokuGame.bokuGame.GraphicsDevice.RasterizerState = UI2D.Shared.RasterStateWireframe;
+                    KoiLibrary.GraphicsDevice.RasterizerState = SharedX.RasterStateWireframe;
                 }
 
                 effect.CurrentTechnique = manager.Technique(ParticleSystemManager.EffectTech3d.TransparentColorPassNoZ);
@@ -505,7 +507,7 @@ namespace Boku.SimWorld.Path
 
                 if (isTarget)
                 {
-                    BokuGame.bokuGame.GraphicsDevice.RasterizerState = RasterizerState.CullCounterClockwise;
+                    KoiLibrary.GraphicsDevice.RasterizerState = RasterizerState.CullCounterClockwise;
                 }
 
             }   // end of Node Render()

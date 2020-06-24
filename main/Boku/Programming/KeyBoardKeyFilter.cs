@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Input;
@@ -74,11 +76,11 @@ namespace Boku.Programming
         {
             bool result = false;
 
-            result = KeyboardInput.IsPressed(key);
+            result = KeyboardInputX.IsPressed(key);
             if (key2 != Keys.None)
             {
                 // yes, this should be an "or".
-                result |= KeyboardInput.IsPressed(key2);
+                result |= KeyboardInputX.IsPressed(key2);
             }
 
             // Return as a parameter a vector that can be used for input to the movement system, so
@@ -89,22 +91,22 @@ namespace Boku.Programming
             if(upid == "filter.ArrowKeys")
             {
                 Vector2 direction = Vector2.Zero;
-                if (KeyboardInput.IsPressed(Keys.Up))
+                if (KeyboardInputX.IsPressed(Keys.Up))
                 {
                     direction += new Vector2(0, 1);
                     result = true;
                 }
-                if (KeyboardInput.IsPressed(Keys.Down))
+                if (KeyboardInputX.IsPressed(Keys.Down))
                 {
                     direction += new Vector2(0, -1);
                     result = true;
                 }
-                if (KeyboardInput.IsPressed(Keys.Left))
+                if (KeyboardInputX.IsPressed(Keys.Left))
                 {
                     direction += new Vector2(-1, 0);
                     result = true;
                 }
-                if (KeyboardInput.IsPressed(Keys.Right))
+                if (KeyboardInputX.IsPressed(Keys.Right))
                 {
                     direction += new Vector2(1, 0);
                     result = true;
@@ -119,22 +121,22 @@ namespace Boku.Programming
             else if (upid == "filter.WASDKeys")
             {
                 Vector2 direction = Vector2.Zero;
-                if (KeyboardInput.IsPressed(Keys.W))
+                if (KeyboardInputX.IsPressed(Keys.W))
                 {
                     direction += new Vector2(0, 1);
                     result = true;
                 }
-                if (KeyboardInput.IsPressed(Keys.S))
+                if (KeyboardInputX.IsPressed(Keys.S))
                 {
                     direction += new Vector2(0, -1);
                     result = true;
                 }
-                if (KeyboardInput.IsPressed(Keys.A))
+                if (KeyboardInputX.IsPressed(Keys.A))
                 {
                     direction += new Vector2(-1, 0);
                     result = true;
                 }
-                if (KeyboardInput.IsPressed(Keys.D))
+                if (KeyboardInputX.IsPressed(Keys.D))
                 {
                     direction += new Vector2(1, 0);
                     result = true;

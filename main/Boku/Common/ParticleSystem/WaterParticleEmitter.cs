@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.SimWorld;
@@ -185,11 +187,11 @@ namespace Boku.Common.ParticleSystem
             // Load the textures.
             if (texture == null)
             {
-                texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\WaterParticle1");
+                texture = KoiLibrary.LoadTexture2D(@"Textures\WaterParticle1");
             }
             if (noiseTexture == null)
             {
-                Texture2D src = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\SmoothNoise");
+                Texture2D src = KoiLibrary.LoadTexture2D(@"Textures\SmoothNoise");
 
                 noiseTexture = new Texture2D(device,
                     src.Width, src.Height,
@@ -206,13 +208,13 @@ namespace Boku.Common.ParticleSystem
                     tmpVector4[i] = tmpColor[i].ToVector4();
 
                 noiseTexture.SetData<Vector4>(tmpVector4);
-                BokuGame.Release(ref src);
+                DeviceResetX.Release(ref src);
             }
 
             // Load the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\NoiseParticle2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\NoiseParticle2D");
 
                 technique = effect.Techniques[@"TexturedColorPassNormalAlpha"];
 
@@ -228,7 +230,7 @@ namespace Boku.Common.ParticleSystem
 
             if (ibuf == null || vbuf == null)
             {
-                Init(BokuGame.bokuGame.GraphicsDevice);
+                Init(KoiLibrary.GraphicsDevice);
             }
 
             // Calc approximate volume of water that we need to seed with particles.  Sample along the
@@ -362,8 +364,8 @@ namespace Boku.Common.ParticleSystem
 
                 // Copy local versions to the buffers.
                 // First ensure that the buffers are not already set on the device.
-                BokuGame.bokuGame.GraphicsDevice.SetVertexBuffer(null);
-                BokuGame.bokuGame.GraphicsDevice.Indices = null;
+                KoiLibrary.GraphicsDevice.SetVertexBuffer(null);
+                KoiLibrary.GraphicsDevice.Indices = null;
                 ibuf.SetData<ushort>(localIndices);
                 vbuf.SetData<Vertex>(localVerts);
             }
@@ -392,7 +394,7 @@ namespace Boku.Common.ParticleSystem
 
         public override void Render(Camera camera)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             if (BokuSettings.Settings.PreferReach)
                 return;
@@ -468,7 +470,7 @@ namespace Boku.Common.ParticleSystem
 
         public void LoadContent(bool immediate)
         {
-            Init(BokuGame.bokuGame.GraphicsDevice);
+            Init(KoiLibrary.GraphicsDevice);
         }
 
         public void InitDeviceResources(GraphicsDevice device)
@@ -479,17 +481,17 @@ namespace Boku.Common.ParticleSystem
         public void UnloadContent()
         {
             technique = null;
-            BokuGame.Release(ref vbuf);
-            BokuGame.Release(ref ibuf);
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref texture);
-            BokuGame.Release(ref noiseTexture);
+            DeviceResetX.Release(ref vbuf);
+            DeviceResetX.Release(ref ibuf);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref texture);
+            DeviceResetX.Release(ref noiseTexture);
         }
 
         public void DeviceReset(GraphicsDevice device)
         {
             UnloadContent();
-            Init(BokuGame.bokuGame.GraphicsDevice);
+            Init(KoiLibrary.GraphicsDevice);
         }
 
     }   // end of class WaterParticleEmitter

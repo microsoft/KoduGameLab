@@ -72,20 +72,17 @@ namespace Boku.Scenes.InGame.Tools
             {
                 CheckSelectCursor(false);
 
-                if (!PickerXInUse && !PickerYInUse)
-                {
-                    if (DebouncePending)
-                        return;
+                if (DebouncePending)
+                    return;
 
-                    UpdateRates();
+                UpdateRates();
 
-                    ProcessTriggers(
-                        Terrain.EditMode.AddAtCenter,
-                        Terrain.EditMode.PaintMaterial,
-                        Terrain.EditMode.Delete);
+                ProcessTriggers(
+                    Terrain.EditMode.AddAtCenter,
+                    Terrain.EditMode.PaintMaterial,
+                    Terrain.EditMode.Delete);
 
-                    SelectOverlay();
-                }
+                SelectOverlay();
             }
 
             base.Update();
@@ -103,8 +100,6 @@ namespace Boku.Scenes.InGame.Tools
 
             Boku.InGame.inGame.Cursor3D.Hidden = true;
 
-            PickerX = brushPicker;      // Assign X button to brush picker and activate.
-
             // If the location of the cursor is not over any terrain then
             // don't allow the magic brush as the default.
             if (Terrain.GetTerrainHeightFlat(Boku.InGame.inGame.Cursor3D.Position) == 0.0f)
@@ -112,16 +107,8 @@ namespace Boku.Scenes.InGame.Tools
                 // By not including the magic brush in the brush set we
                 // force the picker to change the current brush to one
                 // of the standard brushes if not already.
-                brushPicker.BrushSet = Brush2DManager.BrushType.Binary
-                    | Brush2DManager.BrushType.StretchedBinary;
             }
 
-            brushPicker.BrushSet = Brush2DManager.BrushType.Binary
-                | Brush2DManager.BrushType.StretchedBinary
-                | Brush2DManager.BrushType.Selection;
-            brushPicker.UseAltOverlay = true;
-
-            PickerY = materialPicker;   // Assign Y button to material picker and activate.
         }   // end of AddTool OnActivate()
 
         public override void OnDeactivate()

@@ -74,6 +74,12 @@ namespace Boku.Common
 
         }   // end of TweakScreenHelp Init()
 
+        /// <summary>
+        /// Returns the help text associated with the given id.
+        /// Note that this is the localized version.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static string GetHelp(string id)
         {
             Debug.Assert(helpTextDict != null);

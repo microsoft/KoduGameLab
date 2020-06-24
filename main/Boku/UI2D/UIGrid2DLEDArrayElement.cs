@@ -9,6 +9,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Fx;
 using Boku.Programming;
@@ -297,25 +299,25 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the normal map texture.
             if (normalMapName != null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\" + normalMapName);
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\" + normalMapName);
             }
 
             // Load the diffuse texture.
             if (diffuseTextureName != null)
             {
-                diffuse = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\" + diffuseTextureName);
+                diffuse = KoiLibrary.LoadTexture2D(@"Textures\" + diffuseTextureName);
             }
 
             if (white == null)
             {
-                white = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\White");
+                white = KoiLibrary.LoadTexture2D(@"Textures\White");
             }
 
         }   // end of UIGrid2DLEDArray LoadContent()
@@ -345,10 +347,10 @@ namespace Boku.UI2D
         {
             base.UnloadContent();
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
-            BokuGame.Release(ref diffuse);
-            BokuGame.Release(ref white);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
+            DeviceResetX.Release(ref diffuse);
+            DeviceResetX.Release(ref white);
 
             BokuGame.Unload(geometry);
             geometry = null;

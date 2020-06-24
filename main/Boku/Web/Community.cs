@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 

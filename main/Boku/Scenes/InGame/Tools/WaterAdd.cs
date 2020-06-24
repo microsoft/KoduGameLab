@@ -63,21 +63,17 @@ namespace Boku.Scenes.InGame.Tools
             {
                 CheckSelectCursor(true);
 
-                if (!PickerXInUse && !PickerYInUse)
-                {
-                    if (DebouncePending)
-                        return;
+                if (DebouncePending)
+                    return;
 
-                    UpdateRates();
+                UpdateRates();
 
-                    ProcessTriggers(
-                        Terrain.EditMode.WaterRaise,
-                        Terrain.EditMode.WaterChange,
-                        Terrain.EditMode.WaterLower);
+                ProcessTriggers(
+                    Terrain.EditMode.WaterRaise,
+                    Terrain.EditMode.WaterChange,
+                    Terrain.EditMode.WaterLower);
 
-
-                    SelectOverlay();
-                }
+                SelectOverlay();
             }
 
             base.Update();
@@ -113,8 +109,6 @@ namespace Boku.Scenes.InGame.Tools
             timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameWaterTool);
             
             base.OnActivate();
-
-            PickerY = waterPicker;
 
             inGame.ShowCursor();
         }   // end of HeightMapTool OnActivate()

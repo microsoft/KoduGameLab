@@ -8,6 +8,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.ParticleSystem;
@@ -230,7 +233,7 @@ namespace Boku
             {
                 get
                 {
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    if (KoiLibrary.LastTouchedDeviceIsTouch)
                     {
                         if (touchOver.Path != null)
                         {
@@ -379,7 +382,7 @@ namespace Boku
             public bool Dragging
             {
                 get {
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    if (KoiLibrary.LastTouchedDeviceIsTouch)
                         return touchOver.Moving;
                     else
                         return mouseOver.Moving;
@@ -483,7 +486,7 @@ namespace Boku
 
                 bool changedMode = false;
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     mouseOver.Update(Parent, Parent.Camera);
                 }
@@ -627,11 +630,11 @@ namespace Boku
             /// <param name="objColorIndex"></param>
             public void NewPath(Vector3 pos, int objColorIndex)
             {
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     mouseOver.NewPath(pos, objColorIndex);
                 }
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                else if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     touchOver.NewPath(pos, objColorIndex);
                 }
@@ -652,7 +655,7 @@ namespace Boku
             /// <returns></returns>
             public Vector2 DoCursor(Vector2 pos)
             {
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     return touchOver.DoCursor(pos);
                 }
@@ -795,7 +798,7 @@ namespace Boku
                 {
                     get
                     {
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                        if (KoiLibrary.LastTouchedDeviceIsTouch)
                         {
                             return (TouchGestureManager.Get().TapGesture.WasRecognized &&
                                 InGame.inGame.touchEditUpdateObj.ToolBar.IsButtonActionToggledOn(ToolBar.TouchControls.BrushActionIDs.baDelete));
@@ -810,7 +813,7 @@ namespace Boku
                     {
                         if (!value)
                         {
-                            if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch)
+                            if (!KoiLibrary.LastTouchedDeviceIsTouch)
                             {
                                 Actions.PathDelete.ClearAllWasPressedState();
                             }
@@ -841,7 +844,7 @@ namespace Boku
                 {
                     get
                     {
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                        if (KoiLibrary.LastTouchedDeviceIsTouch)
                         {
                             //FIXME: need touch button or gesture for this
                             return (touchOver.edge != null) && (TouchGestureManager.Get().TapGesture.WasRecognized && Space);
@@ -856,7 +859,7 @@ namespace Boku
                     {
                         if (!value)
                         {
-                            if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch)
+                            if (!KoiLibrary.LastTouchedDeviceIsTouch)
                             {
                                 Actions.SplitEdge.ClearAllWasPressedState();
                                 Space = false;
@@ -909,7 +912,7 @@ namespace Boku
                 {
                     get
                     {
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                        if (KoiLibrary.LastTouchedDeviceIsTouch)
                         {
                             return TouchGestureManager.Get().TapGesture.WasRecognized && InGame.inGame.TouchEdit.HasNonUITouch();
                         }
@@ -953,12 +956,12 @@ namespace Boku
                 /// </summary>
                 public bool Space
                 {
-                    get { return KeyboardInput.IsPressed(Keys.Space); }
+                    get { return KeyboardInputX.IsPressed(Keys.Space); }
                     set
                     {
                         if (!value)
                         {
-                            KeyboardInput.ClearAllWasPressedState(Keys.Space);
+                            KeyboardInputX.ClearAllWasPressedState(Keys.Space);
                         }
                     }
                 }
@@ -967,13 +970,13 @@ namespace Boku
                 /// </summary>
                 public bool Alt
                 {
-                    get { return KeyboardInput.IsPressed(Keys.LeftAlt) || KeyboardInput.IsPressed(Keys.RightAlt); }
+                    get { return KeyboardInputX.IsPressed(Keys.LeftAlt) || KeyboardInputX.IsPressed(Keys.RightAlt); }
                     set
                     {
                         if (!value)
                         {
-                            KeyboardInput.ClearAllWasPressedState(Keys.LeftAlt);
-                            KeyboardInput.ClearAllWasPressedState(Keys.RightAlt);
+                            KeyboardInputX.ClearAllWasPressedState(Keys.LeftAlt);
+                            KeyboardInputX.ClearAllWasPressedState(Keys.RightAlt);
                         }
                     }
                 }
@@ -982,13 +985,13 @@ namespace Boku
                 /// </summary>
                 public bool Control
                 {
-                    get { return KeyboardInput.IsPressed(Keys.LeftControl) || KeyboardInput.IsPressed(Keys.RightControl); }
+                    get { return KeyboardInputX.IsPressed(Keys.LeftControl) || KeyboardInputX.IsPressed(Keys.RightControl); }
                     set
                     {
                         if (!value)
                         {
-                            KeyboardInput.ClearAllWasPressedState(Keys.LeftControl);
-                            KeyboardInput.ClearAllWasPressedState(Keys.RightControl);
+                            KeyboardInputX.ClearAllWasPressedState(Keys.LeftControl);
+                            KeyboardInputX.ClearAllWasPressedState(Keys.RightControl);
                         }
                     }
                 }
@@ -997,12 +1000,12 @@ namespace Boku
                 /// </summary>
                 public bool Left
                 {
-                    get { return MouseInput.Left.WasPressed; }
+                    get { return LowLevelMouseInput.Left.WasPressed; }
                     set
                     {
                         if (!value)
                         {
-                            MouseInput.Left.ClearAllWasPressedState();
+                            LowLevelMouseInput.Left.ClearAllWasPressedState();
                         }
                     }
                 }

@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -48,15 +51,9 @@ namespace Boku.Scenes.InGame.Tools
 
         protected int prevBrushIndex = 0;   // Let the tools that care about brushes remember what they were using.
 
-        protected BasePicker pickerX = null;    // Picker associated with X button.
-        protected BasePicker pickerY = null;    // Picker associated with Y button.
-
         // Helpful references.
         protected Boku.InGame inGame = null;
         protected Boku.InGame.Shared shared = null;
-        protected MaterialPicker materialPicker = null;
-        protected WaterPicker waterPicker = null;
-        protected BrushPicker brushPicker = null;
 
         private float leftRate = 0.0f;
         private float rightRate = 0.0f;
@@ -183,11 +180,7 @@ namespace Boku.Scenes.InGame.Tools
                 UpdateRates();
                 if (starting)
                 {
-                    if (!Actions.PickerX.IsPressed
-                        && !Actions.PickerY.IsPressed
-                        && !Actions.Select.IsPressed
-                        && !Actions.PickerLeft.IsPressed
-                        && !Actions.PickerRight.IsPressed)
+                    if (!Actions.Select.IsPressed)
                     {
                         starting = false;
                     }
@@ -203,52 +196,6 @@ namespace Boku.Scenes.InGame.Tools
         {
             get { return starting; }
             set { starting = value; }
-        }
-
-        /// <summary>
-        /// Set and activate the picker associated with button X.
-        /// </summary>
-        protected BasePicker PickerX
-        {
-            get { return pickerX; }
-            set
-            {
-                pickerX = value;
-                if (pickerX != null)
-                {
-                    pickerX.Active = true;
-                }
-            }
-        }
-        /// <summary>
-        /// Set and activate the picker associated with button Y.
-        /// </summary>
-        protected BasePicker PickerY
-        {
-            get { return pickerY; }
-            set
-            {
-                pickerY = value;
-                if (pickerY != null)
-                {
-                    pickerY.Active = true;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Is the picker assigned to the X button in use.
-        /// </summary>
-        protected bool PickerXInUse
-        {
-            get { return pickerX != null && pickerX.Active && !pickerX.Hidden; }
-        }
-        /// <summary>
-        /// Is the picker assigned to the Y button in use.
-        /// </summary>
-        protected bool PickerYInUse
-        {
-            get { return pickerY != null && pickerY.Active && !pickerY.Hidden; }
         }
 
         /// <summary>
@@ -329,54 +276,9 @@ namespace Boku.Scenes.InGame.Tools
                 NotifyTerrainActivity();
 
                 CheckStretchMode();
-
-                GamePadInput pad = GamePadInput.GetGamePad0();
-
-                // Switch to Mini-Hub?
-                if (!PickerXInUse && !PickerYInUse && (pad.Start.WasPressed || pad.ButtonB.WasPressed))
-                {
-                    /// The InGameEditBase will handle backing us out. Just don't do anything.
-                    return;
-                }
-
-                // Use X and Y to bring up associated pickers.  If another is already
-                // being used, accept the current state and switch to the new one.
-                if ((Actions.PickerX.WasPressed) && pickerX != null)
-                {
-                    Actions.PickerX.ClearAllWasPressedState();
-
-                    // First check if the other picker is already in use.
-                    if (PickerYInUse)
-                    {
-                        PickerY.SelectCurrentChoice();
-                        PickerY.Hidden = true;
-                    }
-
-                    PickerX.Hidden = false;
-                }
-                if ((Actions.PickerY.WasPressed) && pickerY != null && pickerY.Hidden)
-                {
-                    Actions.PickerY.ClearAllWasPressedState();
-
-                    // First check if the other picker is already in use.
-                    if (PickerXInUse)
-                    {
-                        PickerX.SelectCurrentChoice();
-                        PickerX.Hidden = true;
-                    }
-
-                    PickerY.Hidden = false;
-                }
             }
 
-            if (Active)
-            {
-                if (shared.ToolBox.PickersActive)
-                {
-                    //inGame.Terrain.EndSelection();
-                }
-            }
-            shared.editBrushSizeActive = !shared.ToolBox.PickersActive;
+            shared.editBrushSizeActive = true;
 
         }   // end of BaseTool Update()
 
@@ -390,13 +292,9 @@ namespace Boku.Scenes.InGame.Tools
             // c'tor since not all of these exist yet.
             inGame = Boku.InGame.inGame;
             shared = inGame.shared;
-            materialPicker = shared.ToolBox.MaterialPicker;
-            waterPicker = shared.ToolBox.WaterPicker;
-            brushPicker = shared.ToolBox.BrushPicker;
             starting = true;
             StretchPhase = Phase.Open;
 
-            shared.editBrushIndex = prevBrushIndex;
             shared.editBrushStart = shared.editBrushPosition;
 
             HelpOverlay.Push(helpOverlayID);
@@ -413,20 +311,6 @@ namespace Boku.Scenes.InGame.Tools
         /// </summary>
         public virtual void OnDeactivate()
         {
-            prevBrushIndex = shared.editBrushIndex;
-
-            // Deactivate any pickers.
-            if (PickerX != null)
-            {
-                PickerX.Active = false;
-                PickerX = null;
-            }
-            if (PickerY != null)
-            {
-                PickerY.Active = false;
-                PickerY = null;
-            }
-
             inGame.ShowCursor();
             inGame.Cursor3D.Rep = Cursor3D.Visual.Edit;
             inGame.Cursor3D.DiffuseColor = new Vector4(0.5f, 0.9f, 0.8f, 0.3f);
@@ -458,10 +342,8 @@ namespace Boku.Scenes.InGame.Tools
         }
         private void CheckStretchMode()
         {
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(shared.editBrushIndex);
-            if ((brush != null)
-                &&
-                ((brush.Type & Brush2DManager.BrushType.StretchedAll) != 0))
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+            if (brush != null && brush.IsLinear)
             {
                 /// We're in stretch now. Is that new?
                 if (!InStretchMode)
@@ -486,7 +368,7 @@ namespace Boku.Scenes.InGame.Tools
         protected virtual void SelectOverlay()
         {
             Brush2DManager.Brush2D brush
-                = Brush2DManager.GetBrush(shared.editBrushIndex);
+                = Brush2DManager.GetActiveBrush();
 
             if (InStretchMode)
             {
@@ -503,7 +385,7 @@ namespace Boku.Scenes.InGame.Tools
             }
             else
             {
-                if (HelpOverlayMagicBrushID != null && brush.Type == Brush2DManager.BrushType.Selection)
+                if (HelpOverlayMagicBrushID != null && brush.Shape == Brush2DManager.BrushShape.Magic)
                 {
                     SetOverlay(HelpOverlayMagicBrushID);
                 }
@@ -533,17 +415,17 @@ namespace Boku.Scenes.InGame.Tools
             /// redundant with the brush.
             inGame.ShowCursor();
 
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(shared.editBrushIndex);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
             if (brush == null)
             {
                 //inGame.ShowCursor();
                 return;
             }
 
-            bool isSelection = (brush.Type & Brush2DManager.BrushType.Selection) != 0;
-            bool isStretch = (brush.Type & Brush2DManager.BrushType.StretchedAll) != 0;
+            bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
+            bool isLinearBrush = brush.IsLinear;
 
-            if (isSelection)
+            if (isMagicBrush)
             {
                 inGame.Cursor3D.Hidden = false;
                 inGame.Terrain.MakeSelection(shared.editBrushPosition);
@@ -569,17 +451,10 @@ namespace Boku.Scenes.InGame.Tools
             Terrain.EditMode aButton,
             Terrain.EditMode leftMode)
         {
-            /// If any of the toolbox pickers are active, disable our selves.
-            if (shared.ToolBox.PickersActive)
-            {
-                return;
-            }
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(shared.editBrushIndex);
-            bool isSelection = 
-                (brush != null) 
-                && ((brush.Type & Brush2DManager.BrushType.Selection) != 0);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+            bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
 
-            if (isSelection)
+            if (isMagicBrush)
             {
                 ProcessSelection(
                     rightMode,
@@ -633,7 +508,7 @@ namespace Boku.Scenes.InGame.Tools
                 leftWasPressed = LeftTriggerOn && !leftOn;
 
                 bool aButtonOn = AButtonOn;
-                aButtonRate = pad.ButtonA.IsPressed || KeyboardInput.IsPressed(Keys.A) ? 1.0f : 0.0f;
+                aButtonRate = pad.ButtonA.IsPressed || KeyboardInputX.IsPressed(Keys.A) ? 1.0f : 0.0f;
                 float mouseA = inGame.MouseEdit.MiddleTrigger;
                 aButtonRate = Math.Max(aButtonRate, mouseA);
                 if (aButtonRate < kSmallRate)
@@ -681,8 +556,8 @@ namespace Boku.Scenes.InGame.Tools
             {
                 float distSq = Vector2.DistanceSquared(endPos, shared.editBrushPosition);
                 bool gamePadMoved = distSq > kSmallMoveSq;
-                bool mouseMoved = MouseInput.PrevPosition != MouseInput.Position;
-                bool moved = GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse
+                bool mouseMoved = LowLevelMouseInput.DeltaPosition != Point.Zero;
+                bool moved = KoiLibrary.LastTouchedDeviceIsKeyboardMouse
                     ? mouseMoved
                     : gamePadMoved;
                 if (moved
@@ -702,7 +577,6 @@ namespace Boku.Scenes.InGame.Tools
                     {
                         float editSpeed = RightRate;
                         inGame.Terrain.RenderToHeightMap(
-                            shared.editBrushIndex,
                             shared.editBrushStart,
                             shared.editBrushPosition,
                             shared.editBrushRadius,
@@ -719,7 +593,6 @@ namespace Boku.Scenes.InGame.Tools
                     {
                         float editSpeed = aButtonRate;
                         inGame.Terrain.RenderToHeightMap(
-                            shared.editBrushIndex,
                             shared.editBrushStart,
                             shared.editBrushPosition,
                             shared.editBrushRadius,
@@ -736,7 +609,6 @@ namespace Boku.Scenes.InGame.Tools
                     {
                         float editSpeed = LeftRate;
                         inGame.Terrain.RenderToHeightMap(
-                            shared.editBrushIndex,
                             shared.editBrushStart,
                             shared.editBrushPosition,
                             shared.editBrushRadius,
@@ -769,7 +641,7 @@ namespace Boku.Scenes.InGame.Tools
                     Actions.Cancel.IgnoreUntilReleased();
                 }
             }
-            if (MouseInput.Left.WasPressed
+            if (LowLevelMouseInput.Left.WasPressed
                 && !LeftTriggerOn
                 && !RightTriggerOn
                 && !AButtonOn)
@@ -909,7 +781,6 @@ namespace Boku.Scenes.InGame.Tools
             {
                 float rate = RightRate;
                 inGame.Terrain.RenderToHeightMap(
-                    shared.editBrushIndex,
                     shared.editBrushPosition,
                     shared.editBrushRadius,
                     rightMode,
@@ -929,7 +800,6 @@ namespace Boku.Scenes.InGame.Tools
             {
                 float rate = aButtonRate;
                 inGame.Terrain.RenderToHeightMap(
-                    shared.editBrushIndex,
                     shared.editBrushPosition,
                     shared.editBrushRadius,
                     aButton,
@@ -949,7 +819,6 @@ namespace Boku.Scenes.InGame.Tools
             {
                 float rate = LeftRate;
                 inGame.Terrain.RenderToHeightMap(
-                    shared.editBrushIndex,
                     shared.editBrushPosition,
                     shared.editBrushRadius,
                     leftMode,

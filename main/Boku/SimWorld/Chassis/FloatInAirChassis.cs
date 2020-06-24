@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld;
@@ -38,7 +40,7 @@ namespace Boku.SimWorld.Chassis
         private float deltaAltitude = 0.0f;                                     // How fast we're currently moving up or down.
 
         //
-        // TODO (****)
+        // TODO (scoy)
         // These speed and acceleration limits are a bit arbitrary.
         // Should we use actor.CalcMaxVerticalSpeed() and 
         // actor.CalcMaxVewrticalAcceleration() instead?
@@ -351,7 +353,7 @@ namespace Boku.SimWorld.Chassis
                 if(idleWeight > 0.0f)
                 {
                     // For this chassis we assume that the backwards animation represents wind.
-                    float wind = Fx.ShaderGlobals.WindAt(movement.Position);
+                    float wind = BokuGame.bokuGame.shaderGlobals.WindAt(movement.Position);
 
                     if (wind > idleWeight)
                     {

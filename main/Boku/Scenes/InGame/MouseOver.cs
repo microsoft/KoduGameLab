@@ -7,6 +7,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Scenes;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld.Path;
@@ -84,28 +88,28 @@ namespace Boku
                 /// </summary>
                 public bool StartDragging
                 {
-                    get { return MouseInput.Left.WasPressed; /* && !KeyboardInput.ShiftIsPressed && !KeyboardInput.IsPressed(Keys.Space); */ }
+                    get { return LowLevelMouseInput.Left.WasPressed; /* && !KeyboardInputX.ShiftIsPressed && !KeyboardInputX.IsPressed(Keys.Space); */ }
                 }
                 /// <summary>
                 /// Input required to continue dragging a path or subpath.
                 /// </summary>
                 public bool ContinueDragging
                 {
-                    get { return MouseInput.Left.IsPressed; /* && !KeyboardInput.ShiftIsPressed && !KeyboardInput.IsPressed(Keys.Space); */ }
+                    get { return LowLevelMouseInput.Left.IsPressed; /* && !KeyboardInputX.ShiftIsPressed && !KeyboardInputX.IsPressed(Keys.Space); */ }
                 }
                 /// <summary>
                 /// Input required to start raising/lowering a path or subpath.
                 /// </summary>
                 public bool StartRaising
                 {
-                    get { return false; /* MouseInput.Left.WasPressed && KeyboardInput.ShiftIsPressed && !KeyboardInput.IsPressed(Keys.Space); */ }
+                    get { return false; /* LowLevelMouseInput.Left.WasPressed && KeyboardInputX.ShiftIsPressed && !KeyboardInputX.IsPressed(Keys.Space); */ }
                 }
                 /// <summary>
                 /// Input required to continue raising/lowering a path or sub-path.
                 /// </summary>
                 public bool ContinueRaising
                 {
-                    get { return false; /* MouseInput.Left.IsPressed && KeyboardInput.ShiftIsPressed && !KeyboardInput.IsPressed(Keys.Space); */ }
+                    get { return false; /* LowLevelMouseInput.Left.IsPressed && KeyboardInputX.ShiftIsPressed && !KeyboardInputX.IsPressed(Keys.Space); */ }
                 }
 
                 /// <summary>
@@ -343,9 +347,9 @@ namespace Boku
                     float dist = Vector3.Distance(src, dst);
                     if (dist < this.distance)
                     {
-                        if (!MouseEdit.HitInfo.HaveActor
+                        if (!MouseEdit.MouseTouchHitInfo.HaveActor
                             || (Vector3.DistanceSquared(
-                            MouseEdit.HitInfo.ActorPosition, src) > dist * dist))
+                            MouseEdit.MouseTouchHitInfo.ActorPosition, src) > dist * dist))
                         {
                             Set(obj, dst, dist);
                         }
@@ -419,7 +423,7 @@ namespace Boku
                 private void AdvanceReCenter()
                 {
                     /// A left click can cancel the ReCenter.
-                    if (MouseInput.Left.WasPressed)
+                    if (LowLevelMouseInput.Left.WasPressed)
                     {
                         mode = Mode.None;
                         fromNode = null;
@@ -438,7 +442,7 @@ namespace Boku
                 /// </summary>
                 private void CheckReCenter()
                 {
-                    if (MouseInput.Left.WasPressed)
+                    if (LowLevelMouseInput.Left.WasPressed)
                     {
                         if (clickTimer <= 0.0f)
                         {
@@ -561,7 +565,7 @@ namespace Boku
                     bool asRoad = false;
                     float height = from.RenderPosition(asRoad).Z;
 
-                    Vector3 hit = MouseEdit.FindAtHeight(camera, MouseInput.Position, height);
+                    Vector3 hit = MouseEdit.FindAtHeight(camera, LowLevelMouseInput.Position, height);
 
                     return hit;
                 }
@@ -576,8 +580,9 @@ namespace Boku
                     Vector3 delta = Vector3.Zero;
                     if (mode == Mode.Drag)
                     {
-                        Vector3 oldPos = MouseEdit.FindAtHeight(camera, MouseInput.PrevPosition, height);
-                        Vector3 newPos = MouseEdit.FindAtHeight(camera, MouseInput.Position, height);
+                        Point prevPos = new Point(LowLevelMouseInput.Position.X - LowLevelMouseInput.DeltaPosition.X, LowLevelMouseInput.Position.Y - LowLevelMouseInput.DeltaPosition.Y);
+                        Vector3 oldPos = MouseEdit.FindAtHeight(camera, prevPos, height);
+                        Vector3 newPos = MouseEdit.FindAtHeight(camera, LowLevelMouseInput.Position, height);
 
                         delta = newPos - oldPos;
 
@@ -585,7 +590,7 @@ namespace Boku
 
                     if (mode == Mode.Raise)
                     {
-                        float dheight = MouseInput.Position.Y - MouseInput.PrevPosition.Y;
+                        float dheight = LowLevelMouseInput.DeltaPosition.Y;
                         float kUpDownSpeed = -0.002f;
                         dheight *= kUpDownSpeed;
 
@@ -763,7 +768,7 @@ namespace Boku
                 /// </summary>
                 private void CheckMode()
                 {
-                    // TODO (****) Case where mode == none and fromNode is valid?
+                    // TODO (scoy) Case where mode == none and fromNode is valid?
                     //Debug.Assert((mode == Mode.Add) || (fromNode == null));
                     switch (mode)
                     {
@@ -826,7 +831,7 @@ namespace Boku
                 {
                     /// If we aren't in edit object mode, then insta-bail.
                     if (!(inGame.CurrentUpdateMode == UpdateMode.EditObject
-                        || (inGame.CurrentUpdateMode == UpdateMode.MouseEdit && inGame.mouseEditUpdateObj.ToolBar.CurrentMode == BaseEditUpdateObj.ToolMode.Paths)))
+                        || (inGame.CurrentUpdateMode == UpdateMode.MouseEdit && EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.Paths)))
                     {
                         Clear();
                         return;

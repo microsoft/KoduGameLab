@@ -7,6 +7,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Scenes;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Gesture;
@@ -106,14 +110,14 @@ namespace Boku
                 /// </summary>
                 public bool StartRaising
                 {
-                    get { return false; /* MouseInput.Left.WasPressed && KeyboardInput.ShiftIsPressed && !KeyboardInput.IsPressed(Keys.Space); */ }
+                    get { return false; /* LowLevelMouseInput.Left.WasPressed && KeyboardInput.ShiftIsPressed && !KeyboardInput.IsPressed(Keys.Space); */ }
                 }
                 /// <summary>
                 /// Input required to continue raising/lowering a path or sub-path.
                 /// </summary>
                 public bool ContinueRaising
                 {
-                    get { return false; /* MouseInput.Left.IsPressed && KeyboardInput.ShiftIsPressed && !KeyboardInput.IsPressed(Keys.Space); */ }
+                    get { return false; /* LowLevelMouseInput.Left.IsPressed && KeyboardInput.ShiftIsPressed && !KeyboardInput.IsPressed(Keys.Space); */ }
                 }
 
                 /// <summary>
@@ -349,9 +353,9 @@ namespace Boku
                     float dist = Vector3.Distance(src, dst);
                     if (dist < this.distance)
                     {
-                        if (!TouchEdit.HitInfo.HaveActor
+                        if (!TouchEdit.MouseTouchHitInfo.HaveActor
                             || (Vector3.DistanceSquared(
-                            TouchEdit.HitInfo.ActorPosition, src) > dist * dist))
+                            TouchEdit.MouseTouchHitInfo.ActorPosition, src) > dist * dist))
                         {
                             Set(obj, dst, dist);
                         }
@@ -605,7 +609,7 @@ namespace Boku
                     Vector3 delta = Vector3.Zero;
                     if (mode == Mode.Raise)
                     {
-                        float dheight = MouseInput.Position.Y - MouseInput.PrevPosition.Y;
+                        float dheight = LowLevelMouseInput.DeltaPosition.Y;
                         float kUpDownSpeed = -0.002f;
                         dheight *= kUpDownSpeed;
 
@@ -808,7 +812,7 @@ namespace Boku
                 /// </summary>
                 private void CheckMode()
                 {
-                    // TODO (****) Case where mode == none and fromNode is valid?
+                    // TODO (scoy) Case where mode == none and fromNode is valid?
                     //Debug.Assert((mode == Mode.Add) || (fromNode == null));
                     switch (mode)
                     {
@@ -893,14 +897,14 @@ namespace Boku
                 {
                     /// If we aren't in edit object mode, then insta-bail.
                     if (!(inGame.CurrentUpdateMode == UpdateMode.EditObject
-                        || (inGame.CurrentUpdateMode == UpdateMode.TouchEdit && inGame.touchEditUpdateObj.ToolBar.CurrentMode == BaseEditUpdateObj.ToolMode.Paths)))
+                        || (inGame.CurrentUpdateMode == UpdateMode.TouchEdit && EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.Paths)))
                     {
                         Clear();
                         return;
                     }
 
                     //only render next edge when not in touch
-                    if (mode == Mode.Add && GamePadInput.ActiveMode!=GamePadInput.InputMode.Touch)
+                    if (mode == Mode.Add && !KoiLibrary.LastTouchedDeviceIsTouch)
                     {
                         Vector3 pos = AddPosition(camera, fromNode);
                         RenderSelection(camera, fromNode, pos);

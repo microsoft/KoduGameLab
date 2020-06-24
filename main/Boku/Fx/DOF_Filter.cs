@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 
@@ -37,7 +39,7 @@ namespace Boku.Fx
             Texture2D distortImage0,
             Texture2D distortImage1)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             SetUvToPos(new Vector2(fullImage.Width, fullImage.Height));
 
@@ -110,7 +112,7 @@ namespace Boku.Fx
 
         void SetUvToPos(Vector2 backbufferSize)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             int width = device.Viewport.Width;
             int height = device.Viewport.Height;
@@ -135,7 +137,7 @@ namespace Boku.Fx
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\DOF_Filter");
+                effect = KoiLibrary.LoadEffect(@"Shaders\DOF_Filter");
                 ShaderGlobals.RegisterEffect("DOF_Filter", effect);
             }
 

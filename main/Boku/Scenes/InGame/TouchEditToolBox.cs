@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Scenes;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI;
@@ -30,7 +33,7 @@ namespace Boku
     {
         #region Members
 
-        private InGame.TouchEditUpdateObj.ToolMode currentMode = InGame.TouchEditUpdateObj.ToolMode.TerrainRaiseLower;
+        private EditWorldScene.ToolMode currentMode = EditWorldScene.ToolMode.TerrainRaiseLower;
         private BaseMouseEditTool activeTool = null;
 
         private PerspectiveUICamera camera = new PerspectiveUICamera();
@@ -46,51 +49,54 @@ namespace Boku
         /// <summary>
         /// Determines which is the active tool.
         /// </summary>
-        public InGame.TouchEditUpdateObj.ToolMode CurrentMode
+        public EditWorldScene.ToolMode CurrentMode
         {
             get { return currentMode; }
             set
             {
-                if (activeTool != null)
+                if (currentMode != value)
                 {
-                    activeTool.Active = false;
+                    if (activeTool != null)
+                    {
+                        activeTool.Active = false;
+                    }
+                    currentMode = value;
+                    switch (currentMode)
+                    {
+                        case EditWorldScene.ToolMode.EditObject:
+                            activeTool = EditObjectsTool.GetInstance();
+                            break;
+                        case EditWorldScene.ToolMode.Paths:
+                            activeTool = EditPathsTool.GetInstance();
+                            break;
+                        case EditWorldScene.ToolMode.TerrainPaint:
+                            activeTool = PaintTool.GetInstance();
+                            break;
+                        case EditWorldScene.ToolMode.TerrainRaiseLower:
+                            activeTool = RaiseLowerTool.GetInstance();
+                            break;
+                        case EditWorldScene.ToolMode.TerrainSpikeyHilly:
+                            activeTool = SpikeyHillyTool.GetInstance();
+                            break;
+                        case EditWorldScene.ToolMode.TerrainSmoothLevel:
+                            activeTool = SmoothLevelTool.GetInstance();
+                            break;
+                        case EditWorldScene.ToolMode.Water:
+                            activeTool = WaterTool.GetInstance();
+                            break;
+                        case EditWorldScene.ToolMode.EraseObjects:
+                            activeTool = DeleteObjectsTool.GetInstance();
+                            break;
+                        default:
+                            Debug.Assert(false);
+                            break;
+                    }
+                    if (activeTool != null)
+                    {
+                        activeTool.Active = true;
+                    }
                 }
-                currentMode = value;
-                switch (currentMode)
-                {
-                    case InGame.TouchEditUpdateObj.ToolMode.EditObject:
-                        activeTool = EditObjectsTool.GetInstance();
-                        break;
-                    case InGame.TouchEditUpdateObj.ToolMode.Paths:
-                        activeTool = EditPathsTool.GetInstance();
-                        break;
-                    case InGame.TouchEditUpdateObj.ToolMode.TerrainPaint:
-                        activeTool = PaintTool.GetInstance();
-                        break;
-                    case InGame.TouchEditUpdateObj.ToolMode.TerrainRaiseLower:
-                        activeTool = RaiseLowerTool.GetInstance();
-                        break;
-                    case InGame.TouchEditUpdateObj.ToolMode.TerrainSpikeyHilly:
-                        activeTool = SpikeyHillyTool.GetInstance();
-                        break;
-                    case InGame.TouchEditUpdateObj.ToolMode.TerrainSmoothLevel:
-                        activeTool = SmoothLevelTool.GetInstance();
-                        break;
-                    case InGame.TouchEditUpdateObj.ToolMode.WaterRaiseLower:
-                        activeTool = WaterTool.GetInstance();
-                        break;
-                    case InGame.TouchEditUpdateObj.ToolMode.DeleteObjects:
-                        activeTool = DeleteObjectsTool.GetInstance();
-                        break;
-                    default:
-                        Debug.Assert(false);
-                        break;
-                }
-                if (activeTool != null)
-                {
-                    activeTool.Active = true;
-                }
-            }
+            }   // end of set.
         }
 
         public bool Active
@@ -113,63 +119,6 @@ namespace Boku
             get { return (EditPathsTool)EditPathsTool.GetInstance(); }
         }
 
-        /// <summary>
-        /// Give tools access to the MaterialPicker.
-        /// </summary>
-        public MaterialPicker MaterialPicker
-        {
-            get { return InGame.inGame.mouseEditUpdateObj.ToolBox.MaterialPicker; }
-        }
-        /// <summary>
-        /// Give tools access to water type selection.
-        /// </summary>
-        public WaterPicker WaterPicker
-        {
-            get { return InGame.inGame.mouseEditUpdateObj.ToolBox.WaterPicker; }
-        }
-        /// <summary>
-        /// Give tools access to the BrushPicker.
-        /// </summary>
-        public BrushPicker BrushPicker
-        {
-            get { return InGame.inGame.mouseEditUpdateObj.ToolBox.BrushPicker; }
-        }
-
-        /// <summary>
-        /// Are any of the pickers active?
-        /// </summary>
-        public bool PickersActive
-        {
-            get
-            {
-                return !BrushPicker.Hidden
-                        || !MaterialPicker.Hidden
-                        || !WaterPicker.Hidden;
-            }
-        }
-
-        /// <summary>
-        /// Are any menus active?
-        /// </summary>
-        public bool MenusActive
-        {
-            get
-            {
-                return EditObjectsToolInstance.MenusActive || EditPathsToolInstance.MenusActive;
-            }
-        }
-
-        /// <summary>
-        /// Are any of the sliders active?
-        /// </summary>
-        public bool SlidersActive
-        {
-            get
-            {
-                return EditObjectsToolInstance.SliderActive || EditPathsToolInstance.SliderActive;
-            }
-        }
-
         public PerspectiveUICamera Camera
         {
             get { return camera; }
@@ -186,12 +135,12 @@ namespace Boku
 
                 if (Active)
                 {
-                    if (CurrentMode == InGame.TouchEditUpdateObj.ToolMode.TerrainPaint
-                        || CurrentMode == InGame.TouchEditUpdateObj.ToolMode.TerrainRaiseLower
-                        || CurrentMode == InGame.TouchEditUpdateObj.ToolMode.TerrainSpikeyHilly
-                        || CurrentMode == InGame.TouchEditUpdateObj.ToolMode.TerrainSmoothLevel
-                        || CurrentMode == InGame.TouchEditUpdateObj.ToolMode.WaterRaiseLower
-                        || CurrentMode == InGame.TouchEditUpdateObj.ToolMode.DeleteObjects)
+                    if (CurrentMode == EditWorldScene.ToolMode.TerrainPaint
+                        || CurrentMode == EditWorldScene.ToolMode.TerrainRaiseLower
+                        || CurrentMode == EditWorldScene.ToolMode.TerrainSpikeyHilly
+                        || CurrentMode == EditWorldScene.ToolMode.TerrainSmoothLevel
+                        || CurrentMode == EditWorldScene.ToolMode.Water
+                        || CurrentMode == EditWorldScene.ToolMode.EraseObjects)
                     {
                         result = true;
                     }
@@ -219,13 +168,8 @@ namespace Boku
                 if (!hovering)
                 {
                     // Update the active tool.
-                    activeTool.Update(camera);
+                    activeTool.Update();
                 }
-
-                // Update the tool add-ons.
-                BrushPicker.Update(camera);
-                MaterialPicker.Update(camera);
-                WaterPicker.Update(camera);
 
                 // Keeep camera in sync with window size.
                 camera.Resolution = new Point((int)BokuGame.ScreenSize.X, (int)BokuGame.ScreenSize.Y);
@@ -237,16 +181,6 @@ namespace Boku
 
         public bool IsTouchOverMenuButton(TouchContact touch)
         {
-            if( null != touch )
-            {
-                if( !MaterialPicker.Hidden ||
-                    !WaterPicker.Hidden ||
-                    !BrushPicker.Hidden )
-                {
-                    return true;
-                }
-            }
-
             return false;
         }
 
@@ -254,11 +188,6 @@ namespace Boku
         {
             if (active)
             {
-                // Render the tool add-ons.
-                MaterialPicker.Render(camera);
-                WaterPicker.Render(camera);
-                BrushPicker.Render(camera);
-
                 // We need to render this since the slider input device may be active.
                 EditObjectsToolInstance.Render(camera);
                 EditPathsToolInstance.Render(camera);
@@ -271,7 +200,7 @@ namespace Boku
         {
             if (activeTool != null)
             {
-                activeTool.Starting = true;
+                //activeTool.Starting = true;
             }
         }   // end of MouseEditToolBox RestartCurrentTool()
 
@@ -305,11 +234,6 @@ namespace Boku
                 CommandStack.Pop(commandMap);
                 active = false;
             }
-
-            // Ensure that all of the pickers have been deactivated.
-            BrushPicker.Hidden = true;
-            MaterialPicker.Hidden = true;
-            WaterPicker.Hidden = true;
         }
 
 

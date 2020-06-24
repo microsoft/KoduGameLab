@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 namespace Boku.Common.ParticleSystem
 {
     // Emits a glow as a series of expanding, concentric shells which fade as they grow.
@@ -172,7 +174,7 @@ namespace Boku.Common.ParticleSystem
         {
             if (active)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 Sphere sphere = Sphere.GetInstance();
 
                 // Get the effect we need.

@@ -27,7 +27,7 @@ namespace Boku
         public Drum(string classificationName, BaseChassis chassis, GetModelInstance getModelInstance, StaticActor staticActor)
             : base(classificationName, classificationName, chassis, getModelInstance, getModelInstance, staticActor) { }
 
-        protected override bool SpecialBounce(GameActor other, ref HitInfo hitInfo)
+        protected override bool SpecialBounce(GameActor other, ref MouseTouchHitInfo MouseTouchHitInfo)
         {
             Vector3 otherPos = other.WorldCollisionCenter;
             Vector3 delta = otherPos - WorldCollisionCenter;
@@ -42,7 +42,7 @@ namespace Boku
 
                 /// Only modify the velocity when the other is actually the other.
                 /// This keeps us from doing it twice.
-                if (hitInfo.Other == other)
+                if (MouseTouchHitInfo.Other == other)
                 {
                     delta.Z *= 5.0f;
                     Vector3 myWorldFront = Movement.LocalMatrix.Right;

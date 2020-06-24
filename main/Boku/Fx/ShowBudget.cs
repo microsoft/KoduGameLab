@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Common.Xml;
 
@@ -109,7 +111,7 @@ namespace Boku.Fx
         /// </summary>
         public void Render()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             float frac = InGame.inGame.FractionFullUnclamped;
 
@@ -408,7 +410,7 @@ namespace Boku.Fx
         {
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\ShowBudget");
+                effect = KoiLibrary.LoadEffect(@"Shaders\ShowBudget");
                 ShaderGlobals.RegisterEffect("ShowBudget", effect);
                 effectCache.Load(effect, "");
 
@@ -418,15 +420,15 @@ namespace Boku.Fx
 
             if (background == null)
             {
-                background = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BudgetBackground");
+                background = KoiLibrary.LoadTexture2D(@"Textures\BudgetBackground");
             }
             if (mask == null)
             {
-                mask = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BudgetMask");
+                mask = KoiLibrary.LoadTexture2D(@"Textures\BudgetMask");
             }
             if (glow == null)
             {
-                glow = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BudgetGlow");
+                glow = KoiLibrary.LoadTexture2D(@"Textures\BudgetGlow");
             }
         }
         /// <summary>
@@ -442,10 +444,10 @@ namespace Boku.Fx
         /// </summary>
         public static void UnloadContent()
         {
-            BokuGame.Release(ref background);
-            BokuGame.Release(ref mask);
-            BokuGame.Release(ref glow);
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref background);
+            DeviceResetX.Release(ref mask);
+            DeviceResetX.Release(ref glow);
+            DeviceResetX.Release(ref effect);
         }
 
         /// <summary>

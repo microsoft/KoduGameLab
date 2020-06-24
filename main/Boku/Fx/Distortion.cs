@@ -14,6 +14,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld;
@@ -342,11 +344,11 @@ namespace Boku.Fx
         {
             if (bump == null)
             {
-                bump = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\DistortionWake");
+                bump = KoiLibrary.LoadTexture2D(@"Textures\DistortionWake");
             }
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Standard");
+                effect = KoiLibrary.LoadEffect(@"Shaders\Standard");
                 ShaderGlobals.RegisterEffect("Standard", effect);
                 effectCache.Load(effect, "");
             }
@@ -365,8 +367,8 @@ namespace Boku.Fx
         /// </summary>
         public static void UnloadContent()
         {
-            BokuGame.Release(ref bump);
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref bump);
+            DeviceResetX.Release(ref effect);
             effectCache.UnLoad();
         }
 

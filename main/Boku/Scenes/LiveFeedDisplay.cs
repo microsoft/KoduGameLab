@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
 
 using Boku.Base;
 using Boku.Common;
@@ -40,7 +43,7 @@ namespace Boku
     {
         #region Members
 
-        private Shared.GetFont expandFlagFont = UI2D.Shared.GetGameFont13_5;
+        private GetFont expandFlagFont = SharedX.GetGameFont13_5;
         private Color flagMoreLessColor = Color.Blue;
         private TextBlob flagMoreBlob = null;
         private TextBlob flagLessBlob = null;
@@ -103,57 +106,57 @@ namespace Boku
 
         #region Accessors
 
-        private UI2D.Shared.GetFont TitleFont
+        private GetFont TitleFont
         {
             get
             {
                 if (true)//Always use small size font. //BokuGame.ScreenSize.Y < 700)
                 {
-                    return UI2D.Shared.GetGameFont13_5;
+                    return SharedX.GetGameFont13_5;
                 }
                 else
                 {
-                    //return UI2D.Shared.GetGameFont20;
+                    //return Shared.GetGameFont20;
                 }
             }
         }
 
-        private UI2D.Shared.GetFont DateFont
+        private GetFont DateFont
         {
             get
             {
                 if (true)//Always use small size font. //if (BokuGame.ScreenSize.Y < 700)
                 {
-                    return UI2D.Shared.GetGameFont10;
+                    return SharedX.GetGameFont10;
                 }
                 //else if (BokuGame.ScreenSize.Y > 1000)
                 {
-                    //return UI2D.Shared.GetGameFont15_75;
+                    //return Shared.GetGameFont15_75;
                 }
                 //else
                 {
-                    //return UI2D.Shared.GetGameFont13_5;
+                    //return Shared.GetGameFont13_5;
                 }
             }
         }
 
-        private UI2D.Shared.GetFont BodyFont
+        private GetFont BodyFont
         {
             get {
                 if (true)//Always use small size font. //if ( BokuGame.ScreenSize.Y < 700)
                 {
-                    return UI2D.Shared.GetGameFont10;
+                    return SharedX.GetGameFont10;
                 }
                 else
                 {
-                    //return UI2D.Shared.GetGameFont13_5;
+                    //return Shared.GetGameFont13_5;
                 }
             }
         }        
 
-        private UI2D.Shared.GetFont Font
+        private GetFont Font
         {
-            get { return UI2D.Shared.GetGameFont20; }
+            get { return SharedX.GetGameFont20; }
         }
 
         public bool Active
@@ -230,27 +233,27 @@ namespace Boku
         public LiveFeedDisplay()
         {
             this.msNewsFeed = new NewsFeeds();
-            this.smallblob = new TextBlob(UI2D.Shared.GetGameFont18Bold, Strings.Localize("mainMenu.news"), 300);
-            this.smallblob.Justification = UIGridElement.Justification.Left;
+            this.smallblob = new TextBlob(SharedX.GetGameFont18Bold, Strings.Localize("mainMenu.news"), 300);
+            this.smallblob.Justification = TextHelper.Justification.Left;
             this.flagMoreBlob = new TextBlob(expandFlagFont, Strings.Localize("mainMenu.more"), 80);
             this.flagLessBlob = new TextBlob(expandFlagFont, Strings.Localize("mainMenu.less"), 80);
 
 
             this.newsScroller = new ItemScroller(scrollBoxPos, FeedSize, new Color(0.0f, 0.0f, 0.0f, 0.0f), null, null);
             this.hitBox = new AABB2D(new Vector2(0, 0), FeedSize);
-           // this.Header_bg = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\twitter_Icon");
-            this.cloudTR = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudTR");
-            this.cloudBR = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudBR");
+           // this.Header_bg = KoiLibrary.LoadTexture2D(@"Textures\twitter_Icon");
+            this.cloudTR = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudTR");
+            this.cloudBR = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudBR");
 
-            this.cloudTL = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudTL");
-            this.cloudBL = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudBL");
+            this.cloudTL = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudTL");
+            this.cloudBL = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudBL");
 
-            this.cloudTC = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudTC");
-            this.cloudBC = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudBC");
+            this.cloudTC = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudTC");
+            this.cloudBC = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudBC");
 
-            this.cloudLC = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudLC");
-            this.cloudRC = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudRC");
-            this.cloudCenter = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudCenter");
+            this.cloudLC = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudLC");
+            this.cloudRC = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudRC");
+            this.cloudCenter = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudCenter");
 
             newsScroller.Clear();
             FeedMs item = new FeedMs(FeedSize, "Getting News feed...", TitleFont, DateFont, BodyFont);
@@ -288,6 +291,7 @@ namespace Boku
                 {
                     try
                     {
+                        /*
                         // Done getting Tweets
                         newsScroller.Clear();
                         List<FeedMs> feedList = msNewsFeed.GetFeedList(
@@ -302,6 +306,7 @@ namespace Boku
                         newsScroller.ResizeItemWidths();
                         gettingFeeds = false;
                         newsScroller.Dirty = true;
+                        */
                     }
                     catch
                     {
@@ -315,8 +320,8 @@ namespace Boku
                 }
             }
 
-            Vector2 pureMouseHit = new Vector2(MouseInput.Position.X, MouseInput.Position.Y);
-            if (moreLessHitBox.Contains(pureMouseHit) && MouseInput.Left.WasReleased)
+            Vector2 pureMouseHit = new Vector2(LowLevelMouseInput.Position.X, LowLevelMouseInput.Position.Y);
+            if (moreLessHitBox.Contains(pureMouseHit) && LowLevelMouseInput.Left.WasReleased)
             {
                 expanded = !expanded;
             }
@@ -340,10 +345,10 @@ namespace Boku
                     camera = new PerspectiveUICamera();
                 }
                 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
-                    Vector2 hit = MouseInput.GetAspectRatioAdjustedPosition(camera, useOverscanForHitTesting);
-                    pureMouseHit = new Vector2(MouseInput.Position.X, MouseInput.Position.Y);
+                    Vector2 hit = LowLevelMouseInput.GetAspectRatioAdjustedPosition(camera, useOverscanForHitTesting);
+                    pureMouseHit = new Vector2(LowLevelMouseInput.Position.X, LowLevelMouseInput.Position.Y);
                     if (!IsInScrollwindow(pureMouseHit))
                     {
                         // Don't Deactivate here just because the mouse cursor has left the bounds of the scroll window.
@@ -351,12 +356,12 @@ namespace Boku
                         //Deactivate();
 
                         // But if we're out of bounds and the used clicks, then Deactivate()
-                        if (MouseInput.Left.WasPressed)
+                        if (LowLevelMouseInput.Left.WasPressed)
                         {
                             Deactivate();
                         }
                     }
-                    else if (MouseInput.PrevPosition != MouseInput.Position)
+                    else if (LowLevelMouseInput.DeltaPosition != Point.Zero)
                     {
                         newsScroller.Activate();
                     }
@@ -393,7 +398,7 @@ namespace Boku
                     
                     
                 }
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                else if (KoiLibrary.LastTouchedDeviceIsGamepad)
                 {
                     HandleGamepadInput();
                 }
@@ -416,7 +421,7 @@ namespace Boku
 
         private void HandleGamepadInput()
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.GamePad) { return; }
+            if (!KoiLibrary.LastTouchedDeviceIsGamepad) { return; }
             
             GamePadInput pad = GamePadInput.GetGamePad0();
             if ((Actions.Raise.WasPressedOrRepeat) || (Actions.Up.WasPressedOrRepeat))
@@ -456,7 +461,7 @@ namespace Boku
 
         private void RenderFeedBasePlate()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             // default width = 300 px
             // default height = 190 px
             // Adjustment Scale X
@@ -573,24 +578,24 @@ namespace Boku
                 if (!expanded)
                 {
                     moreLessPos -= (float)(flagMoreBlob.GetLineWidth(0) / 3);
-                    flagMoreBlob.Justification = UIGridElement.Justification.Center;
+                    flagMoreBlob.Justification = TextHelper.Justification.Center;
                     pos = new Vector2(moreLessPos, moreLessBoxLT.Y + 8);
                     // Clamp to pixel coords so text doesn't look like #$%.
                     pos.X = (int)pos.X;
                     pos.Y = (int)pos.Y;
-                    flagMoreBlob.RenderWithButtons(pos, flagMoreLessColor, maxLines: 1);
+                    flagMoreBlob.RenderText(null, pos, flagMoreLessColor, maxLines: 1);
                     moreLessBoxBR.X += flagMoreBlob.Width*2.5f; //2.5 makes click area larger.
                     moreLessBoxBR.Y += flagMoreBlob.TotalSpacing * 1.85f; //1.85 makes click area larger.
                 }
                 else
                 {
                     moreLessPos -= (float)(flagLessBlob.GetLineWidth(0) / 3);
-                    flagLessBlob.Justification = UIGridElement.Justification.Center;
+                    flagLessBlob.Justification = TextHelper.Justification.Center;
                     pos = new Vector2(moreLessPos, moreLessBoxLT.Y + 8);
                     // Clamp to pixel coords so text doesn't look like #$%.
                     pos.X = (int)pos.X;
                     pos.Y = (int)pos.Y;
-                    flagLessBlob.RenderWithButtons(pos, flagMoreLessColor, maxLines: 1);
+                    flagLessBlob.RenderText(null, pos, flagMoreLessColor, maxLines: 1);
                     moreLessBoxBR.X += (int)flagMoreBlob.Width * 2.5f; //2.5 makes click area larger.
                     moreLessBoxBR.Y += (int)flagMoreBlob.TotalSpacing * 1.85f; //1.85 makes click area larger.
                 }
@@ -608,7 +613,7 @@ namespace Boku
             pos.X = (int)pos.X + 3;
             pos.Y = (int)pos.Y;
 
-            smallblob.RenderWithButtons(pos, Active ? greenTextColor : darkTextColor, maxLines: 1);
+            smallblob.RenderText(null, pos, Active ? greenTextColor : darkTextColor, maxLines: 1);
 
         }
 
@@ -638,53 +643,53 @@ namespace Boku
         {
            // if (Header_bg == null)
            // {
-           //     Header_bg = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\twitter_Icon");                
+           //     Header_bg = KoiLibrary.LoadTexture2D(@"Textures\twitter_Icon");                
            // }
             
             if (cloudTR == null)
             {
-                cloudTR = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudTR");                
+                cloudTR = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudTR");                
             }
             
             if (cloudBR == null)
             {
-                cloudBR = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudBR");                
+                cloudBR = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudBR");                
             }
 
             if (cloudTL == null)
             {
-                cloudTL = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudTL");
+                cloudTL = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudTL");
             }
 
             if (cloudBL == null)
             {
-                cloudBL = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudBL");
+                cloudBL = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudBL");
             }
 
             if (cloudTC == null)
             {
-                cloudTC = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudTC");
+                cloudTC = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudTC");
             }
 
             if (cloudBC == null)
             {
-                cloudBC = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudBC");
+                cloudBC = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudBC");
             }
 
             if (cloudLC == null)
             {
-                cloudLC = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudLC");
+                cloudLC = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudLC");
             }
 
             if (cloudRC == null)
             {
-                cloudRC = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudRC");
+                cloudRC = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudRC");
             }
 
             
             if (cloudCenter == null)
             {
-                cloudCenter = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MainMenu\cloudCenter");
+                cloudCenter = KoiLibrary.LoadTexture2D(@"Textures\MainMenu\cloudCenter");
             }
 
             newsScroller.InitDeviceResources();
@@ -693,16 +698,16 @@ namespace Boku
 
         public void UnloadContent()
         {
-          //  BokuGame.Release(ref Header_bg);
-            BokuGame.Release(ref cloudTR);
-            BokuGame.Release(ref cloudBR);
-            BokuGame.Release(ref cloudTL);
-            BokuGame.Release(ref cloudBL);
-            BokuGame.Release(ref cloudTC);
-            BokuGame.Release(ref cloudBC);
-            BokuGame.Release(ref cloudLC);
-            BokuGame.Release(ref cloudRC);
-            BokuGame.Release(ref cloudCenter);
+          //  DeviceResetX.Release(ref Header_bg);
+            DeviceResetX.Release(ref cloudTR);
+            DeviceResetX.Release(ref cloudBR);
+            DeviceResetX.Release(ref cloudTL);
+            DeviceResetX.Release(ref cloudBL);
+            DeviceResetX.Release(ref cloudTC);
+            DeviceResetX.Release(ref cloudBC);
+            DeviceResetX.Release(ref cloudLC);
+            DeviceResetX.Release(ref cloudRC);
+            DeviceResetX.Release(ref cloudCenter);
             
         }   // end of LiveFeedDisplay UnloadContent()
 

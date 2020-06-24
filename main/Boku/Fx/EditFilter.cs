@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 
 namespace Boku.Fx
@@ -40,7 +42,7 @@ namespace Boku.Fx
         /// <param name="size">The radius in X and Y directions relative to the quad size.</param>
         private void SetUvToPos(Vector2 position, Vector2 size)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             // Remap position from 0,1 range to -1,1.
             position = position * 2.0f - new Vector2(1.0f, 1.0f);
@@ -73,7 +75,7 @@ namespace Boku.Fx
         /// <param name="alpha">Transparency assigned to brush.</param>
         public void Render(Texture2D source, int index, Vector2 position, Vector2 radius, float alpha)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             SetUvToPos(position, radius);
 
@@ -120,7 +122,7 @@ namespace Boku.Fx
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\EditFilter");
+                effect = KoiLibrary.LoadEffect(@"Shaders\EditFilter");
             }
 
             base.LoadContent(immediate);

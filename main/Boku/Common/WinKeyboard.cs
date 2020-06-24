@@ -155,6 +155,10 @@ namespace Boku.Common
         /// <param name="message">Window message sent to the window</param>
         protected override void WndProc(ref Message message)
         {
+            if (message.Msg == 0x0240)
+            {
+            }
+
             base.WndProc(ref message);
 
             switch (message.Msg)
@@ -341,7 +345,7 @@ namespace Boku.Common
                         // normal reading of the mouse scroll wheel.  So, read it here and
                         // pass along the into to MouseInput.
                         short ticks = (short)(message.WParam.ToInt32() >> 16);
-                        MouseInput.ExternalScrollValue += ticks;
+                        //MouseInputOld.ExternalScrollValue += ticks;
                         break;
                     }
 

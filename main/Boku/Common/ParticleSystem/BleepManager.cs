@@ -5,6 +5,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -334,7 +336,7 @@ namespace Boku.Common.ParticleSystem
             {
                 if (numActiveBleeps > 0)
                 {
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                     effect.CurrentTechnique = effect.Techniques[@"BleepPass"];
 
@@ -380,7 +382,7 @@ namespace Boku.Common.ParticleSystem
         {
             if (InGame.inGame.renderEffects == InGame.RenderEffect.Normal)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 int numVerts = numActiveBleeps * 4;
                 int numTris = numActiveBleeps * 2;
@@ -509,19 +511,19 @@ namespace Boku.Common.ParticleSystem
                 start,
                 end,
                 kBleepRadius,
-                _scratchHitInfo))
+                _scratchMouseTouchHitInfo))
             {
-                for (int i = 0; i < _scratchHitInfo.Count; ++i)
+                for (int i = 0; i < _scratchMouseTouchHitInfo.Count; ++i)
                 {
-                    GameActor other = _scratchHitInfo[i].Other;
+                    GameActor other = _scratchMouseTouchHitInfo[i].Other;
                     if (!ExcludedHitThing(shooter, other))
                     {
                         hitThing = other;
-                        hitPoint = _scratchHitInfo[i].Contact;
+                        hitPoint = _scratchMouseTouchHitInfo[i].Contact;
                         break;
                     }
                 }
-                _scratchHitInfo.Clear();
+                _scratchMouseTouchHitInfo.Clear();
             }
 
             if (hitTerrain && (hitThing != null))
@@ -549,7 +551,7 @@ namespace Boku.Common.ParticleSystem
         /// <summary>
         /// Internal scratch list, don't mess with this!!!
         /// </summary>
-        private static List<HitInfo> _scratchHitInfo = new List<HitInfo>();
+        private static List<MouseTouchHitInfo> _scratchMouseTouchHitInfo = new List<MouseTouchHitInfo>();
 
         /// <summary>
         /// Returns true if this thing should be excluded from being hit.
@@ -571,12 +573,12 @@ namespace Boku.Common.ParticleSystem
         {
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\SharedParticle2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\SharedParticle2D");
             }
 
             if (texture == null)
             {
-                texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\ShadowMask");
+                texture = KoiLibrary.LoadTexture2D(@"Textures\ShadowMask");
             }
 
             base.LoadContent(immediate);
@@ -601,9 +603,9 @@ namespace Boku.Common.ParticleSystem
         /// </summary>
         public override void UnloadContent()
         {
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref vbuf);
-            BokuGame.Release(ref texture);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref vbuf);
+            DeviceResetX.Release(ref texture);
 
             base.UnloadContent();
         }   // end of SharedSmokeEmitter UnloadContent()

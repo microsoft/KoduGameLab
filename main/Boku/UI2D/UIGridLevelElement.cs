@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Common.Sharing;
 using Boku.Base;
@@ -195,7 +198,7 @@ namespace Boku.UI2D
         /// <param name="o"></param>
         public void SetOrientation(Orientation o)
         {
-            // If setting explicitely, create a new instance.  This avoids
+            // If setting explicitly, create a new instance.  This avoids
             // having lingering twitches wrongly change the value.
             orientation = new Orientation(o);
             twitchOrientation = new Orientation(orientation);
@@ -244,7 +247,7 @@ namespace Boku.UI2D
         {
             dirty = false;
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             InGame.SetRenderTarget(rt);
             InGame.Clear(Color.Black);
@@ -288,7 +291,7 @@ namespace Boku.UI2D
                     new Vector2(rt.Width, titleSize.Y));
 
                 // Render the title text.
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
                 TextHelper.DrawString(Font, title, new Vector2((rt.Width - titleSize.X) / 2f, kTextPosY), textColor);
                 batch.End();
@@ -469,84 +472,84 @@ namespace Boku.UI2D
             // Init the effect if it's not already done.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the shadow texture.
             if (levelTileShadow == null)
             {
-                levelTileShadow = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\TileShadow");
+                levelTileShadow = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\TileShadow");
             }
 
             if (downloadQueuedIcon == null)
             {
-                downloadQueuedIcon = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\DownloadQueued");
+                downloadQueuedIcon = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\DownloadQueued");
             }
 
             if (downloadInProgressIcon == null)
             {
-                downloadInProgressIcon = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\DownloadInProgress");
+                downloadInProgressIcon = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\DownloadInProgress");
             }
 
             if (downloadCompleteIcon == null)
             {
-                downloadCompleteIcon = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\DownloadComplete");
+                downloadCompleteIcon = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\DownloadComplete");
             }
 
             if (downloadFailedIcon == null)
             {
-                downloadFailedIcon = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\DownloadFailed");
+                downloadFailedIcon = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\DownloadFailed");
             }
 
             if (levelSharedIcon == null)
             {
-                levelSharedIcon = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\SharedLevel");
+                levelSharedIcon = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\SharedLevel");
             }
 
             if (levelSharedAlphaMap == null)
             {
-                levelSharedAlphaMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\SharedLevelAlphaMap");
+                levelSharedAlphaMap = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\SharedLevelAlphaMap");
             }
 
             if (levelTileAlphaMap == null)
             {
-                levelTileAlphaMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\TileAlphaMap");
+                levelTileAlphaMap = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\TileAlphaMap");
             }
 
             if (downloadQueuedAlphaMap == null)
             {
-                downloadQueuedAlphaMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\DownloadQueuedAlphaMap");
+                downloadQueuedAlphaMap = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\DownloadQueuedAlphaMap");
             }
 
             if (downloadCompleteAlphaMap == null)
             {
-                downloadCompleteAlphaMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\DownloadCompleteAlphaMap");
+                downloadCompleteAlphaMap = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\DownloadCompleteAlphaMap");
             }
 
             if (downloadInProgressAlphaMap == null)
             {
-                downloadInProgressAlphaMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\DownloadInProgressAlphaMap");
+                downloadInProgressAlphaMap = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\DownloadInProgressAlphaMap");
             }
 
             if (downloadFailedAlphaMap == null)
             {
-                downloadFailedAlphaMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\DownloadFailedAlphaMap");
+                downloadFailedAlphaMap = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\DownloadFailedAlphaMap");
             }
 
             if (statusIconShadow == null)
             {
-                statusIconShadow = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\StatusIconShadow");
+                statusIconShadow = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\StatusIconShadow");
             }
 
             if (favoriteBox == null)
             {
-                favoriteBox = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\FavoriteBox");
+                favoriteBox = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\FavoriteBox");
             }
 
             if (reportAbuse == null)
             {
-                reportAbuse = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\ReportAbuse");
+                reportAbuse = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\ReportAbuse");
             }
         }
 
@@ -559,25 +562,25 @@ namespace Boku.UI2D
         {
             base.UnloadContent();
 
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref effect);
 
             ReleaseRenderTargets();
 
-            BokuGame.Release(ref downloadQueuedIcon);
-            BokuGame.Release(ref downloadInProgressIcon);
-            BokuGame.Release(ref downloadCompleteIcon);
-            BokuGame.Release(ref downloadFailedIcon);
-            BokuGame.Release(ref levelSharedIcon);
-            BokuGame.Release(ref levelSharedAlphaMap);
-            BokuGame.Release(ref levelTileShadow);
-            BokuGame.Release(ref levelTileAlphaMap);
-            BokuGame.Release(ref downloadCompleteAlphaMap);
-            BokuGame.Release(ref downloadInProgressAlphaMap);
-            BokuGame.Release(ref downloadQueuedAlphaMap);
-            BokuGame.Release(ref downloadFailedAlphaMap);
-            BokuGame.Release(ref statusIconShadow);
-            BokuGame.Release(ref favoriteBox);
-            BokuGame.Release(ref reportAbuse);
+            DeviceResetX.Release(ref downloadQueuedIcon);
+            DeviceResetX.Release(ref downloadInProgressIcon);
+            DeviceResetX.Release(ref downloadCompleteIcon);
+            DeviceResetX.Release(ref downloadFailedIcon);
+            DeviceResetX.Release(ref levelSharedIcon);
+            DeviceResetX.Release(ref levelSharedAlphaMap);
+            DeviceResetX.Release(ref levelTileShadow);
+            DeviceResetX.Release(ref levelTileAlphaMap);
+            DeviceResetX.Release(ref downloadCompleteAlphaMap);
+            DeviceResetX.Release(ref downloadInProgressAlphaMap);
+            DeviceResetX.Release(ref downloadQueuedAlphaMap);
+            DeviceResetX.Release(ref downloadFailedAlphaMap);
+            DeviceResetX.Release(ref statusIconShadow);
+            DeviceResetX.Release(ref favoriteBox);
+            DeviceResetX.Release(ref reportAbuse);
 
         }   // end of UIGridLevelElement UnloadContent()
 
@@ -598,15 +601,15 @@ namespace Boku.UI2D
             int h = (int)(dpi * 2.0f);
 
             rt = new RenderTarget2D(device, w, h, false, SurfaceFormat.Color, DepthFormat.None);
-            InGame.GetRT("UIGridLevelElement", rt);
+            SharedX.GetRT("UIGridLevelElement", rt);
 
             dirty = true;   // Ensure a refresh of the texture.
         }
 
         private void ReleaseRenderTargets()
         {
-            InGame.GetRT("UIGridLevelElement", rt);
-            BokuGame.Release(ref rt);
+            SharedX.GetRT("UIGridLevelElement", rt);
+            DeviceResetX.Release(ref rt);
         }
 
         #endregion

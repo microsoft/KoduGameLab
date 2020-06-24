@@ -28,7 +28,7 @@ namespace Boku.Programming
         }
 
         /// <summary>
-        /// TODO (****)
+        /// TODO (scoy)
         /// Generic add method for actions.  Once all new actions go 
         /// through this, all the other Add* methods should be removed.
         /// </summary>

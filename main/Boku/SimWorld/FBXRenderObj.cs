@@ -6,6 +6,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -61,7 +63,7 @@ namespace Boku.SimWorld
                     if (parent.CurrentState == GameThing.State.Squashed && false)
                     {
                         // Translate down to the ground.
-                        // TODO (****) should probably make this happen smoothly.
+                        // TODO (scoy) should probably make this happen smoothly.
                         float terrainHeight = Boku.SimWorld.Terra.Terrain.GetHeight(parent.Movement.Position);
                         if (terrainHeight > 0)
                         {

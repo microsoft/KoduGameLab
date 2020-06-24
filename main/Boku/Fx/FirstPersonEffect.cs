@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld;
@@ -94,7 +96,7 @@ namespace Boku.Fx
             /// <param name="camera"></param>
             public virtual void Render(Camera camera)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 if (SetupEffect(camera))
                 {
                     for (int i = 0; i < Effect.CurrentTechnique.Passes.Count; ++i)

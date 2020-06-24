@@ -14,6 +14,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 
@@ -283,13 +285,13 @@ namespace Boku.Common.ParticleSystem
         {
             if (effect2d == null)
             {
-                effect2d = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Particle2D");
+                effect2d = KoiLibrary.LoadEffect(@"Shaders\Particle2D");
                 effectCache2d.Load(effect2d);
             }
 
             if (effect3d == null)
             {
-                effect3d = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Particle3D");
+                effect3d = KoiLibrary.LoadEffect(@"Shaders\Particle3D");
                 ShaderGlobals.RegisterEffect("Particel3D", effect3d);
                 effectCache3d.Load(effect3d);
             }
@@ -350,8 +352,8 @@ namespace Boku.Common.ParticleSystem
         public void UnloadContent()
         {
             effectCache2d.UnLoad();
-            BokuGame.Release(ref effect2d);
-            BokuGame.Release(ref effect3d);
+            DeviceResetX.Release(ref effect2d);
+            DeviceResetX.Release(ref effect3d);
 
             SharedEmitterManager.UnloadContent();
 

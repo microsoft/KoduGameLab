@@ -14,6 +14,9 @@ using System.Xml.Linq;
 using System.Net;
 using System.Globalization;
 
+using KoiX;
+using KoiX.Text;
+
 namespace Boku.Common.Localization
 {
     /// <summary>

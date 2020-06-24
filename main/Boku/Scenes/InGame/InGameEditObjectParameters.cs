@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.Common;
@@ -71,7 +74,7 @@ namespace Boku
                     return;
                 }
 
-                // TODO (****) Needed?
+                // TODO (scoy) Needed?
                 // Do the common bits of the Update().
                 UpdateCamera();
                 UpdateWorld();

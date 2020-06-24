@@ -7,6 +7,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 
 namespace Boku.SimWorld.Path
@@ -246,7 +248,7 @@ namespace Boku.SimWorld.Path
             public Color texSelect; // .a selects uv source, vert or horizontal
 
             static VertexDeclaration decl = null;
-            // ***ROAD - eventually want to convert the texcoord Vector2 to HalfVector2,
+            // MAFROAD - eventually want to convert the texcoord Vector2 to HalfVector2,
             //          to get this back down to 32 bytes.
             static VertexElement[] elements = new VertexElement[]
             {
@@ -393,7 +395,7 @@ namespace Boku.SimWorld.Path
             List<Int16> idxOut,
             List<RoadVertex> vtxData)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             UInt32 numIndicesIn = (UInt32)idxIn.Count;
             UInt32 numTrisIn = numIndicesIn / 3; // Hardcoding for IndexElemetnSize.SixteenBits / Int16

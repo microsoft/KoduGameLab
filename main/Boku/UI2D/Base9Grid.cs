@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -151,7 +153,7 @@ namespace Boku.UI2D
         /// </summary>
         public void Render(Effect effect)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             device.Indices = ibuf;
             device.SetVertexBuffer(vbuf);
@@ -307,8 +309,8 @@ namespace Boku.UI2D
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref ibuf);
-            BokuGame.Release(ref vbuf);
+            DeviceResetX.Release(ref ibuf);
+            DeviceResetX.Release(ref vbuf);
         }   // end of Base9Grid UnloadContent()
 
         /// <summary>

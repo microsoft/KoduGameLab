@@ -5,6 +5,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Xml.Serialization;
 
+using KoiX;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -61,7 +63,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (InspectExplosionEmitter.texture == null)
             {
-                InspectExplosionEmitter.texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/InspectFire");
+                InspectExplosionEmitter.texture = KoiLibrary.LoadTexture2D(@"Textures/InspectFire");
             }
         }   // end of ExplosionEmitter LoadContent()
 
@@ -115,7 +117,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (InspectSmokeEmitter.texture == null)
             {
-                InspectSmokeEmitter.texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/InspectSmoke");
+                InspectSmokeEmitter.texture = KoiLibrary.LoadTexture2D(@"Textures/InspectSmoke");
             }
         }   // end of ExplosionEmitter LoadContent()
 

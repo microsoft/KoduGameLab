@@ -1,9 +1,4 @@
 ﻿
-/// Define MF_PITCH_OR_YAW for a mode that lets the user be affecting
-/// pitch OR yaw, but not both at a time. The mode is determined when
-/// the right button is down and the mouse moves. 
-// #define MF_PITCH_OR_YAW 
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,6 +6,9 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+
+using KoiX;
+using KoiX.Input;
 
 using Boku.Base;
 using Boku.Common;
@@ -23,215 +21,48 @@ namespace Boku
 {
     /// <summary>
     /// This section of InGame deals with the mouse control of the camera
-    /// and picking objects.
+    /// and picking objects.  Note that this is also used to support the
+    /// MouseSensor in RunSim mode.
     /// </summary>
     public class MouseEdit
     {
-        #region Child Classes
-        /// <summary>
-        /// Overblown struct for holding the global information on what objects the mouse
-        /// is over.
-        /// </summary>
-        public class MouseHitInfo
-        {
-            #region Members
-            /// <summary>
-            /// Actor under mouse.
-            /// </summary>
-            private GameActor actorHit = null;
-            /// <summary>
-            /// LOS ray hit on actorHit's collision bounds.
-            /// </summary>
-            private Vector3 actorPosition = Vector3.Zero;
-
-            /// <summary>
-            /// Position of hit with terrain.
-            /// </summary>
-            private Vector3 terrainPosition = Vector3.Zero;
-            /// <summary>
-            /// Whether terrain is under mouse.
-            /// </summary>
-            private bool terrainHit = false;
-            /// <summary>
-            /// True if no terrain under mouse, but ray hits zero plane.
-            /// </summary>
-            private bool zeroPlaneHit = false;
-
-            /// <summary>
-            /// The material on the terrain where the mouse LOS hits. Undefined if !terrainHit.
-            /// </summary>
-            private ushort terrainMaterial = 0;
-
-            /// <summary>
-            /// If we're dragging around this bot via it's anchor this
-            /// will be the vertical offset from the anchor to the bot.
-            /// </summary>
-            private float verticalOffset = 0.0f;
-
-            #endregion Members
-
-            #region Accessors
-
-            /// <summary>
-            /// Is there an unoccluded actor under the mouse?
-            /// </summary>
-            public bool HaveActor
-            {
-                get { return actorHit != null; }
-            }
-
-            /// <summary>
-            /// Return any unoccluded actor under the mouse. Must be
-            /// closer than any other other actor under mouse, and closer than terrain.
-            /// </summary>
-            public GameActor ActorHit
-            {
-                get { return actorHit; }
-                internal set { actorHit = value; }
-            }
-
-            /// <summary>
-            /// Where the mouse LOS ray hits the ActorHit's collision hull. For
-            /// mobile bots, that's a sphere, for other bots (e.g. factory) it's 
-            /// a set of collision primitives. Undefined if !HaveActor.
-            /// </summary>
-            public Vector3 ActorPosition
-            {
-                get 
-                {
-                    Vector3 pos = actorPosition;
-
-                    /*
-                    // Not needed here.  Want to snap the actor's position, not the position of the ray intersect.
-                    if (InGame.inGame.SnapToGrid)
-                    {
-                        // Snap the Actor's position to the center of a terrain cube.
-                        pos = InGame.inGame.SnapPosition(pos);
-                    }
-                    */
-
-                    return pos;
-                }
-                internal set { actorPosition = value; }
-            }
-
-            /// <summary>
-            /// Whether current mouse LOS ray hits the terrain
-            /// </summary>
-            public bool TerrainHit
-            {
-                get { return terrainHit; }
-                internal set { terrainHit = value; }
-            }
-
-            /// <summary>
-            /// True if current mouse LOS hits no terrain, but does cross the 
-            /// zero height plane.
-            /// </summary>
-            public bool ZeroPlaneHit
-            {
-                get { return zeroPlaneHit; }
-                internal set { zeroPlaneHit = value; }
-            }
-
-            /// <summary>
-            /// Where the ray hits terrain (or zero plane, check flags).
-            /// </summary>
-            public Vector3 TerrainPosition
-            {
-                get 
-                {
-                    Vector3 pos = terrainPosition;
-
-                    if (InGame.inGame.SnapToGrid)
-                    {
-                        // Snap the position of the hit to the center of the terrain cube.
-                        pos = InGame.SnapPosition(pos);
-                    }
-
-                    return pos; 
-                }
-                internal set { terrainPosition = value; }
-            }
-
-            /// <summary>
-            /// What terrain material is under the mouse. Undefined if !TerrainHit.
-            /// </summary>
-            public ushort TerrainMaterial
-            {
-                get { return terrainMaterial; }
-                internal set { terrainMaterial = value; }
-            }
-
-            /// <summary>
-            /// If we're dragging around this bot via it's anchor this
-            /// will be the vertical offset from the anchor to the bot.
-            /// </summary>
-            public float VerticalOffset
-            {
-                get { return verticalOffset; }
-                set { verticalOffset = value; }
-            }
-
-            #endregion Accessors
-
-            #region Public
-            #endregion Public
-
-            #region Internal
-            /// <summary>
-            /// Reset before doing another test.
-            /// </summary>
-            internal void Clear()
-            {
-                actorHit = null;
-                actorPosition = Vector3.Zero;
-                terrainHit = false;
-                terrainPosition = Vector3.Zero;
-            }
-            #endregion Internal
-        };
-
-        #endregion Child Classes
-
         #region Members
-        private InGame owner = null;
+     
+        InGame owner = null;
 
-        private enum OrbitMode
+        enum OrbitMode
         {
             Pitch,
             Yaw,
             None
         };
-        private OrbitMode orbitMode;
 
+        // Why do we care about Normalized Device Coordinates?
         Vector4 pixelToNDC;
         Vector4 ndcToPixel;
         Vector2 cursorOffset;
         Vector2 resolution;
 
-        private GameActor quasiSelected = null;
-        private Distortion quasiHighlight = null;
+        GameActor quasiSelected = null;
+        Distortion quasiHighlight = null;
 
-        private Vector2 clickPosition;
+        float clickTime = 0.0f;
+        float moveTime = 0.0f;
+        Vector2 moveFrom = Vector2.Zero;
+        Vector2 moveTo = Vector2.Zero;
+        float kDoubleClickTimeOut = 0.25f;
 
-        private float clickTime = 0.0f;
-        private float moveTime = 0.0f;
-        private Vector2 moveFrom = Vector2.Zero;
-        private Vector2 moveTo = Vector2.Zero;
-        private float kDoubleClickTimeOut = 0.25f;
+        GameActor dragObject = null;
+        Distortion dragHighlight = null;
+        bool dragSelected = false;
 
-        private GameActor dragObject = null;
-        private Distortion dragHighlight = null;
-        private bool dragSelected = false;
+        static bool disableLeftDrag = false;
+        static bool disableRightOrbit = false;
 
-        private static bool disableLeftDrag = false;
-        private static bool disableRightOrbit = false;
+        static float kMoveTotalTime = 0.15f;
+        static float kMaxRayCast = 500.0f;
 
-        private static float kMoveTotalTime = 0.15f;
-        private static float kMaxRayCast = 500.0f;
-
-        private static MouseHitInfo mouseHitInfo = new MouseHitInfo();
+        static HitInfo mouseTouchHitInfo = new HitInfo();
         #endregion Members
 
         #region Accessors
@@ -240,9 +71,9 @@ namespace Boku
         /// This frame's cached info on what the mouse is over. Pretty much read only,
         /// maintained internally.
         /// </summary>
-        public static MouseHitInfo HitInfo
+        public static HitInfo MouseTouchHitInfo
         {
-            get { return mouseHitInfo; }
+            get { return mouseTouchHitInfo; }
         }
 
         public GameActor HighLit
@@ -258,8 +89,8 @@ namespace Boku
         {
             get
             {
-                return MouseInput.Left.IsPressed && KeyboardInput.CtrlIsPressed
-                    ? (KeyboardInput.ShiftIsPressed ? 1.0f : 0.25f)
+                return LowLevelMouseInput.Left.IsPressed && KeyboardInputX.CtrlIsPressed
+                    ? (KeyboardInputX.ShiftIsPressed ? 1.0f : 0.25f)
                     : 0.0f;
             }
         }
@@ -272,8 +103,8 @@ namespace Boku
         {
             get
             {
-                return MouseInput.Left.IsPressed && KeyboardInput.IsPressed(Keys.Space)
-                    ? (KeyboardInput.ShiftIsPressed ? 1.0f : 0.25f)
+                return LowLevelMouseInput.Left.IsPressed && KeyboardInputX.IsPressed(Keys.Space)
+                    ? (KeyboardInputX.ShiftIsPressed ? 1.0f : 0.25f)
                     : 0.0f; 
             }
         }
@@ -286,8 +117,8 @@ namespace Boku
         {
             get
             {
-                return MouseInput.Left.IsPressed && KeyboardInput.AltIsPressed
-                    ? (KeyboardInput.ShiftIsPressed ? 0.5f : 0.25f)
+                return LowLevelMouseInput.Left.IsPressed && KeyboardInputX.AltIsPressed
+                    ? (KeyboardInputX.ShiftIsPressed ? 0.5f : 0.25f)
                     : 0.0f;
             }
         }
@@ -297,7 +128,7 @@ namespace Boku
         /// </summary>
         public bool LeftAction
         {
-            get { return MouseInput.Left.WasPressed && KeyboardInput.CtrlIsPressed; }
+            get { return LowLevelMouseInput.Left.WasPressed && KeyboardInputX.CtrlIsPressed; }
         }
 
         /// <summary>
@@ -305,7 +136,7 @@ namespace Boku
         /// </summary>
         public bool MiddleAction
         {
-            get { return MouseInput.Left.WasPressed && KeyboardInput.AltIsPressed; }
+            get { return LowLevelMouseInput.Left.WasPressed && KeyboardInputX.AltIsPressed; }
         }
 
         /// <summary>
@@ -313,7 +144,7 @@ namespace Boku
         /// </summary>
         public bool RightAction
         {
-            get { return MouseInput.Left.WasPressed && KeyboardInput.IsPressed(Keys.Space); }
+            get { return LowLevelMouseInput.Left.WasPressed && KeyboardInputX.IsPressed(Keys.Space); }
         }
 
         /// <summary>
@@ -331,7 +162,7 @@ namespace Boku
         /// </summary>
         public bool StartDrag
         {
-            get { return MouseInput.Left.WasPressed && !KeyboardInput.ShiftIsPressed; }
+            get { return LowLevelMouseInput.Left.WasPressed && !KeyboardInputX.ShiftIsPressed; }
         }
 
         /// <summary>
@@ -340,7 +171,7 @@ namespace Boku
         /// </summary>
         public bool StartRaise
         {
-            get { return MouseInput.Left.WasPressed && KeyboardInput.ShiftIsPressed; }
+            get { return LowLevelMouseInput.Left.WasPressed && KeyboardInputX.ShiftIsPressed; }
         }
 
         /// <summary>
@@ -349,7 +180,7 @@ namespace Boku
         /// </summary>
         public bool StartRotate
         {
-            get { return MouseInput.Right.WasPressed && KeyboardInput.ShiftIsPressed; }
+            get { return LowLevelMouseInput.Right.WasPressed && KeyboardInputX.ShiftIsPressed; }
         }
 
         /// <summary>
@@ -365,7 +196,7 @@ namespace Boku
         /// </summary>
         public bool ContinueDrag
         {
-            get { return MouseInput.Left.IsPressed && !KeyboardInput.ShiftIsPressed; }
+            get { return LowLevelMouseInput.Left.IsPressed && !KeyboardInputX.ShiftIsPressed; }
         }
 
         /// <summary>
@@ -373,7 +204,7 @@ namespace Boku
         /// </summary>
         public bool ContinueRaise
         {
-            get { return MouseInput.Left.IsPressed && KeyboardInput.ShiftIsPressed; }
+            get { return LowLevelMouseInput.Left.IsPressed && KeyboardInputX.ShiftIsPressed; }
         }
 
         /// <summary>
@@ -381,14 +212,14 @@ namespace Boku
         /// </summary>
         public bool ContinueRotate
         {
-            get { return MouseInput.Right.IsPressed && KeyboardInput.ShiftIsPressed; }
+            get { return LowLevelMouseInput.Right.IsPressed && KeyboardInputX.ShiftIsPressed; }
         }
 
         #region Internal
         /// <summary>
         /// Are we currently dragging an object?
         /// </summary>
-        private bool DraggingObject
+        bool DraggingObject
         {
             get { return dragHighlight != null; }
         }
@@ -415,7 +246,7 @@ namespace Boku
         public string UpdateHelpOverlay()
         {
             string helpID = null;
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+            if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
             {
                 if (quasiSelected == null)
                 {
@@ -452,7 +283,6 @@ namespace Boku
             quasiSelected = null;
             clickTime = 0;
             moveTime = 0;
-            orbitMode = OrbitMode.None;
 
             EndDrag();
         }
@@ -464,17 +294,6 @@ namespace Boku
         public void DoCamera(SmoothCamera camera)
         {
             CacheTransforms(camera);
-#if MF_PITCH_OR_YAW
-            if (CheckOrbitMode())
-            {
-                Orbit(camera);
-            }
-#else // MF_PITCH_OR_YAW
-            //if (AffectingOrbit)
-            {
-                PitchAndYaw(camera);
-            }
-#endif // MF_PITCH_OR_YAW
             disableRightOrbit = false;
         }
 
@@ -484,14 +303,7 @@ namespace Boku
         /// <param name="camera"></param>
         public void DoZoom(SmoothCamera camera)
         {
-            // Don't zoom if the AddItem pie menu or pickers are active.
-            if (InGame.inGame.editObjectUpdateObj.newItemSelectorShim.State == Boku.UI.UIShim.States.Active 
-                || InGame.inGame.mouseEditUpdateObj.PickersActive)
-            {
-                return;
-            }
-
-            int scrollChange = MouseInput.ScrollWheel - MouseInput.PrevScrollWheel;
+            int scrollChange = LowLevelMouseInput.DeltaScrollWheel;
 
             float scrollRate = 0.2f;
 
@@ -506,7 +318,7 @@ namespace Boku
             //  else center at origin.
             //  Adjust zoom to reasonable value.
             //  Adjust camera height to reasonable angle.
-            if (KeyboardInput.WasPressed(Keys.F4))
+            if (KeyboardInputX.WasPressed(Keys.F4))
             {
                 // Find nearest actor position.
                 Vector3 nearestPosition = Vector3.Zero;
@@ -538,11 +350,11 @@ namespace Boku
             }
             else if (scrollChange > 0 || Actions.ZoomIn.IsPressed)
             {
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     // Calc where the mouse is aiming and move the cursor towards there.  
                     // The camera will follow.
-                    Vector3 mouseAimPosition = FindHit(camera, MouseInput.Position);
+                    Vector3 mouseAimPosition = FindHit(camera, LowLevelMouseInput.Position);
                     InGame.inGame.shared.CursorPosition = MyMath.Lerp(camera.ActualAt, mouseAimPosition, 1.5f * scrollRate);
                 }
 
@@ -557,39 +369,11 @@ namespace Boku
         }
 
         /// <summary>
-        /// Handle any cursor movement (translation) from mouse control.
-        /// </summary>
-        /// <param name="camera"></param>
-        /// <param name="position"></param>
-        /// <returns></returns>
-        public Vector2 DoCursor(Camera camera, Vector2 position)
-        {
-            //bool affectingDrag = AffectingDrag && (moveTime <= 0);
-            bool affectingDrag = moveTime <= 0;
-            owner.Cursor3D.Hidden = affectingDrag;
-
-            CheckReCenter(camera);
-
-            if (DraggingObject)
-            {
-                DragObject(camera);
-            }
-            else if (affectingDrag)
-            {
-                position = Drag(camera, position);
-            }
-            position = CheckMoveTo(position);
-
-            disableLeftDrag = false;
-            return position;
-        }
-
-        /// <summary>
         /// Handle object edit controls via mouse.
         /// </summary>
-        public void DoObject(Camera camera)
+        public void SetFocusActorGlow(Camera camera)
         {
-            ChangeQuasi(mouseHitInfo.ActorHit);
+            ChangeQuasi(mouseTouchHitInfo.ActorHit);
             CheckQuasi(false);
             CheckDragObject();
 
@@ -622,12 +406,24 @@ namespace Boku
         /// <summary>
         /// Cache away info about what object and/or terrain are
         /// currently under the mouse.
+        /// Note this is only being called here, via Update, for
+        /// RunSim mode.  We can probably re-think that also.  It may
+        /// make more sense to not do this every frame and only call
+        /// it when an input tile needs the info.
+        /// 
+        /// Actually this is also being called by InGame.UpdateObjects()
+        /// which is called both during edit and runsim modes.
         /// </summary>
         /// <param name="camera"></param>
         public static void Update(Camera camera)
         {
+            UpdateHitInfo(camera, LowLevelMouseInput.PositionVec);
+        }   // end of Update()
+
+        public static void UpdateHitInfo(Camera camera, Vector2 position)
+        {
             Vector3 src = camera.ActualFrom;
-            Vector2 position = MouseInput.PositionVec;
+            //Vector2 position = LowLevelMouseInput.PositionVec;
             Vector3 ray = FindRay(camera, position);
             Vector3 dst = src + ray * 100;
 
@@ -635,12 +431,12 @@ namespace Boku
             if (InGame.inGame.mouseEditUpdateObj.ToolBox.EditObjectsToolInstance.DraggingObject)
             {
                 // Nothing to do here.  If we're dragging an object with the mouse then by definition
-                // it is under the mouse pointer and needs to stay there.  So, don't clear mouseHitInfo
+                // it is under the mouse pointer and needs to stay there.  So, don't clear mouseMouseTouchHitInfo
                 // or even bother testing the other objects.
             }
             else
             {
-                mouseHitInfo.Clear();
+                mouseTouchHitInfo.Clear();
 
                 float distToNearestHit = float.MaxValue;
 
@@ -665,8 +461,8 @@ namespace Boku
                                     if (collInfo.DistSq < distToNearestHit * distToNearestHit)
                                     {
                                         distToNearestHit = (float)Math.Sqrt(collInfo.DistSq);
-                                        mouseHitInfo.ActorHit = ga;
-                                        mouseHitInfo.ActorPosition = collInfo.Contact + offset;
+                                        mouseTouchHitInfo.ActorHit = ga;
+                                        mouseTouchHitInfo.ActorPosition = collInfo.Contact + offset;
 
                                         // Update dst so we don't bother testing actors further
                                         // away than this.
@@ -677,17 +473,6 @@ namespace Boku
                         }   // end if there are any collision prims.
                     }   // end loop over gamethings.
                 }
-
-                /*
-                if (CollSys.TestBest(src, dst, 0.25f, _scratchHits))
-                {
-                    Debug.Assert(_scratchHits.Count > 0, "TestBest returned true but hit list empty.");
-                    mouseHitInfo.ActorHit = _scratchHits[0].Other as GameActor;
-                    Debug.Assert(mouseHitInfo.ActorHit != null, "Non-game actor returned in hit list.");
-                    mouseHitInfo.ActorPosition = _scratchHits[0].Contact;
-                }
-                _scratchHits.Clear();
-                */
 
                 // The collision system ignores creatables and ghosts so we have to work with them here.
                 // Since we now also want to work with anchors we completely skip the above collision system
@@ -723,23 +508,23 @@ namespace Boku
                                 if (radius < collisionRadius)
                                 {
                                     float distToCreatable = (nearestPoint - src).Length();
-                                    mouseHitInfo.VerticalOffset = 0.0f;
+                                    mouseTouchHitInfo.VerticalOffset = 0.0f;
 
-                                    if (mouseHitInfo.ActorHit == null)
+                                    if (mouseTouchHitInfo.ActorHit == null)
                                     {
                                         // No previous hit, so just fill in the result.
-                                        mouseHitInfo.ActorHit = ga;
-                                        mouseHitInfo.ActorPosition = src + ray * distToCreatable;
+                                        mouseTouchHitInfo.ActorHit = ga;
+                                        mouseTouchHitInfo.ActorPosition = src + ray * distToCreatable;
                                     }
                                     else
                                     {
                                         // Compare dist with existing hit.
-                                        float distToExisting = (mouseHitInfo.ActorPosition - src).Length();
+                                        float distToExisting = (mouseTouchHitInfo.ActorPosition - src).Length();
                                         if (distToCreatable < distToExisting)
                                         {
                                             // New one is closer, so replace previous.
-                                            mouseHitInfo.ActorHit = ga;
-                                            mouseHitInfo.ActorPosition = src + ray * distToCreatable;
+                                            mouseTouchHitInfo.ActorHit = ga;
+                                            mouseTouchHitInfo.ActorPosition = src + ray * distToCreatable;
                                         }
                                     }
                                 }
@@ -747,7 +532,7 @@ namespace Boku
 
                             // If in key/mouse mode also allow picking bots by selecting their anchor points.
                             // This is the point directly under the bot at terrain level (or atltitude == 0).
-                            if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                            if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                             {
                                 // Hit test the ray against a sphere at the bot's position moved to ground level.
                                 // For all bots, use the save hit radius.
@@ -763,23 +548,23 @@ namespace Boku
                                 if (radius < 0.5f)
                                 {
                                     float distToCreatable = (nearestPoint - src).Length();
-                                    mouseHitInfo.VerticalOffset = verticalOffset;
+                                    mouseTouchHitInfo.VerticalOffset = verticalOffset;
 
-                                    if (mouseHitInfo.ActorHit == null)
+                                    if (mouseTouchHitInfo.ActorHit == null)
                                     {
                                         // No previous hit, so just fill in the result.
-                                        mouseHitInfo.ActorHit = ga;
-                                        mouseHitInfo.ActorPosition = src + ray * distToCreatable;
+                                        mouseTouchHitInfo.ActorHit = ga;
+                                        mouseTouchHitInfo.ActorPosition = src + ray * distToCreatable;
                                     }
                                     else
                                     {
                                         // Compare dist with existing hit.
-                                        float distToExisting = (mouseHitInfo.ActorPosition - src).Length();
+                                        float distToExisting = (mouseTouchHitInfo.ActorPosition - src).Length();
                                         if (distToCreatable < distToExisting)
                                         {
                                             // New one is closer, so replace previous.
-                                            mouseHitInfo.ActorHit = ga;
-                                            mouseHitInfo.ActorPosition = src + ray * distToCreatable;
+                                            mouseTouchHitInfo.ActorHit = ga;
+                                            mouseTouchHitInfo.ActorPosition = src + ray * distToCreatable;
                                         }
                                     }
                                 }
@@ -793,26 +578,26 @@ namespace Boku
             Vector3 hitPoint = dst;
             if (Terrain.LOSCheckTerrainAndPath(src, dst, ref hitPoint))
             {
-                mouseHitInfo.TerrainHit = hitPoint.Z > Terrain.Current.MinHeight * 0.5f;
-                mouseHitInfo.TerrainPosition = hitPoint;
-                mouseHitInfo.TerrainMaterial = Terrain.GetMaterialType(new Vector2(hitPoint.X, hitPoint.Y));
+                mouseTouchHitInfo.TerrainHit = hitPoint.Z > Terrain.Current.MinHeight * 0.5f;
+                mouseTouchHitInfo.TerrainPosition = hitPoint;
+                mouseTouchHitInfo.TerrainMaterial = Terrain.GetMaterialType(new Vector2(hitPoint.X, hitPoint.Y));
 
                 // If we don't have a valid material where we hit, then don't count it as a hit.
                 // The underlying problem here seems to be that when a material is erased that
                 // the matching heightmap entry is not set back to 0.
-                if (mouseHitInfo.TerrainMaterial == TerrainMaterial.EmptyMatIdx)
+                if (mouseTouchHitInfo.TerrainMaterial == TerrainMaterial.EmptyMatIdx)
                 {
-                    mouseHitInfo.TerrainHit = false;
+                    mouseTouchHitInfo.TerrainHit = false;
                 }
 
-                /// If we have an actor detected under the cursor, see if it was
-                /// occluded by terrain.
-                if (mouseHitInfo.HaveActor)
+                // If we have an actor detected under the cursor, see if it was
+                // occluded by terrain.
+                if (mouseTouchHitInfo.HaveActor)
                 {
-                    if (Vector3.DistanceSquared(src, mouseHitInfo.TerrainPosition)
-                        < Vector3.DistanceSquared(src, mouseHitInfo.ActorPosition))
+                    if (Vector3.DistanceSquared(src, mouseTouchHitInfo.TerrainPosition)
+                        < Vector3.DistanceSquared(src, mouseTouchHitInfo.ActorPosition))
                     {
-                        mouseHitInfo.ActorHit = null;
+                        mouseTouchHitInfo.ActorHit = null;
                     }
                 }
             }
@@ -821,25 +606,30 @@ namespace Boku
                 //Debug.Assert(src.Z > 0, "Assuming camera is always above zero plane.");
                 if (ray.Z < 0)
                 {
-                    mouseHitInfo.TerrainPosition = FindAtHeight(camera, MouseInput.Position, 0);
-                    if (Vector3.DistanceSquared(mouseHitInfo.TerrainPosition, src)
+                    mouseTouchHitInfo.TerrainPosition = FindAtHeight(camera, LowLevelMouseInput.Position, 0);
+                    if (Vector3.DistanceSquared(mouseTouchHitInfo.TerrainPosition, src)
                         <= kMaxRayCast * kMaxRayCast)
                     {
-                        mouseHitInfo.ZeroPlaneHit = true;
+                        mouseTouchHitInfo.ZeroPlaneHit = true;
                     }
                 }
             }
-            if (mouseHitInfo.HaveActor && (InGame.WayPointEdit.MouseOverDistance < float.MaxValue))
+
+            // If we think we are over an actor, we also need to check paths.  If
+            // there's a path under the cursor that's closer to us than the actor,
+            // remvoe the actor from the HitInfo.
+            if (mouseTouchHitInfo.HaveActor && (InGame.WayPointEdit.MouseOverDistance < float.MaxValue))
             {
                 float wayDist = InGame.WayPointEdit.MouseOverDistance;
-                float actorDistSq = Vector3.DistanceSquared(src, mouseHitInfo.ActorPosition);
+                float actorDistSq = Vector3.DistanceSquared(src, mouseTouchHitInfo.ActorPosition);
 
                 if (actorDistSq > wayDist * wayDist)
                 {
-                    mouseHitInfo.ActorHit = null;
+                    mouseTouchHitInfo.ActorHit = null;
                 }
             }
-        }
+
+        }   // end of UpdateHitInfo()
 
         /// <summary>
         /// Test whether the mouse is over a sphere at worldPos.
@@ -850,7 +640,7 @@ namespace Boku
         /// <returns></returns>
         public static bool MouseOver(Camera camera, Vector3 worldPos, float radius)
         {
-            Vector3 ray = FindRay(camera, new Vector2(MouseInput.Position.X, MouseInput.Position.Y));
+            Vector3 ray = FindRay(camera, new Vector2(LowLevelMouseInput.Position.X, LowLevelMouseInput.Position.Y));
 
             Vector3 world = worldPos - camera.ActualFrom;
             Vector3 proj = world - Vector3.Dot(world, ray) * ray;
@@ -863,7 +653,7 @@ namespace Boku
         /// </summary>
         public Vector2 DoTerrain(Camera camera)
         {
-            Vector3 hit = FindHit(camera, MouseInput.Position);
+            Vector3 hit = FindHit(camera, LowLevelMouseInput.Position);
 
             // Limit hit distance to n units from camera.  This
             // stops painting of far away terrain when camera is
@@ -889,9 +679,9 @@ namespace Boku
         /// <returns></returns>
         public static bool TriggerSample()
         {
-            return !HitInfo.HaveActor
-                && HitInfo.TerrainHit
-                && MouseInput.Left.WasPressed;
+            return !MouseTouchHitInfo.HaveActor
+                && MouseTouchHitInfo.TerrainHit
+                && LowLevelMouseInput.Left.WasPressed;
         }
         #endregion Public
 
@@ -902,14 +692,14 @@ namespace Boku
         /// and perform them if requested.
         /// </summary>
         /// <param name="camera"></param>
-        private void CheckCloneDelete(Camera camera)
+        void CheckCloneDelete(Camera camera)
         {
             if (quasiSelected != null)
             {
                 if (RightAction)
                 {
-                    MouseInput.Left.IgnoreUntilReleased = true;
-                    owner.ActivateNewItemSelector(quasiSelected.Movement.Position, true);
+                    LowLevelMouseInput.Left.IgnoreUntilReleased = true;
+                    //owner.ActivateNewItemSelector(quasiSelected.Movement.Position, true);
                 }
                 else if (LeftAction)
                 {
@@ -925,20 +715,20 @@ namespace Boku
             }
             else
             {
-                if (mouseHitInfo.TerrainHit || mouseHitInfo.ZeroPlaneHit)
+                if (mouseTouchHitInfo.TerrainHit || mouseTouchHitInfo.ZeroPlaneHit)
                 {
-                    float terrDistSq = Vector3.DistanceSquared(camera.ActualFrom, mouseHitInfo.TerrainPosition);
+                    float terrDistSq = Vector3.DistanceSquared(camera.ActualFrom, mouseTouchHitInfo.TerrainPosition);
                     float wayDist = InGame.WayPointEdit.MouseOverDistance;
                     if (terrDistSq < wayDist * wayDist)
                     {
                         if (RightAction)
                         {
-                            MouseInput.Left.IgnoreUntilReleased = true;
-                            owner.ActivateNewItemSelector(mouseHitInfo.TerrainPosition, true);
+                            LowLevelMouseInput.Left.IgnoreUntilReleased = true;
+                            //owner.ActivateNewItemSelector(mouseTouchHitInfo.TerrainPosition, true);
                         }
                         else if (MiddleAction)
                         {
-                            Vector3 pos = FindHit(camera, MouseInput.Position);
+                            Vector3 pos = FindHit(camera, LowLevelMouseInput.Position);
                             owner.PasteAction(null, pos);
                         }
                     }
@@ -949,25 +739,25 @@ namespace Boku
         /// <summary>
         /// Internal scratch list for LOS hits. Don't use this except within single function.
         /// </summary>
-        private static List<HitInfo> _scratchHits = new List<HitInfo>();
+        static List<MouseTouchHitInfo> _scratchHits = new List<MouseTouchHitInfo>();
 
         /// <summary>
         /// See if we've clicked something that should become selected.
         /// </summary>
         /// <param name="camera"></param>
-        private void CheckReCenter(Camera camera)
+        void CheckReCenter(Camera camera)
         {
-            GameActor focus = HitInfo.ActorHit;
+            GameActor focus = MouseTouchHitInfo.ActorHit;
             if (focus == null)
             {
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
                     if (clickTime > 0)
                     {
                         /// We've double clicked on terrain. Let's recenter there.
-                        if (HitInfo.TerrainHit || HitInfo.ZeroPlaneHit)
+                        if (MouseTouchHitInfo.TerrainHit || MouseTouchHitInfo.ZeroPlaneHit)
                         {
-                            ReCenter(HitInfo.TerrainPosition);
+                            ReCenter(MouseTouchHitInfo.TerrainPosition);
                         }
                     }
                     clickTime = kDoubleClickTimeOut;
@@ -976,7 +766,7 @@ namespace Boku
             else
             {
                 /// We're moused over something, check for click actions.
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
                     if (clickTime > 0)
                     {
@@ -993,7 +783,7 @@ namespace Boku
         /// Begin recentering to the new position.
         /// </summary>
         /// <param name="pos"></param>
-        private void ReCenter(Vector2 pos)
+        void ReCenter(Vector2 pos)
         {
             moveTo = pos;
             moveFrom = owner.Cursor3D.Position2d;
@@ -1004,7 +794,7 @@ namespace Boku
         /// ReCenter the world to the new position.
         /// </summary>
         /// <param name="pos"></param>
-        private void ReCenter(Vector3 pos)
+        void ReCenter(Vector3 pos)
         {
             ReCenter(new Vector2(pos.X, pos.Y));
         }
@@ -1013,16 +803,15 @@ namespace Boku
         /// Is the mouse currently moving?
         /// </summary>
         /// <returns></returns>
-        private bool MouseMoving()
+        bool MouseMoving()
         {
-            return (MouseInput.Position.X != MouseInput.PrevPosition.X)
-                || (MouseInput.Position.Y != MouseInput.PrevPosition.Y);
+            return LowLevelMouseInput.DeltaPosition != Point.Zero;
         }
 
         /// <summary>
         /// Drag or release object based on mouse left click.
         /// </summary>
-        private void CheckDragObject()
+        void CheckDragObject()
         {
             if (StartMove)
             {
@@ -1053,7 +842,7 @@ namespace Boku
         /// <summary>
         /// Terminate the visual drag effect.
         /// </summary>
-        private void EndDrag()
+        void EndDrag()
         {            
             if (dragObject != null)
             {
@@ -1072,7 +861,7 @@ namespace Boku
         /// </summary>
         /// <param name="move"></param>
         /// <returns></returns>
-        private Vector2 CheckMoveTo(Vector2 move)
+        Vector2 CheckMoveTo(Vector2 move)
         {
             if (moveTime > 0)
             {
@@ -1091,7 +880,7 @@ namespace Boku
         /// Kill the highlight for the quasi selected object (yellow) if
         /// we're no longer moused over it.
         /// </summary>
-        private void CheckQuasi(bool forceKill)
+        void CheckQuasi(bool forceKill)
         {
             if (quasiSelected == null || forceKill)
             {
@@ -1114,7 +903,7 @@ namespace Boku
         /// <summary>
         /// Generate the mouse over visual highlight.
         /// </summary>
-        private void MakeQuasiHighlight()
+        void MakeQuasiHighlight()
         {
             if ((quasiSelected != null)) // && !owner.IsSelected(quasiSelected))
             {
@@ -1128,7 +917,7 @@ namespace Boku
         /// Create a yellow highlight for the mouse-over'd object.
         /// </summary>
         /// <param name="actor"></param>
-        private void ChangeQuasi(GameActor actor)
+        void ChangeQuasi(GameActor actor)
         {
             if (!DraggingObject)
             {
@@ -1144,7 +933,7 @@ namespace Boku
         /// <summary>
         /// Kill the mouse-over highlight (yellow).
         /// </summary>
-        private void EndQuasi()
+        void EndQuasi()
         {
             if (quasiHighlight != null)
             {
@@ -1153,291 +942,6 @@ namespace Boku
             }
         }
 
-        /// <summary>
-        /// Rotate the camera by user mouse grab.
-        /// </summary>
-        /// <param name="camera"></param>
-        private void Orbit(SmoothCamera camera)
-        {
-            /// Either pitch or yaw according to current mode.
-            /// 
-            if (orbitMode == OrbitMode.Pitch)
-            {
-                Pitch(camera);
-            }
-            else
-            {
-                Yaw(camera);
-            }
-        }
-
-        /// <summary>
-        /// Decide whether user is controlling yaw or pitch.
-        /// </summary>
-        /// <returns></returns>
-        private bool CheckOrbitMode()
-        {
-            if (MouseInput.Right.WasPressed)
-            {
-                clickPosition = PixelToNDC(MouseInput.Position) - cursorOffset;
-            }
-            if (MouseInput.Right.IsPressed)
-            {
-                if (orbitMode == OrbitMode.None)
-                {
-                    Vector2 pos = PixelToNDC(MouseInput.Position) - cursorOffset;
-
-                    Vector2 prev = clickPosition;
-
-                    Vector2 move = pos - prev;
-                    float kMinPixelMove = 5.0f / 768.0f;
-                    if (move.Length() > kMinPixelMove)
-                    {
-                        if (prev == Vector2.Zero)
-                        {
-                            orbitMode = OrbitMode.Pitch;
-                        }
-                        else
-                        {
-                            move.Normalize();
-                            prev.Normalize();
-
-                            float yawStrength = Math.Abs(move.X * prev.Y - move.Y * prev.X);
-                            float pitchStrength = Math.Abs(move.Y);
-
-                            Vector2 deadzone = DeadZone(MouseInput.PrevPosition);
-
-                            if (pitchStrength * deadzone.Y > yawStrength * deadzone.X)
-                            {
-                                orbitMode = OrbitMode.Pitch;
-                            }
-                            else
-                            {
-                                orbitMode = OrbitMode.Yaw;
-                            }
-                        }
-                    }
-                }
-            }
-            else
-            {
-                orbitMode = OrbitMode.None;
-            }
-            return AffectingOrbit && (orbitMode != OrbitMode.None);
-        }
-
-        /// <summary>
-        /// Compute the amount to disadvantage pitch and yaw based on the current
-        /// mouse position. Lower X disadvantages yaw, lower Y disadvantages pitch.
-        /// </summary>
-        /// <param name="pos"></param>
-        /// <returns></returns>
-        private Vector2 DeadZone(Point pos)
-        {
-            Vector2 ndc = PixelToNDC(pos);
-            ndc -= cursorOffset;
-
-            Vector2 dead = Vector2.Zero;
-            dead.Y = Smooth(Math.Abs(ndc.Y), 0.0f, 0.25f);
-            dead.X = 1.0f - (1.0f - dead.Y) * (1.0f - Smooth(Math.Abs(ndc.X), 0.0f, 0.25f));
-
-            return dead;
-        }
-
-        /// <summary>
-        /// Pitch the camera to match mouse dragging.
-        /// </summary>
-        /// <param name="camera"></param>
-        private void Pitch(SmoothCamera camera)
-        {
-            Point pos = MouseInput.Position;
-            Point prev = MouseInput.PrevPosition;
-            float dp = (pos.Y - prev.Y) / resolution.Y;
-
-            if (dp != 0)
-            {
-                float scale = PixelToNDC(pos).Y - cursorOffset.Y;
-
-                scale *= scale;
-                scale = MathHelper.Clamp(1.0f - scale, 0.0f, 1.0f);
-
-                float maxScale = 1.0f;
-                float minScale = 0.5f;
-                scale *= (maxScale - minScale);
-                scale += minScale;
-
-                float speed = 6.0f;
-
-                dp *= scale * speed;
-                camera.DesiredPitch -= dp;
-            }
-        }
-
-        /// <summary>
-        /// Rotate the camera about Z to match mouse dragging to spin the world
-        /// about the cursor.
-        /// </summary>
-        /// <param name="camera"></param>
-        private void Yaw(SmoothCamera camera)
-        {
-            Point move = new Point(
-                MouseInput.Position.X - MouseInput.PrevPosition.X,
-                MouseInput.Position.Y - MouseInput.PrevPosition.Y);
-            if (move != Point.Zero)
-            {
-                Vector3 cursorPos = owner.Cursor3D.Position;
-
-                Vector3 prevPos = FindAtHeight(camera, MouseInput.PrevPosition, cursorPos.Z);
-
-                Vector3 pos = FindAtHeight(camera, MouseInput.Position, prevPos.Z);
-
-
-                Vector2 toPrev = new Vector2(prevPos.X - cursorPos.X, prevPos.Y - cursorPos.Y);
-                Vector2 toPos = new Vector2(pos.X - cursorPos.X, pos.Y - cursorPos.Y);
-
-                if ((toPrev != Vector2.Zero) && (toPos != Vector2.Zero))
-                {
-                    toPrev.Normalize();
-                    toPos.Normalize();
-
-                    float sinTheta = toPos.X * toPrev.Y - toPos.Y * toPrev.X;
-
-                    float rads = (float)Math.Asin(sinTheta);
-
-                    camera.DesiredRotation += rads;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Adjust yaw to mouse movement horizontally across the screen.
-        /// </summary>
-        /// <param name="camera"></param>
-        private void YawLeftRight(SmoothCamera camera)
-        {
-            Point pos = MouseInput.Position;
-            Point prev = MouseInput.PrevPosition;
-            float dy = (pos.X - prev.X) / resolution.X;
-
-            float scale = PixelToNDC(pos).X - cursorOffset.Y;
-
-            scale *= scale;
-            scale = MathHelper.Clamp(1.0f - scale, 0.0f, 1.0f);
-
-            float maxScale = 1.0f;
-            float minScale = 0.5f;
-            scale *= (maxScale - minScale);
-            scale += minScale;
-
-            float speed = 6.0f;
-
-            dy *= scale * speed;
-            camera.DesiredRotation -= dy;
-        }
-
-        /// <summary>
-        /// Adjust pitch and yaw to mouse input.
-        /// </summary>
-        /// <param name="camera"></param>
-        private void PitchAndYaw(SmoothCamera camera)
-        {
-            if (MouseInput.Right.IsPressed)
-            {
-                Pitch(camera);
-                YawLeftRight(camera);
-            }
-        }
-
-        /// <summary>
-        /// Move the dragged object from the new mouse position.
-        /// </summary>
-        /// <param name="camera"></param>
-        private void DragObject(Camera camera)
-        {
-            if (dragObject != null && (MouseInput.PrevPosition != MouseInput.Position))
-            {
-                if (ContinueDrag)
-                {
-                    float height = dragObject.Movement.Position.Z;
-                    Vector3 prevPos = FindAtHeight(camera, MouseInput.PrevPosition, height);
-                    Vector3 pos = FindAtHeight(camera, MouseInput.Position, height);
-                    Vector2 delPos = new Vector2(pos.X - prevPos.X, pos.Y - prevPos.Y);
-                    float kMaxDragDistSq = 2500.0f;
-                    if (delPos.LengthSquared() < kMaxDragDistSq)
-                    {
-                        Vector3 oldPos = dragObject.Movement.Position;
-                        Vector2 newPos = new Vector2(oldPos.X + delPos.X, oldPos.Y + delPos.Y);
-
-                        owner.DragSelectedObject(dragObject, newPos, false);
-                    }
-                }
-                if (ContinueRaise)
-                {
-                    /// This could be easily made to exactly follow the mouse, just find
-                    /// the height at which the object's 2d position intersects the mouse's
-                    /// Y position on the screen. This one is easy because moving up and down
-                    /// on a line doesn't involve any ambiguity in following a ray out into the
-                    /// world. Or, put simply, it really is a 2D problem.
-                    /// Still, not much point, because the harder bits would still be sloppy,
-                    /// and it seems close enough.
-                    float dheight = MouseInput.Position.Y - MouseInput.PrevPosition.Y;
-                    float kRaiseRate = -0.002f;
-                    dheight *= kRaiseRate;
-                    float dist = Vector3.Distance(dragObject.Movement.Position, camera.ActualFrom);
-                    dheight *= dist;
-
-                    dragObject.HeightOffset += dheight;
-
-                    Vector3 pos = dragObject.Movement.Position;
-                    pos.Z = dragObject.GetPreferredAltitude();
-                    dragObject.Movement.Position = pos;
-
-                    camera.ChangeHeightOffset(dragObject.Movement.Altitude);
-                    InGame.IsLevelDirty = true;
-                }
-                if (ContinueRotate)
-                {
-                    float drads = MouseInput.Position.X - MouseInput.PrevPosition.X;
-                    float kRotRate = 0.01f;
-                    drads *= kRotRate;
-
-                    dragObject.Movement.RotationZ += drads;
-                    InGame.IsLevelDirty = true;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Move the world according to mouse dragging.
-        /// </summary>
-        /// <param name="camera"></param>
-        /// <param name="position"></param>
-        /// <returns></returns>
-        private Vector2 Drag(Camera camera, Vector2 position)
-        {
-            if (MouseInput.Left.IsPressed)
-            {
-                Point move = new Point(
-                    MouseInput.Position.X - MouseInput.PrevPosition.X,
-                    MouseInput.Position.Y - MouseInput.PrevPosition.Y);
-
-                if (move != Point.Zero)
-                {
-                    Vector3 prevPos = FindHit(camera, MouseInput.PrevPosition);
-
-                    Vector3 pos = FindAtHeight(camera, MouseInput.Position, prevPos.Z);
-
-                    Vector2 del = new Vector2(pos.X - prevPos.X, pos.Y - prevPos.Y);
-
-                    //Debug.Print("prevPos={0}, {1}, {2}", prevPos.X, prevPos.Y, prevPos.Z);
-                    //Debug.Print("pos={0}, {1}, {2}", pos.X, pos.Y, pos.Z);
-
-                    position -= del;
-
-                }
-            }
-            return position;
-        }
 
         /// <summary>
         /// Find where a ray through input mouse position (pixel coords) hits the terrain.
@@ -1472,7 +976,7 @@ namespace Boku
         /// </summary>
         /// <param name="ray"></param>
         /// <returns></returns>
-        private static Vector3 LimitRay(Vector3 ray)
+        static Vector3 LimitRay(Vector3 ray)
         {
             Vector2 ray2d = new Vector2(ray.X, ray.Y);
             float len = ray2d.Length();
@@ -1519,7 +1023,7 @@ namespace Boku
         /// <param name="camera"></param>
         /// <param name="mouse"></param>
         /// <returns></returns>
-        private static Vector3 FindRay(Camera camera, Vector2 mouse)
+        static Vector3 FindRay(Camera camera, Vector2 mouse)
         {
             Vector3 ray = camera.ScreenToWorldCoords(mouse);
 
@@ -1530,20 +1034,20 @@ namespace Boku
         /// Test whether the user is currently using the mouse to control the camera.
         /// Will return false if the user is using the mouse for something else, like editing.
         /// </summary>
-        private bool AffectingOrbit
+        bool AffectingOrbit
         {
             get
             {
                 return
-                    MouseInput.Right.IsPressed
+                    LowLevelMouseInput.Right.IsPressed
 
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftControl)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightAlt)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftControl)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightAlt)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)
                     
                     && !disableRightOrbit;
             }
@@ -1553,20 +1057,20 @@ namespace Boku
         /// Test whether the user is currently using the mouse to drag the world.
         /// Will return false if the user is using the mouse for something else, like editing.
         /// </summary>
-        private bool AffectingDrag
+        bool AffectingDrag
         {
             get
             {
                 return
-                    MouseInput.Left.IsPressed 
+                    LowLevelMouseInput.Left.IsPressed 
 
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftControl)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightAlt)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift)
-                    && !KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.Space)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftControl)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftAlt)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightAlt)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.LeftShift)
+                    && !KeyboardInputX.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightShift)
                     
                     && !disableLeftDrag;
             }
@@ -1579,7 +1083,7 @@ namespace Boku
         /// </summary>
         /// <param name="x"></param>
         /// <returns></returns>
-        private float Smooth(float x)
+        float Smooth(float x)
         {
             x = MathHelper.Clamp(x, 0.0f, 1.0f);
             return 3.0f * x * x - 2.0f * x * x * x;
@@ -1591,7 +1095,7 @@ namespace Boku
         /// <param name="lo"></param>
         /// <param name="hi"></param>
         /// <returns></returns>
-        private float Smooth(float x, float lo, float hi)
+        float Smooth(float x, float lo, float hi)
         {
             x -= lo;
             x /= hi - lo;
@@ -1602,7 +1106,7 @@ namespace Boku
         /// Cache away anything useful about the camera.
         /// </summary>
         /// <param name="camera"></param>
-        private void CacheTransforms(SmoothCamera camera)
+        void CacheTransforms(SmoothCamera camera)
         {
             resolution = new Vector2(camera.Resolution.X, camera.Resolution.Y);
 
@@ -1628,7 +1132,7 @@ namespace Boku
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        private Vector2 PixelToNDC(Point p)
+        Vector2 PixelToNDC(Point p)
         {
             return new Vector2(p.X * pixelToNDC.X + pixelToNDC.Z, -p.Y * pixelToNDC.Y - pixelToNDC.W);
         }
@@ -1637,7 +1141,7 @@ namespace Boku
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        private Vector2 NDCToPixel(Vector2 p)
+        Vector2 NDCToPixel(Vector2 p)
         {
             return new Vector2(p.X * ndcToPixel.X + ndcToPixel.Z, -p.Y * ndcToPixel.Y + ndcToPixel.W);
         }
@@ -1645,5 +1149,7 @@ namespace Boku
         #endregion Helpers
 
         #endregion Internal
-    };
-};
+
+    }   // end of class MouseEdit
+
+}   // end of namespace Boku

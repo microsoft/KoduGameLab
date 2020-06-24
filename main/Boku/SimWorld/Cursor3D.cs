@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -191,9 +193,9 @@ namespace Boku
                 #if false 
                 {
                     Matrix l2w = Matrix.Identity;
-                    l2w.Translation = MouseEdit.HitInfo.TerrainPosition;
+                    l2w.Translation = MouseEdit.MouseTouchHitInfo.TerrainPosition;
                     Render(camera, l2w, true, 
-                        MouseEdit.HitInfo.TerrainHit 
+                        MouseEdit.MouseTouchHitInfo.TerrainHit 
                             ? diffuse
                             : Vector4.UnitW);
                 }
@@ -223,7 +225,7 @@ namespace Boku
             /// <param name="diffuse"></param>
             internal static void Render(Camera camera, Matrix l2w, bool cone, Vector4 diffuse)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 Matrix viewMatrix = camera.ViewMatrix;
                 Matrix projMatrix = camera.ProjectionMatrix;
@@ -304,7 +306,7 @@ namespace Boku
                 // Init the effect.
                 if (effect == null)
                 {
-                    effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Standard");
+                    effect = KoiLibrary.LoadEffect(@"Shaders\Standard");
                     ShaderGlobals.RegisterEffect("Standard", effect);
                     effectCache.Load(effect, "");
                 }
@@ -312,7 +314,7 @@ namespace Boku
                 // Load the texture.
                 if (texture == null)
                 {
-                    texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Cursor3D");
+                    texture = KoiLibrary.LoadTexture2D(@"Textures\Cursor3D");
                 }
 
                 RunSimCursor.GetInstance().LoadContent(immediate);
@@ -333,12 +335,12 @@ namespace Boku
             public void UnloadContent()
             {
                 effectCache.UnLoad();
-                BokuGame.Release(ref effect);
-                BokuGame.Release(ref texture);
-                BokuGame.Release(ref ibuf[0]);
-                BokuGame.Release(ref vbuf[0]);
-                BokuGame.Release(ref ibuf[1]);
-                BokuGame.Release(ref vbuf[1]);
+                DeviceResetX.Release(ref effect);
+                DeviceResetX.Release(ref texture);
+                DeviceResetX.Release(ref ibuf[0]);
+                DeviceResetX.Release(ref vbuf[0]);
+                DeviceResetX.Release(ref ibuf[1]);
+                DeviceResetX.Release(ref vbuf[1]);
 
                 RunSimCursor.GetInstance().UnloadContent();
             }   // end of Cursor3D RenderObj UnloadContent()

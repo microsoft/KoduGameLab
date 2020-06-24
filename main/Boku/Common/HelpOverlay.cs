@@ -20,6 +20,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common.Xml;
@@ -184,7 +188,7 @@ namespace Boku.Common
 
         private static float outlineWidth = 1.5f;
 
-        private static UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont18Bold;
+        private static GetFont Font = SharedX.GetGameFont18Bold;
         private static TextBlob blob = null;                // Shared TextBlob for all overlay rendering.
 
 #if SHOW_TITLE_SAFE_OVERLAY
@@ -560,7 +564,7 @@ namespace Boku.Common
             if ((int)BokuGame.ScreenSize.X > overlayRT.Width || (int)BokuGame.ScreenSize.Y > overlayRT.Height)
             {
                 ReleaseRenderTargets();
-                CreateRenderTargets(BokuGame.bokuGame.GraphicsDevice);
+                CreateRenderTargets(KoiLibrary.GraphicsDevice);
             }
 
             try
@@ -589,20 +593,17 @@ namespace Boku.Common
                     }
 
                     // Make sure we've got the proper current mode.
-                    switch (GamePadInput.ActiveMode)
+                    if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                     {
-                        case GamePadInput.InputMode.GamePad:
-                            HelpOverlay.DisplayMode = DisplayModes.GamePad;
-                            break;
-                        case GamePadInput.InputMode.KeyboardMouse:
-                            HelpOverlay.DisplayMode = DisplayModes.KeyboardMouse;
-                            break;
-                        case GamePadInput.InputMode.Touch:
-                            HelpOverlay.DisplayMode = DisplayModes.Touch;
-                            break;
-                        default:
-                            // do nothing
-                            break;
+                        HelpOverlay.DisplayMode = DisplayModes.KeyboardMouse;
+                    }
+                    else if (KoiLibrary.LastTouchedDeviceIsGamepad)
+                    {
+                        HelpOverlay.DisplayMode = DisplayModes.GamePad;
+                    }
+                    else if (KoiLibrary.LastTouchedDeviceIsTouch)
+                    {
+                        HelpOverlay.DisplayMode = DisplayModes.Touch;
                     }
 
                     // A bit of a hack.  If we are using a modal tool menu then we lock down the camera 
@@ -624,7 +625,7 @@ namespace Boku.Common
                         ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
 
                         // Get font/batch instances for this frame.
-                        SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                        SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                         // Render the texture for the current help overlay.
                         // Set the rendertarget(s)
@@ -722,7 +723,7 @@ namespace Boku.Common
                                     int width = (int)screenSize.X - 2 * horizontalMargin;
                                     blob.RawText = top.bottom.text;
                                     blob.Width = width;
-                                    blob.Justification = Boku.UI2D.UIGridElement.Justification.Center;
+                                    blob.Justification = TextHelper.Justification.Center;
 
                                     int x = horizontalMargin;
                                     y = (int)screenSize.Y - bottomMargin - (blob.NumLines - 1) * blob.Font().LineSpacing;
@@ -730,7 +731,7 @@ namespace Boku.Common
 
                                     size = new Vector2(width, Font().LineSpacing);
 
-                                    blob.RenderWithButtons(pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
+                                    blob.RenderText(null, pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
 
                                     bottomGroupPosition = new Vector2(x, y);
                                     bottomGroupSize = new Vector2(size.X + 1, blob.NumLines * Font().LineSpacing + 6);
@@ -753,7 +754,7 @@ namespace Boku.Common
 
                                     int width = (int)(screenSize.X / 2.0f);
                                     blob.Width = width;
-                                    blob.Justification = Boku.UI2D.UIGridElement.Justification.Left; 
+                                    blob.Justification = TextHelper.Justification.Left; 
                                     pos = new Vector2(leftButtonPosition, y);
 
                                     bool skipBlanks = true;     // Are we skipping blank lines at the beginning?
@@ -794,7 +795,7 @@ namespace Boku.Common
                                         }
 
                                         blob.RawText = curString;
-                                        blob.RenderWithButtons(pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
+                                        blob.RenderText(null, pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
 
                                         // Adjust drawing region.
                                         leftGroupPosition.X = MathHelper.Min(leftGroupPosition.X, pos.X);
@@ -812,6 +813,7 @@ namespace Boku.Common
 
                             // BottomText
                             bottomGroupSize = Vector2.Zero;
+                            
                             pos = Vector2.Zero;
                             if (top.keyMouseBottom != null && top.keyMouseBottom.text != null && top.keyMouseBottom.text.Length > 0)
                             {
@@ -820,7 +822,7 @@ namespace Boku.Common
                                     int width = (int)screenSize.X - 2 * horizontalMargin;
                                     blob.RawText = top.keyMouseBottom.text;
                                     blob.Width = width;
-                                    blob.Justification = Boku.UI2D.UIGridElement.Justification.Center;
+                                    blob.Justification = TextHelper.Justification.Center;
 
                                     int x = horizontalMargin;
                                     y = (int)screenSize.Y - bottomMargin - (blob.NumLines - 1) * blob.Font().LineSpacing;
@@ -828,7 +830,7 @@ namespace Boku.Common
 
                                     size = new Vector2(width, Font().LineSpacing);
 
-                                    blob.RenderWithButtons(pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
+                                    blob.RenderText(null, pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
 
                                     bottomGroupPosition = new Vector2(x, y);
                                     bottomGroupSize = new Vector2(size.X + 1, blob.NumLines * Font().LineSpacing + 6);
@@ -850,7 +852,7 @@ namespace Boku.Common
 
                                     int width = (int)(screenSize.X / 2.0f);
                                     blob.Width = width;
-                                    blob.Justification = Boku.UI2D.UIGridElement.Justification.Left; 
+                                    blob.Justification = TextHelper.Justification.Left; 
                                     pos = new Vector2(leftButtonPosition, y);
 
                                     bool skipBlanks = true;     // Are we skipping blank lines at the beginning?
@@ -891,7 +893,7 @@ namespace Boku.Common
                                         }
 
                                         blob.RawText = curString;
-                                        blob.RenderWithButtons(pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
+                                        blob.RenderText(null, pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
 
                                         // Adjust drawing region.
                                         leftGroupPosition.X = MathHelper.Min(leftGroupPosition.X, pos.X);
@@ -917,7 +919,7 @@ namespace Boku.Common
                                     int width = (int)screenSize.X - 2 * horizontalMargin;
                                     blob.RawText = top.touchBottom.text;
                                     blob.Width = width;
-                                    blob.Justification = Boku.UI2D.UIGridElement.Justification.Center;
+                                    blob.Justification = TextHelper.Justification.Center;
 
                                     int x = horizontalMargin;
                                     y = (int)screenSize.Y - bottomMargin - (blob.NumLines - 1) * blob.Font().LineSpacing;
@@ -925,7 +927,7 @@ namespace Boku.Common
 
                                     size = new Vector2(width, Font().LineSpacing);
 
-                                    blob.RenderWithButtons(pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
+                                    blob.RenderText(null, pos, foreColor, outlineColor: shadowColor, outlineWidth: outlineWidth);
 
                                     bottomGroupPosition = new Vector2(x, y);
                                     bottomGroupSize = new Vector2(size.X + 1, blob.NumLines * Font().LineSpacing + 6);
@@ -991,6 +993,7 @@ namespace Boku.Common
             catch
             {
                 // Do nothing...
+                Debug.Assert(false, "Hey, something is throwing.  Fix it!");
             }
         }   // end of HelpOverlay RefreshTexture()
 
@@ -1044,17 +1047,23 @@ namespace Boku.Common
                 Overlay top = stack[stack.Count - 1];
                 if (top != null)
                 {
-                    SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                    SpriteBatch batch = KoiLibrary.SpriteBatch;
                     batch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
                     {
-                        Rectangle srcRect = new Rectangle((int)leftGroupPosition.X, (int)leftGroupPosition.Y, (int)leftGroupSize.X, (int)leftGroupSize.Y);
-                        // dstRect adjusted to account for TutorialMode.
-                        Rectangle dstRect = new Rectangle((int)leftGroupPosition.X, (int)leftGroupPosition.Y, (int)leftGroupSize.X, (int)leftGroupSize.Y);
-                        batch.Draw(overlayRT, dstRect, srcRect, Color.White);
+                        if (leftGroupSize != Vector2.Zero)
+                        {
+                            Rectangle srcRect = new Rectangle((int)leftGroupPosition.X, (int)leftGroupPosition.Y, (int)leftGroupSize.X, (int)leftGroupSize.Y);
+                            // dstRect adjusted to account for TutorialMode.
+                            Rectangle dstRect = new Rectangle((int)leftGroupPosition.X, (int)leftGroupPosition.Y, (int)leftGroupSize.X, (int)leftGroupSize.Y);
+                            batch.Draw(overlayRT, dstRect, srcRect, Color.White);
+                        }
 
-                        srcRect = new Rectangle((int)bottomGroupPosition.X, (int)bottomGroupPosition.Y, (int)bottomGroupSize.X, (int)bottomGroupSize.Y);
-                        dstRect = new Rectangle((int)bottomGroupPosition.X, (int)bottomGroupPosition.Y, (int)bottomGroupSize.X, (int)bottomGroupSize.Y);
-                        batch.Draw(overlayRT, dstRect, srcRect, Color.White);
+                        if (bottomGroupSize != Vector2.Zero)
+                        {
+                            Rectangle srcRect = new Rectangle((int)bottomGroupPosition.X, (int)bottomGroupPosition.Y, (int)bottomGroupSize.X, (int)bottomGroupSize.Y);
+                            Rectangle dstRect = new Rectangle((int)bottomGroupPosition.X, (int)bottomGroupPosition.Y, (int)bottomGroupSize.X, (int)bottomGroupSize.Y);
+                            batch.Draw(overlayRT, dstRect, srcRect, Color.White);
+                        }
                     }
                     batch.End();
 
@@ -1084,7 +1093,7 @@ namespace Boku.Common
 #if SHOW_TITLE_SAFE_OVERLAY
                 {
                     ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
-                    ssquad.Render(titleSafe, Vector2.Zero, new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height), @"TexturedRegularAlpha");
+                    ssquad.Render(titleSafe, Vector2.Zero, new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height), @"TexturedRegularAlpha");
                 }
 #endif
             }
@@ -1172,7 +1181,7 @@ namespace Boku.Common
             RefreshTexture();
 
 #if SHOW_TITLE_SAFE_OVERLAY
-            titleSafe = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\TitleSafe");
+            titleSafe = KoiLibrary.LoadTexture2D(@"Textures\TitleSafe");
 #endif
 
         }
@@ -1182,7 +1191,7 @@ namespace Boku.Common
             ReleaseRenderTargets();
 
 #if SHOW_TITLE_SAFE_OVERLAY
-            BokuGame.Release(ref titleSafe);
+            DeviceResetX.Release(ref titleSafe);
 #endif
         }   // end of HelpOverlay UnloadContent()
 
@@ -1197,8 +1206,8 @@ namespace Boku.Common
 
         private static void ReleaseRenderTargets()
         {
-            InGame.RelRT("HelpOverlay", overlayRT);
-            BokuGame.Release(ref overlayRT);
+            SharedX.RelRT("HelpOverlay", overlayRT);
+            DeviceResetX.Release(ref overlayRT);
         }
 
         private static void CreateRenderTargets(GraphicsDevice device)
@@ -1206,7 +1215,7 @@ namespace Boku.Common
             int width = (int)BokuGame.ScreenSize.X;
             int height = (int)BokuGame.ScreenSize.Y;
             overlayRT = new RenderTarget2D(device, width, height, false, SurfaceFormat.Color, DepthFormat.None);
-            InGame.GetRT("HelpOverlay", overlayRT);
+            SharedX.GetRT("HelpOverlay", overlayRT);
 
             // Set the rendertarget(s)
             InGame.SetRenderTarget(overlayRT);
@@ -1217,19 +1226,21 @@ namespace Boku.Common
             // Restore the original backbuffer (original rendertarget).
             InGame.RestoreRenderTarget();
 
+            /*
             // If batch has "gone bad", replace it.
             SpriteBatch batch = null;
             try
             {
-                batch = UI2D.Shared.SpriteBatch;
+                batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
                 batch.End();
             }
             catch
             {
                 batch = new SpriteBatch(device);
-                UI2D.Shared.SpriteBatch = batch;
+                KoiLibrary.SpriteBatch = batch;
             }
+            */
 
             dirty = true;
             //RefreshTexture();

@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 namespace Boku.SimWorld.Path
 {
     public class RailFenceWay : HiWayGen
@@ -73,27 +75,19 @@ namespace Boku.SimWorld.Path
             {
                 if (diffTex0 == null)
                 {
-                    diffTex0 = BokuGame.Load<Texture2D>(
-                                        BokuGame.Settings.MediaPath
-                                        + @"Textures\Terrain\GroundTextures\RIVROCK1");
+                    diffTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\RIVROCK1");
                 }
                 if (diffTex1 == null)
                 {
-                    diffTex1 = BokuGame.Load<Texture2D>(
-                                        BokuGame.Settings.MediaPath
-                                        + @"Textures\Terrain\GroundTextures\FREESAMPLES_38");
+                    diffTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\FREESAMPLES_38");
                 }
                 if (normTex0 == null)
                 {
-                    normTex0 = BokuGame.Load<Texture2D>(
-                                BokuGame.Settings.MediaPath
-                                + @"Textures\Terrain\GroundTextures\RIVROCK1_norm");
+                    normTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\RIVROCK1_norm");
                 }
                 if (normTex1 == null)
                 {
-                    normTex1 = BokuGame.Load<Texture2D>(
-                                BokuGame.Settings.MediaPath
-                                + @"Textures\Terrain\GroundTextures\FREESAMPLES_38_norm");
+                    normTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\FREESAMPLES_38_norm");
                 }
 
                 base.LoadContent(immediate);
@@ -101,10 +95,10 @@ namespace Boku.SimWorld.Path
 
             public override void UnloadContent()
             {
-                BokuGame.Release(ref diffTex0);
-                BokuGame.Release(ref diffTex1);
-                BokuGame.Release(ref normTex0);
-                BokuGame.Release(ref normTex1);
+                DeviceResetX.Release(ref diffTex0);
+                DeviceResetX.Release(ref diffTex1);
+                DeviceResetX.Release(ref normTex0);
+                DeviceResetX.Release(ref normTex1);
                 base.UnloadContent();
             }
 
@@ -187,27 +181,19 @@ namespace Boku.SimWorld.Path
             {
                 if (diffTex0 == null)
                 {
-                    diffTex0 = BokuGame.Load<Texture2D>(
-                                        BokuGame.Settings.MediaPath
-                                        + @"Textures\Terrain\GroundTextures\RIVROCK1");
+                    diffTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\RIVROCK1");
                 }
                 if (diffTex1 == null)
                 {
-                    diffTex1 = BokuGame.Load<Texture2D>(
-                                        BokuGame.Settings.MediaPath
-                                        + @"Textures\Terrain\GroundTextures\FREESAMPLES_38");
+                    diffTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\FREESAMPLES_38");
                 }
                 if (normTex0 == null)
                 {
-                    normTex0 = BokuGame.Load<Texture2D>(
-                                BokuGame.Settings.MediaPath
-                                + @"Textures\Terrain\GroundTextures\RIVROCK1_norm");
+                    normTex0 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\RIVROCK1_norm");
                 }
                 if (normTex1 == null)
                 {
-                    normTex1 = BokuGame.Load<Texture2D>(
-                                BokuGame.Settings.MediaPath
-                                + @"Textures\Terrain\GroundTextures\FREESAMPLES_38_norm");
+                    normTex1 = KoiLibrary.LoadTexture2D(@"Textures\Terrain\GroundTextures\FREESAMPLES_38_norm");
                 }
 
                 base.LoadContent(immediate);
@@ -215,10 +201,10 @@ namespace Boku.SimWorld.Path
 
             public override void UnloadContent()
             {
-                BokuGame.Release(ref diffTex0);
-                BokuGame.Release(ref diffTex1);
-                BokuGame.Release(ref normTex0);
-                BokuGame.Release(ref normTex1);
+                DeviceResetX.Release(ref diffTex0);
+                DeviceResetX.Release(ref diffTex1);
+                DeviceResetX.Release(ref normTex0);
+                DeviceResetX.Release(ref normTex1);
                 base.UnloadContent();
             }
 

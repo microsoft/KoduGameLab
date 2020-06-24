@@ -35,5 +35,5 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 // This build number is auto-incremented by BokuBuildTool.exe
-[assembly: AssemblyVersion("1.5.67.0")]
+[assembly: AssemblyVersion("1.5.65.0")]
  

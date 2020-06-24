@@ -11,6 +11,8 @@ using Boku.SimWorld;
 using Boku.SimWorld.Terra;
 using Boku.Animatics;
 
+using KoiX;
+
 namespace Boku.SimWorld.Chassis
 {
     /// <summary>
@@ -232,7 +234,7 @@ namespace Boku.SimWorld.Chassis
                     }
 
                     // Only do ripples if on the suface.
-                    // TODO (****) Should we also add a splash effect upon landing?
+                    // TODO (scoy) Should we also add a splash effect upon landing?
                     if (!landing)
                     {
                         CheckRipples(thing, thing.CollisionRadius * 0.75f);
@@ -257,7 +259,7 @@ namespace Boku.SimWorld.Chassis
                 if (grounded)
                 {
                     // Create a matrix orienting the actor with the surface it's on.
-                    // TODO (****) This would be nicer if it lerped into place so
+                    // TODO (scoy) This would be nicer if it lerped into place so
                     // that sliding from steep terrain onto water didn't pop.
                     Vector3 forward = new Vector3(1.0f, 0.0f, 0.0f);
                     Vector3 left = Vector3.Cross(surfaceNormal, forward);

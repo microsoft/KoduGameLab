@@ -215,7 +215,7 @@ namespace Boku.Common
         /// Use to determine when to add friction.
         /// This includes velocity, rotation, and altitude values.
         /// 
-        /// TODO (****) Probably doesn't help much but we could have all the Coasting
+        /// TODO (scoy) Probably doesn't help much but we could have all the Coasting
         /// bools cleared in Reset() and then accumulated as the Set* methods are called.
         /// This would remove the need for all the .HasValue testing.
         /// </summary>

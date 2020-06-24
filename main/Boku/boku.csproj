@@ -33,7 +33,7 @@
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <SccProjectName>%24/Boku/Master/Main/Boku</SccProjectName>
+    <SccProjectName>%24/Boku/scoy/Main/Boku</SccProjectName>
     <SccLocalPath>.</SccLocalPath>
     <SccAuxPath>https://fuselabs.visualstudio.com/defaultcollection</SccAuxPath>
     <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
@@ -72,7 +72,7 @@
     <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>true</UseVSHostingProcess>
     <PlatformTarget>x86</PlatformTarget>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <XnaCompressContent>False</XnaCompressContent>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
@@ -300,7 +300,6 @@
     <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.GetPageOfLevels.cs" />
     <Compile Include="Common\LevelBrowsers\LocalLevelBrowser.ScrubTerrainFiles.cs" />
     <Compile Include="Common\ModularMessageDialogManager.cs" />
-    <Compile Include="Common\MouseInput.cs" />
     <Compile Include="Common\ParticleSystem\BeamExplosionEmitter.cs" />
     <Compile Include="Common\ParticleSystem\BeamManager.cs" />
     <Compile Include="Common\ParticleSystem\BeamSmokeEmitter.cs" />
@@ -315,24 +314,16 @@
     <Compile Include="Common\ParticleSystem\SharedSplashEmitter.cs" />
     <Compile Include="Common\ParticleSystem\SplashEmitter.cs" />
     <Compile Include="Common\PictureManager.cs" />
-    <Compile Include="Common\RectangleF.cs" />
     <Compile Include="Common\SaidStringManager.cs" />
     <Compile Include="Common\ScoreSet.cs" />
     <Compile Include="Common\ScreenWarp.cs" />
     <Compile Include="Common\Sharing\AsyncOperation.cs" />
     <Compile Include="Common\Sharing\FrameDelayedOperation.cs" />
     <Compile Include="Common\Sharing\TimeDelayedOperation.cs" />
-    <Compile Include="Common\SpriteCamera.cs" />
     <Compile Include="Common\StaticActor.cs" />
     <Compile Include="Common\Storage4.cs" />
     <Compile Include="Common\StorageGraphics.cs" />
     <Compile Include="Common\SweptPrims.cs" />
-    <Compile Include="Common\SysFont.CacheEntry.cs" />
-    <Compile Include="Common\SysFont.cs" />
-    <Compile Include="Common\SystemFont.cs" />
-    <Compile Include="Common\TextBlob.Bidi.cs" />
-    <Compile Include="Common\TextBlob.cs" />
-    <Compile Include="Common\TextBlob.Fat.cs" />
     <Compile Include="Common\ToolTipManager.cs" />
     <Compile Include="Common\TouchInput.cs" />
     <Compile Include="Common\TutorialSystem\CompletionTest.cs" />
@@ -343,9 +334,7 @@
     <Compile Include="Common\TutorialSystem\TutorialManager.cs" />
     <Compile Include="Common\TweakScreenHelp.cs" />
     <Compile Include="Common\UnityTouchEmulation.cs" />
-    <Compile Include="Common\Unicode.cs" />
     <Compile Include="Common\WinKeyboard.cs" />
-    <Compile Include="Common\FontWrapper.cs" />
     <Compile Include="Common\WinStoreHelpers.cs" />
     <Compile Include="Common\Xml\XmlActorsList.cs" />
     <Compile Include="Common\Xml\XmlOptionsData.cs" />
@@ -419,6 +408,171 @@
     <Compile Include="Input\VirtualKeyboard.cs" />
     <Compile Include="Input\VirtualKeyboard.Key.cs" />
     <Compile Include="Input\VirtualKeyboard.KeySet.cs" />
+    <Compile Include="KoiX\ArbitraryComparible.cs" />
+    <Compile Include="KoiX\DeviceReset\DeviceReset.cs" />
+    <Compile Include="KoiX\DeviceReset\IDeviceReset.cs" />
+    <Compile Include="KoiX\Extensions.cs" />
+    <Compile Include="KoiX\Geometry\Disc.cs" />
+    <Compile Include="KoiX\Geometry\Geometry.cs" />
+    <Compile Include="KoiX\Geometry\Line.cs" />
+    <Compile Include="KoiX\Geometry\Line2D.cs" />
+    <Compile Include="KoiX\Geometry\Line2D.PathPoint.cs" />
+    <Compile Include="KoiX\Geometry\Line2D.Stroke.cs" />
+    <Compile Include="KoiX\Geometry\PieSlice.cs" />
+    <Compile Include="KoiX\Geometry\RoundedRect.cs" />
+    <Compile Include="KoiX\IDirty.cs" />
+    <Compile Include="KoiX\Input\GamePadInput.cs" />
+    <Compile Include="KoiX\Input\GestureEventArgs.cs" />
+    <Compile Include="KoiX\Input\Gestures.cs" />
+    <Compile Include="KoiX\Input\Input.cs" />
+    <Compile Include="KoiX\Input\InputEventHandler.cs" />
+    <Compile Include="KoiX\Input\InputEventManager.cs" />
+    <Compile Include="KoiX\Input\InputEventManager.InputEventHandlerListSet.cs" />
+    <Compile Include="KoiX\Input\KeyboardInput.cs" />
+    <Compile Include="KoiX\Input\LowLevelKeyboardInput.cs" />
+    <Compile Include="KoiX\Input\LowLevelMouseInput.cs" />
+    <Compile Include="KoiX\Input\LowLevelTouchInput.cs" />
+    <Compile Include="KoiX\Input\MouseEventArgs.cs" />
+    <Compile Include="KoiX\Input\PCTouchInput.cs" />
+    <Compile Include="KoiX\Input\PhoneTouchInput.cs" />
+    <Compile Include="KoiX\Input\TouchSample.cs" />
+    <Compile Include="KoiX\Input\WindowsFormsKeyboardInput.cs" />
+    <Compile Include="KoiX\KoiLibrary.cs" />
+    <Compile Include="KoiX\Managers\BaseScene.cs" />
+    <Compile Include="KoiX\Managers\DialogCenter.cs" />
+    <Compile Include="KoiX\Managers\DialogManager.cs" />
+    <Compile Include="KoiX\Managers\SceneManager.cs" />
+    <Compile Include="KoiX\MyMath.cs" />
+    <Compile Include="KoiX\RectangleF.cs" />
+    <Compile Include="KoiX\Scenes\BlankScene.cs" />
+    <Compile Include="KoiX\Scenes\EditWorldScene.cs" />
+    <Compile Include="KoiX\Scenes\HelpMenuScene.cs" />
+    <Compile Include="KoiX\Scenes\HelpPageScene.cs" />
+    <Compile Include="KoiX\Scenes\HomeMenuScene.cs" />
+    <Compile Include="KoiX\Scenes\IntroVideoScene.cs" />
+    <Compile Include="KoiX\Scenes\LoadLevelScene.cs" />
+    <Compile Include="KoiX\Scenes\MainMenuScene.cs" />
+    <Compile Include="KoiX\Scenes\ObjectSettingsMenuScene.cs" />
+    <Compile Include="KoiX\Scenes\ObjectSettingsPage1Scene.cs" />
+    <Compile Include="KoiX\Scenes\ObjectSettingsPage2Scene.cs" />
+    <Compile Include="KoiX\Scenes\ObjectSettingsPage3Scene.cs" />
+    <Compile Include="KoiX\Scenes\OptionsMenuScene.cs" />
+    <Compile Include="KoiX\Scenes\OptionsPage1Scene.cs" />
+    <Compile Include="KoiX\Scenes\OptionsPage2Scene.cs" />
+    <Compile Include="KoiX\Scenes\RunSimScene.cs" />
+    <Compile Include="KoiX\Scenes\StartupScene.cs" />
+    <Compile Include="KoiX\Scenes\NullScene.cs" />
+    <Compile Include="KoiX\Scenes\BasePageScene.cs" />
+    <Compile Include="KoiX\Scenes\WorldSettingsMenuScene.cs" />
+    <Compile Include="KoiX\Scenes\WorldSettingsPage1Scene.cs" />
+    <Compile Include="KoiX\Scenes\WorldSettingsPage2Scene.cs" />
+    <Compile Include="KoiX\Scenes\WorldSettingsPage3Scene.cs" />
+    <Compile Include="KoiX\Scenes\WorldSettingsPage4Scene.cs" />
+    <Compile Include="KoiX\Scenes\WorldSettingsPage5Scene.cs" />
+    <Compile Include="KoiX\Sprite2D\Sprite.cs" />
+    <Compile Include="KoiX\Sprite2D\SpriteCamera.cs" />
+    <Compile Include="KoiX\Sprite2D\TiledBackground.cs" />
+    <Compile Include="KoiX\Textures.cs" />
+    <Compile Include="KoiX\Text\FontWrapper.cs" />
+    <Compile Include="KoiX\Text\SysFont.BatchEntry.cs" />
+    <Compile Include="KoiX\Text\SysFont.CacheEntry.cs" />
+    <Compile Include="KoiX\Text\SysFont.cs" />
+    <Compile Include="KoiX\Text\SystemFont.cs" />
+    <Compile Include="KoiX\Text\TextBlob.Bidi.cs" />
+    <Compile Include="KoiX\Text\TextBlob.cs" />
+    <Compile Include="KoiX\Text\TextBlob.Fat.cs" />
+    <Compile Include="KoiX\Text\TextHelper.cs" />
+    <Compile Include="KoiX\Text\Unicode.cs" />
+    <Compile Include="KoiX\Time.cs" />
+    <Compile Include="KoiX\Twitchable.cs" />
+    <Compile Include="KoiX\TwitchCurve.cs" />
+    <Compile Include="KoiX\TwitchManager.cs" />
+    <Compile Include="KoiX\UI\BackButton.cs" />
+    <Compile Include="KoiX\UI\BaseButton.cs" />
+    <Compile Include="KoiX\UI\BaseDialog.cs" />
+    <Compile Include="KoiX\UI\BaseDialogNonModal.cs" />
+    <Compile Include="KoiX\UI\BaseDialogWithTitle.cs" />
+    <Compile Include="KoiX\UI\BasePieMenuDialog.cs" />
+    <Compile Include="KoiX\UI\BasePopupMenuDialog.cs" />
+    <Compile Include="KoiX\UI\BaseWidget.cs" />
+    <Compile Include="KoiX\UI\BrowserWorldsDisplay.cs" />
+    <Compile Include="KoiX\UI\Button.cs" />
+    <Compile Include="KoiX\UI\ButtonLabelHelp.cs" />
+    <Compile Include="KoiX\UI\CheckBox.cs" />
+    <Compile Include="KoiX\UI\CheckBoxLabelHelp.cs" />
+    <Compile Include="KoiX\UI\ColorRadioButton.cs" />
+    <Compile Include="KoiX\UI\Dialogs\AddItemPieMenuDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\AuthSignInDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\AuthSignOutDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\AuthStatusDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\BrushTypeDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\CanvasDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\FlyoutDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\FullScreenDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\GameOverDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\GamePadToolBarDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\GraphicMessageDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\HomeMenuDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\MessageDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\OffActorPopupDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\OnActorPopupDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\SaveLevelDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\ScoreDisplayDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\SliderDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\SortDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\TagsDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\TerrainMaterialDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\TextDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\MainMenuDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\PageNameDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\SinglelineInputDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\NewsFeedDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\ToolBarDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\ToolPaletteDialog.cs" />
+    <Compile Include="KoiX\UI\Dialogs\WaterTypeDialog.cs" />
+    <Compile Include="KoiX\UI\FlyoutButton.cs" />
+    <Compile Include="KoiX\UI\GraphicButton.cs" />
+    <Compile Include="KoiX\UI\GraphicRadioButtonSetLabelHelp.cs" />
+    <Compile Include="KoiX\UI\GraphicRadioButton.cs" />
+    <Compile Include="KoiX\UI\GUIButtonLabelHelp.cs" />
+    <Compile Include="KoiX\UI\HelpButton.cs" />
+    <Compile Include="KoiX\UI\Label.cs" />
+    <Compile Include="KoiX\UI\LinkedLevelLabelHelp.cs" />
+    <Compile Include="KoiX\UI\MainMenuButton.cs" />
+    <Compile Include="KoiX\UI\MonochromeGraphicRadioButton.cs" />
+    <Compile Include="KoiX\UI\NextButton.cs" />
+    <Compile Include="KoiX\UI\NineGrid.cs" />
+    <Compile Include="KoiX\UI\Padding.cs" />
+    <Compile Include="KoiX\UI\PieMenuElement.cs" />
+    <Compile Include="KoiX\UI\PrevButton.cs" />
+    <Compile Include="KoiX\UI\RadioButton.cs" />
+    <Compile Include="KoiX\UI\RadioButtonLabelHelp.cs" />
+    <Compile Include="KoiX\UI\RadioButtonSetLabelHelp.cs" />
+    <Compile Include="KoiX\UI\ScoreSettings.cs" />
+    <Compile Include="KoiX\UI\ScrollableTextBox.cs" />
+    <Compile Include="KoiX\UI\SharedX.cs" />
+    <Compile Include="KoiX\UI\SingleLineInputHelp.cs" />
+    <Compile Include="KoiX\UI\SingleLineTextEditBox.cs" />
+    <Compile Include="KoiX\UI\Slider.cs" />
+    <Compile Include="KoiX\UI\SliderLabelHelp.cs" />
+    <Compile Include="KoiX\UI\TerrainMaterialButton.cs" />
+    <Compile Include="KoiX\UI\TextBox.cs" />
+    <Compile Include="KoiX\UI\MultiLineTextEditBox.cs" />
+    <Compile Include="KoiX\UI\Themes\ButtonTheme.cs" />
+    <Compile Include="KoiX\UI\Themes\CheckBoxTheme.cs" />
+    <Compile Include="KoiX\UI\Themes\DialogTheme.cs" />
+    <Compile Include="KoiX\UI\Themes\PieMenuTheme.cs" />
+    <Compile Include="KoiX\UI\Themes\RadioButtonTheme.cs" />
+    <Compile Include="KoiX\UI\Themes\TextEditBoxTheme.cs" />
+    <Compile Include="KoiX\UI\Themes\Theme.cs" />
+    <Compile Include="KoiX\UI\Themes\ThemeOld.cs" />
+    <Compile Include="KoiX\UI\Themes\ThemeSet.cs" />
+    <Compile Include="KoiX\UI\ToolBarButton.cs" />
+    <Compile Include="KoiX\UI\ToolPaletteButton.cs" />
+    <Compile Include="KoiX\UI\UIStuff.cs" />
+    <Compile Include="KoiX\UI\WaterTypeButton.cs" />
+    <Compile Include="KoiX\UI\WidgetSet.cs" />
+    <Compile Include="KoiX\XmlData.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -500,7 +654,6 @@
     <Compile Include="Programming\WaterFilter.cs" />
     <Compile Include="Programming\WaterModifier.cs" />
     <Compile Include="Programming\WaterSensor.cs" />
-    <Compile Include="Scenes\HelpScreens.cs" />
     <Compile Include="Scenes\InGame\Ghost.cs" />
     <Compile Include="Scenes\InGame\InGameEditObjectWaypoint.cs" />
     <Compile Include="Scenes\InGame\InGameMouseEdit.cs" />
@@ -518,6 +671,7 @@
     <Compile Include="Scenes\InGame\MouseEditTools\SmoothLevelTool.cs" />
     <Compile Include="Scenes\InGame\MouseEditTools\WaterTool.cs" />
     <Compile Include="Scenes\InGame\MouseOver.cs" />
+    <Compile Include="Scenes\InGame\HitInfo.cs" />
     <Compile Include="Scenes\InGame\ToolBar.cs" />
     <Compile Include="Scenes\InGame\Tools\DelObjTool.cs" />
     <Compile Include="Scenes\InGame\TouchEdit.cs" />
@@ -526,11 +680,8 @@
     <Compile Include="Scenes\InGame\UnDoStack.cs" />
     <Compile Include="Scenes\LiveFeedDisplay.cs" />
     <Compile Include="Scenes\MicrobitPatternEditor.cs" />
-    <Compile Include="Scenes\OptionsMenu.cs" />
     <Compile Include="Scenes\PreGame\PreGameDesc.cs" />
-    <Compile Include="Scenes\ScrollableTextDisplay.cs" />
     <Compile Include="Scenes\TagPicker.cs" />
-    <Compile Include="Scenes\TextDisplay.cs" />
     <Compile Include="Scenes\TextEditor.cs" />
     <Compile Include="Scenes\CommunityShareMenu.cs" />
     <Compile Include="Scenes\TextLineDialog.cs" />
@@ -576,13 +727,11 @@
     <Compile Include="SimWorld\OneFace.cs" />
     <Compile Include="SimWorld\TwoFace.cs" />
     <Compile Include="SimWorld\WideFace.cs" />
+    <Compile Include="Twitter\FeedItem.cs" />
     <Compile Include="Twitter\FeedMS.cs" />
     <Compile Include="Twitter\Hyperlink.cs" />
     <Compile Include="Twitter\NewsFeeds.cs" />
     <Compile Include="Twitter\ParserMSFeed.cs" />
-    <Compile Include="Ui2d\AuthSignInDialog.cs" />
-    <Compile Include="Ui2d\AuthSignOutDialog.cs" />
-    <Compile Include="Ui2d\AuthStatusDialog.cs" />
     <Compile Include="Ui2d\AuthUI.cs" />
     <Compile Include="Ui2d\AuxMenuUIGrid.cs" />
     <Compile Include="Scenes\ProgrammingHelpCard.cs" />
@@ -599,7 +748,6 @@
     <Compile Include="Ui2d\NewWorldDialog.cs" />
     <Compile Include="Ui2d\PieMenu.cs" />
     <Compile Include="Ui2d\ScrollContainer.cs" />
-    <Compile Include="Ui2d\Shared.cs" />
     <Compile Include="Ui2d\UIGrid2DButtonBarElement.cs" />
     <Compile Include="Ui2d\UIGrid2DCheckBoxElement.cs" />
     <Compile Include="Ui2d\UIGrid2DDualTextureElement.cs" />
@@ -645,11 +793,9 @@
     <Compile Include="Common\ButtonTextures.cs" />
     <Compile Include="Common\Camera.cs" />
     <Compile Include="Common\Frustum.cs" />
-    <Compile Include="Common\GamePadInput.cs" />
     <Compile Include="Common\HealthBarManager.cs" />
     <Compile Include="Common\HelpOverlay.cs" />
     <Compile Include="Common\Movement.cs" />
-    <Compile Include="Common\MyMath.cs" />
     <Compile Include="Common\ParticleSystem\BaseEmitter.cs" />
     <Compile Include="Common\ParticleSystem\BaseSharedEmitter.cs" />
     <Compile Include="Common\ParticleSystem\BaseSpriteEmitter.cs" />
@@ -678,12 +824,8 @@
     <Compile Include="Common\SmoothCamera.cs" />
     <Compile Include="Common\Storage.cs" />
     <Compile Include="Common\Strings.cs" />
-    <Compile Include="Common\TextHelper.cs" />
     <Compile Include="Common\ThoughtBalloonManager.cs" />
-    <Compile Include="Common\Time.cs" />
     <Compile Include="Common\Triangle.cs" />
-    <Compile Include="Common\TwitchCurve.cs" />
-    <Compile Include="Common\TwitchManager.cs" />
     <Compile Include="Common\Utils.cs" />
     <Compile Include="Common\XmlDataHelper.cs" />
     <Compile Include="Common\Xml\XmlLightData.cs" />
@@ -787,8 +929,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Scenes\InGame\BasePicker.cs" />
-    <Compile Include="Scenes\InGame\BrushPicker.cs" />
     <Compile Include="Scenes\InGame\EditObjectParameters.cs" />
     <Compile Include="Scenes\InGame\EditWorldParameters.cs" />
     <Compile Include="Scenes\InGame\InGameCreatables.cs" />
@@ -798,8 +938,6 @@
     <Compile Include="Scenes\InGame\InGameToolBox.cs" />
     <Compile Include="Scenes\InGame\InGameToolMenu.cs" />
     <Compile Include="Scenes\InGame\InGameTweakObject.cs" />
-    <Compile Include="Scenes\InGame\MaterialPicker.cs" />
-    <Compile Include="Scenes\InGame\ToolBox.cs" />
     <Compile Include="Scenes\InGame\Tools\AddTool.cs" />
     <Compile Include="Scenes\InGame\Tools\BaseTool.cs" />
     <Compile Include="Scenes\InGame\Tools\HeightMapTool.cs" />
@@ -807,18 +945,14 @@
     <Compile Include="Scenes\InGame\Tools\RoadLevelTool.cs" />
     <Compile Include="Scenes\InGame\ToolMenu.cs" />
     <Compile Include="Scenes\InGame\Tools\WaterAdd.cs" />
-    <Compile Include="Scenes\InGame\WaterPicker.cs" />
     <Compile Include="Scenes\PreGame\PreGameRacingWithDesc.cs" />
     <Compile Include="Scenes\ProgressScreen.cs" />
     <Compile Include="Scenes\Editor.cs" />
     <Compile Include="Scenes\InGame.cs" />
     <Compile Include="Scenes\InGame\InGameEditBase.cs" />
     <Compile Include="Scenes\InGame\InGameEditObject.cs" />
-    <Compile Include="Scenes\InGame\InGameEditObjectAddItem.cs" />
     <Compile Include="Scenes\InGame\InGameRunSim.cs" />
     <Compile Include="Scenes\LoadLevelMenu.cs" />
-    <Compile Include="Scenes\MainMenu.cs" />
-    <Compile Include="Scenes\MiniHub.cs" />
     <Compile Include="Scenes\PreGame\PreGameBase.cs" />
     <Compile Include="Scenes\PreGame\PreGameRacing.cs" />
     <Compile Include="Scenes\PreGame\PreGameTitle.cs" />
@@ -901,11 +1035,8 @@
     <Compile Include="SimWorld\WindBlimp.cs" />
     <Compile Include="SimWorld\Wisp.cs" />
     <Compile Include="TileProcessor\UIMeshData.cs" />
-    <Compile Include="TitleScreen\TitleScreen.cs" />
-    <Compile Include="TitleScreen\TitleScreenMode.cs" />
     <Compile Include="Ui2d\Base9Grid.cs" />
     <Compile Include="Ui2d\LoadLevelMenuUIGrid.cs" />
-    <Compile Include="Ui2d\TextDialog.cs" />
     <Compile Include="Ui2d\TextLine.cs" />
     <Compile Include="Ui2d\ToolMenuUIGrid.cs" />
     <Compile Include="Ui2d\UIGrid.cs" />
@@ -934,7 +1065,6 @@
     <Compile Include="UI\SelectorLayout.cs" />
     <Compile Include="UI\UiCursor.cs" />
     <Compile Include="UI\uiselector.cs" />
-    <Compile Include="UI\UIShim.cs" />
     <Compile Include="Web\LoginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1001,11 +1131,11 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <Compile Include="Common\SysFont.BatchEntry.cs" />
     <None Include="app.manifest" />
     <None Include="Kodu_Game_Lab_Privacy_Statement.rtf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Compile Include="KoiX\UI\BrowserWorldsDisplay.Tile.cs" />
     <None Include="Options\1F2B5B79-6EB0-45c4-A8BD-0EBDF4EE10C3.opt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1104,6 +1234,9 @@
       <DependentUpon>BrowserForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scenes\InGame\GamePadEditTools\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" Condition="" />

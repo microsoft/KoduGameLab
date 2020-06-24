@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-
+using KoiX.Text;
 
 using Boku.Common.Xml;
 
@@ -57,7 +57,7 @@ namespace Boku.Common
         public DateTime LastWriteTime = DateTime.MinValue;
         public string Name;
         public string Description;
-        public UI2D.UIGridElement.Justification DescJustification = Boku.UI2D.UIGridElement.Justification.Left;
+        public TextHelper.Justification DescJustification = TextHelper.Justification.Left;
         public string Creator;
         public Genres Genres;
         public int VotesUp;
@@ -69,8 +69,8 @@ namespace Boku.Common
         public int NumComments;
         public string Permalink;
 
-        public Guid? LinkedFromLevel;
-        public Guid? LinkedToLevel;
+        public Guid? LinkedFromLevel;   // GUID of previous level in chain.  If null this this level is first.
+        public Guid? LinkedToLevel;     // GUID of next level in chain.  If null then this level is last.
 
         public byte[] ThumbnailBytes;
         public AsyncThumbnail Thumbnail = new AsyncThumbnail();

@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
 
 using Boku.Base;
 using Boku.Common;
@@ -91,7 +94,7 @@ namespace Boku
             /// <param name="str">Text string</param>
             /// <param name="pixelPos">Position in pixels</param>
             /// <returns></returns>
-            public int FindCharAtWidth(UI2D.Shared.GetFont Font, string str, int pixelPos)
+            public int FindCharAtWidth(GetFont Font, string str, int pixelPos)
             {
                 int charPos = 0;
                 for (int i = 0; i < str.Length; i++)
@@ -155,7 +158,7 @@ namespace Boku
 
             public override void Update()
             {
-                bool altPressed = KeyboardInput.AltIsPressed;
+                bool altPressed = KeyboardInputX.AltIsPressed;
                 bool released = prevAltPressed && !altPressed;
 
                 if (released && specialChar != null)
@@ -180,7 +183,7 @@ namespace Boku
                 GamePadInput pad = GamePadInput.GetGamePad0();
 
                 // Mouse input
-                Vector2 hit = MouseInput.PositionVec;
+                Vector2 hit = LowLevelMouseInput.PositionVec;
 
                 hit = (hit - BokuGame.ScreenPosition);
 
@@ -219,7 +222,7 @@ namespace Boku
                 }
 
                 bCanceled = bCanceled || pad.ButtonB.WasPressed || shared.bHitBox.LeftPressed(hit);
-                bSave = bSave || pad.ButtonA.WasPressed || KeyboardInput.WasPressed(Keys.Escape) || shared.aHitBox.LeftPressed(hit);
+                bSave = bSave || pad.ButtonA.WasPressed || KeyboardInputX.WasPressed(Keys.Escape) || shared.aHitBox.LeftPressed(hit);
 
 
                 if (bCanceled)
@@ -243,7 +246,7 @@ namespace Boku
 
                     parent.Deactivate();
                     pad.ButtonA.ClearAllWasPressedState();
-                    KeyboardInput.ClearAllWasPressedState(Keys.Escape);
+                    KeyboardInputX.ClearAllWasPressedState(Keys.Escape);
                 }
 
                 Vector2 testhit = hit;
@@ -258,7 +261,7 @@ namespace Boku
                 {
                     if (bTouched)
                     {
-                        KeyboardInput.ShowOnScreenKeyboard();
+                        KeyboardInputX.ShowOnScreenKeyboard();
                     }
 
                     // Move the cursor to where the user pressed.
@@ -293,10 +296,10 @@ namespace Boku
                     int margin = 0;
                     switch (shared.blob.Justification)
                     {
-                        case UIGridElement.Justification.Center:
+                        case TextHelper.Justification.Center:
                             margin = (totalWidth - curLineWidth) / 2;
                             break;
-                        case UIGridElement.Justification.Right:
+                        case TextHelper.Justification.Right:
                             margin = totalWidth - curLineWidth;
                             break;
                     }
@@ -333,11 +336,11 @@ namespace Boku
             {
                 shared.lastKeyPressedAt = DateTime.Now;
                 // Handle special character input.
-               if (KeyboardInput.AltWasPressed)
+               if (KeyboardInputX.AltWasPressed)
                 {
                     specialChar = null;
                 }
-                if (KeyboardInput.AltIsPressed)
+                if (KeyboardInputX.AltIsPressed)
                 {
                     // accumulate keystrokes
                     specialChar += c;
@@ -372,13 +375,13 @@ namespace Boku
                 {
                     case Keys.Enter:
                         Foley.PlayClickDown();
-                        KeyboardInput.ClearAllWasPressedState(Keys.Enter);
+                        KeyboardInputX.ClearAllWasPressedState(Keys.Enter);
                         Accept();
                         break;
 
                     case Keys.Escape:
                         Foley.PlayClickDown();
-                        KeyboardInput.ClearAllWasPressedState(Keys.Escape);
+                        KeyboardInputX.ClearAllWasPressedState(Keys.Escape);
                         Cancel();
                         break;
 
@@ -457,22 +460,22 @@ namespace Boku
 
             public override void Activate()
             {
-                KeyboardInput.OnKey = KeyInput;
+                //KeyboardInputX.OnKey = KeyInput;
                 shared.lastKeyPressedAt = DateTime.Now;
 #if NETFX_CORE
                 Debug.Assert(false, "Does this work?  Why did we prefer winKeyboard?");
-                KeyboardInput.OnChar = TextInput;
+                KeyboardInputX.OnChar = TextInput;
 #else
                 BokuGame.bokuGame.winKeyboard.CharacterEntered = TextInput;
-                //KeyboardInput.OnChar = TextInput;
+                //KeyboardInputX.OnChar = TextInput;
 #endif
             }
 
             public override void Deactivate()
             {
-                KeyboardInput.OnKey = null;
+                //KeyboardInputX.OnKey = null;
 #if NETFX_CORE
-                KeyboardInput.OnChar = null;
+                KeyboardInputX.OnChar = null;
 #else
                 BokuGame.bokuGame.winKeyboard.CharacterEntered = null;
 #endif
@@ -495,9 +498,9 @@ namespace Boku
 
             #region Accessors
 
-            public UI2D.Shared.GetFont Font
+            public GetFont Font
             {
-                get { return UI2D.Shared.GetGameFont20; }
+                get { return KoiX.SharedX.GetGameFont20; }
             }
 
             #endregion
@@ -511,7 +514,7 @@ namespace Boku
 
             public override void Render(Camera camera)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 CameraSpaceQuad csquad = CameraSpaceQuad.GetInstance();
                 ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
@@ -557,7 +560,7 @@ namespace Boku
                 var cursorOn = DateTime.Now.Millisecond > 500 & shared.parent.Active;
 
                     //Render text
-                shared.blob.RenderWithButtons(pos, darkTextColor, renderCursor: cursorOn);
+                shared.blob.RenderText(null, pos, darkTextColor, renderCursor: cursorOn);
 
                     //Restore viewport
                 device.Viewport = oldViewport;
@@ -585,7 +588,7 @@ namespace Boku
             {
                 if (tex == null)
                 {
-                    tex = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + path);
+                    tex = KoiLibrary.LoadTexture2D(path);
                 }
             }   // end of LoadTexture()
 
@@ -597,11 +600,11 @@ namespace Boku
             {
                 if (backgroundTexture == null)
                 {
-                    backgroundTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\CheckBoxWhite");
+                    backgroundTexture = KoiLibrary.LoadTexture2D(@"Textures\GridElements\CheckBoxWhite");
                 }
                 if (!string.IsNullOrEmpty(shared.iconName))
                 {
-                    iconTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath +shared.iconName);
+                    iconTexture = KoiLibrary.LoadTexture2D(shared.iconName);
                 }
                 
 
@@ -609,8 +612,8 @@ namespace Boku
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref backgroundTexture);
-                BokuGame.Release(ref iconTexture);
+                DeviceResetX.Release(ref backgroundTexture);
+                DeviceResetX.Release(ref iconTexture);
             }   // end of TextInput RenderObj UnloadContent()
 
             /// <summary>
@@ -681,7 +684,7 @@ namespace Boku
             renderObj = new RenderObj(shared);
 
             shared.blob = new TextBlob(renderObj.Font, (null != original) ? original : "", shared.textWidth);
-            shared.blob.Justification = UIGridElement.Justification.Left;
+            shared.blob.Justification = TextHelper.Justification.Left;
             shared.blob.End();
 
             shared.topLine = 0;

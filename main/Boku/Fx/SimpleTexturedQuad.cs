@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -95,7 +97,7 @@ namespace Boku.Fx
 
         public void Render(Camera camera, Texture2D texture, ref Matrix worldMatrix, float alpha, ref Vector4 tint)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             Matrix worldViewProjMatrix = worldMatrix * camera.ViewProjectionMatrix;
             effect.Parameters[ "WorldViewProjMatrix" ].SetValue(worldViewProjMatrix);
@@ -113,7 +115,7 @@ namespace Boku.Fx
             {
                 EffectPass pass = effect.CurrentTechnique.Passes[i];
                 pass.Apply();
-                device.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, localVerts, 0, 4, UI2D.Shared.QuadIndices, 0, 2);
+                device.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, localVerts, 0, 4, SharedX.QuadIndices, 0, 2);
             }
 
         }   // end of SimpleTexturedQuad Render()
@@ -147,7 +149,7 @@ namespace Boku.Fx
         /// <param name="alpha"></param>
         public void Render(Camera camera, Texture2D texture, ref Matrix worldMatrix, Texture2D alphaMap, float alpha, ref Vector4 tint)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             Matrix worldViewProjMatrix = worldMatrix * camera.ViewProjectionMatrix;
             effect.Parameters["WorldViewProjMatrix"].SetValue(worldViewProjMatrix);
@@ -166,7 +168,7 @@ namespace Boku.Fx
             {
                 EffectPass pass = effect.CurrentTechnique.Passes[i];
                 pass.Apply();
-                device.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, localVerts, 0, 4, UI2D.Shared.QuadIndices, 0, 2);
+                device.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, localVerts, 0, 4, SharedX.QuadIndices, 0, 2);
             }
 
         }   // end of SimpleTexturedQuad Render()
@@ -176,7 +178,7 @@ namespace Boku.Fx
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\SimpleQuad");
+                effect = KoiLibrary.LoadEffect(@"Shaders\SimpleQuad");
             }
         }   // end of SimpleTexturedQuad LoadContent()
 
@@ -186,7 +188,7 @@ namespace Boku.Fx
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref effect);
         }   // end of SimpleTexturedQuad UnloadContent()
 
         /// <summary>

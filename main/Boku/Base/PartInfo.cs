@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Fx;
 
@@ -216,23 +219,23 @@ namespace Boku.Base
         /// <returns></returns>
         private Texture2D CreateProgrammingClauseTexture(string str)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             string label = Strings.Localize(str);
 
             Texture2D result = new Texture2D(device, 128, 128);
 
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             // Use the 256x256 rendertarget to pre-render our text label.  
             // This gives us the chance to compress it if we need to if 
             // the label is too long to naturally fit on the tile.
-            RenderTarget2D rt = UI2D.Shared.RenderTarget256_256;
+            RenderTarget2D rt = SharedX.RenderTarget256_256;
             InGame.SetRenderTarget(rt);
 
             InGame.Clear(Color.Transparent);
 
-            UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont30Bold;
+            GetFont Font = SharedX.GetGameFont30Bold;
             Vector2 labelSize = Vector2.Zero;
             if (label != null)
             {
@@ -246,7 +249,7 @@ namespace Boku.Base
             InGame.RestoreRenderTarget();
 
             // Now render the texture to the 128x128 rt.
-            RenderTarget2D renderTarget = UI2D.Shared.RenderTarget128_128;
+            RenderTarget2D renderTarget = SharedX.RenderTarget128_128;
 
             Rectangle destRect = new Rectangle(0, 0, renderTarget.Width, renderTarget.Height);
             InGame.SetRenderTarget(renderTarget);

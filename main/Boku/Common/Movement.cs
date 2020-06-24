@@ -6,6 +6,8 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.SimWorld.Path;

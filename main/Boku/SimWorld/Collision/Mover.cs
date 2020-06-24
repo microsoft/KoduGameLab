@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using Microsoft.Xna.Framework;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 

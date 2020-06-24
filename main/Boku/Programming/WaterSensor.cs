@@ -94,8 +94,6 @@ namespace Boku.Programming
         /// <returns></returns>
         public override void ComposeSensorTargetSet(GameActor gameActor, Reflex reflex)
         {
-            List<Filter> filters = reflex.Filters;
-
             _typeList.Clear();
 
             /// We never fire until we have valid data to base a trigger on. We'll know when we have

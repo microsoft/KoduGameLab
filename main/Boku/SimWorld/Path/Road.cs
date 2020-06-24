@@ -7,6 +7,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Base;
 using Boku.SimWorld.Terra;
@@ -529,7 +531,7 @@ namespace Boku.SimWorld.Path
         {
             if (batch.Count > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 Effect effect = RoadStdRenderObj.Effect;
                 EffectTechnique technique = RoadStdRenderObj.Technique;
@@ -537,7 +539,7 @@ namespace Boku.SimWorld.Path
                 {
                     if (wireFrame)
                     {
-                        device.RasterizerState = UI2D.Shared.RasterStateWireframe;
+                        device.RasterizerState = SharedX.RasterStateWireframe;
                     }
 
                     RoadStdRenderObj.Parameter(RoadStdRenderObj.EffectParams.WorldViewProjMatrix).SetValue(camera.ViewProjectionMatrix);

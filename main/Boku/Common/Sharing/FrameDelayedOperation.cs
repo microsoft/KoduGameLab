@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
+using KoiX;
 
 namespace Boku.Common.Sharing
 {
@@ -15,14 +16,14 @@ namespace Boku.Common.Sharing
 
         int frames;
 
-        public FrameDelayedOperation(AsyncOpCallback callback, object param, object pwner)
-            : base(AsyncOperations.Null, callback, param, pwner)
+        public FrameDelayedOperation(AsyncOpCallback callback, object param0 = null, object param1 = null, object pwner = null)
+            : base(AsyncOperations.Null, callback, param0: param0, param1: param1, pwner: pwner)
         {
             RequiresSignIn = false;
         }
 
-        public FrameDelayedOperation(int frames, AsyncOpCallback callback, object param, object pwner)
-            : this(callback, param, pwner)
+        public FrameDelayedOperation(int frames, AsyncOpCallback callback, object param0 = null, object param1 = null, object pwner = null)
+            : this(callback, param0: param0, param1: param1, pwner: pwner)
         {
             this.frames = frames;
         }
@@ -33,7 +34,7 @@ namespace Boku.Common.Sharing
 
         protected override void IStart()
         {
-            Debug.Assert(false);    // TODO (****) Is this really being used?  If not, remove.
+            Debug.Assert(false);    // TODO (scoy) Is this really being used?  If not, remove.
 #if NETFX_CORE
             Debug.Assert(false, "What are we doing with LiveManager?");
 #else

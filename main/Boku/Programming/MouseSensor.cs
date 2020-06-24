@@ -82,18 +82,18 @@ namespace Boku.Programming
         {
             if (terrainSensor != null)
             {
-                //if (MouseEdit.HitInfo.TerrainHit)
+                //if (MouseEdit.MouseTouchHitInfo.TerrainHit)
                 {
-                    terrainSensor.OverrideSenseMaterial = MouseEdit.HitInfo.TerrainMaterial;
+                    terrainSensor.OverrideSenseMaterial = MouseEdit.MouseTouchHitInfo.TerrainMaterial;
                 }
 
                 terrainSensor.FinishUpdate(gameActor);
             }
             else
             {
-                if (MouseEdit.HitInfo.HaveActor)
+                if (MouseEdit.MouseTouchHitInfo.HaveActor)
                 {
-                    GameActor mousedActor = MouseEdit.HitInfo.ActorHit;
+                    GameActor mousedActor = MouseEdit.MouseTouchHitInfo.ActorHit;
 
                     Vector3 actorCenter = Vector3.Transform(
                         gameActor.BoundingSphere.Center,

@@ -9,6 +9,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+using KoiX.UI.Dialogs;
+
 using Boku.Common;
 using Boku.SimWorld;
 using Boku.SimWorld.Terra;
@@ -131,7 +135,7 @@ namespace Boku.UI2D
             if (cullResult == Frustum.CullResult.TotallyOutside)
                 return;
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Terrain terrain = BokuGame.bokuGame.inGame.Terrain;
 
             int materialIndex = Terrain.UISlotToMatIndex(uiSlot);
@@ -225,7 +229,7 @@ namespace Boku.UI2D
             }
 #endif
 
-            if (MaterialPicker.FabricMode)
+            if (TerrainMaterialDialog.FabricMode)
             {
                 var cubeSize = 1f;
                 terrain.ParameterColor(Terrain.EffectParams.InvCubeSize).SetValue(new Vector3(cubeSize, 1.0f / cubeSize, cubeSize * 0.5f));
@@ -352,15 +356,15 @@ namespace Boku.UI2D
         /// <param name="world"></param>
         private void RenderLabel(Camera camera, Matrix world)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-            UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont18Bold;
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            GetFont Font = SharedX.GetGameFont18Bold;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             // Handle small screens.
             if (BokuGame.ScreenSize.Y < 720)
             {
-                Font = UI2D.Shared.GetGameFont15_75;
+                Font = SharedX.GetGameFont15_75;
             }
 
             /// Find a placement sort of lower cube
@@ -613,7 +617,7 @@ namespace Boku.UI2D
         {
             base.UnloadContent();
 
-            BokuGame.Release(ref vBuff);
+            DeviceResetX.Release(ref vBuff);
         }   // end of UIGridMaterialElement UnloadContent()
 
         /// <summary>

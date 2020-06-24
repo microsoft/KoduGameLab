@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI;
@@ -60,7 +62,7 @@ namespace Boku.UI
             set { ReflexPanel.cutPasteBuffer = value; }
         }
 
-        protected class UpdateObjEditCards : UpdateControl
+        protected class UpdateObjEditCards : UpdateObject
         {
             private ReflexPanel parent = null;
             public List<UpdateObject> updateList = null; // Children's update list.
@@ -89,22 +91,6 @@ namespace Boku.UI
                 parent.AnimatePanelIndent(false);
             }
 
-            public override void AddCommands(CommandMap map)
-            {
-                commandMap.Add(map);
-            }
-            public override void RemoveCommands(CommandMap map)
-            {
-                commandMap.Remove(map);
-            }
-            public override void AddCommandsToControl(IControl control)
-            {
-                control.AddCommands(this.commandMap);
-            }
-            public override void RemoveCommandsFromControl(IControl control)
-            {
-                control.RemoveCommands(this.commandMap);
-            }
             public override void Activate()
             {
                 CommandStack.Push(commandMap);
@@ -118,8 +104,8 @@ namespace Boku.UI
         // this is coded to support multiple update objects
         // even though its not really used.  It is being left in place
         // for future use rather than removing it
-        protected UpdateControl updateObj; // active update object
-        protected UpdateControl updateObjPending;
+        protected UpdateObject updateObj; // active update object
+        protected UpdateObject updateObjPending;
         protected UpdateObjEditCards updateObjEditCards;
 
 
@@ -873,7 +859,6 @@ namespace Boku.UI
                 for (int indexCard = 0; indexCard < listControls.Count; indexCard++)
                 {
                     IControl control = listControls[indexCard] as IControl;
-                    updateObj.RemoveCommandsFromControl(control);
                 }
             }
 
@@ -895,7 +880,6 @@ namespace Boku.UI
             for (int indexCard = 0; indexCard < listControls.Count; indexCard++)
             {
                 IControl control = listControls[indexCard] as IControl;
-                updateObj.AddCommandsToControl(control);
             }
         }
 
@@ -1083,17 +1067,6 @@ namespace Boku.UI
         }
 
         // IControl
-        void IControl.AddCommands(CommandMap map)
-        {
-            // only add them to the normal state object
-            updateObjEditCards.AddCommands(map);
-        }
-        void IControl.RemoveCommands(CommandMap map)
-        {
-            // only add them to the normal state object
-            updateObjEditCards.RemoveCommands(map);
-        }
-
         bool IControl.Hot
         {
             get

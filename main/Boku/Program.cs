@@ -5,7 +5,7 @@
 # if XBOX
 #  define GLOBAL_CATCH_XBOX
 # else
-#  if !NETFX_CORE       // Disable global catch for WinRT.  Replace later?  TODO (****)
+#  if !NETFX_CORE       // Disable global catch for WinRT.  Replace later?  TODO (scoy)
 #   define GLOBAL_CATCH_PC
 #  endif
 # endif
@@ -41,6 +41,8 @@ using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.Common.Sharing;
 using Boku.Common.Xml;
@@ -71,8 +73,10 @@ namespace Boku
     static partial class Program2
     {
         public static Mutex InstanceMutex;
-        private static string kOptInForUpdatesFilename = @"Options\1F2B5B79-6EB0-45c4-A8BD-0EBDF4EE10C3.opt";
-        private static string kOptInForInstrumentationFilename = @"Options\C90D3C0E-D0B4-4aa6-B35D-0A1D9931FB38.opt";
+        static string kOptInForUpdatesFilename = @"Options\1F2B5B79-6EB0-45c4-A8BD-0EBDF4EE10C3.opt";
+        static string kOptInForInstrumentationFilename = @"Options\C90D3C0E-D0B4-4aa6-B35D-0A1D9931FB38.opt";
+
+        static string CrashCookieFilename = "Crash.txt";
 
         public static Version ThisVersion;
         public static string CurrentKCodeVersion="9";   // Version of the KCode.
@@ -96,6 +100,10 @@ namespace Boku
         public static bool InstallerOptSendInstrumentation;
 
         public static bool bShowVersionWarning = false;
+
+        // If set, then jump directly into this level at startup.
+        // This gets set when importing a world.
+        public static string StartupWorldFilename;
 
 #if GLOBAL_CATCH_XBOX
         // The XBOX will popup a Guide message box on unhandled exception.
@@ -336,11 +344,11 @@ namespace Boku
                 }
 #endif
 
-                    if (importedLevels.Count > 0)
-                    {
-                        MainMenu.StartupWorldFilename = BokuGame.Settings.MediaPath + BokuGame.DownloadsPath + importedLevels[0].ToString() + ".Xml";
+                if (importedLevels.Count > 0)
+                {
+                    StartupWorldFilename = BokuGame.Settings.MediaPath + BokuGame.DownloadsPath + importedLevels[0].ToString() + ".Xml";
 #if IMPORT_DEBUG
-                    LevelPackage.DebugPrint("StartupWorldFilename : " + MainMenu.StartupWorldFilename);
+                    LevelPackage.DebugPrint("StartupWorldFilename : " + StartupWorldFilename);
 #endif
                     }
                     // check here for the Analytics flag
@@ -599,7 +607,7 @@ namespace Boku
                         )
                         {
 #if NETFX_CORE
-                        // TODO (****) Do we have a different version checking scheme for Store Apps?
+                        // TODO (scoy) Do we have a different version checking scheme for Store Apps?
 #else
                             StartupForm.Shutdown();
 
@@ -672,7 +680,7 @@ namespace Boku
                 }
 #else
 
-                    // TODO (****) *** See notes!!!!
+                    // TODO (scoy) *** See notes!!!!
                     // Consider starting MainForm here and putting init of BokuGame into XNAControl.
                     // Do we still need/want StartForm?
                     //BokuGame game = new BokuGame();
@@ -723,7 +731,7 @@ namespace Boku
             {
                 // For both Xbox and PC write out a file to act as the crash cookie.
                 {
-                    Stream stream = Storage4.OpenWrite(MainMenu.CrashCookieFilename);
+                    Stream stream = Storage4.OpenWrite(CrashCookieFilename);
                     byte[] buffer = { 42 };
                     stream.Write(buffer, 0, 1);
                     stream.Close();

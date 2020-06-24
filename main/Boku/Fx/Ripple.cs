@@ -9,6 +9,8 @@ using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Audio;
 using Boku.SimWorld.Terra;
@@ -296,7 +298,7 @@ namespace Boku.Fx
         {
             if (numTilesReady > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 Debug.Assert(InGame.inGame.renderEffects == InGame.RenderEffect.Normal);
 
@@ -309,7 +311,7 @@ namespace Boku.Fx
 #endif // !ALLOW_BLOOM
 
 #if !LLLLLL
-                //device.RasterizerState = UI2D.Shared.RasterStateWireframe;
+                //device.RasterizerState = Shared.RasterStateWireframe;
 
 
                 device.Indices = indices;
@@ -535,13 +537,13 @@ namespace Boku.Fx
         {
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Ripple");
+                effect = KoiLibrary.LoadEffect(@"Shaders\Ripple");
                 ShaderGlobals.RegisterEffect("Ripple", effect);
                 effectCache.Load(effect);
             }
             if (texture == null)
             {
-                texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BullsEye1");
+                texture = KoiLibrary.LoadTexture2D(@"Textures\BullsEye1");
             }
             if (verts == null)
             {
@@ -569,12 +571,12 @@ namespace Boku.Fx
         {
             if (effect != null)
             {
-                BokuGame.Release(ref effect);
+                DeviceResetX.Release(ref effect);
                 effectCache.UnLoad();
             }
-            BokuGame.Release(ref texture);
-            BokuGame.Release(ref verts);
-            BokuGame.Release(ref indices);
+            DeviceResetX.Release(ref texture);
+            DeviceResetX.Release(ref verts);
+            DeviceResetX.Release(ref indices);
         }
 
         #endregion Internal

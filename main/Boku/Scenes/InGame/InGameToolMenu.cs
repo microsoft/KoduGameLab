@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.Common;
@@ -80,8 +83,8 @@ namespace Boku
                     CommandStack.Pop(commandMap);
                 }
                 UpdateWorld();
-                // TODO (****) Should this only be called for tools that use the edit brush?
-                // TODO (****) How do we turn off the edit brush rendering if we don't need it?
+                // TODO (scoy) Should this only be called for tools that use the edit brush?
+                // TODO (scoy) How do we turn off the edit brush rendering if we don't need it?
                 UpdateEditBrush();
 
                 GamePadInput pad = GamePadInput.GetGamePad0();
@@ -89,14 +92,14 @@ namespace Boku
                 // Run!
                 if (pad.Back.WasPressed)
                 {
-                    // TODO (****) Transition to RunSim.
+                    // TODO (scoy) Transition to RunSim.
                     // Or is this already done in the base class???
                 }
 
                 // MiniHub!
                 if (pad.Start.WasPressed)
                 {
-                    // TODO (****) Transition to MinHub.
+                    // TODO (scoy) Transition to MinHub.
                     // Or is this already done in the base class???
                 }
 

@@ -6,6 +6,9 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Input;
 using Boku.Common;
@@ -56,13 +59,13 @@ namespace Boku
                 string message = op.Message;
                 if (message != null)
                 {
-                    UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont24;
-                    SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                    GetFont Font = SharedX.GetGameFont24;
+                    SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                     int textWidth = (int)Font().MeasureString(message).X;
-                    int screenWidth = BokuGame.bokuGame.GraphicsDevice.Viewport.Width;
+                    int screenWidth = KoiLibrary.GraphicsDevice.Viewport.Width;
                     int textX = (screenWidth - textWidth) / 2;
-                    int textY = BokuGame.bokuGame.GraphicsDevice.Viewport.TitleSafeArea.Top;
+                    int textY = KoiLibrary.GraphicsDevice.Viewport.TitleSafeArea.Top;
                     batch.Begin();
                     TextHelper.DrawString(Font, message, new Vector2(textX, textY), Color.White);
                     batch.End();

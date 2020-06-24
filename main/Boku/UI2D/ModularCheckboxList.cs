@@ -11,6 +11,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -31,7 +35,7 @@ namespace Boku.UI2D
         private UICheckboxListEvent onChange = null;    // Called whenever any element's state is changed.
 
         private Effect effect = null;
-        private UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont24;
+        private GetFont Font = SharedX.GetGameFont24;
 
         private float tileBorder = 0.125f;
         private int checkboxSize = 30;
@@ -422,7 +426,7 @@ namespace Boku.UI2D
             }
             itemList[index] = item;
 
-            InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+            InitDeviceResources(KoiLibrary.GraphicsDevice);
 
             dirty = true;
         }   // end of InsertText()
@@ -442,19 +446,19 @@ namespace Boku.UI2D
                 }
             }
 
-            InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+            InitDeviceResources(KoiLibrary.GraphicsDevice);
 
             dirty = true;
         }   // end of DeleteText()
 
         private void HandleMouseInput(Camera camera)
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.KeyboardMouse) { return; }
+            if (!KoiLibrary.LastTouchedDeviceIsKeyboardMouse) { return; }
 
             // If the mouse is over the menu, move the selection index to the item under the mouse.
             // On mouse down, make the item (if any) under the mouse the ClickedOnItem.
             // On mouse up, if the mouse is still over the ClickedOnItem, activate it.  If not, just clear ClickedOnItem. 
-            Vector2 hitUV = MouseInput.GetHitUV(camera, ref invWorldMatrix, width, height, useRtCoords: useRtCoords);
+            Vector2 hitUV = LowLevelMouseInput.GetHitUV(camera, ref invWorldMatrix, width, height, useRtCoords: useRtCoords);
 
             // See if we're over anything.  If so, set that item to being selected but only if we've moved the mouse.
             // This prevents the menu from feeling 'broken' if the mouse is over it and the user tries to use
@@ -465,7 +469,7 @@ namespace Boku.UI2D
                 if (itemList[i].UVBoundingBox != null && itemList[i].UVBoundingBox.Contains(hitUV))
                 {
                     // Only update the current in-focus element when the mouse moves.
-                    if (MouseInput.Position != MouseInput.PrevPosition)
+                    if (LowLevelMouseInput.DeltaPosition != Point.Zero)
                     {
                         CurIndex = i;
                     }
@@ -473,14 +477,14 @@ namespace Boku.UI2D
                 }
             }
 
-            if (MouseInput.Left.WasPressed)
+            if (LowLevelMouseInput.Left.WasPressed)
             {
                 if (mouseOverItem != -1)
                 {
                     MouseInput.ClickedOnObject = itemList[mouseOverItem];
                 }
             }
-            if (MouseInput.Left.WasReleased)
+            if (LowLevelMouseInput.Left.WasReleased)
             {
                 // Make sure we're still over the ClickedOnItem.
                 if (mouseOverItem != -1 && MouseInput.ClickedOnObject == itemList[mouseOverItem])
@@ -489,7 +493,7 @@ namespace Boku.UI2D
                 }
             }
 
-            Vector2 hit = MouseInput.PositionVec;
+            Vector2 hit = LowLevelMouseInput.PositionVec;
             if (useRtCoords)
             {
                 hit = ScreenWarp.ScreenToRT(hit);
@@ -505,7 +509,7 @@ namespace Boku.UI2D
             }
 
             // Allow scroll wheel to cycle through elements.
-            int wheel = MouseInput.ScrollWheel - MouseInput.PrevScrollWheel;
+            int wheel = LowLevelMouseInput.DeltaScrollWheel;
 
             if (wheel > 0)
             {
@@ -529,7 +533,7 @@ namespace Boku.UI2D
             }
 
             // If we click outside of the list, close it treating it as if select was chosen.
-            if (MouseInput.Left.WasPressed && MouseInput.ClickedOnObject == null)
+            if (LowLevelMouseInput.Left.WasPressed && MouseInput.ClickedOnObject == null)
             {
                 Deactivate();
             }
@@ -537,7 +541,7 @@ namespace Boku.UI2D
 
         private void HandleTouchInput(Camera camera)
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch) { return; }
+            if (!KoiLibrary.LastTouchedDeviceIsTouch) { return; }
 
             // Touch input
             // If the touch is over the menu, move the selection index to the item under the mouse.
@@ -635,7 +639,7 @@ namespace Boku.UI2D
 
         private void HandleGamePadInput(Camera camera)
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.GamePad) { return; }
+            if (!KoiLibrary.LastTouchedDeviceIsGamepad) { return; }
 
             GamePadInput pad = GamePadInput.GetGamePad0();
 
@@ -718,7 +722,7 @@ namespace Boku.UI2D
                     height = h / 96.0f + 2.0f * tileBorder;
                     geometry = new Base9Grid(width, height, edgeSize);
 
-                    geometry.InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+                    geometry.InitDeviceResources(KoiLibrary.GraphicsDevice);
 
                     dirty = false;
                 }
@@ -843,7 +847,7 @@ namespace Boku.UI2D
                 }
 
                 // Render the text.
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
                 for (int i = 0; i < itemList.Count; i++)
                 {
@@ -876,15 +880,15 @@ namespace Boku.UI2D
                     }
                 }
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                if (KoiLibrary.LastTouchedDeviceIsGamepad)
                 {
                     // Render help.
                     string str = "<a> " + Strings.Localize("saveLevelDialog.change") + "\n<b> " + Strings.Localize("saveLevelDialog.back");
-                    TextBlob blob = new TextBlob(UI2D.Shared.GetGameFont24, str, 400);
+                    TextBlob blob = new TextBlob(SharedX.GetGameFont24, str, 400);
                     pos += size;
                     pos.X += 16;
                     pos.Y -= 2.0f * blob.TotalSpacing;
-                    blob.RenderWithButtons(pos, Color.White);
+                    blob.RenderText(null, pos, Color.White);
 
                     // Mouse hit boxes for help.
                     changeBox.Set(pos, pos + new Vector2(blob.GetLineWidth(0), blob.TotalSpacing));
@@ -971,39 +975,39 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             if (whiteHighlight == null)
             {
-                whiteHighlight = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\GlassTileHighlight");
+                whiteHighlight = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\GlassTileHighlight");
             }
             if (greenBar == null)
             {
-                greenBar = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\GreenBar");
+                greenBar = KoiLibrary.LoadTexture2D(@"Textures\GridElements\GreenBar");
             }
             if (checkboxLit == null)
             {
-                checkboxLit = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\CheckboxLit");
+                checkboxLit = KoiLibrary.LoadTexture2D(@"Textures\GridElements\CheckboxLit");
             }
             if (checkboxUnlit == null)
             {
-                checkboxUnlit = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\CheckboxUnlit");
+                checkboxUnlit = KoiLibrary.LoadTexture2D(@"Textures\GridElements\CheckboxUnlit");
             }
             if (radioButtonLit == null)
             {
-                radioButtonLit = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\IndicatorLit");
+                radioButtonLit = KoiLibrary.LoadTexture2D(@"Textures\GridElements\IndicatorLit");
             }
             if (radioButtonUnlit == null)
             {
-                radioButtonUnlit = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\IndicatorUnlit");
+                radioButtonUnlit = KoiLibrary.LoadTexture2D(@"Textures\GridElements\IndicatorUnlit");
             }
 
             // Load the normal map texture.
             if (normalMap == null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\FlatNormalMap");
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\FlatNormalMap");
             }
         }
 
@@ -1013,14 +1017,14 @@ namespace Boku.UI2D
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
-            BokuGame.Release(ref whiteHighlight);
-            BokuGame.Release(ref greenBar);
-            BokuGame.Release(ref checkboxLit);
-            BokuGame.Release(ref checkboxUnlit);
-            BokuGame.Release(ref radioButtonLit);
-            BokuGame.Release(ref radioButtonUnlit);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
+            DeviceResetX.Release(ref whiteHighlight);
+            DeviceResetX.Release(ref greenBar);
+            DeviceResetX.Release(ref checkboxLit);
+            DeviceResetX.Release(ref checkboxUnlit);
+            DeviceResetX.Release(ref radioButtonLit);
+            DeviceResetX.Release(ref radioButtonUnlit);
 
             BokuGame.Unload(geometry);
             geometry = null;

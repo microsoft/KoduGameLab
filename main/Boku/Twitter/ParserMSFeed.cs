@@ -68,7 +68,7 @@ namespace Boku
         }
 
 
-        public bool AddFeed(string rawData, ref List<FeedMs> msFeed, int width, Shared.GetFont tFont, Shared.GetFont dFont, Shared.GetFont bFont)
+        public bool AddFeed(string rawData, ref List<FeedMs> msFeed, int width, GetFont tFont, GetFont dFont, GetFont bFont)
         {
             char lastChar;
             char nextChar;

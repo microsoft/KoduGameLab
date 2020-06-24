@@ -11,6 +11,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Managers;
+using KoiX.UI;
+using KoiX.UI.Dialogs;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -31,9 +36,9 @@ namespace Boku.UI2D
 
         #region Members
 
-        private static AuthStatusDialog statusDialog;
-        private static AuthSignInDialog signInDialog;
-        private static AuthSignOutDialog signOutDialog;
+        public static AuthStatusDialog StatusDialog;
+        public static AuthSignInDialog SignInDialog;
+        public static AuthSignOutDialog SignOutDialog;
 
         #endregion
 
@@ -45,7 +50,7 @@ namespace Boku.UI2D
         /// </summary>
         public static bool IsModalActive
         {
-            get { return !statusDialog.Active && (signInDialog.Active || signOutDialog.Active); }
+            get { return !StatusDialog.Active && (SignInDialog.Active || SignOutDialog.Active); }
         }
 
         #endregion
@@ -55,24 +60,31 @@ namespace Boku.UI2D
         public static void Update()
         {
             // Update is ignored if not active.
-            AuthUI.statusDialog.Update();
-            AuthUI.signInDialog.Update();
-            AuthUI.signOutDialog.Update();
+            //AuthUI.statusDialog.Update();
+            //AuthUI.SignInDialog.Update();
+            //AuthUI.SignOutDialog.Update();
         }   // end of Update()
 
         public static void Render()
         {
             // Render is ignored if not active.
-            AuthUI.statusDialog.Render();
-            AuthUI.signInDialog.Render();
-            AuthUI.signOutDialog.Render();
+            //AuthUI.statusDialog.Render();
+            //AuthUI.SignInDialog.Render();
+            //AuthUI.SignOutDialog.Render();
         }   // end of Render()
 
         public static void Init()
         {
-            AuthUI.statusDialog = new AuthStatusDialog();
-            AuthUI.signInDialog = new AuthSignInDialog();
-            AuthUI.signOutDialog = new AuthSignOutDialog();
+            AuthUI.StatusDialog = new AuthStatusDialog();
+
+            Vector2 size = new Vector2(800, 580);
+            Vector2 pos = -size / 2.0f;
+            pos.Y += 0;    // Align so it better fits with Kodu title.
+
+            RectangleF rect = new RectangleF(pos, size);
+            AuthUI.SignInDialog = new AuthSignInDialog(rect, "auth.signInTitle");
+            AuthUI.SignOutDialog = new AuthSignOutDialog(rect, "auth.signOutTitle");
+
         }   // end of Init()
 
         /// <summary>
@@ -83,11 +95,11 @@ namespace Boku.UI2D
         /// update loop to make sure that the status dialog is always
         /// displayed except when the signInDialog is up.
         /// </summary>
-        public static void ShowStatusDialog()
+        public static void ShowStatusDialog(SpriteCamera camera)
         {
-            if (!AuthUI.statusDialog.Active && !AuthUI.signInDialog.Active && !AuthUI.signOutDialog.Active)
+            if (!AuthUI.StatusDialog.Active && !AuthUI.SignInDialog.Active && !AuthUI.SignOutDialog.Active)
             {
-                AuthUI.statusDialog.Active = true;
+                DialogManagerX.ShowDialog(AuthUI.StatusDialog, camera);
             }
         }   // end of ShowStatusDialog()
 
@@ -98,9 +110,9 @@ namespace Boku.UI2D
         /// </summary>
         public static void HideStatusDialog()
         {
-            if (AuthUI.statusDialog.Active)
+            if (AuthUI.StatusDialog.Active)
             {
-                AuthUI.statusDialog.Active = false;
+                DialogManagerX.KillDialog(AuthUI.StatusDialog);
             }
         }   // end of HideStatusDialog()
 
@@ -108,41 +120,41 @@ namespace Boku.UI2D
         /// Starts displaying the ShowSignInDialog.
         /// Hides the StatusDialog.
         /// </summary>
-        public static void ShowSignInDialog()
+        public static void ShowSignInDialog(SpriteCamera camera)
         {
-            Debug.Assert(!AuthUI.signInDialog.Active, "Already active, should we be calling this again?  Not sure...");
+            Debug.Assert(!AuthUI.SignInDialog.Active, "Already active, should we be calling this again?  Not sure...");
 
-            if (!AuthUI.signInDialog.Active)
+            if (!AuthUI.SignInDialog.Active)
             {
                 // Disable other dialogs.
                 HideAllDialogs();
 
                 // Enable this.
-                AuthUI.signInDialog.Active = true;
+                DialogManagerX.ShowDialog(AuthUI.SignInDialog, camera);
             }
         }   // end of ShowSignInDialog()
 
         /// <summary>
         /// Should only be called when a user clicks on status dialog.
         /// </summary>
-        public static void ShowSignOutDialog()
+        public static void ShowSignOutDialog(SpriteCamera camera)
         {
-            Debug.Assert(!AuthUI.signOutDialog.Active, "Already active, should we be calling this again?  Not sure...");
+            Debug.Assert(!AuthUI.SignOutDialog.Active, "Already active, should we be calling this again?  Not sure...");
 
             // If not signed in, must be guest so go straight to the sign in dialog.
             if (!Auth.IsSignedIn)
             {
-                ShowSignInDialog();
+                ShowSignInDialog(camera);
                 return;
             }
 
-            if (!AuthUI.signOutDialog.Active)
+            if (!AuthUI.SignOutDialog.Active)
             {
                 // Disable other dialogs.
                 HideAllDialogs();
 
                 // Enable this.
-                AuthUI.signOutDialog.Active = true;
+                DialogManagerX.ShowDialog(AuthUI.SignOutDialog, camera);
             }
         }   // end of ShowSignOutDialog()
 
@@ -151,9 +163,9 @@ namespace Boku.UI2D
         /// </summary>
         public static void HideAllDialogs()
         {
-            AuthUI.statusDialog.Active = false;
-            AuthUI.signInDialog.Active = false;
-            AuthUI.signOutDialog.Active = false;
+            DialogManagerX.KillDialog(AuthUI.StatusDialog);
+            DialogManagerX.KillDialog(AuthUI.SignInDialog);
+            DialogManagerX.KillDialog(AuthUI.SignOutDialog);
         }
 
         /// <summary>
@@ -176,7 +188,7 @@ namespace Boku.UI2D
         /// <param name="color">Attenuate tile with this color.</param>
         public static void RenderTile(Texture2D texture, Rectangle rect, Color color)
         {
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             // If either dimension of the rect is smaller than the texture 
             // we need to scale everything down to prevent distortion.
@@ -266,23 +278,20 @@ namespace Boku.UI2D
 
         public static void LoadContent(bool immediate)
         {
-            BokuGame.Load(AuthUI.statusDialog);
-            BokuGame.Load(AuthUI.signInDialog);
-            BokuGame.Load(AuthUI.signOutDialog);
+            StatusDialog.LoadContent();
+            SignInDialog.LoadContent();
+            SignOutDialog.LoadContent();
         }
 
         public static void InitDeviceResources(GraphicsDevice device)
         {
-            BokuGame.InitDeviceResources(AuthUI.statusDialog, device);
-            BokuGame.InitDeviceResources(AuthUI.signInDialog, device);
-            BokuGame.InitDeviceResources(AuthUI.signOutDialog, device);
         }
 
         public static void UnloadContent()
         {
-            BokuGame.Unload(AuthUI.statusDialog);
-            BokuGame.Unload(AuthUI.signInDialog);
-            BokuGame.Unload(AuthUI.signOutDialog);
+            StatusDialog.UnloadContent();
+            SignInDialog.UnloadContent();
+            SignOutDialog.UnloadContent();
         }
 
         public static void DeviceReset(GraphicsDevice device)

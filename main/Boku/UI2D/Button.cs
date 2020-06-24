@@ -14,6 +14,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -44,7 +48,7 @@ namespace Boku.UI2D
         Color renderColor = Color.White;    // What is currently rendered.
         Color targetColor = Color.White;    // Where the twitch is going.
 
-        UI2D.Shared.GetFont Font = null;
+        GetFont Font = null;
         private Vector2 fixedSize;
         private bool bUseFixedSize = false;
         private Vector2 labelOffset = Vector2.Zero;
@@ -126,7 +130,7 @@ namespace Boku.UI2D
 
         #region Public
 
-        public Button(string label, Color color, GetTexture getTexture, UI2D.Shared.GetFont Font)
+        public Button(string label, Color color, GetTexture getTexture, GetFont Font)
         {
             this.label = label;
             this.color = color;
@@ -193,7 +197,7 @@ namespace Boku.UI2D
         public void Render(Vector2 pos, bool useBatch)
         {
             ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
             Vector2 margin = new Vector2(6, 6); // margin around button graphic.
 
             if (bUseFixedSize)
@@ -202,9 +206,9 @@ namespace Boku.UI2D
             }
 
             // Render rectangular buttons if not in gamepad mode or no button/icon graphic is specified.
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.GamePad || getTexture == null)
+            if (!KoiLibrary.LastTouchedDeviceIsGamepad || getTexture == null)
             {
-                Texture2D buttonTexture = UI2D.Shared.BlackButtonTexture;
+                Texture2D buttonTexture = SharedX.BlackButtonTexture;
                 ssquad.Render(buttonTexture, box.Min, box.Max - box.Min, "TexturedRegularAlpha");
             }
 

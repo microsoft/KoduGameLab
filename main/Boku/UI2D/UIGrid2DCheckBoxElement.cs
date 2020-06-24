@@ -9,6 +9,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Common;
 using Boku.Fx;
@@ -59,7 +63,7 @@ namespace Boku.UI2D
         private Color dropShadowColor;
         private bool useDropShadow = false;
         private bool invertDropShadow = false;  // Puts the drop shadow above the regular letter instead of below.
-        private Justification justify = Justification.Left;
+        private TextHelper.Justification justify = TextHelper.Justification.Left;
 
         #endregion
 
@@ -322,7 +326,7 @@ namespace Boku.UI2D
 
                 x = TextHelper.CalcJustificationOffset(margin, width, textWidth, justify);
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
                 TextHelper.DrawStringWithShadow(Font, batch, x, y, label, textColor, dropShadowColor, invertDropShadow);
                 batch.End();
@@ -339,24 +343,24 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the normal map texture.
             if (normalMapName != null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\" + normalMapName);
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\" + normalMapName);
             }
 
             // Load the check textures.
             if (checkbox == null)
             {
-                checkbox = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\WhiteCheckBox");
+                checkbox = KoiLibrary.LoadTexture2D(@"Textures\UI2D\WhiteCheckBox");
             }
             if (checkmark == null)
             {
-                checkmark = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\WhiteCheck");
+                checkmark = KoiLibrary.LoadTexture2D(@"Textures\UI2D\WhiteCheck");
             }
         }   // end of UIGrid2DCheckboxElement LoadContent()
 
@@ -387,10 +391,10 @@ namespace Boku.UI2D
 
             ReleaseRenderTargets();
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
-            BokuGame.Release(ref checkbox);
-            BokuGame.Release(ref checkmark);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
+            DeviceResetX.Release(ref checkbox);
+            DeviceResetX.Release(ref checkmark);
 
             BokuGame.Unload(geometry);
             geometry = null;
@@ -422,7 +426,7 @@ namespace Boku.UI2D
             }
 
             diffuse = new RenderTarget2D(device, w, h, false, SurfaceFormat.Color, DepthFormat.None);
-            InGame.GetRT("UIGrid2DCheckBoxElement", diffuse);
+            SharedX.GetRT("UIGrid2DCheckBoxElement", diffuse);
 
             // Refresh the texture.
             dirty = true;
@@ -431,8 +435,8 @@ namespace Boku.UI2D
 
         private void ReleaseRenderTargets()
         {
-            InGame.RelRT("UIGrid2DCheckBoxElement", diffuse);
-            BokuGame.Release(ref diffuse);
+            SharedX.RelRT("UIGrid2DCheckBoxElement", diffuse);
+            DeviceResetX.Release(ref diffuse);
         }
 
         #endregion

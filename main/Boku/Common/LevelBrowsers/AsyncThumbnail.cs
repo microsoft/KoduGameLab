@@ -3,6 +3,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 namespace Boku.Common
 {
     /// <summary>
@@ -48,7 +50,7 @@ namespace Boku.Common
 
         public static void LoadContent(bool immediate)
         {
-            pleaseWaitTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\WaitLarge");
+            pleaseWaitTexture = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\WaitLarge");
         }
 
         public static void InitDeviceResources(GraphicsDevice device)
@@ -57,7 +59,7 @@ namespace Boku.Common
 
         public static void UnloadContent()
         {
-            BokuGame.Release(ref pleaseWaitTexture);
+            DeviceResetX.Release(ref pleaseWaitTexture);
         }
 
         /// <summary>

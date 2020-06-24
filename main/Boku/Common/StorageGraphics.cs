@@ -1,5 +1,4 @@
 
-#region Using
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,8 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
 
 using System.Xml.Serialization;
-#endregion Using
 
+using KoiX;
 
 /* This is an extension of the Storage class defined in Storage.cs
  * The goal here is to isolate the graphics dependencies so that it's easier to
@@ -185,7 +184,7 @@ namespace Boku.Common
                 // A super-hack for the PC
                 Debug.Assert(false);
 #if !NETFX_CORE
-                // TODO (****) save to dds no longer supported.  Try SaveAsPng() or SaveAsJpeg()
+                // TODO (scoy) save to dds no longer supported.  Try SaveAsPng() or SaveAsJpeg()
                 //tex.Save("TextureSaveToStream.dds", ImageFileFormat.Dds);
                 // Intentionally uses the filesystem API, not Storage class.
                 Stream file = File.Open("TextureSaveToStream.dds", FileMode.Open);
@@ -246,12 +245,12 @@ namespace Boku.Common
             //#else // XBOX360
 
             //Debug.Assert(false);
-            // TODO (****) The FromFile() method is no longer supported.  You must now load
+            // TODO (scoy) The FromFile() method is no longer supported.  You must now load
             // via a static call to ContentManager but this requires a file name, not a stream.
             // So, we'll need to figure out where this is all called from and fix it.
 
             /*
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             TextureCreationParameters createParams = Texture2D.GetCreationParameters(device, stream);
             createParams.MipLevels = 1;
             stream.Seek(0, SeekOrigin.Begin);
@@ -413,7 +412,7 @@ namespace Boku.Common
         {
             if (stream != null)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 BinaryReader reader = new BinaryReader(stream);
 
@@ -521,9 +520,9 @@ namespace Boku.Common
         /// <returns></returns>
         static private Texture2D TextureLoadPNG(Stream stream)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Debug.Assert(false);
-            // TODO (****) FromFile no longer works, must read via ContentManager.Load<>()
+            // TODO (scoy) FromFile no longer works, must read via ContentManager.Load<>()
             //return Texture2D.FromFile(device, stream);
             return null;
         }

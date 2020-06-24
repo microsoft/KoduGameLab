@@ -15,6 +15,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Common.ParticleSystem;
 using Boku.Fx;
 
@@ -66,11 +68,11 @@ namespace Boku.Common
         public static void Init(GraphicsDevice device)
         {
             // Init the effect.
-            effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Utils");
+            effect = KoiLibrary.LoadEffect(@"Shaders\Utils");
             ShaderGlobals.RegisterEffect("Utils", effect);
 
-            ramps = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Ramps");
-            white = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\White");
+            ramps = KoiLibrary.LoadTexture2D(@"Textures\Ramps");
+            white = KoiLibrary.LoadTexture2D(@"Textures\White");
 
         }   // end of Utils Init()
 
@@ -106,7 +108,7 @@ namespace Boku.Common
 
             effect.CurrentTechnique = effect.Techniques["NoTexture"];
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             // Render all passes.
             for (int i = 0; i < effect.CurrentTechnique.Passes.Count; i++)
@@ -162,7 +164,7 @@ namespace Boku.Common
 
                 effect.CurrentTechnique = effect.Techniques["NoTexture"];
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 // Render all passes.
                 for (int i = 0; i < effect.CurrentTechnique.Passes.Count; i++)
@@ -217,7 +219,7 @@ namespace Boku.Common
 
                 effect.CurrentTechnique = effect.Techniques["NoTexture"];
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 // Render all passes.
                 for (int i = 0; i < effect.CurrentTechnique.Passes.Count; i++)
@@ -259,7 +261,7 @@ namespace Boku.Common
 
             effect.CurrentTechnique = effect.Techniques["VtxColor"];
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             // Render all passes.
             for (int i = 0; i < effect.CurrentTechnique.Passes.Count; i++)
@@ -372,7 +374,7 @@ namespace Boku.Common
         }
         private static void DrawPrimRunwayVerts(int numTris)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             // Render all passes.
             for (int i = 0; i < effect.CurrentTechnique.Passes.Count; i++)
@@ -626,10 +628,10 @@ namespace Boku.Common
             p1 += new Vector2(0.5f, 0.5f);
 
             // Convert from pixel coords to homogeneous coords.
-            p0.X = p0.X / BokuGame.bokuGame.GraphicsDevice.Viewport.Width * 2.0f - 1.0f;
-            p0.Y = -(p0.Y / BokuGame.bokuGame.GraphicsDevice.Viewport.Height * 2.0f - 1.0f);
-            p1.X = p1.X / BokuGame.bokuGame.GraphicsDevice.Viewport.Width * 2.0f - 1.0f;
-            p1.Y = -(p1.Y / BokuGame.bokuGame.GraphicsDevice.Viewport.Height * 2.0f - 1.0f);
+            p0.X = p0.X / KoiLibrary.GraphicsDevice.Viewport.Width * 2.0f - 1.0f;
+            p0.Y = -(p0.Y / KoiLibrary.GraphicsDevice.Viewport.Height * 2.0f - 1.0f);
+            p1.X = p1.X / KoiLibrary.GraphicsDevice.Viewport.Width * 2.0f - 1.0f;
+            p1.Y = -(p1.Y / KoiLibrary.GraphicsDevice.Viewport.Height * 2.0f - 1.0f);
 
             // Create the vertices.
             UtilsVertex[] verts = new UtilsVertex[2];
@@ -638,7 +640,7 @@ namespace Boku.Common
 
             effect.CurrentTechnique = effect.Techniques["Screenspace2D"];
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             // Render all passes.
             for (int i = 0; i < effect.CurrentTechnique.Passes.Count; i++)

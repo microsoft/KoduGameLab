@@ -5,6 +5,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Xml.Serialization;
 
+using KoiX;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -51,7 +53,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (BeamSmokeEmitter.texture == null)
             {
-                BeamSmokeEmitter.texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/BeamSmoke");
+                BeamSmokeEmitter.texture = KoiLibrary.LoadTexture2D(@"Textures/BeamSmoke");
             }
         }   // end of ExplosionEmitter LoadContent()
 

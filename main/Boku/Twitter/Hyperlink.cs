@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 //using Boku.Common.Gesture;
@@ -86,7 +90,7 @@ namespace Boku
             this.text = text;
             this.linkUrl = linkUrl;
 
-            blob = new TextBlob(Shared.GetGameFont10, text, 390);
+            blob = new TextBlob(SharedX.GetGameFont10, text, 390);
 
             // Need to set once we know the correct position.
             hitBox = new AABB2D();
@@ -94,7 +98,7 @@ namespace Boku
 
         public void Draw(Vector2 position)
         {
-            blob.RenderWithButtons(position, TextColor);
+            blob.RenderText(null, position, TextColor);
 
             // Set hitbox.  Note that the coordinates for the hitbox are relative
             // to the upper left hand corner of the rendertarget we're currently
@@ -119,7 +123,7 @@ namespace Boku
         {
             if (HitBox.Contains(pos))
             {
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     // In touch mode, we don't hover first, count it as clicked right away.
                     if (clickType == ClickType.WasPressed || clickType == ClickType.WasReleased)

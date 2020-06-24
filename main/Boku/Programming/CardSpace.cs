@@ -16,6 +16,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Sharing;
@@ -128,7 +132,7 @@ namespace Boku.Programming
 
         public const string IconPrefix = "icon";
 
-        protected UI2D.Shared.GetFont FontLabel;
+        protected GetFont FontLabel;
 
         [Flags]
         public enum CardType
@@ -380,7 +384,7 @@ namespace Boku.Programming
         /// <summary>
         /// Find filter by string and return a clone of it.
         /// 
-        /// TODO (****) Why is this implemented as a list instead of 
+        /// TODO (scoy) Why is this implemented as a list instead of 
         /// a dictionary?  Given that there are over 500 filters in
         /// the system, the constant, serial searching seems, um, less
         /// than optimal...
@@ -666,7 +670,7 @@ namespace Boku.Programming
             CardFace cardFace;
             if (cardFaces.TryGetValue(id, out cardFace))
             {
-                BokuGame.Release(ref cardFace.Texture);
+                DeviceResetX.Release(ref cardFace.Texture);
                 cardFaces.Remove(id);
             }
         }
@@ -710,7 +714,7 @@ namespace Boku.Programming
             //
             // Create a version of this texture for use in text.
             //
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             // If content was lost we need to recreate the texture
             // but we don't want to reallocate it.
             if (cardFace.Texture == null)
@@ -718,7 +722,7 @@ namespace Boku.Programming
                 cardFace.Texture = new RenderTarget2D(device, 64, 64);
             }
 
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
             
             InGame.SetRenderTarget(cardFace.Texture);
             device.Clear(Color.Transparent);
@@ -766,13 +770,13 @@ namespace Boku.Programming
             {
                 if (imagefile.StartsWith(".."))
                 {
-                    texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\" + imagefile.Substring(3));
+                    texture = KoiLibrary.LoadTexture2D(@"Textures\" + imagefile.Substring(3));
                 }
                 else
                 {
                     try
                     {
-                        texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Tiles\" + imagefile);
+                        texture = KoiLibrary.LoadTexture2D(@"Textures\Tiles\" + imagefile);
                     }
                     catch
                     {
@@ -792,10 +796,10 @@ namespace Boku.Programming
                 return;
             }
 
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             // Now render the card face.
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             // If we've already got a rt it must be because the content was
             // lost and we need to recreate it so don't allocate a new one.
@@ -901,7 +905,7 @@ namespace Boku.Programming
                 {
                     // The label is too wide so we want to render it to another 
                     // texture and then shrink that texture onto our tile.
-                    RenderTarget2D tmpRT = UI2D.Shared.RenderTarget256_256;
+                    RenderTarget2D tmpRT = Shared.RenderTarget256_256;
                     InGame.SetRenderTarget(tmpRT);
                     InGame.Clear(Color.Transparent);
 
@@ -979,7 +983,7 @@ namespace Boku.Programming
         {
             // Copy all cards from lists to dictionaries.  After this
             // point we shouldn't use the lists any more.
-            // TODO (****) Clear them just to be sure?
+            // TODO (scoy) Clear them just to be sure?
             foreach (Sensor sensor in SensorPieces)
             {
                 SensorDict.Add(sensor.upid, sensor);
@@ -1195,23 +1199,23 @@ namespace Boku.Programming
             if (Cards.cardFaces != null && Cards.cardFaces.Count > 0)
                 return;
 
-            Cards.FontLabel = UI2D.Shared.GetCardLabel;
+            Cards.FontLabel = SharedX.GetCardLabel;
 
             Cards.cardFaces = new Dictionary<string, CardFace>();
 
             Cards.cardFaces.Add(ProgrammingElement.upidNull, null); // add the empty one
 
             // Create a temp rendertarget and filter for lores blur pass.
-            blurRT = new RenderTarget2D(BokuGame.bokuGame.GraphicsDevice,
+            blurRT = new RenderTarget2D(KoiLibrary.GraphicsDevice,
                                         128,
                                         128,
                                         false,
                                         SurfaceFormat.Color,
                                         DepthFormat.None);
-            InGame.GetRT("CardSpace:blurRT", blurRT);
+            SharedX.GetRT("CardSpace:blurRT", blurRT);
             filter = new GaussianFilter();
             filter.LoadContent(true);
-            filter.InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+            filter.InitDeviceResources(KoiLibrary.GraphicsDevice);
 
             foreach(ProgrammingElement item in Cards.SensorDict.Values)
             {
@@ -1451,7 +1455,7 @@ p { page-break-before: always; }
             int width = 512;
             int height = 1024;
             RenderTarget2D rt = new RenderTarget2D(
-                BokuGame.bokuGame.GraphicsDevice,
+                KoiLibrary.GraphicsDevice,
                 width, height,
                 false,  // Mipmaps
                 SurfaceFormat.Color,
@@ -1459,7 +1463,7 @@ p { page-break-before: always; }
                 1, // Samples
                 RenderTargetUsage.PlatformContents);
 
-            TextBlob blob = new TextBlob(UI2D.Shared.GetGameFont24Bold, "", 512);
+            TextBlob blob = new TextBlob(Shared.GetGameFont24Bold, "", 512);
             blob.LineSpacingAdjustment = 6;
 
             InGame.SetRenderTarget(rt);
@@ -1499,7 +1503,7 @@ p { page-break-before: always; }
             int width = 512;
             int height = 1024;
             RenderTarget2D rt = new RenderTarget2D(
-                BokuGame.bokuGame.GraphicsDevice,
+                KoiLibrary.GraphicsDevice,
                 width, height,
                 false,  // Mipmaps
                 SurfaceFormat.Color,
@@ -1507,7 +1511,7 @@ p { page-break-before: always; }
                 1, // Samples
                 RenderTargetUsage.PlatformContents);
 
-            TextBlob blob = new TextBlob(UI2D.Shared.GetGameFont24Bold, "", 512);
+            TextBlob blob = new TextBlob(Shared.GetGameFont24Bold, "", 512);
             blob.LineSpacingAdjustment = 6;
             Dictionary<string, Texture2D>.KeyCollection keys = Cards.textures.Keys;
 
@@ -1597,7 +1601,7 @@ p { page-break-before: always; }
             {
                 foreach(KeyValuePair<string, CardFace> kvp in CardSpace.Cards.cardFaces)
                 {
-                    BokuGame.Release(ref kvp.Value.Texture);
+                    DeviceResetX.Release(ref kvp.Value.Texture);
                 }
 
                 Cards.cardFaces.Clear();

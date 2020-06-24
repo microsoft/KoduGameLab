@@ -11,6 +11,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -32,8 +36,8 @@ namespace Boku.UI2D
         public static Color unselectedTextColor = new Color(200, 200, 200);
         public static Color selectedTextColor = new Color(20, 20, 20);
 
-        public static UI2D.Shared.GetFont TitleFont = UI2D.Shared.GetGameFont24Bold;
-        public static UI2D.Shared.GetFont ItemFont = UI2D.Shared.GetGameFont18Bold;
+        public static GetFont TitleFont = SharedX.GetGameFont24Bold;
+        public static GetFont ItemFont = SharedX.GetGameFont18Bold;
         public static int additionalLineSpacing = 8;
 
         public class MenuItem
@@ -166,7 +170,7 @@ namespace Boku.UI2D
         private float specularPower = 8.0f;
 
         private static Point margin = new Point(32, 12);    // Margin used by individual TextLines.
-        private UIGridElement.Justification justify = UIGridElement.Justification.Center;
+        private TextHelper.Justification justify = TextHelper.Justification.Center;
 
         private string title = null;
         private List<MenuItem> itemList = null; // The list of options.
@@ -409,7 +413,7 @@ namespace Boku.UI2D
             }
             itemList[index] = item;
 
-            InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+            InitDeviceResources(KoiLibrary.GraphicsDevice);
 
             // Ensure that the selected state of all items is correct.
             for (int i = 0; i < itemList.Count; i++)
@@ -441,7 +445,7 @@ namespace Boku.UI2D
 
             if (changed)
             {
-                InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+                InitDeviceResources(KoiLibrary.GraphicsDevice);
 
                 dirty = true;
             }
@@ -467,13 +471,13 @@ namespace Boku.UI2D
 
                 {
                     // Mouse input
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                    if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                     {
                         // If the mouse is over the menu, move the selection index to the item under the mouse.
                         // On mouse down, make the item (if any) under the mouse the ClickedOnItem.
                         // On mouse up, if the mouse is still over the ClickedOnItem, activate it.  If not, just clear ClickedOnItem. 
 
-                        Vector2 hitUV = MouseInput.GetHitUV(camera, ref invWorldMatrix, width, height, useRtCoords);
+                        Vector2 hitUV = LowLevelMouseInput.GetHitUV(camera, ref invWorldMatrix, width, height, useRtCoords);
 
                         // See if we're over anything.  If so, set that item to being selected but only if we've moved the mouse.
                         // This prevents the menu from feeling 'broken' if the mouse is over it and the user tries to use
@@ -484,7 +488,7 @@ namespace Boku.UI2D
                             if (itemList[i].UVBoundingBox != null && itemList[i].UVBoundingBox.Contains(hitUV))
                             {
                                 // Only update the current in-focus element when the mouse moves.
-                                if (MouseInput.Position != MouseInput.PrevPosition)
+                                if (LowLevelMouseInput.DeltaPosition != Point.Zero)
                                 {
                                     CurIndex = i;
                                 }
@@ -492,12 +496,12 @@ namespace Boku.UI2D
                             }
                         }
 
-                        if (MouseInput.Left.WasPressed && mouseOverItem != -1)
+                        if (LowLevelMouseInput.Left.WasPressed && mouseOverItem != -1)
                         {
                             MouseInput.ClickedOnObject = itemList[mouseOverItem];
                         }
 
-                        if (MouseInput.Left.WasReleased && mouseOverItem != -1 && MouseInput.ClickedOnObject == itemList[mouseOverItem])
+                        if (LowLevelMouseInput.Left.WasReleased && mouseOverItem != -1 && MouseInput.ClickedOnObject == itemList[mouseOverItem])
                         {
                             // Normally this is already set except in the case where the app didn't have focus and a menu item is clicked.
                             // In that case, the CurIndex value stays stuck at its previous position.  In particular this was causing Kodu's
@@ -510,7 +514,7 @@ namespace Boku.UI2D
                         }
 
                         // Allow scroll wheel to cycle through elements.
-                        int wheel = MouseInput.ScrollWheel - MouseInput.PrevScrollWheel;
+                        int wheel = LowLevelMouseInput.DeltaScrollWheel;
 
                         if (wheel > 0)
                         {
@@ -523,7 +527,7 @@ namespace Boku.UI2D
 
                     }   // end if KeyboardMouse mode.
 
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    if (KoiLibrary.LastTouchedDeviceIsTouch)
                     {
                         // Look for Tap gesture first.  No need to care about touch response if we've got a tap.
                         bool goodTapGesture = false;
@@ -612,8 +616,8 @@ namespace Boku.UI2D
 
                 }
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad ||
-                    GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse )
+                if (KoiLibrary.LastTouchedDeviceIsGamepad ||
+                    KoiLibrary.LastTouchedDeviceIsKeyboardMouse )
                 {
                     // Gamepad / Keyboard input.
                     GamePadInput pad = GamePadInput.GetGamePad0();
@@ -689,9 +693,9 @@ namespace Boku.UI2D
                 GetWH(out w, out h);
 
                 // If the number of elements has changed, we need a new rendertarget.
-                InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+                InitDeviceResources(KoiLibrary.GraphicsDevice);
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 InGame.SetRenderTarget(diffuse);
                 InGame.Clear(Color.Transparent);
 
@@ -720,7 +724,7 @@ namespace Boku.UI2D
 
                 // Disable writing to alpha channel.
                 // This prevents transparent fringing around the text.
-                device.BlendState = UI2D.Shared.BlendStateColorWriteRGB;
+                device.BlendState = SharedX.BlendStateColorWriteRGB;
 
                 // Add the highlight/shadow onto the white region.
                 if (title != null)
@@ -732,11 +736,11 @@ namespace Boku.UI2D
 
                 // Render the label and value text into the texture.
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
 
                 // Title.
-                UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont24Bold;
+                GetFont Font = SharedX.GetGameFont24Bold;
                 if (title != null)
                 {
                     position.X = TextHelper.CalcJustificationOffset(margin.X, w, (int)Font().MeasureString(title).X, justify);
@@ -746,7 +750,7 @@ namespace Boku.UI2D
                 }
 
                 // Entries.
-                Font = UI2D.Shared.GetGameFont18Bold;
+                Font = SharedX.GetGameFont18Bold;
                 position.Y = 8 + (title != null ? 70 : 0);
                 Vector2 min = Vector2.Zero;
                 Vector2 max = Vector2.One;
@@ -791,8 +795,8 @@ namespace Boku.UI2D
         {
             try
             {
-                ShaderGlobals.SetValues(effect);
-                ShaderGlobals.SetCamera(effect, camera);
+                BokuGame.bokuGame.shaderGlobals.SetValues(effect);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(effect, camera);
 
                 effect.CurrentTechnique = effect.Techniques["NormalMappedWithEnv"];
                 effect.Parameters["DiffuseTexture"].SetValue(diffuse);
@@ -868,32 +872,32 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the textures.
             if (whiteTop == null)
             {
-                whiteTop = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\WhiteTop");
+                whiteTop = KoiLibrary.LoadTexture2D(@"Textures\GridElements\WhiteTop");
             }
             if (whiteHighlight == null)
             {
-                whiteHighlight = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\WhiteHighlight");
+                whiteHighlight = KoiLibrary.LoadTexture2D(@"Textures\GridElements\WhiteHighlight");
             }
             if (blackHighlight == null)
             {
-                blackHighlight = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\BlackHighlight");
+                blackHighlight = KoiLibrary.LoadTexture2D(@"Textures\GridElements\BlackHighlight");
             }
             if (greenBar == null)
             {
-                greenBar = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\GreenBar");
+                greenBar = KoiLibrary.LoadTexture2D(@"Textures\GridElements\GreenBar");
             }
 
             // Load the normal map texture.
             if (normalMapName != null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\" + normalMapName);
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\" + normalMapName);
             }
         }
 
@@ -937,13 +941,13 @@ namespace Boku.UI2D
         {
             ReleaseRenderTargets();
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
-            BokuGame.Release(ref diffuse);
-            BokuGame.Release(ref whiteTop);
-            BokuGame.Release(ref whiteHighlight);
-            BokuGame.Release(ref blackHighlight);
-            BokuGame.Release(ref greenBar);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
+            DeviceResetX.Release(ref diffuse);
+            DeviceResetX.Release(ref whiteTop);
+            DeviceResetX.Release(ref whiteHighlight);
+            DeviceResetX.Release(ref blackHighlight);
+            DeviceResetX.Release(ref greenBar);
 
             BokuGame.Unload(geometry);
             geometry = null;
@@ -965,7 +969,7 @@ namespace Boku.UI2D
             GetWH(out w, out h);
 
             diffuse = new RenderTarget2D(device, 512, h, false, SurfaceFormat.Color, DepthFormat.None);
-            InGame.GetRT("ModularMenu", diffuse);
+            SharedX.GetRT("ModularMenu", diffuse);
 
             dirty = true;
             RefreshTexture();
@@ -973,8 +977,8 @@ namespace Boku.UI2D
 
         private void ReleaseRenderTargets()
         {
-            InGame.RelRT("ModularMenu", diffuse);
-            BokuGame.Release(ref diffuse);
+            SharedX.RelRT("ModularMenu", diffuse);
+            DeviceResetX.Release(ref diffuse);
         }
 
     }   // end of class UIGridModularMenu

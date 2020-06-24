@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Gesture;
@@ -72,7 +75,7 @@ namespace Boku.Input
         static Color dimmedTextColor = new Color(160, 160, 160);
         static Color latchedKeyColor = new Color(235, 200, 40);
 
-        static UI2D.Shared.GetSpriteFont Font = null;
+        static GetSpriteFont Font = null;
 
         static Texture2D whiteTexture = null;  // Used as blank texture for keycaps.
 
@@ -130,8 +133,8 @@ namespace Boku.Input
         static void Init()
         {
             int rightEdge = 0;
-            UI2D.Shared.GetFont BigFont = null;
-            UI2D.Shared.GetFont SmallFont = null;
+            GetFont BigFont = null;
+            GetFont SmallFont = null;
 
             position = new Vector2(0, BokuGame.ScreenSize.Y);
 
@@ -153,8 +156,8 @@ namespace Boku.Input
                 keyHeight = largeKeyHeight;
                 keyWidth = largeKeyWidth;
 
-                BigFont = UI2D.Shared.GetGameFont30Bold;
-                SmallFont = UI2D.Shared.GetGameFont24Bold;
+                BigFont = SharedX.GetGameFont30Bold;
+                SmallFont = SharedX.GetGameFont24Bold;
             }
             else
             {
@@ -171,8 +174,8 @@ namespace Boku.Input
                 keyHeight = smallKeyHeight;
                 keyWidth = smallKeyWidth;
 
-                BigFont = UI2D.Shared.GetGameFont24Bold;
-                SmallFont = UI2D.Shared.GetGameFont20;
+                BigFont = SharedX.GetGameFont24Bold;
+                SmallFont = SharedX.GetGameFont20;
             }
 
             Vector2 stdSize = new Vector2(keyWidth, keyHeight);
@@ -1162,7 +1165,7 @@ namespace Boku.Input
         {
             if (!active)
             {
-                rt = Shared.RenderTarget1920_540;
+                rt = SharedX.RenderTarget1920_540;
 
                 // Twitch to move keyboard offscreen.
                 {
@@ -1257,7 +1260,7 @@ namespace Boku.Input
             if (visible)
             {
                 // Render the rt texture at the current position.
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
 
                 // Calc actual size and position to render in.  Save these away because
@@ -1427,48 +1430,48 @@ namespace Boku.Input
         {
             if (Font == null)
             {
-                Font = UI2D.Shared.GetSegoeUI30;
+                Font = SharedX.GetSegoeUI30;
             }
             if (whiteTexture == null)
             {
-                whiteTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\White");
+                whiteTexture = KoiLibrary.LoadTexture2D(@"Textures\White");
             }
 
             if (circleTexture == null)
             {
-                circleTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\Circle");
+                circleTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\Circle");
             }
             if (backspaceTexture == null)
             {
-                backspaceTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\Backspace");
+                backspaceTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\Backspace");
             }
             if(closeTexture == null)
             {
-                closeTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\Close");
+                closeTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\Close");
             }
             if(enterTexture == null)
             {
-                enterTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\Enter");
+                enterTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\Enter");
             }
             if (shiftTexture == null)
             {
-                shiftTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\Shift");
+                shiftTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\Shift");
             }
             if (leftTexture == null)
             {
-                leftTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\Left");
+                leftTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\Left");
             }
             if(rightTexture == null)
             {
-                rightTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\Right");
+                rightTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\Right");
             }
             if(leftCircleTexture == null)
             {
-                leftCircleTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\LeftCircle");
+                leftCircleTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\LeftCircle");
             }
             if(rightCircleTexture == null)
             {
-                rightCircleTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\VirtualKeyboard\RightCircle");
+                rightCircleTexture = KoiLibrary.LoadTexture2D(@"Textures\VirtualKeyboard\RightCircle");
             }
 
             // Now that we have all the textures, call Init()
@@ -1482,17 +1485,17 @@ namespace Boku.Input
         public static void UnloadContent()
         {
             Font = null;
-            BokuGame.Release(ref whiteTexture);
+            DeviceResetX.Release(ref whiteTexture);
 
-            BokuGame.Release(ref circleTexture);
-            BokuGame.Release(ref backspaceTexture);
-            BokuGame.Release(ref closeTexture);
-            BokuGame.Release(ref enterTexture);
-            BokuGame.Release(ref shiftTexture);
-            BokuGame.Release(ref leftTexture);
-            BokuGame.Release(ref rightTexture);
-            BokuGame.Release(ref leftCircleTexture);
-            BokuGame.Release(ref rightCircleTexture);
+            DeviceResetX.Release(ref circleTexture);
+            DeviceResetX.Release(ref backspaceTexture);
+            DeviceResetX.Release(ref closeTexture);
+            DeviceResetX.Release(ref enterTexture);
+            DeviceResetX.Release(ref shiftTexture);
+            DeviceResetX.Release(ref leftTexture);
+            DeviceResetX.Release(ref rightTexture);
+            DeviceResetX.Release(ref leftCircleTexture);
+            DeviceResetX.Release(ref rightCircleTexture);
         }
 
         public static void DeviceReset(GraphicsDevice device)

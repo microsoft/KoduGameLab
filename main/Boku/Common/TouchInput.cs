@@ -12,12 +12,16 @@ using Microsoft.Xna.Framework;
 
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
+
+using KoiX;
+
 using Boku.Common.Xml;
 using Boku.Common.Gesture;
 using System.Diagnostics;
 #if !NETFX_CORE
     using System.Windows.Forms;
 #endif
+
 
 namespace Boku.Common 
 {
@@ -185,7 +189,7 @@ namespace Boku.Common
         {
             if (wasTouched)
             {
-                initialActorHit = TouchEdit.HitInfo.ActorHit;
+                initialActorHit = TouchEdit.MouseTouchHitInfo.ActorHit;
             }
         }
 
@@ -531,11 +535,11 @@ namespace Boku.Common
                 touchPosition -= BokuGame.ScreenPosition;
             }
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Vector2 winRes = BokuGame.ScreenSize;
             if (ignoreScreenPosition)
             {
-                winRes = new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
+                winRes = new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height);
             }
 
             Vector2 rtRes = new Vector2(camera.Resolution.X, camera.Resolution.Y);
@@ -559,7 +563,7 @@ namespace Boku.Common
         /// <returns></returns>
         public static Vector2 GetWinRTRatio(Camera camera)
         {
-            Vector2 winRes = new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
+            Vector2 winRes = new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height);
             Vector2 rtRes = new Vector2(camera.Resolution.X, camera.Resolution.Y);
 
             return winRes / rtRes;

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Xml;
@@ -36,11 +38,11 @@ namespace Boku.SimWorld
         /// </summary>
         public override void Render(Camera camera, ref Matrix rootToWorld, List<List<PartInfo>> listPartsReplacement)
         {
-            ShaderGlobals.PushEnvMap(RoverGreeter.EnvMap);
+            BokuGame.bokuGame.shaderGlobals.PushEnvMap(RoverGreeter.EnvMap);
 
             base.Render(camera, ref rootToWorld, listPartsReplacement);
 
-            ShaderGlobals.PopEnvMap();
+            BokuGame.bokuGame.shaderGlobals.PopEnvMap();
         }
 
     }   // end of class RoverGreeterModel

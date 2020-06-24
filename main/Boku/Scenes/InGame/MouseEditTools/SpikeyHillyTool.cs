@@ -55,39 +55,33 @@ namespace Boku.Scenes.InGame.MouseEditTools
             return instance;
         }   // end of GetInstance()
 
-        public override void Update(Camera camera)
+        public override void Update()
         {
             if (Active)
             {
                 CheckSelectCursor(false);
 
-                if (!PickerXInUse && !PickerYInUse)
-                {
-                    if (DebouncePending)
-                        return;
+                SetEditModes(Terrain.EditMode.Roughen, Terrain.EditMode.Smooth, Terrain.EditMode.Hill);
 
-                    ProcessTriggers(
-                        Terrain.EditMode.Roughen,
-                        Terrain.EditMode.Smooth,
-                        Terrain.EditMode.Hill);
+                ProcessTriggers(
+                    Terrain.EditMode.Roughen,
+                    Terrain.EditMode.Smooth,
+                    Terrain.EditMode.Hill);
 
-                    SelectOverlay();
-                }
+                SelectOverlay();
             }
 
-            base.Update(camera);
+            base.Update();
         }   // end of Update()
         #endregion Public
 
         #region Internal
 
         private object timerInstrument = null;
-        public override void OnActivate()
+        protected override void OnActivate()
         {
             timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameSpikeyHillyTool);
             base.OnActivate();
-
-            PickerX = brushPicker;      // Assign X button to brush picker and activate.
 
             // If the location of the cursor is not over any terrain then
             // don't allow the magic brush as the default.
@@ -96,18 +90,10 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 // By not including the magic brush in the brush set we
                 // force the picker to change the current brush to one
                 // of the standard brushes if not already.
-                brushPicker.BrushSet = Brush2DManager.BrushType.Binary
-                    | Brush2DManager.BrushType.StretchedBinary;
             }
-
-            brushPicker.BrushSet = Brush2DManager.BrushType.Binary
-                | Brush2DManager.BrushType.Selection;
-            brushPicker.UseAltOverlay = true;
-
-            PickerY = materialPicker;   // Assign Y button to material picker and activate.
         }   // end of OnActivate()
 
-        public override void OnDeactivate()
+        protected override void OnDeactivate()
         {
             base.OnDeactivate();
             Instrumentation.StopTimer(timerInstrument);

@@ -46,13 +46,5 @@ namespace Boku
 
     }   // end of abstract class UpdateObject
 
-    public abstract class UpdateControl : UpdateObject
-    {
-        public abstract void AddCommands(CommandMap map);
-        public abstract void RemoveCommands(CommandMap map);
-        public abstract void AddCommandsToControl(IControl control);
-        public abstract void RemoveCommandsFromControl(IControl control);
-    }
-
 }   // end of namespace Boku
 

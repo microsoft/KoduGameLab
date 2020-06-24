@@ -8,6 +8,9 @@ using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using BokuShared;
 using Boku.Programming;
@@ -46,7 +49,7 @@ namespace Boku.Common.Xml
         public Guid id = Guid.Empty;
         public string name;             // The level name as displayed to the user.
         public string description;
-        public UI2D.UIGridElement.Justification descJustification = Boku.UI2D.UIGridElement.Justification.Left;
+        public TextHelper.Justification descJustification = TextHelper.Justification.Left;
         public string creator;
 
         /// <summary>
@@ -72,7 +75,7 @@ namespace Boku.Common.Xml
         /// If set, this field's value will be used as the level's timestamp the next time it is written to disk.
         /// After use, this field is cleared. Value must be UTC.
         /// 
-        /// (****) I _think_ this is being used so that downloading a world doesn't cause its date to change.
+        /// (scoy) I _think_ this is being used so that downloading a world doesn't cause its date to change.
         /// Sadly this comment just says _what_ is happening, not _why_.
         /// </summary>
         [XmlIgnore]
@@ -470,5 +473,7 @@ namespace Boku.Common.Xml
                 return Path.GetFileNameWithoutExtension(Filename);
             }
         }
-    }
-}
+
+    }   // end of class XmlWorldData
+
+}   // end of namespace Boku.Common.Xml

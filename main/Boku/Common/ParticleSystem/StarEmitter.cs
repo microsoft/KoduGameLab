@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using KoiX;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
@@ -33,7 +35,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (starTexture == null)
             {
-                starTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/StarPlanet");
+                starTexture = KoiLibrary.LoadTexture2D(@"Textures/StarPlanet");
             }
         }   // end of WreathEmitter LoadContent()
 

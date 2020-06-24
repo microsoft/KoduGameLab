@@ -12,6 +12,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -22,7 +26,6 @@ using Boku.Input;
 
 using BokuShared;
 using ExtensionMethods;
-
 
 namespace Boku.UI2D
 {
@@ -128,9 +131,9 @@ namespace Boku.UI2D
             SelectWorldDelegate = OnSelectWorld;
             CancelDelegate = OnCancel;
 
-            blob = new TextBlob(UI2D.Shared.GetGameFont20, "", 400);
+            blob = new TextBlob(SharedX.GetGameFont20, "", 400);
 
-            cancelButton = new Button(Strings.Localize("auth.cancel"), Color.White, null, UI2D.Shared.GetGameFont20);
+            cancelButton = new Button(Strings.Localize("auth.cancel"), Color.White, null, SharedX.GetGameFont20);
 
             levels.Add(new NewWorldLevel(@"03a1b038-fd3f-492f-b18c-2a197fe68701"));
             levels.Add(new NewWorldLevel(@"71b3660d-f472-49b2-90c3-2de1758e1f64"));
@@ -158,9 +161,9 @@ namespace Boku.UI2D
                 // Mouse.  Note, we explicitely look for mouse mode here so that
                 // mouse hover doesn't change the focus level when changing it via
                 // keyboard or gamepad.
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
-                    Vector2 mouseHit = MouseInput.GetMouseInRtCoords();
+                    Vector2 mouseHit = LowLevelMouseInput.GetMouseInRtCoords();
                     HandleMouseInput(mouseHit);
                 }
 
@@ -231,7 +234,7 @@ namespace Boku.UI2D
                 {
                     focusLevelIndex = i;
 
-                    if (MouseInput.Left.WasPressed)
+                    if (LowLevelMouseInput.Left.WasPressed)
                     {
                         OnSelect();
                     }
@@ -316,9 +319,9 @@ namespace Boku.UI2D
                 // Title bar text.
                 string str = Strings.Localize("miniHub.emptyLevel");
                 blob.RawText = str;
-                blob.Font = UI2D.Shared.GetGameFont30Bold;
-                blob.Justification = UIGridElement.Justification.Left;
-                blob.RenderWithButtons(new Vector2(titleRect.X + 16, titleRect.Y + 6), Color.White, Color.Black, new Vector2(0, 2), maxLines: 1);
+                blob.Font = SharedX.GetGameFont30Bold;
+                blob.Justification = TextHelper.Justification.Left;
+                blob.RenderText(null, new Vector2(titleRect.X + 16, titleRect.Y + 6), Color.White, Color.Black, new Vector2(0, 2), maxLines: 1);
 
                 // World tiles.
                 // Update rects.
@@ -331,7 +334,7 @@ namespace Boku.UI2D
 
                 foreach (NewWorldLevel level in levels)
                 {
-                    SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                    SpriteBatch batch = KoiLibrary.SpriteBatch;
                     batch.Begin();
                     {
                         if (level.FrameColor != Color.Transparent)

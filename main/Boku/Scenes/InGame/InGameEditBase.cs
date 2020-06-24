@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Scenes;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -37,23 +41,6 @@ namespace Boku
         /// </summary>
         public class BaseEditUpdateObj : InGameUpdateObject
         {
-            public enum ToolMode
-            {
-                Home,
-                RunGame,
-                CameraMove,
-                EditObject,
-                Paths,
-                TerrainPaint,
-                TerrainRaiseLower,
-                TerrainSpikeyHilly,
-                TerrainSmoothLevel,
-                WaterRaiseLower,
-                DeleteObjects,
-                WorldTweak,
-                None
-            }
-
             protected InGame parent = null;
             protected Shared shared = null;
             public List<UpdateObject> updateList = null; // Children's update list.
@@ -133,9 +120,6 @@ namespace Boku
             {
                 float secs = Time.WallClockFrameSeconds;
 
-                Vector3 lookAt = parent.Camera.At;
-                Vector3 lookFrom = parent.Camera.From;
-
                 // If we were in first person mode, reset things as needed.
                 if (CameraInfo.FirstPersonActive)
                 {
@@ -207,11 +191,11 @@ namespace Boku
                     // Left/right arrow keys also orbit but not if the tool menu or a picker is up.
                     //if (inGame.CurrentUpdateMode != UpdateMode.ToolMenu && !HelpOverlay.Peek().EndsWith("Picker") )
                     //{
-                    //    if (KeyboardInput.IsPressed(Keys.Left))
+                    //    if (KeyboardInputX.IsPressed(Keys.Left))
                     //    {
                     //        parent.Camera.DesiredRotation -= 1.0f * Time.WallClockFrameSeconds * orbitSpeed;
                     //    }
-                    //    else if (KeyboardInput.IsPressed(Keys.Right))
+                    //    else if (KeyboardInputX.IsPressed(Keys.Right))
                     //    {
                     //        parent.Camera.DesiredRotation += 1.0f * Time.WallClockFrameSeconds * orbitSpeed;
                     //    }
@@ -234,10 +218,10 @@ namespace Boku
                             }
                             parent.Camera.DesiredDistance = desiredDistance;
                         }
-                        parent.MouseEdit.DoZoom(parent.Camera);
+                        //parent.MouseEdit.DoZoom(parent.Camera);
                     }
 
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                    if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                     {
                         parent.MouseEdit.DoCamera(parent.Camera);
                     }
@@ -254,10 +238,10 @@ namespace Boku
                     position += right * pad.LeftStick.X * Time.WallClockFrameSeconds * cursorSpeed * speedFactor;
 
                     // Numpad controls cursor position. NumLock must be on!
-                    float y = KeyboardInput.IsPressed(Keys.NumPad7) || KeyboardInput.IsPressed(Keys.NumPad8) || KeyboardInput.IsPressed(Keys.NumPad9) ? 1.0f : 0.0f;
-                    y += KeyboardInput.IsPressed(Keys.NumPad1) || KeyboardInput.IsPressed(Keys.NumPad2) || KeyboardInput.IsPressed(Keys.NumPad3) ? -1.0f : 0.0f;
-                    float x = KeyboardInput.IsPressed(Keys.NumPad3) || KeyboardInput.IsPressed(Keys.NumPad6) || KeyboardInput.IsPressed(Keys.NumPad9) ? 1.0f : 0.0f;
-                    x += KeyboardInput.IsPressed(Keys.NumPad1) || KeyboardInput.IsPressed(Keys.NumPad4) || KeyboardInput.IsPressed(Keys.NumPad7) ? -1.0f : 0.0f;
+                    float y = KeyboardInputX.IsPressed(Keys.NumPad7) || KeyboardInputX.IsPressed(Keys.NumPad8) || KeyboardInputX.IsPressed(Keys.NumPad9) ? 1.0f : 0.0f;
+                    y += KeyboardInputX.IsPressed(Keys.NumPad1) || KeyboardInputX.IsPressed(Keys.NumPad2) || KeyboardInputX.IsPressed(Keys.NumPad3) ? -1.0f : 0.0f;
+                    float x = KeyboardInputX.IsPressed(Keys.NumPad3) || KeyboardInputX.IsPressed(Keys.NumPad6) || KeyboardInputX.IsPressed(Keys.NumPad9) ? 1.0f : 0.0f;
+                    x += KeyboardInputX.IsPressed(Keys.NumPad1) || KeyboardInputX.IsPressed(Keys.NumPad4) || KeyboardInputX.IsPressed(Keys.NumPad7) ? -1.0f : 0.0f;
                     position += forward * y * Time.WallClockFrameSeconds * cursorSpeed * speedFactor;
                     position += right * x * Time.WallClockFrameSeconds * cursorSpeed * speedFactor;
 
@@ -374,12 +358,23 @@ namespace Boku
                 WayPoint.UpdateAllPaths(shared.camera);
 
                 // Toggle SnapToGrid?
-                if (KeyboardInput.WasPressed(Keys.F3))
+                if (KeyboardInputX.WasPressed(Keys.F3))
                 {
                     InGame.inGame.SnapToGrid = !InGame.inGame.SnapToGrid;
                 }
 
             }   // end of BaseEditUpdateObj UpdateWorld()
+
+            public void UpdateObjects()
+            {
+                // Update the list of objects using our local camera.
+                for (int i = 0; i < updateList.Count; i++)
+                {
+                    UpdateObject obj = (UpdateObject)updateList[i];
+                    obj.Update();
+                }
+                parent.UpdateObjects();
+            }
 
             /// <summary>
             /// Error accumulated due to snap to grid.
@@ -392,17 +387,15 @@ namespace Boku
             private void ToggleTouch3DCursor()
             {
                 bool hideCursor = true;
-                Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(shared.editBrushIndex);
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
 
-                if( (brush != null) && (brush.Type & Brush2DManager.BrushType.Selection) != 0)
+                if(brush.Shape == Brush2DManager.BrushShape.Magic)
                 {
                     hideCursor = false;
                 }
-                else if (
-                   (InGame.inGame.touchEditUpdateObj != null) &&
-                    ((InGame.inGame.touchEditUpdateObj.ToolBar.CurrentMode == BaseEditUpdateObj.ToolMode.WaterRaiseLower) ||
-                     (InGame.inGame.touchEditUpdateObj.ToolBar.CurrentMode == BaseEditUpdateObj.ToolMode.DeleteObjects))
-                )
+                else if ((InGame.inGame.touchEditUpdateObj != null) &&
+                    ((EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.Water) ||
+                     (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.EraseObjects)))
                 {
                     hideCursor = false;
                 }
@@ -421,8 +414,8 @@ namespace Boku
                 GamePadInput pad = GamePadInput.GetGamePad0();
 
                 if (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit
-                    && InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode != BaseEditUpdateObj.ToolMode.EditObject
-                    && InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode != BaseEditUpdateObj.ToolMode.Paths)
+                    && EditWorldScene.CurrentToolMode != EditWorldScene.ToolMode.EditObject
+                    && EditWorldScene.CurrentToolMode != EditWorldScene.ToolMode.Paths)
                 {
                     ColorPalette.Active = false;
                 }
@@ -432,12 +425,12 @@ namespace Boku
 
                 Vector2 newPosition = new Vector2(shared.CursorPosition.X, shared.CursorPosition.Y);
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     newPosition = parent.MouseEdit.DoTerrain(parent.Camera);
                     parent.Cursor3D.AltPosition = new Vector3(newPosition, 0);
                 }
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                else if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
 
                     newPosition = parent.TouchEdit.DoTerrain(parent.Camera);
@@ -496,18 +489,17 @@ namespace Boku
                 //
                 // Adjust brush size, but only if it's not the selection brush (handled elsewhere).
                 //
-                Brush2DManager.Brush2D brush
-                    = Brush2DManager.GetBrush(shared.editBrushIndex);
-                if (shared.editBrushSizeActive && (brush != null) && ((brush.Type & Brush2DManager.BrushType.Selection) == 0))
+                Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+                if (shared.editBrushSizeActive && brush.Shape != Brush2DManager.BrushShape.Magic)
                 {
                     if (InGame.inGame.SnapToGrid)
                     {
-                        if (Actions.BrushSmaller.WasPressedOrRepeat || InGame.inGame.touchEditUpdateObj.ToolBar.TouchBrushControls.IsToggled(Boku.ToolBar.TouchControls.BrushActionIDs.baBrushLess))
+                        if (Actions.BrushSmaller.WasPressedOrRepeat)
                         {
                             shared.editBrushRadius -= 0.5f;
                             shared.editBrushRadius = MathHelper.Max(0.5f, shared.editBrushRadius);
                         }
-                        if (Actions.BrushLarger.WasPressedOrRepeat || InGame.inGame.touchEditUpdateObj.ToolBar.TouchBrushControls.IsToggled(Boku.ToolBar.TouchControls.BrushActionIDs.baBrushMore))
+                        if (Actions.BrushLarger.WasPressedOrRepeat)
                         {
                             shared.editBrushRadius += 0.5f;
                         }
@@ -515,11 +507,11 @@ namespace Boku
                     else
                     {
                         const float brushGrowthRate = 1.0f;
-                        if (Actions.BrushSmaller.IsPressed || InGame.inGame.touchEditUpdateObj.ToolBar.TouchBrushControls.IsToggled(Boku.ToolBar.TouchControls.BrushActionIDs.baBrushLess))
+                        if (Actions.BrushSmaller.IsPressed)
                         {
                             shared.editBrushRadius *= 1.0f - brushGrowthRate * secs;
                         }
-                        if (Actions.BrushLarger.IsPressed || InGame.inGame.touchEditUpdateObj.ToolBar.TouchBrushControls.IsToggled(Boku.ToolBar.TouchControls.BrushActionIDs.baBrushMore))
+                        if (Actions.BrushLarger.IsPressed)
                         {
                             shared.editBrushRadius *= 1.0f + brushGrowthRate * secs;
                         }
@@ -532,7 +524,7 @@ namespace Boku
                     /// to the scene at once. We'll try for allowing the user 1/3 of the
                     /// budget at a single go (1/3 of the budget is the top of the green zone)
                     /// and see what kind of complaints we get.
-                    /// ***-taking it down further, for many benefits.
+                    /// maf-taking it down further, for many benefits.
                     if (shared.editBrushRadius > kMaxBrushRadius)
                     {
                         shared.editBrushRadius = kMaxBrushRadius;

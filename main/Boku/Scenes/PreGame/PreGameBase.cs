@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.Common;
@@ -85,9 +88,9 @@ namespace Boku
                     }
 
                     // Exit pre-game mode.
-                    if (KeyboardInput.WasPressed(Keys.Escape))
+                    if (KeyboardInputX.WasPressed(Keys.Escape))
                     {
-                        KeyboardInput.ClearAllWasPressedState(Keys.Escape);
+                        KeyboardInputX.ClearAllWasPressedState(Keys.Escape);
                         Active = false;
                     }
 

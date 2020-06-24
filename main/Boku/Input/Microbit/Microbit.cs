@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework;
 using System.IO.Ports;
 #endif
 
+using KoiX;
+
 using Boku.Common;
 
 namespace Boku.Input

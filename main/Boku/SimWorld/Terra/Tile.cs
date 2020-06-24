@@ -13,6 +13,9 @@ using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Common;
 using Microsoft.Xna.Framework.Graphics.PackedVector;
 using Microsoft.Xna.Framework.Input;
@@ -270,7 +273,7 @@ namespace Boku.SimWorld.Terra
 
                     #region Debug_DrawNormalsWithF8: Draw normals
 #if Debug_DrawNormalsWithF8
-                    if (KeyboardInput.IsPressed(Keys.F8))
+                    if (LowLevelKeyboardInput.IsPressed(Keys.F8))
                     {
                         device.Indices = normalsIBuff;
                         device.SetVertexBuffer(r.normalsVBuff);
@@ -687,10 +690,10 @@ namespace Boku.SimWorld.Terra
         {
             if (indexBuffer_FD != null)
             {
-                BokuGame.Release(ref indexBuffer_FD);
+                DeviceResetX.Release(ref indexBuffer_FD);
             }
 
-            var device = BokuGame.bokuGame.GraphicsDevice;
+            var device = KoiLibrary.GraphicsDevice;
             var ibuffer = new IndexBuffer(device, typeof(UInt16), numIndices, BufferUsage.WriteOnly);
 
             ibuffer.SetData<UInt16>(local, 0, numIndices);
@@ -709,7 +712,7 @@ namespace Boku.SimWorld.Terra
                 var localIdx = new UInt16[maxNormalIndices];
                 for (ushort i = 0; i < maxNormalIndices; i++)
                     localIdx[i] = i;
-                normalsIBuff = new IndexBuffer(BokuGame.bokuGame.GraphicsDevice, typeof(UInt16), maxNormalIndices, BufferUsage.WriteOnly);
+                normalsIBuff = new IndexBuffer(KoiLibrary.GraphicsDevice, typeof(UInt16), maxNormalIndices, BufferUsage.WriteOnly);
                 normalsIBuff.SetData(localIdx);
             }
 #endif
@@ -755,7 +758,7 @@ namespace Boku.SimWorld.Terra
 
         public static void UnloadContent()
         {
-            BokuGame.Release(ref indexBuffer_FD);
+            DeviceResetX.Release(ref indexBuffer_FD);
 
             indexBuffersInitialized = false;
         }   // end of UnloadContent()

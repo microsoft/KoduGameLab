@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Common;
 using TileProcessor;
 
@@ -286,7 +288,7 @@ namespace Boku.Base
             //Debug.Print("    break;");
 
 #if NETFX_CORE
-            // TODO (****) HACK HACK just hard code these to know values since
+            // TODO (scoy) HACK HACK just hard code these to know values since
             // I can't figure out what's going wrong in the content processing.
             switch (bone.Name)
             {
@@ -506,7 +508,7 @@ namespace Boku.Base
 
     public class StateRenderObj
     {
-        // TODO (****) make more specific.
+        // TODO (scoy) make more specific.
         private List<object> listMeshRenderObj;
         private BoundingSphere boundingSphere;
         private BoundingBox boundingBox;
@@ -539,7 +541,7 @@ namespace Boku.Base
         {
             get
             {
-                // TODO (****) make more specific.
+                // TODO (scoy) make more specific.
                 List<List<PartInfo>> listPartInfos = new List<List<PartInfo>>();
                 for (int iMesh = 0; iMesh < listMeshRenderObj.Count; iMesh++)
                 {
@@ -700,7 +702,7 @@ namespace Boku.Base
         public void Render(Camera camera, Matrix transform, List<PartInfo> listPartsReplacement)
         {
             Effect effect = Editor.Effect;
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             List<PartInfo> listParts = listPartInfo;
             if (listPartsReplacement != null)
@@ -719,7 +721,7 @@ namespace Boku.Base
             //
             //FillMode tempFillMode = device.RenderState.FillMode;
 
-            //device.RasterizerState = UI2D.Shared.RasterStateWireframe;
+            //device.RasterizerState = Shared.RasterStateWireframe;
 
             for (int indexMeshPart = 0; indexMeshPart < mesh.MeshParts.Count; indexMeshPart++)
             {

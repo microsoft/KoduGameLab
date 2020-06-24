@@ -1,12 +1,5 @@
 #define CAMERA_GHOSTING
 
-// Uncomment this to have rendertarget allocation info printed to output.
-//#define PRINT_RT_DEBUG
-
-#if DEBUG
-#define INSTRUMENT_RTS
-#endif // DEBUG
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +14,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Managers;
+using KoiX.Scenes;
+using KoiX.Text;
+using KoiX.UI.Dialogs;
 
 using Boku.Base;
 using Boku.Fx;
@@ -80,7 +79,6 @@ namespace Boku
             public bool editBrushMoved = false;     // Did the position change significantly?
             public bool editBrushAllowedForTouch = false; //allow edit brush changes to apply?  only true when the user is actively moving the cursor over non-UI sections of the screen
             public float editBrushRadius = 5.0f;
-            public int editBrushIndex = 0;          // Which brush we're painting with.
             public int editBrushTextureIndex = 0;   // The texture we're painting with or the heightmap mode (raise, lower, smooth, roughen)
             public bool editBrushSizeActive = true;
 
@@ -103,8 +101,6 @@ namespace Boku
             public ShowBudget budgetHUD = new ShowBudget();
 
             public ToolMenu toolMenu = new ToolMenu();
-            public ToolBox toolBox = new ToolBox();
-            public UIShim.RenderObj uiShim = null;
             public EditWorldParameters editWorldParameters = new EditWorldParameters();
             public EditObjectParameters editObjectParameters = new EditObjectParameters();
             public WayPointEdit editWayPoint = new WayPointEdit();
@@ -115,8 +111,6 @@ namespace Boku
             public TextLineDialog textLineDialog = null;         // Editor for single line text.
 
             public MicrobitPatternEditor microbitPatternEditor = null;
-            public ScrollableTextDisplay scrollableTextDisplay = null;  // Modal display for 'say' verb in fullscreen mode.
-            public TextDisplay smallTextDisplay = null;                 // Modal display for 'say' verb in fullscreen mode, for shorter messages.
 
             public ModularMessageDialog tooManyLightsMessage = null;
 
@@ -172,16 +166,6 @@ namespace Boku
                 }
             }
 
-
-            public ToolBox ToolBox
-            {
-                get { return toolBox; }
-            }
-            public UIShim.RenderObj UIShim
-            {
-                get { return uiShim; }
-            }
-
             /// <summary>
             /// Get the ToolMenu.
             /// </summary>
@@ -213,8 +197,6 @@ namespace Boku
                 textEditor = new TextEditor();
                 textLineDialog = new TextLineDialog();
                 microbitPatternEditor = new MicrobitPatternEditor();
-                scrollableTextDisplay = new ScrollableTextDisplay();
-                smallTextDisplay = new TextDisplay();
 
                 dustEmitter = new DustEmitter(particleSystemManager);
                 dustEmitter.AddToManager();
@@ -310,7 +292,6 @@ namespace Boku
                 BokuGame.Load(compass, immediate);
                 BokuGame.Load(particleSystemManager, immediate);
                 BokuGame.Load(toolMenu, immediate);
-                BokuGame.Load(toolBox, immediate);
                 BokuGame.Load(editWorldParameters, immediate);
                 BokuGame.Load(editObjectParameters, immediate);
 
@@ -319,8 +300,6 @@ namespace Boku
                 BokuGame.Load(textEditor, immediate);
                 BokuGame.Load(textLineDialog, immediate);
                 BokuGame.Load(microbitPatternEditor, immediate);
-                BokuGame.Load(scrollableTextDisplay, immediate);
-                BokuGame.Load(smallTextDisplay, immediate);
 
             }   // end of InGame Shared LoadContent()
 
@@ -333,8 +312,6 @@ namespace Boku
                 microbitPatternEditor.InitDeviceResources(device);
                 editObjectParameters.InitDeviceResources(device);
                 editWorldParameters.InitDeviceResources(device);
-                scrollableTextDisplay.InitDeviceResources(device);
-                smallTextDisplay.InitDeviceResources(device);
             }
 
             public void UnloadContent()
@@ -342,7 +319,6 @@ namespace Boku
                 BokuGame.Unload(compass);
                 BokuGame.Unload(particleSystemManager);
                 BokuGame.Unload(toolMenu);
-                BokuGame.Unload(toolBox);
                 BokuGame.Unload(editWorldParameters);
                 BokuGame.Unload(editObjectParameters);
 
@@ -351,8 +327,6 @@ namespace Boku
                 BokuGame.Unload(textEditor);
                 BokuGame.Unload(textLineDialog);
                 BokuGame.Unload(microbitPatternEditor);
-                BokuGame.Unload(scrollableTextDisplay);
-                BokuGame.Unload(smallTextDisplay);
             }   // end of InGame Shared UnloadContent()
 
             /// <summary>
@@ -364,7 +338,6 @@ namespace Boku
                 BokuGame.DeviceReset(compass, device);
                 BokuGame.DeviceReset(particleSystemManager, device);
                 BokuGame.DeviceReset(toolMenu, device);
-                BokuGame.DeviceReset(toolBox, device);
                 BokuGame.DeviceReset(editWorldParameters, device);
                 BokuGame.DeviceReset(editObjectParameters, device);
 
@@ -373,8 +346,6 @@ namespace Boku
                 BokuGame.DeviceReset(textEditor, device);
                 BokuGame.DeviceReset(textLineDialog, device);
                 BokuGame.DeviceReset(microbitPatternEditor, device);
-                BokuGame.DeviceReset(scrollableTextDisplay, device);
-                BokuGame.DeviceReset(smallTextDisplay, device);
             }
 
             #endregion
@@ -489,7 +460,7 @@ namespace Boku
             {
                 RestoreViewportToFull();
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 Microsoft.Xna.Framework.Rectangle dstRect = new Microsoft.Xna.Framework.Rectangle(0, 0, dst.Width, dst.Height);
                 // We need to use the current ScreenSize to set the srcRect.  This accounts
@@ -537,7 +508,7 @@ namespace Boku
                 {
                     FBXModel.LockLowLOD = FBXModel.LockLOD.kLow;
 
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                     // Set the rendertarget(s)
                     InGame.SetRenderTargets(distortRenderTarget0, distortRenderTarget1);
@@ -594,7 +565,7 @@ namespace Boku
             private void RenderShadowTexture()
             {
                 FBXModel.LockLowLOD = FBXModel.LockLOD.kLow;
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 // Set the rendertarget(s)
                 InGame.SetRenderTarget(shadowFullRenderTarget);
@@ -661,12 +632,12 @@ namespace Boku
                 // If the window size has changed, we need to reallocate the rendertargets.
                 ReallocateRenderTargets();
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 if (doDumpRT)
                 {
                     doDumpRT = false;
-                    DumpRT();
+                    SharedX.DumpRT();
                 }
 
                 if (InGame.inGame.saveLevelDialog.Active)
@@ -680,12 +651,14 @@ namespace Boku
                 // Only render effects if user wants them.
                 bool doEffects = BokuSettings.Settings.PostEffects;
 
+                /*
                 if (BokuGame.bokuGame.miniHub.PendingActive && !BokuGame.bokuGame.miniHub.Active)
                 {
                     // Let the mini-hub know where the blurred in game image is.
                     BokuGame.bokuGame.miniHub.InGameImage = SmallThumbNail;
                     RefreshThumbnail = true;
                 }
+                */
 
                 // Ensure the help overlay is up to date.
                 HelpOverlay.RefreshTexture();
@@ -698,14 +671,14 @@ namespace Boku
                 // which causes the UI experience to to bad.  Since the programming UI is the key
                 // UI that the user interacts with we need it to be as fluid as possible.
 
-                // TODO (****) This has gotten a bit out of hand.  Need to rethink the rendering
+                // TODO (scoy) This has gotten a bit out of hand.  Need to rethink the rendering
                 // order of everything and simplify this.
                 if (InGame.inGame.RenderWorldAsThumbnail && !InGame.RefreshThumbnail)
                 {
                     // We want to render everything to a rendertarget first and the
                     // stretch/scale that rendertarget to fit the actualy screen.  This
                     // Also lets us support tutorial mode.
-                    RenderTarget2D rt = UI2D.Shared.RenderTargetDepthStencil1280_720;
+                    RenderTarget2D rt = SharedX.RenderTargetDepthStencil1280_720;
                     Vector2 screenSize = BokuGame.ScreenSize;
                     Vector2 rtSize = new Vector2(rt.Width, rt.Height);
                     ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
@@ -728,14 +701,6 @@ namespace Boku
                     {
                         shared.microbitPatternEditor.Render();
                     }
-                    else if (shared.scrollableTextDisplay.Active && shared.scrollableTextDisplay.UseBackgroundThumbnail)
-                    {
-                        shared.scrollableTextDisplay.Render();
-                    }
-                    else if (shared.smallTextDisplay.Active && shared.smallTextDisplay.UseBackgroundThumbnail)
-                    {
-                        shared.smallTextDisplay.Render();
-                    }
                     else
                     {
 
@@ -754,7 +719,7 @@ namespace Boku
                             // In this case, just start with a black screen.
                             if (!smallThumb.GraphicsDevice.IsDisposed)
                             {
-                                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                                SpriteBatch batch = KoiLibrary.SpriteBatch;
                                 batch.Begin(SpriteSortMode.Deferred, BlendState.Opaque);
                                 {
                                     // Stretch thumbnail across whole screen.  Don't worry about distorting it
@@ -788,7 +753,7 @@ namespace Boku
                         // These are the parameter editing objects which, when activated also
                         // set shared.renderWorldAsThumbnail to true so this is the only place
                         // we need to consider rendering them.
-                        // TODO (****) Track this down and fix.
+                        // TODO (scoy) Track this down and fix.
                         // Note the try/catch clause is there because the UIGridTextListElement has
                         // something wrong with it that causes issues on device reset.  For some
                         // reason, after failing once everything works fine.
@@ -797,28 +762,10 @@ namespace Boku
                             if (shared.editWorldParameters.Active)
                             {
                                 shared.editWorldParameters.Render();
-
-                                if (shared.scrollableTextDisplay.Active)
-                                {
-                                    shared.scrollableTextDisplay.Render();
-                                }
-                                else if (shared.smallTextDisplay.Active)
-                                {
-                                    shared.smallTextDisplay.Render();
-                                }
                             }
                             if (shared.editObjectParameters.Active)
                             {
                                 shared.editObjectParameters.Render();
-
-                                if (shared.scrollableTextDisplay.Active)
-                                {
-                                    shared.scrollableTextDisplay.Render();
-                                }
-                                else if (shared.smallTextDisplay.Active)
-                                {
-                                    shared.smallTextDisplay.Render();
-                                }
                             }
                         }
                         catch
@@ -831,7 +778,7 @@ namespace Boku
                         {
                             SetViewportToScreen();
 
-                            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                            SpriteBatch batch = KoiLibrary.SpriteBatch;
                             batch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
                             {
                                 float scale = BokuGame.ScreenSize.Y / (float)rt.Height;
@@ -903,21 +850,23 @@ namespace Boku
                         //  Start by rendering opaque objects.
                         //
                         //
+                        
                         bool editingTerrain = InGame.inGame.EditingTerrain
                                             || (InGame.inGame.CurrentUpdateMode == UpdateMode.TouchEdit && InGame.inGame.touchEditUpdateObj.EditingTerrain)
                                             || (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && InGame.inGame.mouseEditUpdateObj.EditingTerrain)
-                                            || (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.DeleteObjects && !InGame.inGame.mouseEditUpdateObj.ToolBar.Hovering);
+                                            || (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.EraseObjects && !InGame.inGame.mouseEditUpdateObj.ToolBar.Hovering);
+                        
+                        bool renderBrush = ToolBarDialog.IsActive && ToolBarDialog.NeedsBrush;
 
                         // If the alt key is pressed, then don't display the terrain brushes since we're in eyedropper mode.
                         // It feels like there should be a better way to do this...
-                        if (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.TerrainPaint && KeyboardInput.AltIsPressed)
+                        if (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainPaint && KeyboardInputX.AltIsPressed)
                         {
-                            editingTerrain = false;
+                            renderBrush = false;
                         }
 
                         // Depending on mode, render terrain with either a visible brush and no shadows or with shadows.
-                        // If the brush index is -1 then don't render the brush.
-                        if (editingTerrain && shared.editBrushIndex != -1)
+                        if (renderBrush)
                         {
                             // Render the terrain with brush.
                             InGame.inGame.terrain.RenderEditMode(
@@ -925,8 +874,7 @@ namespace Boku
                                 shadowTexture,
                                 shared.editBrushPosition,
                                 shared.editBrushStart,
-                                shared.editBrushRadius,
-                                shared.editBrushIndex);
+                                shared.editBrushRadius);
                         }
                         else
                         {
@@ -964,14 +912,10 @@ namespace Boku
                                 WayPoint.Alpha = 1.0f;
                             }
 
-                            bool editingTerrainHeights = InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == BaseEditUpdateObj.ToolMode.TerrainRaiseLower
-                                                        || InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == BaseEditUpdateObj.ToolMode.TerrainSmoothLevel
-                                                        || InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == BaseEditUpdateObj.ToolMode.TerrainSpikeyHilly;
-
                             if (
                                 (InGame.inGame.CurrentUpdateMode == UpdateMode.ToolBox && InGame.inGame.terrain.Editing)
-                                || (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && InGame.inGame.mouseEditUpdateObj.EditingTerrain && editingTerrainHeights)
-                                || (InGame.inGame.CurrentUpdateMode == UpdateMode.TouchEdit && InGame.inGame.touchEditUpdateObj.EditingTerrain && editingTerrainHeights)
+                                || (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && EditWorldScene.EditingTerrain)
+                                || (InGame.inGame.CurrentUpdateMode == UpdateMode.TouchEdit && EditWorldScene.EditingTerrain)
                                 )
                             {
                                 // If editing the height map the path node positions may need
@@ -1042,7 +986,7 @@ namespace Boku
                         if (InGame.inGame.CurrentUpdateMode != UpdateMode.RunSim)
                         {
                             // Display lines for creatables/clones.
-                            if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                            if (KoiLibrary.LastTouchedDeviceIsGamepad)
                             {
                                 // GamePad input version.
                                 if (InGame.inGame.editObjectUpdateObj.LastSelectedActor != null)
@@ -1050,10 +994,10 @@ namespace Boku
                                     InGame.inGame.editObjectUpdateObj.LastSelectedActor.DisplayCreatableLines(shared.camera);
                                 }
                             }
-                            else if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                            else if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                             {
                                 // Key/Mouse input version.
-                                if (InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.EditObject)
+                                if (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.EditObject)
                                 {
                                     GameActor focus = InGame.inGame.mouseEditUpdateObj.ToolBox.EditObjectsToolInstance.FocusActor;
                                     if (focus != null)
@@ -1065,7 +1009,7 @@ namespace Boku
                             else
                             {
                                 //Touch input version
-                                if (InGame.inGame.touchEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.EditObject)
+                                if (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.EditObject)
                                 {
                                     GameActor focus = InGame.inGame.touchEditUpdateObj.ToolBox.EditObjectsToolInstance.FocusActor;
                                     if (focus != null)
@@ -1082,22 +1026,22 @@ namespace Boku
                             {
                                 Vector3 cursorPos = Vector3.Zero;
 
-                                if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                                if (KoiLibrary.LastTouchedDeviceIsGamepad)
                                 {
                                     cursorPos = InGame.inGame.Cursor3D.Position;
                                 }
-                                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                                else if (KoiLibrary.LastTouchedDeviceIsTouch)
                                 {
                                     TouchEdit touchEdit = Boku.InGame.inGame.TouchEdit;
-                                    TouchEdit.TouchHitInfo hitInfo = TouchEdit.HitInfo;
-                                    cursorPos = hitInfo.TerrainPosition;
+                                    HitInfo MouseTouchHitInfo = TouchEdit.MouseTouchHitInfo;
+                                    cursorPos = MouseTouchHitInfo.TerrainPosition;
                                 }
                                 else
                                 {
                                     MouseEdit mouseEdit = Boku.InGame.inGame.MouseEdit;
-                                    MouseEdit.MouseHitInfo hitInfo = MouseEdit.HitInfo;
+                                    HitInfo MouseTouchHitInfo = MouseEdit.MouseTouchHitInfo;
 
-                                    cursorPos = hitInfo.TerrainPosition;
+                                    cursorPos = MouseTouchHitInfo.TerrainPosition;
                                 }
 
                                 for (int i = 0; i < InGame.inGame.gameThingList.Count; i++)
@@ -1188,10 +1132,10 @@ namespace Boku
                             InGame.SetRenderTarget(effectsRenderTarget);
 
                             // Clear to get the same results as rendering the skybox w/ DepthPass true.
-                            // TODO (****) The comment above mentions that we don't need to clear the depth buffer
+                            // TODO (scoy) The comment above mentions that we don't need to clear the depth buffer
                             // but this version of clear does clear the depth buffer.  Is that a problem???
                             
-                            // TODO (****) Why clear to transparent red???
+                            // TODO (scoy) Why clear to transparent red???
                             InGame.Clear(new Color(1, 0, 0, 0));
 
                             // Render the terrain.
@@ -1313,7 +1257,7 @@ namespace Boku
                             }
 
                             RestoreViewportToFull();
-                            InGame.Clear(Color.Black);      // TODO (****) not needed???
+                            InGame.Clear(Color.Black);      // TODO (scoy) not needed???
 
                             if (InGame.RefreshThumbnail)
                             {
@@ -1385,7 +1329,7 @@ namespace Boku
                             InGame.RestoreRenderTarget();
 
                             // Not rendering effects, so just do a copy.
-                            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                            SpriteBatch batch = KoiLibrary.SpriteBatch;
                             batch.Begin(SpriteSortMode.Deferred, BlendState.Opaque);
                             {
                                 // Note, fullRenderTarget0 may be larger than the current screen so only take the part we care about. 
@@ -1399,7 +1343,7 @@ namespace Boku
                     else
                     {
                         // We're in frame skipping mode so just use the last rendering of the world.
-                        SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                        SpriteBatch batch = KoiLibrary.SpriteBatch;
                         batch.Begin(SpriteSortMode.Deferred, BlendState.Opaque);
                         Microsoft.Xna.Framework.Rectangle dstRect = new Microsoft.Xna.Framework.Rectangle((int)BokuGame.ScreenPosition.X, (int)BokuGame.ScreenPosition.Y, (int)BokuGame.ScreenSize.X, (int)BokuGame.ScreenSize.Y);
                         batch.Draw(fullRenderTarget0, dstRect, Color.White);
@@ -1412,9 +1356,7 @@ namespace Boku
                     // Render touch cursor (if any touches).  Note this MUST be after viewport is set.
                     RenderTouchCursor();
 
-                    bool active3DMenus = shared.ToolBox.Active
-                        || shared.ToolMenu.Active
-                        || shared.UIShim.Active
+                    bool active3DMenus = shared.ToolMenu.Active
                         || InGame.inGame.CurrentUpdateMode == UpdateMode.EditObject
                         || InGame.inGame.mouseEditUpdateObj.ToolBox.Active
                         || InGame.inGame.touchEditUpdateObj.ToolBox.Active;
@@ -1462,8 +1404,8 @@ namespace Boku
 
                     if (shared.SnapToGrid)
                     {
-                        SpriteBatch batch = UI2D.Shared.SpriteBatch;
-                        UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont18Bold;
+                        SpriteBatch batch = KoiLibrary.SpriteBatch;
+                        GetFont Font = KoiX.SharedX.GetGameFont18Bold;
 
                         Color shadowColor = new Color(0, 0, 0, 200);
                         Color textColor = new Color(240, 240, 240);
@@ -1473,18 +1415,18 @@ namespace Boku
                         if (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit)
                         {
                             Vector3 loc = Vector3.Zero;
-                            if (MouseEdit.HitInfo.ActorHit != null && InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.EditObject)
+                            if (MouseEdit.MouseTouchHitInfo.ActorHit != null && EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.EditObject)
                             {
-                                loc = MouseEdit.HitInfo.ActorHit.Movement.Position;
+                                loc = MouseEdit.MouseTouchHitInfo.ActorHit.Movement.Position;
                             }
                             else
                             {
-                                loc = MouseEdit.HitInfo.TerrainPosition;
+                                loc = MouseEdit.MouseTouchHitInfo.TerrainPosition;
                             }
                             position = new Vector2(loc.X * 2.0f, loc.Y * 2.0f);
 
-                            if (InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.TerrainPaint
-                                || InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.TerrainRaiseLower)
+                            if (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainPaint
+                                || EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainRaiseLower)
                             {
                                 brushInUse = true;
                             }
@@ -1492,18 +1434,18 @@ namespace Boku
                         else if (InGame.inGame.CurrentUpdateMode == UpdateMode.TouchEdit)
                         {
                             Vector3 loc = Vector3.Zero;
-                            if (TouchEdit.HitInfo.ActorHit != null && InGame.inGame.touchEditUpdateObj.ToolBar.CurrentMode == TouchEditUpdateObj.ToolMode.EditObject)
+                            if (TouchEdit.MouseTouchHitInfo.ActorHit != null && EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.EditObject)
                             {
-                                loc = TouchEdit.HitInfo.ActorHit.Movement.Position;
+                                loc = TouchEdit.MouseTouchHitInfo.ActorHit.Movement.Position;
                             }
                             else
                             {
-                                loc = TouchEdit.HitInfo.TerrainPosition;
+                                loc = TouchEdit.MouseTouchHitInfo.TerrainPosition;
                             }
                             position = new Vector2(loc.X * 2.0f, loc.Y * 2.0f);
 
-                            if (InGame.inGame.touchEditUpdateObj.ToolBar.CurrentMode == TouchEditUpdateObj.ToolMode.TerrainPaint
-                                || InGame.inGame.touchEditUpdateObj.ToolBar.CurrentMode == TouchEditUpdateObj.ToolMode.TerrainRaiseLower)
+                            if (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainPaint
+                                || EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainRaiseLower)
                             {
                                 brushInUse = true;
                             }
@@ -1561,8 +1503,8 @@ namespace Boku
                 {
                     string str = "[PINCH DEBUG] State:" + pinchGesture.GetPinchState() + ", Scale: " + pinchGesture.Scale + ", Normal: " + TouchEdit.s_lastNormal;
 
-                    SpriteBatch batch = UI2D.Shared.SpriteBatch;
-                    UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont18Bold;
+                    SpriteBatch batch = KoiLibrary.SpriteBatch;
+                    GetFont Font = Shared.GetGameFont18Bold;
 
                     Color textColor = new Color(50, 50, 200);
 
@@ -1582,60 +1524,6 @@ namespace Boku
 
 #endif
 
-                // JW - Moved up one block so that the MouseMenus render on top of the toolbar and color palette.
-                // Keep tools on top.
-                // These should be no-ops if !active3DMenus.
-                shared.ToolBox.Render();
-                shared.ToolMenu.Render();
-                InGame.inGame.mouseEditUpdateObj.ToolBox.Render();
-                InGame.inGame.touchEditUpdateObj.ToolBox.Render();
-
-                // ToolBar and any active menus if in mouse edit mode.
-                if (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && 
-                    !InGame.inGame.mouseEditUpdateObj.ToolBox.PickersActive && 
-                    !InGame.inGame.mouseEditUpdateObj.ToolBox.SlidersActive)
-                {
-                    // Don't show any of the mouse edit menus if the AddItem help, programming editor, text editor or pattern editor is active.
-                    if (!InGame.inGame.shared.addItemHelpCard.Active && !InGame.inGame.Editor.Active && !InGame.inGame.shared.textEditor.Active && !InGame.inGame.shared.textLineDialog.Active && !InGame.inGame.shared.editObjectParameters.Active && !InGame.inGame.shared.editWorldParameters.Active && !InGame.inGame.shared.microbitPatternEditor.Active)
-                    {
-                        // Don't show the toolbar if the user is in camera set mode.
-                        if (!EditWorldParameters.CameraSetMode)
-                        {
-                            InGame.inGame.mouseEditUpdateObj.ToolBar.Render();
-                        }
-
-                        InGame.inGame.mouseEditUpdateObj.ToolBox.EditObjectsToolInstance.NoActorMenu.Render();
-                        InGame.inGame.mouseEditUpdateObj.ToolBox.EditObjectsToolInstance.ActorMenu.Render();
-
-                        InGame.inGame.mouseEditUpdateObj.ToolBox.EditPathsToolInstance.GroundMenu.Render();
-                        InGame.inGame.mouseEditUpdateObj.ToolBox.EditPathsToolInstance.NodeMenu.Render();
-                        InGame.inGame.mouseEditUpdateObj.ToolBox.EditPathsToolInstance.EdgeMenu.Render();
-                    }
-                }
-                else if (InGame.inGame.CurrentUpdateMode == UpdateMode.TouchEdit && 
-                    !InGame.inGame.touchEditUpdateObj.ToolBox.PickersActive &&
-                    !InGame.inGame.touchEditUpdateObj.ToolBox.SlidersActive)
-                {
-                    // Don't show any of the touch edit menus if the AddItem help, programming editor, text editor or pattern editor is active.
-                    if (!InGame.inGame.shared.addItemHelpCard.Active && !InGame.inGame.Editor.Active && !InGame.inGame.shared.textEditor.Active && !InGame.inGame.shared.textLineDialog.Active && !InGame.inGame.shared.editObjectParameters.Active && !InGame.inGame.shared.editWorldParameters.Active && !InGame.inGame.shared.microbitPatternEditor.Active)
-                    {
-                        // Don't show the toolbar if the user is in camera set mode.
-                        if (!EditWorldParameters.CameraSetMode)
-                        {
-                           InGame.inGame.touchEditUpdateObj.ToolBar.Render();
-                        }
-
-                        InGame.inGame.touchEditUpdateObj.ToolBox.EditObjectsToolInstance.NoActorMenu.Render();
-                        InGame.inGame.touchEditUpdateObj.ToolBox.EditObjectsToolInstance.ActorMenu.Render();
-
-                        InGame.inGame.touchEditUpdateObj.ToolBox.EditPathsToolInstance.GroundMenu.Render();
-                        InGame.inGame.touchEditUpdateObj.ToolBox.EditPathsToolInstance.NodeMenu.Render();
-                        InGame.inGame.touchEditUpdateObj.ToolBox.EditPathsToolInstance.EdgeMenu.Render();
-                    }
-                }
-
-                // Render the pie menu.
-                shared.UIShim.Render(shared.camera);
 
                 // Tool tips.
                 ToolTipManager.Render(shared.camera);
@@ -1644,7 +1532,7 @@ namespace Boku
                 HelpOverlay.Render();
 
                 // Restore Viewport from tutorial mode.
-                // TODO (****) Try to keep pushing this furthter down until everything
+                // TODO (scoy) Try to keep pushing this further down until everything
                 // renders with the modified viewport.
                 RestoreViewportToFull();
 
@@ -1722,28 +1610,28 @@ namespace Boku
             /// </summary>
             public void ReallocateRenderTargets()
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 int width = (int)(BokuGame.ScreenPosition.X + BokuGame.ScreenSize.X);
                 int height = (int)(BokuGame.ScreenPosition.Y + BokuGame.ScreenSize.Y);
 
                 if (fullRenderTarget0 == null || fullRenderTarget0.Width != width || fullRenderTarget0.Height != height)
                 {
                     // Release everything we're going to reallocate.
-                    BokuGame.Release(ref fullRenderTarget0);
-                    BokuGame.Release(ref fullRenderTarget1);
-                    BokuGame.Release(ref effectsRenderTarget);
-                    BokuGame.Release(ref distortRenderTarget0);
-                    BokuGame.Release(ref distortRenderTarget1);
-                    BokuGame.Release(ref smallRenderTarget0);
-                    BokuGame.Release(ref smallNoEffect);
-                    BokuGame.Release(ref smallEffectThumb);
-                    BokuGame.Release(ref bloomRenderTarget);
-                    BokuGame.Release(ref glowRenderTarget);
-                    BokuGame.Release(ref tinyRenderTarget0);
-                    BokuGame.Release(ref shadowFullRenderTarget);
-                    BokuGame.Release(ref shadowSmallRenderTarget0);
-                    BokuGame.Release(ref shadowSmallRenderTarget1);
-                    BokuGame.Release(ref thumbRenderTarget);
+                    DeviceResetX.Release(ref fullRenderTarget0);
+                    DeviceResetX.Release(ref fullRenderTarget1);
+                    DeviceResetX.Release(ref effectsRenderTarget);
+                    DeviceResetX.Release(ref distortRenderTarget0);
+                    DeviceResetX.Release(ref distortRenderTarget1);
+                    DeviceResetX.Release(ref smallRenderTarget0);
+                    DeviceResetX.Release(ref smallNoEffect);
+                    DeviceResetX.Release(ref smallEffectThumb);
+                    DeviceResetX.Release(ref bloomRenderTarget);
+                    DeviceResetX.Release(ref glowRenderTarget);
+                    DeviceResetX.Release(ref tinyRenderTarget0);
+                    DeviceResetX.Release(ref shadowFullRenderTarget);
+                    DeviceResetX.Release(ref shadowSmallRenderTarget0);
+                    DeviceResetX.Release(ref shadowSmallRenderTarget1);
+                    DeviceResetX.Release(ref thumbRenderTarget);
 
                     int numSamples = BokuSettings.Settings.AntiAlias ? 8 : 1;
 #if NETFX_CORE
@@ -1795,26 +1683,26 @@ namespace Boku
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref effectsRenderTarget);
-                BokuGame.Release(ref distortRenderTarget0);
-                BokuGame.Release(ref distortRenderTarget1);
+                DeviceResetX.Release(ref effectsRenderTarget);
+                DeviceResetX.Release(ref distortRenderTarget0);
+                DeviceResetX.Release(ref distortRenderTarget1);
 
-                BokuGame.Release(ref fullRenderTarget0);
-                BokuGame.Release(ref fullRenderTarget1);
-                BokuGame.Release(ref smallRenderTarget0);
-                BokuGame.Release(ref smallEffectThumb);
-                BokuGame.Release(ref smallNoEffect);
-                BokuGame.Release(ref thumbRenderTarget);
+                DeviceResetX.Release(ref fullRenderTarget0);
+                DeviceResetX.Release(ref fullRenderTarget1);
+                DeviceResetX.Release(ref smallRenderTarget0);
+                DeviceResetX.Release(ref smallEffectThumb);
+                DeviceResetX.Release(ref smallNoEffect);
+                DeviceResetX.Release(ref thumbRenderTarget);
 
-                BokuGame.Release(ref shadowFullRenderTarget);
-                BokuGame.Release(ref shadowSmallRenderTarget0);
-                BokuGame.Release(ref shadowSmallRenderTarget1);
+                DeviceResetX.Release(ref shadowFullRenderTarget);
+                DeviceResetX.Release(ref shadowSmallRenderTarget0);
+                DeviceResetX.Release(ref shadowSmallRenderTarget1);
 
                 ShadowCamera.ReleaseShadowMask();
 
-                BokuGame.Release(ref bloomRenderTarget);
-                BokuGame.Release(ref glowRenderTarget);
-                BokuGame.Release(ref tinyRenderTarget0);
+                DeviceResetX.Release(ref bloomRenderTarget);
+                DeviceResetX.Release(ref glowRenderTarget);
+                DeviceResetX.Release(ref tinyRenderTarget0);
 
                 BokuGame.Unload(copyFilter);
                 BokuGame.Unload(boxFilter);
@@ -1914,7 +1802,7 @@ namespace Boku
                         touchCursorRenderPos = targetCursorPos;
                     }
                 
-                    SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                    SpriteBatch batch = KoiLibrary.SpriteBatch;
                     batch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
                     {
                         Vector2 pos = touchCursorRenderPos - cursorSize / 2.0f;
@@ -1948,19 +1836,19 @@ namespace Boku
                     && InGame.inGame.CurrentUpdateMode != UpdateMode.SelectNextLevel
                     && InGame.inGame.CurrentUpdateMode != UpdateMode.EditObjectParameters)
                 {
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad &&
+                    if (KoiLibrary.LastTouchedDeviceIsGamepad &&
                         (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit || InGame.inGame.CurrentUpdateMode == UpdateMode.TouchEdit))
                     {
                         InGame.inGame.CurrentUpdateMode = UpdateMode.ToolMenu;
                     }
-                    else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch &&
+                    else if (KoiLibrary.LastTouchedDeviceIsTouch &&
                         (InGame.inGame.CurrentUpdateMode != UpdateMode.TouchEdit ))
                     {
                         InGame.inGame.CurrentUpdateMode = UpdateMode.TouchEdit;
                     }
 
                     // Touch also uses UpdateMode.MouseEdit;
-                    else if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse && InGame.inGame.CurrentUpdateMode != UpdateMode.MouseEdit)
+                    else if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse && InGame.inGame.CurrentUpdateMode != UpdateMode.MouseEdit)
                     {
                         InGame.inGame.CurrentUpdateMode = UpdateMode.MouseEdit;
                     }
@@ -2143,34 +2031,6 @@ namespace Boku
             get { return saveLevelDialog.Active || ModularMessageDialogManager.Instance.IsDialogActive(); }
         }
 
-        //helper function that will, if appropriate, update the touch and mouse edit return modes to 
-        //ensure consistenty when switching between input types
-        public static void SetReturnEditMode(BaseEditUpdateObj.ToolMode currentMode)
-        {
-            //store the mode in case we return
-            //also update touch return mode, so if we switch there, the mode will be preserved
-            switch (currentMode)
-            {
-                case InGame.BaseEditUpdateObj.ToolMode.DeleteObjects:
-                case InGame.BaseEditUpdateObj.ToolMode.EditObject:
-                case InGame.BaseEditUpdateObj.ToolMode.Paths:
-                case InGame.BaseEditUpdateObj.ToolMode.TerrainPaint:
-                case InGame.BaseEditUpdateObj.ToolMode.TerrainRaiseLower:
-                case InGame.BaseEditUpdateObj.ToolMode.TerrainSmoothLevel:
-                case InGame.BaseEditUpdateObj.ToolMode.TerrainSpikeyHilly:
-                case InGame.BaseEditUpdateObj.ToolMode.WaterRaiseLower:
-                    //for edit-related modes, set the return mode when de-activating on both touch and mouse
-                    //this ensures we return as expected and can switch modes without hitches
-                    InGame.inGame.touchEditUpdateObj.ReturnMode = currentMode;
-                    InGame.inGame.mouseEditUpdateObj.ReturnMode = currentMode;
-                    break;
-                default:
-                    //for all others, don't adjust the return mode
-                    break;
-
-            }
-        }
-
         public RenderTarget2D EffectsRenderTarget
         {
             get { return renderObj.EffectsRenderTarget; }
@@ -2222,7 +2082,7 @@ namespace Boku
         }
         static public void Clear(Color color)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             ClearOptions options = ClearOptions.Target;
 
             // See if we have a depth buffer before trying to clear it.
@@ -2239,13 +2099,13 @@ namespace Boku
         }
         static public void SetRenderTarget(RenderTarget2D targ)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             device.SetRenderTarget(targ);
         }
 
         static public Vector2 GetCurrentRenderTargetSize()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Vector2 result = Vector2.Zero;
 
             RenderTargetBinding[] bindings = device.GetRenderTargets();
@@ -2262,7 +2122,7 @@ namespace Boku
 
         static public RenderTarget2D GetCurrentRenderTarget()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             RenderTarget2D result = null;
 
             RenderTargetBinding[] bindings = device.GetRenderTargets();
@@ -2280,7 +2140,7 @@ namespace Boku
         /// <param name="targ1"></param>
         static public void SetRenderTargets(RenderTarget2D targ0, RenderTarget2D targ1)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             RenderTargetBinding[] bindings =
             {
                 new RenderTargetBinding(targ0),
@@ -2290,7 +2150,7 @@ namespace Boku
             device.SetRenderTargets(bindings);
         }
 
-        // TODO (****) There's something not right here since topLevelRenderTarget
+        // TODO (scoy) There's something not right here since topLevelRenderTarget
         // never gets set.  Maybe what we really want is some kind of stack
         // mechanism so we can push/pop the current rendertarget.  This would help
         // out with on-demand loading of things like CardSpace tile textures.
@@ -2299,7 +2159,7 @@ namespace Boku
         public static RenderTarget2D topLevelRenderTarget = null;
         static public void RestoreRenderTarget()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             device.SetRenderTarget(topLevelRenderTarget);
         }
@@ -2313,7 +2173,7 @@ namespace Boku
         {
             try
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 Viewport vp = device.Viewport;
 
                 vp.X = (int)BokuGame.ScreenPosition.X;
@@ -2329,7 +2189,7 @@ namespace Boku
         }
         static public void RestoreViewportToFull()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             if (originalViewport.Width > 0)
             {
@@ -2338,7 +2198,7 @@ namespace Boku
         }
         static public void CaptureFullViewport()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             originalViewport = device.Viewport;
         }
         /// <summary>
@@ -2348,7 +2208,7 @@ namespace Boku
         {
             try
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 Viewport vp = device.Viewport;
 
                 Vector2 size = GetCurrentRenderTargetSize();
@@ -2519,13 +2379,12 @@ namespace Boku
             return false;
         }
 
-        protected void UpdateObjects()
+        public void UpdateObjects()
         {
-            /// Give the MouseEdit subsystem a chance to cache away anything we're
-            /// moused over.
+            // Give the MouseEdit subsystem a chance to cache away anything we're
+            // moused over.  Note that this is used for both editing the world and
+            // to support the MouseSensor when in RunSim.
             MouseEdit.Update(shared.camera);
-
-            saveLevelDialog.Update();
 
             // Fake running at slow frame rate.
             //System.Threading.Thread.Sleep(100); // DEBUG ONLY HACK  REMOVE BEFORE CHECKING IN!!!
@@ -2812,10 +2671,6 @@ namespace Boku
         {
             renderObj.PopBatching(on);
         }
-        public void SetUIShim(UIShim.RenderObj uiShim)
-        {
-            shared.uiShim = uiShim;
-        }
 
         #region Accessors
         public bool EditingTerrain
@@ -2829,7 +2684,7 @@ namespace Boku
                     || InGame.inGame.CurrentUpdateMode == UpdateMode.TerrainRoughHill
                     || InGame.inGame.CurrentUpdateMode == UpdateMode.DeleteObjects
                     || (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit && InGame.inGame.mouseEditUpdateObj.EditingTerrain)
-                    || (InGame.inGame.CurrentUpdateMode == UpdateMode.TouchEdit && InGame.inGame.touchEditUpdateObj.EditingTerrain); ;
+                    || (InGame.inGame.CurrentUpdateMode == UpdateMode.TouchEdit && InGame.inGame.touchEditUpdateObj.EditingTerrain);
             }
         }
         public States State
@@ -2858,10 +2713,6 @@ namespace Boku
                     if (currentUpdateMode == UpdateMode.RunSim)
                     {
                         SavePlayModeCamera();
-
-                        // Also, if any text dialogs are up, shut them down.
-                        shared.smallTextDisplay.Deactivate();
-                        shared.scrollableTextDisplay.Deactivate();
                     }
                     else
                     {
@@ -2911,12 +2762,10 @@ namespace Boku
                         case UpdateMode.TerrainFlatten:
                         case UpdateMode.TerrainRoughHill:
                             pendingUpdateObj = toolBoxUpdateObj;
-                            toolBoxUpdateObj.CurrentMode = value;
                             break;
 
                         case UpdateMode.DeleteObjects:
                             pendingUpdateObj = toolBoxUpdateObj;
-                            toolBoxUpdateObj.CurrentMode = value;
                             break;
 
                         default:
@@ -2963,9 +2812,12 @@ namespace Boku
             get { return xmlWorldData.lightRig; }
             set
             {
-                xmlWorldData.lightRig = value;
-                BokuGame.bokuGame.shaderGlobals.SetLightRig(value);
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.lightRig = value;
+                    BokuGame.bokuGame.shaderGlobals.SetLightRig(value);
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
 
@@ -2974,9 +2826,12 @@ namespace Boku
             get { return xmlWorldData.windMin; }
             set
             {
-                xmlWorldData.windMin = value;
-                ShaderGlobals.WindMin = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.windMin = value;
+                    ShaderGlobals.WindMin = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static float WindMax
@@ -2984,9 +2839,12 @@ namespace Boku
             get { return xmlWorldData.windMax; }
             set
             {
-                xmlWorldData.windMax = value;
-                ShaderGlobals.WindMax = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.windMax = value;
+                    ShaderGlobals.WindMax = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         /// <summary>
@@ -2998,8 +2856,11 @@ namespace Boku
             get { return xmlWorldData.debugPathFollow; }
             set
             {
-                xmlWorldData.debugPathFollow = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.debugPathFollow = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         /// <summary>
@@ -3059,10 +2920,13 @@ namespace Boku
             get { return xmlWorldData != null ? xmlWorldData.foleyVolume : 1.0f; }
             set
             {
-                xmlWorldData.foleyVolume = value;
-                float total = value * XmlOptionsData.FoleyVolume;
-                BokuGame.Audio.SetVolume("Foley", total);
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.foleyVolume = value;
+                    float total = value * XmlOptionsData.FoleyVolume;
+                    BokuGame.Audio.SetVolume("Foley", total);
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static float LevelMusicVolume
@@ -3070,19 +2934,25 @@ namespace Boku
             get { return xmlWorldData != null ? xmlWorldData.musicVolume : 1.0f; }
             set
             {
-                xmlWorldData.musicVolume = value;
-                float total = value * XmlOptionsData.MusicVolume;
-                BokuGame.Audio.SetVolume("Music", total);
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.musicVolume = value;
+                    float total = value * XmlOptionsData.MusicVolume;
+                    BokuGame.Audio.SetVolume("Music", total);
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static float CameraSpringStrength
         {
-            get { return xmlWorldData.cameraSpringStrength; }
+            get { return xmlWorldData == null ? 1.0f : xmlWorldData.cameraSpringStrength; }
             set
             {
-                xmlWorldData.cameraSpringStrength = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.cameraSpringStrength = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static bool StartingCamera
@@ -3090,8 +2960,11 @@ namespace Boku
             get { return xmlWorldData.startingCamera; }
             set
             {
-                xmlWorldData.startingCamera = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.startingCamera = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static Vector3 StartingCameraFrom
@@ -3099,9 +2972,12 @@ namespace Boku
             get { return xmlWorldData.startingCameraFrom; }
             set
             {
-                Debug.Assert(!float.IsNaN(value.X));
-                xmlWorldData.startingCameraFrom = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    Debug.Assert(!float.IsNaN(value.X));
+                    xmlWorldData.startingCameraFrom = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static Vector3 StartingCameraAt
@@ -3109,8 +2985,11 @@ namespace Boku
             get { return xmlWorldData.startingCameraAt; }
             set
             {
-                xmlWorldData.startingCameraAt = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.startingCameraAt = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static float StartingCameraRotation
@@ -3118,8 +2997,11 @@ namespace Boku
             get { return xmlWorldData.startingCameraRotation; }
             set
             {
-                xmlWorldData.startingCameraRotation = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.startingCameraRotation = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static float StartingCameraPitch
@@ -3127,8 +3009,11 @@ namespace Boku
             get { return xmlWorldData.startingCameraPitch; }
             set
             {
-                xmlWorldData.startingCameraPitch = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.startingCameraPitch = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static float StartingCameraDistance
@@ -3136,8 +3021,11 @@ namespace Boku
             get { return xmlWorldData.startingCameraDistance; }
             set
             {
-                xmlWorldData.startingCameraDistance = value;
-                InGame.IsLevelDirty = true;
+                if (xmlWorldData != null)
+                {
+                    xmlWorldData.startingCameraDistance = value;
+                    InGame.IsLevelDirty = true;
+                }
             }
         }
         public static bool ShowVirtualController
@@ -3165,11 +3053,11 @@ namespace Boku
             get
             {
                 GameActor actor = null;
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     actor = mouseEdit.HighLit;
                 }
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                else if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     actor = touchEdit.HighLit;
                 }
@@ -3228,10 +3116,6 @@ namespace Boku
         {
             // TODO (mouse) Are we using the samer ref?
             editObjectUpdateObj.DragSelectedObject(dragObject, newPos2d, rotate);
-        }
-        public void ActivateNewItemSelector(Vector3 addPos, bool ignorePaths)
-        {
-            editObjectUpdateObj.ActivateNewItemSelector(new Vector2(addPos.X, addPos.Y), ignorePaths);
         }
         public GameActor ChangeTreeType(GameActor orig)
         {
@@ -3429,6 +3313,10 @@ namespace Boku
         /// <summary>
         /// Switches out of simulation or level edit modes and activates the mini hub.
         /// NOTE: Caller is responsible for resetting sim if needed.
+        /// 
+        /// TODO (scoy) This should probably be removed.  The functionality should
+        /// eventually go into the appropriate Activate or Deactivate calls for the
+        /// scenes we are leaving and entering.
         /// </summary>
         public void SwitchToMiniHub()
         {
@@ -3445,8 +3333,9 @@ namespace Boku
                 UnDoStack.Store();
             }
 
-            InGame.inGame.Deactivate();
-            BokuGame.bokuGame.miniHub.Activate();
+            SceneManager.SwitchToScene("HomeMenuScene", frameDelay: 1);
+            // Refresh the thumbnail during our 1 frame delay.
+            InGame.RefreshThumbnail = true;
         }   // end of InGame SwithToMiniHub()
 
         /// <summary>
@@ -3764,15 +3653,14 @@ namespace Boku
             lastInlineFrame = Time.FrameCounter;
 
             int currentTask = 0;
-            int lastIndent = 0;
 
             // Go through all characters
             for (int gi = 0; gi < InGame.inGame.gameThingList.Count; gi++)
             {
                 GameThing thing = InGame.inGame.gameThingList[gi];
-                if (!(thing is GameActor))
+                GameActor actor = thing as GameActor;
+                if (actor == null)
                     continue;
-                GameActor actor = (GameActor)thing;
                 currentTask = 0;
                 // Go through pages
                 foreach (Task task in actor.Brain.tasks)
@@ -3808,7 +3696,6 @@ namespace Boku
                                         newReflex.Paste(clip);
                                         curReflex = newReflex;
                                     }
-                                    lastIndent = reflex.Indentation;
                                 }
                             }
                             mcount = reflex.Modifiers.Count; // Update number of modifiers (to appease visual studio)
@@ -3876,8 +3763,6 @@ namespace Boku
             // Are we changing update modes?
             if (pendingUpdateObj != null)
             {
-                UpdateObject prevUpdateObj = updateObj;
-
                 // If in PreGame mode, we need to exit that first.
                 if (preGame != null && preGame.Active)
                 {
@@ -4030,9 +3915,6 @@ namespace Boku
                 BokuGame.objectListDirty = true;
 
             }   // end if changing update modes.
-
-            // TODO (mouse) Are we sharing the shim???
-            editObjectUpdateObj.newItemSelectorShim.Refresh(runSimUpdateObj.updateList, renderObj.renderList);
 
             if (pendingState != state)
             {
@@ -4233,13 +4115,6 @@ namespace Boku
         {
             cursor3D.Deactivate();
         }
-
-        protected void ReturnToMainMenu()
-        {
-            Deactivate();
-            MainMenu.Instance.Activate();
-        }
-
        
         /// <summary>
         /// Runs through the current gameThingList and pauses all the objects.
@@ -4358,12 +4233,12 @@ namespace Boku
 
                 if (InGame.inGame.CurrentUpdateMode == UpdateMode.MouseEdit)
                 {
-                    if (InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.TerrainPaint
-                        || InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == MouseEditUpdateObj.ToolMode.TerrainRaiseLower)
+                    if (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainPaint
+                        || EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainRaiseLower)
                     {
                         // Don't consider brush in use if the alt key is pressed.  This probably indicates
                         // that we're using the eyedropper functionality.
-                        if(!KeyboardInput.AltIsPressed)
+                        if(!KeyboardInputX.AltIsPressed)
                             brushInUse = true;
                     }
                 }
@@ -4433,7 +4308,6 @@ namespace Boku
             BokuGame.InitDeviceResources(mouseEditUpdateObj, device);
             BokuGame.InitDeviceResources(touchEditUpdateObj, device);
 
-            VictoryOverlay.InitDeviceResources(device);
             ReflexHandle.InitDeviceResources(device);
 
             Terrain.RebuildAll();
@@ -4765,7 +4639,7 @@ namespace Boku
         /// </summary>
         public static void DebugCheckVideoMem(UInt64 sizeToSuck)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             UInt64 size = 0;
             try
             {
@@ -4819,131 +4693,6 @@ namespace Boku
             return false;
             
         }
-
-#if INSTRUMENT_RTS
-        /// <summary>
-        /// Record the creation of a w x h rendertarget, with label.
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="w"></param>
-        /// <param name="h"></param>
-        /// <returns></returns>
-        public static void GetRT(string label, int w, int h)
-        {
-            totalRT += w * h * 4;
-            if (rtUsages.ContainsKey(label))
-            {
-                rtUsages[label] += w * h * 4;
-            }
-            else
-            {
-                rtUsages.Add(label, w * h * 4);
-            }
-        }
-        /// <summary>
-        /// Record the creation of renderTarg with label.
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="renderTarg"></param>
-        /// <returns></returns>
-        public static void GetRT(string label, RenderTarget2D renderTarg)
-        {
-            if (renderTarg != null)
-            {
-                GetRT(label, renderTarg.Width, renderTarg.Height);
-            }
-        }
-        /// <summary>
-        /// Record the release of an w x h rendertarget, with label.
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="w"></param>
-        /// <param name="h"></param>
-        /// <returns></returns>
-        public static void RelRT(string label, int w, int h)
-        {
-            totalRT -= w * h * 4;
-            //Debug.WriteLine("RELEASING RT VVV " + w * h * 4 + " B : " + label);
-            rtUsages[label] -= w * h * 4;
-        }
-        /// <summary>
-        /// Record the release of renderTarg with label.
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="renderTarg"></param>
-        /// <returns></returns>
-        public static void RelRT(string label, RenderTarget2D renderTarg)
-        {
-            if (renderTarg != null)
-            {
-                RelRT(label, renderTarg.Width, renderTarg.Height);
-            }
-        }
-        /// <summary>
-        /// Dump current memory usages for all render targets.
-        /// </summary>
-        public static void DumpRT()
-        {
-#if PRINT_RT_DEBUG
-            Debug.WriteLine("VVVVVVVVVVVVVVVVVVVVVVVVVVV");
-            foreach (KeyValuePair<string, Int64> pair in rtUsages)
-            {
-                Debug.WriteLine(pair.Key + ": " + pair.Value);
-            }
-            Debug.WriteLine("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
-            Debug.WriteLine("VVVVVVVVVVVVVVVVVVVVVVVVVVV");
-            Debug.WriteLine("Total: " + totalRT + " Bytes");
-            Debug.WriteLine("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
-#endif
-        }
-        private static Int64 totalRT = 0;
-        private static Dictionary<string, Int64> rtUsages = new Dictionary<string, Int64>();
-#else // INSTRUMENT_RTS
-        /// <summary>
-        /// Noop, see define INSTRUMENT_RTS
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="w"></param>
-        /// <param name="h"></param>
-        /// <returns></returns>
-        public static void GetRT(string label, int w, int h)
-        {
-        }
-        /// <summary>
-        /// Noop, see define INSTRUMENT_RTS
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="renderTarg"></param>
-        /// <returns></returns>
-        public static void GetRT(string label, RenderTarget2D renderTarg)
-        {
-        }
-        /// <summary>
-        /// Noop, see define INSTRUMENT_RTS
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="w"></param>
-        /// <param name="h"></param>
-        /// <returns></returns>
-        public static void RelRT(string label, int w, int h)
-        {
-        }
-        /// <summary>
-        /// Noop, see define INSTRUMENT_RTS
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="renderTarg"></param>
-        /// <returns></returns>
-        public static void RelRT(string label, RenderTarget2D renderTarg)
-        {
-        }
-        /// <summary>
-        /// Noop, see define INSTRUMENT_RTS
-        /// </summary>
-        public static void DumpRT()
-        {
-        }
-#endif // INSTRUMENT_RTS
 
     }   // end of class InGame
 

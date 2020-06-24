@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.SimWorld;
@@ -100,7 +103,6 @@ namespace Boku
             public EditObjectUpdateObj(InGame parent, ref Shared shared)
                 : base(parent, ref shared)
             {
-                newItemSelectorShim = new UIShim(AddUISelector, out newItemSelector, false);
             }   // end of EditObjectUpdateObj c'tor
 
 
@@ -121,10 +123,6 @@ namespace Boku
                 float secs = Time.WallClockFrameSeconds;
 
                 ThoughtBalloonManager.Update(shared.camera);
-
-                // In case any displays are active.
-                shared.smallTextDisplay.Update(shared.camera);
-                shared.scrollableTextDisplay.Update(shared.camera);
 
                 // If we're just setting the camera's position 
                 // rather than actually editing the world.
@@ -161,7 +159,7 @@ namespace Boku
                     // better.  I'm leaving an assert in the code so we don't just forget about it.
                     if (CommandStack.Depth() == 1 && CommandStack.Peek().name == "PreGameBase")
                     {
-                        //Debug.Assert(false, "Hack to fix lockup problem, you should be able to ignore and resume with no trouble.  Please let **** know if this works.");
+                        //Debug.Assert(false, "Hack to fix lockup problem, you should be able to ignore and resume with no trouble.  Please let scoy know if this works.");
 
                         // Remove PreGameBase and replace with InGameEditBase.
                         CommandStack.Pop(CommandStack.Peek());
@@ -217,7 +215,7 @@ namespace Boku
                         //Otherwise, our results may be a frame old, and anything relying on checking if an object is selected may not update correctly
                         //Without this here, the pipe logic that only updates a pipe's snap position when it's selected was failing to run the final frame, leaving
                         //objects placed by gamepad in an unsnapped position.
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                        if (KoiLibrary.LastTouchedDeviceIsGamepad)
                         {
                             //
                             // Handle cut & paste.  Note this also takes care of cloning.
@@ -290,7 +288,7 @@ namespace Boku
                                     if (editFocusObject == null)
                                     {
                                         // Nothing in focus so bring up the new item selector.
-                                        ActivateNewItemSelector(false);
+                                        //ActivateNewItemSelector(false);
                                     }
                                     else
                                     {
@@ -307,11 +305,11 @@ namespace Boku
                         parent.cursor3D.Position = shared.CursorPosition;
                         shared.CursorPosition = parent.cursor3D.Position;
 
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                        if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                         {
-                            parent.MouseEdit.DoObject(parent.Camera);
+                            parent.MouseEdit.SetFocusActorGlow(parent.Camera);
                         }
-                        else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                        else if (KoiLibrary.LastTouchedDeviceIsTouch)
                         {
                             parent.TouchEdit.DoObject(parent.Camera);
                         }
@@ -377,8 +375,8 @@ namespace Boku
                                     }
                                 }
                                 if (!actor.IsTree || 
-                                    (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse) || 
-                                    (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch))
+                                    (KoiLibrary.LastTouchedDeviceIsKeyboardMouse) || 
+                                    (KoiLibrary.LastTouchedDeviceIsTouch))
                                 {
                                     float delta = 0.0f;
                                     delta += Actions.Bigger.IsPressed ? 1.0f : 0.0f;
@@ -479,7 +477,7 @@ namespace Boku
 
                 UpdateHelpOverlay();
 
-                // TODO (****) Not sure this is 100% the right place for this.
+                // TODO (scoy) Not sure this is 100% the right place for this.
                 ToolTipManager.Update();
 
             }   // end of EditObjectUpdateObj Update()
@@ -640,8 +638,8 @@ namespace Boku
             /// </summary>
             protected void CheckForEditFocusObject()
             {
-                if ((GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)||
-                    GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if ((KoiLibrary.LastTouchedDeviceIsKeyboardMouse)||
+                    KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     editFocusObject = null;
                     return;
@@ -943,7 +941,7 @@ namespace Boku
             public void ToggleSelectedStateOfFocusObject()
             {
                 // Toggle selected state.
-                if ((GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                if ((KoiLibrary.LastTouchedDeviceIsGamepad)
                     && selectedObject == null)
                 {
                     // Change from unselected to selected.
@@ -1014,7 +1012,7 @@ namespace Boku
                     helpID = shared.editWayPoint.UpdateHelpOverlay();
                     if (helpID == null)
                     {
-                        if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                        if (KoiLibrary.LastTouchedDeviceIsTouch)
                             helpID = parent.touchEdit.UpdateHelpOverlay();
                         else
                             helpID = parent.mouseEdit.UpdateHelpOverlay();
@@ -1135,7 +1133,7 @@ namespace Boku
             }
             protected Distortion MakeFocusEffects(GameThing thing)
             {
-                if (GamePadInput.ActiveMode != GamePadInput.InputMode.GamePad)
+                if (!KoiLibrary.LastTouchedDeviceIsGamepad)
                 {
                     return RemoveFocusEffects();
                 }
@@ -1165,12 +1163,12 @@ namespace Boku
                 base.Activate();
 
                 selectedObject = null;      // Never start in selected mode.
-                                            // TODO (****) Except, maybe in the case of editing a selected object's parameters.
+                                            // TODO (scoy) Except, maybe in the case of editing a selected object's parameters.
                                             // When we come back here from exiting
                 LastSelectedActor = null;
                 /// Don't null out the cutPasteObject. That way, if we load up
                 /// a new level, we can still paste it in, allowing copy of objects
-                /// from one level to another. ***
+                /// from one level to another. maf
                 parent.cursor3D.Activate();
                 parent.cursor3D.Hidden = false;
                 parent.cursor3D.DiffuseColor = new Vector4(1, 1, 1, 1);
@@ -1188,8 +1186,6 @@ namespace Boku
                 ColorPalette.Active = false;
                 RemoveFocusEffects();
                 LastSelectedActor = null;
-
-                newItemSelectorShim.Deactivate();
 
                 // Force the camera back to not having an offset.
                 shared.camera.SetDefaultHeightOffset(shared.CursorPosition, 0.5f);

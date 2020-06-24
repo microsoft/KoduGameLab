@@ -26,6 +26,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI2D;
@@ -85,7 +88,7 @@ namespace Boku
                 string baseUrl =  Program2.SiteOptions.KGLUrl + "/API/GetLatestNews?tag=client";
                 string paramUrl = "&region=" + GetLangRegion();
 #if !NETFX_CORE
-                // TODO (****) This doesn't do anything anyway.  Should it be removed?
+                // TODO (scoy) This doesn't do anything anyway.  Should it be removed?
                 string paramRegionUrl = Thread.CurrentThread.CurrentCulture.Name;
 
                 paramRegionUrl = "-" + paramRegionUrl;
@@ -227,12 +230,10 @@ namespace Boku
 
         }
 
-        public List<FeedMs> GetFeedList(int width, Shared.GetFont titleFont, Shared.GetFont dateFont, Shared.GetFont bodyFont)
+        public List<FeedItem> GetFeedList(int width)
         {
-            TextBlob textBlob = new TextBlob(bodyFont, "label", width);
+            List<FeedItem> feedItems = new List<FeedItem>();
 
-            //parse JSON string into List of Dictionaries.
-            List<FeedMs> allFeeds = new List<FeedMs>();
             try
             {
 #if NETFX_CORE
@@ -249,16 +250,18 @@ namespace Boku
                 //build news feed.
                 foreach (var item in items)
                 {
-                    FeedMs feedItem = new FeedMs(new Vector2(24, 0), textBlob, titleFont, dateFont, bodyFont);
-                    feedItem.Title = item["Title"];
-                    feedItem.Body = item["Text"];
-                    feedItem.DateString = item["Date"];
-                    feedItem.CreateHyperlink(HyperlinkType.URL, Strings.Localize("mainMenu.readMoreHere"), item["URL"]);
-                    allFeeds.Add(feedItem);
+                    string dateString = item["Date"];
+                    string title = item["Title"];
+                    string body = item["Text"];
+                    string url = item["URL"];
+
+                    FeedItem feedItem = new FeedItem(width, dateString, title, body, url);
+                    feedItems.Add(feedItem);
                 }
             }
             catch { }
-            return allFeeds;
+
+            return feedItems;
         }
 
 #if NETFX_CORE
@@ -367,7 +370,7 @@ namespace Boku
         /// <param name="font"></param>
         /// <param name="width"></param>
         /// <returns></returns>
-        public static List<Tweet> GetTweetList(Boku.UI2D.Shared.GetFont font, int width)
+        public static List<Tweet> GetTweetList(Boku.GetFont font, int width)
         {
             if (newsClips == null)
             {

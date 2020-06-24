@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Fx;
@@ -113,8 +116,7 @@ namespace Boku
                     // or when game is paused for a bot to speak (modal text display).
                     //
                     bool victoryActive = VictoryOverlay.ActiveGameOver || VictoryOverlay.ActiveWinner;
-                    bool speaking = InGame.inGame.shared.smallTextDisplay.Active || InGame.inGame.shared.scrollableTextDisplay.Active;
-                    if (Time.Paused && !((terrain.FixedCamera || terrain.FixedOffsetCamera) && victoryActive) && !speaking)
+                    if (Time.Paused && !((terrain.FixedCamera || terrain.FixedOffsetCamera) && victoryActive))
                     {
                         CameraInfo.Mode = CameraInfo.Modes.Edit;
                         CameraInfo.CameraFocusGameActor = null;
@@ -275,160 +277,7 @@ namespace Boku
                 // This must be done after all brains are updated.
                 Scoreboard.Update(shared.camera);
 
-                // Update the TextDisplays.  Ignored if not active.
-                shared.scrollableTextDisplay.Update(shared.camera);
-                shared.smallTextDisplay.Update(shared.camera);
-
                 VictoryOverlay.Update();
-
-                // Do the input processing after object update because there will be order of operation issue if we don't
-                //
-                // Check if we have input focus.  Don't do any input
-                // related update if we don't.
-                if (inputFocus)
-                {
-                    // Grab the current state of the gamepad.
-                    GamePadInput pad = GamePadInput.GetGamePad0();
-
-                    // Switch to Mini-Hub?
-                    if (Actions.MiniHub.WasPressed)
-                    {
-                        Actions.MiniHub.ClearAllWasPressedState();
-
-                        //parent.ResetSim(CurrentLevelFilename());
-
-                        // Needed to make sure that deactivated objects are actually removed from
-                        // the list otherwise they may get saved along with the newly activated ones.
-                        //parent.Refresh(BokuGame.gameListManager.updateList, BokuGame.gameListManager.renderList);
-
-                        parent.SwitchToMiniHub();
-                        return;
-                    }
-
-                    //handle swipe to return to edit for touch input
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
-                    {
-                        SwipeGestureRecognizer swipeGesture = TouchGestureManager.Get().SwipeGesture;
-                        if (swipeGesture.WasRecognized &&
-                            swipeGesture.SwipeDirection == Directions.North)
-                        {
-#if NETFX_CORE
-                            float halfWidth = (float)BokuGame.bokuGame.Window.ClientBounds.Width * 0.5f;
-                            float height = (float)BokuGame.bokuGame.Window.ClientBounds.Height;
-#else
-                            float halfWidth = (float)XNAControl.Instance.ClientSize.Width * 0.5f;
-                            float height = (float)XNAControl.Instance.ClientSize.Height;
-#endif
-
-                            //center half of the screen width-wise
-                            float minX = halfWidth - (halfWidth * k_TouchExitAreaWidthPercent);
-                            float maxX = halfWidth + (halfWidth * k_TouchExitAreaWidthPercent);
-
-                            //bottom 20% height-wise
-                            float minY = height - (height * k_TouchExitAreaHeightPercent);
-
-
-                            Vector2 pos = swipeGesture.InitialPosition;
-                            if (pos.X >= minX && pos.X <= maxX && pos.Y >= minY)
-                            {
-                                // User did a swipe from the bottom of the screen, enter edit mode
-                                InGame.inGame.CurrentUpdateMode = UpdateMode.EditObject;
-                                InGame.inGame.CurrentUpdateMode = UpdateMode.TouchEdit;
-
-                                Foley.PlayPressStart();
-                                return;
-                            }
-                        }
-
-                        // HACKHACK (****) Put in a tap recognizer since swipe seems to fail.
-                        {
-                            TapGestureRecognizer hackTapGesture = TouchGestureManager.Get().TapGesture;
-                            if (hackTapGesture.WasTapped())
-                            {
-#if NETFX_CORE
-                                float halfWidth = (float)BokuGame.bokuGame.Window.ClientBounds.Width * 0.5f;
-                                float height = (float)BokuGame.bokuGame.Window.ClientBounds.Height;
-#else
-                                float halfWidth = (float)XNAControl.Instance.ClientSize.Width * 0.5f;
-                                float height = (float)XNAControl.Instance.ClientSize.Height;
-#endif
-
-                                //center area of the screen width-wise
-                                float minX = halfWidth - (halfWidth * 0.1f);
-                                float maxX = halfWidth + (halfWidth * 0.1f);
-
-                                //bottom 10% height-wise
-                                float minY = height - (height * 0.1f);
-
-                                Vector2 pos = hackTapGesture.Position;
-                                if (pos.X >= minX && pos.X <= maxX && pos.Y >= minY)
-                                {
-                                    // User did a tap on the bottom of the screen, enter edit mode
-                                    InGame.inGame.CurrentUpdateMode = UpdateMode.EditObject;
-                                    InGame.inGame.CurrentUpdateMode = UpdateMode.TouchEdit;
-
-                                    Foley.PlayPressStart();
-                                    return;
-                                }
-                            }
-                        }
-
-                    }
-
-                    bool gameOver = VictoryOverlay.GameOver;
-
-                    if (Time.Paused && !gameOver)
-                    {
-                        // We must be in user induced pause mode.
-                        if (Actions.Unpause.WasPressed)
-                        {
-                            Actions.Unpause.ClearAllWasPressedState();
-
-                            Time.Paused = false;
-                            HelpOverlay.Pop();
-                        }
-                    }
-                    else
-                    {
-                        if (gameOver)
-                        {
-                            // Game over man!  Let the user restart if they want.
-                            if (Actions.Restart.WasPressed)
-                            {
-                                Actions.Restart.ClearAllWasPressedState();
-
-                                InGame.inGame.ResetSim(preserveScores: false, removeCreatablesFromScene: true, keepPersistentScores: false);
-                                // Since we're going right back into RunSim mode we need to first inline.
-                                ApplyInlining();
-                            }
-                        }
-
-                        // Open ToolMenu.
-                        if (Actions.ToolMenu.WasPressed)
-                        {
-                            Actions.ToolMenu.ClearAllWasPressedState();
-
-                            parent.CurrentUpdateMode = UpdateMode.ToolMenu;
-                            Foley.PlayPressStart();
-                            return;
-                        }
-
-                        // Pause?
-                        // We want to make pause hard to get into so it requires both triggers and both stickButtons to be pressed.
-                        if ((pad.LeftStickButton.IsPressed && pad.RightStickButton.IsPressed && pad.LeftTriggerButton.IsPressed && pad.RightTriggerButton.IsPressed) || Actions.Pause.WasPressed)
-                        {
-                            Actions.Pause.ClearAllWasPressedState();
-
-                            if (!Time.Paused)
-                            {
-                                Time.Paused = true;
-                                HelpOverlay.Push("PauseGame");
-                                GamePadInput.GetGamePad0().IgnoreLeftStickUntilZero();
-                                GamePadInput.GetGamePad0().IgnoreRightStickUntilZero();
-                            }
-                        }
-                    }
-                }
 
                 // Force the the HelpOverlay to be correct.
                 if (!Time.Paused || VictoryOverlay.Active)
@@ -461,40 +310,6 @@ namespace Boku
                     }
                 }
 
-                // When in run mode, allow the user to click on the "Press [esc] to edit" text as if it was a button.
-                if (MouseInput.Left.WasPressed)
-                {
-                    Point mousePos = MouseInput.Position;
-                    if (HelpOverlay.MouseHitBottomText(mousePos))
-                    {
-                        // Switch to edit mode.
-                        InGame.inGame.CurrentUpdateMode = UpdateMode.EditObject;
-                    }
-                }
-                TapGestureRecognizer tapGesture = TouchGestureManager.Get().TapGesture;
-                if (tapGesture.WasTapped() )
-                {
-                    // JW - Until we have proper Touch help overlays, we are still using the mouse/keyboard
-                    // overlays. The mouse handling code for these depends on being able to 'absorb' pressed 
-                    // info to hide it from later callers. Our touch stuff doesn't (and really shouldn't) 
-                    // do this. So, we handle cases here based on what type of overlay is being displayed.
-                    if (HelpOverlay.Peek() == "RunSimulationPreGame")
-                    {
-                        // Tap during instructions: just begin game.
-                        InGame.inGame.PreGame.Active = false;
-                    }
-
-                    // Also test if running sim for tapping on "tap to edit" at bottom.
-                    if (HelpOverlay.Peek() == "RunSimulation")
-                    {
-                        Point pos = new Point((int)tapGesture.Position.X, (int)tapGesture.Position.Y);
-                        if (HelpOverlay.MouseHitBottomText(pos))
-                        {
-                            // Switch to edit mode.
-                            InGame.inGame.CurrentUpdateMode = UpdateMode.EditObject;
-                        }
-                    }
-                }
 
             }   // end of RunSimUpdateObj Update()
 
@@ -507,7 +322,7 @@ namespace Boku
             // one for each mode the camera can be in.
             //
 
-            const float kCursorSpeed = 20.0f;   // Meters per second.  TODO (****) should this scale based on camera distance from cursor?
+            const float kCursorSpeed = 20.0f;   // Meters per second.  TODO (scoy) should this scale based on camera distance from cursor?
             const float kOrbitSpeed = 2.0f;     // Radians per second.
             const float kZoomFactor = 1.1f;     // Multiplicative factor applied per second.
 
@@ -543,7 +358,7 @@ namespace Boku
                     parent.MouseEdit.DoCamera(parent.Camera);
                 }
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     bool bAllowCameraMovement = true;
 
@@ -614,10 +429,10 @@ namespace Boku
                     position += forward * pad.LeftStick.Y * Time.WallClockFrameSeconds * kCursorSpeed;
                     position += right * pad.LeftStick.X * Time.WallClockFrameSeconds * kCursorSpeed;
                     // Numpad controls cursor position. NumLock must be on!
-                    float y = KeyboardInput.IsPressed(Keys.NumPad7) || KeyboardInput.IsPressed(Keys.NumPad8) || KeyboardInput.IsPressed(Keys.NumPad9) ? 1.0f : 0.0f;
-                    y += KeyboardInput.IsPressed(Keys.NumPad1) || KeyboardInput.IsPressed(Keys.NumPad2) || KeyboardInput.IsPressed(Keys.NumPad3) ? -1.0f : 0.0f;
-                    float x = KeyboardInput.IsPressed(Keys.NumPad3) || KeyboardInput.IsPressed(Keys.NumPad6) || KeyboardInput.IsPressed(Keys.NumPad9) ? 1.0f : 0.0f;
-                    x += KeyboardInput.IsPressed(Keys.NumPad1) || KeyboardInput.IsPressed(Keys.NumPad4) || KeyboardInput.IsPressed(Keys.NumPad7) ? -1.0f : 0.0f;
+                    float y = KeyboardInputX.IsPressed(Keys.NumPad7) || KeyboardInputX.IsPressed(Keys.NumPad8) || KeyboardInputX.IsPressed(Keys.NumPad9) ? 1.0f : 0.0f;
+                    y += KeyboardInputX.IsPressed(Keys.NumPad1) || KeyboardInputX.IsPressed(Keys.NumPad2) || KeyboardInputX.IsPressed(Keys.NumPad3) ? -1.0f : 0.0f;
+                    float x = KeyboardInputX.IsPressed(Keys.NumPad3) || KeyboardInputX.IsPressed(Keys.NumPad6) || KeyboardInputX.IsPressed(Keys.NumPad9) ? 1.0f : 0.0f;
+                    x += KeyboardInputX.IsPressed(Keys.NumPad1) || KeyboardInputX.IsPressed(Keys.NumPad4) || KeyboardInputX.IsPressed(Keys.NumPad7) ? -1.0f : 0.0f;
                     position += forward * y * Time.WallClockFrameSeconds * kCursorSpeed;
                     position += right * x * Time.WallClockFrameSeconds * kCursorSpeed;
 
@@ -627,12 +442,12 @@ namespace Boku
                     // effects the camera when dragged.  Note that ProgramUsesLeftMouse has changed behaviour.
                     // Now it is only true if the mouse left is used in a way that would conflict with normal
                     // camera movement.  If there is no conflict then we left it go through.
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse && !InGame.inGame.ProgramUsesLeftMouse)
+                    if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse && !InGame.inGame.ProgramUsesLeftMouse)
                     {
-                        position = parent.MouseEdit.DoCursor(parent.Camera, position);
+                        //position = parent.MouseEdit.DoCursor(parent.Camera, position);
                     }
 
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    if (KoiLibrary.LastTouchedDeviceIsTouch)
                     {
                         position = new Vector2(parent.Camera.DesiredAt.X, parent.Camera.DesiredAt.Y);
                         position = parent.TouchEdit.DoCursor(parent.Camera, position);   
@@ -1030,7 +845,7 @@ namespace Boku
                     Console.WriteLine("Begin Analytics");
 #endif
                     ObjectAnalysis oa = new ObjectAnalysis();
-                    oa.beginAnalysis(MainMenu.StartupWorldFilename.ToString());
+                    oa.beginAnalysis(Program2.StartupWorldFilename.ToString());
 
 
                   //  GamePadInput.stopActiveInputTimer();

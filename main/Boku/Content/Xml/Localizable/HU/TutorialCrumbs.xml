@@ -1,16 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CrumbList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <!-- 
-      DO NOT EDIT THIS VERSION.  This file is no longer used but must remain here
-      in order to support older versions of Kodu.  For any new changes to the 
-      tutorial system edit Xml\TutorialCrumbs.Xml and XMl\Localizable\HU\TutorialStrings.Xml.
-  -->
-
-  <Crumbs>
-    
-    <!--  To HomeMenu, yes you can get here from anywhere -->
-    <Crumb>
+  <Crumbs><!--  To HomeMenu, yes you can get here from anywhere --><Crumb>
       <curModes>
         <mode>InGame</mode>
 
@@ -56,12 +47,7 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>Nyomd meg a &lt;start&gt; gombot a főmenübe lépéshez.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot a főmenübe lépéshez.</mouseText>
-    </Crumb>
-    
-    
-    
-    <!--  From InGame  -->
-    <Crumb>
+    </Crumb><!--  From InGame  --><Crumb>
       <curModes>
         <mode>InGame</mode>
       </curModes>
@@ -79,10 +65,7 @@
       <gamepadText>Nyomd meg a &lt;back&gt; gombot a szerkesztés módba lépéshez.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot a szerkesztés módba lépéshez.</mouseText>
       <touchText>Koppints a [here] opcióra a szerkesztés módba lépéshez.</touchText>    
-    </Crumb>
-    
-    <!--  From MainMenu  -->
-    <Crumb>
+    </Crumb><!--  From MainMenu  --><Crumb>
       <curModes>
         <mode>MainMenu</mode>
       </curModes>
@@ -134,10 +117,7 @@
       <targetMode>SharingHub</targetMode>
       <gamepadText>Válaszd a MEGOSZTÁS opciót, és nyomd meg az &lt;a&gt; gombot.</gamepadText>
       <mouseText>Kattints a MEGOSZTÁS opcióra.</mouseText>
-    </Crumb>
-    
-    <!--  From SharingHub -->
-    <Crumb>
+    </Crumb><!--  From SharingHub --><Crumb>
       <curModes>
         <mode>SharingHub</mode>
       </curModes>
@@ -153,40 +133,28 @@
       <targetMode>MainMenu</targetMode>
       <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
       <mouseText>Nyomd meg az &lt;esc&gt; gombot a főmenübe való visszatéréshez.</mouseText>
-    </Crumb>
-    
-    <!--  From SharingSession -->
-    <Crumb>
+    </Crumb><!--  From SharingSession --><Crumb>
       <curModes>
         <mode>SharingSession</mode>
       </curModes>
       <targetMode>SharingHub</targetMode>
       <gamepadText>A megosztási munkamenetből való kilépéshez nyomd meg a &lt;back&gt; gombot.</gamepadText>
       <mouseText>A megosztási munkamenetből való kilépéshez nyomd meg a &lt;esc&gt; gombot.</mouseText>
-    </Crumb>
-    
-    <!--  From OptionsMenu  -->
-    <Crumb>
+    </Crumb><!--  From OptionsMenu  --><Crumb>
       <curModes>
         <mode>OptionsMenu</mode>
       </curModes>
       <targetMode>MainMenu</targetMode>
       <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot vagy kattints a menü elemeken kívülre a főmenübe való visszatéréshez.</mouseText>
-    </Crumb>
-    
-    <!--  From HelpScreens  -->
-    <Crumb>
+    </Crumb><!--  From HelpScreens  --><Crumb>
       <curModes>
         <mode>HelpScreens</mode>
       </curModes>
       <targetMode>MainMenu</targetMode>
       <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot a főmenübe való visszatéréshez.</mouseText>
-    </Crumb>
-    
-    <!--  From LoadLevelMenu  -->
-    <Crumb>
+    </Crumb><!--  From LoadLevelMenu  --><Crumb>
       <curModes>
         <mode>LoadLevelMenu</mode>
       </curModes>
@@ -211,10 +179,7 @@
       <targetMode>HomeMenu</targetMode>
       <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot a főmenübe való visszatéréshez.</mouseText>
-    </Crumb>
-    
-    <!--  From CommunityMenu  -->
-    <Crumb>
+    </Crumb><!--  From CommunityMenu  --><Crumb>
       <curModes>
         <mode>CommunityMenu</mode>
       </curModes>
@@ -230,11 +195,7 @@
       <targetMode>MainMenu</targetMode>
       <gamepadText>Nyomd meg a &lt;b&gt; gombot a főmenübe való visszatéréshez.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot a főmenübe való visszatéréshez.</mouseText>
-    </Crumb>
-    
-    <!--  ToolMenu from any tool to every other. Gamepad only.  -->
-    
-    <Crumb>
+    </Crumb><!--  ToolMenu from any tool to every other. Gamepad only.  --><Crumb>
       <curModes>
         <mode>ToolMenuHomeMenu</mode>
         <mode>ToolMenuEditObject</mode>
@@ -245,12 +206,10 @@
         <mode>ToolMenuWater</mode>
         <mode>ToolMenuDeleteObjects</mode>
         <mode>ToolMenuWorldSettings</mode>
-      </curModes>
-      <!-- 
+      </curModes><!-- 
       Note: even though this will actually take us to ToolMenuRunSim we give InGame
       as the target mode to it seems shorter than going through the HomeMenu.
-      -->
-      <targetMode>InGame</targetMode>
+      --><targetMode>InGame</targetMode>
       <gamepadText>A ravaszok segítségével válaszd ki a &lt;play&gt; játék opciót</gamepadText>
       <mouseText></mouseText>
     </Crumb>
@@ -270,10 +229,7 @@
       <targetMode>ToolMenuEditObject</targetMode>
       <gamepadText>A ravaszok segítségével válaszd ki a &lt;ObjectEdit&gt; tárgy szerkesztése opciót</gamepadText>
       <mouseText></mouseText>
-    </Crumb>
-    
-    <!-- Lead user through EditObjectFocus to get to Programming -->
-    <Crumb>
+    </Crumb><!-- Lead user through EditObjectFocus to get to Programming --><Crumb>
       <curModes>
         <mode>ToolMenuEditObject</mode>
       </curModes>
@@ -281,10 +237,7 @@
       <gamepadText>Nyomd meg az &lt;a&gt; gombot a tárgyak programozásához.</gamepadText>
       <mouseText></mouseText>
       <touchText>Koppints a &lt;Kodu&gt; opcióra a tárgyak programozásához.</touchText>
-    </Crumb>
-    
-    <!-- Lead user through EditObject to get to Programming -->
-    <Crumb>
+    </Crumb><!-- Lead user through EditObject to get to Programming --><Crumb>
       <curModes>
         <mode>ToolMenuRunSim</mode>
         <mode>ToolMenuHomeMenu</mode>
@@ -418,11 +371,7 @@
       <targetMode>ToolMenuWorldSettings</targetMode>
       <gamepadText>A ravaszok segítségével válaszd ki a Világ beállításai &lt;worldsettings&gt; opciót.</gamepadText>
       <mouseText></mouseText>
-    </Crumb>
-    
-    <!--  GamePad Tools, from any tool back to the ToolBar -->
-    
-    <Crumb>
+    </Crumb><!--  GamePad Tools, from any tool back to the ToolBar --><Crumb>
       <curModes>
         <mode>GamepadEditObject</mode>
         <mode>GamepadTerrainSmoothLevel</mode>
@@ -444,11 +393,7 @@
       <targetMode>ToolMenuEditObject</targetMode>
       <gamepadText>A kilépéshez nyomd meg a &lt;back&gt; gombot.</gamepadText>
       <mouseText></mouseText>
-    </Crumb>
-    
-    <!--  Gamepad tools, from toolbar to actual tool  -->
-    
-    <Crumb>
+    </Crumb><!--  Gamepad tools, from toolbar to actual tool  --><Crumb>
       <curModes>
         <mode>ToolMenuRunSim</mode>
       </curModes>
@@ -536,10 +481,7 @@
       <targetMode>GamepadWorldSettings</targetMode>
       <gamepadText>Nyomd meg az &lt;a&gt; gombot a Világ beállításainak &lt;worldsettings&gt; módosításához.</gamepadText>
       <mouseText></mouseText>
-    </Crumb>
-    
-    <!-- From gamepad tools back to tool menu -->
-    <Crumb>
+    </Crumb><!-- From gamepad tools back to tool menu --><Crumb>
       <curModes>
         <mode>GamepadEditObject</mode>
         <mode>GamepadEditObjectFocus</mode>
@@ -597,9 +539,7 @@
       <mouseText></mouseText>
     </Crumb>
 
-    <Crumb>
-      <!-- Shortcut mode to fool the system into thinking that this is the fast way to get into run mode. -->
-      <curModes>
+    <Crumb><!-- Shortcut mode to fool the system into thinking that this is the fast way to get into run mode. --><curModes>
         <mode>GamepadEditObject</mode>
         <mode>GamepadEditObjectFocus</mode>
         <mode>GamepadTerrainPaint</mode>
@@ -610,11 +550,7 @@
       <targetMode>InGame</targetMode>
       <gamepadText>Nyomd meg a &lt;back&gt; gombot az eszköz menübe való visszatéréshez.</gamepadText>
       <mouseText></mouseText>
-    </Crumb>
-    
-    <!--  Mouse Tools, from every tool to every other tool -->
-    
-    <Crumb>
+    </Crumb><!--  Mouse Tools, from every tool to every other tool --><Crumb>
       <curModes>
         <mode>MouseCameraMove</mode>
         <mode>MouseEditObject</mode>
@@ -854,11 +790,7 @@
       <gamepadText></gamepadText>
       <mouseText>Kattints a Világ beállításai &lt;worldsettings&gt; opcióra alul a menüben.</mouseText>
       <touchText>Koppints a Világ beállításai &lt;worldsettings&gt; opcióra alul a menüben.</touchText>
-    </Crumb>
-    
-    <!--  Into pickers  -->
-    
-    <Crumb>
+    </Crumb><!--  Into pickers  --><Crumb>
       <curModes>
         <mode>MouseTerrainPaint</mode>
         <mode>GamepadTerrainPaint</mode>
@@ -895,11 +827,7 @@
       <targetMode>WaterPicker</targetMode>
       <gamepadText>Új vízszín kiválasztásához nyomd meg az &lt;y&gt; gombot.</gamepadText>
       <mouseText>Az új vízszín kiválasztásához kattints a vízválasztó ikonra &lt;watertype&gt; az eszköz ikon felett.</mouseText>
-    </Crumb>
-    
-    <!--  Out of pickers  -->
-    
-    <Crumb>
+    </Crumb><!--  Out of pickers  --><Crumb>
       <curModes>
         <mode>MaterialPicker</mode>
       </curModes>
@@ -962,11 +890,7 @@
       <targetMode>ToolMenuEditObject</targetMode>
       <gamepadText>A kilépéshez nyomd meg a &lt;b&gt; gombot.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot vagy kattints a menü mellé.</mouseText>
-    </Crumb>
-    
-    <!-- From HomeMenu -->
-    
-    <Crumb>
+    </Crumb><!-- From HomeMenu --><Crumb>
       <curModes>
         <mode>HomeMenu</mode>
       </curModes>
@@ -1018,10 +942,7 @@
       <targetMode>SharingHub</targetMode>
       <gamepadText>Válaszd a megosztás barátokkal opciót.</gamepadText>
       <mouseText>Kattints a megosztás barátokkal opcióra.</mouseText>
-    </Crumb>
-    
-    <!-- Into Add Item -->
-    <Crumb>
+    </Crumb><!-- Into Add Item --><Crumb>
       <curModes>
         <mode>GamepadEditObject</mode>
         <mode>GamepadEditObjectFocus</mode>
@@ -1031,20 +952,14 @@
       <targetMode>AddItem</targetMode>
       <gamepadText>Vidd a kurzort oda, ahová szeretnéd hozzáadni az új tárgyat, majd nyomd meg az &lt;a&gt; gombot.</gamepadText>
       <mouseText>Kattints bal egér gombbal &lt;leftmouse&gt; bárhová a talajon az új tárgy hozzáadásához.</mouseText>
-    </Crumb>
-    
-    <!-- From mouse world settings -->
-    <Crumb>
+    </Crumb><!-- From mouse world settings --><Crumb>
       <curModes>
         <mode>MouseWorldSettings</mode>
       </curModes>
       <targetMode>MouseCameraMove</targetMode>
       <gamepadText></gamepadText>
       <mouseText>Nyomd meg az [esc] gombot az eszköz menübe való visszatéréshez.</mouseText>
-    </Crumb>
-    
-    <!-- To and From Programming -->
-    <Crumb>
+    </Crumb><!-- To and From Programming --><Crumb>
       <curModes>
         <mode>ProgrammingHelp</mode>
       </curModes>
@@ -1097,10 +1012,7 @@
       <targetMode>GamepadEditObject</targetMode>
       <gamepadText>Nyomd meg a &lt;B&gt; gombot a bezáráshoz és a szerkesztés menübe való visszatéréshez.</gamepadText>
       <mouseText>Nyomd meg az [esc] gombot a szerkesztés menübe való visszatéréshez.</mouseText>
-    </Crumb>
-    
-    <!--  Transitions that don't make sense  -->
-    <Crumb>
+    </Crumb><!--  Transitions that don't make sense  --><Crumb>
       <curModes>
         <mode>MouseHome</mode>
       </curModes>

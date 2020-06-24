@@ -33,6 +33,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Managers;
+using KoiX.Scenes;
+using KoiX.Text;
+using KoiX.UI;
 
 using Boku.Base;
 using Boku.Fx;
@@ -86,8 +92,6 @@ namespace Boku
         public static GameListManager gameListManager;   // Holds the top-level lists for all game objects.
         protected static bool listDirty = false;
 
-        private static TwitchManager twitchManager = new TwitchManager();
-
         // SGI_MOD - picture support
         private static PictureManager pictureManager = new PictureManager();
 
@@ -104,17 +108,12 @@ namespace Boku
         //
         // Scenes, modes, whatever you want to call them.
         //
-        public TitleScreenMode titleScreenMode;  // Where the game starts. 
         public ShaderGlobals shaderGlobals;
         public SurfaceDict Surfaces;
-        public MainMenu mainMenu;
         public VideoOutput videoOutput;
-        public HelpScreens helpScreens;
         public InGame inGame;
         public LoadLevelMenu loadLevelMenu;      // The menu formerly known as BigBin.
         public LoadLevelMenu community;
-        public LoadLevelMenu sharingScreen;
-        public MiniHub miniHub;
         public ProgressScreen progressScreen;
 
         public static BokuGame bokuGame = null;             // Provide a ref to easily get back to the game object.
@@ -205,7 +204,19 @@ namespace Boku
         public static Vector2 ScreenPosition
         {
             get { return bokuGame.screenPosition; }
-            set { bokuGame.screenPosition = value; }
+            set 
+            {
+                if (bokuGame.screenPosition != value)
+                {
+                    bokuGame.screenPosition = value;
+                    // Changing the screen position value can cause the 
+                    // adjusted mouse position to jump making it look like
+                    // the user touched the mouse causing the input mode
+                    // to switch.  So, tell the mouse input class to not
+                    // register as touched for the next couple of frames.
+                    LowLevelMouseInput.IgnoreTouched();
+                }
+            }
         }
         
 #if !NETFX_CORE
@@ -249,10 +260,6 @@ namespace Boku
             { 
                 return Boku.Properties.Settings.Default; 
             }
-        }
-        public static TwitchManager TwitchManager
-        {
-            get { return twitchManager; }
         }
         // SGI MOD - picture support
         public static PictureManager PictureManager
@@ -343,14 +350,14 @@ namespace Boku
         */
         public static bool IsWidescreen
         {
-            get { return BokuGame.bokuGame.GraphicsDevice.Viewport.AspectRatio > 1.34f; }
+            get { return KoiLibrary.GraphicsDevice.Viewport.AspectRatio > 1.34f; }
         }
 
         /// <summary>
         /// Does the current device support shader 3.0 or better?
         /// </summary>
 
-        // TODO (****) No longer valid in Reach vs HiDef world.  Need to test Reach against x600 card.
+        // TODO (scoy) No longer valid in Reach vs HiDef world.  Need to test Reach against x600 card.
         public static bool RequiresPowerOf2
         {
             //get { return device.GraphicsDeviceCapabilities.TextureCapabilities.RequiresPower2; }
@@ -397,13 +404,7 @@ namespace Boku
 
             //Guide.SimulateTrialMode = true;
 
-#if NETFX_CORE
-            //Debug.Assert(false, "argh");
-#else
-            winKeyboard = new WinKeyboard(MainForm.Instance);
-#endif
-            
-            // TODO (****) *** Do we need this code any more?
+            // TODO (scoy) *** Do we need this code any more?
 #if NETFX_CORE
             InitializeComponent();
 #endif
@@ -439,7 +440,7 @@ namespace Boku
             Form form = StartupForm.ActiveForm;
             if (form.WindowState == FormWindowState.Maximized)
             {
-                // TODO (****) *** Need to do anything here???
+                // TODO (scoy) *** Need to do anything here???
                 /*
                 BokuGame.Graphics.ToggleFullScreen();
                 BokuGame.Graphics.PreferredBackBufferWidth = 1600;
@@ -521,13 +522,14 @@ namespace Boku
 
             BokuGame.gameAudio = new Audio.Audio(BokuSettings.Settings.Audio);
 
-            KeyboardInput.Init();
-            GamePadInput.Init();
-            TouchInput.Init();
+            //KeyboardInput.Init();
+            //GamePadInput.Init();
+            //TouchInput.Init();
             Brush2DManager.Init();
 #if !NETFX_CORE
             SysFont.Init();
 #endif
+            Theme.Init();
             AuthUI.Init();
             GUIButtonManager.Init();
 
@@ -536,10 +538,10 @@ namespace Boku
 #if NETFX_CORE
             GraphicsDevice.DeviceReset += DeviceResetHandler;
 #else
-            // TODO (****) *** Where to hook up device reset handler???
+            // TODO (scoy) *** Where to hook up device reset handler???
 #endif
 
-            ScreenSize = new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
+            ScreenSize = new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height);
             ScreenPosition = Vector2.Zero;
 
             Instrumentation.RecordDataItem(Instrumentation.DataItemId.ScreenResolution, screenSize.ToString());
@@ -574,7 +576,7 @@ namespace Boku
             public void LoadContent(bool immediate)
             {
                 Localizer.LoadContent(immediate);
-                UI2D.Shared.LoadContent(immediate);
+                SharedX.LoadContent(immediate);
                 BokuGame.gameAudio.LoadContent(immediate);
                 CardSpace.LoadContent(immediate);
                 Scoreboard.LoadContent(immediate);
@@ -606,7 +608,7 @@ namespace Boku
 
             public void InitDeviceResources(GraphicsDevice device)
             {
-                UI2D.Shared.InitDeviceResources(device);
+                SharedX.InitDeviceResources(device);
                 BokuGame.gameAudio.InitDeviceResources(device);
                 CardSpace.InitDeviceResources(device);
                 Scoreboard.InitDeviceResources(device);
@@ -648,7 +650,7 @@ namespace Boku
             public void UnloadContent()
             {
                 Localizer.UnloadContent();
-                UI2D.Shared.UnloadContent();
+                SharedX.UnloadContent();
                 BokuGame.gameAudio.UnloadContent();
                 CardSpace.UnloadContent();
                 Scoreboard.UnloadContent();
@@ -683,7 +685,7 @@ namespace Boku
 
             public void DeviceReset(GraphicsDevice device)
             {
-                UI2D.Shared.DeviceReset(device);
+                SharedX.DeviceReset(device);
                 BokuGame.gameAudio.DeviceReset(device);
                 CardSpace.DeviceReset(device);
                 Scoreboard.DeviceReset(device);
@@ -719,7 +721,9 @@ namespace Boku
             ContentLoader.DefaultImmediate = true;
             ContentLoader.OnLoadComplete -= StartupLoadComplete;
 
-            titleScreenMode.DoneLoadingContent();
+            StartupScene scene = SceneManager.CurrentScene as StartupScene;
+            Debug.Assert(scene != null);
+            scene.OnDoneLoadingContent();
         }
 
         // The first time LoadContent is called by the framework, this will be true. For subsequent calls, it will be false.
@@ -752,7 +756,7 @@ namespace Boku
                     CardSpace.LoadContent(true);
                     break;
                 case 4:
-                    // TODO (****) Figure out why this is needed.  For WinRT we're loading SSQuad early
+                    // TODO (scoy) Figure out why this is needed.  For WinRT we're loading SSQuad early
                     // so that we can display the loading screen.  But that causes an error in CardSpace.
                     // By Unloading SSQuad here we avoid the error.  No clue what's going on.
                     ScreenSpaceQuad.GetInstance().UnloadContent();
@@ -940,11 +944,10 @@ namespace Boku
             // Would be nice to clean this up some time.
             HelpOverlay.Init();
             TweakScreenHelp.Init();
-            AuthUI.Init();
 
             // CardSpace must load before InGame so that InGame can generate the AddItem pie selector tiles.
             CardSpace.LoadContent(true);
-            CardSpace.InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+            CardSpace.InitDeviceResources(KoiLibrary.GraphicsDevice);
 
             if (firstLoadContent)
             {
@@ -954,16 +957,11 @@ namespace Boku
                 // be done before the add item menus are initialized.
                 ActorManager.LoadActors();
 
-                // Create and activate the shader globals object.  We want
-                // this to be the first object "rendered" each frame.
+                // Create the shader globals object.  We want this
+                // to be the first object "rendered" each frame.
                 shaderGlobals = new ShaderGlobals();
-                BokuGame.gameListManager.AddObject(shaderGlobals);
 
                 LoadSurfaces();
-
-                // Create the scenes and add them to the object list.
-                titleScreenMode = new TitleScreenMode();
-                BokuGame.gameListManager.AddObject(titleScreenMode);
 
                 progressScreen = new ProgressScreen();
 
@@ -974,32 +972,14 @@ namespace Boku
                 inGame = new InGame();
                 BokuGame.gameListManager.AddObject(inGame);
 
-                mainMenu = new MainMenu();
-                BokuGame.gameListManager.AddObject(mainMenu);
-
                 videoOutput = new VideoOutput();
                 BokuGame.gameListManager.AddObject(videoOutput);
-
-                helpScreens = new HelpScreens();
-                BokuGame.gameListManager.AddObject(helpScreens);
 
                 community = new LoadLevelMenu(LevelBrowserType.Community);
                 BokuGame.gameListManager.AddObject(community);
 
                 loadLevelMenu = new LoadLevelMenu(LevelBrowserType.Local);
                 BokuGame.gameListManager.AddObject(loadLevelMenu);
-
-                miniHub = new MiniHub();
-                BokuGame.gameListManager.AddObject(miniHub);
-
-                sharingScreen = new LoadLevelMenu(LevelBrowserType.Sharing);
-                BokuGame.gameListManager.AddObject(sharingScreen);
-
-                // Activate the title sceen. It will display progress while
-                // additional assets are loaded in the background.
-                shaderGlobals.Activate();
-                titleScreenMode.Activate();
-
             }
 
             // Init the utils object.
@@ -1012,7 +992,6 @@ namespace Boku
             BokuGame.Load(CameraSpaceQuad.GetInstance(), true);
             BokuGame.Load(ScreenSpaceQuad.GetInstance(), true);
             BokuGame.Load(ScreenSpace3PanelQuad.GetInstance(), true);
-            BokuGame.Load(titleScreenMode, true);
             BokuGame.Load(progressScreen, true);
 
             // Static items that don't implement INeedsDeviceReset
@@ -1025,14 +1004,10 @@ namespace Boku
             ActorManager.LoadModels();
 
             // Scenes
-            BokuGame.Load(mainMenu);
             BokuGame.Load(videoOutput);
-            BokuGame.Load(helpScreens);
-            BokuGame.Load(sharingScreen);
             BokuGame.Load(community);
             BokuGame.Load(loadLevelMenu);
             BokuGame.Load(inGame);
-            BokuGame.Load(miniHub);
 
             //Debug.WriteLine("End LoadContent");
 
@@ -1062,15 +1037,10 @@ namespace Boku
             ActorManager.UnloadModels();
 
             // Scenes
-            BokuGame.Unload(titleScreenMode);
-            BokuGame.Unload(mainMenu);
             BokuGame.Unload(videoOutput);
-            BokuGame.Unload(helpScreens);
             BokuGame.Unload(community);
             BokuGame.Unload(loadLevelMenu);
-            BokuGame.Unload(sharingScreen);
             BokuGame.Unload(inGame);
-            BokuGame.Unload(miniHub);
 
             //Debug.WriteLine("End UnloadContent");
 
@@ -1095,7 +1065,6 @@ namespace Boku
             BokuGame.DeviceResetIfLoaded(CameraSpaceQuad.GetInstance());
             BokuGame.DeviceResetIfLoaded(ScreenSpaceQuad.GetInstance());
             BokuGame.DeviceResetIfLoaded(ScreenSpace3PanelQuad.GetInstance());
-            BokuGame.DeviceResetIfLoaded(titleScreenMode);
             BokuGame.DeviceResetIfLoaded(progressScreen);
 
             // Static items that don't implement INeedsDeviceReset
@@ -1108,14 +1077,10 @@ namespace Boku
             ActorManager.ModelsResetIfLoaded();
 
             // Scenes
-            BokuGame.DeviceResetIfLoaded(mainMenu);
             BokuGame.DeviceResetIfLoaded(videoOutput);
-            BokuGame.DeviceResetIfLoaded(helpScreens);
-            BokuGame.DeviceResetIfLoaded(sharingScreen);
             BokuGame.DeviceResetIfLoaded(community);
             BokuGame.DeviceResetIfLoaded(loadLevelMenu);
             BokuGame.DeviceResetIfLoaded(inGame);
-            BokuGame.DeviceResetIfLoaded(miniHub);
 
             //Debug.WriteLine("End DeviceReset");
         }
@@ -1251,9 +1216,9 @@ namespace Boku
             // Change ScreenSize to keep up.  Note we still get the wrong numbers
             // too much of the time espeically when width = 320 but it does
             // revert to proper values when full screen.
-            if (BokuGame.bokuGame.GraphicsDevice.Viewport.Width != BokuGame.ScreenSize.X || BokuGame.bokuGame.GraphicsDevice.Viewport.Height != BokuGame.ScreenSize.Y)
+            if (KoiLibrary.GraphicsDevice.Viewport.Width != BokuGame.ScreenSize.X || KoiLibrary.GraphicsDevice.Viewport.Height != BokuGame.ScreenSize.Y)
             {
-                BokuGame.ScreenSize = new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
+                BokuGame.ScreenSize = new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height);
                 // Capture new copy of viewport.
                 InGame.CaptureFullViewport();
             }
@@ -1261,10 +1226,13 @@ namespace Boku
             // Strangely enough, we actually see the window change sizes here before
             // we get the SizeChanged event.  So deal with it.
             // If the TutorialManager is active it may be tweaking this so don't touch.
-            if (BokuGame.bokuGame.GraphicsDevice.Viewport.Width != BokuGame.ScreenSize.X || BokuGame.bokuGame.GraphicsDevice.Viewport.Height != BokuGame.ScreenSize.Y)
+            if (KoiLibrary.GraphicsDevice.Viewport.Width != BokuGame.ScreenSize.X || KoiLibrary.GraphicsDevice.Viewport.Height != BokuGame.ScreenSize.Y)
             {
-                BokuGame.ScreenSize = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
-                BokuGame.ScreenPosition = Vector2.Zero;
+                if (!TutorialManager.Active)
+                {
+                    BokuGame.ScreenSize = new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+                    BokuGame.ScreenPosition = Vector2.Zero;
+                }
                 // Capture new copy of viewport.
                 InGame.CaptureFullViewport();
             }
@@ -1276,11 +1244,13 @@ namespace Boku
 
             InGame.SetViewportToScreen();
 
-            Time.Update();
-            TouchInput.Update();
-            KeyboardInput.Update();
-            MouseInput.Update();
-            GamePadInput.Update();
+            Point loc = MainForm.Instance.ClientLocation;
+            Rectangle clientRect = new Rectangle(loc.X, loc.Y, XNAControl.Instance.ClientSize.Width, XNAControl.Instance.ClientSize.Height);
+            KoiLibrary.Update(clientRect);
+
+            SceneManager.Update();
+            DialogManagerX.Update();
+
             AsyncOps.Update();
             AuthUI.Update();
 
@@ -1330,8 +1300,8 @@ namespace Boku
             // JW - NOTE: We have moved the TouchEdit update from the InGame::UpdateObjects() call
             // (where MouseEdit is updated) because the tools are updated before UpdateObjects() 
             // is called. By moving it here, the tools are now getting to-the-frame-accurate data
-            // from the TouchEdit's HitInfo object.
-            TouchEdit.Update(InGame.inGame.Camera);
+            // from the TouchEdit's MouseTouchHitInfo object.
+            //TouchEdit.Update(InGame.inGame.Camera);
 
            
 
@@ -1341,7 +1311,7 @@ namespace Boku
             gameAudio.Update();
 
 //            updateTwitchTimer.Start();
-            twitchManager.Update();
+            //TwitchManager.Update();
 //            updateTwitchTimer.Stop();
 
 //            updateGameTimer.Start();
@@ -1388,8 +1358,19 @@ namespace Boku
             renderTimer.Start();
 #endif
 
-            // Render all the active objects.
-            gameListManager.Render();
+            // TODO (scoy) Remove when no longer needed.
+            // HACK HACK
+            // If we just have the NullScene in place, render normally.
+            if (SceneManager.CurrentScene.Name == "NullScene")
+            {
+                // Render all the active objects.
+                gameListManager.Render();
+            }
+
+            // New scene rendering...
+            // We always want to do this even if NullScene is active in over to support dialogs.
+            InGame.SetViewportToScreen();
+            SceneManager.Render();
 
             /*
             // Debug touch
@@ -1418,6 +1399,7 @@ namespace Boku
             ModularMessageDialogManager.Instance.Render();
             AuthUI.Render();
 
+            
 #if DISPLAY_FPS
             if (XmlOptionsData.ShowFramerate && !BokuGame.bokuGame.videoOutput.Active)
             {
@@ -1425,18 +1407,17 @@ namespace Boku
 
                 string fpsString = Time.FrameRateString + DebugString;
 
-                UI2D.Shared.GetSpriteFont Font = UI2D.Shared.GetSegoeUI24;
+                GetSpriteFont Font = SharedX.GetSegoeUI24;
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 InGame.RestoreViewportToFull();
 
                 batch.Begin();
                 {
                     int height = (int)(BokuGame.ScreenPosition.Y + BokuGame.ScreenSize.Y);
-                    bool lores = height <= 480;
-                    int x = lores ? 60 : 40;
-                    int y = height - (lores ? 70 : 60);
+                    int x = 120;
+                    int y = height - 50;
 
                     batch.DrawString(Font(), fpsString, new Vector2(x + 1, y + 1), Color.DimGray);
                     if (Time.SkippingFrames)
@@ -1468,7 +1449,7 @@ namespace Boku
 
         private void ScreenGrab()
         {
-// (TODO (****) BROKEN
+// (TODO (scoy) BROKEN
 #if !NETFX_CORE
             if (Actions.PrintScreen.WasPressed || Actions.ShiftPrintScreen.WasPressed || pictureManager.DoScreenGrab)
             {
@@ -1507,7 +1488,7 @@ namespace Boku
                     Storage4.TextureSaveAsPng(screenGrab, fileName);
                 }
 
-                BokuGame.Release(ref screenGrab);
+                DeviceResetX.Release(ref screenGrab);
 
                 // Should we print?
                 bool print = KeyboardInput.IsPressed(Microsoft.Xna.Framework.Input.Keys.RightControl)
@@ -1568,7 +1549,7 @@ namespace Boku
             try
             {
                 GamePadInput.stopActiveInputTimer();
-                MouseInput.StopMouseWorkerThread();
+                //MouseInput.StopMouseWorkerThread();
 
                 BokuGame.Running = false;
                 Time.ActiveGameClock = false;
@@ -1658,7 +1639,7 @@ namespace Boku
 
         public static void DeviceReset(INeedsDeviceReset foo)
         {
-            DeviceReset(foo, BokuGame.bokuGame.GraphicsDevice);
+            DeviceReset(foo, KoiLibrary.GraphicsDevice);
         }
 
         public static void DeviceReset(INeedsDeviceReset foo, GraphicsDevice device)
@@ -1673,7 +1654,7 @@ namespace Boku
         {
             if (foo != null && loaded.ContainsKey(foo.GetHashCode()))
             {
-                foo.DeviceReset(BokuGame.bokuGame.GraphicsDevice);
+                foo.DeviceReset(KoiLibrary.GraphicsDevice);
             }
         }
 

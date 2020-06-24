@@ -59,7 +59,7 @@ namespace Boku
 
             // Determine if HiDef is supported.
             // Find the default adapter and check if it supports Reach and Hidef.
-            // TODO (****) What do we do if Reach isn't supported???
+            // TODO (scoy) What do we do if Reach isn't supported???
             foreach (GraphicsAdapter ga in GraphicsAdapter.Adapters)
             {
 #if NETFX_CORE

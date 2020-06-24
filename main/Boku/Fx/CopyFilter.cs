@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 
 namespace Boku.Fx
@@ -31,7 +33,7 @@ namespace Boku.Fx
 
         public void Render(string technique, Texture2D source, float attenuation)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             SetUvToPos();
 
@@ -71,7 +73,7 @@ namespace Boku.Fx
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\CopyFilter");
+                effect = KoiLibrary.LoadEffect(@"Shaders\CopyFilter");
             }
 
             base.LoadContent(immediate);

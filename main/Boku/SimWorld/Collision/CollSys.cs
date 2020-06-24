@@ -4,6 +4,8 @@ using System.Diagnostics;
 
 using Microsoft.Xna.Framework;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -55,7 +57,7 @@ namespace Boku.SimWorld.Collision
     /// <summary>
     /// Collision reporting struct returned to the outside world.
     /// </summary>
-    public struct HitInfo
+    public struct MouseTouchHitInfo
     {
         /// <summary>
         /// The guy getting hit by you
@@ -157,7 +159,7 @@ namespace Boku.SimWorld.Collision
         /// <param name="p1"></param>
         /// <param name="radius"></param>
         /// <param name="hits"></param>
-        public static bool TestBest(Vector3 p0, Vector3 p1, float radius, List<HitInfo> hits)
+        public static bool TestBest(Vector3 p0, Vector3 p1, float radius, List<MouseTouchHitInfo> hits)
         {
             return Sys.CollisionCheck(p0, p1, new Vector3(radius), 0, false, hits);
         }
@@ -170,7 +172,7 @@ namespace Boku.SimWorld.Collision
         /// <param name="radius"></param>
         /// <param name="hits"></param>
         /// <returns></returns>
-        public static bool TestAll(Vector3 p0, Vector3 p1, float radius, List<HitInfo> hits)
+        public static bool TestAll(Vector3 p0, Vector3 p1, float radius, List<MouseTouchHitInfo> hits)
         {
             return Sys.CollisionCheck(p0, p1, new Vector3(radius), 0, true, hits);
         }
@@ -245,26 +247,26 @@ namespace Boku.SimWorld.Collision
                 mover.UpdateTransforms();
             }
         }
-        private Vector3 MakeOffset(HitInfo hitInfo, float radius)
+        private Vector3 MakeOffset(MouseTouchHitInfo MouseTouchHitInfo, float radius)
         {
-            if (Vector3.DistanceSquared(hitInfo.Center, hitInfo.Contact) 
+            if (Vector3.DistanceSquared(MouseTouchHitInfo.Center, MouseTouchHitInfo.Contact) 
                 < radius * radius)
             {
-                Vector3 newCenter = hitInfo.Contact + hitInfo.Normal * radius;
-                return (newCenter - hitInfo.Center) * 1.05f;
+                Vector3 newCenter = MouseTouchHitInfo.Contact + MouseTouchHitInfo.Normal * radius;
+                return (newCenter - MouseTouchHitInfo.Center) * 1.05f;
             }
             return Vector3.Zero;
         }
         /// <summary>
-        /// Fill in a hitInfo struct from the input.
+        /// Fill in a MouseTouchHitInfo struct from the input.
         /// </summary>
         /// <param name="best"></param>
         /// <param name="radius"></param>
         /// <returns></returns>
-        private HitInfo MakeHitScratch(CollInfo best, float radius)
+        private MouseTouchHitInfo MakeHitScratch(CollInfo best, float radius)
         {
             GameActor other = best.TopPrimitive.Owner;
-            HitInfo hitScratch = new HitInfo();
+            MouseTouchHitInfo hitScratch = new MouseTouchHitInfo();
             hitScratch.Contact = best.Contact;
             hitScratch.Center = best.Center;
             hitScratch.Normal = Vector3.Normalize(best.Normal);
@@ -281,12 +283,12 @@ namespace Boku.SimWorld.Collision
 
             return hitScratch;
         }
-        private void AdjustDelta(Mover mover, HitInfo hitInfo)
+        private void AdjustDelta(Mover mover, MouseTouchHitInfo MouseTouchHitInfo)
         {
             if (mover != null)
             {
                 /// We'll only allow a change in position if we are moving into each other.
-                if (Vector3.Dot(mover.Delta, hitInfo.Contact - mover.Center) >= 0)
+                if (Vector3.Dot(mover.Delta, MouseTouchHitInfo.Contact - mover.Center) >= 0)
                 {
                     GameActor owner = mover.Owner;
                     // If this is a fixed position, don't allow it to move.
@@ -296,9 +298,9 @@ namespace Boku.SimWorld.Collision
                     if (mobile)
                     {
                         // Seagrass hack, don't have collisions with seagrass affect position of mover.
-                        if (hitInfo.Other.Classification.name != "seagrass")
+                        if (MouseTouchHitInfo.Other.Classification.name != "seagrass")
                         {
-                            Vector3 endPosition = hitInfo.Center + hitInfo.Offset;
+                            Vector3 endPosition = MouseTouchHitInfo.Center + MouseTouchHitInfo.Offset;
 
                             mover.Delta = endPosition - mover.Center;
 
@@ -319,32 +321,32 @@ namespace Boku.SimWorld.Collision
         /// to respond to impact.
         /// </summary>
         /// <param name="mover"></param>
-        /// <param name="hitInfo"></param>
-        private void ApplyCollision(Mover mover, HitInfo hitInfo)
+        /// <param name="MouseTouchHitInfo"></param>
+        private void ApplyCollision(Mover mover, MouseTouchHitInfo MouseTouchHitInfo)
         {
-            Debug.Assert(hitInfo.Other != null);
-            if (mover.Owner.ActorHoldingThis == hitInfo.Other)
+            Debug.Assert(MouseTouchHitInfo.Other != null);
+            if (mover.Owner.ActorHoldingThis == MouseTouchHitInfo.Other)
             {
                 /// I'm touching what's holding me.
                 return;
             }
-            if (hitInfo.Other.ActorHoldingThis == mover.Owner)
+            if (MouseTouchHitInfo.Other.ActorHoldingThis == mover.Owner)
             {
                 /// I'm touching what I'm holding.
                 return;
             }
 
-            if (InGame.inGame.IsPickedUp(mover.Owner) && InGame.inGame.LastClonedThing == hitInfo.Other)
+            if (InGame.inGame.IsPickedUp(mover.Owner) && InGame.inGame.LastClonedThing == MouseTouchHitInfo.Other)
             {
                 // Don't collide the selected object with the recent clone.
                 clearLastClonedThing = false;
                 return;
             }
 
-            mover.Owner.ApplyCollisions(ref hitInfo);
-            AdjustDelta(mover, hitInfo);
+            mover.Owner.ApplyCollisions(ref MouseTouchHitInfo);
+            AdjustDelta(mover, MouseTouchHitInfo);
 
-            GameActor other = hitInfo.Other;
+            GameActor other = MouseTouchHitInfo.Other;
 
             // The ordering of tests can change so we need to check if either of 
             // the acotrs involved are missiles.
@@ -359,7 +361,7 @@ namespace Boku.SimWorld.Collision
                     MissileChassis mc = other.Chassis as MissileChassis;
                     if (mc != null && mc.Launcher != mover.Owner)
                     {
-                        mc.HitTarget(mover.Owner, hitInfo);
+                        mc.HitTarget(mover.Owner, MouseTouchHitInfo);
                     }
                 }
                 else
@@ -367,19 +369,19 @@ namespace Boku.SimWorld.Collision
                     MissileChassis mc = mover.Owner.Chassis as MissileChassis;
                     if (mc != null && mc.Launcher != other)
                     {
-                        mc.HitTarget(other, hitInfo);
+                        mc.HitTarget(other, MouseTouchHitInfo);
                     }
                 }
             }
             else
             {
                 // Normal path that happens when two actors bump.
-                hitInfo.Center = hitInfo.Struck;
-                hitInfo.Normal = -hitInfo.Normal;
-                hitInfo.Other = mover.Owner;
-                hitInfo.Offset = MakeOffset(hitInfo, other.CollisionRadius);
-                other.ApplyCollisions(ref hitInfo);
-                AdjustDelta(hitInfo.OtherMover, hitInfo);
+                MouseTouchHitInfo.Center = MouseTouchHitInfo.Struck;
+                MouseTouchHitInfo.Normal = -MouseTouchHitInfo.Normal;
+                MouseTouchHitInfo.Other = mover.Owner;
+                MouseTouchHitInfo.Offset = MakeOffset(MouseTouchHitInfo, other.CollisionRadius);
+                other.ApplyCollisions(ref MouseTouchHitInfo);
+                AdjustDelta(MouseTouchHitInfo.OtherMover, MouseTouchHitInfo);
             }
 
         }   // end of ApplyCollision()
@@ -419,15 +421,15 @@ namespace Boku.SimWorld.Collision
                 Vector3 start = mover.Center;
                 Vector3 end = start + mover.Delta;
 
-                hitInfo_ScratchList.Clear();
+                MouseTouchHitInfo_ScratchList.Clear();
 
                 // Do "real" collision test to determine if things collide.  These collisions are
                 // then applied to both the physics and the Bumped sensor.
-                if (CollisionCheck(start, end, moverRadii, first + 1, false, hitInfo_ScratchList))
+                if (CollisionCheck(start, end, moverRadii, first + 1, false, MouseTouchHitInfo_ScratchList))
                 {
-                    for (int i = 0; i < hitInfo_ScratchList.Count; ++i)
+                    for (int i = 0; i < MouseTouchHitInfo_ScratchList.Count; ++i)
                     {
-                        ApplyCollision(mover, hitInfo_ScratchList[i]);
+                        ApplyCollision(mover, MouseTouchHitInfo_ScratchList[i]);
                     }
                 }
 
@@ -436,17 +438,17 @@ namespace Boku.SimWorld.Collision
                 // a non-zero TouchCushion.  Note that we have to test against all other
                 // movers, not just the ones after us in the list.  These results are only
                 // applied to the Bumped sensor, not the physics.
-                hitInfo_ScratchList.Clear();
+                MouseTouchHitInfo_ScratchList.Clear();
                 if (mover.TouchCushion > 0.0f)
                 {
                     float maxHeight = start.Z - mover.Radius * 0.5f;
                     end = start;
                     end.Z -= mover.TouchCushion;
-                    if (CollisionCheck(start, end, moverRadii, first + 1, true, hitInfo_ScratchList))
+                    if (CollisionCheck(start, end, moverRadii, first + 1, true, MouseTouchHitInfo_ScratchList))
                     {
-                        for (int i = 0; i < hitInfo_ScratchList.Count; ++i)
+                        for (int i = 0; i < MouseTouchHitInfo_ScratchList.Count; ++i)
                         {
-                            HitInfo hit = hitInfo_ScratchList[i];
+                            MouseTouchHitInfo hit = MouseTouchHitInfo_ScratchList[i];
                             if ((hit.Other != mover.Owner)
                                 && ((hit.OtherMover == null)
                                     || (hit.OtherMover.Center.Z + hit.OtherMover.Radius < maxHeight)))
@@ -460,7 +462,7 @@ namespace Boku.SimWorld.Collision
                     }
                 }
 
-                hitInfo_ScratchList.Clear();
+                MouseTouchHitInfo_ScratchList.Clear();
             }
 
             // If this is still set to true that means that the selected obj and 
@@ -470,7 +472,7 @@ namespace Boku.SimWorld.Collision
                 InGame.inGame.LastClonedThing = null;
             }
         }
-        private static List<HitInfo> hitInfo_ScratchList = new List<HitInfo>();
+        private static List<MouseTouchHitInfo> MouseTouchHitInfo_ScratchList = new List<MouseTouchHitInfo>();
 
         /// <summary>
         /// Start, end and radii are passed in from a mover.  This method tests
@@ -486,11 +488,11 @@ namespace Boku.SimWorld.Collision
         /// <param name="startPos0">start position of swept sphere</param>
         /// <param name="endPos0">end position of swept sphere</param>
         /// <param name="radii0">Radii of swept ellipsoid.</param>
-        /// <param name="first">This is the index of the first mover to check for collisions with.  Start, end, and radii come from the previous mover.  TODO (****) Change numbering so this is more clear.</param>
+        /// <param name="first">This is the index of the first mover to check for collisions with.  Start, end, and radii come from the previous mover.  TODO (scoy) Change numbering so this is more clear.</param>
         /// <param name="listAll">When true, all hits are listed.  When false, only the nearest hit is listed.</param>
         /// <param name="hits"></param>
         /// <returns></returns>
-        private bool CollisionCheck(Vector3 startPos0, Vector3 endPos0, Vector3 radii0, int first, bool listAll, List<HitInfo> hits)
+        private bool CollisionCheck(Vector3 startPos0, Vector3 endPos0, Vector3 radii0, int first, bool listAll, List<MouseTouchHitInfo> hits)
         {
             /// These are structs, no real allocation done here.
             CollInfo curCollPrim = new CollInfo();
@@ -513,13 +515,13 @@ namespace Boku.SimWorld.Collision
 
                 // Note we used the Z part of the radii.  So, on squashed movers we
                 // might get some intersection.
-                // TODO (****) Actually figure out how to test a swept ellipsoid against
+                // TODO (scoy) Actually figure out how to test a swept ellipsoid against
                 // the Primitive based collision shapes.
                 if (thing.Collide(startPos0, endPos0, radii0.Z, ref curCollPrim))
                 {
                     if (listAll)
                     {
-                        HitInfo hitScratch = MakeHitScratch(curCollPrim, radii0.X);
+                        MouseTouchHitInfo hitScratch = MakeHitScratch(curCollPrim, radii0.X);
                         hits.Add(hitScratch);
                         curCollPrim.DistSq = Single.MaxValue;
                     }
@@ -532,7 +534,7 @@ namespace Boku.SimWorld.Collision
 
                         if (best.Touching)
                         {
-                            HitInfo hitScratch = MakeHitScratch(best, radii0.X);
+                            MouseTouchHitInfo hitScratch = MakeHitScratch(best, radii0.X);
                             hits.Add(hitScratch);
                         }
                     }
@@ -594,7 +596,7 @@ namespace Boku.SimWorld.Collision
 
                     if (listAll)
                     {
-                        HitInfo hitScratch = MakeHitScratch(curCollPrim, radii0.X);
+                        MouseTouchHitInfo hitScratch = MakeHitScratch(curCollPrim, radii0.X);
                         hits.Add(hitScratch);
                         curCollPrim.DistSq = Single.MaxValue;
                     }
@@ -606,7 +608,7 @@ namespace Boku.SimWorld.Collision
 
                             if (best.Touching)
                             {
-                                HitInfo hitScratch = MakeHitScratch(best, radii0.X);
+                                MouseTouchHitInfo hitScratch = MakeHitScratch(best, radii0.X);
                                 hits.Add(hitScratch);
                             }
                         }
@@ -622,7 +624,7 @@ namespace Boku.SimWorld.Collision
                 /// do it here.
                 if (!best.Touching)
                 {
-                    HitInfo hitScratch = MakeHitScratch(best, radii0.X);
+                    MouseTouchHitInfo hitScratch = MakeHitScratch(best, radii0.X);
                     hits.Add(hitScratch);
                 }
             }
@@ -633,9 +635,9 @@ namespace Boku.SimWorld.Collision
             return hits.Count > 0;
         }
 
-        private class CompareHits : IComparer<HitInfo>
+        private class CompareHits : IComparer<MouseTouchHitInfo>
         {
-            public int Compare(HitInfo lhs, HitInfo rhs)
+            public int Compare(MouseTouchHitInfo lhs, MouseTouchHitInfo rhs)
             {
                 if (lhs.DistSq < rhs.DistSq)
                     return -1;

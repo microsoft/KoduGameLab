@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Scenes;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -38,7 +42,7 @@ namespace Boku.Common.HintSystem
 
             bool editingTerrain = false;
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+            if (KoiLibrary.LastTouchedDeviceIsGamepad)
             {
                 // GamePad mode.
                 if (InGame.inGame.CurrentUpdateMode == InGame.UpdateMode.TerrainUpDown
@@ -53,12 +57,9 @@ namespace Boku.Common.HintSystem
                 // MouseEdit mode.
                 if (InGame.inGame.CurrentUpdateMode == InGame.UpdateMode.MouseEdit)
                 {
-                    if ((InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == InGame.BaseEditUpdateObj.ToolMode.TerrainRaiseLower &&
-                        InGame.inGame.mouseEditUpdateObj.ToolBar.RevertMode == InGame.BaseEditUpdateObj.ToolMode.TerrainRaiseLower)
-                        || (InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == InGame.BaseEditUpdateObj.ToolMode.TerrainSmoothLevel &&
-                        InGame.inGame.mouseEditUpdateObj.ToolBar.RevertMode == InGame.BaseEditUpdateObj.ToolMode.TerrainSmoothLevel)
-                        || (InGame.inGame.mouseEditUpdateObj.ToolBar.CurrentMode == InGame.BaseEditUpdateObj.ToolMode.TerrainSpikeyHilly &&
-                        InGame.inGame.mouseEditUpdateObj.ToolBar.RevertMode == InGame.BaseEditUpdateObj.ToolMode.TerrainSpikeyHilly)
+                    if ((EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainRaiseLower)
+                        || (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainSmoothLevel)
+                        || (EditWorldScene.CurrentToolMode == EditWorldScene.ToolMode.TerrainSpikeyHilly)
                         )
                     {
                         editingTerrain = true;

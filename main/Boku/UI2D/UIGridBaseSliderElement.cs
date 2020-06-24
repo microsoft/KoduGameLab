@@ -9,6 +9,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Common;
 using Boku.Fx;
@@ -52,7 +56,7 @@ namespace Boku.UI2D
         protected Color dropShadowColor;
         protected bool useDropShadow = false;
         protected bool invertDropShadow = false;    // Puts the drop shadow above the regular letter instead of below.
-        protected Justification justify = Justification.Left;
+        protected TextHelper.Justification justify = TextHelper.Justification.Left;
 
         #region Accessors
         /// <summary>
@@ -178,7 +182,7 @@ namespace Boku.UI2D
         /// <param name="label"></param>
         /// <param name="justify"></param>
         /// <param name="textColor"></param>
-        public UIGridBaseSliderElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, string label, Shared.GetFont font, Justification justify, Color textColor)
+        public UIGridBaseSliderElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, String label, GetFont font, TextHelper.Justification justify, Color textColor)
         {
             this.width = width;
             this.height = height;
@@ -208,7 +212,7 @@ namespace Boku.UI2D
         /// <param name="textColor"></param>
         /// <param name="dropShadowColor"></param>
         /// <param name="invertDropShadow"></param>
-        public UIGridBaseSliderElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, string label, Shared.GetFont font, Justification justify, Color textColor, Color dropShadowColor, bool invertDropShadow)
+        public UIGridBaseSliderElement(float width, float height, float edgeSize, string normalMapName, Color baseColor, String label, GetFont font, TextHelper.Justification justify, Color textColor, Color dropShadowColor, bool invertDropShadow)
         {
             this.width = width;
             this.height = height;
@@ -332,7 +336,7 @@ namespace Boku.UI2D
                 string valueString = GetFormattedValue();
                 x -= (int)(Font().MeasureString(valueString).X) / 2;
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin();
                 if (useDropShadow)
                 {
@@ -406,20 +410,20 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             // Load the normal map texture.
             if (normalMapName != null)
             {
-                normalMap = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\" + normalMapName);
+                normalMap = KoiLibrary.LoadTexture2D(@"Textures\UI2D\" + normalMapName);
             }
 
             // Load the textures.
             if (sliderBox == null)
             {
-                sliderBox = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\WhiteSliderBox");
+                sliderBox = KoiLibrary.LoadTexture2D(@"Textures\UI2D\WhiteSliderBox");
             }
 
         }   // end of UIGridBaseSliderElement LoadContent()
@@ -453,9 +457,9 @@ namespace Boku.UI2D
 
             ReleaseRenderTargets();
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref normalMap);
-            BokuGame.Release(ref sliderBox);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref normalMap);
+            DeviceResetX.Release(ref sliderBox);
 
             BokuGame.Unload(geometry);
             geometry = null;
@@ -487,7 +491,7 @@ namespace Boku.UI2D
             }
 
             diffuse = new RenderTarget2D(device, w, h, false, SurfaceFormat.Color, DepthFormat.None);
-            InGame.GetRT("UIGrid2DBaseSliderElement", diffuse);
+            SharedX.GetRT("UIGrid2DBaseSliderElement", diffuse);
 
             // Refresh the texture.
             dirty = true;
@@ -496,8 +500,8 @@ namespace Boku.UI2D
 
         private void ReleaseRenderTargets()
         {
-            InGame.RelRT("UIGrid2DBaseSliderElement", diffuse);
-            BokuGame.Release(ref diffuse);
+            SharedX.RelRT("UIGrid2DBaseSliderElement", diffuse);
+            DeviceResetX.Release(ref diffuse);
         }
 
     }   // end of class UIGridBaseSliderElement

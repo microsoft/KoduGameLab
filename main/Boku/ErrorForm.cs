@@ -8,7 +8,7 @@
 
 namespace Boku
 {
-    // (TODO (****) BROKEN
+    // (TODO (scoy) BROKEN
 #if !NETFX_CORE
     public partial class ErrorForm : Form
     {

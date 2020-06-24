@@ -6,6 +6,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Fx;
 using Boku.Common;
 using Boku.Common.Xml;
@@ -480,7 +482,7 @@ namespace Boku.SimWorld.Terra
             ParameterEdit(EffectParams.BotTex).SetValue(BotTex[(int)Tile.Face.Top]);
             ParameterEdit(EffectParams.TopTex).SetValue(TopTex[(int)Tile.Face.Top]);
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             //Set address mode for texture samplers
             device.SamplerStates[0] = wrapWrapSampler;
@@ -493,7 +495,7 @@ namespace Boku.SimWorld.Terra
             ParameterEdit(EffectParams.BotTex).SetValue(BotTex[(int)Tile.Face.Front]);
             ParameterEdit(EffectParams.TopTex).SetValue(TopTex[(int)Tile.Face.Front]);
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             //Set address mode for texture samplers
             device.SamplerStates[0] = BotClamped ? wrapClampSampler : wrapWrapSampler;
@@ -542,7 +544,7 @@ namespace Boku.SimWorld.Terra
             ParameterColor(EffectParams.BotTex).SetValue(BotTex[(int)Tile.Face.Top]);
             ParameterColor(EffectParams.TopTex).SetValue(TopTex[(int)Tile.Face.Top]);
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             //Set address mode for texture samplers
             device.SamplerStates[0] = wrapWrapSampler;
             device.SamplerStates[1] = wrapWrapSampler;      // Top face, always wrapped.
@@ -831,8 +833,8 @@ namespace Boku.SimWorld.Terra
             Texture2D tex = null;
             if (!string.IsNullOrEmpty(name))
             {
-                string texName = BokuGame.Settings.MediaPath + name;
-                tex = BokuGame.Load<Texture2D>(texName);
+                string texName = name;
+                tex = KoiLibrary.LoadTexture2D(texName);
             }
             return tex;
         }

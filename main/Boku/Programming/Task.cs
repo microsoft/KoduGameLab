@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -332,7 +334,7 @@ namespace Boku.Programming
                                 continue;
 
                             // Handle strangeness of me filter.  Basically this is adds an implicit "not me" filter
-                            // except in the case where the user explicitely added the "me " filter.
+                            // except in the case where the user explicitly added the "me " filter.
                             Reflex reflex = (Reflex)reflexes[i];
                             if(reflex.hasMeFilter)
                             {
@@ -498,10 +500,10 @@ namespace Boku.Programming
                                 switch (mf.type)
                                 {
                                     case MouseFilterType.LeftButton:
-                                        MouseInput.Left.IgnoreUntilReleased = true;
+                                        LowLevelMouseInput.Left.IgnoreUntilReleased = true;
                                         break;
                                     case MouseFilterType.RightButton:
-                                        MouseInput.Right.IgnoreUntilReleased = true;
+                                        LowLevelMouseInput.Right.IgnoreUntilReleased = true;
                                         break;
                                     default:
                                         // Nothing to see here, move along.

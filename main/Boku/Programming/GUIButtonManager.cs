@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Gesture;
@@ -77,7 +81,7 @@ namespace Boku.Programming
                 buttons[i] = new GUIButton(color);
             }
 
-            blob = new TextBlob(UI2D.Shared.GetGameFont20, "", (int)(GUIButton.DefaultSize.X - 2 * margin));
+            blob = new TextBlob(SharedX.GetGameFont20, "", (int)(GUIButton.DefaultSize.X - 2 * margin));
         }   // end of Init()
 
         public static void Update()
@@ -88,14 +92,14 @@ namespace Boku.Programming
 
             bool bActive = InGame.UpdateMode.RunSim == InGame.inGame.CurrentUpdateMode;
 
-            bool bTouchMode = GamePadInput.InputMode.Touch == GamePadInput.ActiveMode;
-            bool bMouseMode = GamePadInput.InputMode.KeyboardMouse == GamePadInput.ActiveMode;
+            bool bTouchMode = KoiLibrary.LastTouchedDeviceIsTouch;
+            bool bMouseMode = KoiLibrary.LastTouchedDeviceIsKeyboardMouse;
 
             //Should we clear the mouse left button input so game doesn't receive
             bool bClearMouseInput = false;
 
             //See if we need to reset all button state.
-            if (!bActive || GamePadInput.PreviousMode != GamePadInput.ActiveMode)
+            if (!bActive || KoiLibrary.LastTouchedDeviceChanged)
             {
                 ResetButtonState();
             }
@@ -118,7 +122,7 @@ namespace Boku.Programming
                         button.MouseOver = false;
                         if (bMouseMode)
                         {
-                            button.MouseOver = button.HitBox.Contains(MouseInput.PositionVec);
+                            button.MouseOver = button.HitBox.Contains(LowLevelMouseInput.PositionVec);
                         }
 
                         //No Finger ID Assigned means we want to press
@@ -146,14 +150,14 @@ namespace Boku.Programming
                             }
                             else if (bMouseMode)
                             {
-                                buttonDown = button.MouseOver && (MouseInput.Left.IsPressed || MouseInput.Right.IsPressed);
+                                buttonDown = button.MouseOver && (LowLevelMouseInput.Left.IsPressed || LowLevelMouseInput.Right.IsPressed);
 
                                 if (buttonDown)
                                 {
                                     bClearMouseInput = true;
                                     button.FingerID = 0;
                                     button.MouseControlled = true;
-                                    button.MouseLeftClick = MouseInput.Left.IsPressed;
+                                    button.MouseLeftClick = LowLevelMouseInput.Left.IsPressed;
                                 }
                                 else
                                 {
@@ -194,7 +198,7 @@ namespace Boku.Programming
                                 bClearMouseInput |= buttons[i].MouseControlled;
 
                                 bIntersect = button.MouseOver;
-                                bReleasedButton = !MouseInput.Left.IsPressed;
+                                bReleasedButton = !LowLevelMouseInput.Left.IsPressed;
                             }
 
 
@@ -221,7 +225,7 @@ namespace Boku.Programming
             //Clear mouse input if we intercepted.
             if (bClearMouseInput)
             {
-                MouseInput.Left.Reset();
+                LowLevelMouseInput.Left.Reset();
             }
 
             // If state changed, update the rendered buttons.
@@ -368,7 +372,7 @@ namespace Boku.Programming
         public static void Render()
         {
             GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             int maxPerRow = (int)((BokuGame.ScreenSize.X - panelOffset.X) / GUIButton.DefaultSize.X);
             int numRendered = 0;
@@ -412,7 +416,7 @@ namespace Boku.Programming
             if (Dirty && buttonTexture != null)
             {
                 GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 InGame.SetRenderTarget(buttonPanelRT);
 
@@ -498,7 +502,7 @@ namespace Boku.Programming
             string line1 = buttons[buttonIndex].Label;
             string line2 = null;
 
-            UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont24;
+            GetFont Font = SharedX.GetGameFont24;
             int margin = 8;
             int width = 128 - 2 * margin;
             Vector2 size1 = Font().MeasureString(line1);
@@ -547,7 +551,7 @@ namespace Boku.Programming
         /// <param name="size"></param>
         /// <param name="width"></param>
         /// <returns></returns>
-        static bool RenderLine(UI2D.Shared.GetFont Font, Vector2 pos, string line, Vector2 size, int width)
+        static bool RenderLine(GetFont Font, Vector2 pos, string line, Vector2 size, int width)
         {
             Vector2 scale = Vector2.One;
             if (size.X > width)
@@ -580,7 +584,7 @@ namespace Boku.Programming
         /// <param name="input"></param>
         /// <param name="line1">First substring.</param>
         /// <param name="line2">Second substring.  May be null.</param>
-        static void SplitString(UI2D.Shared.GetFont Font, string input, out string line1, out string line2)
+        static void SplitString(GetFont Font, string input, out string line1, out string line2)
         {
             input = input.Trim();   // Clean off whitespace since it can throw off calculations.
             line1 = input;
@@ -636,7 +640,7 @@ namespace Boku.Programming
             string line1 = label;
             string line2 = null;
 
-            UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont24;
+            GetFont Font = SharedX.GetGameFont24;
             int margin = 8;
             int width = 128 - 2 * margin;
             Vector2 size1 = Font().MeasureString(line1);
@@ -686,8 +690,41 @@ namespace Boku.Programming
             Rectangle srcRect = new Rectangle(buttonIndex * (int)GUIButton.DefaultSize.X, 0, (int)GUIButton.DefaultSize.X, (int)GUIButton.DefaultSize.Y);
             center -= GUIButton.DefaultSize / 2.0f;
             Rectangle dstRect = new Rectangle((int)center.X, (int)center.Y, (int)GUIButton.DefaultSize.X, (int)GUIButton.DefaultSize.Y);
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
             batch.Begin();
+            batch.Draw(buttonPanelRT, dstRect, srcRect, Color.White);
+            batch.End();
+        }   // end of RenderButtonPreview()
+
+        /// <summary>
+        /// Used to preview button layout when editing label.
+        /// Version that uses a SpriteCamera...
+        /// </summary>
+        /// <param name="camera"></param>
+        /// <param name="button"></param>
+        /// <param name="position"></param>
+        /// <param name="text"></param>
+        public static void RenderButtonPreview(SpriteCamera camera, GUIButton button, Vector2 position, string text)
+        {
+            int buttonIndex = -1;
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                if (buttons[i] == button)
+                {
+                    buttonIndex = i;
+                    break;
+                }
+            }
+            Debug.Assert(buttonIndex != -1);
+
+            button.Label = text;
+
+            Rectangle srcRect = new Rectangle(buttonIndex * (int)GUIButton.DefaultSize.X, 0, (int)GUIButton.DefaultSize.X, (int)GUIButton.DefaultSize.Y);
+            Rectangle dstRect = new Rectangle((int)position.X, (int)position.Y, (int)GUIButton.DefaultSize.X, (int)GUIButton.DefaultSize.Y);
+
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
+
+            batch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, samplerState: null, depthStencilState: null, rasterizerState: null, effect: null, transformMatrix: camera.ViewMatrix);
             batch.Draw(buttonPanelRT, dstRect, srcRect, Color.White);
             batch.End();
         }   // end of RenderButtonPreview()

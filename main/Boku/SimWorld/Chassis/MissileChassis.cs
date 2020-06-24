@@ -4,6 +4,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
+using KoiX;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -472,19 +474,19 @@ namespace Boku.SimWorld.Chassis
 
         }   // end of CheckCollisions()
 
-        public void HitTarget(GameThing hitThing, HitInfo hitInfo)
+        public void HitTarget(GameThing hitThing, MouseTouchHitInfo MouseTouchHitInfo)
         {
             if (hitThing != null)
             {
                 // Tell the launcher what we hit.
-                launcher.OnMissileHit(hitThing, hitInfo.Center, verbPayload, damage);
+                launcher.OnMissileHit(hitThing, MouseTouchHitInfo.Center, verbPayload, damage);
 
                 // Apply the damage to the target.
                 // We only need to do this if the launcher is dead.  Otherwise the above
                 // notification will get processed and the damage will be taken into
                 // account there.  Yes, this is kind of confusing and should be rethought
                 // and cleaned up.  
-                // TODO (****)
+                // TODO (scoy)
                 if (Launcher.CurrentState == GameThing.State.Inactive)
                 {
                     bool targetDied = false;
@@ -495,7 +497,7 @@ namespace Boku.SimWorld.Chassis
                 missile.Deactivate();
 
                 // Gratuitous effects.
-                PlayExplodeEffect(hitInfo.Center);
+                PlayExplodeEffect(MouseTouchHitInfo.Center);
             }
         }   // end of HitTarget()
 

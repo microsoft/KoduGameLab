@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.Common;
@@ -54,13 +57,13 @@ namespace Boku
 
             public override void Render(Camera camera)
             {
-                Point center = new Point(BokuGame.bokuGame.GraphicsDevice.Viewport.Width / 2, BokuGame.bokuGame.GraphicsDevice.Viewport.Height / 2);
+                Point center = new Point(KoiLibrary.GraphicsDevice.Viewport.Width / 2, KoiLibrary.GraphicsDevice.Viewport.Height / 2);
 
                 string title = TextHelper.FilterInvalidCharacters(InGame.CurrentWorldName);
 
                 if (title != null)
                 {
-                    UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont30Bold;
+                    GetFont Font = SharedX.GetGameFont30Bold;
 
                     int width = (int)Font().MeasureString(TextHelper.FilterInvalidCharacters(title)).X;
                     center.X -= width / 2;

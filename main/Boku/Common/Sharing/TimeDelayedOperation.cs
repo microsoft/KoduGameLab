@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
+using KoiX;
 
 namespace Boku.Common.Sharing
 {

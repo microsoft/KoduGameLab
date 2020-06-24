@@ -7,6 +7,8 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Base;
 

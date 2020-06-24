@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI2D;
@@ -227,7 +230,7 @@ namespace Boku.UI2D
         {
             if (reticuleTexture == null)
             {
-                reticuleTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\Tools\SelectionReticule");
+                reticuleTexture = KoiLibrary.LoadTexture2D(@"Textures\UI2D\Tools\SelectionReticule");
             }
 
             base.LoadContent(immediate);
@@ -247,7 +250,7 @@ namespace Boku.UI2D
 
         public override void UnloadContent()
         {
-            BokuGame.Release(ref reticuleTexture);
+            DeviceResetX.Release(ref reticuleTexture);
 
             base.UnloadContent();
         }   // end of LoadContent()

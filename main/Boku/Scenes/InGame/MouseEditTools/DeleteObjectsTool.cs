@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI;
@@ -58,34 +61,23 @@ namespace Boku.Scenes.InGame.MouseEditTools
             return instance;
         }   // end of DeleteObjectsTool GetInstance()
 
-        public override void Update(Camera camera)
+        public override void Update()
         {
             if (Active)
             {
                 CheckSelectCursor(false);
 
-                if (!PickerXInUse && !PickerYInUse)
-                {
-                    if (DebouncePending)
-                        return;
+                // Don't want any changes to terrain.
+                SetEditModes(Terrain.EditMode.Noop, Terrain.EditMode.Noop, Terrain.EditMode.Noop);
 
-                    ProcessTriggers(
-                        Terrain.EditMode.Noop,
-                        Terrain.EditMode.Noop,
-                        Terrain.EditMode.Noop);
-
-                    SelectOverlay();
-                }
+                SelectOverlay();
             }
 
-            base.Update(camera);
+            base.Update();
         }   // end of DeleteObjectsTool Update()
         #endregion Public
 
-        protected override void ProcessTouch(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
-            Terrain.EditMode right)
+        protected override void ProcessTouch()
         {
             if (TouchInput.TouchCount > 0 && Boku.InGame.inGame.TouchEdit.HasNonUITouch())
             {
@@ -96,22 +88,23 @@ namespace Boku.Scenes.InGame.MouseEditTools
                 }
             }
 
-            base.ProcessTouch(left, middle, right);
+            base.ProcessTouch();
         }
 
-        protected override void ProcessPoint(
-            Terrain.EditMode left,
-            Terrain.EditMode middle,
-            Terrain.EditMode right)
+        protected override void ProcessPoint()
         {
+            BuildSelected();
+            DeleteSelected();
 
-            if (MouseInput.Left.IsPressed)
-            {
-                BuildSelected();
-                DeleteSelected();
-            }
+            base.ProcessPoint();
+        }
 
-            base.ProcessPoint(left, middle, right);
+        protected override void ProcessSelection()
+        {
+            BuildSelected();
+            DeleteSelected();
+
+            base.ProcessSelection();
         }
 
         #region Internal
@@ -122,10 +115,8 @@ namespace Boku.Scenes.InGame.MouseEditTools
             selected.Clear();
             unselected.Clear();
 
-            Brush2DManager.Brush2D brush = Brush2DManager.GetBrush(shared.editBrushIndex);
-            bool isSelection =
-                (brush != null)
-                && ((brush.Type & Brush2DManager.BrushType.Selection) != 0);
+            Brush2DManager.Brush2D brush = Brush2DManager.GetActiveBrush();
+            bool isMagicBrush = brush.Shape == Brush2DManager.BrushShape.Magic;
 
             for (int i = 0; i < gameThings.Count; ++i)
             {
@@ -135,14 +126,13 @@ namespace Boku.Scenes.InGame.MouseEditTools
                     Vector3 pos = actor.Movement.Position;
 
                     bool actorSelected = false;
-                    if (isSelection)
+                    if (isMagicBrush)
                     {
                         actorSelected = Terrain.Current.PositionSelected(pos);
                     }
-                    else if (InStretchMode)
+                    else if (UsingLinearBrush)
                     {
                         actorSelected = Terrain.Current.PositionSelected(pos,
-                            shared.editBrushIndex,
                             shared.editBrushStart,
                             shared.editBrushPosition,
                             shared.editBrushRadius);
@@ -150,7 +140,6 @@ namespace Boku.Scenes.InGame.MouseEditTools
                     else
                     {
                         actorSelected = Terrain.Current.PositionSelected(pos,
-                            shared.editBrushIndex,
                             shared.editBrushPosition,
                             shared.editBrushRadius);
                     }
@@ -185,21 +174,17 @@ namespace Boku.Scenes.InGame.MouseEditTools
             }
         }
         private object timerInstrument = null;
-        public override void OnActivate()
+        protected override void OnActivate()
         {
             timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameDeleteTool);
             base.OnActivate();
 
-            PickerX = brushPicker;      // Assign X button to brush picker and activate.
-            brushPicker.BrushSet = Brush2DManager.BrushType.Binary
-                | Brush2DManager.BrushType.Selection;
-            brushPicker.UseAltOverlay = true;
 
             inGame.ShowCursor();
 
         }   // end of HeightMapTool OnActivate()
 
-        public override void OnDeactivate()
+        protected override void OnDeactivate()
         {
             base.OnDeactivate();
 

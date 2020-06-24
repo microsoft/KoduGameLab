@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
 
 using Boku.Base;
 using Boku.Common;
@@ -60,14 +63,14 @@ namespace Boku
             // Info before user makes any changes.
             public string originalName = null;
             public string originalDescription = null;
-            public UIGridElement.Justification originalDescJustification = UIGridElement.Justification.Left;
+            public TextHelper.Justification originalDescJustification = TextHelper.Justification.Left;
             public int originalVersion = 0;     // Version before user changes.
 
             // Post change info.
             public string curName = null;       // Current level name.
             public string curNameScrubbed = null;   // Scrubbed version of the above.
             public string curDesc = null;       // Current level description.
-            public UIGridElement.Justification curDescJustification = UIGridElement.Justification.Left;
+            public TextHelper.Justification curDescJustification = TextHelper.Justification.Left;
             public TextBlob descBlob = null;    // The formatted description.
             public int curVersion = 0;          // Current level version.  Version numbers should all be positive.
                                                 // 0 indicates no version number.
@@ -160,8 +163,6 @@ namespace Boku
             {
                 this.parent = parent;
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-
                 // We're rendering the camera specific parts into a 1024x768 rendertarget and
                 // then copying (with masking) into the 1280x720 rt and finally cropping it 
                 // as needed for 4:3 display.
@@ -180,19 +181,19 @@ namespace Boku
                 // Buttons
                 {
                     GetTexture getTexture = delegate() { return ButtonTextures.XButton; };
-                    tagsButton = new Button(Strings.Localize("saveLevelDialog.tags"), tagsColor, getTexture, UI2D.Shared.GetGameFont20);
+                    tagsButton = new Button(Strings.Localize("saveLevelDialog.tags"), tagsColor, getTexture, KoiX.SharedX.GetGameFont20);
                 }
                 {
                     GetTexture getTexture = delegate() { return ButtonTextures.AButton; };
-                    changeButton = new Button(Strings.Localize("saveLevelDialog.change"), labelColor, getTexture, UI2D.Shared.GetGameFont20);
+                    changeButton = new Button(Strings.Localize("saveLevelDialog.change"), labelColor, getTexture, KoiX.SharedX.GetGameFont20);
                 }
                 {
                     GetTexture getTexture = delegate() { return ButtonTextures.BButton; };
-                    cancelButton = new Button(Strings.Localize("saveLevelDialog.cancel"), labelColor, getTexture, UI2D.Shared.GetGameFont20);
+                    cancelButton = new Button(Strings.Localize("saveLevelDialog.cancel"), labelColor, getTexture, KoiX.SharedX.GetGameFont20);
                 }
                 {
                     GetTexture getTexture = delegate() { return ButtonTextures.StartButton; };
-                    saveButton = new Button(Strings.Localize("saveLevelDialog.save"), labelColor, getTexture, UI2D.Shared.GetGameFont20);
+                    saveButton = new Button(Strings.Localize("saveLevelDialog.save"), labelColor, getTexture, KoiX.SharedX.GetGameFont20);
                 }
 
             }   // end of Shared c'tor
@@ -270,9 +271,9 @@ namespace Boku
                     GamePadInput pad = GamePadInput.GetGamePad0();
 
                     //TouchInput
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                    if (KoiLibrary.LastTouchedDeviceIsTouch)
                     {
-                        bool altPressed = KeyboardInput.AltIsPressed;
+                        bool altPressed = KeyboardInputX.AltIsPressed;
                         bool released = prevAltPressed && !altPressed;
 
                         if (shared.editingText && released && specialChar != null)
@@ -332,7 +333,7 @@ namespace Boku
                                 }
 
                                 shared.focus = Shared.InputFocus.Name;
-                                KeyboardInput.ShowOnScreenKeyboard();
+                                KeyboardInputX.ShowOnScreenKeyboard();
                                 ActivateEditing();
                             }
 
@@ -358,7 +359,7 @@ namespace Boku
                                 }
 
                                 shared.focus = Shared.InputFocus.Description;
-                                KeyboardInput.ShowOnScreenKeyboard();
+                                KeyboardInputX.ShowOnScreenKeyboard();
                                 ActivateEditing();
                                 
 
@@ -428,21 +429,21 @@ namespace Boku
                                 }
                             }
 
-                            // Description Justification
+                            // Description TextHelper.Justification
                             if (shared.leftJustifyHitBox.Touched(touch, hit))
                             {
-                                shared.descBlob.Justification = UIGridElement.Justification.Left;
-                                shared.curDescJustification = UIGridElement.Justification.Left;
+                                shared.descBlob.Justification = TextHelper.Justification.Left;
+                                shared.curDescJustification = TextHelper.Justification.Left;
                             }
                             if (shared.centerJustifyHitBox.Touched(touch, hit))
                             {
-                                shared.descBlob.Justification = UIGridElement.Justification.Center;
-                                shared.curDescJustification = UIGridElement.Justification.Center;
+                                shared.descBlob.Justification = TextHelper.Justification.Center;
+                                shared.curDescJustification = TextHelper.Justification.Center;
                             }
                             if (shared.rightJustifyHitBox.Touched(touch, hit))
                             {
-                                shared.descBlob.Justification = UIGridElement.Justification.Right;
-                                shared.curDescJustification = UIGridElement.Justification.Right;
+                                shared.descBlob.Justification = TextHelper.Justification.Right;
+                                shared.curDescJustification = TextHelper.Justification.Right;
                             }
 
                             // Tags picker
@@ -593,9 +594,9 @@ namespace Boku
                     // END of TouchInput
 
                     // MouseInput
-                    if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                    if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                     {
-                        bool altPressed = KeyboardInput.AltIsPressed;
+                        bool altPressed = KeyboardInputX.AltIsPressed;
                         bool released = prevAltPressed && !altPressed;
 
                         if (shared.editingText && released && specialChar != null)
@@ -609,7 +610,7 @@ namespace Boku
                         }
                         prevAltPressed = altPressed;
 
-                        Vector2 hit = (MouseInput.PositionVec - shared.rtDisplayPosition) / shared.rtScale;
+                        Vector2 hit = (LowLevelMouseInput.PositionVec - shared.rtDisplayPosition) / shared.rtScale;
 
                         // Name label
                         if (shared.nameLabelBox.LeftPressed(hit))
@@ -729,21 +730,21 @@ namespace Boku
                             }
                         }
 
-                        // Description Justification
+                        // Description TextHelper.Justification
                         if (shared.leftJustifyHitBox.LeftPressed(hit))
                         {
-                            shared.descBlob.Justification = UIGridElement.Justification.Left;
-                            shared.curDescJustification = UIGridElement.Justification.Left;
+                            shared.descBlob.Justification = TextHelper.Justification.Left;
+                            shared.curDescJustification = TextHelper.Justification.Left;
                         }
                         if (shared.centerJustifyHitBox.LeftPressed(hit))
                         {
-                            shared.descBlob.Justification = UIGridElement.Justification.Center;
-                            shared.curDescJustification = UIGridElement.Justification.Center;
+                            shared.descBlob.Justification = TextHelper.Justification.Center;
+                            shared.curDescJustification = TextHelper.Justification.Center;
                         }
                         if (shared.rightJustifyHitBox.LeftPressed(hit))
                         {
-                            shared.descBlob.Justification = UIGridElement.Justification.Right;
-                            shared.curDescJustification = UIGridElement.Justification.Right;
+                            shared.descBlob.Justification = TextHelper.Justification.Right;
+                            shared.curDescJustification = TextHelper.Justification.Right;
                         }
 
                         // Tags picker
@@ -862,7 +863,7 @@ namespace Boku
                         // The scroll wheel only affects the cursor if editing the description.
                         if (shared.editingText && shared.focus == Shared.InputFocus.Description)
                         {
-                            int scroll = MouseInput.ScrollWheel - MouseInput.PrevScrollWheel;
+                            int scroll = LowLevelMouseInput.DeltaScrollWheel;
                             if (scroll > 0)
                             {
                                 ScrollDown();
@@ -882,10 +883,10 @@ namespace Boku
 
                     }   // end of mouse input
 
-                    if (pad.ButtonB.WasPressed || (!shared.editingText && KeyboardInput.WasPressed(Keys.Escape)) || (!shared.editingText && KeyboardInput.WasPressed(Keys.B)))
+                    if (pad.ButtonB.WasPressed || (!shared.editingText && KeyboardInputX.WasPressed(Keys.Escape)) || (!shared.editingText && KeyboardInputX.WasPressed(Keys.B)))
                     {
-                        KeyboardInput.ClearAllWasPressedState(Keys.Escape);
-                        KeyboardInput.ClearAllWasPressedState(Keys.B);
+                        KeyboardInputX.ClearAllWasPressedState(Keys.Escape);
+                        KeyboardInputX.ClearAllWasPressedState(Keys.B);
 
                         // Cancel
 
@@ -907,7 +908,7 @@ namespace Boku
                     }
 
                     // Quick save.
-                    if (pad.Start.WasPressed || (!shared.editingText && KeyboardInput.WasPressed(Keys.Enter)))
+                    if (pad.Start.WasPressed || (!shared.editingText && KeyboardInputX.WasPressed(Keys.Enter)))
                     {
                         if (shared.editingText)
                         {
@@ -933,7 +934,7 @@ namespace Boku
                         }
                     }
 
-                    if (pad.ButtonA.WasPressed || (!shared.editingText && KeyboardInput.WasPressed(Keys.A)))
+                    if (pad.ButtonA.WasPressed || (!shared.editingText && KeyboardInputX.WasPressed(Keys.A)))
                     {
                         if (!shared.editingText)
                         {
@@ -945,12 +946,12 @@ namespace Boku
                     }
 
                     // Activate tag picker.
-                    if (pad.ButtonX.WasPressed || (!shared.editingText && KeyboardInput.WasPressed(Keys.X)))
+                    if (pad.ButtonX.WasPressed || (!shared.editingText && KeyboardInputX.WasPressed(Keys.X)))
                     {
                         shared.tagPicker.SetTags(shared.curTags);
                         shared.tagPicker.Active = true;
 
-                        KeyboardInput.ClearAllWasPressedState(Keys.X);
+                        KeyboardInputX.ClearAllWasPressedState(Keys.X);
                     }
 
                     // LeftStick -- change focus index
@@ -987,7 +988,7 @@ namespace Boku
                     }
 
                     // RightStick -- change version number
-                    if (pad.RightStickUp.WasPressed || pad.RightStickUp.WasRepeatPressed || (!shared.editingText && KeyboardInput.WasPressedOrRepeat(Keys.Up)))
+                    if (pad.RightStickUp.WasPressed || pad.RightStickUp.WasRepeatPressed || (!shared.editingText && KeyboardInputX.WasPressedOrRepeat(Keys.Up)))
                     {
                         if (shared.curVersion < shared.maxVersion)
                         {
@@ -995,7 +996,7 @@ namespace Boku
                         }
                     }
 
-                    if (pad.RightStickDown.WasPressed || pad.RightStickDown.WasRepeatPressed || (!shared.editingText && KeyboardInput.WasPressedOrRepeat(Keys.Down)))
+                    if (pad.RightStickDown.WasPressed || pad.RightStickDown.WasRepeatPressed || (!shared.editingText && KeyboardInputX.WasPressedOrRepeat(Keys.Down)))
                     {
                         if (shared.curVersion > 0)
                         {
@@ -1036,7 +1037,7 @@ namespace Boku
                     if (shared.tagPicker != null)
                     {
                         shared.tagPicker.Update(shared.camera, ref world);
-                        if (KeyboardInput.WasPressed(Keys.Tab))
+                        if (KeyboardInputX.WasPressed(Keys.Tab))
                         {
                             shared.focus = (Shared.InputFocus)(((int)shared.focus + 1) % (int)Shared.InputFocus.NumInputFocus);
                         }
@@ -1147,7 +1148,7 @@ namespace Boku
                 InGame.XmlWorldData.descJustification = shared.curDescJustification;
                 InGame.XmlWorldData.genres = shared.curTags;
 
-                InGame.inGame.SaveLevel(newName, preserveLinks);
+                InGame.inGame.SaveLevel(newName: newName, preserveLinks: preserveLinks);
 
                 parent.Deactivate();
 
@@ -1198,11 +1199,11 @@ namespace Boku
                     return;
 
                 // Handle special character input.
-                if (KeyboardInput.AltWasPressed)
+                if (KeyboardInputX.AltWasPressed)
                 {
                     specialChar = null;
                 }
-                if (KeyboardInput.AltIsPressed)
+                if (KeyboardInputX.AltIsPressed)
                 {
                     // accumulate keystrokes
                     specialChar += c;
@@ -1214,7 +1215,7 @@ namespace Boku
                     string str = new string(c, 1);
                     str = TextHelper.FilterInvalidCharacters(str);
 
-                    UI2D.Shared.GetFont Font = parent.renderObj.Font;
+                    GetFont Font = parent.renderObj.Font;
 
                     if (!string.IsNullOrEmpty(str))
                     {
@@ -1280,7 +1281,7 @@ namespace Boku
                 }
             }   // end of UpdateObj TextInput()
 
-            // TODO (****) Clean this up.  We're mixing text as input with text as control here.
+            // TODO (scoy) Clean this up.  We're mixing text as input with text as control here.
             // Probably the right thing to do would be to push/pop the text input callbacks
             // dynamically to mirror the state we're in.
             
@@ -1307,7 +1308,7 @@ namespace Boku
 
                     ActivateEditing();
 
-                    KeyboardInput.ClearAllWasPressedState(Keys.Tab);
+                    KeyboardInputX.ClearAllWasPressedState(Keys.Tab);
 
                     return;
                 }
@@ -1322,7 +1323,7 @@ namespace Boku
                         //
                         bool changed = false;
 
-                        KeyboardInput.ClearAllWasPressedState(key);
+                        KeyboardInputX.ClearAllWasPressedState(key);
 
                         switch (key)
                         {
@@ -1393,7 +1394,7 @@ namespace Boku
                         // Editing the description.
                         //
 
-                        KeyboardInput.ClearAllWasPressedState(key);
+                        KeyboardInputX.ClearAllWasPressedState(key);
 
                         switch (key)
                         {
@@ -1454,8 +1455,6 @@ namespace Boku
 
             private void UpdateEditedString()
             {
-                UI2D.Shared.GetFont Font = parent.renderObj.Font;
-
                 // Update the string so it gets rendered.
                 switch (shared.focus)
                 {
@@ -1542,10 +1541,10 @@ namespace Boku
 
             public override void Activate()
             {
-                KeyboardInput.OnKey = KeyInput;
+                //KeyboardInputX.OnKey = KeyInput;
 #if NETFX_CORE
                 Debug.Assert(false, "Does this work?  Why did we prefer winKeyboard?");
-                KeyboardInput.OnChar = TextInput;
+                KeyboardInputX.OnChar = TextInput;
 #else
                 BokuGame.bokuGame.winKeyboard.CharacterEntered = TextInput;
 #endif
@@ -1553,8 +1552,8 @@ namespace Boku
 
             public override void Deactivate()
             {
-                KeyboardInput.OnKey = null;
-                KeyboardInput.OnChar = null;
+                //KeyboardInputX.OnKey = null;
+                //KeyboardInputX.OnChar = null;
 #if !NETFX_CORE
                 BokuGame.bokuGame.winKeyboard.CharacterEntered = null;
 #endif
@@ -1581,7 +1580,7 @@ namespace Boku
             public bool menuActive = false;                 // Used to trigger changes in the shadow under tags menu.
             public float dropShadowAlpha = 0.0f;            // Shadow opacity.
 
-            public UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont20;
+            public GetFont Font = KoiX.SharedX.GetGameFont20;
 
 
             #endregion
@@ -1595,14 +1594,11 @@ namespace Boku
 
             public override void Render(Camera camera)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
-
-                RenderTarget2D rtFull = UI2D.Shared.RenderTargetDepthStencil1280_720;   // Rendertarget we render whole display into.
-                RenderTarget2D rt1k = UI2D.Shared.RenderTargetDepthStencil1024_768;
+                RenderTarget2D rtFull = SharedX.RenderTargetDepthStencil1280_720;   // Rendertarget we render whole display into.
+                RenderTarget2D rt1k = SharedX.RenderTargetDepthStencil1024_768;
 
                 Vector2 rtSize = new Vector2(rtFull.Width, rtFull.Height);
 
-                CameraSpaceQuad csquad = CameraSpaceQuad.GetInstance();
                 ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
 
                 Color selectedHeaderColor = new Color(220, 220, 0);
@@ -1615,9 +1611,9 @@ namespace Boku
                 InGame.Clear(Color.Transparent);
 
                 // Set up params for rendering UI with this camera.
-                Fx.ShaderGlobals.SetCamera(shared.camera1k);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(shared.camera1k);
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 //
                 // Text.
@@ -1628,7 +1624,7 @@ namespace Boku
                 shared.descMargin = 90;
                 shared.descTop = 140;
                 pos = new Vector2(shared.descMargin + shared.descIndent, shared.descTop + shared.descOffset);
-                shared.descBlob.RenderWithButtons(pos, textBodyColor, renderCursor: renderCursor);
+                shared.descBlob.RenderText(null, pos, textBodyColor, renderCursor: renderCursor);
 
                 // The +40 just allows the user to press to the right of the description text to get the cursor to the end of the line.
                 shared.textAreaHitBox.Set(pos, pos + new Vector2(shared.descBlob.Width + 40, shared.descMaxVisibleLines * shared.descBlob.TotalSpacing));
@@ -1639,7 +1635,7 @@ namespace Boku
                 InGame.SetRenderTarget(rtFull);
 
                 // Set up params for rendering UI with this camera.
-                Fx.ShaderGlobals.SetCamera(shared.camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(shared.camera);
 
                 InGame.Clear(Color.Transparent);
 
@@ -1685,7 +1681,7 @@ namespace Boku
                 TextHelper.DrawString(Font, str, pos, lightTextBodyColor);
                 shared.nameBox.Set(pos, pos + new Vector2(550, Font().LineSpacing));
 
-                // TODO (****) We should be using TextBlob for all text editing!
+                // TODO (scoy) We should be using TextBlob for all text editing!
 
                 // If we're currently editing the name, render the cursor at the right position.
                 if (shared.editingText && shared.focus == Shared.InputFocus.Name)
@@ -1713,10 +1709,10 @@ namespace Boku
                 // RightStick for version changing.
                 pos = new Vector2(1058, 57);
                 size = new Vector2(42, 63);
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse ||
-                    GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse ||
+                    KoiLibrary.LastTouchedDeviceIsTouch)
                 {
-                    ssquad.Render(UI2D.Shared.UpDownArrowsTexture, pos, size, "TexturedRegularAlpha");
+                    ssquad.Render(SharedX.UpDownArrowsTexture, pos, size, "TexturedRegularAlpha");
                 }
                 else
                 {
@@ -1727,10 +1723,10 @@ namespace Boku
                 // Left stick for changing focus.
                 pos = new Vector2(180, 90);
                 size = new Vector2(42, 63);
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     // We use mouse clicking for setting focus so don't render arrows.
-                    //ssquad.Render(UI2D.Shared.UpDownArrowsTexture, pos, size, "TexturedRegularAlpha");
+                    //ssquad.Render(Shared.UpDownArrowsTexture, pos, size, "TexturedRegularAlpha");
                 }
                 else
                 {
@@ -1742,7 +1738,7 @@ namespace Boku
                 {
                     Vector2 safetyPos = new Vector2(leftEdge, 462);
                     string safetyString = Strings.Localize("saveLevelDialog.safetyWarning");
-                    TextHelper.DrawString(UI2D.Shared.GetGameFont15_75, safetyString, safetyPos, AuthUI.ErrorColor, maxWidth: 700);
+                    TextHelper.DrawString(SharedX.GetGameFont15_75, safetyString, safetyPos, AuthUI.ErrorColor, maxWidth: 700);
                 }
 
                 // Tags
@@ -1772,7 +1768,7 @@ namespace Boku
                     batch.End();
 
                     TextBlob blob = new TextBlob(Font, tags, 420);
-                    blob.RenderWithButtons(pos, lightTextBodyColor, maxLines: 3);
+                    blob.RenderText(null, pos, lightTextBodyColor, maxLines: 3);
 
                     batch.Begin();
 
@@ -1810,21 +1806,21 @@ namespace Boku
                     Vector2 min = new Vector2(942, 460);
                     Vector2 max = min + new Vector2(32, 32);
                     shared.leftJustifyHitBox.Set(min, max);
-                    color = shared.descBlob.Justification == UIGridElement.Justification.Left ? greenTextColor.ToVector4() : whiteTextColor.ToVector4();
+                    color = shared.descBlob.Justification == TextHelper.Justification.Left ? greenTextColor.ToVector4() : whiteTextColor.ToVector4();
                     ssquad.Render(leftJustifyTexture, color, min, new Vector2(32, 32), "TexturedRegularAlpha");
 
                     // center
                     min.X += 36;
                     max.X += 36;
                     shared.centerJustifyHitBox.Set(min, max);
-                    color = shared.descBlob.Justification == UIGridElement.Justification.Center ? greenTextColor.ToVector4() : whiteTextColor.ToVector4();
+                    color = shared.descBlob.Justification == TextHelper.Justification.Center ? greenTextColor.ToVector4() : whiteTextColor.ToVector4();
                     ssquad.Render(centerJustifyTexture, color, min, new Vector2(32, 32), "TexturedRegularAlpha");
 
                     // right
                     min.X += 36;
                     max.X += 36;
                     shared.rightJustifyHitBox.Set(min, max);
-                    color = shared.descBlob.Justification == UIGridElement.Justification.Right ? greenTextColor.ToVector4() : whiteTextColor.ToVector4();
+                    color = shared.descBlob.Justification == TextHelper.Justification.Right ? greenTextColor.ToVector4() : whiteTextColor.ToVector4();
                     ssquad.Render(rightJustifyTexture, color, min, new Vector2(32, 32), "TexturedRegularAlpha");
                 }
 
@@ -1933,7 +1929,7 @@ namespace Boku
             {
                 if (tex == null)
                 {
-                    tex = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + path);
+                    tex = KoiLibrary.LoadTexture2D(path);
                 }
             }   // end of LoadTexture()
 
@@ -1945,48 +1941,48 @@ namespace Boku
             {
                 if (backgroundTexture == null)
                 {
-                    backgroundTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\SaveLevel\SaveLevelBackground");
+                    backgroundTexture = KoiLibrary.LoadTexture2D(@"Textures\SaveLevel\SaveLevelBackground");
                 }
 
                 if (leftStick == null)
                 {
-                    leftStick = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\LeftStick");
+                    leftStick = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\LeftStick");
                 }
 
                 if (rightStick == null)
                 {
-                    rightStick = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\RightStick");
+                    rightStick = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\RightStick");
                 }
 
                 if (leftJustifyTexture == null)
                 {
-                    leftJustifyTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\TextEditor\LeftJustify");
+                    leftJustifyTexture = KoiLibrary.LoadTexture2D(@"Textures\TextEditor\LeftJustify");
                 }
                 if (centerJustifyTexture == null)
                 {
-                    centerJustifyTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\TextEditor\CenterJustify");
+                    centerJustifyTexture = KoiLibrary.LoadTexture2D(@"Textures\TextEditor\CenterJustify");
                 }
                 if (rightJustifyTexture == null)
                 {
-                    rightJustifyTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\TextEditor\RightJustify");
+                    rightJustifyTexture = KoiLibrary.LoadTexture2D(@"Textures\TextEditor\RightJustify");
                 }
 
                 if (dropShadow == null)
                 {
-                    dropShadow = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\LoadLevel\AuxMenuShadow");
+                    dropShadow = KoiLibrary.LoadTexture2D(@"Textures\LoadLevel\AuxMenuShadow");
                 }
 
             }   // end of InitDeviceResources()
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref backgroundTexture);
-                BokuGame.Release(ref leftStick);
-                BokuGame.Release(ref rightStick);
-                BokuGame.Release(ref leftJustifyTexture);
-                BokuGame.Release(ref centerJustifyTexture);
-                BokuGame.Release(ref rightJustifyTexture);
-                BokuGame.Release(ref dropShadow);
+                DeviceResetX.Release(ref backgroundTexture);
+                DeviceResetX.Release(ref leftStick);
+                DeviceResetX.Release(ref rightStick);
+                DeviceResetX.Release(ref leftJustifyTexture);
+                DeviceResetX.Release(ref centerJustifyTexture);
+                DeviceResetX.Release(ref rightJustifyTexture);
+                DeviceResetX.Release(ref dropShadow);
             }   // end of SaveLevelDialog RenderObj UnloadContent()
 
             /// <summary>
@@ -2205,7 +2201,7 @@ namespace Boku
                 {
 //removed default text.
 //                    shared.originalDescription = shared.curDesc = Strings.Localize("saveLevelDialog.descriptionPromptPC");
-                    shared.originalDescJustification = shared.curDescJustification = UIGridElement.Justification.Left;
+                    shared.originalDescJustification = shared.curDescJustification = TextHelper.Justification.Left;
                 }
 
                 shared.descIndent = (int)renderObj.Font().MeasureString(Strings.Localize("saveLevelDialog.description")).X;

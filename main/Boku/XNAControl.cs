@@ -14,6 +14,9 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Managers;
+
 namespace Boku
 {
     /// <summary>
@@ -46,14 +49,19 @@ namespace Boku
             // Create app's content manager.
             ContentManager = new ContentManager(Services, "");
 
+            // Init KoiLibrary before everyting else.
+            KoiLibrary.Init(ContentManager, MainForm.Instance, this.Handle);
+            KoiLibrary.LoadContent(GraphicsDevice);
+
             // Grab Loading texture and Microsoft logo so we can not have a blank screen.
             Texture2D loadingTexture = ContentManager.Load<Texture2D>(@"Content\Textures\Loading");
             Texture2D logoTexture = ContentManager.Load<Texture2D>(@"Content\Textures\MicrosoftLogo");
             Device.Clear(Color.Black);
+
             Vector2 screenSize = new Vector2(Device.Viewport.Width, Device.Viewport.Height);
             Vector2 backgroundSize = new Vector2(loadingTexture.Width, loadingTexture.Height);
             Vector2 logoSize = new Vector2(logoTexture.Width, logoTexture.Height);
-            SpriteBatch batch = new SpriteBatch(Device);
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
             batch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
             {
                 Vector2 position = (screenSize - backgroundSize) / 2.0f;
@@ -70,23 +78,27 @@ namespace Boku
             }
             batch.End();
 
-            // Set up KoiLibrary
-            // CLICK_ONCE allows the framework to change from having the
-            // content in a seperate content project vs having it tied 
-            // into the project as Content (which is what is needed in
-            // order to get ClickOnce deployment to work).
-            // For development, this should be off.  Turn it one when
-            // it's time to do deployable builds.
-            // AppContent is the folder where content should live
-            // for ClickOnce builds.  Files added to this folder should
-            // actually be copied into it.  No clue why links don't work.
-            // Mark files as Content and Copy If Newer (or always)
-            // TODO Figure this out, or at least automate it.
+            // Initialize BokuGame.
+            BokuGame game = new BokuGame();
+            BokuGame.bokuGame.Initialize();
+            BokuGame.bokuGame.LoadContent();
+            BokuGame.bokuGame.BeginRun();
+
+            // Create main.  We want to do this before calling Init on SceneManager since Init
+            // will load the content for the scenes.
+            main = new Main();
+
+            SceneManager.Init();
+
+            KoiX.Geometry.Geometry.LoadContent();
+            KoiX.Geometry.RoundedRect.LoadContent();
+            KoiX.Geometry.Line.LoadContent();
+            KoiX.Geometry.Line2D.LoadContent();
+            KoiX.Geometry.Disc.LoadContent();
+            KoiX.Geometry.PieSlice.LoadContent();
+
 
             font = ContentManager.Load<SpriteFont>(@"Content\Fonts\SegoeUI20");
-
-            // Create main.
-            main = new Main();
 
             // Hook the idle event to constantly redraw our animation.
             Application.Idle += delegate { Invalidate(); };
@@ -99,20 +111,14 @@ namespace Boku
                                                 {
                                                     BokuGame.bokuGame.EndRun();
                                                 }
-                                                Boku.Common.MouseInput.StopMouseWorkerThread();
+                                                //Boku.Common.MouseInput.StopMouseWorkerThread();
                                             };
 
-            // TODO (****) ??? Add drag and drop support.
+            // TODO (scoy) ??? Add drag and drop support.
             // this.AllowDrop = true;
 
             // this.DragEnter += new DragEventHandler(XNAControl_DragEnter);
             // this.DragDrop += new DragEventHandler(XNAControl_DragDrop);
-
-            // Initialize BokuGame.
-            BokuGame game = new BokuGame();
-            BokuGame.bokuGame.Initialize();
-            BokuGame.bokuGame.LoadContent();
-            BokuGame.bokuGame.BeginRun();
 
             bokuGameInitialized = true;
 
@@ -217,7 +223,7 @@ namespace Boku
             int margin = 4;
             Vector2 origin = new Vector2(ClientSize.Width - size.X - margin, ClientSize.Height - font.LineSpacing - margin);
 
-            Color textColor = SceneManager.Instance.CurrentScene.Theme.DebugText;
+            Color textColor = SceneManager.CurrentScene.Theme.DebugText;
 
             batch.Begin();
 
@@ -236,7 +242,7 @@ namespace Boku
         }   // end of Render()
 
         /*
-        // TODO (****) do we want to support drag and drop for Kodu???
+        // TODO (scoy) do we want to support drag and drop for Kodu???
         public DragDropEffects DoDragDrop(Object data, DragDropEffects allowedEffects)
         {
             return DragDropEffects.Copy;

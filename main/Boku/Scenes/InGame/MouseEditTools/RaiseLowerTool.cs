@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -55,27 +57,18 @@ namespace Boku.Scenes.InGame.MouseEditTools
             return instance;
         }   // end of GetInstance()
 
-        public override void Update(Camera camera)
+        public override void Update()
         {
             if (Active)
             {
                 CheckSelectCursor(false);
 
-                if (!PickerXInUse && !PickerYInUse)
-                {
-                    if (DebouncePending)
-                        return;
+                SetEditModes(Terrain.EditMode.Raise, Terrain.EditMode.Smooth, Terrain.EditMode.Lower);
 
-                    ProcessTriggers(
-                        Terrain.EditMode.Raise,
-                        Terrain.EditMode.Smooth,
-                        Terrain.EditMode.Lower);
-
-                    SelectOverlay();
-                }
+                SelectOverlay();
             }
 
-            base.Update(camera);
+            base.Update();
         }   // end of Update()
         #endregion Public
 
@@ -83,19 +76,15 @@ namespace Boku.Scenes.InGame.MouseEditTools
 
         private object timerInstrument = null;
 
-        public override void OnActivate()
+        protected override void OnActivate()
         {
             timerInstrument = Instrumentation.StartTimer(Instrumentation.TimerId.InGameRaiseLowerTool);
 
             base.OnActivate();
 
-            PickerX = brushPicker;      // Assign X button to brush picker and activate.
-            brushPicker.BrushSet = Brush2DManager.BrushType.All
-                | Brush2DManager.BrushType.Selection;
-
         }   // end of OnActivate()
 
-        public override void OnDeactivate()
+        protected override void OnDeactivate()
         {
             base.OnDeactivate();
             Instrumentation.StopTimer(timerInstrument);

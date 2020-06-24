@@ -14,6 +14,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -110,17 +114,17 @@ namespace Boku.Common.HintSystem
 
             bool result = false;
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+            if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
             {
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
                     // Did this hit the toast?
-                    if (MouseInput.Position.X > curPosition.X
-                        && MouseInput.Position.X < curPosition.X + size.X
-                        && MouseInput.Position.Y > curPosition.Y
-                        && MouseInput.Position.Y < curPosition.Y + size.Y)
+                    if (LowLevelMouseInput.Position.X > curPosition.X
+                        && LowLevelMouseInput.Position.X < curPosition.X + size.X
+                        && LowLevelMouseInput.Position.Y > curPosition.Y
+                        && LowLevelMouseInput.Position.Y < curPosition.Y + size.Y)
                     {
-                        MouseInput.Left.ClearAllWasPressedState();
+                        LowLevelMouseInput.Left.ClearAllWasPressedState();
                         Clear();    // Turn off this toast
                         result = true;
                     }
@@ -129,12 +133,12 @@ namespace Boku.Common.HintSystem
                 // F1 pressed?
                 if (KeyboardInput.WasPressed(Keys.F1))
                 {
-                    MouseInput.Left.ClearAllWasPressedState();
+                    LowLevelMouseInput.Left.ClearAllWasPressedState();
                     Clear();    // Turn off this toast
                     result = true;
                 }
             }
-            else if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+            else if (KoiLibrary.LastTouchedDeviceIsTouch)
             {
                 TapGestureRecognizer tapGesture = TouchGestureManager.Get().TapGesture;
                 if (tapGesture.WasRecognized)
@@ -205,13 +209,6 @@ namespace Boku.Common.HintSystem
                 return;
             }
 
-            // If the MainMenu is showing a dialog it's probably a 
-            // storage issue so don't show toast.
-            if (MainMenu.Instance.DialogActive)
-            {
-                return;
-            }
-
             // If input is showing a dialog, something got unplugged so
             // don't show toast.
             if (GamePadInput.DialogActive)
@@ -237,21 +234,21 @@ namespace Boku.Common.HintSystem
             // keyboard mode, just at the F1 key.
             if (ToastManager.checkForModal)
             {
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                if (KoiLibrary.LastTouchedDeviceIsGamepad)
                 {
                     if (InGame.inGame.CurrentUpdateMode != InGame.UpdateMode.RunSim)
                     {
                         curToast += "\n\n<ybutton>  " + Strings.Localize("toast.yButtonMore");
                     }
                 }
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                else if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     curToast += "\n\n[F1]  " + Strings.Localize("toast.yButtonMore");
                 }
             }
 
             // Create the texture to display.
-            blob = new TextBlob(UI2D.Shared.GetGameFont24, curToast, 512 - margin * 2);
+            blob = new TextBlob(SharedX.GetGameFont24, curToast, 512 - margin * 2);
 
             startShowTime = Time.WallClockTotalSeconds;
 
@@ -271,18 +268,18 @@ namespace Boku.Common.HintSystem
 
         private static void RefreshTexture()
         {
-            // TODO (****) *** Does this make sense any more since we require a min height of 600?
+            // TODO (scoy) *** Does this make sense any more since we require a min height of 600?
             bool lores = BokuGame.ScreenSize.Y <= 480;
 
-            UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont24Bold;
+            GetFont Font = SharedX.GetGameFont24Bold;
             if (lores)
             {
-                Font = UI2D.Shared.GetGameFont30Bold;
+                Font = SharedX.GetGameFont30Bold;
             }
             blob.Font = Font;
 
             ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
-            RenderTarget2D rt = UI2D.Shared.RenderTarget512_302;
+            RenderTarget2D rt = SharedX.RenderTarget512_302;
 
             InGame.SetRenderTarget(rt);
 
@@ -306,7 +303,7 @@ namespace Boku.Common.HintSystem
                     pos.Y += spareLines * 0.5f * Font().LineSpacing;
                 }
 
-                blob.RenderWithButtons(pos, Color.Yellow, maxLines: maxLines);
+                blob.RenderText(null, pos, Color.Yellow, maxLines: maxLines);
             }
 
 
@@ -339,7 +336,7 @@ namespace Boku.Common.HintSystem
             // Load the background texture.
             if (background == null)
             {
-                background = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\HelpCard\ToolTip");
+                background = KoiLibrary.LoadTexture2D(@"Textures\HelpCard\ToolTip");
             }
 
         }   // end of LoadContent()
@@ -356,8 +353,8 @@ namespace Boku.Common.HintSystem
 
         public static void UnloadContent()
         {
-            BokuGame.Release(ref texture);
-            BokuGame.Release(ref background);
+            DeviceResetX.Release(ref texture);
+            DeviceResetX.Release(ref background);
         }   // end of UnloadContent()
 
         /// <summary>

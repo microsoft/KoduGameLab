@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 
 namespace Boku.Common.ParticleSystem
@@ -169,7 +171,7 @@ namespace Boku.Common.ParticleSystem
         {
             if (numActiveParticles > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 int startIndex = firstParticle;
                 int endIndex = (startIndex + numActiveParticles) % maxParticles;
@@ -228,7 +230,7 @@ namespace Boku.Common.ParticleSystem
 
         public virtual void UnloadContent()
         {
-            BokuGame.Release(ref ibuf);
+            DeviceResetX.Release(ref ibuf);
         }   // end of BaseSharedEmitter UnloadContent()
 
         public virtual void DeviceReset(GraphicsDevice device)

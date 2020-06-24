@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.SimWorld.Terra;      // Used for limiting camera to skybox.
 
 namespace Boku.Common
@@ -20,38 +23,43 @@ namespace Boku.Common
     /// </summary>
     public class SmoothCamera : SimCamera
     {
+        //static float kMoveTotalTime = 0.15f;
+        // Max distance for mouse hit rays.  This helps to keep the cursor
+        // or viewpoint from jumping off into infinity, or beyond.
+        static float kMaxRayCast = 500.0f;
+
         #region Members
 
-        private Vector3 desiredAt = Vector3.Zero;   // Values which represent where we
+        Vector3 desiredAt = Vector3.Zero;   // Values which represent where we
 
-        private Vector3 eyeOffset = new Vector3(-10.0f, 0.0f, 4.0f);
-        private Vector3 desiredEyeOffset = new Vector3(-10.0f, 0.0f, 4.0f);
+        Vector3 eyeOffset = new Vector3(-10.0f, 0.0f, 4.0f);
+        Vector3 desiredEyeOffset = new Vector3(-10.0f, 0.0f, 4.0f);
 
-        private float rotation = 0.0f;              // Values derived from the current At and EyeOffset values.
-        private float pitch = 0.0f;                 // Should not be directly settable.
-        private float distance = 10.0f;
+        float rotation = 0.0f;              // Values derived from the current At and EyeOffset values.
+        float pitch = 0.0f;                 // Should not be directly settable.
+        float distance = 10.0f;
 
-        private float desiredRotation = 0.0f;       // Values dereived from the desired At and EyeOffset values.
-        private float desiredPitch = 0.0f;          // Should not be directly settable.
-        private float desiredDistance = 10.0f;
+        float desiredRotation = 0.0f;       // Values dereived from the desired At and EyeOffset values.
+        float desiredPitch = 0.0f;          // Should not be directly settable.
+        float desiredDistance = 10.0f;
 
-        private float firstPersonDistance = 1.1f;   // Distance at which 1st person mode kicks in.
-        private float firstPersonPitch = 0.0f;      // Pitch to use in first person mode.
-        private float firstPersonDesiredPitch = 0.0f;   // Pitch we want for first person mode.
-        private float firstPersonPitchSpring = 1.0f;    // Spring strength pushing pitch toward zero.
+        float firstPersonDistance = 1.1f;   // Distance at which 1st person mode kicks in.
+        float firstPersonPitch = 0.0f;      // Pitch to use in first person mode.
+        float firstPersonDesiredPitch = 0.0f;   // Pitch we want for first person mode.
+        float firstPersonPitchSpring = 1.0f;    // Spring strength pushing pitch toward zero.
 
-        private bool playValid = false;                                 // Are the following values valid?  These are only used
-        private Vector3 playCameraAt = new Vector3(10, 10, 0);          // when not following an actor, with no fixed camera
-        private Vector3 playCameraFrom = new Vector3(-10, -10, 10);     // and no staring position for the camera.
+        bool playValid = false;                                 // Are the following values valid?  These are only used
+        Vector3 playCameraAt = new Vector3(10, 10, 0);          // when not following an actor, with no fixed camera
+        Vector3 playCameraFrom = new Vector3(-10, -10, 10);     // and no staring position for the camera.
 
-        private bool followCameraValid = false;     // Is the following value valid?
-        private float followCameraDistance = 10.0f; // Stating distance to use when following a single actor.
+        bool followCameraValid = false;     // Is the following value valid?
+        float followCameraDistance = 10.0f; // Stating distance to use when following a single actor.
 
-        private float minDistance = 1.0f;
-        private float maxPitch = 1.5f;              // Don't allow the pitch to go vertical.
+        float minDistance = 1.0f;
+        float maxPitch = 1.5f;              // Don't allow the pitch to go vertical.
 
-        private bool bumped = false;                // If we're in bumped state, don't change Z unless X or Y change.                     
-        private bool pitchChanged = false;
+        bool bumped = false;                // If we're in bumped state, don't change Z unless X or Y change.                     
+        bool pitchChanged = false;
         #endregion
 
         #region Accessors
@@ -364,7 +372,7 @@ namespace Boku.Common
 
             float blend = 5.0f * Time.WallClockFrameSeconds;
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+            if (KoiLibrary.LastTouchedDeviceIsTouch)
             {
                 //faster interpolation in touch mode
                 blend = 10.0f * Time.WallClockFrameSeconds;
@@ -397,6 +405,200 @@ namespace Boku.Common
             pitchChanged = false;
         }   // end of SmoothCamera Update()
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="clicks">Normally 120 per detent.</param>
+        public void DoZoom(int clicks)
+        {
+            float scrollRate = 0.2f;
+
+            // Adjust rate for keyboard.
+            if (Actions.ZoomIn.IsPressed || Actions.ZoomOut.IsPressed)
+            {
+                scrollRate = Time.WallClockFrameSeconds;
+            }
+
+            if (clicks < 0 || Actions.ZoomOut.IsPressed)
+            {
+                DesiredDistance *= 1.0f + scrollRate;
+            }
+            else if (clicks > 0 || Actions.ZoomIn.IsPressed)
+            {
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
+                {
+                    // Calc where the mouse is aiming and move the cursor towards there.  
+                    // The camera will follow.
+                    Vector3 mouseAimPosition = FindHit(LowLevelMouseInput.PositionVec);
+                    InGame.inGame.shared.CursorPosition = MyMath.Lerp(ActualAt, mouseAimPosition, 1.5f * scrollRate);
+                }
+
+                float desiredDistance = DesiredDistance * (1.0f - scrollRate);
+                // If not in RunSim mode, don't allow the camera to get closer than 4 meters.
+                if (InGame.inGame.CurrentUpdateMode != InGame.UpdateMode.RunSim)
+                {
+                    desiredDistance = Math.Max(4.0f, desiredDistance);
+                }
+                DesiredDistance = desiredDistance;
+            }
+
+        }   // end of DoZoom()
+
+        /// <summary>
+        /// Find where a ray through input mouse position (pixel coords) hits the terrain.
+        /// </summary>
+        /// <param name="screenPos"></param>
+        /// <returns></returns>
+        public Vector3 FindHit(Vector2 screenPos)
+        {
+            Vector3 ray = FindRay(screenPos);
+            Vector3 src = ActualFrom;
+
+            Vector3 dst = src + ray * kMaxRayCast;
+
+            Vector3 hitPoint = dst;
+            if (!Terrain.LOSCheckTerrainAndPath(src, dst, ref hitPoint))
+            {
+                if (ray.Z < 0)
+                {
+                    float t = -src.Z / ray.Z;
+                    ray *= t;
+                }
+                ray = LimitRay(ray);
+                hitPoint = src + ray;
+            }
+
+            return hitPoint;
+        }   // end of FindHit()
+
+        /// <summary>
+        /// Cut off the ray at a maximal distance in the horizontal plane.
+        /// </summary>
+        /// <param name="ray"></param>
+        /// <returns></returns>
+        Vector3 LimitRay(Vector3 ray)
+        {
+            Vector2 ray2d = new Vector2(ray.X, ray.Y);
+            float len = ray2d.Length();
+            if (len > kMaxRayCast)
+            {
+                ray2d *= kMaxRayCast / len;
+
+                ray.X = ray2d.X;
+                ray.Y = ray2d.Y;
+            }
+            return ray;
+        }   // end of LimitRay()
+
+        /// <summary>
+        /// Transform a mouse position (pixel coords) into a normalized
+        /// world space ray.
+        /// </summary>
+        /// <param name="screenPos"></param>
+        /// <returns></returns>
+        Vector3 FindRay(Vector2 screenPos)
+        {
+            Vector3 ray = ScreenToWorldCoords(screenPos);
+
+            return ray;
+        }   // end of FindRay()
+
+        /// <summary>
+        /// Find where a ray through input mouse position (pixel coords) 
+        /// passes through the horizontal plane at height h.
+        /// </summary>
+        /// <param name="screenPos"></param>
+        /// <param name="h"></param>
+        /// <returns></returns>
+        public Vector3 FindAtHeight(Vector2 screenPos, float h)
+        {
+            Vector3 ray = FindRay(screenPos);
+
+            Vector3 eye = ActualFrom;
+
+            float t = (h - eye.Z) / ray.Z;
+
+            t = Math.Max(t, 0);
+            ray *= t;
+            ray = LimitRay(ray);
+
+            Vector3 pos = eye + ray;
+            pos.Z = h;
+
+            return pos;
+        }   // end of FindAtHeight()
+
+        /// <summary>
+        /// Uses WASD input to move the camera relative to the current facing direction.
+        /// </summary>
+        /// <param name="key"></param>
+        public void MoveWASD(Keys key)
+        {
+            float secs = Time.WallClockFrameSeconds;
+
+            Vector2 dir = new Vector2(ViewDir.X, ViewDir.Y);
+            dir.Normalize();
+            Vector2 right = new Vector2(dir.Y, -dir.X);
+            float speed = 15.0f;
+            float delta = speed * secs;
+
+            if (key == Keys.W)
+            {
+                InGame.inGame.shared.CursorPosition += new Vector3(delta * dir, 0);
+            }
+            if (key == Keys.A)
+            {
+                InGame.inGame.shared.CursorPosition -= new Vector3(delta * right, 0);
+            }
+            if (key == Keys.S)
+            {
+                InGame.inGame.shared.CursorPosition -= new Vector3(delta * dir, 0);
+            }
+            if (key == Keys.D)
+            {
+                InGame.inGame.shared.CursorPosition += new Vector3(delta * right, 0);
+            }
+            DesiredAt = InGame.inGame.shared.CursorPosition;
+        }   // end of MoveWASD()
+
+        Vector2 PixelToNDC(Point p)
+        {
+            return new Vector2(p.X * 2.0f / Resolution.X + 1.0f, -p.Y * 2.0f / Resolution.Y - 1.0f);
+        }
+
+        public void Orbit(Vector2 prev, Vector2 pos)
+        {
+            // Pitch.
+            {
+                float dp = (pos.Y - prev.Y) / (float)resolution.Y;
+
+                if (dp != 0)
+                {
+                    // Arbitrary value just chosen because it feels good.
+                    float speed = 4.0f;
+
+                    dp *= speed;
+                    DesiredPitch -= dp;
+                }
+            }
+
+            // Yaw.
+            {
+                float dy = (pos.X - prev.X) / (float)resolution.X;
+
+                if (dy != 0)
+                {
+                    // Arbitrary value just chosen because it feels good.
+                    float speed = 4.0f;
+
+                    dy *= speed;
+                    DesiredRotation -= dy;
+                }
+            }
+
+        }   // end of Orbit()
+
         #endregion
 
         #region Internal
@@ -404,7 +606,7 @@ namespace Boku.Common
         /// <summary>
         /// Translates the current eyeOffset to the proper From/At values.
         /// </summary>
-        private void TranslateOffset(float blend)
+        void TranslateOffset(float blend)
         {
             if (CameraInfo.FirstPersonActive)
             {
@@ -435,7 +637,7 @@ namespace Boku.Common
         /// <summary>
         /// Update the rotation, pitch and distance values based on the eyeOffset.
         /// </summary>
-        private void UpdateValues()
+        void UpdateValues()
         {
             distance = eyeOffset.Length();
             Vector3 offsetNoZ = eyeOffset;

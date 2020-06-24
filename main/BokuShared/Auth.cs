@@ -146,7 +146,7 @@ namespace BokuShared
         /// Given a checksum and a time stamp, determines if the
         /// checksum is valid for the current creator.  Used to
         /// filter on My Worlds and to verify whether a user is
-        /// alloiwed to delete a community world.
+        /// allowed to delete a community world.
         /// </summary>
         /// <param name="checksum"></param>
         /// <returns></returns>

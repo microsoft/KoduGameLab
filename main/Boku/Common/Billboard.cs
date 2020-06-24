@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Programming;
@@ -156,17 +158,17 @@ namespace Boku.Common
         public Vector2 Size
         {
             get { return size; }
-            set { size = value; InitDeviceResources(BokuGame.bokuGame.GraphicsDevice); }
+            set { size = value; InitDeviceResources(KoiLibrary.GraphicsDevice); }
         }
         public float Width
         {
             get { return size.X; }
-            set { size.X = value; InitDeviceResources(BokuGame.bokuGame.GraphicsDevice); }
+            set { size.X = value; InitDeviceResources(KoiLibrary.GraphicsDevice); }
         }
         public float Height
         {
             get { return size.Y; }
-            set { size.Y = value; InitDeviceResources(BokuGame.bokuGame.GraphicsDevice); }
+            set { size.Y = value; InitDeviceResources(KoiLibrary.GraphicsDevice); }
         }
         public bool TextureIsFromCardSpace
         {
@@ -222,20 +224,20 @@ namespace Boku.Common
             this.textureFilename = textureFilename;
             this.size = size;
 
-            InitDeviceResources(BokuGame.bokuGame.GraphicsDevice);
+            InitDeviceResources(KoiLibrary.GraphicsDevice);
             
         }   // end of Billboard c'tor
 
         public override void Render(Camera camera)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             // Is the texture bad?  If so, try and reload it.
             // Can happen due to device reset, machine going to sleep, etc.
             RenderTarget2D tex = texture as RenderTarget2D;
             if (texture == null || texture.IsDisposed || texture.GraphicsDevice.IsDisposed || (tex != null && tex.IsContentLost))
             {
-                BokuGame.Release(ref texture);
+                DeviceResetX.Release(ref texture);
 
                 InitDeviceResources(device);
             }
@@ -250,7 +252,7 @@ namespace Boku.Common
             Parameter(EffectParams.WorldMatrix).SetValue(transformThis.World);
 
             device.SetVertexBuffer(vbuf);
-            device.Indices = UI2D.Shared.QuadIndexBuff;
+            device.Indices = SharedX.QuadIndexBuff;
 
             // Render all passes.
             Parameter(EffectParams.DiffuseTexture).SetValue(texture);
@@ -305,7 +307,7 @@ namespace Boku.Common
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Billboard");
+                effect = KoiLibrary.LoadEffect(@"Shaders\Billboard");
                 ShaderGlobals.RegisterEffect("Billboard", effect);
                 effectCache.Load(effect);
                 technique = premultipliedAlpha
@@ -322,7 +324,7 @@ namespace Boku.Common
                 // If that didn't work, treat it as an asset name.
                 if (texture == null)
                 {
-                    texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + textureFilename);
+                    texture = KoiLibrary.LoadTexture2D(textureFilename);
                 }
             }
             if (texture != null && size == Vector2.Zero)
@@ -336,13 +338,13 @@ namespace Boku.Common
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref vbuf);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref vbuf);
 
             // don't release a texture we don't control
             if (this.textureFilename != null)
             {
-                BokuGame.Release(ref this.texture);
+                DeviceResetX.Release(ref this.texture);
             }
         }
 

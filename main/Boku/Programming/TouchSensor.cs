@@ -82,18 +82,18 @@ namespace Boku.Programming
         {
             if (terrainSensor != null)
             {
-                //if (TouchEdit.HitInfo.TerrainHit)
+                //if (TouchEdit.MouseTouchHitInfo.TerrainHit)
                 {
-                    terrainSensor.OverrideSenseMaterial = TouchEdit.HitInfo.TerrainMaterial;
+                    terrainSensor.OverrideSenseMaterial = TouchEdit.MouseTouchHitInfo.TerrainMaterial;
                 }
 
                 terrainSensor.FinishUpdate(gameActor);
             }
             else
             {
-                if (TouchEdit.HitInfo.HaveActor)
+                if (TouchEdit.MouseTouchHitInfo.HaveActor)
                 {
-                    GameActor touchdActor = TouchEdit.HitInfo.ActorHit;
+                    GameActor touchdActor = TouchEdit.MouseTouchHitInfo.ActorHit;
 
                     Vector3 actorCenter = Vector3.Transform(
                         gameActor.BoundingSphere.Center,
@@ -280,7 +280,7 @@ namespace Boku.Programming
                     // movement. This allows for small positional corrections around the target's bounding 
                     // box as well as letting slide movements that begin on oneself to work.
                     reflex.TouchActor = null;
-                    reflex.TouchPosition = TouchEdit.HitInfo.TerrainPosition;
+                    reflex.TouchPosition = TouchEdit.MouseTouchHitInfo.TerrainPosition;
                 }
 
                 if (matchAction || movingToTouchPos)

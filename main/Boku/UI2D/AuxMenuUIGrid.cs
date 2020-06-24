@@ -11,6 +11,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -151,13 +153,13 @@ namespace Boku.UI2D
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                 ShaderGlobals.RegisterEffect("UI2D", effect);
             }
 
             if (backgroundTexture == null)
             {
-                backgroundTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + backgroundName);
+                backgroundTexture = KoiLibrary.LoadTexture2D(backgroundName);
             }
 
             base.LoadContent(immediate);
@@ -165,15 +167,15 @@ namespace Boku.UI2D
 
         public new void InitDeviceResources(GraphicsDevice device)
         {
-            batch = UI2D.Shared.SpriteBatch;
+            batch = KoiLibrary.SpriteBatch;
 
             BokuGame.Load(geometry, true);
         }
 
         public new void UnloadContent()
         {
-            BokuGame.Release(ref backgroundTexture);
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref backgroundTexture);
+            DeviceResetX.Release(ref effect);
 
             batch = null;
 

@@ -133,7 +133,7 @@ namespace Boku.Common
             {
                 if(!string.IsNullOrEmpty(value))
                 {
-                    // TODO (****) Should we add more validation that the path is good?
+                    // TODO (scoy) Should we add more validation that the path is good?
                     // What should we check for?
                     userOverrideLocation = value;
                     userLocation = value;

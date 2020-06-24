@@ -39,7 +39,7 @@ namespace BokuPreBoot
             Close();
         }
 
-        // TODO (****) Remove this.
+        // TODO (scoy) Remove this.
         /* Perform a load-time init of the UI based on whether the hardware is *capable* of
          * shader model 3. Note that there are subsequent constraint passes if a user
          * chooses shader model 2 explicitly. This one only relates to hardware constraint.
@@ -210,7 +210,7 @@ namespace BokuPreBoot
                     // if the user, however, is setting shader model 2, we need to constrain appropriately
                     CopyUIToSettings();
                     
-                    // TODO (****)  Figure out where to check for Reach v HiDef hw and constrain here.
+                    // TODO (scoy)  Figure out where to check for Reach v HiDef hw and constrain here.
                     //BokuSettings.ConstrainToShaderModel2();
 
                     CopySettingsToUI();

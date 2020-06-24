@@ -14,6 +14,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Common;
 
 namespace Boku.Input
@@ -62,7 +65,6 @@ namespace Boku.Input
             if (commandMaps.Count > 0)
             {
                 CommandMap activeMap = commandMaps[commandMaps.Count - 1];
-                activeMap.Reset();
             }
         }
         protected static void SyncTop(CommandMap prevActiveCommandMap)
@@ -71,7 +73,6 @@ namespace Boku.Input
             if (commandMaps.Count > 0)
             {
                 CommandMap activeMap = commandMaps[commandMaps.Count - 1];
-                activeMap.Sync(prevActiveCommandMap);
             }
         }
         /// <summary>
@@ -238,7 +239,6 @@ namespace Boku.Input
             {
                 // update static state
                 InputCommand.UpdateState();
-                commandOverride.Update();
             }
             else if (commandMaps.Count > 0)
             {
@@ -247,7 +247,6 @@ namespace Boku.Input
 
                 // now update all commands in the top map collection
                 CommandMap activeMap = commandMaps[commandMaps.Count - 1];
-                activeMap.Update();
             }
         }
     }

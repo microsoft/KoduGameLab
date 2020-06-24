@@ -90,7 +90,7 @@ namespace Boku.Programming
         /// list as a whole still passes the filter stage.
         /// 
         /// Note that for input filters we've implemented them with MatchAction().
-        /// I'm not clear why this is or if it even makes a difference.  (****)
+        /// I'm not clear why this is or if it even makes a difference.  (scoy)
         /// </summary>
         /// <returns>false if the complete Sensed set should be ignored</returns>
         public abstract bool MatchAction(Reflex reflex, out object param);

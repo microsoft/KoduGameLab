@@ -226,6 +226,34 @@
       <Processor>EffectProcessor</Processor>
     </None>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="KoiXContent\Shaders\Geometry\Disc.fx">
+      <Name>Disc</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="KoiXContent\Shaders\Geometry\Line.fx">
+      <Name>Line</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="KoiXContent\Shaders\Geometry\Line2D.fx">
+      <Name>Line2D</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="KoiXContent\Shaders\Geometry\PieSlice.fx">
+      <Name>PieSlice</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="KoiXContent\Shaders\Geometry\RoundedRect.fx">
+      <Name>RoundedRect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <PropertyGroup>
     <PostBuildEvent>

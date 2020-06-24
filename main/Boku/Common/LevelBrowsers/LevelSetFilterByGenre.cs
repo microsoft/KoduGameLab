@@ -89,7 +89,7 @@ namespace Boku.Common
             // the individual tags so grab that subset.
             Genres filterTags = FilterGenres & Genres.NonBucket;
 
-            if (filterTags == Genres.NonBucket)
+            if (filterTags == Genres.NonBucket || filterTags == Genres.None)
             {
                 // All set so everything passes.
             }

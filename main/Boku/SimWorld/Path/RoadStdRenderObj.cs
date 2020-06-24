@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Fx;
 using Boku.SimWorld.Terra;
@@ -220,7 +222,7 @@ namespace Boku.SimWorld.Path
         {
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Road");
+                effect = KoiLibrary.LoadEffect(@"Shaders\Road");
                 ShaderGlobals.RegisterEffect("Road", effect);
             }
         }
@@ -235,7 +237,7 @@ namespace Boku.SimWorld.Path
         /// </summary>
         static public void UnloadContent()
         {
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref effect);
         }
 
         /// <summary>
@@ -251,8 +253,8 @@ namespace Boku.SimWorld.Path
         /// </summary>
         public void Clear()
         {
-            BokuGame.Release(ref vertBuff);
-            BokuGame.Release(ref indexBuff);
+            DeviceResetX.Release(ref vertBuff);
+            DeviceResetX.Release(ref indexBuff);
         }
 
         /// <summary>
@@ -278,13 +280,13 @@ namespace Boku.SimWorld.Path
         /// <param name="road"></param>
         public void RenderBatch(Road road)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             device.Indices = indexBuff;
             device.SetVertexBuffer(vertBuff);
 
             if(wireframe)
-                device.RasterizerState = UI2D.Shared.RasterStateWireframe;
+                device.RasterizerState = SharedX.RasterStateWireframe;
 
             Vector4 color = DiffuseColor * road.Path.RGBColor;
             Parameter(EffectParams.DiffuseColor).SetValue(color);
@@ -312,7 +314,7 @@ namespace Boku.SimWorld.Path
             {
                 if (!shadowTexture.IsDisposed)
                 {
-                    BokuGame.Release(ref shadowTexture);
+                    DeviceResetX.Release(ref shadowTexture);
                 }
                 shadowTexture = null;
             }
@@ -410,11 +412,11 @@ namespace Boku.SimWorld.Path
 
         protected bool MakeVertexBuffer()
         {
-            BokuGame.Release(ref vertBuff);
+            DeviceResetX.Release(ref vertBuff);
             int numVerts = NumVertices;
             if (numVerts > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 vertBuff = new VertexBuffer(device, 
                     typeof(RoadGenerator.RoadVertex), 
@@ -428,12 +430,12 @@ namespace Boku.SimWorld.Path
         }
         protected bool MakeIndexBuffer()
         {
-            BokuGame.Release(ref indexBuff);
+            DeviceResetX.Release(ref indexBuff);
             int numIndices = NumIndices;
             
             if (numIndices > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 indexBuff = new IndexBuffer(device, IndexElementSize.SixteenBits, numIndices, BufferUsage.WriteOnly);
 

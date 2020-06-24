@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Xml;
@@ -117,7 +119,7 @@ namespace Boku.SimWorld
             // we're really using the right camera to set the position.
             Update(camera);
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             Matrix worldViewProjMatrix = worldMatrix * camera.ViewProjectionMatrix;
             effect.Parameters["WorldViewProjMatrix"].SetValue(worldViewProjMatrix);
@@ -128,7 +130,7 @@ namespace Boku.SimWorld
             effect.CurrentTechnique = effect.Techniques["NormalAlphaColorPassNoZ"];
 
             device.SetVertexBuffer(vbuf);
-            device.Indices = UI2D.Shared.QuadIndexBuff;
+            device.Indices = SharedX.QuadIndexBuff;
 
             for (int i = 0; i < effect.CurrentTechnique.Passes.Count; i++)
             {
@@ -144,14 +146,14 @@ namespace Boku.SimWorld
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Billboard");
+                effect = KoiLibrary.LoadEffect(@"Shaders\Billboard");
                 ShaderGlobals.RegisterEffect("Billboard", effect);
             }
 
             // Load the texture.
             if (texture == null)
             {
-                texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Compass");
+                texture = KoiLibrary.LoadTexture2D(@"Textures\Compass");
             }
 
         }   // end of Compass LoadContent()
@@ -178,9 +180,9 @@ namespace Boku.SimWorld
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref vbuf);
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref texture);
+            DeviceResetX.Release(ref vbuf);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref texture);
         }   // end of Compass UnloadContent()
 
         /// <summary>

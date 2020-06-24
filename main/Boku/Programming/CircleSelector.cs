@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld.Chassis;
@@ -38,7 +40,7 @@ namespace Boku.Programming
     /// will necessarily go out of the circler's sight periodically. Cut?
     /// 
     /// Rewritten. It's now much shorter, doesn't have those ridiculous waypoints, and 
-    /// actually works. *** 12.9.08
+    /// actually works. mafinch 12.9.08
     /// </summary>
     public class CircleSelector : Selector
     {

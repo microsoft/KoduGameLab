@@ -8,6 +8,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Common;
 using Boku.Common.Xml;
 
@@ -1038,7 +1040,7 @@ namespace Boku.SimWorld.Terra
             */
                         
             /* 
-            // TODO (****)
+            // TODO (scoy)
             // Should land/water transition stop actors?  Or should this
             // be based on actor's domain???
               
@@ -1319,7 +1321,7 @@ namespace Boku.SimWorld.Terra
         /// <returns></returns>
         public float GetHeight(Vector2 pos)
         {
-            ///*** - this is clean and works, but it returns the flattened
+            ///mafinch - this is clean and works, but it returns the flattened
             ///cubeworld height. That may be what we want, but for now we're going
             ///with the interpolated smoothed height.
             //Point ipos = WorldToVirtualIndex(pos);
@@ -1710,7 +1712,7 @@ namespace Boku.SimWorld.Terra
 
             /// Enable depth buffering. We disable it when rendering water cubes
             /// for the UI.
-            BokuGame.bokuGame.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+            KoiLibrary.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
             foreach (Water water in Water.AllWaters)
             {

@@ -7,6 +7,10 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
+using KoiX;
+using KoiX.Input;
+
+
 using Boku.Base;
 using Boku.Common;
 using Boku.UI;
@@ -46,17 +50,10 @@ namespace Boku.UI
                     {
                         Actions.Cancel.ClearAllWasPressedState();
 
-                        // TODO (****) Get rid of the args...
+                        // TODO (scoy) Get rid of the args...
                         parent.OnCancel(null, null);
 
                         Deactivate();
-                    }
-
-                    /// Note that we've already handled B-Cancel above, so the
-                    /// picker never will get it.
-                    if (parent.TypePicker != null)
-                    {
-                        parent.TypePicker.Update(InGame.inGame.shared.ToolBox.Camera);
                     }
 
                     // Check if the currently selected item has help available.
@@ -151,10 +148,6 @@ namespace Boku.UI
                 {
                     if (InGame.inGame.Editor.RenderPieMenus)
                     {
-                        if (owner.TypePicker != null)
-                        {
-                            owner.TypePicker.Render(this.camera);
-                        }
                     }
                     else
                     {
@@ -178,10 +171,6 @@ namespace Boku.UI
         private UpdateObj updateObj = null;
         private Object parent = null;
 
-        protected BasePicker typePicker = null;
-        protected BasePicker.OnGetMaterial holdOnGet = null;
-        protected BasePicker.OnSetMaterial holdOnSet = null;
-        protected BasePicker.OnPickMaterial holdOnPick = null;
         private ushort lastTerrainIndex = TerrainMaterial.EmptyMatIdx;
         private int lastWaterIndex = -1;
 
@@ -193,11 +182,6 @@ namespace Boku.UI
         private States state = States.Inactive;
         private States pendingState = States.Inactive;
 
-        public BasePicker TypePicker
-        {
-            get { return typePicker; }
-            set { typePicker = value; }
-        }
         public override Object Parent
         {
             get { return parent; }
@@ -292,17 +276,6 @@ namespace Boku.UI
 
                 if (SelectWater || SetWater)
                 {
-                    WaterPicker waterPicker = InGame.inGame.shared.ToolBox.WaterPicker;
-
-                    holdOnGet = waterPicker.OnGetType;
-                    holdOnSet = waterPicker.OnSetType;
-                    holdOnPick = waterPicker.OnPickType;
-
-                    waterPicker.OnGetType = OnGetWater;
-                    waterPicker.OnSetType = OnSetWater;
-                    waterPicker.OnPickType = OnPickWater;
-
-                    typePicker = waterPicker;
                     if (SetWater)
                     {
                         lastWaterIndex = RootData.SetWaterTypeIndex;
@@ -317,27 +290,12 @@ namespace Boku.UI
                 }
                 else
                 {
-                    MaterialPicker matPicker = InGame.inGame.shared.ToolBox.MaterialPicker;
-
-                    holdOnGet = matPicker.OnGetType;
-                    holdOnSet = matPicker.OnSetType;
-                    holdOnPick = matPicker.OnPickType;
-
-                    matPicker.OnGetType = OnGetTerrain;
-                    matPicker.OnSetType = OnSetTerrain;
-                    matPicker.OnPickType = OnPickTerrain;
-                    matPicker.UseAltOverlay = true;
-
-                    typePicker = matPicker;
-
                     ushort rootDataMatIdx = (ushort)RootData.MaterialType;
                     if (TerrainMaterial.IsValid(rootDataMatIdx, false, false))
                         lastTerrainIndex = rootDataMatIdx;
                     else if (!TerrainMaterial.IsValid(lastTerrainIndex, false, false))
                         lastTerrainIndex = Terrain.CurrentMaterialIndex;
                 }
-                typePicker.Active = true;
-                typePicker.Hidden = false;
             }
         }
 
@@ -362,17 +320,6 @@ namespace Boku.UI
                             uiSelector.Deactivate();
                         }
                     }
-                }
-
-                if (typePicker != null)
-                {
-                    typePicker.OnGetType = holdOnGet;
-                    typePicker.OnSetType = holdOnSet;
-                    typePicker.OnPickType = holdOnPick;
-                    typePicker.Active = false;
-                    typePicker.Hidden = true;
-                    typePicker.UseAltOverlay = false;
-                    typePicker = null;
                 }
 
                 HelpOverlay.Pop();

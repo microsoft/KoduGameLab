@@ -695,7 +695,7 @@ namespace Boku.Common
             if(BokuSettings.Settings.UseSystemFontRendering)
             {
 #if !NETFX_CORE
-                // TODO (****) Need to fully update TextBlob so that it takes a camera.
+                // TODO (scoy) Need to fully update TextBlob so that it takes a camera.
                 SpriteCamera camera = null;
                 SysFont.StartBatch(camera);
 #endif
@@ -1110,14 +1110,14 @@ namespace Boku.Common
                 // Split fatChars text into an array of words.
                 foreach (Line line in lines)
                 {
-                    // TODO (****) Why are we splitting into words again?  Is this only needed for RtoL?
+                    // TODO (scoy) Why are we splitting into words again?  Is this only needed for RtoL?
                     line.words = SplitIntoWords(line.text);
                 }
 
                 // For SystemFont rendering we want to take adjacent text words and merge them.
                 // This make sthe spacing work out correctly and also minimizes the number of
                 // text draw calls we make.
-                // TODO (****) Should move the merging into LayoutWords so that we end up with
+                // TODO (scoy) Should move the merging into LayoutWords so that we end up with
                 // smaller gaps at the ends of lines when wrapping.  Note that my initial attempt
                 // to do this utterly failed since BiDi.LogicalToVisualPass2() needs to change
                 // the order of the FatChars list.

@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.SimWorld;
 using Boku.Common;
@@ -79,7 +81,7 @@ namespace Boku
             {
                 ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
 
-                Vector2 center = 0.5f * new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Width, BokuGame.bokuGame.GraphicsDevice.Viewport.Height);
+                Vector2 center = 0.5f * new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height);
                 Vector2 size = new Vector2(256.0f);
 
                 // Pick the right number texture to show.
@@ -115,9 +117,9 @@ namespace Boku
 
                 startTime = Time.WallClockTotalSeconds;
 
-                texture1 = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Count1");
-                texture2 = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Count2");
-                texture3 = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Count3");
+                texture1 = KoiLibrary.LoadTexture2D(@"Textures\Count1");
+                texture2 = KoiLibrary.LoadTexture2D(@"Textures\Count2");
+                texture3 = KoiLibrary.LoadTexture2D(@"Textures\Count3");
 
                 phase = 4;
 

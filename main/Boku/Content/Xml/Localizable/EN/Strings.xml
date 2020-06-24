@@ -192,16 +192,16 @@ At any time, if you want to create a new account you can do so by picking a new 
 
   <miniHub>
     <minihub>Home Menu</minihub>
-    <emptyLevel>New world</emptyLevel>
+    <emptyLevel>New World</emptyLevel>
     <unlock>Unlock full game</unlock>
-    <reset>Play world</reset>
-    <edit>Edit world</edit>
-    <save>Save my world</save>
-    <share>Share my world</share>
-    <load>Load world</load>
+    <reset>Play World</reset>
+    <edit>Edit World</edit>
+    <save>Save my World</save>
+    <share>Share my World</share>
+    <load>Load World</load>
     <sharing>Share with friends</sharing>
-    <publish>Share with community</publish>
-    <print>Print kode for level</print>
+    <publish>Share with Community</publish>
+    <print>Print Kode for Level</print>
     <options>Options</options>
     <quit>Exit to Main Menu</quit>
 
@@ -233,6 +233,15 @@ At any time, if you want to create a new account you can do so by picking a new 
     <deleteObjects>Delete Object</deleteObjects>
     <worldTweak>Change World Settings</worldTweak>
   </toolBar>
+
+  <worldSettings>
+    <menu>Menu</menu>
+    <settings>World Settings</settings>
+    <environment>Environment</environment>
+    <scores>Scores</scores>
+    <buttons>Buttons</buttons>
+    <debug>Debug</debug>
+  </worldSettings>
 
   <mouseEdit>
     <addObject>Add Object</addObject>
@@ -298,6 +307,7 @@ At any time, if you want to create a new account you can do so by picking a new 
     <localTitle>LOCAL</localTitle>
     <sharingTitle>SHARING</sharingTitle>
     <communityTitle>COMMUNITY</communityTitle>
+    <linkingTitle>LINKING</linkingTitle>
 
     <noMatch>No worlds match your search</noMatch>
     <noLevels>No worlds were found</noLevels>
@@ -346,12 +356,13 @@ At any time, if you want to create a new account you can do so by picking a new 
     <editLevel>Edit</editLevel>
     <export>Export</export>
     <exportDialogTitle>Where would you like to export your file?</exportDialogTitle>
-    <exportMultiDialogTitle>Where would you like to export your file (all attached levels included)?</exportMultiDialogTitle>
+    <exportMultiDialogTitle>Where would you like to export your file (all linked levels included)?</exportMultiDialogTitle>
     <exportPackageString>[Package]</exportPackageString>
     <videoOut>Video Out</videoOut>
     <download>Download</download>
     <downloads>Downloads</downloads>
     <attach>Attach</attach>
+    <link>Link</link>
     <back>Back</back>
     <scroll>SCROLL L/R</scroll>
     <moreLikeThis>MORE LIKE THIS</moreLikeThis>
@@ -403,6 +414,7 @@ At any time, if you want to create a new account you can do so by picking a new 
     <brokenLevelShareMessage>This level contains broken links.  Please edit the level and update or remove the links before sharing.</brokenLevelShareMessage>
     <confirmLinkedDownloadMessage>This level had linked levels attached.  All attached levels have been downloaded.</confirmLinkedDownloadMessage>
     <confirmLinkedShareMessage>This level has linked levels attached.  Sharing it will share all attached levels as well. Continue?</confirmLinkedShareMessage>
+    <uploadToCommunityFailed>Uploading the level to the community failed.</uploadToCommunityFailed>
     
     <sendToAll>Send to Everyone</sendToAll>
 
@@ -438,6 +450,10 @@ At any time, if you want to create a new account you can do so by picking a new 
   </community>
 
   <tools>
+    <material>Material</material>
+    <cubic>Cubic</cubic>
+    <smooth>Smooth</smooth>
+    <brush>Brush</brush>
     <sampleTool>Sample</sampleTool>
     <paintMaterialTool>Change Material</paintMaterialTool>
     <heightMapTool>Raise/Lower</heightMapTool>
@@ -508,6 +524,9 @@ At any time, if you want to create a new account you can do so by picking a new 
     <quiet>Quiet</quiet>
     <on>On</on>
     <off>Off</off>
+    <label>Label</label>
+    <display>Display</display>
+    <persistence>Persistence</persistence>
 
     <guiButtonVisibility>GUI Button Visibility: </guiButtonVisibility>
     <labeledButton>Labeled</labeledButton>
@@ -556,6 +575,14 @@ At any time, if you want to create a new account you can do so by picking a new 
   </lightRigNames>
 
   <editObjectParams>
+    <objectSettings>Object Settings</objectSettings>
+    <titlePage1>Settings: General</titlePage1>
+    <titlePage2>Settings: Movement</titlePage2>
+    <titlePage3>Settings: Combat</titlePage3>
+    <page1>General</page1>
+    <page2>Movement</page2>
+    <page3>Combat</page3>
+
     <help>Help</help>
     <ok>OK</ok>
     <back>Back</back>
@@ -708,6 +735,10 @@ At any time, if you want to create a new account you can do so by picking a new 
     <changeUser>Change User</changeUser>
     <yes>Yes</yes>
     <no>No</no>
+    <information>Information</information>
+    <reportAbuse>Report Abuse</reportAbuse>
+    <deleteWorld>Delete World</deleteWorld>
+    <status>Status</status>
   </textDialog>
 
   <microbitPatternEditor>
@@ -1244,14 +1275,14 @@ At any time, if you want to create a new account you can do so by picking a new 
 
   <gamePadInputDialog>
     <noControllerMoron>You must have at least one controller plugged in to play Kodu. Please plug in a controller.</noControllerMoron>
-    <noControllerAction> Continue</noControllerAction>
-    <unPluggedMoron>A controller has come unplugged. Press A button when ready to continue.</unPluggedMoron>
-    <unPluggedAction> Continue</unPluggedAction>
+    <noControllerAction>Continue</noControllerAction>
+    <unPluggedMoron>A controller has come unplugged.</unPluggedMoron>
+    <unPluggedAction>Continue</unPluggedAction>
   </gamePadInputDialog>
 
   <newerVersionDialog>
     <text>One or more of the levels you have imported were created with a newer version of Kodu.  You will not be able to see them until you upgrade.</text>
-    <action> Continue</action>
+    <action>Continue</action>
   </newerVersionDialog>
 
   <undoStack>
@@ -1338,12 +1369,15 @@ At any time, if you want to create a new account you can do so by picking a new 
   </error>
 
   <warning>
+    <warning>Warning!</warning>
+    <alert>Alert!</alert>
+    <error>Error</error>
+    <success>Success</success>
     <noncomplianttouch_title>Windows 8 Compliance</noncomplianttouch_title>
     <noncomplianttouch>The detected touch device is not Windows 8 compliant and may not be able to accurately recognize all Kodu touch gestures.
 
 Please use a compliant device or revert to other input methods if your device is not responding to touch gestures correctly.</noncomplianttouch>
   </warning>
-  
 
   <terrainProcess>
     <pack>Optimizing Data - Please Wait</pack>

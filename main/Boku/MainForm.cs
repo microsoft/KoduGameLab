@@ -1,6 +1,9 @@
 
 using System.Windows.Forms;
 
+using Microsoft.Xna.Framework;
+
+
 namespace Boku
 {
     // System.Drawing and the XNA Framework both define Color types.
@@ -31,6 +34,24 @@ namespace Boku
 
         XNAControl xnaControl;
 
+        public Point ClientLocation
+        {
+            get
+            {
+                if (fullScreen)
+                {
+                    return Point.Zero;
+                }
+                else
+                {
+                    // Figure out the client location by taking the inverse of projecting the origin.
+                    System.Drawing.Point sysPoint = PointToClient(new System.Drawing.Point(0, 0));
+                    Point result = new Point(-sysPoint.X, -sysPoint.Y);
+                    return result;
+                }
+            }
+        }
+
         public MainForm()
         {
             InitializeComponent();
@@ -50,8 +71,8 @@ namespace Boku
             this.xnaControl = new Boku.XNAControl();
             this.SuspendLayout();
 
-            // 800x600 is our minimum allowable size.
-            System.Drawing.Size size = new System.Drawing.Size(800, 600);
+            // 1024x720 is our minimum allowable size.
+            System.Drawing.Size size = new System.Drawing.Size(1024, 720);
 
             // 
             // xnaControl

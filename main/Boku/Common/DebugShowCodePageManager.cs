@@ -7,6 +7,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Programming;
 using Boku.SimWorld.Chassis;
@@ -62,7 +64,7 @@ namespace Boku.Common
 
         static void Init()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             size = new Vector2(0.5f, 0.5f);
 
@@ -111,7 +113,7 @@ namespace Boku.Common
                             // Don't bother with first person actors.  We can't see the icon anyway.
                             if (!actor.FirstPerson)
                             {
-                                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                                 int curPage = actor.Brain.ActiveTaskId; // Note this is 0 based.
                                 Texture2D texture = GetTileForTask(curPage);
@@ -149,7 +151,7 @@ namespace Boku.Common
                                 effect.Parameters["BorderColor"].SetValue(Vector4.One);
 
                                 device.SetVertexBuffer(vbuf);
-                                device.Indices = UI2D.Shared.QuadIndexBuff;
+                                device.Indices = SharedX.QuadIndexBuff;
 
                                 // Render all passes.
                                 for (int j = 0; j < effect.CurrentTechnique.Passes.Count; j++)
@@ -195,7 +197,7 @@ namespace Boku.Common
                         break;
                 }
 
-                tile = BokuGame.Load<Texture2D>(System.IO.Path.Combine(BokuGame.Settings.MediaPath, @"Textures\Tiles", iconName));
+                tile = KoiLibrary.LoadTexture2D(System.IO.Path.Combine(@"Textures\Tiles", iconName));
 
                 // Cache result.
                 tiles[task] = tile;

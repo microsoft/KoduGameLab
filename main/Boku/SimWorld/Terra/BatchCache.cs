@@ -17,6 +17,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input; // for debug/perf hackery
 #endif // MF_KEYHACK
 
+using KoiX;
+
 using Boku.Common;
 
 namespace Boku.SimWorld.Terra
@@ -104,12 +106,12 @@ namespace Boku.SimWorld.Terra
                 if (cull != Frustum.CullResult.TotallyOutside)
 #endif // !MF_RENDERSOLO
                 {
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                     device.SetVertexBuffer(data.Buffer);
 
 #if MF_KEYHACK
-                    if (!KeyboardInput.IsPressed(Keys.M)
+                    if (!KeyboardInputX.IsPressed(Keys.M)
                         || !keyState.IsKeyDown(Keys.N))
                     {
 #endif // MF_KEYHACK
@@ -184,7 +186,7 @@ namespace Boku.SimWorld.Terra
             /// </summary>
             public void Dispose()
             {
-                BokuGame.Release(ref buffer);
+                DeviceResetX.Release(ref buffer);
             }
             #endregion Public
         }
@@ -574,7 +576,7 @@ namespace Boku.SimWorld.Terra
         /// </summary>
         public void Render(Camera camera, int buffer)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             device.Indices = IndexBuffers[buffer];
 
 #if MF_SKIPSOME
@@ -610,7 +612,7 @@ namespace Boku.SimWorld.Terra
             for (int i = 0; i < NumBuffers; i++)
             {
                 if (IndexBuffers[i] != null)
-                    BokuGame.Release(ref IndexBuffers[i]);
+                    DeviceResetX.Release(ref IndexBuffers[i]);
             }
         }
 
@@ -845,7 +847,7 @@ namespace Boku.SimWorld.Terra
         /// </summary>
         private static AABB _boundsScratch = new AABB();
 
-        // TODO (****) Do we really need to know the number of bytes in the buffer?
+        // TODO (scoy) Do we really need to know the number of bytes in the buffer?
         // Dig into this and see if it can be simplified.
 
         /// <summary>
@@ -891,7 +893,7 @@ namespace Boku.SimWorld.Terra
 
                     iVerts += numVerts;
 
-                    // TODO (****) Do we really need this in bytes?  Can we simplify?
+                    // TODO (scoy) Do we really need this in bytes?  Can we simplify?
                     accumSz += _bufferScratch[i].Buffer.VertexCount * _bufferScratch[i].Buffer.VertexDeclaration.VertexStride;
 
                     _bufferScratch[i].Dispose();
@@ -899,7 +901,7 @@ namespace Boku.SimWorld.Terra
 
                 Debug.Assert(accumSz == totalSz);
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
                 VertexBuffer vbuf = new VertexBuffer(device, typeof(VertexType), totalNumVerts, BufferUsage.WriteOnly);
                 vbuf.SetData<VertexType>(localVerts, 0, totalNumVerts);
 
@@ -937,9 +939,9 @@ namespace Boku.SimWorld.Terra
                 var iBuffer = IndexBuffers[i];
                 if (iBuffer == null || (numIndices > iBuffer.IndexCount))
                 {
-                    BokuGame.Release(ref iBuffer);
+                    DeviceResetX.Release(ref iBuffer);
 
-                    var device = BokuGame.bokuGame.GraphicsDevice;
+                    var device = KoiLibrary.GraphicsDevice;
 
                     var indices = new UInt16[numIndices];
                     var iP = IndexPatterns[i];

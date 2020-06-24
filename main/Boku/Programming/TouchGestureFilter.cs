@@ -194,10 +194,10 @@ namespace Boku.Programming
                 // Set the touch position and touch actor based on TouchEdit data and 
                 // whether we've hit an actor or not.
                 bool meFilter = reflex.Data.FilterExists("filter.me");
-                if (TouchEdit.HitInfo.ActorHit != null)
+                if (TouchEdit.MouseTouchHitInfo.ActorHit != null)
                 {
-                    reflex.TouchPosition = TouchEdit.HitInfo.ActorPosition;
-                    reflex.TouchActor = TouchEdit.HitInfo.ActorHit;
+                    reflex.TouchPosition = TouchEdit.MouseTouchHitInfo.ActorPosition;
+                    reflex.TouchActor = TouchEdit.MouseTouchHitInfo.ActorHit;
                 }
                 else
                 {
@@ -205,7 +205,7 @@ namespace Boku.Programming
 
                     if (!meFilter)
                     {
-                        reflex.TouchPosition = TouchEdit.HitInfo.TerrainPosition;
+                        reflex.TouchPosition = TouchEdit.MouseTouchHitInfo.TerrainPosition;
                     }
                     else
                     {
@@ -227,7 +227,7 @@ namespace Boku.Programming
                     // Slide is unique in that it cares about what actor you began the slide on, not where
                     // you are now. The touch position is your current touch position, however.
                     // Here we override the TouchActor set above.
-                    reflex.TouchPosition = TouchEdit.HitInfo.TerrainPosition;
+                    reflex.TouchPosition = TouchEdit.MouseTouchHitInfo.TerrainPosition;
                     reflex.TouchActor = TouchInput.InitialActorHit;
                 }
                 else if (type == TouchGestureFilterType.Tap)

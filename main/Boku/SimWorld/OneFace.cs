@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -120,23 +122,23 @@ namespace Boku.SimWorld
             // Load the face textures.
             if (faceEyesOpen == null)
             {
-                faceEyesOpen = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BokuFaceEyeWide");
+                faceEyesOpen = KoiLibrary.LoadTexture2D(@"Textures\BokuFaceEyeWide");
             }
             if (faceEyesSquint == null)
             {
-                faceEyesSquint = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BokuFaceEyeSquint");
+                faceEyesSquint = KoiLibrary.LoadTexture2D(@"Textures\BokuFaceEyeSquint");
             }
             if (faceBrowsUp == null)
             {
-                faceBrowsUp = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BokuFaceBrowUp");
+                faceBrowsUp = KoiLibrary.LoadTexture2D(@"Textures\BokuFaceBrowUp");
             }
             if (faceBrowsNormal == null)
             {
-                faceBrowsNormal = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BokuFaceBrowNormal");
+                faceBrowsNormal = KoiLibrary.LoadTexture2D(@"Textures\BokuFaceBrowNormal");
             }
             if (faceBrowsDown == null)
             {
-                faceBrowsDown = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\BokuFaceBrowDown");
+                faceBrowsDown = KoiLibrary.LoadTexture2D(@"Textures\BokuFaceBrowDown");
             }
             base.LoadContent(immediate);
         }
@@ -154,13 +156,13 @@ namespace Boku.SimWorld
 
         public override void UnloadContent()
         {
-            BokuGame.Release(ref faceEyesOpen);
-            BokuGame.Release(ref faceEyesSquint);
-            BokuGame.Release(ref faceEyesPupils);
-            BokuGame.Release(ref faceEyesPupilsCross);
-            BokuGame.Release(ref faceBrowsUp);
-            BokuGame.Release(ref faceBrowsNormal);
-            BokuGame.Release(ref faceBrowsDown);
+            DeviceResetX.Release(ref faceEyesOpen);
+            DeviceResetX.Release(ref faceEyesSquint);
+            DeviceResetX.Release(ref faceEyesPupils);
+            DeviceResetX.Release(ref faceEyesPupilsCross);
+            DeviceResetX.Release(ref faceBrowsUp);
+            DeviceResetX.Release(ref faceBrowsNormal);
+            DeviceResetX.Release(ref faceBrowsDown);
 
 
             if (effectCache != null)

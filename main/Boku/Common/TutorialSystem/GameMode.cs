@@ -14,6 +14,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -111,9 +114,10 @@ namespace Boku.Common.TutorialSystem
             TouchWorldSettings,
 
             // Edit related modes shared by gamepad and mouse.
-            MaterialPicker,
-            BrushPicker,
-            WaterPicker,
+            MaterialPicker,     // No longer used.
+            BrushPicker,        // No longer used.
+            WaterPicker,        // No longer used.
+
             AddItem,
             AddItemHelp,
             ObjectTweak,
@@ -150,23 +154,29 @@ namespace Boku.Common.TutorialSystem
 
             // TODO What about dialogs on top of these modes?
 
+            /*
             if (BokuGame.bokuGame.mainMenu.Active)
             {
                 curGameMode = BokuGame.bokuGame.mainMenu.OptionsActive ? GameMode.OptionsMenu : GameMode.MainMenu;
                 return;
             }
+            */
 
+            /*
             if (BokuGame.bokuGame.helpScreens.Active)
             {
                 curGameMode = GameMode.HelpScreens;
                 return;
             }
+            */
 
+            /*
             if (BokuGame.bokuGame.miniHub.Active)
             {
                 curGameMode = GameMode.HomeMenu;
                 return;
             }
+            */
 
             if (BokuGame.bokuGame.loadLevelMenu.Active)
             {
@@ -177,12 +187,6 @@ namespace Boku.Common.TutorialSystem
             if (BokuGame.bokuGame.community.Active)
             {
                 curGameMode = GameMode.CommunityMenu;
-            }
-
-            if (BokuGame.bokuGame.sharingScreen.Active)
-            {
-                curGameMode = GameMode.SharingSession;
-                return;
             }
 
             if (InGame.inGame.Editor.Active)
@@ -206,19 +210,6 @@ namespace Boku.Common.TutorialSystem
                     return;
                 }
 
-                // If the AddItemMenu is active.
-                if (InGame.inGame.shared.UIShim.Active)
-                {
-                    if (InGame.inGame.shared.addItemHelpCard.Active)
-                    {
-                        curGameMode = GameMode.AddItemHelp;
-                        return;
-                    }
-
-                    curGameMode = GameMode.AddItem;
-                    return;
-                }
-
                 //
                 // Mouse Edit
                 //
@@ -228,26 +219,6 @@ namespace Boku.Common.TutorialSystem
                     if (InGame.inGame.mouseEditUpdateObj.ToolBar.Hovering && curGameMode != GameMode.Unknown)
                     {
                         return;
-                    }
-
-                    // If any of the pickers are active:
-                    if (InGame.inGame.mouseEditUpdateObj.PickersActive)
-                    {
-                        if (InGame.inGame.mouseEditUpdateObj.ToolBox.BrushPicker.Active && !InGame.inGame.mouseEditUpdateObj.ToolBox.BrushPicker.Hidden)
-                        {
-                            curGameMode = GameMode.BrushPicker;
-                            return;
-                        }
-                        if (InGame.inGame.mouseEditUpdateObj.ToolBox.MaterialPicker.Active && !InGame.inGame.mouseEditUpdateObj.ToolBox.MaterialPicker.Hidden)
-                        {
-                            curGameMode = GameMode.MaterialPicker;
-                            return;
-                        }
-                        if (InGame.inGame.mouseEditUpdateObj.ToolBox.WaterPicker.Active && !InGame.inGame.mouseEditUpdateObj.ToolBox.WaterPicker.Hidden)
-                        {
-                            curGameMode = GameMode.WaterPicker;
-                            return;
-                        }
                     }
                 }
 
@@ -259,29 +230,10 @@ namespace Boku.Common.TutorialSystem
                         return;
                     }
 
-                    // If any of the pickers are active:
-                    if (InGame.inGame.touchEditUpdateObj.PickersActive)
-                    {
-                        if (InGame.inGame.touchEditUpdateObj.ToolBox.BrushPicker.Active && !InGame.inGame.touchEditUpdateObj.ToolBox.BrushPicker.Hidden)
-                        {
-                            curGameMode = GameMode.BrushPicker;
-                            return;
-                        }
-                        if (InGame.inGame.touchEditUpdateObj.ToolBox.MaterialPicker.Active && !InGame.inGame.touchEditUpdateObj.ToolBox.MaterialPicker.Hidden)
-                        {
-                            curGameMode = GameMode.MaterialPicker;
-                            return;
-                        }
-                        if (InGame.inGame.touchEditUpdateObj.ToolBox.WaterPicker.Active && !InGame.inGame.touchEditUpdateObj.ToolBox.WaterPicker.Hidden)
-                        {
-                            curGameMode = GameMode.WaterPicker;
-                            return;
-                        }
-                    }
                 }
 
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     switch (HelpOverlay.Peek())
                     {
@@ -368,7 +320,7 @@ namespace Boku.Common.TutorialSystem
                     return;
                 }
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
                     switch (HelpOverlay.Peek())
                     {
@@ -516,53 +468,25 @@ namespace Boku.Common.TutorialSystem
                         return;
                     case InGame.UpdateMode.TerrainFlatten:
                         curGameMode = GameMode.GamepadTerrainSmoothLevel;
-                        if (!InGame.inGame.shared.ToolBox.BrushPicker.Hidden)
-                        {
-                            curGameMode = GameMode.BrushPicker;
-                        }
                         return;
                     case InGame.UpdateMode.TerrainMaterial:
                         curGameMode = GameMode.GamepadTerrainPaint;
-                        if (!InGame.inGame.shared.ToolBox.BrushPicker.Hidden)
-                        {
-                            curGameMode = GameMode.BrushPicker;
-                        }
-                        if (!InGame.inGame.shared.ToolBox.MaterialPicker.Hidden)
-                        {
-                            curGameMode = GameMode.MaterialPicker;
-                        }
                         return;
                     case InGame.UpdateMode.TerrainRoughHill:
                         curGameMode = GameMode.GamepadTerrainSpikeyHilly;
-                        if (!InGame.inGame.shared.ToolBox.BrushPicker.Hidden)
-                        {
-                            curGameMode = GameMode.BrushPicker;
-                        }
                         return;
                     case InGame.UpdateMode.TerrainUpDown:
                         curGameMode = GameMode.GamepadTerrainUpDown;
-                        if (!InGame.inGame.shared.ToolBox.BrushPicker.Hidden)
-                        {
-                            curGameMode = GameMode.BrushPicker;
-                        }
                         return;
                     case InGame.UpdateMode.TerrainWater:
                         curGameMode = GameMode.GamepadWater;
-                        if (!InGame.inGame.shared.ToolBox.WaterPicker.Hidden)
-                        {
-                            curGameMode = GameMode.WaterPicker;
-                        }
                         return;
                     case InGame.UpdateMode.DeleteObjects:
                         curGameMode = GameMode.GamepadDeleteObjects;
-                        if (!InGame.inGame.shared.ToolBox.BrushPicker.Hidden)
-                        {
-                            curGameMode = GameMode.BrushPicker;
-                        }
                         return;
                     case InGame.UpdateMode.EditWorldParameters:
                         // We need to check input mode in case user swapped input devices while active.
-                        curGameMode = GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad ? GameMode.GamepadWorldSettings : GameMode.MouseWorldSettings;
+                        curGameMode = KoiLibrary.LastTouchedDeviceIsGamepad ? GameMode.GamepadWorldSettings : GameMode.MouseWorldSettings;
                         return;
                 }
 

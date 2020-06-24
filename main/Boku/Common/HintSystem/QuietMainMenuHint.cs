@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Managers;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -43,7 +46,7 @@ namespace Boku.Common.HintSystem
             }
 
             // Keep resetting the start time if we're not in the MainMenu.
-            if (!BokuGame.bokuGame.mainMenu.Active || BokuGame.bokuGame.mainMenu.OptionsActive)
+            if(SceneManager.CurrentScene.Name != "MainMenu")
             {
                 activationTime = Time.WallClockTotalSeconds + delayBeforeActivation;
             }

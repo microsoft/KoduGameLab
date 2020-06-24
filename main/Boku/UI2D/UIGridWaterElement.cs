@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Common;
 using Boku.SimWorld;
 using Boku.SimWorld.Terra;
@@ -45,7 +48,7 @@ namespace Boku.UI2D
 
         public override void Render(Camera camera)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Terrain terrain = BokuGame.bokuGame.inGame.Terrain;
 
             int materialIndex = uiSlot;
@@ -192,15 +195,15 @@ namespace Boku.UI2D
 
             if (glowTexture == null)
             {
-                glowTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\UI2D\Tools\WaterGlow");
+                glowTexture = KoiLibrary.LoadTexture2D(@"Textures\UI2D\Tools\WaterGlow");
             }
         }
 
         public override void UnloadContent()
         {
-            BokuGame.Release(ref vbuf);
-            BokuGame.Release(ref ibuf);
-            BokuGame.Release(ref glowTexture);
+            DeviceResetX.Release(ref vbuf);
+            DeviceResetX.Release(ref ibuf);
+            DeviceResetX.Release(ref glowTexture);
         }   // end of UIGridWaterElement UnloadContent()
 
         #region Internal
@@ -248,15 +251,15 @@ namespace Boku.UI2D
         /// <param name="world"></param>
         private void RenderLabel(Camera camera, Matrix world)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-            UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont18Bold;
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            GetFont Font = SharedX.GetGameFont18Bold;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             // Handle small screens.
             if (device.Viewport.Height < 720)
             {
-                Font = UI2D.Shared.GetGameFont15_75;
+                Font = SharedX.GetGameFont15_75;
             }
 
             /// Find a placement sort of lower cube

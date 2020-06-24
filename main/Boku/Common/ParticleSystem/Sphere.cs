@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 
@@ -140,7 +142,7 @@ namespace Boku.Common.ParticleSystem
         /// <param name="effect"></param>
         public void Render(Camera camera, ref Matrix worldMatrix, Effect effect)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             Matrix worldViewProjMatrix = worldMatrix * camera.ViewProjectionMatrix;
             effect.Parameters["WorldViewProjMatrix"].SetValue(worldViewProjMatrix);
@@ -158,7 +160,7 @@ namespace Boku.Common.ParticleSystem
         /// <param name="effect"></param>
         public void DrawPrim(Effect effect)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             for (int indexEffectPass = 0; indexEffectPass < effect.CurrentTechnique.Passes.Count; indexEffectPass++)
             {
@@ -293,8 +295,8 @@ namespace Boku.Common.ParticleSystem
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref ibuf);
-            BokuGame.Release(ref vbuf);
+            DeviceResetX.Release(ref ibuf);
+            DeviceResetX.Release(ref vbuf);
         }
 
         public void DeviceReset(GraphicsDevice device)

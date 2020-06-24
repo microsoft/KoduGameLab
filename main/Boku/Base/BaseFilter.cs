@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 namespace Boku.Base
 {
     public class BaseFilter : INeedsDeviceReset
@@ -62,7 +64,7 @@ namespace Boku.Base
 
         protected void SetUvToPos()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             int width = device.Viewport.Width;
             int height = device.Viewport.Height;
@@ -99,8 +101,8 @@ namespace Boku.Base
 
         public virtual void UnloadContent()
         {
-            BokuGame.Release(ref effect);       // a little odd that this is released in this class since it's not allocated here. shouldn't we do this in the subclass that allocates?
-            BokuGame.Release(ref vbuf);
+            DeviceResetX.Release(ref effect);       // a little odd that this is released in this class since it's not allocated here. shouldn't we do this in the subclass that allocates?
+            DeviceResetX.Release(ref vbuf);
         }   // end of BaseFilter UnloadContent()
 
         public virtual void DeviceReset(GraphicsDevice device)

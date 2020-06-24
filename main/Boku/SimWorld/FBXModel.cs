@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -306,11 +308,11 @@ namespace Boku.SimWorld
                         float dist = Vector3.Distance(rootToWorld.Translation, camera.ActualFrom);
 
 #if KEYBOARD_LOD_HACK
-                        if (KeyboardInput.IsPressed(Keys.RightShift))
+                        if (KeyboardInputX.IsPressed(Keys.RightShift))
                             dist = 0;
-                        if (KeyboardInput.IsPressed(Keys.RightControl))
+                        if (KeyboardInputX.IsPressed(Keys.RightControl))
                             dist = Single.MaxValue;
-                        if (KeyboardInput.IsPressed(Keys.F8))
+                        if (KeyboardInputX.IsPressed(Keys.F8))
                             XmlGameActor.RebindSurfacesAllActors();
 #endif // KEYBOARD_LOD_HACK
 
@@ -342,7 +344,7 @@ namespace Boku.SimWorld
                 CollectBatch(camera, ref rootToWorld, listPartsReplacement);
                 return;
             }
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             int lod = CurrentLOD(camera, rootToWorld);
             List<List<PartInfo>> meshInfoList = listPartsReplacement == null ? infoLists[lod] : listPartsReplacement;
@@ -365,7 +367,7 @@ namespace Boku.SimWorld
                     Parameter(EffectParams.RestPalette).SetValue(restPalette);
                 }
 
-                ShaderGlobals.SetUpWind(rootToWorld);
+                BokuGame.bokuGame.shaderGlobals.SetUpWind(rootToWorld);
                 Parameter(EffectParams.WorldMatrix).SetValue(rootToWorld);
                 Parameter(EffectParams.WorldMatrixInverseTranspose).SetValue(Matrix.Transpose(Matrix.Invert(rootToWorld)));
                 Matrix rootToProjMatrix = rootToWorld * camera.ViewProjectionMatrix;
@@ -497,7 +499,7 @@ namespace Boku.SimWorld
                             }
                             catch 
                             { 
-                                // TODO (****) Figure out why we get here.
+                                // TODO (scoy) Figure out why we get here.
                             }
                         }
                     }
@@ -514,7 +516,7 @@ namespace Boku.SimWorld
             Effect.CurrentTechnique = set.Technique(InGame.inGame.renderEffects);
             set.Setup(DiffuseColor, lod);
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             for (int indexEffectPass = 0; indexEffectPass < Effect.CurrentTechnique.Passes.Count; indexEffectPass++)
             {
@@ -751,10 +753,10 @@ namespace Boku.SimWorld
         static bool renderWire = false;
         public static void RenderBatches(List<RenderPack> renderBatch)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             if (renderWire)
-                device.RasterizerState = UI2D.Shared.RasterStateWireframe;
+                device.RasterizerState = SharedX.RasterStateWireframe;
             //StartTimer(sortTime);
             /// sort the list
             /// 
@@ -877,7 +879,7 @@ namespace Boku.SimWorld
             nextScratchPack = 0;
             renderBatch.Clear();
 
-            // TODO (****) Get rid of this???
+            // TODO (scoy) Get rid of this???
             if (renderWire)
                 device.RasterizerState = RasterizerState.CullCounterClockwise;
         }
@@ -901,7 +903,7 @@ namespace Boku.SimWorld
         protected virtual void CollectBatch(Camera camera, ref Matrix rootToWorld, List<List<PartInfo>> listPartsReplacement)
         {
             StartTimer(collTime);
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             int lod = CurrentLOD(camera, rootToWorld);
             List<List<PartInfo>> meshInfoList = listPartsReplacement == null ? infoLists[lod] : listPartsReplacement;
@@ -947,7 +949,7 @@ namespace Boku.SimWorld
 
         protected virtual void RenderSurfaceBatch(RenderPack pack, SurfaceSet set)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Camera camera = pack.camera;
 
             List<List<PartInfo>> meshInfoList = pack.meshInfoList;
@@ -974,7 +976,7 @@ namespace Boku.SimWorld
             }
             Parameter(EffectParams.LocalToModel).SetValue(localToModel);
 
-            ShaderGlobals.SetUpWind(pack.rootToWorld);
+            BokuGame.bokuGame.shaderGlobals.SetUpWind(pack.rootToWorld);
             Parameter(EffectParams.WorldMatrix).SetValue(pack.rootToWorld);
             Parameter(EffectParams.WorldMatrixInverseTranspose).SetValue(Matrix.Transpose(Matrix.Invert(pack.rootToWorld)));
 
@@ -1036,13 +1038,13 @@ namespace Boku.SimWorld
             }
 
             // Wisps don't have shadows...
-            // TODO (****) This should probably be handled elsewhere.  Just not sure where.
+            // TODO (scoy) This should probably be handled elsewhere.  Just not sure where.
             if (Effect.CurrentTechnique.Name.Equals("ShadowPass") && resourceName.Contains("wisp"))
             {
                 return;
             }
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Camera camera = pack.camera;
 
             List<List<PartInfo>> meshInfoList = pack.meshInfoList;
@@ -1069,7 +1071,7 @@ namespace Boku.SimWorld
             }
             Parameter(EffectParams.LocalToModel).SetValue(localToModel);
 
-            ShaderGlobals.SetUpWind(pack.rootToWorld);
+            BokuGame.bokuGame.shaderGlobals.SetUpWind(pack.rootToWorld);
             Parameter(EffectParams.WorldMatrix).SetValue(pack.rootToWorld);
             Parameter(EffectParams.WorldMatrixInverseTranspose).SetValue(Matrix.Transpose(Matrix.Invert(pack.rootToWorld)));
 
@@ -1241,7 +1243,7 @@ namespace Boku.SimWorld
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\Standard");
+                effect = KoiLibrary.LoadEffect(@"Shaders\Standard");
                 ShaderGlobals.RegisterEffect("Standard", effect);
 
                 effectCache.Load(Effect, TechniqueExt);
@@ -1337,7 +1339,7 @@ namespace Boku.SimWorld
 
         public void UnloadContent()
         {
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref effect);
             UnBindSurfaces();
             for (int i = 0; i < models.Count; ++i)
             {
@@ -1473,7 +1475,7 @@ namespace Boku.SimWorld
             }
             else
             {
-                // HACKHACK TODO (****) Try to figure out why WinRT build can't get Tag info.
+                // HACKHACK TODO (scoy) Try to figure out why WinRT build can't get Tag info.
                 // Seem to be a problem with the MG loader.
                 // In the meantime, uncomment the code above, run in debug mode, and copy/paste 
                 // the debug output into the switch statement below.

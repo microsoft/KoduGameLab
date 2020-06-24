@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Audio;
 using Boku.Fx;
@@ -131,7 +134,7 @@ namespace Boku.Common
                 size = 6.0f * size / pos3.Z;
                 Rectangle rect = new Rectangle((int)(screenPos.X - size.X / 2.0f), (int)(screenPos.Y - size.Y * 0.75f), (int)size.X, (int)size.Y);
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 batch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
                 batch.Draw(tutorialFocusArrow, rect, Color.White);
                 batch.End();
@@ -304,19 +307,19 @@ namespace Boku.Common
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\ThoughtBalloon");
+                effect = KoiLibrary.LoadEffect(@"Shaders\ThoughtBalloon");
                 ShaderGlobals.RegisterEffect("ThoughtBalloon", effect);
             }
 
             // Load the frame texture.
             if (frameTexture == null)
             {
-                frameTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\TextEditor\ThoughtBalloon");
+                frameTexture = KoiLibrary.LoadTexture2D(@"Textures\TextEditor\ThoughtBalloon");
             }
 
             if (tutorialFocusArrow == null)
             {
-                tutorialFocusArrow = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\GridElements\TutorialFocusArrow");
+                tutorialFocusArrow = KoiLibrary.LoadTexture2D(@"Textures\GridElements\TutorialFocusArrow");
             }
 
         }   // end of LoadContent()
@@ -361,9 +364,9 @@ namespace Boku.Common
                 }
             }
 
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref frameTexture);
-            BokuGame.Release(ref tutorialFocusArrow);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref frameTexture);
+            DeviceResetX.Release(ref tutorialFocusArrow);
         }   // end of UnloadContent()
 
         /// <summary>

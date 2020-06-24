@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -68,22 +71,19 @@ namespace Boku.Scenes.InGame.Tools
             {
                 CheckSelectCursor(true);
 
-                if (!PickerXInUse && !PickerYInUse)
-                {
-                    if (DebouncePending)
-                        return;
+                if (DebouncePending)
+                    return;
 
-                    UpdateRates();
+                UpdateRates();
 
-                    CheckLevel();
+                CheckLevel();
 
-                    ProcessTriggers(
-                        Terrain.EditMode.Level,
-                        Terrain.EditMode.Smooth,
-                        Terrain.EditMode.Smooth);
+                ProcessTriggers(
+                    Terrain.EditMode.Level,
+                    Terrain.EditMode.Smooth,
+                    Terrain.EditMode.Smooth);
 
-                    SelectOverlay();
-                }
+                SelectOverlay();
             }
 
             base.Update();
@@ -153,11 +153,6 @@ namespace Boku.Scenes.InGame.Tools
             base.OnActivate();
 
             Boku.InGame.inGame.Cursor3D.Hidden = true;
-
-            PickerX = brushPicker;      // Assign X button to brush picker and activate.
-            brushPicker.BrushSet = Brush2DManager.BrushType.All
-                | Brush2DManager.BrushType.StretchedAll
-                | Brush2DManager.BrushType.Selection;
 
             endSamplePosition = shared.editBrushPosition;
             inGame.Terrain.LevelHeight

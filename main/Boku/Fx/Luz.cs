@@ -11,6 +11,8 @@ using Boku.SimWorld.Terra;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 namespace Boku.Fx
 {
     public class Luz

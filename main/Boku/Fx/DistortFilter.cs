@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld.Terra;
@@ -106,7 +108,7 @@ namespace Boku.Fx
         }
         protected void Render(string technique)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             SetUvToPos();
 
@@ -131,11 +133,11 @@ namespace Boku.Fx
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\" + effectName);
+                effect = KoiLibrary.LoadEffect(@"Shaders\" + effectName);
             }
             if (filter == null)
             {
-                filter = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\DistortionField");
+                filter = KoiLibrary.LoadTexture2D(@"Textures\DistortionField");
             }
 
             base.LoadContent(immediate);
@@ -143,7 +145,7 @@ namespace Boku.Fx
 
         public override void UnloadContent()
         {
-            BokuGame.Release(ref filter);
+            DeviceResetX.Release(ref filter);
 
             base.UnloadContent();
         }   // end of DistortFilter UnloadContent()

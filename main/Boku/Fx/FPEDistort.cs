@@ -8,6 +8,8 @@ using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Programming;
@@ -162,16 +164,16 @@ namespace Boku.Fx
             {
                 if (mask == null)
                 {
-                    mask = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\FPEMask");
+                    mask = KoiLibrary.LoadTexture2D(@"Textures\FPEMask");
                 }
                 if (bump == null)
                 {
-                    bump = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\DistortionWake");
+                    bump = KoiLibrary.LoadTexture2D(@"Textures\DistortionWake");
                 }
 
                 if (effect == null)
                 {
-                    effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\FPEDistort");
+                    effect = KoiLibrary.LoadEffect(@"Shaders\FPEDistort");
                     effectCache.Load(Effect, "");
                 }
 
@@ -188,9 +190,9 @@ namespace Boku.Fx
             /// </summary>
             public override void UnloadContent()
             {
-                BokuGame.Release(ref mask);
-                BokuGame.Release(ref bump);
-                BokuGame.Release(ref effect);
+                DeviceResetX.Release(ref mask);
+                DeviceResetX.Release(ref bump);
+                DeviceResetX.Release(ref effect);
                 effectCache.UnLoad();
             }
 

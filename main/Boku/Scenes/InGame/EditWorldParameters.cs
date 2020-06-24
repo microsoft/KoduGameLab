@@ -13,6 +13,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Fx;
@@ -203,50 +207,40 @@ namespace Boku
                 }
                 camera.Update();
 
-                if (InGame.inGame.shared.smallTextDisplay.Active ||
-                    InGame.inGame.shared.scrollableTextDisplay.Active)
-                {
-                    InGame.inGame.shared.smallTextDisplay.Update(camera);
-                    InGame.inGame.shared.scrollableTextDisplay.Update(camera);
-
-                }
-                else
-                {
-                    UIGridElement prevE = grid.SelectionElement;
+                UIGridElement prevE = grid.SelectionElement;
                     
-                    HandleTouchInput();
-                    HandleMouseInput();
-                    HandleGamepadInput();
+                HandleTouchInput();
+                HandleMouseInput();
+                HandleGamepadInput();
 
-                    grid.Update(ref worldGrid);
+                grid.Update(ref worldGrid);
 
-                    // If the Update deactived us, bail.
-                    if (!active)
-                        return;
+                // If the Update deactived us, bail.
+                if (!active)
+                    return;
 
-                    // Update help square's positioning to line up with current selection.
-                    Vector3 selectionElementOffset = grid.SelectionElement.Position - grid.ScrollOffset;
-                    helpSquare.Position = new Vector2(helpSquare.Position.X, selectionElementOffset.Y);
+                // Update help square's positioning to line up with current selection.
+                Vector3 selectionElementOffset = grid.SelectionElement.Position - grid.ScrollOffset;
+                helpSquare.Position = new Vector2(helpSquare.Position.X, selectionElementOffset.Y);
 
-                    helpSquare.Update();
-                    if (prevE != grid.SelectionElement)
-                    {
-                        helpSquare.Show();
-                    }
+                helpSquare.Update();
+                if (prevE != grid.SelectionElement)
+                {
+                    helpSquare.Show();
+                }
 
-                    //Update OK Button - (B Cancel).
-                    okSquare.Position = new Vector2(okSquare.Position.X, selectionElementOffset.Y);
-                    okSquare.Update();
+                //Update OK Button - (B Cancel).
+                okSquare.Position = new Vector2(okSquare.Position.X, selectionElementOffset.Y);
+                okSquare.Update();
 
-                    if( (prevE != grid.SelectionElement && GamePadInput.ActiveMode == GamePadInput.InputMode.Touch) ||
-                        (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch && okSquare.Hidden) )
-                    {
-                        okSquare.Show();
-                    }
-                    else if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch)
-                    {
-                        okSquare.Hide();
-                    }
+                if( (prevE != grid.SelectionElement && KoiLibrary.LastTouchedDeviceIsTouch) ||
+                    (KoiLibrary.LastTouchedDeviceIsTouch && okSquare.Hidden) )
+                {
+                    okSquare.Show();
+                }
+                else if (!KoiLibrary.LastTouchedDeviceIsTouch)
+                {
+                    okSquare.Hide();
                 }
 
                 // For each element in the grid, calc it's screen space Y position
@@ -267,7 +261,7 @@ namespace Boku
 
         private void HandleTouchInput()
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch) { return; }
+            if (!KoiLibrary.LastTouchedDeviceIsTouch) { return; }
             if (TouchInput.TouchCount == 0) { return; }
 
             TouchContact touch = TouchInput.GetOldestTouch();
@@ -356,15 +350,6 @@ namespace Boku
                     }
                 }
 
-//                 if ((hitFocusUV.X >= 0) && (hitFocusUV.X < 1))
-//                 {
-//                     hitMenu = true;
-//                 }
-//                 if (!hitMenu && TouchInput.TapGesture.WasTapped())
-//                 {
-//                     Deactivate(false);
-//                 }
-
                 // Handle free-form scrolling
                 if (touch.TouchedObject != focusElement)
                 {
@@ -375,7 +360,7 @@ namespace Boku
 
         private void HandleMouseInput()
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.KeyboardMouse) { return; }
+            if (!KoiLibrary.LastTouchedDeviceIsKeyboardMouse) { return; }
 
             // If in focus element has help available, get it.
             UIGridElement e = grid.SelectionElement;
@@ -384,15 +369,15 @@ namespace Boku
 
             // Check for help tile.
             Matrix mat = Matrix.CreateTranslation(-helpSquare.Position.X, -helpSquare.Position.Y, 0);
-            Vector2 hitUV = MouseInput.GetHitUV(camera, ref mat, helpSquare.Size, helpSquare.Size, useRtCoords: false);
+            Vector2 hitUV = LowLevelMouseInput.GetHitUV(camera, ref mat, helpSquare.Size, helpSquare.Size, useRtCoords: false);
 
             if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
             {
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
                     MouseInput.ClickedOnObject = helpSquare;
                 }
-                if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == helpSquare)
+                if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == helpSquare)
                 {
                     ShowHelp(helpText);
                 }
@@ -400,15 +385,15 @@ namespace Boku
 
             // Check for ok tile.
             mat = Matrix.CreateTranslation(-okSquare.Position.X, -okSquare.Position.Y, 0);
-            hitUV = MouseInput.GetHitUV(camera, ref mat, okSquare.Size, okSquare.Size, useRtCoords: false);
+            hitUV = LowLevelMouseInput.GetHitUV(camera, ref mat, okSquare.Size, okSquare.Size, useRtCoords: false);
 
             if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
             {
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
                     MouseInput.ClickedOnObject = okSquare;
                 }
-                if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == okSquare)
+                if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == okSquare)
                 {
                     Deactivate(false);
                 }
@@ -416,7 +401,7 @@ namespace Boku
 
             // Check if mouse hitting current selection object.  Or should this be done in the object?
             mat = Matrix.Invert(e.WorldMatrix);
-            hitUV = MouseInput.GetHitUV(camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
+            hitUV = LowLevelMouseInput.GetHitUV(camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
 
             bool focusElementHit = false;
             if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
@@ -427,7 +412,7 @@ namespace Boku
 
             // If we didn't hit the focus object, see if we hit any of the others.
             // If so, bring them into focus.
-            if (!focusElementHit && MouseInput.Left.WasPressed)
+            if (!focusElementHit && LowLevelMouseInput.Left.WasPressed)
             {
                 for (int i = 0; i < grid.ActualDimensions.Y; i++)
                 {
@@ -436,7 +421,7 @@ namespace Boku
 
                     e = grid.Get(0, i);
                     mat = Matrix.Invert(e.WorldMatrix);
-                    hitUV = MouseInput.GetHitUV(camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
+                    hitUV = LowLevelMouseInput.GetHitUV(camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
 
                     if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
                     {
@@ -449,20 +434,15 @@ namespace Boku
             }
 
             // Check for edges of screen.
-            if (MouseInput.AtWindowTop())
+            if (LowLevelMouseInput.AtWindowTop())
             {
                 grid.MoveUp();
             }
-            if (MouseInput.AtWindowBottom())
+            if (LowLevelMouseInput.AtWindowBottom())
             {
                 grid.MoveDown();
             }
 
-            // Allow right click or left click on nothing to exit.
-//             if (MouseInput.Right.WasPressed || (!hitAnything && MouseInput.Left.WasPressed))
-//             {
-//                 Deactivate(false);
-//             }
         }
 
         private void HandleGamepadInput()
@@ -481,12 +461,15 @@ namespace Boku
 
         private void ShowHelp(string helpText)
         {
-            InGame.inGame.shared.smallTextDisplay.Activate(null, helpText, UIGridElement.Justification.Center, false, useRtCoords: false);
+            Debug.Assert(false);
+            /*
+            InGame.inGame.shared.smallTextDisplay.Activate(null, helpText, TextHelper.Justification.Center, false, useRtCoords: false);
             if (InGame.inGame.shared.smallTextDisplay.Overflow)
             {
                 InGame.inGame.shared.smallTextDisplay.Deactivate();
-                InGame.inGame.shared.scrollableTextDisplay.Activate(null, helpText, UIGridElement.Justification.Center, false, useRtCoords: false);
+                InGame.inGame.shared.scrollableTextDisplay.Activate(null, helpText, TextHelper.Justification.Center, false, useRtCoords: false);
             }
+            */
         }   // end of ShowHelp()
 
         private void SetupControl( ControlSetup setupType, Control? controlType )
@@ -511,7 +494,7 @@ namespace Boku
                 blob.width = 512.0f / 96.0f;
                 blob.height = blob.width / 5.0f;
                 blob.edgeSize = 0.06f;
-                blob.Font = UI2D.Shared.GetGameFont24Bold;
+                blob.Font = SharedX.GetGameFont24Bold;
                 blob.textColor = Color.White;
                 blob.dropShadowColor = Color.Black;
                 blob.useDropShadow = true;
@@ -519,7 +502,7 @@ namespace Boku
                 blob.unselectedColor = new Color(new Vector3(4, 100, 90) / 255.0f);
                 blob.selectedColor = new Color(new Vector3(5, 180, 160) / 255.0f);
                 blob.normalMapName = @"Slant0Smoothed5NormalMap";
-                blob.justify = UIGridModularCheckboxElement.Justification.Left;
+                blob.justify = TextHelper.Justification.Left;
             }
 
             //
@@ -554,12 +537,15 @@ namespace Boku
                             }
                         }
 
-                        InGame.inGame.shared.smallTextDisplay.Activate(null, text, UIGridElement.Justification.Center, false, false);
+                        Debug.Assert(false);
+                        /*
+                        InGame.inGame.shared.smallTextDisplay.Activate(null, text, TextHelper.Justification.Center, false, false);
                         if (InGame.inGame.shared.smallTextDisplay.Overflow)
                         {
                             InGame.inGame.shared.smallTextDisplay.Deactivate();
-                            InGame.inGame.shared.scrollableTextDisplay.Activate(null, text, UIGridElement.Justification.Center, false, false);
+                            InGame.inGame.shared.scrollableTextDisplay.Activate(null, text, TextHelper.Justification.Center, false, false);
                         }
+                        */
                     };
 
                     UIGridModularButtonElement.UIButtonElementEvent onX = delegate()
@@ -1582,7 +1568,7 @@ namespace Boku
             if (active)
             {
                 // Render menu using local camera.
-                ShaderGlobals.SetCamera(camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
                 grid.Render(camera);
 

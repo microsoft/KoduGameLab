@@ -8,6 +8,8 @@ using System.Diagnostics;
 using System.Threading;
 using System.IO;
 
+using KoiX;
+
 namespace Boku.Common
 {
     /// These enumeration values persist as strings server-side in the instrumentation

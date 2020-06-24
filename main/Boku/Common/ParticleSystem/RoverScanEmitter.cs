@@ -5,6 +5,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Xml.Serialization;
 
+using KoiX;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -61,7 +63,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (RoverScanExplosionEmitter.texture == null)
             {
-                RoverScanExplosionEmitter.texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/RoverScanFire");
+                RoverScanExplosionEmitter.texture = KoiLibrary.LoadTexture2D(@"Textures/RoverScanFire");
             }
         }   // end of ExplosionEmitter LoadContent()
 
@@ -115,7 +117,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (RoverScanSmokeEmitter.texture == null)
             {
-                RoverScanSmokeEmitter.texture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/RoverScanSmoke");
+                RoverScanSmokeEmitter.texture = KoiLibrary.LoadTexture2D(@"Textures/RoverScanSmoke");
             }
         }   // end of ExplosionEmitter LoadContent()
 

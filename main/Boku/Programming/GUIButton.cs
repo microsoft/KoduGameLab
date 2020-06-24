@@ -1,30 +1,14 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
 
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Storage;
 
-using Boku.Base;
 using Boku.Common;
-using Boku.Common.Gesture;
-using Boku.Fx;
-using Boku.UI;
-using Boku.UI2D;
-using Boku.Common.Xml;
 
 namespace Boku.Programming
 {
     /// <summary>
-    /// TODO (****)
+    /// TODO (scoy)
     /// This class has some issues.  For instance, it only seems to work
     /// in a WasPressed sense.  Continuous pressing isn't detected.  Also,
     /// the click detection is on release, which is fine for a UI button
@@ -206,7 +190,7 @@ namespace Boku.Programming
             this.color = color;
             hitBox = new AABB2D();
         }
-        
+
         public void ChangeState(ButtonState newState)
         {
             prevState = state;

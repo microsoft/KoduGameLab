@@ -12,6 +12,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Common;
@@ -228,9 +232,6 @@ namespace Boku
                     return; // Don't let anything under us take input.
                 }
 
-                bool textDisplaying = InGame.inGame.shared.smallTextDisplay.Active ||
-                                      InGame.inGame.shared.scrollableTextDisplay.Active;
-
                 // If in focus element has help available, get it.
                 UIGridElement e = grid.SelectionElement;
                 string helpID = e.HelpID;
@@ -245,133 +246,41 @@ namespace Boku
                 }
                 camera.Update();
 
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch)
+                if (KoiLibrary.LastTouchedDeviceIsTouch)
                 {
-                    if (!textDisplaying)
+                    // Check for help tile.                        
+                    Vector2 hitUV = Vector2.Zero;
+
+                    TouchContact touch = TouchInput.GetOldestTouch();
+
+                    if (null != touch)
                     {
 
-                        // Check for help tile.                        
-                        Vector2 hitUV = Vector2.Zero;
-
-                        TouchContact touch = TouchInput.GetOldestTouch();
-
-                        if (null != touch)
-                        {
-
-                            Matrix mat = Matrix.CreateTranslation(-helpSquare.Position.X, -helpSquare.Position.Y, 0);
-                            // Check hitting help square
-                            hitUV = TouchInput.GetHitUV(touch.position, camera, ref mat, helpSquare.Size, helpSquare.Size, useRtCoords: false);
-                            if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
-                            {
-                                if (TouchInput.WasTouched)
-                                {
-                                    touch.TouchedObject= helpSquare;
-                                }
-                                if (TouchInput.WasReleased && touch.TouchedObject == helpSquare)
-                                {
-                                    ShowHelp(helpText);
-                                }
-                            }
-
-                            mat = Matrix.CreateTranslation(-okSquare.Position.X, -okSquare.Position.Y, 0);
-                            // Check hitting OK square
-                            hitUV = TouchInput.GetHitUV(touch.position, camera, ref mat, okSquare.Size, okSquare.Size, useRtCoords: false);
-                            if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
-                            {
-                                if (TouchInput.WasTouched)
-                                {
-                                    touch.TouchedObject = okSquare;
-                                }
-                                if (TouchInput.WasReleased && touch.TouchedObject == okSquare)
-                                {
-                                    Deactivate();
-                                }
-                            }
-
-                            // Check if mouse hitting current selection object.  Or should this be done in the object?
-                            mat = Matrix.Invert(e.WorldMatrix);
-                            hitUV = TouchInput.GetHitUV(touch.position, camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
-
-                            bool focusElementHit = false;
-                            if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
-                            {
-                                if (touch.phase == TouchPhase.Began)
-                                {
-                                    touch.TouchedObject = e;
-                                }
-                                e.HandleTouchInput(touch, hitUV);
-                                focusElementHit = true;
-                            }
-
-                            // If we didn't hit the focus object, see if we hit any of the others.
-                            // If so, bring them into focus.
-                            if (!focusElementHit && TouchGestureManager.Get().TapGesture.WasTapped())
-                            {
-                                for (int i = 0; i < grid.ActualDimensions.Y; i++)
-                                {
-                                    if (i == grid.SelectionIndex.Y)
-                                        continue;
-
-                                    e = grid.Get(0, i);
-                                    mat = Matrix.Invert(e.WorldMatrix);
-                                    hitUV = TouchInput.GetHitUV(touch.position, camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
-
-                                    if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
-                                    {
-                                        // We hit an element, so bring it into focus.
-                                        grid.SelectionIndex = new Point(0, i);
-                                        break;
-                                    }
-
-                                }
-                            }
-
-                            if (touch.TouchedObject != e)
-                            {
-                                grid.HandleTouchInput(camera);
-                            }
-
-                            // Allow right click or left click on nothing to exit.
-//                             if (!hitAnything && TouchInput.TapGesture.WasTapped())
-//                             {
-//                                 Deactivate();
-//                             }
-                        }
-                    }
-                }
-                else if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse)
-                {
-                    // Mouse input.
-                    // Don't do anything if help is being displayed.
-                    if (!textDisplaying)
-                    {
-                        // Check for help tile.
                         Matrix mat = Matrix.CreateTranslation(-helpSquare.Position.X, -helpSquare.Position.Y, 0);
-                        Vector2 hitUV = MouseInput.GetHitUV(camera, ref mat, helpSquare.Size, helpSquare.Size, useRtCoords: false);
-
+                        // Check hitting help square
+                        hitUV = TouchInput.GetHitUV(touch.position, camera, ref mat, helpSquare.Size, helpSquare.Size, useRtCoords: false);
                         if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
                         {
-                            if (MouseInput.Left.WasPressed)
+                            if (TouchInput.WasTouched)
                             {
-                                MouseInput.ClickedOnObject = helpSquare;
+                                touch.TouchedObject = helpSquare;
                             }
-                            if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == helpSquare)
+                            if (TouchInput.WasReleased && touch.TouchedObject == helpSquare)
                             {
                                 ShowHelp(helpText);
                             }
                         }
 
-                        // Check for ok tile.
                         mat = Matrix.CreateTranslation(-okSquare.Position.X, -okSquare.Position.Y, 0);
-                        hitUV = MouseInput.GetHitUV(camera, ref mat, okSquare.Size, okSquare.Size, useRtCoords: false);
-
+                        // Check hitting OK square
+                        hitUV = TouchInput.GetHitUV(touch.position, camera, ref mat, okSquare.Size, okSquare.Size, useRtCoords: false);
                         if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
                         {
-                            if (MouseInput.Left.WasPressed)
+                            if (TouchInput.WasTouched)
                             {
-                                MouseInput.ClickedOnObject = okSquare;
+                                touch.TouchedObject = okSquare;
                             }
-                            if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == okSquare)
+                            if (TouchInput.WasReleased && touch.TouchedObject == okSquare)
                             {
                                 Deactivate();
                             }
@@ -379,18 +288,22 @@ namespace Boku
 
                         // Check if mouse hitting current selection object.  Or should this be done in the object?
                         mat = Matrix.Invert(e.WorldMatrix);
-                        hitUV = MouseInput.GetHitUV(camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
+                        hitUV = TouchInput.GetHitUV(touch.position, camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
 
                         bool focusElementHit = false;
                         if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
                         {
-                            e.HandleMouseInput(hitUV);
-                            focusElementHit = true;                            
+                            if (touch.phase == TouchPhase.Began)
+                            {
+                                touch.TouchedObject = e;
+                            }
+                            e.HandleTouchInput(touch, hitUV);
+                            focusElementHit = true;
                         }
 
                         // If we didn't hit the focus object, see if we hit any of the others.
                         // If so, bring them into focus.
-                        if (!focusElementHit && MouseInput.Left.WasPressed)
+                        if (!focusElementHit && TouchGestureManager.Get().TapGesture.WasTapped())
                         {
                             for (int i = 0; i < grid.ActualDimensions.Y; i++)
                             {
@@ -399,35 +312,105 @@ namespace Boku
 
                                 e = grid.Get(0, i);
                                 mat = Matrix.Invert(e.WorldMatrix);
-                                hitUV = MouseInput.GetHitUV(camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
+                                hitUV = TouchInput.GetHitUV(touch.position, camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
 
                                 if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
                                 {
                                     // We hit an element, so bring it into focus.
                                     grid.SelectionIndex = new Point(0, i);
-
                                     break;
                                 }
 
                             }
                         }
 
-                        // Check for edges of screen.
-                        if (MouseInput.AtWindowTop())
+                        if (touch.TouchedObject != e)
                         {
-                            grid.MoveUp();
-                        }
-                        if (MouseInput.AtWindowBottom())
-                        {
-                            grid.MoveDown();
+                            grid.HandleTouchInput(camera);
                         }
 
-                        // Allow right click or left click on nothing to exit.
-//                         if (MouseInput.Right.WasPressed || (!hitAnything && MouseInput.Left.WasPressed))
-//                         {
-//                             Deactivate();
-//                         }
                     }
+                }
+                else if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
+                {
+                    // Mouse input.
+                    // Check for help tile.
+                    Matrix mat = Matrix.CreateTranslation(-helpSquare.Position.X, -helpSquare.Position.Y, 0);
+                    Vector2 hitUV = LowLevelMouseInput.GetHitUV(camera, ref mat, helpSquare.Size, helpSquare.Size, useRtCoords: false);
+
+                    if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
+                    {
+                        if (LowLevelMouseInput.Left.WasPressed)
+                        {
+                            MouseInput.ClickedOnObject = helpSquare;
+                        }
+                        if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == helpSquare)
+                        {
+                            ShowHelp(helpText);
+                        }
+                    }
+
+                    // Check for ok tile.
+                    mat = Matrix.CreateTranslation(-okSquare.Position.X, -okSquare.Position.Y, 0);
+                    hitUV = LowLevelMouseInput.GetHitUV(camera, ref mat, okSquare.Size, okSquare.Size, useRtCoords: false);
+
+                    if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
+                    {
+                        if (LowLevelMouseInput.Left.WasPressed)
+                        {
+                            MouseInput.ClickedOnObject = okSquare;
+                        }
+                        if (LowLevelMouseInput.Left.WasReleased && MouseInput.ClickedOnObject == okSquare)
+                        {
+                            Deactivate();
+                        }
+                    }
+
+                    // Check if mouse hitting current selection object.  Or should this be done in the object?
+                    mat = Matrix.Invert(e.WorldMatrix);
+                    hitUV = LowLevelMouseInput.GetHitUV(camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
+
+                    bool focusElementHit = false;
+                    if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
+                    {
+                        e.HandleMouseInput(hitUV);
+                        focusElementHit = true;
+                    }
+
+                    // If we didn't hit the focus object, see if we hit any of the others.
+                    // If so, bring them into focus.
+                    if (!focusElementHit && LowLevelMouseInput.Left.WasPressed)
+                    {
+                        for (int i = 0; i < grid.ActualDimensions.Y; i++)
+                        {
+                            if (i == grid.SelectionIndex.Y)
+                                continue;
+
+                            e = grid.Get(0, i);
+                            mat = Matrix.Invert(e.WorldMatrix);
+                            hitUV = LowLevelMouseInput.GetHitUV(camera, ref mat, e.Size.X, e.Size.Y, useRtCoords: false);
+
+                            if (hitUV.X >= 0 && hitUV.X < 1 && hitUV.Y >= 0 && hitUV.Y < 1)
+                            {
+                                // We hit an element, so bring it into focus.
+                                grid.SelectionIndex = new Point(0, i);
+
+                                break;
+                            }
+
+                        }
+                    }
+
+                    // Check for edges of screen.
+                    if (LowLevelMouseInput.AtWindowTop())
+                    {
+                        grid.MoveUp();
+                    }
+                    if (LowLevelMouseInput.AtWindowBottom())
+                    {
+                        grid.MoveDown();
+                    }
+
                 }
 
 
@@ -437,10 +420,7 @@ namespace Boku
 
                 // Update the grid.  Note this is done only if the text is not displaying
                 // since that should have priority over the input.
-                if (!textDisplaying)
-                {
-                    grid.Update(ref worldGrid);
-                }
+                grid.Update(ref worldGrid);
 
                 // If the Update deactived us, bail.
                 if(!active)
@@ -461,21 +441,13 @@ namespace Boku
                     e.Rotation = rot;
                 }
 
-                if (!textDisplaying)
+                if (helpText != null && Actions.Help.WasPressed)
                 {
-                    if (helpText != null && Actions.Help.WasPressed)
-                    {
-                        ShowHelp(helpText);
-                    }
-                    else if (Actions.A.WasPressed)
-                    {
-                        Deactivate();
-                    }
+                    ShowHelp(helpText);
                 }
-                else
+                else if (Actions.A.WasPressed)
                 {
-                    InGame.inGame.shared.smallTextDisplay.Update(camera);
-                    InGame.inGame.shared.scrollableTextDisplay.Update(camera);
+                    Deactivate();
                 }
 
                 helpSquare.Update();
@@ -498,12 +470,15 @@ namespace Boku
         {
             if (!string.IsNullOrEmpty(helpText))
             {
-                InGame.inGame.shared.smallTextDisplay.Activate(null, helpText, UIGridElement.Justification.Center, false, useRtCoords: false);
+                Debug.Assert(false);
+                /*
+                InGame.inGame.shared.smallTextDisplay.Activate(null, helpText, TextHelper.Justification.Center, false, useRtCoords: false);
                 if (InGame.inGame.shared.smallTextDisplay.Overflow)
                 {
                     InGame.inGame.shared.smallTextDisplay.Deactivate();
-                    InGame.inGame.shared.scrollableTextDisplay.Activate(null, helpText, UIGridElement.Justification.Center, false, useRtCoords: false);
+                    InGame.inGame.shared.scrollableTextDisplay.Activate(null, helpText, TextHelper.Justification.Center, false, useRtCoords: false);
                 }
+                */
             }
             else
             {
@@ -516,7 +491,7 @@ namespace Boku
             if (active)
             {
                 // Render menu using local camera.
-                Fx.ShaderGlobals.SetCamera(camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
                 grid.Render(camera);
 
@@ -580,7 +555,7 @@ namespace Boku
                 blob.width = 512.0f / 96.0f;
                 blob.height = blob.width / 5.0f;
                 blob.edgeSize = 0.06f;
-                blob.Font = UI2D.Shared.GetGameFont24Bold;
+                blob.Font = SharedX.GetGameFont24Bold;
                 blob.textColor = Color.White;
                 blob.dropShadowColor = Color.Black;
                 blob.useDropShadow = true;
@@ -588,7 +563,7 @@ namespace Boku
                 blob.unselectedColor = new Color(new Vector3(4, 100, 90) / 255.0f);
                 blob.selectedColor = new Color(new Vector3(5, 180, 160) / 255.0f);
                 blob.normalMapName = @"Slant0Smoothed5NormalMap";
-                blob.justify = UIGridModularCheckboxElement.Justification.Left;
+                blob.justify = TextHelper.Justification.Left;
             }
 
             // Create elements here.

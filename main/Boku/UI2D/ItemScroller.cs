@@ -14,6 +14,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Fx;
 using Boku.Common;
@@ -74,7 +78,7 @@ namespace Boku.UI2D
         Vector4 renderColor = Color.White.ToVector4();    // What is currently rendered.
         Vector4 targetColor = Color.White.ToVector4();    // Where the twitch is going.
 
-        UI2D.Shared.GetFont Font = null;
+        GetFont Font = null;
         private Vector2 fixedSize;
 
         // JW - SO not good
@@ -251,7 +255,7 @@ namespace Boku.UI2D
         }
 
         public ItemScroller(Vector2 pos, Vector2 size, Color baseColor, GetTexture getTexture, 
-            UI2D.Shared.GetFont Font)
+            GetFont Font)
         {
             this.scrollItems = new List<ScrollContainer>();
             this.color_bg = baseColor.ToVector4();
@@ -262,7 +266,7 @@ namespace Boku.UI2D
             this.FixedSize = size;
             this.relativePosition = pos;
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             this.originalDeviceViewport =  device.Viewport;
 
             // Since we're rendering to a 1280*720 rendertarget.
@@ -334,7 +338,7 @@ namespace Boku.UI2D
                 return;
             }
 
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.GamePad)
+            if (!KoiLibrary.LastTouchedDeviceIsGamepad)
             {
                 if (indexFocusedItem < (scrollItems.Count))
                 {
@@ -364,7 +368,7 @@ namespace Boku.UI2D
         /// <param name="rt"></param>
         private void SetViewPort(bool useRelativePosition, RenderTarget2D rt)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Viewport vp = device.Viewport;
 
             // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FULL SCREEN WINDOWED MODE FIX
@@ -386,14 +390,14 @@ namespace Boku.UI2D
 
         private void RestoreViewport()
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
             device.Viewport = originalDeviceViewport;
         }
 
         public void Render()
         {
-            RenderTarget2D rt = UI2D.Shared.RenderTarget1024_768;
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            RenderTarget2D rt = SharedX.RenderTarget1024_768;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
             
             SetViewPort(true, rt);
 
@@ -411,7 +415,7 @@ namespace Boku.UI2D
         int hackFrame = -1;
         public void RefreshRT()
         {
-            RenderTarget2D rt = UI2D.Shared.RenderTarget1024_768;
+            RenderTarget2D rt = SharedX.RenderTarget1024_768;
 
             if (dirty || hackFrame == Time.FrameCounter || rt.IsContentLost)
             {
@@ -424,7 +428,7 @@ namespace Boku.UI2D
                     hackFrame = Time.FrameCounter + 4;
                 }
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 device.SetRenderTarget(rt);
 
@@ -436,13 +440,13 @@ namespace Boku.UI2D
                 ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
                 ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 Vector2 baseSize = FixedSize;
 
 
 
                 Vector4 drawColor = GetDrawColor();
-                Texture2D buttonTexture = UI2D.Shared.BlackButtonTexture;
+                Texture2D buttonTexture = SharedX.BlackButtonTexture;
 
                 // Render rectangular baseplate of scroller (maybe a transparent texture...).
                 ssquad.Render(color_bgCurr, pos, baseSize - new Vector2(ScrollBoxSize.X, 0.0f));
@@ -551,7 +555,7 @@ namespace Boku.UI2D
 
             if (indexFocusedItem < (scrollItems.Count))
             {
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad)
+                if (KoiLibrary.LastTouchedDeviceIsGamepad)
                 {
                     scrollItems[indexFocusedItem].EnableFocus();
                 }
@@ -587,28 +591,28 @@ namespace Boku.UI2D
 
         private void HandleMouseInput(Camera camera)
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.KeyboardMouse) { return; }
+            if (!KoiLibrary.LastTouchedDeviceIsKeyboardMouse) { return; }
             if (scrollItems.Count == 0) { return; }
 
-            Vector2 mouseHit = new Vector2(MouseInput.Position.X, MouseInput.Position.Y);
+            Vector2 mouseHit = new Vector2(LowLevelMouseInput.Position.X, LowLevelMouseInput.Position.Y);
             Vector2 adjHitPos = mouseHit;
 
-            if (MouseInput.PrevScrollWheel > MouseInput.ScrollWheel)
+            if (LowLevelMouseInput.DeltaScrollWheel < 0)
             {
                 FocusNext();
             } 
-            else if (MouseInput.PrevScrollWheel < MouseInput.ScrollWheel)
+            else if (LowLevelMouseInput.DeltaScrollWheel > 0)
             {
                 FocusPrev();
             }
             else if (scrollBoxHit.Contains(adjHitPos) || startDragOffset != 0.0f)
             {
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
                     startDragOffset = mouseHit.Y;
                     startScrollOffset = scrollOffset;
                 }
-                else if (MouseInput.Left.IsPressed)
+                else if (LowLevelMouseInput.Left.IsPressed)
                 {
                     float dragDistance = mouseHit.Y - startDragOffset;
 
@@ -630,7 +634,7 @@ namespace Boku.UI2D
                     if (scrollItems[i].IsInFocus(adjHitPos) || true)
                     {
                         Object obj;
-                        if (MouseInput.Left.WasReleased)
+                        if (LowLevelMouseInput.Left.WasReleased)
                         {
                             scrollItems[i].Click(adjHitPos, out obj, ClickType.WasReleased);
                             if (indexFocusedItem != i)
@@ -640,11 +644,11 @@ namespace Boku.UI2D
                             }
 
                         }
-                        else if (MouseInput.Left.WasPressed)
+                        else if (LowLevelMouseInput.Left.WasPressed)
                         {
                             scrollItems[i].Click(adjHitPos, out obj, ClickType.WasPressed);
                         }
-                        else if (MouseInput.Left.IsPressed)
+                        else if (LowLevelMouseInput.Left.IsPressed)
                         {
                             scrollItems[i].Click(adjHitPos, out obj, ClickType.IsPressed);
                         }
@@ -659,7 +663,7 @@ namespace Boku.UI2D
 
         private void HandleTouchInput()
         {
-            if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch) { return; }
+            if (!KoiLibrary.LastTouchedDeviceIsTouch) { return; }
             if (scrollItems.Count == 0) { return; }
 
             if (TouchInput.TouchCount!=1) { return; }

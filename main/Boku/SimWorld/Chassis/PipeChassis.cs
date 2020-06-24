@@ -5,6 +5,9 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.SimWorld;
@@ -515,17 +518,17 @@ namespace Boku.SimWorld.Chassis
                 return false;
             }
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse && InGame.inGame.mouseEditUpdateObj.ToolBox.EditObjectsToolInstance.SelectedActor == actor)
+            if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse && InGame.inGame.mouseEditUpdateObj.ToolBox.EditObjectsToolInstance.SelectedActor == actor)
             {
                 return true;
             }
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch && InGame.inGame.touchEditUpdateObj.ToolBox.EditObjectsToolInstance.FocusActor == actor)
+            if (KoiLibrary.LastTouchedDeviceIsTouch && InGame.inGame.touchEditUpdateObj.ToolBox.EditObjectsToolInstance.FocusActor == actor)
             {
                 return true;
             }
 
-            if (GamePadInput.ActiveMode == GamePadInput.InputMode.GamePad && InGame.inGame.editObjectUpdateObj.selectedObject == actor)
+            if (KoiLibrary.LastTouchedDeviceIsGamepad && InGame.inGame.editObjectUpdateObj.selectedObject == actor)
             {
                 return true;
             }
@@ -536,14 +539,17 @@ namespace Boku.SimWorld.Chassis
         //helper function to find the cursor position across various input modes (used as the starting point when snapping)
         private Vector3 FindCursorPosition()
         {
-            switch(GamePadInput.ActiveMode)
+            if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
             {
-                case GamePadInput.InputMode.GamePad:
-                    return InGame.inGame.Cursor3D.Position;
-                case GamePadInput.InputMode.KeyboardMouse:
-                    return MouseEdit.HitInfo.TerrainPosition;
-                case GamePadInput.InputMode.Touch:
-                    return TouchEdit.HitInfo.LastTouchEditPos;
+                return MouseEdit.MouseTouchHitInfo.TerrainPosition;
+            }
+            else if (KoiLibrary.LastTouchedDeviceIsGamepad)
+            {
+                return InGame.inGame.Cursor3D.Position;
+            }
+            else if (KoiLibrary.LastTouchedDeviceIsTouch)
+            {
+                return TouchEdit.MouseTouchHitInfo.LastTouchEditPos;
             }
 
             return Vector3.Zero;

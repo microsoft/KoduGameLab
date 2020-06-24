@@ -11,8 +11,6 @@ namespace Boku.UI
 
     public interface IControl
     {
-        void AddCommands(CommandMap map);
-        void RemoveCommands(CommandMap map);
         bool Hot
         {
             get;

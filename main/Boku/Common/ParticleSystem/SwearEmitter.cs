@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using KoiX;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
@@ -34,7 +36,7 @@ namespace Boku.Common.ParticleSystem
             // Load the texture.
             if (swearTexture == null)
             {
-                swearTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures/Swear");
+                swearTexture = KoiLibrary.LoadTexture2D(@"Textures/Swear");
             }
         }
 

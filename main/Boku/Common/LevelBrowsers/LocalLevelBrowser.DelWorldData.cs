@@ -4,6 +4,8 @@ using System.Threading;
 using System.IO;
 using System.Diagnostics;
 
+using KoiX;
+
 using Boku.Base;
 using Boku.Common.Xml;
 

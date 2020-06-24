@@ -759,7 +759,7 @@ namespace Boku.Common
 
                 // Dump();
 
-                // TODO (****) Why is this only when using system font rendering?
+                // TODO (scoy) Why is this only when using system font rendering?
                 if(!BokuSettings.Settings.UseSystemFontRendering)
                 {
                     // Finally, fill in the new display order indices.

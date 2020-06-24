@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Fx;
@@ -25,7 +28,7 @@ namespace Boku.UI2D
 
         private UIGridElement parent = null;
         private string text;
-        private UI2D.Shared.GetFont Font = null;
+        private GetFont Font = null;
         private bool checkbox = false;
         private Vector2 position = Vector2.Zero;    // Where this TextLine lives.
         private Vector2 size;                       // Size in pixels of diffuse.
@@ -87,7 +90,7 @@ namespace Boku.UI2D
         /// <param name="text">The text to display.</param>
         /// <param name="Font">The function to get the current font.</param>
         /// <param name="checkbox">Should this line have a checkbox at the beginning?</param>
-        public TextLine(UIGridElement parent, string text, UI2D.Shared.GetFont Font, bool checkbox)
+        public TextLine(UIGridElement parent, string text, GetFont Font, bool checkbox)
         {
             this.parent = parent;
             this.text = TextHelper.FilterInvalidCharacters(text);
@@ -114,7 +117,7 @@ namespace Boku.UI2D
             }
 
             // Render the text.         
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             batch.Begin();
             TextHelper.DrawStringWithShadow(Font, batch, position.X, position.Y, text, Color.White, Color.Black, false);
@@ -174,15 +177,15 @@ namespace Boku.UI2D
                 false,                      // Mip levels
                 SurfaceFormat.Color,
                 DepthFormat.None);
-            InGame.GetRT("TextLine", diffuse);
+            SharedX.GetRT("TextLine", diffuse);
 
             RefreshTexture();
         }
 
         private void ReleaseRenderTargets()
         {
-            InGame.RelRT("TextLine", diffuse);
-            BokuGame.Release(ref diffuse);
+            SharedX.RelRT("TextLine", diffuse);
+            DeviceResetX.Release(ref diffuse);
         }
 
     }   // end of class TextLine

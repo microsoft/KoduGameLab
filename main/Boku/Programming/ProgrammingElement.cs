@@ -689,7 +689,7 @@ namespace Boku.Programming
             }
 
             // If this element is on the do side, remove negated outputs.
-            // TODO (****) I just noticed that "this is Filter" is here even though filters
+            // TODO (scoy) I just noticed that "this is Filter" is here even though filters
             // shouldn't be on the DO side.  Is this a bug or do we need this?
             if (this is Actuator || this is Selector || this is Modifier || this is Filter)
             {

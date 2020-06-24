@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX.Input;
+
 using Boku.Common.Xml;
 
 namespace Boku.Common
@@ -242,14 +244,12 @@ namespace Boku.Common
 
             if (Contains(mouseHit))
             {
-                MouseInput.OverButton = true;
-
-                if (MouseInput.Left.WasPressed)
+                if (LowLevelMouseInput.Left.WasPressed)
                 {
-                    MouseInput.Left.IgnoreUntilReleased = true;
-                    MouseInput.ClickedOnObject = this;
+                    LowLevelMouseInput.Left.IgnoreUntilReleased = true;
+                    MouseInput.OldClickedOnObject = this;
                 }
-                if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == this)
+                if (LowLevelMouseInput.Left.WasReleased && MouseInput.OldClickedOnObject == this)
                 {
                     result = true;
                 }
@@ -272,14 +272,12 @@ namespace Boku.Common
 
             if (Contains(mouseHit))
             {
-                MouseInput.OverButton = true;
-
-                if (MouseInput.Right.WasPressed)
+                if (LowLevelMouseInput.Right.WasPressed)
                 {
-                    MouseInput.Right.IgnoreUntilReleased = true;
-                    MouseInput.ClickedOnObject = this;
+                    LowLevelMouseInput.Right.IgnoreUntilReleased = true;
+                    MouseInput.OldClickedOnObject = this;
                 }
-                if (MouseInput.Right.WasReleased && MouseInput.ClickedOnObject == this)
+                if (LowLevelMouseInput.Right.WasReleased && MouseInput.OldClickedOnObject == this)
                 {
                     result = true;
                 }

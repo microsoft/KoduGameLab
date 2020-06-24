@@ -21,6 +21,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common;
 using Boku.Common.Xml;
@@ -231,7 +235,7 @@ namespace Boku
             }   // end of RightClickOnCancel()
         }
 
-        protected class UpdateObj : UpdateControl
+        protected class UpdateObj : UpdateObject
         {
             private Editor parent = null;
             private Shared shared = null;
@@ -255,23 +259,6 @@ namespace Boku
                 updateList = new List<UpdateObject>();
             }   // end of UpdateObj c'tor
 
-            public override void AddCommands(CommandMap map)
-            {
-                commandMap.Add(map);
-            }
-            public override void RemoveCommands(CommandMap map)
-            {
-                commandMap.Remove(map);
-            }
-            public override void AddCommandsToControl(IControl control)
-            {
-                control.AddCommands(this.commandMap);
-            }
-            public override void RemoveCommandsFromControl(IControl control)
-            {
-                control.RemoveCommands(this.commandMap);
-            }
-
             //static int tic = 0;   // debug
 
             // Timer for slowing down moving reflexes with the mouse.
@@ -280,7 +267,7 @@ namespace Boku
             private void HandleTouchInput()
             {
                 TouchContact touch = TouchInput.GetOldestTouch();
-                if ((GamePadInput.ActiveMode != GamePadInput.InputMode.Touch) || (touch == null))
+                if ((!KoiLibrary.LastTouchedDeviceIsTouch) || (touch == null))
                 {
                     return;
                 }
@@ -699,7 +686,7 @@ namespace Boku
                             }   // end if touch hits reflex.
 
                             // If touch is not pressed be sure to restore handle position.
-                            if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch && TouchInput.WasReleased)
+                            if (KoiLibrary.LastTouchedDeviceIsTouch && TouchInput.WasReleased)
                             {
                                 ReflexPanel panel = parent.ActivePanel;
                                 if (panel != null)
@@ -719,9 +706,7 @@ namespace Boku
                 if (tapGesture.WasRecognized && !hitSomething &&
                     !InGame.inGame.shared.programmingHelpCard.WasTouchedThisFrame &&
                     !InGame.inGame.shared.textEditor.WasTouchedThisFrame &&
-                    !InGame.inGame.shared.microbitPatternEditor.WasTouchedThisFrame &&
-                    !InGame.inGame.shared.ToolBox.WaterPicker.Active &&
-                    !InGame.inGame.shared.ToolBox.MaterialPicker.Active)
+                    !InGame.inGame.shared.microbitPatternEditor.WasTouchedThisFrame)
                 {
                     if (null != touch && touch.TouchedObject == null)
                     {
@@ -736,11 +721,11 @@ namespace Boku
 
             private void HandleMouseInput()
             {
-                if (GamePadInput.ActiveMode != GamePadInput.InputMode.KeyboardMouse)
+                if (!KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
                     return;
                 }
-                Vector2 mouseHit = MouseInput.PositionVec;
+                Vector2 mouseHit = LowLevelMouseInput.PositionVec;
 
                 // Test for switching tasks or moving the focus to the task handle.  We
                 // group these together since the shoulder buttons overlay the task handle.
@@ -767,7 +752,7 @@ namespace Boku
                         }
                     }
 
-                    if (shared.taskHandleBox.Contains(mouseHit) && parent.IndexActivePanel == -1 && MouseInput.Right.WasPressed)
+                    if (shared.taskHandleBox.Contains(mouseHit) && parent.IndexActivePanel == -1 && LowLevelMouseInput.Right.WasPressed)
                     {
                         // Set up menu for page and activate.
                         MouseMenu menu = InGame.inGame.Editor.RightClickMenu;
@@ -784,7 +769,7 @@ namespace Boku
                 }
 
                 // Scroll wheel to go through reflexes.
-                int scroll = MouseInput.ScrollWheel - MouseInput.PrevScrollWheel;
+                int scroll = LowLevelMouseInput.DeltaScrollWheel;
                 if (scroll > 0 && parent.IndexActivePanel >= 0)
                 {
                     parent.NavReflexPrev(null, null);
@@ -809,17 +794,17 @@ namespace Boku
                             IBounding ibound = cro as IBounding;
                             BoundingBox box = ibound.BoundingBox;
 
-                            Vector2 hitUV = MouseInput.GetHitOrtho(shared.camera, ref mat, useRtCoords:false);
+                            Vector2 hitUV = LowLevelMouseInput.GetHitOrtho(shared.camera, ref mat, useRtCoords:false);
 
                             if (hitUV.X > box.Min.X && hitUV.X < box.Max.X && hitUV.Y > box.Min.Y && hitUV.Y < box.Max.Y)
                             {
                                 bool changed = false;
 
-                                if (MouseInput.Left.WasPressed)
+                                if (LowLevelMouseInput.Left.WasPressed)
                                 {
                                     MouseInput.ClickedOnObject = cro;
                                 }
-                                if (MouseInput.Left.WasReleased && MouseInput.ClickedOnObject == cro)
+                                if (LowLevelMouseInput.Left.WasReleased && MouseInput.FrameDelayedClickedOnObject == cro)
                                 {
                                     int steps = i - parent.IndexActivePanel;
                                     while (steps > 0)
@@ -913,13 +898,13 @@ namespace Boku
                                         // Now we can do a straight-up hit test.
                                         AABB2D hitBox = new AABB2D(pos, pos + size);
 
-                                        Vector2 hit = MouseInput.PositionVec;
+                                        Vector2 hit = LowLevelMouseInput.PositionVec;
 
                                         if (hitBox.Contains(hit))
                                         {
-                                            if (MouseInput.Left.WasPressed)
+                                            if (LowLevelMouseInput.Left.WasPressed)
                                             {
-                                                MouseInput.Left.ClearAllWasPressedState();
+                                                LowLevelMouseInput.Left.ClearAllWasPressedState();
                                                 MouseInput.ClickedOnObject = panel.listControls[j];
 
                                                 // If it's the handle, pick up the reflex.
@@ -933,12 +918,12 @@ namespace Boku
                                                 }
                                             }
                                             // Use right click to activate right click menu.
-                                            if (MouseInput.Right.WasPressed)
+                                            if (LowLevelMouseInput.Right.WasPressed)
                                             {
-                                                MouseInput.Right.ClearAllWasPressedState();
+                                                LowLevelMouseInput.Right.ClearAllWasPressedState();
                                                 MouseInput.ClickedOnObject = panel.listControls[j];
                                             }
-                                            if ((MouseInput.Left.WasReleased || MouseInput.Right.WasReleased) && MouseInput.ClickedOnObject == panel.listControls[j])
+                                            if ((LowLevelMouseInput.Left.WasReleased || LowLevelMouseInput.Right.WasReleased) && MouseInput.FrameDelayedClickedOnObject == panel.listControls[j])
                                             {
                                                 int activeCard = panel.ActiveCard;
                                                 if (activeCard != j)
@@ -962,11 +947,11 @@ namespace Boku
                                                 ReflexCard reflexCard = panel.listControls[j] as ReflexCard;
                                                 if (reflexCard != null)
                                                 {
-                                                    if (MouseInput.Left.WasReleased)
+                                                    if (LowLevelMouseInput.Left.WasReleased)
                                                     {
                                                         reflexCard.updateObjEditCards.ActivatePieSelector();
                                                     }
-                                                    else if (MouseInput.Right.WasReleased)
+                                                    else if (LowLevelMouseInput.Right.WasReleased)
                                                     {
                                                         // If we haven't clicked on a "null" card
                                                         if (reflexCard.Card.upid != "null")
@@ -990,11 +975,11 @@ namespace Boku
                                                     ReflexHandle rh = panel.listControls[j] as ReflexHandle;
                                                     if (rh != null)
                                                     {
-                                                        if (MouseInput.Left.WasReleased)
+                                                        if (LowLevelMouseInput.Left.WasReleased)
                                                         {
                                                             rh.PlaceReflex(null, null);
                                                         }
-                                                        else if (MouseInput.Right.WasReleased)
+                                                        else if (LowLevelMouseInput.Right.WasReleased)
                                                         {
                                                             // Set up menu for reflex handle and activate.
                                                             MouseMenu menu = InGame.inGame.Editor.RightClickMenu;
@@ -1018,7 +1003,7 @@ namespace Boku
                                         else
                                         {
                                             // HitBox doesn't contain a hit so see if we're moving a whole reflex.
-                                            if (j == 0 && MouseInput.Left.IsPressed && MouseInput.ClickedOnObject == panel.listControls[0])
+                                            if (j == 0 && LowLevelMouseInput.Left.IsPressed && MouseInput.ClickedOnObject == panel.listControls[0])
                                             {
                                                 ReflexHandle rh = panel.listControls[j] as ReflexHandle;
                                                 if (rh != null)
@@ -1030,11 +1015,11 @@ namespace Boku
                                                     if (nextMoveTime < Time.WallClockTotalSeconds)
                                                     {
                                                         // Up/Down scrolling
-                                                        if (MouseInput.Position.Y > hitBox.Max.Y)
+                                                        if (LowLevelMouseInput.Position.Y > hitBox.Max.Y)
                                                         {
                                                             ReflexHandle.reflexBlock.MoveDown();
 
-                                                            float dy = MouseInput.Position.Y - hitBox.Max.Y;
+                                                            float dy = LowLevelMouseInput.Position.Y - hitBox.Max.Y;
                                                             if (dy > 100)
                                                             {
                                                                 nextMoveTime = Time.WallClockTotalSeconds + 0.2f;
@@ -1044,11 +1029,11 @@ namespace Boku
                                                                 nextMoveTime = Time.WallClockTotalSeconds + 0.6f;
                                                             }
                                                         }
-                                                        else if (MouseInput.Position.Y < hitBox.Min.Y)
+                                                        else if (LowLevelMouseInput.Position.Y < hitBox.Min.Y)
                                                         {
                                                             ReflexHandle.reflexBlock.MoveUp();
 
-                                                            float dy = hitBox.Min.Y - MouseInput.Position.Y;
+                                                            float dy = hitBox.Min.Y - LowLevelMouseInput.Position.Y;
                                                             if (dy > 100)
                                                             {
                                                                 nextMoveTime = Time.WallClockTotalSeconds + 0.2f;
@@ -1068,12 +1053,12 @@ namespace Boku
                                                     // of the element rather than it's intended position.
                                                     if (nextMoveTime < Time.WallClockTotalSeconds)
                                                     {
-                                                        if (MouseInput.Position.X < hitBox.Min.X)
+                                                        if (LowLevelMouseInput.Position.X < hitBox.Min.X)
                                                         {
                                                             ReflexHandle.reflexBlock.Unindent(true);
                                                             nextMoveTime = Time.WallClockTotalSeconds + 0.2f;
                                                         }
-                                                        else if (MouseInput.Position.X > hitBox.Max.X)
+                                                        else if (LowLevelMouseInput.Position.X > hitBox.Max.X)
                                                         {
                                                             ReflexHandle.reflexBlock.Indent(true);
                                                             nextMoveTime = Time.WallClockTotalSeconds + 0.2f;
@@ -1091,7 +1076,7 @@ namespace Boku
                             }   // end if mouse hits reflex.
 
                             // If mouse is not pressed be sure to restore handle position.
-                            if (GamePadInput.ActiveMode == GamePadInput.InputMode.KeyboardMouse && MouseInput.Left.WasReleased)
+                            if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse && LowLevelMouseInput.Left.WasReleased)
                             {
                                 ReflexPanel panel = parent.ActivePanel;
                                 if (panel != null)
@@ -1607,7 +1592,7 @@ namespace Boku
                                 Point loc = shared.camera.WorldToScreenCoords(pos);
                                 if (upid != "null")
                                 {
-                                    if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch)
+                                    if (!KoiLibrary.LastTouchedDeviceIsTouch)
                                     {
                                         ToolTipManager.ShowTip(label, desc, new Vector2(loc.X, loc.Y), true);
                                     }
@@ -1626,7 +1611,7 @@ namespace Boku
                                 else
                                 {
                                     // Showing "blank"
-                                    if (GamePadInput.ActiveMode != GamePadInput.InputMode.Touch)
+                                    if (!KoiLibrary.LastTouchedDeviceIsTouch)
                                     {
                                         ToolTipManager.ShowTip(label, desc, new Vector2(loc.X, loc.Y), true);
                                     }
@@ -1668,7 +1653,7 @@ namespace Boku
                 // If the text editor is active (adding text for 'say' verb) then
                 // we want to disable the tooltip since it will be rendered on top
                 // of the editor.
-                if (GamePadInput.ActiveMode == GamePadInput.InputMode.Touch ||
+                if (KoiLibrary.LastTouchedDeviceIsTouch ||
                     textEditorActive || microbitPatternEditorActive || editObjectParametersActive || editWorldParametersActive)
                 {
                     ToolTipManager.Clear();
@@ -1770,7 +1755,7 @@ namespace Boku
                 // Render mode for capturing programming tiles w/o pencil or background.
                 bool debugRender = Actions.ShiftPrintScreen.WasPressed;
 
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 if (debugRender)
                 {
@@ -1780,12 +1765,12 @@ namespace Boku
                 // Match viewport size to actual screen.
                 InGame.SetViewportToScreen();
 
-                ShaderGlobals.SetValues(Editor.effect);
-                ShaderGlobals.SetCamera(Editor.effect, shared.camera);
+                BokuGame.bokuGame.shaderGlobals.SetValues(Editor.effect);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(Editor.effect, shared.camera);
 
 #if NETFX_CORE
-                // TODO (****) Not sure why this is needed for MG but not for XNA.
-                BokuGame.bokuGame.GraphicsDevice.Clear(ClearOptions.DepthBuffer, Color.Pink, 1.0f, 0);
+                // TODO (scoy) Not sure why this is needed for MG but not for XNA.
+                KoiLibrary.GraphicsDevice.Clear(ClearOptions.DepthBuffer, Color.Pink, 1.0f, 0);
 #endif
 
                 // Don't render editor UI when HelpCard is active.  It
@@ -2000,7 +1985,7 @@ namespace Boku
                                 BoundingBox box2 = ibound2.BoundingBox;
 
                                 Matrix mat2 = Matrix.Identity;
-                                Vector2 hitUV2 = MouseInput.GetHitOrtho(shared.camera, ref mat2, false);
+                                Vector2 hitUV2 = LowLevelMouseInput.GetHitOrtho(shared.camera, ref mat2, false);
 
                                 Vector3 position = new Vector3(box2.Min.X, box2.Min.Y, 0.0f);
                                 Vector3 boxSize = new Vector3(box2.Max.X - box2.Min.X, box2.Max.Y - box2.Min.Y, 0.0f);
@@ -2056,27 +2041,28 @@ namespace Boku
 
             public void RenderPageSelector()
             {
-                switch (GamePadInput.ActiveMode)
+                if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
                 {
-                    case GamePadInput.InputMode.GamePad:
-                        RenderGamepadPageSelector();
-                        break;
-                    case GamePadInput.InputMode.KeyboardMouse:
-                        RenderGamepadPageSelector();
-                        break;
-                    case GamePadInput.InputMode.Touch:
-                        RenderTouchPageSelector();
-                        break;
-                    default:
-                        Debug.Assert(true, "Unknown active input mode!");
-                        break;
+                    RenderGamepadPageSelector();
+                }
+                else if (KoiLibrary.LastTouchedDeviceIsGamepad)
+                {
+                    RenderGamepadPageSelector();
+                }
+                else if (KoiLibrary.LastTouchedDeviceIsTouch)
+                {
+                    RenderTouchPageSelector();
+                }
+                else
+                {
+                    Debug.Assert(true, "Unknown active input mode!");
                 }
             }
 
             public void RenderTouchPageSelector()
             {
-                float scale = Math.Min((float)BokuGame.bokuGame.GraphicsDevice.Viewport.Height / 1024.0f, 1.0f);
-                int center = BokuGame.bokuGame.GraphicsDevice.Viewport.Width / 2;
+                float scale = Math.Min((float)KoiLibrary.GraphicsDevice.Viewport.Height / 1024.0f, 1.0f);
+                int center = KoiLibrary.GraphicsDevice.Viewport.Width / 2;
                 scale *= shared.camera.TutorialScale;
                 ScreenSpaceQuad quad = ScreenSpaceQuad.GetInstance();
 
@@ -2123,9 +2109,9 @@ namespace Boku
                 quad.Render(pageBackdropTexture, pos, size, "TexturedRegularAlpha");
                 shared.taskHandleBox.Set(pos, pos + size);
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
-                UI2D.Shared.GetFont Font = UI2D.Shared.GetGameFont18Bold;
+                GetFont Font = SharedX.GetGameFont18Bold;
 
                 Vector2 labelSize = Font().MeasureString(labelTask);
 
@@ -2168,7 +2154,7 @@ namespace Boku
 
             public void UnloadContent()
             {
-                BokuGame.Release(ref taskTexture);
+                DeviceResetX.Release(ref taskTexture);
             }
 
             public void DeviceReset(GraphicsDevice device)
@@ -2668,8 +2654,6 @@ namespace Boku
             for (int indexPanel = 0; indexPanel < this.activePanels.Count; indexPanel++)
             {
                 IControl panelControl = this.activePanels[indexPanel] as IControl;
-                // have our update object remove its commands from the old child controls.
-                updateObj.RemoveCommandsFromControl(panelControl);
 
                 // move panels to the side
                 ITransform transformPanel = panelControl as ITransform;
@@ -2741,7 +2725,6 @@ namespace Boku
             foreach (ReflexPanel reflex in this.activePanels)
             {
                 panelControl = reflex as IControl;
-                updateObj.AddCommandsToControl(panelControl);
             }
 
             this.IndexActivePanel = 0;
@@ -3106,7 +3089,6 @@ namespace Boku
 
             // add our update controls to the new one
             panelControl = panelNew as IControl;
-            updateObj.AddCommandsToControl(panelControl);
 
             // place into correct spot and animate
             //
@@ -3314,13 +3296,13 @@ namespace Boku
             // load the effect
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI");
+                effect = KoiLibrary.LoadEffect(@"Shaders\UI");
                 ShaderGlobals.RegisterEffect("UI", effect);
             }
 
             if (pageBackdropTexture == null)
             {
-                pageBackdropTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Programming\PageBackdrop");
+                pageBackdropTexture = KoiLibrary.LoadTexture2D(@"Textures\Programming\PageBackdrop");
             }
 
             controls = new ControlCollection(@"Models\boku_programming_ui-02");
@@ -3338,8 +3320,8 @@ namespace Boku
         {
             INeedsDeviceReset resetRender = this.renderObj as INeedsDeviceReset;
             resetRender.UnloadContent();
-            BokuGame.Release(ref effect);
-            BokuGame.Release(ref pageBackdropTexture);
+            DeviceResetX.Release(ref effect);
+            DeviceResetX.Release(ref pageBackdropTexture);
         }
 
         public void DeviceReset(GraphicsDevice device)

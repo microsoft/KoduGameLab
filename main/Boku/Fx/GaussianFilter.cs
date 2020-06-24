@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+
 using Boku.Base;
 
 namespace Boku.Fx
@@ -48,7 +50,7 @@ namespace Boku.Fx
 
         public void Render(Texture2D source, bool horizontal)
         {
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             SetUvToPos();
 
@@ -90,7 +92,7 @@ namespace Boku.Fx
             // Init the effect.
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\GaussianFilter");
+                effect = KoiLibrary.LoadEffect(@"Shaders\GaussianFilter");
             }
 
             base.LoadContent(immediate);

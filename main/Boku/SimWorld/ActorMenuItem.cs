@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku;
 using Boku.Base;
 using Boku.Common;
@@ -104,8 +107,8 @@ namespace Boku.SimWorld
             // Add a text label if it exists and we're not getting the texture from cardspace.
             if (name != null && !TextureIsFromCardSpace)
             {
-                UI2D.Shared.GetFont Font = UI2D.Shared.GetCardLabel;
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                GetFont Font = SharedX.GetCardLabel;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
 
                 Point pixelPos = camera.WorldToScreenCoords(worldMatrix.Translation);
                 Vector2 pos = new Vector2(pixelPos.X, pixelPos.Y);
@@ -127,7 +130,7 @@ namespace Boku.SimWorld
                 Vector3 loc = MyMath.Lerp(worldMatrix.Translation, pieCenter, 0.4f);
                 Point pixelPos = camera.WorldToScreenCoords(loc);
                 Vector2 pos = new Vector2(pixelPos.X, pixelPos.Y);
-                Vector2 size = new Vector2(BokuGame.bokuGame.GraphicsDevice.Viewport.Height / 12.0f);
+                Vector2 size = new Vector2(KoiLibrary.GraphicsDevice.Viewport.Height / 12.0f);
                 // Center button.
                 pos -= size * (40.0f / 64.0f) / 2.0f;
 

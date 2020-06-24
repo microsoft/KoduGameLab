@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+
 using Boku.Audio;
 using Boku.Base;
 using Boku.Fx;
@@ -457,8 +460,8 @@ namespace Boku.UI2D
             moveLeft |= UseRightStick && gamePad.RightStickLeft.WasPressedOrRepeat;
             moveLeft |= UseShoulders && gamePad.LeftShoulder.WasPressedOrRepeat;
             moveLeft |= UseTriggers && gamePad.LeftTriggerButton.WasPressedOrRepeat;
-            moveLeft |= UseKeyboard && KeyboardInput.WasPressedOrRepeat(Keys.Left);
-            moveLeft |= UseMouseScrollWheel && (MouseInput.PrevScrollWheel < MouseInput.ScrollWheel);
+            moveLeft |= UseKeyboard && KeyboardInputX.WasPressedOrRepeat(Keys.Left);
+            moveLeft |= UseMouseScrollWheel && (LowLevelMouseInput.DeltaScrollWheel > 0);
 
             return moveLeft;
         }
@@ -472,9 +475,9 @@ namespace Boku.UI2D
             moveRight |= UseRightStick && gamePad.RightStickRight.WasPressedOrRepeat;
             moveRight |= UseShoulders && gamePad.RightShoulder.WasPressedOrRepeat;
             moveRight |= UseTriggers && gamePad.RightTriggerButton.WasPressedOrRepeat;
-            moveRight |= UseKeyboard && KeyboardInput.WasPressedOrRepeat(Keys.Right);
-            moveRight |= UseTab && KeyboardInput.WasPressedOrRepeat(Keys.Tab);
-            moveRight |= UseMouseScrollWheel && (MouseInput.PrevScrollWheel > MouseInput.ScrollWheel);
+            moveRight |= UseKeyboard && KeyboardInputX.WasPressedOrRepeat(Keys.Right);
+            moveRight |= UseTab && KeyboardInputX.WasPressedOrRepeat(Keys.Tab);
+            moveRight |= UseMouseScrollWheel && (LowLevelMouseInput.DeltaScrollWheel < 0);
 
             return moveRight;
         }
@@ -486,8 +489,8 @@ namespace Boku.UI2D
             moveUp |= UseDPad && gamePad.DPadUp.WasPressedOrRepeat;
             moveUp |= UseLeftStick && gamePad.LeftStickUp.WasPressedOrRepeat;
             moveUp |= UseRightStick && gamePad.RightStickUp.WasPressedOrRepeat;
-            moveUp |= UseKeyboard && KeyboardInput.WasPressedOrRepeat(Keys.Up);
-            moveUp |= UseMouseScrollWheel && (MouseInput.PrevScrollWheel < MouseInput.ScrollWheel);
+            moveUp |= UseKeyboard && KeyboardInputX.WasPressedOrRepeat(Keys.Up);
+            moveUp |= UseMouseScrollWheel && (LowLevelMouseInput.DeltaScrollWheel > 0);
 
             return moveUp;
         }
@@ -499,9 +502,9 @@ namespace Boku.UI2D
             moveDown |= UseDPad && gamePad.DPadDown.WasPressedOrRepeat;
             moveDown |= UseLeftStick && gamePad.LeftStickDown.WasPressedOrRepeat;
             moveDown |= UseRightStick && gamePad.RightStickDown.WasPressedOrRepeat;
-            moveDown |= UseKeyboard && KeyboardInput.WasPressedOrRepeat(Keys.Down);
-            moveDown |= UseTab && KeyboardInput.WasPressedOrRepeat(Keys.Tab);
-            moveDown |= UseMouseScrollWheel && (MouseInput.PrevScrollWheel > MouseInput.ScrollWheel);
+            moveDown |= UseKeyboard && KeyboardInputX.WasPressedOrRepeat(Keys.Down);
+            moveDown |= UseTab && KeyboardInputX.WasPressedOrRepeat(Keys.Tab);
+            moveDown |= UseMouseScrollWheel && (LowLevelMouseInput.DeltaScrollWheel < 0);
 
             return moveDown;
         }
@@ -527,7 +530,7 @@ namespace Boku.UI2D
             }
 
             // See if we have input focus, if so check for any input, unless the guide is up.
-            // TODO (****) This is truly horrific.  The "CommandStack" doesn't actually act like a proper stack
+            // TODO (scoy) This is truly horrific.  The "CommandStack" doesn't actually act like a proper stack
             // so we can get into cases where the current commandMap is actually down one from the top.
             if ((alwaysReadInput || ((CommandStack.Peek() == commandMap || CommandStack.Peek(1) == commandMap) && !ignoreInput)))
             {
@@ -1058,7 +1061,7 @@ namespace Boku.UI2D
             {
                 // Ensure that camera poisiton/orientation is properly 
                 // set so we get correct lighting on the UI.
-                ShaderGlobals.SetCamera(camera);
+                BokuGame.bokuGame.shaderGlobals.SetCamera(camera);
 
                 UpdateSelectionFocus();
 

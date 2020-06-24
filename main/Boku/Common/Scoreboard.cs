@@ -11,6 +11,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Text;
+
 using Boku.Base;
 using Boku.Common.ParticleSystem;
 using Boku.Programming;
@@ -94,7 +97,7 @@ namespace Boku.Common
                 target.charWidth = shadowOffset + (int)ScoreBoardFont().MeasureString(String.Format("{0}", ch)).X;
                 target.charHeight = shadowOffset + ScoreBoardFont().LineSpacing;
 
-                target.CreateRenderTargets(BokuGame.bokuGame.GraphicsDevice);
+                target.CreateRenderTargets(KoiLibrary.GraphicsDevice);
 
                 return target;
             }
@@ -112,8 +115,8 @@ namespace Boku.Common
 
             private void ReleaseRenderTargets()
             {
-                InGame.RelRT("Scoreboard", surface);
-                BokuGame.Release(ref surface);
+                SharedX.RelRT("Scoreboard", surface);
+                DeviceResetX.Release(ref surface);
             }
 
             private void CreateRenderTargets(GraphicsDevice device)
@@ -128,19 +131,19 @@ namespace Boku.Common
                 if (surface == null || surface.IsDisposed || surface.GraphicsDevice.IsDisposed)
                 {
                     surface = new RenderTarget2D(
-                        BokuGame.bokuGame.GraphicsDevice,
+                        KoiLibrary.GraphicsDevice,
                         surfaceWidth,
                         surfaceHeight,
                         false,
                         SurfaceFormat.Color,
                         DepthFormat.None);
-                    InGame.GetRT("Scoreboard", surface);
+                    SharedX.GetRT("Scoreboard", surface);
                 }
 
                 InGame.SetRenderTarget(surface);
                 InGame.Clear(Color.Transparent);
 
-                SpriteBatch batch = UI2D.Shared.SpriteBatch;
+                SpriteBatch batch = KoiLibrary.SpriteBatch;
                 try
                 {
                     try
@@ -222,19 +225,41 @@ namespace Boku.Common
             public ScoreVisibility Visibility
             {
                 get { return visibility; }
-                set { visibility = value; Scoreboard.ReindexScores(); }
+                set 
+                {
+                    if (visibility != value)
+                    {
+                        visibility = value; 
+                        Scoreboard.ReindexScores(); 
+                        InGame.IsLevelDirty = true;
+                    }
+                }
             }
 
             public string Label
             {
                 get { return label; }
-                set { label = value; }
+                set
+                {
+                    if (label != value)
+                    {
+                        label = value;
+                        InGame.IsLevelDirty = true;
+                    }
+                }
             }
 
             public bool Labeled
             {
                 get { return labeled; }
-                set { labeled = value; }
+                set
+                {
+                    if (labeled != value)
+                    {
+                        labeled = value; 
+                        InGame.IsLevelDirty = true;
+                    }
+                }
             }
 
             /// <summary>
@@ -243,7 +268,14 @@ namespace Boku.Common
             public bool PersistFlag
             {
                 get { return persist; }
-                set { persist = value; }
+                set 
+                {
+                    if (persist != value)
+                    {
+                        persist = value; 
+                        InGame.IsLevelDirty = true;
+                    }
+                }
             }
 
             /// <summary>
@@ -343,7 +375,7 @@ namespace Boku.Common
         private static Effect effect;
         private static EffectCache effectCache;
         private static VertexBuffer vertexBuf;
-        private static UI2D.Shared.GetFont ScoreBoardFont = UI2D.Shared.GetGameFont24Bold;
+        private static GetFont ScoreBoardFont = SharedX.GetGameFont24Bold;
 
         private static int ShadowOffset { get { return 1; } }
 
@@ -360,7 +392,7 @@ namespace Boku.Common
 
         #region Public
 
-        public static UI2D.Shared.GetFont GetFont()
+        public static GetFont GetFont()
         {
             return ScoreBoardFont;
         }
@@ -524,7 +556,7 @@ namespace Boku.Common
 
             if (delta != 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 if (score.Visibility == ScoreVisibility.Loud && IsColorBucket(bucket))
                 {
@@ -677,7 +709,7 @@ namespace Boku.Common
         {
             if (effect == null)
             {
-                effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\ScoreEffect");
+                effect = KoiLibrary.LoadEffect(@"Shaders\ScoreEffect");
                 ShaderGlobals.RegisterEffect("ScoreEffect", effect);
             }
         }
@@ -713,8 +745,8 @@ namespace Boku.Common
         internal static void UnloadContent()
         {
             ReleaseScoreEffects();
-            BokuGame.Release(ref vertexBuf);
-            BokuGame.Release(ref effect);
+            DeviceResetX.Release(ref vertexBuf);
+            DeviceResetX.Release(ref effect);
 
             foreach (CharRenderTarget crt in charRenderTargets.Values)
             {
@@ -797,7 +829,7 @@ namespace Boku.Common
                 }
 
                 Score score = scores[(int)scoreEffect.color];
-                Viewport viewport = BokuGame.bokuGame.GraphicsDevice.Viewport;
+                Viewport viewport = KoiLibrary.GraphicsDevice.Viewport;
                 Vector3 pos = new Vector3(
                     (float)viewport.Width * 0.9f,
                     y_margin + ScoreBoardFont().LineSpacing * score.order,
@@ -829,7 +861,7 @@ namespace Boku.Common
                 Score score;
                 scores.TryGetValue((int)scoreEffect.color, out score);
 
-                Viewport viewport = BokuGame.bokuGame.GraphicsDevice.Viewport;
+                Viewport viewport = KoiLibrary.GraphicsDevice.Viewport;
 
                 float pct = timeElapsed / kFlyingEffectSeconds;
 
@@ -954,7 +986,7 @@ namespace Boku.Common
 
         private static void RenderScore(Score score, Classification.Colors color)
         {
-            SpriteBatch batch = UI2D.Shared.SpriteBatch;
+            SpriteBatch batch = KoiLibrary.SpriteBatch;
 
             Color fore = Classification.XnaColor(color);
             Color back = fore == Color.Black ? Color.White : Color.Black;
@@ -964,7 +996,7 @@ namespace Boku.Common
             
 
             int width = 8 + (int)ScoreBoardFont().MeasureString(str).X;
-            int x = (int)((float)BokuGame.bokuGame.GraphicsDevice.Viewport.Width - width);
+            int x = (int)((float)KoiLibrary.GraphicsDevice.Viewport.Width - width);
             int y = y_margin + score.order * ScoreBoardFont().LineSpacing + (int)BokuGame.ScreenPosition.Y;
 
             batch.Begin();
@@ -986,7 +1018,7 @@ namespace Boku.Common
         {
             if (scoreEffects.Count > 0)
             {
-                GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
                 Effect.CurrentTechnique = Effect.Techniques[0];
 
@@ -1013,7 +1045,7 @@ namespace Boku.Common
             if (scoreEffect.crts == null)
                 return;
 
-            GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+            GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
             Vector3 diff = scoreEffect.curr - camera.ActualFrom;
             float dist = diff.Length();
@@ -1023,7 +1055,7 @@ namespace Boku.Common
             Parameter(EffectParams.ScoreColorDarken).SetValue(kScoreColorDarken);
 
             device.SetVertexBuffer(vertexBuf);
-            device.Indices = UI2D.Shared.QuadIndexBuff;
+            device.Indices = SharedX.QuadIndexBuff;
 
             Matrix translation = new Matrix();
             Matrix world = Matrix.CreateBillboard(

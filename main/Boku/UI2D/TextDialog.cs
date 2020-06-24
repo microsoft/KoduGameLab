@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 
+using KoiX;
+using KoiX.Input;
+using KoiX.Text;
 
 using Boku.Base;
 using Boku.Common;
@@ -157,7 +160,7 @@ namespace Boku
                 shared.descBlob.InsertString(new string(c, 1));
                 shared.curString = shared.descBlob.RawText;
             } 
-            // TODO (****) Clean this up.  We're mixing text as input with text as control here.
+            // TODO (scoy) Clean this up.  We're mixing text as input with text as control here.
             // Probably the right thing to do would be to push/pop the text input callbacks
             // dynamically to mirror the state we're in.
 
@@ -171,7 +174,7 @@ namespace Boku
                     //
                     bool changed = false;
 
-                    KeyboardInput.ClearAllWasPressedState(key);
+                    KeyboardInputX.ClearAllWasPressedState(key);
 
                     switch (key)
                     {
@@ -338,24 +341,24 @@ namespace Boku
             {
                 CommandStack.Push(commandMap);
 
-                shared.descBlob = new TextBlob(UI2D.Shared.GetGameFont24, shared.curString, 650);
+                shared.descBlob = new TextBlob(SharedX.GetGameFont24, shared.curString, 650);
                 //shared.Justification = blob.justify;
-                //KeyboardInput.OnChar = TextInput;
+                //KeyboardInputX.OnChar = TextInput;
 #if NETFX_CORE
                 Debug.Assert(false, "Does this work?  Why did we prefer winKeyboard?");
-                KeyboardInput.OnChar = TextInput;
+                KeyboardInputX.OnChar = TextInput;
 #else
                 BokuGame.bokuGame.winKeyboard.CharacterEntered = TextInput;
 #endif
-                KeyboardInput.OnKey = KeyInput;
+                //KeyboardInputX.OnKey = KeyInput;
             }
 
             public override void Deactivate()
             {
                 CommandStack.Pop(commandMap);
 
-                KeyboardInput.OnChar = null;
-                KeyboardInput.OnKey = null;
+                //KeyboardInputX.OnChar = null;
+                //KeyboardInputX.OnKey = null;
 #if !NETFX_CORE
                 BokuGame.bokuGame.winKeyboard.CharacterEntered = null;
 #endif
@@ -405,7 +408,7 @@ namespace Boku
 
                 ssquad.Render(diffuse, pos, new Vector2(width, height), @"TexturedRegularAlpha");
 
-                shared.descBlob.RenderWithButtons(pos, shared.textColor);
+                shared.descBlob.RenderText(null, pos, shared.textColor);
             }   // end of Render()
 
             /// <summary>
@@ -417,16 +420,16 @@ namespace Boku
             {
                 if (shared.dirty)
                 {
-                    GraphicsDevice device = BokuGame.bokuGame.GraphicsDevice;
+                    GraphicsDevice device = KoiLibrary.GraphicsDevice;
 
-                    SpriteBatch batch = UI2D.Shared.SpriteBatch;
-                    UI2D.Shared.GetFont Font20 = UI2D.Shared.GetGameFont20;
-                    UI2D.Shared.GetFont Font24 = UI2D.Shared.GetGameFont24;
+                    SpriteBatch batch = KoiLibrary.SpriteBatch;
+                    GetFont Font20 = KoiX.SharedX.GetGameFont20;
+                    GetFont Font24 = KoiX.SharedX.GetGameFont24;
 
                     InGame.SetRenderTarget(diffuse);
                     InGame.Clear(Color.Transparent);
 
-                    TextBlob blob = new TextBlob(UI2D.Shared.GetGameFont20, shared.Prompt, (int)(diffuse.Width - 2.0f * margin));
+                    TextBlob blob = new TextBlob(KoiX.SharedX.GetGameFont20, shared.Prompt, (int)(diffuse.Width - 2.0f * margin));
 
                     // Render the backdrop.
                     ScreenSpaceQuad ssquad = ScreenSpaceQuad.GetInstance();
@@ -439,7 +442,7 @@ namespace Boku
                         Vector2 promptPos = new Vector2(margin, margin);
                         int textWidth = (int)Font20().MeasureString(shared.Prompt).X;
 
-                        blob.RenderWithButtons(promptPos, shared.textColor, shared.shadowColor, new Vector2(1, 1), maxLines: 3);
+                        blob.RenderText(null, promptPos, shared.textColor, shared.shadowColor, new Vector2(1, 1), maxLines: 3);
 
                         //TextHelper.DrawStringWithShadow(Font20, batch, x, y, shared.Prompt, shared.textColor, shared.shadowColor, false);
                     }
@@ -550,14 +553,14 @@ namespace Boku
                 // Init the effect.
                 if (effect == null)
                 {
-                    effect = BokuGame.Load<Effect>(BokuGame.Settings.MediaPath + @"Shaders\UI2D");
+                    effect = KoiLibrary.LoadEffect(@"Shaders\UI2D");
                     ShaderGlobals.RegisterEffect("UI2D", effect);
                 }
 
                 // Load the background texture.
                 if (background == null)
                 {
-                    background = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MessageBox\TextDialogBackground");
+                    background = KoiLibrary.LoadTexture2D(@"Textures\MessageBox\TextDialogBackground");
                 }
 
             }   // end of TextDialog RenderObj LoadContent();
@@ -571,8 +574,8 @@ namespace Boku
             public void UnloadContent()
             {
                 ReleaseRenderTargets();
-                BokuGame.Release(ref effect);
-                BokuGame.Release(ref background);
+                DeviceResetX.Release(ref effect);
+                DeviceResetX.Release(ref background);
             }
 
             /// <summary>
@@ -581,7 +584,7 @@ namespace Boku
             /// <param name="graphics"></param>
             public void DeviceReset(GraphicsDevice device)
             {
-                // TODO (****) This could probably work just by saying dirty = true
+                // TODO (scoy) This could probably work just by saying dirty = true
                 // With XNA4 rendertargets seem to survive, they just lose their content.
                 ReleaseRenderTargets();
                 CreateRenderTargets(device);
@@ -607,7 +610,7 @@ namespace Boku
                         false,                      // Mipmaps
                         SurfaceFormat.Color,
                         DepthFormat.None);
-                    InGame.GetRT("TextDialog", diffuse);
+                    SharedX.GetRT("TextDialog", diffuse);
                 }
 
                 shared.dirty = true;
@@ -615,8 +618,8 @@ namespace Boku
 
             private void ReleaseRenderTargets()
             {
-                InGame.RelRT("TextDialog", diffuse);
-                BokuGame.Release(ref diffuse);
+                SharedX.RelRT("TextDialog", diffuse);
+                DeviceResetX.Release(ref diffuse);
             }
 
         }   // end of class TextDialog RenderObj     
