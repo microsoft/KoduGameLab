@@ -45,7 +45,7 @@ namespace KoiX.Scenes
         public OptionsMenuScene()
             : base("OptionsMenuScene")
         {
-            // TODO (scoy) When the full menu is implemented, this should point
+            // TODO (****) When the full menu is implemented, this should point
             // to this scene instead of going all the way back to the main menu.
             string backTarget = "MainMenuScene";
 
@@ -66,7 +66,7 @@ namespace KoiX.Scenes
 
         public override void Update()
         {
-            // TODO (scoy) Hack to skip right to first options page.
+            // TODO (****) Hack to skip right to first options page.
             SceneManager.SwitchToScene(page1);
 
             // Keep the nav buttons happy.

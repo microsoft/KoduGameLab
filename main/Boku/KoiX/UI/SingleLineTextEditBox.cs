@@ -27,7 +27,7 @@ namespace KoiX.UI
     /// This is a text edit box designed for entries which only require a single
     /// line of input, eg creator name, level title, etc.
     /// 
-    /// TODO (scoy) Allow a separate color for default text rather than just ghosted.
+    /// TODO (****) Allow a separate color for default text rather than just ghosted.
     /// </summary>
     public class SingleLineTextEditBox : BaseWidget
     {

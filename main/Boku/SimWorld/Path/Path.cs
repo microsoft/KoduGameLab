@@ -448,7 +448,7 @@ namespace Boku.SimWorld.Path
                     MergePaths();
                 }
 
-                // MAFROAD - nuke the road so we'll rebuild it.
+                // ***ROAD - nuke the road so we'll rebuild it.
                 if (Road != null)
                 {
                     Road.Rebuild();

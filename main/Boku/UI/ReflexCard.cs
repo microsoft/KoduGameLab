@@ -259,7 +259,7 @@ namespace Boku.UI
                     if (Actions.Select.WasPressed)
                     {
                         Actions.Select.ClearAllWasPressedState();
-                        // TODO (scoy) Roll the frame delay into the above call?
+                        // TODO (****) Roll the frame delay into the above call?
                         GamePadInput.ClearAllWasPressedState(3);
 
                         ActivatePieSelector();

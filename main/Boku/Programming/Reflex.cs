@@ -1361,7 +1361,7 @@ namespace Boku.Programming
                 {
                     // If we're inlining, we need to verify that the page # we're pasting is valid.
                     // If it's not, just skip over it.
-                    // TODO (scoy) With this here, is the test in ReflexCard redundant?
+                    // TODO (****) With this here, is the test in ReflexCard redundant?
                     if (data.actuatorUpid == "actuator.inlinetask")
                     {
                         Brain brain = Task.Brain;
@@ -2763,7 +2763,7 @@ namespace Boku.Programming
         }
 
         /// <summary>
-        /// TODO (scoy) What I _think_ this is supposed to do is to take the exisiting heading
+        /// TODO (****) What I _think_ this is supposed to do is to take the exisiting heading
         /// and modify it based on any modifier tiles (Quckly, Slowly, etc.)
         /// Basically this will just scale the length of heading.
         /// This also appear to be where contraints to the motion should be applied but I

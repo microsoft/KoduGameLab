@@ -20,8 +20,8 @@ namespace KoiX.Geometry
     /// means that we don't need any shader parameters which means that we can then easily
     /// batch up a bunch of lines and render them with a single draw call.
     /// 
-    /// TODO (scoy) Changing the edgeBlend in the middle of a path doesn't work.  Fix it or just don't worry about it?
-    /// TODO (scoy) EdgeBlend doesn't work right with camera zoom.  Should we adjust for this in the shader?
+    /// TODO (****) Changing the edgeBlend in the middle of a path doesn't work.  Fix it or just don't worry about it?
+    /// TODO (****) EdgeBlend doesn't work right with camera zoom.  Should we adjust for this in the shader?
     /// </summary>
     public class Line
     {
@@ -240,7 +240,7 @@ namespace KoiX.Geometry
         /// <summary>
         /// Draws a dot at the given point.
         /// 
-        /// TODO (scoy) Should we instead require a MoveTo(), DrawDot() sequence.  This
+        /// TODO (****) Should we instead require a MoveTo(), DrawDot() sequence.  This
         /// would allow more easily drawing dots at each intersection.  (do I care?)
         /// </summary>
         /// <param name="point"></param>

@@ -317,7 +317,7 @@ namespace Boku.Common.Xml
                     if (dstActor != null)
                     {
                         // Init InsideGlassWalls.
-                        // TODO (scoy) Right now we're doing this by checking the height of the terrain.
+                        // TODO (****) Right now we're doing this by checking the height of the terrain.
                         // We should also be able to do this by checking the material index BUT it appears
                         // that when we erase terrain we only set the height to 0 without resetting the material.
                         // I think...

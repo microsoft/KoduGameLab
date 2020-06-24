@@ -58,7 +58,7 @@ namespace Boku.UI
                         Actions.Select.ClearAllWasPressedState();
                         pad.IgnoreLeftStickUntilZero();
 
-                        // TODO (scoy) Get rid of the args...
+                        // TODO (****) Get rid of the args...
                         parent.OnSelect(null, null);
                     }
 
@@ -66,7 +66,7 @@ namespace Boku.UI
                     {
                         Actions.Cancel.ClearAllWasPressedState();
 
-                        // TODO (scoy) Get rid of the args...
+                        // TODO (****) Get rid of the args...
                         parent.OnCancel(null, null);
                     }
 
@@ -212,7 +212,7 @@ namespace Boku.UI
                         }
                     }
 
-                    // TODO (scoy) Fold args into function...
+                    // TODO (****) Fold args into function...
                     parent.UpdateSelection(null, new StickEventArgs(pad.LeftStick));
 
                     // Clear out any other button presses.  This normally shouldn't be needed

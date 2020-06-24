@@ -34,7 +34,7 @@ namespace Boku.Common.Sharing
 
         protected override void IStart()
         {
-            Debug.Assert(false);    // TODO (scoy) Is this really being used?  If not, remove.
+            Debug.Assert(false);    // TODO (****) Is this really being used?  If not, remove.
 #if NETFX_CORE
             Debug.Assert(false, "What are we doing with LiveManager?");
 #else

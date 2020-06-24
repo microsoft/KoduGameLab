@@ -49,7 +49,7 @@ namespace KoiX.UI.Dialogs
             //KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseRightDown);
             //KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseRightUp);
             KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.MouseWheel);
-            // TODO (scoy) Is this the right keyboard???
+            // TODO (****) Is this the right keyboard???
             KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.Keyboard);
             //KoiLibrary.InputEventManager.RegisterForEvent(this, InputEventManager.Event.WinFormsKeyboard);
         }   // end of RegisterForInputEvents()

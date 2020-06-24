@@ -175,7 +175,7 @@ namespace KoiX.UI
         /// 
         /// The setter is only there to clear this.  It should never
         /// be used with anything except null.
-        /// (scoy) TODO Should I remove the setter and just make a 
+        /// (****) TODO Should I remove the setter and just make a 
         /// method to clear the value?
         /// </summary>
         public BaseWidget PrevFocusWidget
@@ -639,7 +639,7 @@ namespace KoiX.UI
         public override void UnregisterForInputEvents()
         {
             // Unregister widgets.
-            // TODO (scoy)  Do we need to do this here or do the widgets
+            // TODO (****)  Do we need to do this here or do the widgets
             // take care of themselves when deactivated?
             foreach (BaseWidget widget in widgets)
             {
@@ -694,7 +694,7 @@ namespace KoiX.UI
                 }
 
                 // Twitch in backdrop color.
-                // TODO (scoy) Can we also have this fade out on deactivate?
+                // TODO (****) Can we also have this fade out on deactivate?
                 TwitchManager.Set<Color> set = delegate(Color val, object param) { curBackdropColor = val; };
                 TwitchManager.CreateTwitch<Color>(Color.Transparent, backdropColor, set, 0.4f, TwitchCurve.Shape.EaseOut, this);
 
@@ -765,7 +765,7 @@ namespace KoiX.UI
                     if (CurrentFocusWidget == null)
                         return;
 
-                    // TODO (scoy) Consider changing this. Overall it doesn't make sense 
+                    // TODO (****) Consider changing this. Overall it doesn't make sense 
                     // but it does help during development to be able to set up a scene
                     // as a placeholder and have it work.
                     Debug.Assert(CurrentFocusWidget != null, "All focusable dialogs must have at least 1 focusable widget.");
@@ -1175,7 +1175,7 @@ namespace KoiX.UI
                     case Keys.Up:
                         // Note, if the tab list is null then we also
                         // assume that dpad/arrow nav is not being used.
-                        // TODO (scoy) Is this valid?  Should we have a
+                        // TODO (****) Is this valid?  Should we have a
                         // seperate way to check this?  bool set by the 
                         // CalcDpadLinks funtion?
                         if (firstFocusWidget != null)

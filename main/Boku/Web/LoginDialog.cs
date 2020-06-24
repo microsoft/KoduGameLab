@@ -13,7 +13,7 @@ using System.Text;
 
 namespace Boku
 {
-    // (TODO (scoy) BROKEN
+    // (TODO (****) BROKEN
 #if !NETFX_CORE
     public partial class LoginDialog : Form
     {

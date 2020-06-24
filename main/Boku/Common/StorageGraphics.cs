@@ -184,7 +184,7 @@ namespace Boku.Common
                 // A super-hack for the PC
                 Debug.Assert(false);
 #if !NETFX_CORE
-                // TODO (scoy) save to dds no longer supported.  Try SaveAsPng() or SaveAsJpeg()
+                // TODO (****) save to dds no longer supported.  Try SaveAsPng() or SaveAsJpeg()
                 //tex.Save("TextureSaveToStream.dds", ImageFileFormat.Dds);
                 // Intentionally uses the filesystem API, not Storage class.
                 Stream file = File.Open("TextureSaveToStream.dds", FileMode.Open);
@@ -245,7 +245,7 @@ namespace Boku.Common
             //#else // XBOX360
 
             //Debug.Assert(false);
-            // TODO (scoy) The FromFile() method is no longer supported.  You must now load
+            // TODO (****) The FromFile() method is no longer supported.  You must now load
             // via a static call to ContentManager but this requires a file name, not a stream.
             // So, we'll need to figure out where this is all called from and fix it.
 
@@ -522,7 +522,7 @@ namespace Boku.Common
         {
             GraphicsDevice device = KoiLibrary.GraphicsDevice;
             Debug.Assert(false);
-            // TODO (scoy) FromFile no longer works, must read via ContentManager.Load<>()
+            // TODO (****) FromFile no longer works, must read via ContentManager.Load<>()
             //return Texture2D.FromFile(device, stream);
             return null;
         }

@@ -196,7 +196,7 @@ namespace KoiX.Input
                             {
                                 // Sometimes the Press doesn't get hit tested so we miss the HitObject.
                                 // Not sure why this fails.
-                                // TODO (scoy) Figure out why some Press events don't get tested.
+                                // TODO (****) Figure out why some Press events don't get tested.
                                 if (touch0.Sample.HitObject == null)
                                 {
                                     touch0.Sample.HitObject = ts.HitObject;

@@ -280,7 +280,7 @@ namespace KoiX.Geometry
                 position -= new Vector2(left, top) + new Vector2(0.5f) / camera.Zoom;
                 size += new Vector2(left + right, top + bottom);
 
-                // TODO (scoy) Need to test with pixel-perfect texture...
+                // TODO (****) Need to test with pixel-perfect texture...
                 // Check other prims, also.
 
                 // Adjust texture Padding for these changes.
@@ -292,7 +292,7 @@ namespace KoiX.Geometry
                     texturePadding.bottom += (int)bottom;
                 }
 
-                // TODO (scoy) Can this function be made common to all prims rather than duplicating code?
+                // TODO (****) Can this function be made common to all prims rather than duplicating code?
             }
 
             // Set the vertex positions.

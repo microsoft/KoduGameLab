@@ -48,7 +48,7 @@ namespace Boku.UI2D
                 if (selected != value)
                 {
                     selected = value;
-                    // TODO (scoy) twitch to change text color?
+                    // TODO (****) twitch to change text color?
                 }
             }
         }

@@ -642,7 +642,7 @@ namespace Boku.Common
         /// <returns></returns>
         public static bool WasPressed(Keys key)
         {
-            // TODO (scoy) I'm not sure if this is needed but it seems
+            // TODO (****) I'm not sure if this is needed but it seems
             // to prevent issues when the rest of the UI is not working right.
             if (keys == null || keys[0] == null)
             {

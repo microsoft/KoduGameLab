@@ -257,7 +257,7 @@ namespace KoiX.UI
             {
                 // Massage the position and size of the child widgets.
 
-                // TODO (scoy) Do we really want to allow WidgetSet to change size of stuff?  I guess it does
+                // TODO (****) Do we really want to allow WidgetSet to change size of stuff?  I guess it does
                 // make sense if we want to have a set of buttons that are all the same width.  Need to make
                 // sure this doesn't screw things up.  Seriously.
 
@@ -266,7 +266,7 @@ namespace KoiX.UI
                     // Start by setting positions for left justification and then adjust as needed.
                     // Widget position is relative to set position so start with 0,0.
 
-                    // TODO (scoy) This used to start at 0,0 but now takes padding into account.  Need to do the same vertically.
+                    // TODO (****) This used to start at 0,0 but now takes padding into account.  Need to do the same vertically.
                     {
                         Vector2 pos = new Vector2(Padding.Left, Padding.Top);
                         for (int i = 0; i < widgets.Count; i++)
@@ -438,7 +438,7 @@ namespace KoiX.UI
                         case Justification.Bottom:
                             {
                                 // Figure out the bottom edge and move everything up.
-                                // TODO (scoy) Need to fix this to work properly with padding of containing object.
+                                // TODO (****) Need to fix this to work properly with padding of containing object.
                                 BaseWidget bottommost = widgets[widgets.Count - 1];
                                 float totalHeight = bottommost.Position.Y + bottommost.LocalRect.Height + bottommost.Margin.Bottom;
                                 float offset = LocalRect.Height - totalHeight;
@@ -454,7 +454,7 @@ namespace KoiX.UI
                         case Justification.Center:
                             {
                                 // Same as Bottom, just half the offset.
-                                // TODO (scoy) Need to fix this to work properly with padding of containing object.
+                                // TODO (****) Need to fix this to work properly with padding of containing object.
                                 BaseWidget bottommost = widgets[widgets.Count - 1];
                                 float totalHeight = bottommost.Position.Y + bottommost.LocalRect.Height + bottommost.Margin.Bottom;
                                 float offset = (int)((LocalRect.Height - totalHeight) / 2.0f);
@@ -523,7 +523,7 @@ namespace KoiX.UI
                     // to cover all the widgets which have been manually placed.  But, when I try
                     // this, a lot of UI ends up looking like crap.  Need to figure out what's 
                     // going on and be sure this is actualy the right thing to do.
-                    // TODO (scoy) Fix this.
+                    // TODO (****) Fix this.
                     /*
                     foreach (BaseWidget w in widgets)
                     {

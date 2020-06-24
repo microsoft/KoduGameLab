@@ -96,7 +96,7 @@ namespace KoiX
         /// Given a texture id, returns the matching texture, null if not found.
         /// id is case sensitive.
         /// 
-        /// TODO (scoy) Right now the default size of the button textures is 64x64.
+        /// TODO (****) Right now the default size of the button textures is 64x64.
         /// Should we go higher so zooming looks better?
         /// </summary>
         /// <param name="id"></param>
@@ -147,7 +147,7 @@ namespace KoiX
 
             Texture2D result = null;
 
-            // TODO (scoy) Should we change this around so that the dictionary is keyed
+            // TODO (****) Should we change this around so that the dictionary is keyed
             // to the enum?  We could just remove the stirng version although then this
             // wouldn't work as well with White, etc.  With string interning either way
             // should be as fast so maybe remove this Get based on enums.

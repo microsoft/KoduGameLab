@@ -90,7 +90,7 @@ namespace KoiX.Scenes
 
         public override void Update()
         {
-            // TODO (scoy) Hack to skip right to first options page.
+            // TODO (****) Hack to skip right to first options page.
             SceneManager.SwitchToScene(page1);
 
             // Keep the nav buttons happy.

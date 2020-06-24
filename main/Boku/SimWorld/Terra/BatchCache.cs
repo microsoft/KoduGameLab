@@ -847,7 +847,7 @@ namespace Boku.SimWorld.Terra
         /// </summary>
         private static AABB _boundsScratch = new AABB();
 
-        // TODO (scoy) Do we really need to know the number of bytes in the buffer?
+        // TODO (****) Do we really need to know the number of bytes in the buffer?
         // Dig into this and see if it can be simplified.
 
         /// <summary>
@@ -893,7 +893,7 @@ namespace Boku.SimWorld.Terra
 
                     iVerts += numVerts;
 
-                    // TODO (scoy) Do we really need this in bytes?  Can we simplify?
+                    // TODO (****) Do we really need this in bytes?  Can we simplify?
                     accumSz += _bufferScratch[i].Buffer.VertexCount * _bufferScratch[i].Buffer.VertexDeclaration.VertexStride;
 
                     _bufferScratch[i].Dispose();

@@ -93,7 +93,7 @@ namespace Boku.Common.ParticleSystem
                 new VertexElement(0, VertexElementFormat.Vector3, VertexElementUsage.Position, 0),              // position
                 new VertexElement(12, VertexElementFormat.Vector3, VertexElementUsage.TextureCoordinate, 0),    // texture UVs
                 new VertexElement(24, VertexElementFormat.Vector3, VertexElementUsage.TextureCoordinate, 1),    // rotation, radius, alpha
-                // size == 36 (oops - maf)
+                // size == 36 (oops - ***)
             };
 
             public Vertex(Vector3 pos, Vector3 tex, float rotation, float radius, float alpha)

@@ -198,7 +198,7 @@ namespace KoiX.UI
                 // same margin from either side.  For some reason, the occasional line of 
                 // text looks like it is going long.  So, by making this 3 we double the 
                 // margin on the right edge making things look better.
-                // TODO (scoy) Should we shift everything a bit to the right for R-to-L languages?
+                // TODO (****) Should we shift everything a bit to the right for R-to-L languages?
                 int blobWidth = (int)((rect.Width - 2 * 16.0f) * scaleFactor);
                 blob.Width = blobWidth;
 

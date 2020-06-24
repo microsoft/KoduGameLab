@@ -555,12 +555,12 @@ namespace Boku.Scenes.InGame.MouseEditTools
             }
             else if (menu.CurString == Strings.Localize("mouseEdit.height"))
             {
-                // TODO (scoy) Launch dialog for setting this.
+                // TODO (****) Launch dialog for setting this.
                 Debug.Assert(false);
             }
             else if (menu.CurString == Strings.Localize("mouseEdit.rotate"))
             {
-                // TODO (scoy) Launch dialog for setting this.
+                // TODO (****) Launch dialog for setting this.
                 Debug.Assert(false);
             }
             else if (menu.CurString == Strings.Localize("mouseEdit.type"))

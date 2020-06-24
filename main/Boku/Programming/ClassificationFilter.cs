@@ -122,12 +122,12 @@ namespace Boku.Programming
                         match = OnMatch(sensorTarget.Classification);
                         break;
                 }
-                // TODO (scoy) Remove this once we're sure the changes are 
+                // TODO (****) Remove this once we're sure the changes are 
                 // good so that we get decent perf in debug, too.
                 /*
                 if (classification.name != "building" && classification.name != "bot")
                 {
-                    Debug.Assert(match == OnMatch(sensorTarget.Classification), "Tell scoy to fix.");
+                    Debug.Assert(match == OnMatch(sensorTarget.Classification), "Tell *** to fix.");
                 }
                 */
             }

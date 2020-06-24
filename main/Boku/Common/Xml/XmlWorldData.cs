@@ -75,7 +75,7 @@ namespace Boku.Common.Xml
         /// If set, this field's value will be used as the level's timestamp the next time it is written to disk.
         /// After use, this field is cleared. Value must be UTC.
         /// 
-        /// (scoy) I _think_ this is being used so that downloading a world doesn't cause its date to change.
+        /// (****) I _think_ this is being used so that downloading a world doesn't cause its date to change.
         /// Sadly this comment just says _what_ is happening, not _why_.
         /// </summary>
         [XmlIgnore]

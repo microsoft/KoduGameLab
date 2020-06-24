@@ -105,7 +105,7 @@ namespace Boku.Programming
             if (constraintMod != null && constraintMod.ConstraintType == ConstraintModifier.Constraints.Immobile)
             {
                 // We still need to add an attractor to the movement set so that the reflex will be considered acted on.
-                // TODO (scoy) is thre a better way to indicate this?
+                // TODO (****) is thre a better way to indicate this?
                 actionSet.AddActionTarget(Action.AllocTargetLocationAction(reflex, gameActor.Movement.Position, autoTurn: true));
                 return actionSet;
             }
@@ -305,7 +305,7 @@ namespace Boku.Programming
         }
 
         /// <summary>
-        /// Function not ready for prime time, checking in commented out. maf.
+        /// Function not ready for prime time, checking in commented out. ***.
         /// </summary>
         /// <param name="gameActor"></param>
         /// <returns></returns>

@@ -86,7 +86,7 @@ namespace KoiX.Scenes
                     {
                         if (Storage4.FileExists(Program2.StartupWorldFilename, StorageSource.All))
                         {
-                            // TODO (scoy) Should this SwitchToScene be here or
+                            // TODO (****) Should this SwitchToScene be here or
                             // should hte switch be embedded in LoadLevelAndRun?
                             if (BokuGame.bokuGame.inGame.LoadLevelAndRun(Program2.StartupWorldFilename, keepPersistentScores: false, newWorld: false, andRun: true))
                             {

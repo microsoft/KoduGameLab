@@ -99,7 +99,7 @@ namespace Boku.Programming
             this.tiltPosition = Vector2.Zero;
 
 #if !NETFX_CORE
-            // TODO @eanders: use the player# to get the right Microbit, or blended from all if no player#.
+            // TODO @*******: use the player# to get the right Microbit, or blended from all if no player#.
             Microbit bit = MicrobitExtras.GetMicrobitOrNull(playerId);
             if (bit != null)
             {

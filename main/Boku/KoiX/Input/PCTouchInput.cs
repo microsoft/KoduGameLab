@@ -70,7 +70,7 @@ namespace KoiX.Input
             //messageTouchHook.TouchUp += new EventHandler<TouchEventArgs>(TouchUpHandler);
 
             // Store the max touch count detected at startup.
-            // TODO (scoy) Move these to LowLeveTouchInput?
+            // TODO (****) Move these to LowLeveTouchInput?
             TouchAvailable = cwTouchHook.IsTouchAvailable();
             MaxTouchCount = cwTouchHook.GetMaxTouches();
 

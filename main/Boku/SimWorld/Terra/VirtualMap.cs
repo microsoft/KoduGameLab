@@ -1040,7 +1040,7 @@ namespace Boku.SimWorld.Terra
             */
                         
             /* 
-            // TODO (scoy)
+            // TODO (****)
             // Should land/water transition stop actors?  Or should this
             // be based on actor's domain???
               
@@ -1321,7 +1321,7 @@ namespace Boku.SimWorld.Terra
         /// <returns></returns>
         public float GetHeight(Vector2 pos)
         {
-            ///mafinch - this is clean and works, but it returns the flattened
+            ///*** - this is clean and works, but it returns the flattened
             ///cubeworld height. That may be what we want, but for now we're going
             ///with the interpolated smoothed height.
             //Point ipos = WorldToVirtualIndex(pos);

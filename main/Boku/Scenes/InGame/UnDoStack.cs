@@ -193,7 +193,7 @@ namespace Boku
             /// because the name changed.  This makes sure that the
             /// autosave is up to date.
             /// 
-            /// TODO (scoy) Right now this is only used after saving the level
+            /// TODO (****) Right now this is only used after saving the level
             /// to update the level's name, description, and ???.  Should we
             /// just be able to update those directly?
             /// </summary>

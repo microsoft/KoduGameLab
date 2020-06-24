@@ -30,7 +30,7 @@ namespace Boku
     /// <summary>
     /// A static class which manages and displays victory and gameover overlay screens.
     /// 
-    /// TODO (scoy) Not really sure if making this all static makes sense.  Not worth
+    /// TODO (****) Not really sure if making this all static makes sense.  Not worth
     /// changing, for now.
     /// </summary>
     public class VictoryOverlay

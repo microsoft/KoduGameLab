@@ -41,7 +41,7 @@ namespace KoiX.UI
         List<MonochromeGraphicRadioButton> siblings;    // List of all radio buttons in this set.  Used for clearing
                                                         // selection of others when this one is set.
 
-        // TODO (scoy) Do we need a seperate theme for MonochromeGraphicRadioButton?
+        // TODO (****) Do we need a seperate theme for MonochromeGraphicRadioButton?
         RadioButtonTheme curTheme;                      // Colors and sizes for current state.
 
         Twitchable<Color> bodyColor;                    // White if unselected, focus color if selected.
@@ -77,7 +77,7 @@ namespace KoiX.UI
                         }
                     }
 
-                    // TODO (scoy) Should we only call OnChange when selected or
+                    // TODO (****) Should we only call OnChange when selected or
                     // should be call any time the state changes?
                     if (Selected)
                     {

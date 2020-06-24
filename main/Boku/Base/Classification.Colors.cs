@@ -4,7 +4,7 @@ namespace Boku.Base
 {
     public partial class Classification
     {
-        // TODO (scoy) Make these values part of the Colors enum since
+        // TODO (****) Make these values part of the Colors enum since
         // they need to be kept in sync.  Having them in a different
         // enum is just asking for trouble.
         public enum ColorInfo

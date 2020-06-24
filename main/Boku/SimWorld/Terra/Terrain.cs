@@ -1403,7 +1403,7 @@ namespace Boku.SimWorld.Terra
             }
 
 
-            // TODO (scoy) No clue why we limit the height here.  In what case is this the right
+            // TODO (****) No clue why we limit the height here.  In what case is this the right
             // thing to do?
             // Commented this out since it was messing with setting the initial InsideGlassWalls value.
             // That code looks for a height of 0.
@@ -4481,7 +4481,7 @@ namespace Boku.SimWorld.Terra
         {
             if (busyMessage == null)
             {
-                // TODO (scoy) *** How does this get scaled if window changes size???
+                // TODO (****) *** How does this get scaled if window changes size???
                 Point deviceSize = new Point(device.Viewport.Width, device.Viewport.Height);
                 busyMessage = new SimpleMessage();
                 busyMessage.Center = new Point(deviceSize.X / 2, deviceSize.Y / 6);

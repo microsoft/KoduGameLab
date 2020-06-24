@@ -114,7 +114,7 @@ namespace Boku
 
                     /// Don't null out the cutPasteObject. That way, if we load up
                     /// a new level, we can still paste it in, allowing copy of objects
-                    /// from one level to another. maf
+                    /// from one level to another. ***
                     parent.Cursor3D.Activate();
                     parent.Cursor3D.Hidden = true;
                     parent.Cursor3D.Rep = Cursor3D.Visual.Edit;

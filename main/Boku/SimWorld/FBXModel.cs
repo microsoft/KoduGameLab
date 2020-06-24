@@ -499,7 +499,7 @@ namespace Boku.SimWorld
                             }
                             catch 
                             { 
-                                // TODO (scoy) Figure out why we get here.
+                                // TODO (****) Figure out why we get here.
                             }
                         }
                     }
@@ -879,7 +879,7 @@ namespace Boku.SimWorld
             nextScratchPack = 0;
             renderBatch.Clear();
 
-            // TODO (scoy) Get rid of this???
+            // TODO (****) Get rid of this???
             if (renderWire)
                 device.RasterizerState = RasterizerState.CullCounterClockwise;
         }
@@ -1038,7 +1038,7 @@ namespace Boku.SimWorld
             }
 
             // Wisps don't have shadows...
-            // TODO (scoy) This should probably be handled elsewhere.  Just not sure where.
+            // TODO (****) This should probably be handled elsewhere.  Just not sure where.
             if (Effect.CurrentTechnique.Name.Equals("ShadowPass") && resourceName.Contains("wisp"))
             {
                 return;
@@ -1475,7 +1475,7 @@ namespace Boku.SimWorld
             }
             else
             {
-                // HACKHACK TODO (scoy) Try to figure out why WinRT build can't get Tag info.
+                // HACKHACK TODO (****) Try to figure out why WinRT build can't get Tag info.
                 // Seem to be a problem with the MG loader.
                 // In the meantime, uncomment the code above, run in debug mode, and copy/paste 
                 // the debug output into the switch statement below.

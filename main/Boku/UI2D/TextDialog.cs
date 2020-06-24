@@ -160,7 +160,7 @@ namespace Boku
                 shared.descBlob.InsertString(new string(c, 1));
                 shared.curString = shared.descBlob.RawText;
             } 
-            // TODO (scoy) Clean this up.  We're mixing text as input with text as control here.
+            // TODO (****) Clean this up.  We're mixing text as input with text as control here.
             // Probably the right thing to do would be to push/pop the text input callbacks
             // dynamically to mirror the state we're in.
 
@@ -584,7 +584,7 @@ namespace Boku
             /// <param name="graphics"></param>
             public void DeviceReset(GraphicsDevice device)
             {
-                // TODO (scoy) This could probably work just by saying dirty = true
+                // TODO (****) This could probably work just by saying dirty = true
                 // With XNA4 rendertargets seem to survive, they just lose their content.
                 ReleaseRenderTargets();
                 CreateRenderTargets(device);

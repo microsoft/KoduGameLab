@@ -90,7 +90,7 @@ namespace KoiX.Input
 
         /// <summary>
         /// Peeks at the key and sets IsInputKey to true for arrow keys.  Otherwise they get swallowed.
-        /// TODO (scoy) Doesn't even get called.  Maybe because XNAControl is in focus, not the form???
+        /// TODO (****) Doesn't even get called.  Maybe because XNAControl is in focus, not the form???
         /// Note, try to get this keyboard handler to deal with arrow (and other specials) keys with autorepeat.
         /// Might be easier to implement autorepeat on other keyboard handler.
         /// </summary>

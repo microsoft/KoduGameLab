@@ -1769,7 +1769,7 @@ namespace Boku
                 BokuGame.bokuGame.shaderGlobals.SetCamera(Editor.effect, shared.camera);
 
 #if NETFX_CORE
-                // TODO (scoy) Not sure why this is needed for MG but not for XNA.
+                // TODO (****) Not sure why this is needed for MG but not for XNA.
                 KoiLibrary.GraphicsDevice.Clear(ClearOptions.DepthBuffer, Color.Pink, 1.0f, 0);
 #endif
 

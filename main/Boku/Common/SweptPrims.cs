@@ -170,7 +170,7 @@ namespace Boku.Common
             hit = RaySweptEllipsoid(centerStart0, centerEnd0, radii0, centerStart1, centerEnd1, ref hitPosition, ref hitNormal, ref t);
             if (hit)
             {
-                // TODO (scoy)  This gives us an approximation of the hit, not the exact hit.  Good enough for now...
+                // TODO (****)  This gives us an approximation of the hit, not the exact hit.  Good enough for now...
                 // Also, normal is also off a bit.
 
                 // Remove inflation amount from hitPoint.

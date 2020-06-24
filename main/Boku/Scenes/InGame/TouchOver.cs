@@ -812,7 +812,7 @@ namespace Boku
                 /// </summary>
                 private void CheckMode()
                 {
-                    // TODO (scoy) Case where mode == none and fromNode is valid?
+                    // TODO (****) Case where mode == none and fromNode is valid?
                     //Debug.Assert((mode == Mode.Add) || (fromNode == null));
                     switch (mode)
                     {

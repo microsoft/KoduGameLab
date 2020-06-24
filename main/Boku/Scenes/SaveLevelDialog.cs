@@ -1281,7 +1281,7 @@ namespace Boku
                 }
             }   // end of UpdateObj TextInput()
 
-            // TODO (scoy) Clean this up.  We're mixing text as input with text as control here.
+            // TODO (****) Clean this up.  We're mixing text as input with text as control here.
             // Probably the right thing to do would be to push/pop the text input callbacks
             // dynamically to mirror the state we're in.
             
@@ -1681,7 +1681,7 @@ namespace Boku
                 TextHelper.DrawString(Font, str, pos, lightTextBodyColor);
                 shared.nameBox.Set(pos, pos + new Vector2(550, Font().LineSpacing));
 
-                // TODO (scoy) We should be using TextBlob for all text editing!
+                // TODO (****) We should be using TextBlob for all text editing!
 
                 // If we're currently editing the name, render the cursor at the right position.
                 if (shared.editingText && shared.focus == Shared.InputFocus.Name)

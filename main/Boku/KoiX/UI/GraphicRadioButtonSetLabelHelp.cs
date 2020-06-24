@@ -224,7 +224,7 @@ namespace KoiX.UI
         /*
         /// <summary>
         /// Changes the text of the label.  Note that this assumes we've got localized strings.
-        /// TODO (scoy) Update this so it also works with string ids.
+        /// TODO (****) Update this so it also works with string ids.
         /// </summary>
         /// <param name="label"></param>
         public void SetLabel(string labelString)

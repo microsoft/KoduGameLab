@@ -329,7 +329,7 @@ namespace Boku.Fx
             {
                 /// In edit mode, if the current rig is pitch black,
                 /// use the dark rig.
-                /// TODO (scoy) Need to update this once new UI is up and running.
+                /// TODO (****) Need to update this once new UI is up and running.
                 /// Should be able to just test for EditScene.
                 if ((currentRig != lightRigs[lightRigs.Length - 1])
                     && (InGame.inGame.CurrentUpdateMode != InGame.UpdateMode.RunSim)
@@ -514,7 +514,7 @@ namespace Boku.Fx
 
         /// <summary>
         /// Set the parameter values on the given effect.
-        /// TODO (scoy) Can this be made more efficient?  Right now it sets every parameter
+        /// TODO (****) Can this be made more efficient?  Right now it sets every parameter
         /// every time it is called even though they may not have changed.
         /// </summary>
         /// <param name="effect"></param>
@@ -571,7 +571,7 @@ namespace Boku.Fx
             else
             {
                 // If the rig is in transition, need to get thse values.
-                // TODO (scoy) This could probably be cleaned up better.  Need an "Active" light rig
+                // TODO (****) This could probably be cleaned up better.  Need an "Active" light rig
                 // which just has values pushed into it as it changes.
                 currentRig.SetToEffectWhileTransitioning(effect);
             }
@@ -828,7 +828,7 @@ namespace Boku.Fx
             SetLightRig(name);
 
             // Need to force params to be updated.
-            // TODO (scoy) This whole scheme is getting confusing and ugly.  Need to fix.
+            // TODO (****) This whole scheme is getting confusing and ugly.  Need to fix.
             Render(null);
 
             return oldrig;

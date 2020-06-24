@@ -88,7 +88,7 @@ namespace Boku
                 string baseUrl =  Program2.SiteOptions.KGLUrl + "/API/GetLatestNews?tag=client";
                 string paramUrl = "&region=" + GetLangRegion();
 #if !NETFX_CORE
-                // TODO (scoy) This doesn't do anything anyway.  Should it be removed?
+                // TODO (****) This doesn't do anything anyway.  Should it be removed?
                 string paramRegionUrl = Thread.CurrentThread.CurrentCulture.Name;
 
                 paramRegionUrl = "-" + paramRegionUrl;

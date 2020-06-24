@@ -36,7 +36,7 @@ namespace Boku
         Vector3 actorPosition = Vector3.Zero;
 
         /// <summary>
-        /// TODO (scoy) No clue if this is last actor or last frame or ...
+        /// TODO (****) No clue if this is last actor or last frame or ...
         /// Only used by touch.
         /// </summary>
         Vector3 lastTouchEditPos = Vector3.Zero;

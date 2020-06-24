@@ -1157,14 +1157,14 @@ namespace KoiX.Text
                 // Split fatChars text into an array of words.
                 foreach (Line line in lines)
                 {
-                    // TODO (scoy) Why are we splitting into words again?  Is this only needed for RtoL?
+                    // TODO (****) Why are we splitting into words again?  Is this only needed for RtoL?
                     line.words = SplitIntoWords(line.text);
                 }
 
                 // For SystemFont rendering we want to take adjacent text words and merge them.
                 // This make sthe spacing work out correctly and also minimizes the number of
                 // text draw calls we make.
-                // TODO (scoy) Should move the merging into LayoutWords so that we end up with
+                // TODO (****) Should move the merging into LayoutWords so that we end up with
                 // smaller gaps at the ends of lines when wrapping.  Note that my initial attempt
                 // to do this utterly failed since BiDi.LogicalToVisualPass2() needs to change
                 // the order of the FatChars list.

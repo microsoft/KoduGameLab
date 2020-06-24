@@ -776,7 +776,7 @@ namespace KoiX.Input
 #if !XBOX
             if (key >= Keys.A && key <= Keys.Z)
             {
-                // TODO (scoy) What is the right Win8 version of this?
+                // TODO (****) What is the right Win8 version of this?
                 // Do we even want to use this code for Win8???
 #if !NETFX_CORE
                 kbdShift ^= Console.CapsLock;

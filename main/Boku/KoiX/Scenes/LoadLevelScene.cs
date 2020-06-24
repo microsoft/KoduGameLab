@@ -653,7 +653,7 @@ namespace KoiX.Scenes
                 {
                     Button.Callback OnContinueExport = delegate(BaseWidget w)
                     {
-                        // TODO (scoy) This leaves the broken link dialog on-screen while the 
+                        // TODO (****) This leaves the broken link dialog on-screen while the 
                         // Windows file dialog is being shown.  Should we delay the call to
                         // ShowExportDialog a couple of frames?
                         ShowExportDialog(level);
@@ -722,7 +722,7 @@ namespace KoiX.Scenes
             DialogSave.Dispose();
             DialogSave = null;
 
-            // TODO (scoy) Show result?  We used to have a dialog here that would 
+            // TODO (****) Show result?  We used to have a dialog here that would 
             // show the path the level was exported to.  Is this worth doing?
             
             // Copy path to clipboard.
@@ -881,11 +881,11 @@ namespace KoiX.Scenes
 
                 UploadWorldData(packet, level);
 
-                // TODO (scoy) Show success message?
+                // TODO (****) Show success message?
             }
             else
             {
-                // TODO (scoy) Show error message?  This used to fail if not properly signed in.  No reason
+                // TODO (****) Show error message?  This used to fail if not properly signed in.  No reason
                 // for it to fail now, but...
             }
         }   // end of Callback_Ping()
@@ -952,7 +952,7 @@ namespace KoiX.Scenes
         {
             if (CurWorld != null)
             {
-                // TODO (scoy) Need to plumb args all the way through DialogManager.
+                // TODO (****) Need to plumb args all the way through DialogManager.
                 // On question is, do we want to re-apply the args if the dialog was
                 // suspended and then re-activated?  Should the dialog's Activate()
                 // method handle this so it can do the right thing?
@@ -1056,7 +1056,7 @@ namespace KoiX.Scenes
 
         void DeleteCallback(AsyncResult result)
         {
-            // TODO (scoy) This feels like overkill.  Need to understand
+            // TODO (****) This feels like overkill.  Need to understand
             // how cursors handle deletions better.  Seems to act different
             // depending on whether it's local or community.
 
@@ -1321,7 +1321,7 @@ namespace KoiX.Scenes
                 DialogCenter.TargetAlreadyLinkedDialog.ContinueButton.SetOnChange(OnContinueLinking);
                 DialogCenter.TargetAlreadyLinkedDialog.CancelButton.SetOnChange(OnCancel);
 
-                // TODO (scoy) Camera or no camera?  Does this control scaling of dialog?
+                // TODO (****) Camera or no camera?  Does this control scaling of dialog?
                 // Figure this out, document, and check every other call.
                 DialogManagerX.ShowDialog(DialogCenter.TargetAlreadyLinkedDialog);
             }
@@ -1338,7 +1338,7 @@ namespace KoiX.Scenes
         /// Links from the currently loaded world (InGame.XmlWorldData) to the
         /// level in focus in this dialog. (CurWorld)
         /// 
-        /// TODO (scoy) Realistically, this could be buggy.  In particular, the
+        /// TODO (****) Realistically, this could be buggy.  In particular, the
         /// target level is assumed to not be in either Downloads or BuiltInGames.
         /// If it is, it needs to be cloned into MyWorlds.  Best option, however,
         /// is to rethink folders so everything shares the same folder and we 
@@ -2291,7 +2291,7 @@ namespace KoiX.Scenes
             else
             {
                 // Load didn't work, just stay here.
-                // TODO (scoy) Should we have some kinbd of error here?  What could
+                // TODO (****) Should we have some kinbd of error here?  What could
                 // fail to get us here?
                 Debug.Assert(false);
             }

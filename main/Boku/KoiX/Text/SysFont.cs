@@ -238,7 +238,7 @@ namespace KoiX.Text
                     System.Drawing.RectangleF textRect = new System.Drawing.RectangleF(entry.position.X, entry.position.Y, w, h);
 
                     // Grow batchRect to include this entry which is the intersection of the text and the clip.
-                    // TODO (scoy) In order for clipping to work correctly, we can only process batches with a single entry.  Fix this.
+                    // TODO (****) In order for clipping to work correctly, we can only process batches with a single entry.  Fix this.
                     batchRectF = System.Drawing.RectangleF.Union(batchRectF, System.Drawing.RectangleF.Intersect(entry.clipRect, textRect));
 
                     cacheString += entry.text + entry.textColor.ToString() + entry.font.Font.ToString() + entry.font.Font.SizeInPoints.ToString();
@@ -340,7 +340,7 @@ namespace KoiX.Text
                         RenderTexture(camera, ce.Texture, cachedTargetRect, offset);
 
                         // Clear the bitmap for next call.
-                        // TODO (scoy) is there a dirty rect version of this that is faster?
+                        // TODO (****) is there a dirty rect version of this that is faster?
                         // Maybe try DrawRectangle?
                         graphics.Clear(System.Drawing.Color.Transparent);
 
@@ -380,7 +380,7 @@ namespace KoiX.Text
                     RenderTexture(camera, texture, targetRect, offset);
 
                     // Clear the bitmap for next call.
-                    // TODO (scoy) is there a dirty rect version of this that is faster?
+                    // TODO (****) is there a dirty rect version of this that is faster?
                     // Maybe try DrawRectangle?
                     graphics.Clear(System.Drawing.Color.Transparent);
                 }
@@ -492,7 +492,7 @@ namespace KoiX.Text
             // We don't want to try and copy data that doesn't exist. 
             batchRect = Rectangle.Intersect(batchRect, bitmapRect);
 
-            // TODO (scoy) Clip batchRect if it goes outside of the texture.
+            // TODO (****) Clip batchRect if it goes outside of the texture.
             // Note this needs to take into account the offset value.
 
 

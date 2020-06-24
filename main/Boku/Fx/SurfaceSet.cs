@@ -227,7 +227,7 @@ namespace Boku.Fx
             Parameter(EffectParams.Bump_Tile1_Int1_Unused2).SetValue(
                 Bump_Tile1_Int1_Unused2_Scratch);
 
-            // TODO (scoy) Why is this null???
+            // TODO (****) Why is this null???
             if (Parameter(EffectParams.BumpDetail) != null)
             {
                 Parameter(EffectParams.BumpDetail).SetValue(BumpDetail);
@@ -249,7 +249,7 @@ namespace Boku.Fx
             }
 #endif // TOGGLE_DIRTMAP_HACK
 
-            // TODO (scoy) Why is this ever null?
+            // TODO (****) Why is this ever null?
             if (Parameter(EffectParams.DirtMap) != null)
             {
                 Parameter(EffectParams.DirtMap).SetValue(dmap);

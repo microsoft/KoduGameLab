@@ -63,7 +63,7 @@ namespace KoiX.UI
                         }
                     }
 
-                    // TODO (scoy) Should we only call OnChange when selected or
+                    // TODO (****) Should we only call OnChange when selected or
                     // should be call any time the state changes?
                     // Testing for Active allows us to set the the current state
                     // prior to activation without triggering the OnChange callback.

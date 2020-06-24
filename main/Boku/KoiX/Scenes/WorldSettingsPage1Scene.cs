@@ -286,7 +286,7 @@ namespace KoiX.Scenes
                 // Set Camera for Camera Mode
                 BaseWidget.Callback onChange = delegate(BaseWidget w)
                 {
-                    // TODO (scoy) Fill this in.
+                    // TODO (****) Fill this in.
                 };
                 setCamera = new ButtonLabelHelp(fullScreenContentDialog, Font, "editWorldParams.setCamera", null, column1.Size.X, onChange, indent: 226);
                 column2.AddWidget(setCamera);
@@ -303,7 +303,7 @@ namespace KoiX.Scenes
                 // Set Starting Camera
                 BaseWidget.Callback onChange = delegate(BaseWidget w)
                 {
-                    // TODO (scoy) Fill this in.
+                    // TODO (****) Fill this in.
                 };
                 setStartingCamera = new ButtonLabelHelp(fullScreenContentDialog, Font, "editWorldParams.setCamera", null, column1.Size.X, onChange, indent: 226);
                 column2.AddWidget(setStartingCamera);

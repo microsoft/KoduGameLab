@@ -524,7 +524,7 @@ namespace Boku
                     /// to the scene at once. We'll try for allowing the user 1/3 of the
                     /// budget at a single go (1/3 of the budget is the top of the green zone)
                     /// and see what kind of complaints we get.
-                    /// maf-taking it down further, for many benefits.
+                    /// ***-taking it down further, for many benefits.
                     if (shared.editBrushRadius > kMaxBrushRadius)
                     {
                         shared.editBrushRadius = kMaxBrushRadius;

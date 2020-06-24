@@ -220,7 +220,7 @@ namespace Boku.UI2D
                                         // is needed since we may have more pictures than can be shown 
                                         // at any given time.
         private List<Picture> pictures = new List<Picture>();
-        // TODO (scoy) Add a twitch to these to fade in/out as needed?
+        // TODO (****) Add a twitch to these to fade in/out as needed?
         private bool showLeftArrow = false;
         private bool showRightArrow = false;
 

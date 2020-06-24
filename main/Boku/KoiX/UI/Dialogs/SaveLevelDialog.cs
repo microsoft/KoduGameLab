@@ -60,7 +60,7 @@ namespace KoiX.UI.Dialogs
         WidgetSet tagsSet;
 
         BaseDialog returnDialog;                    // Dialog to activate on exit.
-                                                    // TODO (scoy) is this something we think we might use all the time?
+                                                    // TODO (****) is this something we think we might use all the time?
                                                     // If so, should be moved to BaseDialog.
 
         // Keep old values in case of cancel.

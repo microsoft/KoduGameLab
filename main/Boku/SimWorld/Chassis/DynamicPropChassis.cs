@@ -159,7 +159,7 @@ namespace Boku.SimWorld.Chassis
                     // Are we in the water?
                     if (position.Z < waterAlt)
                     {
-                        // TODO (scoy) This could be made better by also having
+                        // TODO (****) This could be made better by also having
                         // the density control how deep an object floats.
 
                         // Should we sink or float?

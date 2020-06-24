@@ -268,7 +268,7 @@ namespace Boku.Common.HintSystem
 
         private static void RefreshTexture()
         {
-            // TODO (scoy) *** Does this make sense any more since we require a min height of 600?
+            // TODO (****) *** Does this make sense any more since we require a min height of 600?
             bool lores = BokuGame.ScreenSize.Y <= 480;
 
             GetFont Font = SharedX.GetGameFont24Bold;

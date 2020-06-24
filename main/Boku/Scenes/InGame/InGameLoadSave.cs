@@ -452,7 +452,7 @@ namespace Boku
             //
             // xmlLevelData needs to be refreshed.
             //
-            // TODO (scoy)  The whole interaction between autosave and linked levels needs
+            // TODO (****)  The whole interaction between autosave and linked levels needs
             //              to be rethought.  If anything is dirty it should be flagged and
             //              the user warned on run, not later when trying to switch levels.
             //              Even more useful would be to treat linked levels as a single
@@ -518,7 +518,7 @@ namespace Boku
 
             /// Don't flush file changes to storage hardware for just an autosave. 
             /// We'll continue flushing on internal build, so resume will still
-            /// work after breaking in the debugger etc. mafinch.
+            /// work after breaking in the debugger etc. ***.
 
             IsLevelDirty = false;
             AutoSaved = true;
@@ -1007,7 +1007,7 @@ namespace Boku
 
         /// <summary>
         /// Load the given level.  Despite the name, the 'AndRun' part is controlled by a parameter.
-        /// TODO(scoy) Should clean up this naming.
+        /// TODO(****) Should clean up this naming.
         /// </summary>
         /// <param name="levelFullPath"></param>
         /// <param name="keepPersistentScores">Used when loading linked levels to preserve persistent scores.</param>
@@ -1142,7 +1142,7 @@ namespace Boku
             }
 
             // Load the terrain, but only if we need to.
-            // TODO (scoy) Does this EVER not blow away the terrain?
+            // TODO (****) Does this EVER not blow away the terrain?
             if (terrain == null || terrain.XmlWorldData != xmlWorldData)
             {
                 // Blow away and garbage-collect the old terrain

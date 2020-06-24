@@ -100,7 +100,7 @@ namespace Boku.Common.Xml
         /// <summary>
         /// This contains a list of IDs for hints that the user has disabled.
         /// Any hint not appearing on this list is assumed to be enabled.
-        /// TODO (scoy)  Should add an option to the OptionsMenu to clear
+        /// TODO (****)  Should add an option to the OptionsMenu to clear
         /// this list effectively reseting the disabled state for all hints.
         /// </summary>
         public List<string> disabledHintIDs = new List<string>();

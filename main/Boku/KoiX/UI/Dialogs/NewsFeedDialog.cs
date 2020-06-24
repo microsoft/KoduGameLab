@@ -24,7 +24,7 @@ namespace KoiX.UI.Dialogs
     /// <summary>
     /// Dialog for display of NewsFeed on MainMenuScene.
     /// 
-    /// TODO (scoy) Twitch some values?
+    /// TODO (****) Twitch some values?
     ///     -- scrolling when using mouse wheel.
     ///     -- alpha of right stick icon when going in/out of gamepad mode.
     /// </summary>

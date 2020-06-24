@@ -147,7 +147,7 @@ namespace KoiX.Geometry
                 // At this point we need to calculate the vertex positions.  The case when the line has differing radii
                 // is a bit more complex but since it's rarely used we can just fake it by using the larger radius.  This
                 // then also covers the case when the radii are equal.
-                // TODO (scoy) This still creates crappy looking joints.  Need to decide whether or not it's worth fixing.
+                // TODO (****) This still creates crappy looking joints.  Need to decide whether or not it's worth fixing.
                 /*
                 float radius = Math.Max(radius0, radius1);
                 verts[0].pixels = p0.point - right * radius;
@@ -304,7 +304,7 @@ namespace KoiX.Geometry
 
             override public void CalcVertices(Line line0, Line line1)
             {
-                // TODO (scoy) Note that this gives kind of ugly results when
+                // TODO (****) Note that this gives kind of ugly results when
                 // the line segments coming into this joint don't have a constant 
                 // radius.  The result is kind of a shear across the joint.
                 // Possible fix: Calc the max radius needed for the whole path or loop

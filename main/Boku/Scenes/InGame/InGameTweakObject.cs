@@ -276,7 +276,7 @@ namespace Boku
 
             }   // end of CheckForEditFocusObject()
 
-            // TODO (scoy) this is identical to the one in InGameEditObject.  Should figure out how to share.
+            // TODO (****) this is identical to the one in InGameEditObject.  Should figure out how to share.
             /// <summary>
             /// Handles any changes to the ColorPalette and,
             /// if needed the color of the in focus object.
@@ -339,7 +339,7 @@ namespace Boku
 
 
             //
-            // TODO (scoy) These are (mostly) identical to the one in InGameEditObject.  Should figure out how to share.
+            // TODO (****) These are (mostly) identical to the one in InGameEditObject.  Should figure out how to share.
             //
 
             protected void UpdateAura()

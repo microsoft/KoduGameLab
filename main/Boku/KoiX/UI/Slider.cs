@@ -132,7 +132,7 @@ namespace KoiX.UI
         {
             Debug.Assert(minValue < maxValue, "Max should be larger than min.");
             Debug.Assert(maxValue - minValue > increment, "Increment needs to be smaller.");
-            // TODO (scoy) Due to floating point magic, this doesn't work.  Rethink.
+            // TODO (****) Due to floating point magic, this doesn't work.  Rethink.
             //Debug.Assert((maxValue - minValue) / increment == (int)((maxValue - minValue) / increment), "Max and min should be an integer number of increments apart.");
             Debug.Assert(numDecimals >= 0, "A negative number of decimalplaces to display really doesn't make sense, does it?");
 
@@ -148,7 +148,7 @@ namespace KoiX.UI
 
         public override void Update(SpriteCamera camera, Vector2 parentPosition)
         {
-            // TODO (scoy) should we just do this in the base widget class?
+            // TODO (****) should we just do this in the base widget class?
             this.camera = camera;
 
             base.Update(camera, parentPosition);

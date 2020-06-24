@@ -357,7 +357,7 @@ namespace Boku
         /// Does the current device support shader 3.0 or better?
         /// </summary>
 
-        // TODO (scoy) No longer valid in Reach vs HiDef world.  Need to test Reach against x600 card.
+        // TODO (****) No longer valid in Reach vs HiDef world.  Need to test Reach against x600 card.
         public static bool RequiresPowerOf2
         {
             //get { return device.GraphicsDeviceCapabilities.TextureCapabilities.RequiresPower2; }
@@ -404,7 +404,13 @@ namespace Boku
 
             //Guide.SimulateTrialMode = true;
 
-            // TODO (scoy) *** Do we need this code any more?
+#if NETFX_CORE
+            //Debug.Assert(false, "argh");
+#else
+            winKeyboard = new WinKeyboard(MainForm.Instance);
+#endif
+            
+            // TODO (****) *** Do we need this code any more?
 #if NETFX_CORE
             InitializeComponent();
 #endif
@@ -440,7 +446,7 @@ namespace Boku
             Form form = StartupForm.ActiveForm;
             if (form.WindowState == FormWindowState.Maximized)
             {
-                // TODO (scoy) *** Need to do anything here???
+                // TODO (****) *** Need to do anything here???
                 /*
                 BokuGame.Graphics.ToggleFullScreen();
                 BokuGame.Graphics.PreferredBackBufferWidth = 1600;
@@ -538,7 +544,7 @@ namespace Boku
 #if NETFX_CORE
             GraphicsDevice.DeviceReset += DeviceResetHandler;
 #else
-            // TODO (scoy) *** Where to hook up device reset handler???
+            // TODO (****) *** Where to hook up device reset handler???
 #endif
 
             ScreenSize = new Vector2(KoiLibrary.GraphicsDevice.Viewport.Width, KoiLibrary.GraphicsDevice.Viewport.Height);
@@ -756,7 +762,7 @@ namespace Boku
                     CardSpace.LoadContent(true);
                     break;
                 case 4:
-                    // TODO (scoy) Figure out why this is needed.  For WinRT we're loading SSQuad early
+                    // TODO (****) Figure out why this is needed.  For WinRT we're loading SSQuad early
                     // so that we can display the loading screen.  But that causes an error in CardSpace.
                     // By Unloading SSQuad here we avoid the error.  No clue what's going on.
                     ScreenSpaceQuad.GetInstance().UnloadContent();
@@ -1358,7 +1364,7 @@ namespace Boku
             renderTimer.Start();
 #endif
 
-            // TODO (scoy) Remove when no longer needed.
+            // TODO (****) Remove when no longer needed.
             // HACK HACK
             // If we just have the NullScene in place, render normally.
             if (SceneManager.CurrentScene.Name == "NullScene")
@@ -1449,7 +1455,7 @@ namespace Boku
 
         private void ScreenGrab()
         {
-// (TODO (scoy) BROKEN
+// (TODO (****) BROKEN
 #if !NETFX_CORE
             if (Actions.PrintScreen.WasPressed || Actions.ShiftPrintScreen.WasPressed || pictureManager.DoScreenGrab)
             {

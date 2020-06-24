@@ -203,7 +203,7 @@ namespace KoiX.UI.Dialogs
 
         void OnNewWorld(BaseWidget w)
         {
-            // TODO (scoy) Need to implement the multi-choice, new-world dialog from Master.
+            // TODO (****) Need to implement the multi-choice, new-world dialog from Master.
             // Also, this code should be shared with MainMenu.  Can we just make it public
             // and reference it?
 

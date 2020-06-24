@@ -259,7 +259,7 @@ namespace KoiX.Managers
                     // that have a single, focusable widget in them (combos) we use the center of
                     // the combo for calculating the link BUT the debug rendering shows the links
                     // to the center of the focusable widget.
-                    // TODO (scoy) fix this is really bored.
+                    // TODO (****) fix this is really bored.
                     List<BaseWidget> widgets = new List<BaseWidget>();
                     dialog.GetFocusableWidgets(widgets, dPadNav: false);
 
@@ -314,7 +314,7 @@ namespace KoiX.Managers
         /// Activates and shows the current dialog.  Note that this may be
         /// delayed if there's a higher priority dialog already in the manager.
         /// 
-        /// TODO (scoy) args need to be filtered in to where they are used.  Do we save
+        /// TODO (****) args need to be filtered in to where they are used.  Do we save
         /// them as part of the set and reuse them if a dialog is reactivated?
         /// </summary>
         /// <param name="dialog"></param>
@@ -352,7 +352,7 @@ namespace KoiX.Managers
             }
             dialog.Update(camera);
 
-            // TODO (scoy) Note 100% certain about setting restoreFocusWidget to true here.
+            // TODO (****) Note 100% certain about setting restoreFocusWidget to true here.
             // Originally this was false.  Changed it to true so that when returning to the
             // MainMenu, after being in Options, the same MainMenu button would be in focus.
             // This just feels better.  No clue if it might cause issues later.  Probably

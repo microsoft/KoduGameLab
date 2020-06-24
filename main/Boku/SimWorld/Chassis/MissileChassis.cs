@@ -486,7 +486,7 @@ namespace Boku.SimWorld.Chassis
                 // notification will get processed and the damage will be taken into
                 // account there.  Yes, this is kind of confusing and should be rethought
                 // and cleaned up.  
-                // TODO (scoy)
+                // TODO (****)
                 if (Launcher.CurrentState == GameThing.State.Inactive)
                 {
                     bool targetDied = false;

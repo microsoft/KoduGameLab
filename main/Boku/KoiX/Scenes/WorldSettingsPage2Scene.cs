@@ -304,7 +304,7 @@ namespace KoiX.Scenes
                 XmlWorldData level = XmlWorldData.Load(worldFilename, XnaStorageHelper.Instance);
 
                 // Not valid, try Downloads.
-                // TODO (scoy) If user selects a Downloads world (or a built in one) shouldn't we clone it to MyWorlds?
+                // TODO (****) If user selects a Downloads world (or a built in one) shouldn't we clone it to MyWorlds?
                 if(level == null)
                 {
                     worldFilename = Path.Combine(BokuGame.Settings.MediaPath, BokuGame.DownloadsPath + InGame.XmlWorldData.LinkedToLevel.ToString() + @".Xml");

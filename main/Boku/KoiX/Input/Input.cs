@@ -173,7 +173,7 @@ namespace KoiX.Input
         // release, this is cleared.
         static object clickedOnObject = null;
 
-        // TODO (scoy) Remove this when no longer needed.
+        // TODO (****) Remove this when no longer needed.
         // This is a temporary duplicate of teh above for use by old UI elements.
         // In the new system, clickOnObject gets cleared automatically.
         // In the old system, whatever object takes possession mustdo the clearing.

@@ -73,7 +73,7 @@ namespace KoiX.UI.Dialogs
             rect.Position = position;
 
             // Font.
-            // TODO (scoy) Should we be getting this from shared?
+            // TODO (****) Should we be getting this from shared?
             SystemFont font = SysFont.GetSystemFont(theme.TextFontFamily, theme.TextBaseFontSize, theme.TextBaseFontStyle);
             FontWrapper wrapper = new FontWrapper(null, font);
             GetFont Font = delegate() { return wrapper; };

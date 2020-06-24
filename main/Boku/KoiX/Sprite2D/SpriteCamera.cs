@@ -103,7 +103,7 @@ namespace KoiX
             get { return zoom; }
             set
             {
-                // TODO (scoy) Twitch this?
+                // TODO (****) Twitch this?
                 value = MathHelper.Clamp(value, minZoom, maxZoom);
                 if (zoom != value)
                 {
@@ -226,7 +226,7 @@ namespace KoiX
         public void Update()
         {
             Vector2 updateScreenSize = screenSize;
-            // TODO (scoy) Should be this ClientSize or ViewportSize?  When does it make 
+            // TODO (****) Should be this ClientSize or ViewportSize?  When does it make 
             // a difference?  Figure this out and document.
             updateScreenSize.X = KoiLibrary.ClientRect.Width;
             updateScreenSize.Y = KoiLibrary.ClientRect.Height;
@@ -236,7 +236,7 @@ namespace KoiX
 
         public void Update(Vector2 updateScreenSize)
         {
-            // TODO (scoy) Should be this ClientSize or VeiwportSize?  When does it make 
+            // TODO (****) Should be this ClientSize or VeiwportSize?  When does it make 
             // a difference?  Figure this out and document.
             //screenSize.X = KoiLibrary.ClientRect.Width;
             //screenSize.Y = KoiLibrary.ClientRect.Height;
@@ -276,7 +276,7 @@ namespace KoiX
                                     * proj;
             */
 
-            // TODO (scoy) Need to figure out when each matrix is needed and be more
+            // TODO (****) Need to figure out when each matrix is needed and be more
             // clean about how they should be used.
 
             // Flip Y axis for ViewProj version which is used by SpriteBatch and Koi.Geometry.
@@ -294,7 +294,7 @@ namespace KoiX
 
         //
         //
-        // TODO (scoy)  Need to verify that these all work!
+        // TODO (****)  Need to verify that these all work!
         //
         //
 
@@ -356,7 +356,7 @@ namespace KoiX
                 return Frustum.CullResult.TotallyOutside;
             }
 
-            // TODO (scoy) Note this is not full correct.  You can still have a 
+            // TODO (****) Note this is not full correct.  You can still have a 
             // rect which is oriented diagonally with all its vertices off screen
             // but overlapping a corner of the screen.  A proper, general solution 
             // would probably be to do the fully inside test and then test each

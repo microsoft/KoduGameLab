@@ -126,7 +126,7 @@ namespace Boku.Programming
 
             if (apply)
             {
-                // TODO (scoy) Move all the Rover specific stuff to the Rover class.  None of this should be here.
+                // TODO (****) Move all the Rover specific stuff to the Rover class.  None of this should be here.
                 // SGI_MOD also apply the speed modifier for hills for the Rover
                 Boku.SimWorld.Chassis.RoverChassis RovChassis = gameActor.Chassis as Boku.SimWorld.Chassis.RoverChassis;
                 if (RovChassis != null)
@@ -143,7 +143,7 @@ namespace Boku.Programming
                     else
                     {
                         // Move Forward
-                        // TODO (scoy) Is this controllable by stick?  If so, 1.0 should be replaced by stick value.
+                        // TODO (****) Is this controllable by stick?  If so, 1.0 should be replaced by stick value.
                         actionSet.AddAction(Action.AllocSpeedAction(reflex, 1.0f));
                     }
                 }

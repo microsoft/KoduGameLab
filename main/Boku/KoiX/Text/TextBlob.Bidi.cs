@@ -759,7 +759,7 @@ namespace KoiX.Text
 
                 // Dump();
 
-                // TODO (scoy) Why is this only when using system font rendering?
+                // TODO (****) Why is this only when using system font rendering?
                 if(!Boku.BokuSettings.Settings.UseSystemFontRendering)
                 {
                     // Finally, fill in the new display order indices.

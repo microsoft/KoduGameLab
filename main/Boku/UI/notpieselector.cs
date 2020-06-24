@@ -50,7 +50,7 @@ namespace Boku.UI
                     {
                         Actions.Cancel.ClearAllWasPressedState();
 
-                        // TODO (scoy) Get rid of the args...
+                        // TODO (****) Get rid of the args...
                         parent.OnCancel(null, null);
 
                         Deactivate();

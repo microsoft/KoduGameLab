@@ -384,7 +384,7 @@ namespace Boku.Programming
         /// <summary>
         /// Find filter by string and return a clone of it.
         /// 
-        /// TODO (scoy) Why is this implemented as a list instead of 
+        /// TODO (****) Why is this implemented as a list instead of 
         /// a dictionary?  Given that there are over 500 filters in
         /// the system, the constant, serial searching seems, um, less
         /// than optimal...
@@ -983,7 +983,7 @@ namespace Boku.Programming
         {
             // Copy all cards from lists to dictionaries.  After this
             // point we shouldn't use the lists any more.
-            // TODO (scoy) Clear them just to be sure?
+            // TODO (****) Clear them just to be sure?
             foreach (Sensor sensor in SensorPieces)
             {
                 SensorDict.Add(sensor.upid, sensor);

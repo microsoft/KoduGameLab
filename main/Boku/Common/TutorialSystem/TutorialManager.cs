@@ -157,7 +157,7 @@ namespace Boku.Common.TutorialSystem
                 // When the dislog is active, we don't have the bar across the top so we should return to full size.
                 // Note, when display is changing active/inactive we want to twitch.  When the screen size changes
                 // because the window got resized we don't want to twitch.
-                // TODO (scoy) Twitching taken out since it was getting mixed up.
+                // TODO (****) Twitching taken out since it was getting mixed up.
                 if (modalDisplay.Active)
                 {
                     // Calc new screen size and position for full viewport.
@@ -290,7 +290,7 @@ namespace Boku.Common.TutorialSystem
                     }
 
                     // Swallow any mouse clicks just in case user thinks to click on display.
-                    // TODO (scoy) With changes, mouse hits will never be outside of active screen
+                    // TODO (****) With changes, mouse hits will never be outside of active screen
                     // so this should never happen...
                     /*
                     if (KoiLibrary.LastTouchedDeviceIsKeyboardMouse)
@@ -673,7 +673,7 @@ namespace Boku.Common.TutorialSystem
         /// the lines and returns the new string.
         /// Also takes null and returns an empty string.
         /// 
-        /// TODO (scoy) Use version in TextHelper?!?
+        /// TODO (****) Use version in TextHelper?!?
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>

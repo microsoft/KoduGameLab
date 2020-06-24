@@ -5,7 +5,7 @@
 # if XBOX
 #  define GLOBAL_CATCH_XBOX
 # else
-#  if !NETFX_CORE       // Disable global catch for WinRT.  Replace later?  TODO (scoy)
+#  if !NETFX_CORE       // Disable global catch for WinRT.  Replace later?  TODO (****)
 #   define GLOBAL_CATCH_PC
 #  endif
 # endif
@@ -607,7 +607,7 @@ namespace Boku
                         )
                         {
 #if NETFX_CORE
-                        // TODO (scoy) Do we have a different version checking scheme for Store Apps?
+                        // TODO (****) Do we have a different version checking scheme for Store Apps?
 #else
                             StartupForm.Shutdown();
 
@@ -680,7 +680,7 @@ namespace Boku
                 }
 #else
 
-                    // TODO (scoy) *** See notes!!!!
+                    // TODO (****) *** See notes!!!!
                     // Consider starting MainForm here and putting init of BokuGame into XNAControl.
                     // Do we still need/want StartForm?
                     //BokuGame game = new BokuGame();

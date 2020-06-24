@@ -1754,7 +1754,7 @@ namespace Boku.Common
             blob.Font = Font;
             blob.RawText = text;
 
-            // TODO (scoy) This function was designed to be an easy, drop in replacement for
+            // TODO (****) This function was designed to be an easy, drop in replacement for
             // SpriteBatch.DrawString() which requires that it be called from within a Begin/End
             // pair.  The TextBlob rendering has it's own Begin/End pair.  So, to keep things
             // straight, we end the current batch and then start a new one once the blob is done.

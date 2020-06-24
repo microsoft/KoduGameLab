@@ -132,7 +132,7 @@ namespace Boku.Common.Xml
         [XmlIgnore]
         public ChassisType Type = ChassisType.NotApplicable;
 
-        // TODO (scoy) Do we really want nullable types here?
+        // TODO (****) Do we really want nullable types here?
         // Does this make the saved files cleaner?  If so, ok.
         // If not, this just seems like too much crap is dumped here
         // and it makes these values difficult to work with.

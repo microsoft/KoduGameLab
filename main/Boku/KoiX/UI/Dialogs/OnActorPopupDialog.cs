@@ -242,7 +242,7 @@ namespace KoiX.UI.Dialogs
 
         public override void Activate(params object[] args)
         {
-            // TODO (scoy)  Would be better to plumb args through DialogManager.
+            // TODO (****)  Would be better to plumb args through DialogManager.
             Debug.Assert(focusActor != null, "This must be set with the actor under the cursor before calling show.");
 
             base.Activate(args);

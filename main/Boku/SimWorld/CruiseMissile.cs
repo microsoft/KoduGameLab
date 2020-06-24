@@ -341,7 +341,7 @@ namespace Boku
             // Strangley, this can end up null somehow if the missile gets squashed.
             // On reset, this will throw if no protected.  Not exactly sure what is
             // setting launcher to null though.
-            // TODO (scoy) figure out and fix.  (or just refactor all off the missile stuff)
+            // TODO (****) figure out and fix.  (or just refactor all off the missile stuff)
             if (Launcher != null)
             {
                 --Launcher.NumMissilesInAir;

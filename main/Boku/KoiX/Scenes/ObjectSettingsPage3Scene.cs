@@ -129,7 +129,7 @@ namespace KoiX.Scenes
             fullScreenContentDialog.AddWidget(column2);
 
             /*
-             // TODO (scoy) fill in here...
+             // TODO (****) fill in here...
             {
                 // Show Tool Tips
                 BaseWidget.Callback onChange = delegate(BaseWidget w) { CheckBox cb = w as CheckBox; if (cb != null) { XmlObjectSettingsData.ShowToolTips = cb.Checked; } };

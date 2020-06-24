@@ -221,7 +221,7 @@ namespace KoiX.Scenes
 
                 // For continuous keyboard input we need to check every frame.  this
                 // means we need to manually check for modal dialogs.
-                // TODO (scoy) Maybe add a new input type that triggers every frame
+                // TODO (****) Maybe add a new input type that triggers every frame
                 // like MousePosition but for the keyboard?
                 if (!DialogManagerX.ModalDialogIsActive)
                 {
@@ -231,7 +231,7 @@ namespace KoiX.Scenes
                     if (LowLevelKeyboardInput.IsPressed(Keys.D)) InGame.inGame.Camera.MoveWASD(Keys.D);
                 }
 
-                // TODO (scoy) After things are more cleaned up and settled, consider where these might better live.
+                // TODO (****) After things are more cleaned up and settled, consider where these might better live.
                 // Keep all the world systems ticking over.
                 UpdateWorld();
 
@@ -575,7 +575,7 @@ namespace KoiX.Scenes
             Debug.Assert(Active);
 
             // Handle orbiting.
-            // TODO (scoy) Make sure this works.  We currently have two modes of orbit.  The
+            // TODO (****) Make sure this works.  We currently have two modes of orbit.  The
             // first works like mouse orbit using the Center location as the cursor.  The
             // second uses the relative angle of the touches to orbit.
             // Which works better?  Currently overlaying both...
@@ -674,7 +674,7 @@ namespace KoiX.Scenes
             // Keep the edit brush in sync with the cursor position.
             UpdateEditBrush();
 
-            // TODO (scoy) Not sure this is 100% the right place for this.
+            // TODO (****) Not sure this is 100% the right place for this.
             ToolTipManager.Update();
             ThoughtBalloonManager.Update(InGame.inGame.Camera);
 
@@ -683,7 +683,7 @@ namespace KoiX.Scenes
         /// <summary>
         /// Keeps the edit brush stuff in sync with the current world cursor.
         /// 
-        /// TODO (scoy) Should edit brush be a seperate object owned by the scene?
+        /// TODO (****) Should edit brush be a seperate object owned by the scene?
         /// </summary>
         public void UpdateEditBrush()
         {
@@ -830,7 +830,7 @@ namespace KoiX.Scenes
 
         /// <summary>
         /// Find the latest TouchContact that wasn't UI focused.
-        /// TODO (scoy) This is very much tied to the old UI system.  Figure
+        /// TODO (****) This is very much tied to the old UI system.  Figure
         /// out a better way to do this for the new system.
         /// </summary>
         /// <returns></returns>

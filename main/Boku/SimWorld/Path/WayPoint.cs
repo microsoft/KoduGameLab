@@ -587,7 +587,7 @@ namespace Boku.SimWorld.Path
             // joined by the creation of the new edge.
             Edge e = new Edge(n0, n1);
 
-            // MAFROAD - hmmm...
+            // ***ROAD - hmmm...
             if (n0.Path.Road != null)
             {
                 n0.Path.Road.Rebuild();

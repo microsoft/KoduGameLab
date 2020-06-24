@@ -8,7 +8,7 @@ using Boku.Common;
 namespace Boku.Programming
 {
     /// <summary>
-    /// TODO (scoy)
+    /// TODO (****)
     /// This class has some issues.  For instance, it only seems to work
     /// in a WasPressed sense.  Continuous pressing isn't detected.  Also,
     /// the click detection is on release, which is fine for a UI button

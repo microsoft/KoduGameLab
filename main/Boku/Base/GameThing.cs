@@ -769,7 +769,7 @@ namespace Boku.Base
 
         protected virtual void Register()
         {
-            // TODO (scoy) We should only be registering objects that are currently moving.
+            // TODO (****) We should only be registering objects that are currently moving.
             // Non-moving objects don't need their chassis ticked every frame. 
             InGame.inGame.RegisterChassis(this);
         }
@@ -1174,12 +1174,12 @@ namespace Boku.Base
         ///     created or destroyed during the run.  After the save we
         ///     can then load and run the linked level.
         ///     
-        /// TODO (scoy) Currently, on failure this leave the game in
+        /// TODO (****) Currently, on failure this leave the game in
         /// RunSim mode but all GameThings have been paused so we're 
         /// kind of stuck.  It's not a huge problem but it's also not
         /// very clean.  A return to edit mode might be better.
         /// 
-        /// TODO (scoy) This really doens't seem like it should be a 
+        /// TODO (****) This really doens't seem like it should be a 
         /// method on GameThing.  Think about refactoring it.
         /// </summary>
         /// <returns></returns>
@@ -2061,7 +2061,7 @@ namespace Boku.Base
 
                     if (!quiet)
                     {
-                        // TODO (scoy) Need to find a cool squash sound.
+                        // TODO (****) Need to find a cool squash sound.
                         Foley.PlayPop(this);
                     }
                 }

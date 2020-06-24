@@ -1571,7 +1571,7 @@ namespace Boku.Animatics
                                     if (Time.Paused)
                                     {
                                         // Align active animation with frame boundaries.
-                                        // TODO (scoy) fill this in.
+                                        // TODO (****) fill this in.
                                         if (anims.OneShotAnimationActive)
                                         {
                                             for (int i = 0; i < anims.AllOneShotControllers.Count; i++)

@@ -1382,7 +1382,7 @@ namespace Boku.Base
         /// <summary>
         /// Is this actor's brain registered for updates?
         /// 
-        /// TODO (scoy) remove this.  Do we really need this or
+        /// TODO (****) remove this.  Do we really need this or
         /// is it just redundant information that could get out
         /// of sync?
         /// </summary>
@@ -1513,7 +1513,7 @@ namespace Boku.Base
 
                     // If this actor is a creatable, we need to re-register it with
                     // CardSpace in order to get the name right on modifier tiles.
-                    if (CreatableId != Guid.Empty)
+                    if (CreatableId != Guid.Empty && Creatable)
                     {
                         InGame.inGame.RegisterCreatable(this);
                     }
@@ -1843,7 +1843,7 @@ namespace Boku.Base
         /// </summary>
          
 
-        /// TODO (scoy) From here down this looks like it's all Rover
+        /// TODO (****) From here down this looks like it's all Rover
         /// specific.  If so, why is it here?  Would it be better in
 
         protected float scanRange;
@@ -3879,7 +3879,7 @@ namespace Boku.Base
 
                     // Seagrass is a special case.  We want actors to be able to swim through it without getting blocked
                     // but we still want bumps to be detectable.  So, after adding the touch, exit before bouncing.
-                    // TODO (scoy) Need to add this as a setting in a generic way for all actors.  Should be able to
+                    // TODO (****) Need to add this as a setting in a generic way for all actors.  Should be able to
                     // independently turn off physical collisions and bump detection.
                     if (actor.Classification.name == "seagrass" || (MouseTouchHitInfo.OtherMover != null && MouseTouchHitInfo.OtherMover.Owner.Classification.name == "seagrass"))
                     {
@@ -3944,7 +3944,7 @@ namespace Boku.Base
                     Chassis.Gravity = BaseChassis.kGravity;
                 }
 
-                // TODO (scoy) Encapsulate this in some "collision effect" manager so we 
+                // TODO (****) Encapsulate this in some "collision effect" manager so we 
                 // can have different sounds/visuals for different types of collisions.
                 // For now, just don't do effects for prop/prop collisions.
                 if (Chassis as DynamicPropChassis == null && actor.Chassis as DynamicPropChassis == null)
@@ -4004,7 +4004,7 @@ namespace Boku.Base
         /// Compute the right amount to dampen a tangent velocity for the input time interval
         /// and friction parameter.
         /// 
-        /// TODO (scoy) This is totally useless if it doesn't even document the range
+        /// TODO (****) This is totally useless if it doesn't even document the range
         /// of values and which end of the range aligns with slick vs sticky.
         /// </summary>
         /// <param name="friction"></param>
@@ -4595,7 +4595,7 @@ namespace Boku.Base
             //Debug.Print("starting " + uniqueNum.ToString());
 
 #if NETFX_CORE
-            // TODO (scoy) Restore this when MG does audio.
+            // TODO (****) Restore this when MG does audio.
             return;
 #else
 
@@ -4717,7 +4717,7 @@ namespace Boku.Base
         }
 
 
-        // TODO (scoy) Try and move more of this into the AnimationSet class.
+        // TODO (****) Try and move more of this into the AnimationSet class.
 
         /// <summary>
         /// The animation system was designed to self-update, but we update 
@@ -5446,7 +5446,7 @@ namespace Boku.Base
                 TwitchManager.Set<float> set = delegate(float value, Object param) { HoldDistance = value; };
                 TwitchManager.CreateTwitch<float>(HoldDistance, LocalParameters._holdDistance, set, twitchTime, TwitchCurve.Shape.EaseInOut);
 
-                // TODO (scoy) Is this needed?
+                // TODO (****) Is this needed?
                 // Keep it moving until we finish
                 if (this.Chassis != null)
                 {
@@ -6072,7 +6072,7 @@ namespace Boku.Base
         {
             //
             // Always ignore direct object and use own way of finding pushable actors
-            // TODO (scoy) Why?  Is this because we want fans to push everything in range
+            // TODO (****) Why?  Is this because we want fans to push everything in range
             // without being able to discriminate and only push blue Kodus?
 
             List<GameActor> pushThings = new List<GameActor>();
@@ -6321,7 +6321,7 @@ namespace Boku.Base
                 /// is about to have PostCollisionTestUpdate called on it. That can
                 /// cause problems, so we'll make up for it here.
                 prop.Movement.SetPreviousPositionVelocity();
-                // TODO (scoy) Why are we call PreCollisionTestUpdate() on this newly
+                // TODO (****) Why are we call PreCollisionTestUpdate() on this newly
                 // created actor when Refresh hasn't even brouth it into the game yet?
                 prop.Chassis.PreCollisionTestUpdate(propActor);
 
@@ -7656,7 +7656,7 @@ namespace Boku.Base
                 }
             }
 
-            // TODO (scoy) Is this right? What about < 0?
+            // TODO (****) Is this right? What about < 0?
             if (HitPoints == 0)
             {
                 ExecuteVerb(killVerb, null, null, quiet);
@@ -7668,7 +7668,7 @@ namespace Boku.Base
                 PlayDamageEffect(-amount, hitPos);
             }
 
-            // TODO (scoy) Is this enough?  Or should we assert hitpoints <= 0
+            // TODO (****) Is this enough?  Or should we assert hitpoints <= 0
             died = PendingState == State.Inactive;
 
             return true;
@@ -7968,7 +7968,7 @@ namespace Boku.Base
 
                 SensorTarget target = SensorTargetSpares.Alloc();
                 // We don't need a direction and range so just set the target.
-                // TODO (scoy) This kind of imples that this should be refactored.
+                // TODO (****) This kind of imples that this should be refactored.
                 target.Init(targetHit, direction: Vector3.Zero, range: 0.0f);
                 target.Tag = param;
 
@@ -7976,7 +7976,7 @@ namespace Boku.Base
                 // So, adding to this missileHitSet is at best useless and may be very
                 // wrong if the actor has already been recycled.  We can test for the 
                 // inactive case but there's still the odd case of being recycled.
-                // TODO (scoy) Maybe missile hit stuff should be in the missile rather
+                // TODO (****) Maybe missile hit stuff should be in the missile rather
                 // than the launcher?  Will this fix the problem?
                 if (CurrentState != State.Inactive)
                 {
@@ -8722,37 +8722,6 @@ namespace Boku.Base
                 //}
             }
         }
-        public static void TestScoy(Camera camera)
-        {
-            Vector3 src = new Vector3(-24.3606f, 44.23367f, 4.215578f);
-            Vector3 dst = new Vector3(-24.36319f, 44.23535f, 4.216258f);
-
-            Vector2 minMax = new Vector2(-1.0f, 3.793968f);
-            Vector4 maxStep = new Vector4(
-                Single.MaxValue,
-                Single.MinValue,
-                -1.0f,
-                -1.0f);
-
-            Terrain.HitBlock hitBlock = new Terrain.HitBlock();
-            if (Terrain.Blocked(src, dst, minMax, maxStep, ref hitBlock, 0.0f))
-            {
-                Vector4 color = new Vector4(1.0f, 0.25f, 0.25f, 1.0f);
-                Utils.DrawLine(camera,
-                    src,
-                    hitBlock.Position,
-                    color);
-                color.Y = 1.0f;
-                Utils.DrawLine(camera,
-                    hitBlock.Position,
-                    hitBlock.Position + hitBlock.Normal,
-                    color);
-            }
-            Utils.DrawLine(camera,
-                src,
-                dst,
-                new Vector4(0.25f, 1.0f, 0.25f, 1.0f));
-        }
 
         public override void DebugDisplay(Camera camera)
         {
@@ -8764,7 +8733,6 @@ namespace Boku.Base
             bool doBlock = false;
             if (doBlock)
                 TestBlock(camera);
-            //TestScoy(camera);
 
             DisplayCollisions(camera);
 

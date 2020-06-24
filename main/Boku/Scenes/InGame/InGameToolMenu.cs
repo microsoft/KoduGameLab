@@ -83,8 +83,8 @@ namespace Boku
                     CommandStack.Pop(commandMap);
                 }
                 UpdateWorld();
-                // TODO (scoy) Should this only be called for tools that use the edit brush?
-                // TODO (scoy) How do we turn off the edit brush rendering if we don't need it?
+                // TODO (****) Should this only be called for tools that use the edit brush?
+                // TODO (****) How do we turn off the edit brush rendering if we don't need it?
                 UpdateEditBrush();
 
                 GamePadInput pad = GamePadInput.GetGamePad0();
@@ -92,14 +92,14 @@ namespace Boku
                 // Run!
                 if (pad.Back.WasPressed)
                 {
-                    // TODO (scoy) Transition to RunSim.
+                    // TODO (****) Transition to RunSim.
                     // Or is this already done in the base class???
                 }
 
                 // MiniHub!
                 if (pad.Start.WasPressed)
                 {
-                    // TODO (scoy) Transition to MinHub.
+                    // TODO (****) Transition to MinHub.
                     // Or is this already done in the base class???
                 }
 

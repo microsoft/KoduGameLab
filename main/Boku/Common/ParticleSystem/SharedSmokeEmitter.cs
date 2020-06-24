@@ -85,7 +85,7 @@ namespace Boku.Common.ParticleSystem
 
         #region Members
 
-        private Effect effect = null;        // TODO (scoy) Make this private.
+        private Effect effect = null;        // TODO (****) Make this private.
 
         private DynamicVertexBuffer vbuf = null;
         private int stride = 96;

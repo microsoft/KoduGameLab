@@ -26,7 +26,7 @@ namespace Boku
     /// </summary>
     public class GameListManager
     {
-        // TODO (scoy) Try and change these to be more type specific.
+        // TODO (****) Try and change these to be more type specific.
         public List<object> objectList = null;
         public List<UpdateObject> updateList = null;
         public List<RenderObject> renderList = null;

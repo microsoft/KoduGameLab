@@ -65,7 +65,7 @@ namespace Boku.Programming
             GameThing gameThing = null;
             float range = 0.0f;
 
-            // TODO (scoy) This was causing a null ref in the "Green Ghost V Looper" level
+            // TODO (****) This was causing a null ref in the "Green Ghost V Looper" level
             // when the user pressed the mouse button to launch a wisp.  In that case the
             // targetSet has 1 element in it but it's not "valid" so it never goes into 
             // the nearestTargets list, hence targetSet.Nearest is null.
@@ -107,7 +107,7 @@ namespace Boku.Programming
 
             if (apply)
             {
-                // TODO (scoy) Probably need a TargetObject Action.
+                // TODO (****) Probably need a TargetObject Action.
                 // radius should be from object
                 actionSet.AddActionTarget(Action.AllocAttractor(range, direction, gameThing, reflex), 0.4f);
             }

@@ -63,7 +63,7 @@ namespace Boku.SimWorld
                     if (parent.CurrentState == GameThing.State.Squashed && false)
                     {
                         // Translate down to the ground.
-                        // TODO (scoy) should probably make this happen smoothly.
+                        // TODO (****) should probably make this happen smoothly.
                         float terrainHeight = Boku.SimWorld.Terra.Terrain.GetHeight(parent.Movement.Position);
                         if (terrainHeight > 0)
                         {

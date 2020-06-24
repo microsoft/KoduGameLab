@@ -114,7 +114,7 @@ namespace Boku
                                                 //Boku.Common.MouseInput.StopMouseWorkerThread();
                                             };
 
-            // TODO (scoy) ??? Add drag and drop support.
+            // TODO (****) ??? Add drag and drop support.
             // this.AllowDrop = true;
 
             // this.DragEnter += new DragEventHandler(XNAControl_DragEnter);
@@ -242,7 +242,7 @@ namespace Boku
         }   // end of Render()
 
         /*
-        // TODO (scoy) do we want to support drag and drop for Kodu???
+        // TODO (****) do we want to support drag and drop for Kodu???
         public DragDropEffects DoDragDrop(Object data, DragDropEffects allowedEffects)
         {
             return DragDropEffects.Copy;

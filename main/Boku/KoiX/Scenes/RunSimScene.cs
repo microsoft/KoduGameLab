@@ -31,7 +31,7 @@ namespace KoiX.Scenes
         WidgetSet upperLeftWidgetSet;   // Set for holding widgets in the upper left hand corner.
         BackButton backButton;          // Returns to edit mode.
 
-        // TODO (scoy) Do we want to add GUI buttons here?
+        // TODO (****) Do we want to add GUI buttons here?
 
         #endregion
 

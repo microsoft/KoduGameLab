@@ -95,7 +95,7 @@ namespace KoiX.UI.Dialogs
             // Test against Inactive instead of Active.  This allows the position to 
             // be properly updated even when suspended (still rendering but not accepting input).
             // This happens when a modal dialog is active.
-            // TODO (scoy) Look through all dialogs and see if this should be changed.
+            // TODO (****) Look through all dialogs and see if this should be changed.
             if (!Inactive)
             {
                 this.camera = camera;

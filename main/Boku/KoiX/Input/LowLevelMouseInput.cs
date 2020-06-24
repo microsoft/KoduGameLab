@@ -368,7 +368,7 @@ namespace KoiX.Input
         /// <returns></returns>
         static MouseState InvertY(MouseState state)
         {
-            // TODO (scoy) Figure this out...
+            // TODO (****) Figure this out...
             // Is this ever not true?  If so, which is the right one to use?
             Debug.Assert(KoiLibrary.ClientRect.Height == KoiLibrary.ViewportSize.Y);
             return new MouseState(state.X, KoiLibrary.ClientRect.Height - state.Y, state.ScrollWheelValue, state.LeftButton, state.MiddleButton, state.RightButton, state.XButton1, state.XButton2);

@@ -340,7 +340,7 @@ namespace Boku.Common
         /// <summary>
         /// Returns 1 if v >= 0, -1 otherwise.
         /// 
-        /// TODO (scoy) remove/rename this.
+        /// TODO (****) remove/rename this.
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>

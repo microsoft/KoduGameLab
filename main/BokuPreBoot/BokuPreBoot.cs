@@ -20,7 +20,7 @@ namespace BokuPreBoot
             {
                 string patchPath = "";
 
-                // TODO (scoy) Are we ever running a patched binary???
+                // TODO (****) Are we ever running a patched binary???
                 /*
                 // Figure out whether we are the patched exe by looking at our location on disk.
                 string patchPath = Storage4.UserLocation + Path.DirectorySeparatorChar + @"Patch" + Path.DirectorySeparatorChar;

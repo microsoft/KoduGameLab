@@ -388,7 +388,7 @@ namespace Boku.SimWorld.Terra
                 {
                     return vNumSides_FD > 0 || vNumTop_FD > 0 || vNum_FA > 0;
 
-                    // TODO (scoy) Rethink this so that it actually works.
+                    // TODO (****) Rethink this so that it actually works.
                     // Once optimization is done, should be the following.  But this also gets called before then so we can't change it.
                     //return vBuffTop_FDNumVertices > 0 || vBuffSides_FDNumVertices > 0 || vBuff_FANumVertices > 0;
                 }

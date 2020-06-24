@@ -671,7 +671,7 @@ namespace Boku
                 // which causes the UI experience to to bad.  Since the programming UI is the key
                 // UI that the user interacts with we need it to be as fluid as possible.
 
-                // TODO (scoy) This has gotten a bit out of hand.  Need to rethink the rendering
+                // TODO (****) This has gotten a bit out of hand.  Need to rethink the rendering
                 // order of everything and simplify this.
                 if (InGame.inGame.RenderWorldAsThumbnail && !InGame.RefreshThumbnail)
                 {
@@ -753,7 +753,7 @@ namespace Boku
                         // These are the parameter editing objects which, when activated also
                         // set shared.renderWorldAsThumbnail to true so this is the only place
                         // we need to consider rendering them.
-                        // TODO (scoy) Track this down and fix.
+                        // TODO (****) Track this down and fix.
                         // Note the try/catch clause is there because the UIGridTextListElement has
                         // something wrong with it that causes issues on device reset.  For some
                         // reason, after failing once everything works fine.
@@ -1132,10 +1132,10 @@ namespace Boku
                             InGame.SetRenderTarget(effectsRenderTarget);
 
                             // Clear to get the same results as rendering the skybox w/ DepthPass true.
-                            // TODO (scoy) The comment above mentions that we don't need to clear the depth buffer
+                            // TODO (****) The comment above mentions that we don't need to clear the depth buffer
                             // but this version of clear does clear the depth buffer.  Is that a problem???
                             
-                            // TODO (scoy) Why clear to transparent red???
+                            // TODO (****) Why clear to transparent red???
                             InGame.Clear(new Color(1, 0, 0, 0));
 
                             // Render the terrain.
@@ -1257,7 +1257,7 @@ namespace Boku
                             }
 
                             RestoreViewportToFull();
-                            InGame.Clear(Color.Black);      // TODO (scoy) not needed???
+                            InGame.Clear(Color.Black);      // TODO (****) not needed???
 
                             if (InGame.RefreshThumbnail)
                             {
@@ -1532,7 +1532,7 @@ namespace Boku
                 HelpOverlay.Render();
 
                 // Restore Viewport from tutorial mode.
-                // TODO (scoy) Try to keep pushing this further down until everything
+                // TODO (****) Try to keep pushing this further down until everything
                 // renders with the modified viewport.
                 RestoreViewportToFull();
 
@@ -2150,7 +2150,7 @@ namespace Boku
             device.SetRenderTargets(bindings);
         }
 
-        // TODO (scoy) There's something not right here since topLevelRenderTarget
+        // TODO (****) There's something not right here since topLevelRenderTarget
         // never gets set.  Maybe what we really want is some kind of stack
         // mechanism so we can push/pop the current rendertarget.  This would help
         // out with on-demand loading of things like CardSpace tile textures.
@@ -3314,7 +3314,7 @@ namespace Boku
         /// Switches out of simulation or level edit modes and activates the mini hub.
         /// NOTE: Caller is responsible for resetting sim if needed.
         /// 
-        /// TODO (scoy) This should probably be removed.  The functionality should
+        /// TODO (****) This should probably be removed.  The functionality should
         /// eventually go into the appropriate Activate or Deactivate calls for the
         /// scenes we are leaving and entering.
         /// </summary>

@@ -99,7 +99,7 @@ namespace KoiX.UI
         public PieMenuTheme PieMenuNormal;
         public PieMenuTheme PieMenuNormalFocused;
 
-        // (scoy) TODO Fonts?
+        // (****) TODO Fonts?
 
         // MessageDialog.
         public int MessageDialogMinLines;

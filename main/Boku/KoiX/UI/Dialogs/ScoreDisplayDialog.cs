@@ -27,7 +27,7 @@ namespace KoiX.UI.Dialogs
 {
     public class ScoreDisplayDialog : BaseDialogWithTitle
     {
-        // TODO (scoy)  This is obviously the same as the SortDialog from the LoadLevelMenu.
+        // TODO (****)  This is obviously the same as the SortDialog from the LoadLevelMenu.
         // Should these be generic and reusable.
 
         #region Members
@@ -67,7 +67,7 @@ namespace KoiX.UI.Dialogs
         /// <summary>
         /// Needs to be set before activating.  This color is then used to 
         /// set the user choice on the actual colors.
-        /// TODO (scoy) Should this be done via ShowDialog params?
+        /// TODO (****) Should this be done via ShowDialog params?
         /// </summary>
         public Classification.Colors ClassificationColor
         {

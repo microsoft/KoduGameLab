@@ -147,7 +147,7 @@ namespace KoiX.UI
                     scoreDisplayDialog.ClassificationColor = color;
                     // Position the dialog near the color it is editing.
                     // The "0.8f *" just moves it a bit toward the center of the screen.
-                    // TODO (scoy) Maybe hide this in an accessor.
+                    // TODO (****) Maybe hide this in an accessor.
                     RectangleF rect = scoreDisplayDialog.Rectangle;
                     rect.Position = 0.8f * (bodySet.Position + camera.ScreenToCamera(bodySet.ParentPosition));
                     scoreDisplayDialog.Rectangle = rect;

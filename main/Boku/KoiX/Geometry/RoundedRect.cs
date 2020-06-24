@@ -108,7 +108,7 @@ namespace KoiX.Geometry
                                     Matrix worldMatrix = default(Matrix))
         {
 
-            // TODO (scoy) for bevel plus shadow breaks SM2 so if we're
+            // TODO (****) for bevel plus shadow breaks SM2 so if we're
             // in Reach mode and want a bevelled shape with a shadow we
             // need to render the shadow by itself and then render the
             // shape as a second call.  This be done using 2 passes

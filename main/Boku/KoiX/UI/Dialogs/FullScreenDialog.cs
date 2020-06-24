@@ -27,7 +27,7 @@ namespace KoiX.UI.Dialogs
     /// Note this is non-modal.  We don't want it locking out
     /// other UI interactions.
     /// 
-    /// TODO (scoy) Would it be useful to have another dialog type
+    /// TODO (****) Would it be useful to have another dialog type
     /// that doesn't have a base plate like this one but also
     /// isn't always fullscreen?
     /// </summary>

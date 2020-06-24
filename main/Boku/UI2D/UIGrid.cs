@@ -530,7 +530,7 @@ namespace Boku.UI2D
             }
 
             // See if we have input focus, if so check for any input, unless the guide is up.
-            // TODO (scoy) This is truly horrific.  The "CommandStack" doesn't actually act like a proper stack
+            // TODO (****) This is truly horrific.  The "CommandStack" doesn't actually act like a proper stack
             // so we can get into cases where the current commandMap is actually down one from the top.
             if ((alwaysReadInput || ((CommandStack.Peek() == commandMap || CommandStack.Peek(1) == commandMap) && !ignoreInput)))
             {

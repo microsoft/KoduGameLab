@@ -72,7 +72,7 @@ namespace Boku
             private Vector2 ActionBtnSize
             {
                 get {
-                    // TODO (scoy) *** Does all the code support this changing????
+                    // TODO (****) *** Does all the code support this changing????
                     if (BokuGame.ScreenSize.Y <= 800)
                         return new Vector2(42.0f, 42.0f);
                     if (BokuGame.ScreenSize.Y < 1024)                    

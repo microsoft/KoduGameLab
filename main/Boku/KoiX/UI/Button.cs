@@ -434,7 +434,7 @@ namespace KoiX.UI
                 if (KoiLibrary.LastTouchedDeviceIsGamepad && gamePadTexture != null)
                 {
                     // Render appropriate for gamepad input.
-                    // TODO (scoy) Also do a version for R-to-L languages.
+                    // TODO (****) Also do a version for R-to-L languages.
 
                     SpriteBatch batch = KoiLibrary.SpriteBatch;
                     // The 0.875 is just a scaling of 7/8 since that looks more like a visual match for the regular button.
@@ -501,7 +501,7 @@ namespace KoiX.UI
             // If not here, when the dialog displays, the button then starts
             // transitioning from Selected to Normal and we see the color change.
             //
-            // TODO (scoy) Would it be better to instantly force the proper theme 
+            // TODO (****) Would it be better to instantly force the proper theme 
             // settings in Activate?  Need to be sure not to mess up latchable
             // buttons.  (Do we expect these to be able to keep state over an
             // Activate/Deactivate cycle?)

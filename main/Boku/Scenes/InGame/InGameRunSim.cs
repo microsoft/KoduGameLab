@@ -322,7 +322,7 @@ namespace Boku
             // one for each mode the camera can be in.
             //
 
-            const float kCursorSpeed = 20.0f;   // Meters per second.  TODO (scoy) should this scale based on camera distance from cursor?
+            const float kCursorSpeed = 20.0f;   // Meters per second.  TODO (****) should this scale based on camera distance from cursor?
             const float kOrbitSpeed = 2.0f;     // Radians per second.
             const float kZoomFactor = 1.1f;     // Multiplicative factor applied per second.
 

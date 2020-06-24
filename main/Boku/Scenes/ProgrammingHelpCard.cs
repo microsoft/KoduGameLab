@@ -736,7 +736,7 @@ namespace Boku
                             }
                             else
                             {
-                                // TODO (scoy) what description should we have for an empty reflex?  Maybe something talking about 'when' and 'do'?
+                                // TODO (****) what description should we have for an empty reflex?  Maybe something talking about 'when' and 'do'?
                                 shared.descBlob.RawText = CardSpace.Cards.GetHelpDescription(@"huh?");
                             }
                             shared.descOffset = 0;

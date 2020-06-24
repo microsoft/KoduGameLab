@@ -67,7 +67,7 @@ namespace Boku
                 // The actual input focus is in the currently active tool so
                 // temporarily push ourselves onto the command stack so we
                 // can still steal camera control input.
-                // TODO (scoy) Move this up above the tool update to remove a frame of lag?  Will this cause other problems?
+                // TODO (****) Move this up above the tool update to remove a frame of lag?  Will this cause other problems?
                 CommandStack.Push(commandMap);
 
                 // No need to lock the zoom any more since we're using the trigger buttons for grid selection.

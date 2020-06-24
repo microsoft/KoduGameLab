@@ -288,7 +288,7 @@ namespace Boku.Base
             //Debug.Print("    break;");
 
 #if NETFX_CORE
-            // TODO (scoy) HACK HACK just hard code these to know values since
+            // TODO (****) HACK HACK just hard code these to know values since
             // I can't figure out what's going wrong in the content processing.
             switch (bone.Name)
             {
@@ -508,7 +508,7 @@ namespace Boku.Base
 
     public class StateRenderObj
     {
-        // TODO (scoy) make more specific.
+        // TODO (****) make more specific.
         private List<object> listMeshRenderObj;
         private BoundingSphere boundingSphere;
         private BoundingBox boundingBox;
@@ -541,7 +541,7 @@ namespace Boku.Base
         {
             get
             {
-                // TODO (scoy) make more specific.
+                // TODO (****) make more specific.
                 List<List<PartInfo>> listPartInfos = new List<List<PartInfo>>();
                 for (int iMesh = 0; iMesh < listMeshRenderObj.Count; iMesh++)
                 {

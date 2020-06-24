@@ -159,7 +159,7 @@ namespace Boku
                     // better.  I'm leaving an assert in the code so we don't just forget about it.
                     if (CommandStack.Depth() == 1 && CommandStack.Peek().name == "PreGameBase")
                     {
-                        //Debug.Assert(false, "Hack to fix lockup problem, you should be able to ignore and resume with no trouble.  Please let scoy know if this works.");
+                        //Debug.Assert(false, "Hack to fix lockup problem, you should be able to ignore and resume with no trouble.  Please let **** know if this works.");
 
                         // Remove PreGameBase and replace with InGameEditBase.
                         CommandStack.Pop(CommandStack.Peek());
@@ -477,7 +477,7 @@ namespace Boku
 
                 UpdateHelpOverlay();
 
-                // TODO (scoy) Not sure this is 100% the right place for this.
+                // TODO (****) Not sure this is 100% the right place for this.
                 ToolTipManager.Update();
 
             }   // end of EditObjectUpdateObj Update()
@@ -1163,12 +1163,12 @@ namespace Boku
                 base.Activate();
 
                 selectedObject = null;      // Never start in selected mode.
-                                            // TODO (scoy) Except, maybe in the case of editing a selected object's parameters.
+                                            // TODO (****) Except, maybe in the case of editing a selected object's parameters.
                                             // When we come back here from exiting
                 LastSelectedActor = null;
                 /// Don't null out the cutPasteObject. That way, if we load up
                 /// a new level, we can still paste it in, allowing copy of objects
-                /// from one level to another. maf
+                /// from one level to another. ***
                 parent.cursor3D.Activate();
                 parent.cursor3D.Hidden = false;
                 parent.cursor3D.DiffuseColor = new Vector4(1, 1, 1, 1);

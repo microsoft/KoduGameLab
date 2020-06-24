@@ -89,7 +89,7 @@ namespace KoiX.UI
                         }
                     }
 
-                    // TODO (scoy) Should we only call OnChange when selected or
+                    // TODO (****) Should we only call OnChange when selected or
                     // should be call any time the state changes?
                     if (Selected)
                     {

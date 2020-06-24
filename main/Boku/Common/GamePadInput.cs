@@ -925,7 +925,7 @@ namespace Boku.Common
         /// Given a button, will ignore all input on that button until the button 
         /// is released.  After the release everything goes back to normal.
         /// Currently only A, B, X, and Y supported.
-        /// - Added a few more. maf -
+        /// - Added a few more. *** -
         /// </summary>
         /// <param name="button"></param>
         public static void IgnoreUntilReleased(Buttons button)

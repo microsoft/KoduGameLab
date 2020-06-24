@@ -110,7 +110,7 @@ namespace KoiX.Geometry
         /// Note that scaling from this matrix is not taken into account
         /// when fixing up the size of the blendEdge.  So, for best results
         /// only use this for rotation and translation.
-        /// TODO (scoy) Fix this?  Can we pass in the current camera zoom and adjust in the shader?
+        /// TODO (****) Fix this?  Can we pass in the current camera zoom and adjust in the shader?
         /// </summary>
         public Matrix WorldMatrix
         {

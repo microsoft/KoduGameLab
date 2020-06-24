@@ -99,7 +99,7 @@ namespace KoiX
 
         //
         // Swizzle style operators on Vector3.  Wish these could be accessors.
-        // TODO (scoy) Flesh these out fully?
+        // TODO (****) Flesh these out fully?
         //
         public static Vector2 XY(this Vector3 v)
         {

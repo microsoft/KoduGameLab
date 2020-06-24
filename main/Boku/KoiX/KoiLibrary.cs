@@ -101,7 +101,7 @@ namespace KoiX
 
         /// <summary>
         /// Should we be using ViewportSize or ClientRect?  When are they different?
-        /// TODO (scoy) Figure this out and document here.
+        /// TODO (****) Figure this out and document here.
         /// </summary>
         public static Point ViewportSize
         {
@@ -187,7 +187,7 @@ namespace KoiX
         /// Gives the last touched input device for teh previous frame.
         /// this can be compared to LastTouchedDevice to detect any
         /// change in input device.
-        /// TODO (scoy) Is this the only use for this?  Maybe expose
+        /// TODO (****) Is this the only use for this?  Maybe expose
         /// a bool InputDeviceChanged?
         /// </summary>
         /*

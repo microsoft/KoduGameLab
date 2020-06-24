@@ -208,7 +208,7 @@ namespace KoiX.UI
             }
             */
 
-            // TODO (scoy)  Figure out how to properly do this.
+            // TODO (****)  Figure out how to properly do this.
             //
             // Original intent was to have clear button go
             // away when not needed.  This would require the dPad links

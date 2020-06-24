@@ -340,7 +340,7 @@ namespace Boku.Common
                         RenderTexture(camera, ce.Texture, cachedTargetRect, offset);
 
                         // Clear the bitmap for next call.
-                        // TODO (scoy) is there a dirty rect version of this that is faster?
+                        // TODO (****) is there a dirty rect version of this that is faster?
                         // Maybe try DrawRectangle?
                         graphics.Clear(System.Drawing.Color.Transparent);
 
@@ -380,7 +380,7 @@ namespace Boku.Common
                     RenderTexture(camera, texture, targetRect, offset);
 
                     // Clear the bitmap for next call.
-                    // TODO (scoy) is there a dirty rect version of this that is faster?
+                    // TODO (****) is there a dirty rect version of this that is faster?
                     // Maybe try DrawRectangle?
                     graphics.Clear(System.Drawing.Color.Transparent);
                 }
@@ -492,7 +492,7 @@ namespace Boku.Common
             // We don't want to try and copy data that doesn't exist. 
             batchRect = Rectangle.Intersect(batchRect, bitmapRect);
 
-            // TODO (scoy) Clip batchRect if it goes outside of the texture.
+            // TODO (****) Clip batchRect if it goes outside of the texture.
             // Note this needs to take into account the offset value.
 
 

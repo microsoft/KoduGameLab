@@ -46,7 +46,7 @@ namespace KoiX
         float rotation = 0.0f;
 
         // Allows sprite to be flipped horizontally or vertically.
-        // TODO (scoy) Need to make sure this works w/ hit and collision testing.
+        // TODO (****) Need to make sure this works w/ hit and collision testing.
         SpriteEffects flip = SpriteEffects.None;
 
         // Radius used for bounding circle tests.  Assumes center is at position/origin.
@@ -322,7 +322,7 @@ namespace KoiX
             bool once = false;
 #endif
 
-            // TODO (scoy) Figure out proper map level to use (if available).  Should just be a function of scale.
+            // TODO (****) Figure out proper map level to use (if available).  Should just be a function of scale.
             // Note that we only care about s1's scaling since that's the source.
             byte[,] map0 = s0.collisionMaps[0];
             byte[,] map1 = s1.collisionMaps[0];

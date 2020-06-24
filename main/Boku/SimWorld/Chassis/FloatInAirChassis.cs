@@ -40,7 +40,7 @@ namespace Boku.SimWorld.Chassis
         private float deltaAltitude = 0.0f;                                     // How fast we're currently moving up or down.
 
         //
-        // TODO (scoy)
+        // TODO (****)
         // These speed and acceleration limits are a bit arbitrary.
         // Should we use actor.CalcMaxVerticalSpeed() and 
         // actor.CalcMaxVewrticalAcceleration() instead?

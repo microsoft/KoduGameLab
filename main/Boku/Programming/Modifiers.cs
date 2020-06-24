@@ -23,7 +23,7 @@ namespace Boku.Programming
     /// <summary>
     /// This stucture is held by the parent reflex, and is passed to each modifier when entering run mode
     /// to gather up all the modifier parameters so that we don't have to repeatedly find them every frame.
-    /// (scoy) Of course this makes modifiers totally useless for anything where their value may be
+    /// (****) Of course this makes modifiers totally useless for anything where their value may be
     /// changing over the course of a run, for instance making Scores or Health a modifier.  Also, the
     /// implementation assumes that modifier values are fixed at compile time.  You can't even have them
     /// be user settable.

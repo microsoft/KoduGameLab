@@ -104,7 +104,7 @@ namespace KoiX.Input
         /// <summary>
         /// The InputEventHandler that currently has claimed the touch focus.
         /// 
-        /// TODO (scoy)  This doesn't really seem to be used right now.  It's not
+        /// TODO (****)  This doesn't really seem to be used right now.  It's not
         /// set and cleared as different handlers take focus.  I think the problem
         /// is that it's difficult to know when to release focus when there are 
         /// multiple possible touches.  (with one touch we could (?) just look at

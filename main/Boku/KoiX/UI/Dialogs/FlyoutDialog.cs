@@ -48,7 +48,7 @@ namespace KoiX.UI.Dialogs
         FlyoutButton linkButton;
 
         /// <summary>
-        /// TODO (scoy) These should actually be passed as args via Activate() but
+        /// TODO (****) These should actually be passed as args via Activate() but
         /// the plumbing to pass the args through the DialogManager isn't in place
         /// yet, or even really thought out.
         /// </summary>
@@ -220,7 +220,7 @@ namespace KoiX.UI.Dialogs
         void Setup()
         {
             // Start with a clean set.
-            // TODO (scoy) Should this be a method so Widgets is not exposed?
+            // TODO (****) Should this be a method so Widgets is not exposed?
             buttonSet.Widgets.Clear();
             buttonSet.FitToParentDialog = true;
 

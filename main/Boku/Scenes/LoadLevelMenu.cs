@@ -714,7 +714,7 @@ namespace Boku
                 savePicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
                 savePicker.FileTypeChoices.Add("Kodu Game Lab World", new List<string>() { ".Kodu2" });
                 savePicker.DefaultFileExtension = ".Kodu2";
-                // TODO (scoy) where do we get/generate this?
+                // TODO (****) where do we get/generate this?
 
                 // Set the default filename.
                 string folderName = Utils.FolderNameFromFlags(level.Genres);
@@ -957,7 +957,7 @@ namespace Boku
                 }
                 else
                 {
-                    // TODO (scoy) I hate having [Package] prepended to the file names.  Why bother?
+                    // TODO (****) I hate having [Package] prepended to the file names.  Why bother?
                     string packageName = Strings.Localize("loadLevelMenu.exportPackageString") + level.Name;
                     fileName = LevelPackage.CreateExportFilenameWithoutExtension(packageName, level.Creator);
                 }
@@ -1137,7 +1137,7 @@ namespace Boku
 #if !NETFX_CORE
                         // Only display message on fullscreen.  On windowed we 
                         // use the SaveDialog instead.
-                        // TODO (scoy) *** Aren't we always windowed now?
+                        // TODO (****) *** Aren't we always windowed now?
                         //if (Boku.BokuGame.Graphics.IsFullScreen)
                         {
                             if (parent.shared.CurWorld.LinkedFromLevel != null || parent.shared.CurWorld.LinkedToLevel != null)
@@ -1793,7 +1793,7 @@ namespace Boku
                 HandleTouchInput();
 
                 // Note that no input goes to the levelGrid while the popup (or the sort list) is active.
-                // TODO (scoy) Should this be rethought to send input to those items first instead of 
+                // TODO (****) Should this be rethought to send input to those items first instead of 
                 // updating the main list first?
                 if (shared.levelGrid != null && shared.popup.Active == false && shared.sortList.Active == false && parent.pendingState != States.Inactive)
                 {
@@ -2760,7 +2760,7 @@ namespace Boku
                 else
                 {
                     level.DownloadState = LevelMetadata.DownloadStates.Failed;
-                    // TODO (scoy) Give an error.
+                    // TODO (****) Give an error.
                 }
             }   // end of GetWorldDataCallback()
 
@@ -3719,7 +3719,7 @@ namespace Boku
             packet.UserId = 0;
             if (0 == Web.Community.Async_PostLike(packet, Callback_PostLikeByWorldId, null))
             {
-                // TODO(Scoy_Socl): Handle Error
+                // TODO: Handle Error
             }
         }   // end of LikeLevel()
 
@@ -3746,7 +3746,7 @@ namespace Boku
             packet.WorldId = shared.CurWorld.WorldId;
             if (0 == Web.Community.Async_PostLikeByWorldId(packet, Callback_PostLikeByWorldId, null))
             {
-                // TODO(Scoy_Socl): Handle Error
+                // TODO: Handle Error
             }
         }   // end of LikeLevelByWorldId()
 
@@ -4428,7 +4428,7 @@ namespace Boku
 
         public void InitDeviceResources(GraphicsDevice device)
         {
-            // TODO (scoy) *** How does this get scaled if window changes size???
+            // TODO (****) *** How does this get scaled if window changes size???
             Point deviceSize = new Point(device.Viewport.Width, device.Viewport.Height);
 
             blockingOpMessage = new SimpleMessage();

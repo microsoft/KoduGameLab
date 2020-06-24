@@ -74,7 +74,7 @@ namespace Boku
                     return;
                 }
 
-                // TODO (scoy) Needed?
+                // TODO (****) Needed?
                 // Do the common bits of the Update().
                 UpdateCamera();
                 UpdateWorld();

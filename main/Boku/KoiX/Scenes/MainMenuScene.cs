@@ -242,7 +242,7 @@ namespace KoiX.Scenes
 
                     boku.RenderObject.Render(bokuCamera);
 
-                    // TODO (scoy) How to temporarily disable point lights???
+                    // TODO (****) How to temporarily disable point lights???
                     //Luz.SetToEffect(false); // re-enable scene point lights
                     BokuGame.bokuGame.shaderGlobals.PopLightRig(oldRig);
                 }

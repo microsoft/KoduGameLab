@@ -20,7 +20,7 @@ namespace KoiX.UI
     /// <summary>
     /// Base class for Buttons.  Adds button specific code.
     /// 
-    /// TODO (scoy) Need to rethink this and make it (or another base class)
+    /// TODO (****) Need to rethink this and make it (or another base class)
     /// work for various button types:
     ///     latchable vs non-latchable
     ///     one-shot vs continuous (handled via WasPressed vs IsPressed?)

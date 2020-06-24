@@ -529,7 +529,7 @@ namespace Boku.Programming
                 DialogResult? print = DialogResult.OK;
 
                 // Skip the print dialog if in full screen mode.
-                // TODO (scoy) *** Aren't we always windowed now???
+                // TODO (****) *** Aren't we always windowed now???
                 //if (!BokuGame.Graphics.IsFullScreen)
                 {
                     PrintDialog dialog = new PrintDialog();

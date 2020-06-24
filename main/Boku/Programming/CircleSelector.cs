@@ -40,7 +40,7 @@ namespace Boku.Programming
     /// will necessarily go out of the circler's sight periodically. Cut?
     /// 
     /// Rewritten. It's now much shorter, doesn't have those ridiculous waypoints, and 
-    /// actually works. mafinch 12.9.08
+    /// actually works. *** 12.9.08
     /// </summary>
     public class CircleSelector : Selector
     {

@@ -70,7 +70,7 @@ namespace Boku
             /// All animators in the stack should have the same set of animations.
             AnimationInstance animator = _animators.Sample;
 
-            // TODO (scoy)  Do we need this check???
+            // TODO (****)  Do we need this check???
             if (animator.HasAnimation("full_running"))
             {
                 // Add individual animations to blend controller.

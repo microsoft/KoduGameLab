@@ -34,7 +34,7 @@ namespace KoiX.UI.Dialogs
     /// sampling issues.  So, even though this gets a camera with some
     /// zoom value we convert everything to screen coords for rendering.
     /// 
-    /// TODO (scoy) This would probably be better if we made the 
+    /// TODO (****) This would probably be better if we made the 
     /// scrollable text part of this a first class widget rather 
     /// than making it part of the dialog.  Maybe we should be using
     /// ScrollableTextBox here?  The issues is that this dialog scales
@@ -308,7 +308,7 @@ namespace KoiX.UI.Dialogs
                         // same margin from either side.  For some reason, the occasional line of 
                         // text looks like it is going long.  So, by making this 3 we double the 
                         // margin on the right edge making things look better.
-                        // TODO (scoy) Should we shift everything a bit to the right for R-to-L languages?
+                        // TODO (****) Should we shift everything a bit to the right for R-to-L languages?
                         int blobWidth = (int)((textWidth - 3 * margin));
                         blob.Width = blobWidth;
 
@@ -641,7 +641,7 @@ namespace KoiX.UI.Dialogs
         /// <summary>
         /// Scrolls the text.  If needed, will also refresh the RT.
         /// Clamps to valid range.
-        /// TODO (scoy) Think about adding a twitch to this so that the scrolling is smooth.
+        /// TODO (****) Think about adding a twitch to this so that the scrolling is smooth.
         /// </summary>
         /// <param name="deltaPixels">Amount to scroll in pixels.  Positive scrolls down in text (ie texture moves up).</param>
         void Scroll(float deltaPixels)

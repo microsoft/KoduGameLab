@@ -248,7 +248,7 @@ namespace Boku.SimWorld.Path
             public Color texSelect; // .a selects uv source, vert or horizontal
 
             static VertexDeclaration decl = null;
-            // MAFROAD - eventually want to convert the texcoord Vector2 to HalfVector2,
+            // ***ROAD - eventually want to convert the texcoord Vector2 to HalfVector2,
             //          to get this back down to 32 bytes.
             static VertexElement[] elements = new VertexElement[]
             {

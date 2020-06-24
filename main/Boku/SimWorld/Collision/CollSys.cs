@@ -488,7 +488,7 @@ namespace Boku.SimWorld.Collision
         /// <param name="startPos0">start position of swept sphere</param>
         /// <param name="endPos0">end position of swept sphere</param>
         /// <param name="radii0">Radii of swept ellipsoid.</param>
-        /// <param name="first">This is the index of the first mover to check for collisions with.  Start, end, and radii come from the previous mover.  TODO (scoy) Change numbering so this is more clear.</param>
+        /// <param name="first">This is the index of the first mover to check for collisions with.  Start, end, and radii come from the previous mover.  TODO (****) Change numbering so this is more clear.</param>
         /// <param name="listAll">When true, all hits are listed.  When false, only the nearest hit is listed.</param>
         /// <param name="hits"></param>
         /// <returns></returns>
@@ -515,7 +515,7 @@ namespace Boku.SimWorld.Collision
 
                 // Note we used the Z part of the radii.  So, on squashed movers we
                 // might get some intersection.
-                // TODO (scoy) Actually figure out how to test a swept ellipsoid against
+                // TODO (****) Actually figure out how to test a swept ellipsoid against
                 // the Primitive based collision shapes.
                 if (thing.Collide(startPos0, endPos0, radii0.Z, ref curCollPrim))
                 {

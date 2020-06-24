@@ -212,7 +212,7 @@ namespace Boku.SimWorld.Chassis
                     position.Z = floor + MinHeight;     // Move back to above ground.
                     velocity.Z = Math.Max(velocity.Z, 0.1f);
 
-                    // TODO (scoy) Bump sound and dust cloud?
+                    // TODO (****) Bump sound and dust cloud?
                 }
                 else
                 */

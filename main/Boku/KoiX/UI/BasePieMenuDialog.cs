@@ -508,7 +508,7 @@ namespace KoiX.UI.Dialogs
                 // Calc padding to adjust for distortion of rect dur to rotation.
                 {
                     // Calc center of where we think texture should go.
-                    // TODO (scoy) in reality this may look better shifted slightly outward toward
+                    // TODO (****) in reality this may look better shifted slightly outward toward
                     // the fatter edge of the pie slice.  Also will need to adjust for the label.
                     Vector2 textureCenter = e.Center + (e.InnerRadius + e.OuterRadius) / 2.0f * vectorToTileCenter;
                     Vector2 size = new Vector2(e.Texture.Width, e.Texture.Height);
@@ -531,7 +531,7 @@ namespace KoiX.UI.Dialogs
             }   // end of loop over elements.
 
             
-            // TODO (scoy) create tab list and dapd links manually.
+            // TODO (****) create tab list and dapd links manually.
 
 
 
