@@ -75,7 +75,7 @@ namespace BokuSetupTool
 
             Console.WriteLine("Updating " + filename + "...");
 
-            TFS.EditFile(filename);
+            //TFS.EditFile(filename);
 
             return 0;
         }
@@ -105,10 +105,10 @@ namespace BokuSetupTool
             string assemFilename = solutionDir + @"Boku\Properties\AssemblyInfo.cs";
             string buildFilename = solutionDir + @"BokuSetup\Build.wxi";
 
-            // Checkout Boku's AssemblyInfo.cs file from Source Depot
+            // Checkout Boku's AssemblyInfo.cs file from source control.
 
             Console.WriteLine("Updating " + assemFilename + "...");
-            TFS.EditFile(assemFilename);
+            //TFS.EditFile(assemFilename);
 
             // Read the version number from the file, writing a new version of the file with an incremented build number.
 
@@ -153,7 +153,7 @@ namespace BokuSetupTool
             // Write an updated version of BokuSetup's Build.wxi file.
 
             Console.WriteLine("Updating " + buildFilename + "...");
-            TFS.EditFile(buildFilename);
+            //TFS.EditFile(buildFilename);
 
             StreamWriter buildDst = new StreamWriter(buildFilename);
             buildDst.WriteLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
