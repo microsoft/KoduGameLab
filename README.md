@@ -6,6 +6,15 @@ Kodu originated as a project in Microsoft Research.  The original target platfor
 ## Branches
 Currently we have two active branches, **Main** and **V2**.  The **Main** branch contains the current release build of Kodu.  This branch is primarily used for fixing bugs in the release.  The **V2** branch is a working branch where currently the underlying UI system is being rewritten/replaced.  The **V2** branch builds but is not yet fully functional.
 
+## Building Kodu
+
+Kodu is written in C# using XNA for graphics and sound.  While this is a wonderful environment for working in it does also present some limitations.  Most notably, Kodu still expects to be built using VS2010.  Apparently it's not too difficult to get Kodu to build with later versions of VS but while the code builds adding new content fails.  So, we've stuck with 2010.
+### Prerequisites
+[XNA 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=23714) -- Graphics, sound, input, etc.
+
+[WiX 3.10.4](https://github.com/wixtoolset/wix3/releases/tag/wix3104rtm) -- Used for building the release installer.
+
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
