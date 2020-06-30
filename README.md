@@ -3,6 +3,8 @@ Kodu Game Lab is a 3D game development environment that is designed to teach kid
 
 Kodu originated as a project in Microsoft Research.  The original target platform was the Xbox 360 using C3, XNA, and releasing via the Indie Games Channel.  The choice of releasing on the Xbox informed much of the early UI development since everything needed to be done using a game controller.  Since porting to the PC, support for keyboard, mouse, and touch have been added.
 
+The goal for Kodu has always been to be as easy as possible for new users.  Guided by this goal, we've tended to design new features so that they are simple and understandable rather than more complex and complete.
+
 ## Branches
 Currently we have two active branches, **Main** and **V2**.  The **Main** branch contains the current release build of Kodu.  This branch is primarily used for fixing bugs in the release.  The **V2** branch is a working branch where currently the underlying UI system is being rewritten/replaced.  The **V2** branch builds but is not yet fully functional.
 
@@ -14,6 +16,9 @@ Kodu is written in C# using XNA for graphics and sound.  While this is a wonderf
 
 [WiX 3.10.4](https://github.com/wixtoolset/wix3/releases/tag/wix3104rtm) -- Used for building the release installer.
 
+The solution for Kodu is actually called **Boku**.  **Boku** was the original name of the project.  Before release we had to change it because Boku was already being used by another company in the games space.  Looking at the code you will also notice Boku used in several of the namespaces.
+
+In the solution there are several build options.  The three that matter are **Debug**, **Release**, and **Installer**.  The **Debug** and **Release** builds are for building and running Kodu from within VS and work just like you'd expect them to.  The **Installer** build creates the .MSI and .EXE installation packages.  For this, select **Installer** and then build as usual.  At the end of the build process a Windows Explorer instance will be opened to the folder containing the build results.  Note that this build will automatically increment the version number which touches 3 files (which need to be checked in in their new state).
 
 ## Contributing
 
