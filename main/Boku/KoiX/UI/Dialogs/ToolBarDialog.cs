@@ -1,4 +1,7 @@
-﻿// If defined, the toolbar is placed at the traditional, bottom of screen, position.
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+// If defined, the toolbar is placed at the traditional, bottom of screen, position.
 // If not defined, the toolbar is placed vertically along the right edge of the screen.
 #define TOOLBAR_AT_BOTTOM
 

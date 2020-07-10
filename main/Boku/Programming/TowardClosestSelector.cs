@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +23,7 @@ namespace Boku.Programming
 {
     /// <summary>
     /// this selector will find the closest Action Thing and 
-    /// calculate a vector toward it and hand this to the actuator’s arbitrator.
+    /// calculate a vector toward it and hand this to the actuatorï¿½s arbitrator.
     /// 
     /// It is known also as Toward
     /// </summary>

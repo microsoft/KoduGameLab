@@ -1,4 +1,7 @@
-﻿// Draws overlays on words and icons as rendered to help debug the layout.
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+// Draws overlays on words and icons as rendered to help debug the layout.
 //#define DEBUG_SPACING
 
 using System;

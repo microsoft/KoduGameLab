@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 // Uncomment to debug pushing and popping of input sets.
 //#define DEBUG_INPUT_SETS

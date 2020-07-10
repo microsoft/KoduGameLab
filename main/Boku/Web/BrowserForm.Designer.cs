@@ -1,4 +1,7 @@
-﻿namespace Boku.Web
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+namespace Boku.Web
 {
 #if !NETFX_CORE
     partial class BrowserForm

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #include "Terrain_FD.fx"
 #include "Terrain_FA_Edit.fx"

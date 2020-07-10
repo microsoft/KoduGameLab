@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 // Uncomment this to have rendertarget allocation info printed to output.
 //#define PRINT_RT_DEBUG
 

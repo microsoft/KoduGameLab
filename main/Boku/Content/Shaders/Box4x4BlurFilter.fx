@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 //  Box4x4Blur -- 4 by 4 box filter, 
 //      designed to be fast if used to downsample to a rendertarget that is 1/4 the size.

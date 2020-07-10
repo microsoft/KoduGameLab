@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef SURFACE_SM3_FX
 #define SURFACE_SM3_FX

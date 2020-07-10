@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 //#define PROGRAMMING_TILE_HACK
 //#define GENERATE_TILE_MAP
@@ -39,7 +42,7 @@ namespace Boku.Programming
     /// the Tiles text or icon without changing code.  Further, it includes 
     /// properties that allow a tile to be archived (hidden) and properties to 
     /// hint at how the tiles should be grouped.  
-    /// Lastly the file includes a section to define replacements for “upgraded” 
+    /// Lastly the file includes a section to define replacements for ï¿½upgradedï¿½ 
     /// tiles and a section to define the UI groups Icon and labels.
     /// </summary>
     public class CardSpace

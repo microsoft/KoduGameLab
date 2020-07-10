@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;

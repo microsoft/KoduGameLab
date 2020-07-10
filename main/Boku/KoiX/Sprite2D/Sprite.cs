@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //#define HIT_TEST_DEBUG
 //#define COLLISION_DEBUG
 //#define INV_DEBUG

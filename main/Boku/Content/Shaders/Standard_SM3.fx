@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef STANDARD_SM3_FX
 #define STANDARD_SM3_FX

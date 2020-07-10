@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 // Uncomment to get debug spew on camera saves and resets.
 //#define CAMERA_DEBUG
 

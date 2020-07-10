@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,9 +25,9 @@ namespace Boku.Programming
     /// This will just select the closest Action Thing from the set and add 
     /// that to the actuators arbitrator.
     /// 
-    /// this selector is known as “nearest” and is hidden unless there is another valid selector.  
+    /// this selector is known as ï¿½nearestï¿½ and is hidden unless there is another valid selector.  
     /// 
-    /// It was known as “Use” for a bit.  
+    /// It was known as ï¿½Useï¿½ for a bit.  
     ///
     /// This is not used for WHEN See Apple DO Move Toward
     /// This IS used for WHEN See Apple DO Shoot

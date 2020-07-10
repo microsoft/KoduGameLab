@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 //
 //	Shadow helper function used by x-file (3d model) rendering.

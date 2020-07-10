@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 // On exit from the kode editor, the kode's Xml will be output to the clipboard.
 // This helps support grabbing kode snippets for some of the help options.

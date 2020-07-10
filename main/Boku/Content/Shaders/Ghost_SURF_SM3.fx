@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef GHOST_SURF_SM3_FX
 #define GHOST_SURF_SM3_FX

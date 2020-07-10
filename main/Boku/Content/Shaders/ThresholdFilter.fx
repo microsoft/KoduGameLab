@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 //  Threshold -- Allow anything above the threshold to pass through, 
 //               anything below is clamped to 0.

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 // UI -- Shaders to handle the standard materials for UI elements from 3DS Max via Xbf Files
 //

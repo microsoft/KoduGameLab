@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +10,7 @@ namespace Boku.Input
     /// <summary>
     /// This class is used to manage the active input constraints for the input system.  
     /// It is primarily used by the Tutorial (a member of one) to expose the management.
-    /// The issue today is that not all of Boku’s user interaction uses one system nor 
+    /// The issue today is that not all of Bokuï¿½s user interaction uses one system nor 
     /// do all systems allow this to be used without interjecting specific checks at 
     /// every use location scattering lots of code and definition throughout the code. 
     /// This should be improved.

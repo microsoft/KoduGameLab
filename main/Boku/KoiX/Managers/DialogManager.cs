@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 // Set this to visually debug DPad links between widgets.
 //#define DEBUG_NAVIGATION_LINKS
 

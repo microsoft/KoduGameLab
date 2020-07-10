@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 // Uncomment this to debug calls to BaseDialog.
 //#define DEBUG_ACTIVITY
 

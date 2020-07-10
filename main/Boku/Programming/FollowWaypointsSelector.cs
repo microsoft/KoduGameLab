@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,7 +30,7 @@ namespace Boku.Programming
     /// It will interact with a Waypoint set and provide target positions for the actuator 
     /// based upon the state of following said Waypoint set.
     /// 
-    /// this selector is known as “Path”, was “Follow”, and “Waypoints”.  
+    /// this selector is known as ï¿½Pathï¿½, was ï¿½Followï¿½, and ï¿½Waypointsï¿½.  
     /// 
     /// </summary>
     public class FollowWaypointsSelector : Selector

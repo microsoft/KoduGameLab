@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 // Uncomment this to see debug spew about the help overlay stack.
 //#define DEBUG_SPEW

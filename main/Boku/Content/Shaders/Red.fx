@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 
 float4x4    WorldViewProjMatrix = float4x4(float4(1.0f, 0.0f, 0.0f, 0.0f),

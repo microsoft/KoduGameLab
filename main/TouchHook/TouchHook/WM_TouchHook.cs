@@ -1,4 +1,7 @@
-﻿//#define STRESS_TEST
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+//#define STRESS_TEST
 
 using System;
 using System.Collections.Generic;

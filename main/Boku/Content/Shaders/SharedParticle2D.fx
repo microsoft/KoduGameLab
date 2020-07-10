@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 //
 // SharedParticle2D -- A collection of shaders for textured, 2D particles which use the shared emitters.

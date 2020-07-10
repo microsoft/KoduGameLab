@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 //
 // Particle3D -- A collection of shaders for non-textured, 3D particles.
