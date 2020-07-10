@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 #if DEBUG
 #define Debug_CountTerrainVerts
 #define Debug_DrawNormalsWithF8

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 // Uncomment this to dump debug spew when checking compatibility of tiles.
 // Beware, this spews a lot of output.
 //#define DEBUG_COMPATIBILITY

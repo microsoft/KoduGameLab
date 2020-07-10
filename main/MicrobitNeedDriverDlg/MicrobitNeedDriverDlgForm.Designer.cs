@@ -1,4 +1,7 @@
-﻿namespace MicrobitNeedDriverDlg
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+namespace MicrobitNeedDriverDlg
 {
     partial class MicrobitNeedDriverDlgForm
     {

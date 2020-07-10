@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 // Test shaders -- Just a grab bag of stuff to do quick testing with.
 //

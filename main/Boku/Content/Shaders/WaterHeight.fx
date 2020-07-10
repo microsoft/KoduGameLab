@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef WATERHEIGHT_H
 #define WATERHEIGHT_H

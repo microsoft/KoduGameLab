@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //#define RENDER_TIMERS
 //#define UPDATE_TIMERS
 #define DISPLAY_FPS

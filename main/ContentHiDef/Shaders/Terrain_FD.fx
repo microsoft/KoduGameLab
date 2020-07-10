@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 // =====================================================
 //Terrain: FewerDraws effect
 // The FewerDraws (FD) algorithm designed for PCs 

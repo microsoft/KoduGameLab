@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef STANDARD_SM2_FX
 #define STANDARD_SM2_FX

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 //  Gaussian -- Gaussian blur, 7 pixels wide
 //

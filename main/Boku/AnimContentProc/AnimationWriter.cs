@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 /*
  * AnimationWriter.cs
  * Copyright (c) 2006, 2007 David Astle, Michael Nikonov

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 ///
 /// This was originally in Common, but migrated here when the new animation

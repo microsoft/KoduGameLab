@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -74,7 +77,7 @@ namespace Boku.Tutorial
             }
         }
         /// <summary>
-        /// Although partially implemented, this class currently doesn’t do anything.  
+        /// Although partially implemented, this class currently doesnï¿½t do anything.  
         /// It is meant to allow the Tutorial to change the view to better suit the tutorial.
         /// </summary>
         public class Camera
@@ -108,7 +111,7 @@ namespace Boku.Tutorial
         }
         /// <summary>
         /// This method will fine and return a Thing that represents the instance of a GameThing.
-        /// The id of the instance can only be set today by modifying the saved game’s stuff
+        /// The id of the instance can only be set today by modifying the saved gameï¿½s stuff
         /// file and adding the id property.
         /// </summary>
         /// <param name="idThing"></param>

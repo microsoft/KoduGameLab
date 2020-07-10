@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef FOG_FX
 #define FOG_FX

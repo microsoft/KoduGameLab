@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 // UI2D -- Shaders for 2d UI elements
 //

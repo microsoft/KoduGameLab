@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //#define LOG
 using System;
 using System.Collections.Generic;

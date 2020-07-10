@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 /*
  * ContentUtil.cs
  * Copyright (c) 2006 David Astle

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 //  Edit -- Used for stamping one texture into another.
 //

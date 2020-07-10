@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 //  SkyBox -- Renders the environment map as a sky box.
 //

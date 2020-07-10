@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 #if DEBUG
 # define FLUSH_TO_FILE
 #endif

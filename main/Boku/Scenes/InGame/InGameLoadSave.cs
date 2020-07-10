@@ -1,4 +1,7 @@
-﻿// Uncomment this to allow AutoSave to write through to disk.  This is useful for debugging
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+// Uncomment this to allow AutoSave to write through to disk.  This is useful for debugging
 // since it allows Resume to work from the main menu.
 #define AutoSaveToDisk
 

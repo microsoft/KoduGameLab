@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef QUAD_UV_TO_POS_FX
 #define QUAD_UV_TO_POS_FX

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 // Uncomment the following line to cause fake presence 
 // events to be fed to the sharing presence display.

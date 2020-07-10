@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef GHOST_SM2_FX
 #define GHOST_SM2_FX

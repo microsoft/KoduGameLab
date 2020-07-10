@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 /*
  * AsfImporter.cs
  * Copyright (c) 2006, 2007 Michael Nikonov, David Astle

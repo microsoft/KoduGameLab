@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //#define IMPORT_DEBUG
 
 #define USE_UNDO_STACK

@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 #region Debug Defines
 //#define MF_SKIPSOME       // Drop a single batch from each render, to see what the batch breakdown is.
 //#define MF_RENDERSOLO     // Don't use the bounds tree, just render the list.

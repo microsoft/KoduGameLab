@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 // Utils shaders -- Simple shaders that work with the Utils functions.
 //

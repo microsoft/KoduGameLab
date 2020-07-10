@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 /// Define MF_PITCH_OR_YAW for a mode that lets the user be affecting
 /// pitch OR yaw, but not both at a time. The mode is determined when
 /// the right button is down and the mouse moves. 

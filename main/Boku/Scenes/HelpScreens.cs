@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 // Uncomment this to build the UI as it will look for release.
 //#define FINAL_UI
 

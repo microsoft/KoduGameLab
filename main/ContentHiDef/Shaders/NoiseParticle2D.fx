@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 //
 // Particle2D -- A collection of shaders for textured, 2D particles cotrolled by Perlin noise.

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 //
 // StdMaterials -- Shaders to handle the standard materials from 3DS Max via Xbf Files
 //

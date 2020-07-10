@@ -1,4 +1,7 @@
-﻿//#define MENU
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+//#define MENU
 
 using System;
 using System.Collections.Generic;

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 #define CAMERA_GHOSTING
 
 // Uncomment this to have rendertarget allocation info printed to output.

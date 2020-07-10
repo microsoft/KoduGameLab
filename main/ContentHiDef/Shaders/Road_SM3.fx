@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 #ifndef ROAD_SM3_FX
 #define ROAD_SM3_FX

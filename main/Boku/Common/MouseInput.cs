@@ -1,4 +1,7 @@
-﻿
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+
 // Controls whether or not the mouse input is on a seperate thread.
 // The idea is to have mouse input be on it's own thread so that
 // on slow machines we don't miss mouse clicks.

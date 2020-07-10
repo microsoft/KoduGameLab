@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 // =====================================================
 //Terrain: LowMemory effect
 // The LowMemory (LM) algorithm designed by Mark Finch

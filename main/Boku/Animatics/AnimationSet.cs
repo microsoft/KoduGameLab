@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 //#define ANIMATION_DEBUG
 //#define ANIMATION_DEBUG_MINIMAL       //  show minimal anim info - useful for video capture of oneshots. must also turn on ANIMATION_DEBUG

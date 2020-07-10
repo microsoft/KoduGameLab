@@ -1,4 +1,7 @@
-﻿//#define IMPORT_DEBUG
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+//#define IMPORT_DEBUG
 
 using System;
 using System.Collections.Generic;

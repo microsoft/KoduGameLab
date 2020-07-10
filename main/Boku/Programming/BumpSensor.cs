@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 using System;
 using System.Collections;
@@ -21,7 +24,7 @@ namespace Boku.Programming
     /// <summary>
     /// Senses when something collides with the GameActor
     /// 
-    /// This is exposed as the “Touch” sensor.  
+    /// This is exposed as the ï¿½Touchï¿½ sensor.  
     /// Currently very simple collision test is done against the Bump Devices 
     /// that the actor exposes.  This work should get redone and use a true 
     /// collision system to trigger this sensor rather than the current polling.
