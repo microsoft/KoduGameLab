@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 /*
  * ModelViewer.cs
  * Copyright (c) 2006 Michael Nikonov, David Astle

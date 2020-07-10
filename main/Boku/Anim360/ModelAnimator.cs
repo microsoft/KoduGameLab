@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 /*
  * ModelAnimator.cs
  * Copyright (c) 2007 David Astle, Michael Nikonov

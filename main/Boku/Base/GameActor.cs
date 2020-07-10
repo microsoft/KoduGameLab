@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 
 // If you uncomment this then the randomness will be taken out of
 // the initial position and velocity of created/droppped items.

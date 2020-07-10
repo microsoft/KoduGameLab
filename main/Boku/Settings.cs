@@ -1,4 +1,7 @@
-﻿namespace Boku.Properties {
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
+namespace Boku.Properties {
     
     
     // This class allows you to handle specific events on the settings class:

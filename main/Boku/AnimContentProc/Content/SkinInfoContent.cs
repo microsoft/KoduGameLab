@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 /*
  * SkinInfoContent.cs
  * Copyright (c) 2006 David Astle
