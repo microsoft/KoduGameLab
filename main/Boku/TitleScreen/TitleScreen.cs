@@ -55,7 +55,6 @@ namespace Boku
             private Shared shared = null;
 
             private Texture2D backgroundTexture = null;
-            private Texture2D logoTexture = null;
             private Texture2D dotTexture = null;
             private Texture2D waitTexture = null;
 
@@ -185,10 +184,6 @@ namespace Boku
                 if (backgroundTexture == null)
                 {
                     backgroundTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\Loading");
-                }
-                if (logoTexture == null)
-                {
-                    logoTexture = BokuGame.Load<Texture2D>(BokuGame.Settings.MediaPath + @"Textures\MicrosoftLogo");
                 }
                 if (dotTexture == null)
                 {
