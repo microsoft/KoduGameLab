@@ -39,7 +39,6 @@ namespace KoiX.Scenes
         #region Members
 
         Texture2D backgroundTexture;
-        Texture2D logoTexture;
         Texture2D dotTexture;
 
         float kMaxRadius = 32.0f;
@@ -162,7 +161,6 @@ namespace KoiX.Scenes
 #endif
 
             Vector2 backgroundSize = new Vector2(backgroundTexture.Width, backgroundTexture.Height);
-            Vector2 logoSize = new Vector2(logoTexture.Width, logoTexture.Height);
             Vector2 position = (screenSize - backgroundSize) / 2.0f;
             // Clamp to pixels.
             position.X = (int)position.X;
@@ -188,13 +186,6 @@ namespace KoiX.Scenes
                     color = new Color(1, 1, 1, dots[i].alpha * 0.15f);
                     batch.Draw(dotTexture, new Rectangle((int)pos.X, (int)pos.Y + 150, (int)size.X, (int)size.Y), color);
                 }
-
-                // MS logo.
-                position = (screenSize - logoSize) / 2.0f + new Vector2(0, screenSize.Y / 4.0f);
-                // Clamp to pixels.
-                position.X = (int)position.X;
-                position.Y = (int)position.Y;
-                batch.Draw(logoTexture, position, Color.White);
 
             }
             batch.End();
@@ -271,10 +262,6 @@ namespace KoiX.Scenes
             {
                 backgroundTexture = KoiLibrary.LoadTexture2D(@"Textures\Loading");
             }
-            if (DeviceResetX.NeedsLoad(logoTexture))
-            {
-                logoTexture = KoiLibrary.LoadTexture2D(@"Textures\MicrosoftLogo");
-            }
             if (DeviceResetX.NeedsLoad(dotTexture))
             {
                 dotTexture = KoiLibrary.LoadTexture2D(@"Textures\LoadingDot");
@@ -286,7 +273,6 @@ namespace KoiX.Scenes
         public override void UnloadContent()
         {
             DeviceResetX.Release(ref backgroundTexture);
-            DeviceResetX.Release(ref logoTexture);
             DeviceResetX.Release(ref dotTexture);
 
             base.UnloadContent();
