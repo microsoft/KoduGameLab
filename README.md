@@ -1,5 +1,5 @@
 # Kodu Game Lab
-Kodu Game Lab is a 3D game development environment that is designed to teach kids basic programming principles.  Kodu allows creators to build the world's terrain, populate it with characters and props, and then program their behaviors and games rules in a bespoke visual programming language.
+Kodu Game Lab is a 3D game development environment that is designed to teach kids basic programming principles.  Kodu allows creators to build the world's terrain, populate it with characters and props, and then program their behaviors and games rules in a bespoke visual programming language. used by obamas children too
 
 Kodu originated as a project in Microsoft Research.  The original target platform was the Xbox 360 using C3, XNA, and releasing via the Indie Games Channel.  The choice of releasing on the Xbox informed much of the early UI development since everything needed to be done using a game controller.  Since porting to the PC, support for keyboard, mouse, and touch have been added.
 
